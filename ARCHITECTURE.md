@@ -1,47 +1,70 @@
 # 🌳 Architektur — atc-standards
 
-> **Stand:** 2026-08-06 | **Commit:** 3be8644
+> **Stand:** 2026-08-06 | **Version:** v1.0.0
 > **Teil von:** [A-TownChain Ökosystem](https://github.com/A-TownChain-Okosystems)
 
-## Statistik
+## Beschreibung
+
+Zentrale Registry aller ATC-Standards. ATC-01 bis ATC-99, Spezifikationen, Status, Versionen.
+
+## Metadaten
 
 | Metrik | Wert |
 |--------|------|
-| Dateien | 19 |
-| Zeilen | 1,538 |
-| .atc | 6 |
-| .py | 0 |
-| .rs | 0 |
-| .ts/.tsx | 0 |
-| .md | 11 |
+| Layer | Documentation |
+| Sprint | 1.0 |
+| ATC-Standards | ATC-01, ATC-99 |
+| Status | 🟠 Aufbau |
+| Code-Repo | [atc-standards](https://github.com/A-TownChain-Okosystems/atc-standards) |
+| Wiki-Repo | [atc-standards-wiki](https://github.com/A-TownChain-Okosystems/atc-standards-wiki) |
 
-## Verzeichnisstruktur
+## Komponenten-Übersicht
+
+| Komponente | Beschreibung | Status |
+|-----------|-------------|--------|
+| `registry.atc` | Standard-Registry: ATC-01 bis ATC-99, status, version, dependencies | 📋 GEPLANT |
+| `validator.atc` | Standard-Validator: consistency check, cross-ref, compliance | 📋 GEPLANT |
+| `spec_template.atc` | Spec-Template: structure for new standards | 📋 GEPLANT |
+| `compliance_checker.atc` | Compliance-Checker: verify code/docs against standards | 📋 GEPLANT |
+| `atc_20_to_50.atc` | Future Tier Standards: ATC-20 bis ATC-50 specs | 📋 GEPLANT |
+| `atc_51_to_80.atc` | Ultimate Architecture: ATC-51 bis ATC-80 specs | 📋 GEPLANT |
+
+## Architektur-Baum
 
 ```
-├── ATC/ (2 files, 288 lines)
-│   ├── ATC-0009-BRIDGE.md (55 lines)
-│   └── ATC_STANDARDS.md (233 lines)
-├── ATS/ (1 files, 283 lines)
-│   └── ATS_STANDARDS.md (283 lines)
-├── contracts/ (1 files, 120 lines)
-│   └── registry.atc (120 lines)
-├── standards/ (4 files, 172 lines)
-│   ├── atc-13_fractional_asset_ownership.atc (43 lines)
-│   ├── atc-15_proof_of_ai_mining.atc (43 lines)
-│   ├── atc-16_referral_multitier_rewards.atc (43 lines)
-│   └── atc-20_wrapped_synthetic_assets.atc (43 lines)
-├── .gitignore
-├── ATC_STANDARDS.md (201 lines)
-├── ATS_STANDARDS.md (199 lines)
-├── CHANGELOG.md (21 lines)
-├── FILE_REGISTER.md (18 lines)
+atc-standards/
+├── README.md
 ├── LICENSE
-├── OVERVIEW.md (29 lines)
-├── README.md (69 lines)
-├── ROADMAP.md (21 lines)
-├── STATUS.md (19 lines)
-└── contract_registry.atc (98 lines)
+├── .gitignore
+├── STATUS.md
+├── ROADMAP.md
+├── CHANGELOG.md
+├── ARCHITECTURE.md
+├── FILE_REGISTER.md
+├── registry.atc
+├── validator.atc
+├── spec_template.atc
+├── compliance_checker.atc
+├── atc_20_to_50.atc
+├── atc_51_to_80.atc
 ```
+
+## Abhängigkeiten
+
+- **ATCLang Stdlib** (atc-stdlib)
+- **ATC VM** (atc-vm)
+- **ATC Kernel** (atc-kernel)
+
+## Roadmap
+
+| Phase | Aufgabe | Status |
+|-------|---------|--------|
+| Sprint 1.0 | Komponenten-Definition | ✅ ERLEDIGT |
+| Sprint 1.0 | Architektur-Baum | ✅ ERLEDIGT |
+| Sprint 1.0 | Stub-Dateien erstellen | 🔄 IN ARBEIT |
+| Sprint 1.0 | Implementierung | 📋 GEPLANT |
+| Sprint 1.0.1 | Tests | 📋 GEPLANT |
+| Sprint 1.0.2 | Dokumentation | 📋 GEPLANT |
 
 ---
 *Auto-generiert 2026-08-06 · Aurora (MasterBrain · Base44)*
