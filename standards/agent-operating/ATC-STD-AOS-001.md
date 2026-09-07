@@ -3,16 +3,17 @@ standard:
   id: ATC-STD-AOS-001
   title: "ATC Agent Operating Standard — Verbindliches Session-Mandat für alle KI-Agenten: die 14 Session-Fragen, Session-Lifecycle, maschinenlesbarer Session-Record, Audit-Nachweis"
   version: "1.0.0"
-  status: draft
+  status: approved
   category: agent-operating
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"
   created: "2026-09-08"
   updated: "2026-09-08"
-  normative: false
-  effective_date: ""
-  review_date: ""
+  normative: true
+  effective_date: "2026-09-08"
+  review_date: "2027-09-08"
   classification: PUBLIC
+  approved_by: "Michael Wroblewski (Owner, §9-Freigabe 08.09.2026, 00:18 UTC+2)"
   language: de-DE
   supersedes: null
   superseded_by: null
@@ -29,12 +30,10 @@ standard:
   license: "Copyright (c) 2026 Michael Wroblewski"
 ----
 
-# ATC-STD-AOS-001 — ATC Agent Operating Standard (v1.0.0, DRAFT)
+# ATC-STD-AOS-001 — ATC Agent Operating Standard (v1.0.0, APPROVED)
 
-> **Status:** DRAFT (v1.0.0) — Owner-Entwurf Michael Wroblewski („20. KI-Softwareentwicklungsagent",
-> Builder-Chat 07.09. 23:41; Mandat bereits normativ via FRAMEWORK-001 §8/REQ-FW-009);
-> Ausarbeitung SCR-0022; Owner-§9-Freigabe ausstehend. Bei Freigabe: APPROVED, normativ,
-> §30-eingefroren.
+> **Status:** APPROVED (v1.0.0) — §9-Freigabe Michael Wroblewski (Builder-Chat 08.09.2026, 00:18 UTC+2);
+> normativ in Kraft ab 08.09.2026, §30-eingefroren (ATC-STD-000). SCR-0022 akzeptiert.
 > **Familie:** Agent Operating (ATC-STD-AOS-001..999, FAM-20). **Kopplungen:**
 > AI-DECISION-001 (Human Gates übergeordnet), AAS-001..025, FRAMEWORK-001 §8,
 > AUDIT-001, BUG-005.
@@ -170,7 +169,7 @@ gekennzeichnete Korrekturen zulässig.
 
 ## Changelog (Standard-intern)
 
-- **1.0.0** (2026-09-08): Initial Release DRAFT — Ausarbeitung des 14-Fragen-Mandats
+- **1.0.0** (2026-09-08): Initial Release — Ausarbeitung des 14-Fragen-Mandats
   aus FRAMEWORK-001 §8 (Owner-Entwurf 07.09. 23:41) zum eigenständigen Operating
   Standard: Session-Lifecycle, 14 Fragen mit autorisierten Quellen, maschinenlesbarer
   Session-Record (AOS-SESS-YYYYMMDD-NNN), Governance-Kopplungen (AI-DECISION-001,

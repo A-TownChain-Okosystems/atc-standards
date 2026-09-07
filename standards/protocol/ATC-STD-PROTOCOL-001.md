@@ -3,16 +3,17 @@ standard:
   id: ATC-STD-PROTOCOL-001
   title: "ATC Protocol Standards — Dachstandard oberhalb der Einzelprotokolle: einheitliche Regeln für Identität, Versionierung, Nachrichten, Sicherheit, Fehler, Kompatibilität, Governance und Auditing aller ATC-Protokolle (ATC-PROTO-*)"
   version: "1.0.0"
-  status: draft
+  status: approved
   category: protocol
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"
   created: "2026-09-08"
   updated: "2026-09-08"
-  normative: false
-  effective_date: ""
-  review_date: ""
+  normative: true
+  effective_date: "2026-09-08"
+  review_date: "2027-09-08"
   classification: PUBLIC
+  approved_by: "Michael Wroblewski (Owner, §9-Freigabe 08.09.2026, 00:18 UTC+2)"
   language: de-DE
   supersedes: null
   superseded_by: null
@@ -33,11 +34,10 @@ standard:
   license: "Copyright (c) 2026 Michael Wroblewski"
 ----
 
-# ATC-STD-PROTOCOL-001 — ATC Protocol Standards (v1.0.0, DRAFT)
+# ATC-STD-PROTOCOL-001 — ATC Protocol Standards (v1.0.0, APPROVED)
 
-> **Status:** DRAFT (v1.0.0) — Owner-Entwurf Michael Wroblewski (Builder-Chat 08.09.2026,
-> 21 Abschnitte); Ausarbeitung SCR-0023; Owner-§9-Freigabe ausstehend. Bei Freigabe:
-> APPROVED, normativ, §30-eingefroren.
+> **Status:** APPROVED (v1.0.0) — §9-Freigabe Michael Wroblewski (Builder-Chat 08.09.2026, 00:18 UTC+2);
+> normativ in Kraft ab 08.09.2026, §30-eingefroren (ATC-STD-000). SCR-0023 akzeptiert.
 > **Familie:** Protocol Standards (ATC-STD-PROTOCOL-001..999, FAM-42 — neuer
 > Namensraum gem. FRAMEWORK-001 §6.3). **Maschinenlesbar:**
 > registry/protocol-registry.yaml (SSOT, 26 ATC-PROTO-Familien, Validator S-23).
@@ -262,12 +262,12 @@ Ehrlichkeitsregel (REQ-PROTO-021).
 
 ## Changelog (Standard-intern)
 
-- **1.0.0** (2026-09-08): Initial Release DRAFT — Owner-Entwurf Michael Wroblewski
+- **1.0.0** (2026-09-08): Initial Release — Owner-Entwurf Michael Wroblewski
   (21 Abschnitte, 26-Familien-Matrix mit P0/P1/P2-Reihenfolge); maschinenlesbar:
   registry/protocol-registry.yaml (SSOT, 26 ATC-PROTO-Familien, generiert von
   tools/protocol/gen_protocol_registry.py) + Validator NEU S-23 (Negativtest
   verifiziert); Kopplungen VERSION/COMPAT/UPDATE/AUDIT/FRAMEWORK; Status-
-  Ehrlichkeitsregel (planned als Baseline). SCR-0023; §9-Freigabe ausstehend.
+  Ehrlichkeitsregel (planned als Baseline). SCR-0023; §9-Freigabe Michael Wroblewski 08.09.2026, 00:18 UTC+2 — APPROVED, normativ, §30-eingefroren.
 
 ## References
 

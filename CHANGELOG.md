@@ -1,5 +1,33 @@
 # Changelog
 
+## [1.4.30] - 2026-09-08
+
+### Changed
+
+- **Dreifache §9-FREIGABE → APPROVED** (Owner-Freigabe Michael Wroblewski,
+  Builder-Chat 08.09. 00:18 UTC+2). Alle normativ in Kraft ab 08.09.2026,
+  §30-eingefroren (ATC-STD-000):
+  - **ATC-STD-AOS-001 v1.0.0** (115. Standard) — Agent Operating Standard:
+    14-Fragen-Session-Mandat verbindlich; Session-Records (AOS-SESS) Pflicht bei
+    governance-relevanten Agenten-Sessionen; Mandatsverstoß = Finding.
+  - **ATC-STD-999 v1.0.0** (116. Standard) — Master-Audit: MAUD-Records (Typ
+    MASTER) bei MAJOR/Release-Kandidat/Quartals-Audit; 16-Stufen-Kette + 13
+    Nachweis-Fragen orchestrieren S-01..S-22/Health-Scores/RR-Gates; MAJOR ohne
+    Master-Audit-PASS verboten.
+  - **ATC-STD-PROTOCOL-001 v1.0.0** (117. Standard) — Protocol Standards:
+    Protocol-Registry verbindlich (Registry-Eintrag = Autorisierung); Envelope-,
+    Encoding-, Kompatibilitäts-, Handshake-, Security- und Upgrade-Regeln für
+    alle ATC-Protokolle; S-23 erzwingt Registry-Integrität je CI-Lauf.
+- **Gebündelt genehmigt: ATC-STD-FRAMEWORK-001 v1.0.3-PATCH** (FAM-20/FAM-40
+  BELEGT) **und v1.0.4-PATCH** (FAM-42 Protocol Standards, 42 Familien, 429
+  Slots).
+- **Registry FINAL: 117 Standards, 117 APPROVED, 0 DRAFT, 0 offen — alle
+  normativ.** SCR-0022 + SCR-0023: IMPLEMENTED → APPROVED. P1 der
+  FRAMEWORK-Gap-Roadmap (AOS-001, ATC-STD-999) und P0-Fundament der
+  Protokoll-Agenda komplett. Offen: REPO-AUDIT-003 (P2), PROTOCOL-002/003
+  (GEPLANT), Requirements Registry (P1-Rest), ATC-M-003/K-Sprint 41.
+
+
 ## [1.4.29] - 2026-09-08
 
 ### Added
