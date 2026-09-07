@@ -12,6 +12,7 @@ versions:
   ATC-STD-202:
     - {version: "1.0.0", date: "2026-09-07", change: "Naming & Classification (AD-029/031)"}
     - {version: "1.0.1", date: "2026-09-07", change: "Unter ATC-STD-000 gestellt; REPO-002 → 202 umnummeriert (supersedes)"}
+    - {version: "1.1.0", date: "2026-09-07", change: "SCR-0005 Option A (Owner-Freigabe): Abschnitt 3a Rollenfestlegung Chain-Komponenten (a-townchain = Chain-Protokoll/Bibliothek, atc-node = Full-Node-Binary/Runtime, S4)"}
   ATC-STD-203:
     - {version: "1.0.0", date: "2026-09-07", change: "Security & Release (AD-029/031)"}
     - {version: "1.0.1", date: "2026-09-07", change: "Unter ATC-STD-000 gestellt; REPO-003 → 203 umnummeriert (supersedes)"}

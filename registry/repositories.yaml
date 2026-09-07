@@ -21,7 +21,7 @@ repositories:
   - {name: atc-interop,     classification: CORE,        maturity: R2, security: S2, status: development,   layer: L5,         domain: bridge}
   - {name: genesis-engine,  classification: GAME,        maturity: R2, security: S1, status: development,   layer: L6,         domain: game-engine}
   - {name: genesis-chronicles, classification: GAME,     maturity: R2, security: S1, status: development,   layer: L6,         domain: game}
-  - {name: atc-node,        classification: CORE,        maturity: R1, security: S3, status: experimental,  layer: L5,         domain: node}
+  - {name: atc-node,        classification: CORE,        maturity: R1, security: S4, status: experimental,  layer: L5,         domain: node}
   - {name: atc-storage,     classification: CORE,        maturity: R1, security: S2, status: experimental,  layer: L5,         domain: storage}
   - {name: atc-compute,     classification: CORE,        maturity: R1, security: S2, status: experimental,  layer: L5,         domain: compute}
   - {name: atc-oracle,      classification: CORE,        maturity: R1, security: S2, status: experimental,  layer: L5,         domain: oracle}

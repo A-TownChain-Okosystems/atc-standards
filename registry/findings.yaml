@@ -20,4 +20,4 @@ findings:
 # Neue operative Objekte: TEST-NNN (Regressionstests), SYNC-NNN
 # (Synchronitaetspruefungen), AUD-NNN (Abschlusspruefungen) — gemaess
 # ATC-STD-BUG-001…004, referenziert in den Finding-Eintraegen.
-  - {id: F-011, title: "Rollen-Dualitaet a-townchain vs. atc-node (Chain/Node-Zielrolle ueberlappt)", severity: MEDIUM, source: "Technology Profile Audit 07.09.2026", scr: SCR-0005, status: OPEN, resolution: "SCR-0005 ausgearbeitet — Owner-Entscheidung Option A (Rollen-Trennung) vs. B (Merge) ausstehend"}
+  - {id: F-011, title: "Rollen-Dualitaet a-townchain vs. atc-node (Chain/Node-Zielrolle ueberlappt)", severity: MEDIUM, source: "Technology Profile Audit 07.09.2026", scr: SCR-0005, status: RESOLVED, resolution: "SCR-0005 Option A (Owner-Freigabe 07.09.): Rollen-Trennung a-townchain (Chain-Protokoll/Bibliothek) vs. atc-node (Full-Node-Binary/Runtime, S4) — ATC-STD-202 v1.1.0 §3a"}

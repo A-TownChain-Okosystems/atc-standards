@@ -56,7 +56,7 @@ def main():
         ("M6: BUG-001 unveraendert", bug, "PASS"),
         ("M7: STD-202 unveraendert (Statuszeilen-Version)", s202, "PASS"),
         ("M8: STD-202 Statuszeilen-Version manipuliert",
-         s202.replace("> **Status:** PROPOSED (v1.0.1)", "> **Status:** PROPOSED (v9.9.9)", 1), "FAIL"),
+         re.sub(r"(> \*\*Status:\*\* [A-Z]+ \(v)\d+\.\d+\.\d+(\))", r"\g<1>9.9.9\g<2>", s202, count=1), "FAIL"),
         ("M9: Beispielblock tief im Dokument (kein False Positive)",
          bug + "\n\n> **Version:** 0.0.1 (nur Beispiel, weit unterhalb des Kopfs)\n", "PASS"),
         ("M10: klassisches Frontmatter, konsistenter Kopf", klassisch, "PASS"),

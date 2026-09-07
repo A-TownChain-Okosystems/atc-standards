@@ -1,7 +1,7 @@
 standard:
   id: ATC-STD-202
   title: "ATC-STD-202 — Repository Naming & Classification Standard"
-  version: "1.0.1"
+  version: "1.1.0"
   status: proposed
   category: repository
   authority: A-TownChain Ecosystems
@@ -14,7 +14,7 @@ standard:
 ---
 
 # ATC-STD-202 — Repository Naming & Classification Standard
-> **Status:** PROPOSED (v1.0.1) — Erweiterung AD-031; Normativkraft entsteht mit APPROVED (ATC-STD-000 §9) | **Datum:** 07.09.2026 | **Autor:** Michael Wroblewski (Owner), Aurora (Superagent)
+> **Status:** PROPOSED (v1.1.0) — Erweiterung AD-031; Normativkraft entsteht mit APPROVED (ATC-STD-000 §9) | **Datum:** 07.09.2026 | **Autor:** Michael Wroblewski (Owner), Aurora (Superagent)
 > **Standard-ID:** ATC-STD-202 | **Scope:** GitHub-Organisation A-TownChain-Okosystems
 > **Referenzen:** AD-025 (Genesis Chronicles Umbenennung), AD-026 (Bauhierarchie L0-L7), AD-029 (Governance-Mandat), ATC-STD-201/-003
 > **Anwendungsregel:** VERBINDLICH — die Klassifizierungstabelle ist die normative Einordnung aller 22 aktiven Repos.
@@ -82,6 +82,27 @@ genesis-chronicles, a-townchain, atc-shivacore (Kernel-Marke), a-townchain-os
 atc-standards-Repo — Standards leben kanonisch im Hub (docs/standards/), die
 .atc-Referenzimplementierungen in atc-contracts. shivamon heisst seit AD-025
 genesis-chronicles. Die Chain-Core-Rolle von atc-core uebernimmt a-townchain.
+
+
+## 3a. Rollenfestlegung Chain-Komponenten (SCR-0005 Option A, AD-046 — MUST)
+
+Die Ziel-Rollen der Chain-Komponenten sind normativ (Overlap-Aufloesung,
+Technology Profile Audit 07.09., Finding F-011):
+
+| Repo | Rolle (normativ) |
+|---|---|
+| **a-townchain** | Chain-Protokoll & Bibliothek: State-Modell, Tx-Struktur, Chain-Orchestrierung, Konsens-Anbindung (atc-algorithm), atcnet-Propagation. Python-Bestand = Migrations-Kandidat (ATC-STD-100 REQ-STD-103, Rust-first). |
+| **atc-node** | Full-Node-Binary & Runtime: Distribution-Ziel (`git clone && cargo build` -> lauffaehiger Node) mit Bootstrap, Discovery, Validator-Betrieb. BAUT AUF a-townchain (Bibliothek), atc-algorithm (Konsens) und atc-vm (Ausfuehrung) auf — implementiert selbst KEINE Chain-Semantik. |
+
+Abhaengigkeitsrichtung (verbindlich, keine Zyklen, §6):
+atc-node -> a-townchain + atc-algorithm + atc-vm. Security: atc-node = S4
+(Node-Binary ist Netzwerk-Angriffsflaeche: Bootstrap-Node, Validator-Keys,
+§9-Katalog).
+
+| ID | Anforderung | Verweis |
+|----|-------------|---------|
+| id: REQ-STD-211 | Die Rollen a-townchain (Chain-Protokoll/Bibliothek) und atc-node (Full-Node-Binary/Runtime) MUessen wie in §3a festgeschrieben eingehalten werden. | §3a |
+| id: REQ-STD-212 | atc-node MUSS als Security-Klassifikation S4 fuehren (§9). | §3a |
 
 ## 4. Compliance-Level
 
@@ -189,6 +210,8 @@ INFORMATIVE: AD-025/026/028/029/031 (DECISIONS_REGISTER, Hub) ·
 IMPLEMENTATION: tools/atc-repo-audit, schemas/repository.schema.yaml.
 
 ## Changelog
+
+- 1.1.0 (2026-09-07): SCR-0005 Option A (Owner-Freigabe) — Abschnitt 3a Rollenfestlegung Chain-Komponenten (a-townchain = Chain-Protokoll/Bibliothek, atc-node = Full-Node-Binary/Runtime, S4); REQ-STD-211/212.
 
 - 1.0.1 (07.09.2026): Unter ATC-STD-000 Governance gestellt; ID von
   ATC-STD-REPO-001 auf ATC-STD-201 umgestellt (supersedes); Metadaten-Header
