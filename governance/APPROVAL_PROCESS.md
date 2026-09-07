@@ -1,6 +1,6 @@
 # Approval Process — Freigabeverfahren (operationalisiert)
 
-Geltung: ATC-STD-000 §13-18 (Review Chain, Approval, Stable). Dieses Dokument
+Geltung: ATC-STD-000 §14-18 (Review Chain, Approval, Stable). Dieses Dokument
 beschreibt den Ablauf vom CANDIDATE zum STABLE-Standard.
 
 ## Ablauf
@@ -23,7 +23,7 @@ APPROVAL-DECISION.md dem Owner vorgelegt
 
 - **APPROVE:** Owner-Vermerk (Datum) in APPROVAL-DECISION.md; Statuswechsel
   approved dann stable dokumentiert im Changelog; Registry-Zeile synchron;
-  Immutabilitaet ab jetzt (ATC-STD-000 §29) — Aenderungen nur noch via SCR.
+  Immutabilitaet ab jetzt (ATC-STD-000 §30) — Aenderungen nur noch via SCR.
 - **REQUEST CHANGES:** Befundliste mit vorher/nachher-Status; Rueckkehr an
   draft; erneute Review-Chain nach Revision.
 - **REJECT:** Begruendung; Standard verbleibt je nach Sachlage auf draft oder

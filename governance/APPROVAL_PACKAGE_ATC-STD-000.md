@@ -11,5 +11,5 @@ unter **approval/**:
 - approval/APPROVAL-DECISION.md (PENDING — Owner-Entscheidung)
 - approval/CHANGELOG.md
 
-Diese Datei ist ein Zeiger (Single-Source-of-Truth-Regel §21). Fruehere
+Diese Datei ist ein Zeiger (Single-Source-of-Truth-Regel §22). Fruehere
 Kurzberichte sind in der Git-Historie erhalten.

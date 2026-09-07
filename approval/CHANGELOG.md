@@ -30,3 +30,13 @@
   Validator S-16, Findings-Registry registry/findings.yaml mit F-001…F-005
   als kanonische IDs). Snapshot aktualisiert; Matrix 17/17 PASS;
   Validator-Re-Lauf COMPLIANT.
+
+## 1.4.0 — 07.09.2026 (normatives Naming-Hardening §7)
+- Owner-Mandat: §7 "ATC Naming, Identification and Namespace Convention"
+  (7.1-7.11) als normativer Abschnitt; Abschnitte 7-35 → 8-36; alte §36-
+  Vorversion in §7 aufgegangen. Mapping für Alt-Referenzen: N→N+1 (7…35),
+  36→7.
+- naming-conventions.schema.json gehärtet (additionalProperties: false,
+  6 Regelgruppen). Validator v0.2.0: S-16 lädt Regeln NUR aus dem Schema;
+  S-17 Duplicate Detection im CI-Modus validate_all.py; CI-Workflow
+  naming-governance.yml (§7.11). Requirement-Matrix 20/20 PASS.

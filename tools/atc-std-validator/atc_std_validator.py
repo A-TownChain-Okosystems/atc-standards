@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Copyright (c) 2026 Michael Wroblewski / ShivaCore / A-TownChain-Okosystems. All Rights Reserved.
-"""ATC Standard Validator v0.1.0 — Validator fuer ATC-STD-000 (Governance).
+"""ATC Standard Validator v0.2.0 — Validator fuer ATC-STD-000 (Governance).
 
 Prueft einen Standard gegen die Verfassung: Metadaten-Header, ID-Format,
 SemVer, Lifecycle-Status, Abstract/Scope, REQ-IDs, normative Sprache,
@@ -15,7 +15,7 @@ import os
 import re
 import sys
 
-VERSION = "0.1.0"
+VERSION = "0.2.0"
 STATES = ["idea", "proposed", "draft", "review", "candidate", "approved",
           "stable", "deprecated", "retired"]
 CATS = ["governance", "architecture", "repository", "development", "security",
@@ -119,7 +119,7 @@ def validate(path, registry_path):
 
     # S-06 Abstract
     v.add("S-06", "PASS" if re.search(r"^##+\s.*(?:Abstract|Purpose)", text, re.M | re.I) else "FAIL",
-          "Abstract/Purpose-Sektion (§8-Struktur)")
+          "Abstract/Purpose-Sektion (§9-Struktur)")
 
     # S-07 Scope
     hat_scope = re.search(r"^##+\s.*Scope", text, re.M | re.I) or re.search(r"Scope:", text)
@@ -178,20 +178,38 @@ def validate(path, registry_path):
     else:
         v.add("S-14", "WARN", "Registry-Check uebersprungen (keine standards.yaml)")
 
-    # S-16 Naming Convention (ATC-STD-000 §36)
+    # S-16 Naming Convention (ATC-STD-000 §7 / 7.10: Regeln NUR aus naming-conventions.schema.json)
+    import json as _json
     fname = os.path.basename(path)
-    fname_ok = sid and fname == sid + ".md"
-    kurz = re.findall(r"\b(?:REQ|SCR|F|TC|TS|GATE|ADR|AD|ATC-SA|ATC-SCHEMA|ATC-PROTO|ATC-SPEC|ATC-DOC)-[0-9]{1,2}\b", text)
-    schema_da = os.path.exists(os.path.join(os.path.dirname(registry_path or ""), "..", "schemas", "naming-conventions.schema.json")) if registry_path else False
+    _dflt_std = r"^ATC-STD-[0-9]{3,}$"; _dflt_req = r"^REQ-(STD|REPO|SEC|PROTO)-[0-9]{3,}$"; _dflt_fn = r"^ATC-STD-[0-9]{3,}[.]md$"
+    std_p, req_p, fn_p, schema_ok = _dflt_std, _dflt_req, _dflt_fn, False
+    if registry_path:
+        _sp = os.path.join(os.path.dirname(registry_path), "..", "schemas", "naming-conventions.schema.json")
+        if os.path.exists(_sp):
+            try:
+                _s = _json.load(open(_sp, encoding="utf-8"))
+                _ip = _s["properties"]["identifierPatterns"]["properties"]
+                _fp = _s["properties"]["filenamePatterns"]["properties"]
+                std_p = _ip["standardId"]["pattern"]; req_p = _ip["requirementId"]["pattern"]; fn_p = _fp["standardDoc"]["pattern"]
+                schema_ok = True
+            except Exception:
+                pass
+    std_re, req_re, fn_re = re.compile(std_p), re.compile(req_p), re.compile(fn_p)
     msgs = []
-    if not fname_ok:
-        msgs.append("Dateiname %s != %s.md" % (fname, sid))
+    if not schema_ok:
+        msgs.append("naming-conventions.schema.json nicht geladen (7.10)")
+    if sid and not std_re.match(sid):
+        msgs.append("Standard-ID %s nicht konform (7.2)" % sid)
+    if not fn_re.match(fname):
+        msgs.append("Dateiname %s nicht konform (7.6)" % fname)
+    _badreq = sorted(set(r for r in re.findall(r"REQ-[A-Za-z]+(?:-[A-Za-z]+)?-[0-9]+", text) if not req_re.match(r)))
+    if _badreq:
+        msgs.append("REQ-IDs nicht konform (7.2): " + ", ".join(_badreq))
+    kurz = re.findall(r"\b(?:SCR|F|TC|TS|GATE|ATC-SA|ATC-SCHEMA|ATC-PROTO|ATC-SPEC|ATC-DOC)-[0-9]{1,2}\b", text)
     if kurz:
-        msgs.append("Malforme IDs (weniger als 3 Ziffern): " + ", ".join(sorted(set(kurz))))
-    if not schema_da:
-        msgs.append("naming-conventions.schema.json nicht gefunden")
+        msgs.append("Malforme IDs <3 Ziffern (7.2): " + ", ".join(sorted(set(kurz))))
     v.add("S-16", "PASS" if not msgs else "FAIL",
-          "Naming Convention §36: " + ("Datei-/ID-Formate konform, Schema vorhanden" if not msgs else "; ".join(msgs)))
+          "Naming Convention §7: " + ("ID-/Datei-Formate konform, Regeln aus Schema geladen" if not msgs else "; ".join(msgs)))
 
     # S-15 Abhaengigkeitszyklen
     dep_path = os.path.join(os.path.dirname(registry_path or ""), "dependencies.yaml") if registry_path else None

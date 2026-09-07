@@ -16,8 +16,8 @@ Stand: 07.09.2026, 15:00 (Europe/Berlin)
 
 - ATC-STD-000 v1.0.0: Review-Chain 3/3 PASS (07.09., gegen die Owner-
   Formalfassung, 35 Abschnitte). Approval BLOCKED -> Owner.
-- SCR-0001 (ID-Allokation): PROPOSED/PENDING. SCR-0002: OBSOLETE (durch §22
-  aufgeloest). SCR-0003 (§33-Integritaet): PENDING, CODEOWNERS angelegt,
+- SCR-0001 (ID-Allokation): PROPOSED/PENDING. SCR-0002: OBSOLETE (durch §23
+  aufgeloest). SCR-0003 (§34-Integritaet): PENDING, CODEOWNERS angelegt,
   Branch-Absicherung wartet auf Owner-Option A/B. SCR-0004 (Rollenmodell):
   PENDING.
 
@@ -25,7 +25,7 @@ Stand: 07.09.2026, 15:00 (Europe/Berlin)
 
 - CI: Repository-Audit (16/16 PASS, Score 100) + Standard-Validation (4/4
   COMPLIANT) bei jedem Push. Validatoren: atc-repo-audit v0.1.0,
-  atc-std-validator v0.1.1 (S-16 Naming).
+  atc-std-validator v0.2.0 (S-16 schema-basiert) + validate_all.py (S-17 Duplicate Detection) + CI naming-governance.yml.
 
 ## Metriken
 

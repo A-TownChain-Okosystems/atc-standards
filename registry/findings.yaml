@@ -1,11 +1,11 @@
-# ATC Findings Registry (ATC-STD-000 §36) — F-NNN, fortlaufend
+# ATC Findings Registry (ATC-STD-000 §7) — F-NNN, fortlaufend
 # Review-Kontext-Aliase (T-Fxx/S-Fxx/A-Fxx) bleiben als Herkunftsverweis.
 findings:
   - {id: F-001, title: "ID-Allokationsprozess je Bereich nicht definiert",          severity: MINOR,  source: "Technical Review ATC-STD-000 v1.0.0 (07.09.)", alias: T-F01, scr: SCR-0001, status: OPEN}
-  - {id: F-002, title: "§33-Integritaetsumsetzung physisch offen (Zweig-Absicherung, Signed Tags)", severity: MEDIUM, source: "Security Review", alias: S-F01, scr: SCR-0003, status: OPEN}
+  - {id: F-002, title: "§34-Integritaetsumsetzung physisch offen (Zweig-Absicherung, Signed Tags)", severity: MEDIUM, source: "Security Review", alias: S-F01, scr: SCR-0003, status: OPEN}
   - {id: F-003, title: "Rollen- und Berechtigungsmodell nicht definiert",            severity: MEDIUM, source: "Security Review", alias: S-F02, scr: SCR-0004, status: OPEN}
   - {id: F-004, title: "Kein dediziertes Security-Considerations-Kapitel in ATC-STD-000", severity: LOW, source: "Security Review", alias: S-F03, status: OPEN}
   - {id: F-005, title: "Registry-Naming-Dualitaet (STANDARDS_REGISTRY.md vs standards.yaml)", severity: MINOR, source: "Architecture Review", alias: A-F01, status: OPEN}
 # Aufgeloest vor Registrierung (Agent-Entwurf, durch Owner-Formalfassung behoben,
-# dokumentiert in approval/CHANGELOG.md): Emergency Changes (§31), Konflikt-Resolution
-# (§30), L-Skalen-Doppellung (§22).
+# dokumentiert in approval/CHANGELOG.md): Emergency Changes (§32), Konflikt-Resolution
+# (§31), L-Skalen-Doppellung (§23).

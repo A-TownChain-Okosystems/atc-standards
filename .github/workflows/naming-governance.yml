@@ -1,0 +1,18 @@
+name: ATC Naming & Governance (ATC-STD-000 s7.11)
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Standards-Validierung (S-01...S-16 je Standard, S-17 Duplicate Detection)
+        run: python3 tools/atc-std-validator/validate_all.py
+      - name: Repository-Audit (ATC-STD-201ff, Level R3)
+        run: python3 tools/atc-repo-audit/atc_repo_audit.py . --level R3

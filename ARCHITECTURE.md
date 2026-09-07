@@ -2,7 +2,7 @@
 
 Das Repository ist die KANONISCHE Standards-Heimat des A-TownChain-
 Oekosystems (AD-030). Die Architektur folgt ATC-STD-000 (Verfassung) und
-dem §27-Soll-Layout des Owners.
+dem §28-Soll-Layout des Owners.
 
 ```
 atc-standards/
@@ -13,7 +13,7 @@ atc-standards/
 ├── atc/                 ATC-Standards: ATC-01…99, ATC-0001…0008 (Legacy, vollstaendig)
 ├── ats/                 ATS-Standards: ATS-1000…1007 (ShivaOS), ATS-LIC
 ├── licensing/           ATC-LIC, ATVM License Gate, IP-License-Specs, BaFin-Richtlinie
-├── registry/            standards.yaml (Herzstueck §24), categories/versions/
+├── registry/            standards.yaml (Herzstueck §25), categories/versions/
 │                        lifecycle/dependencies/repositories/teams + STANDARDS_REGISTRY (Legacy)
 ├── schemas/             standard/requirement/change-request + repository-Schemas
 ├── templates/           STANDARD/REQUIREMENT/SCR + repository/workflows
@@ -25,10 +25,10 @@ atc-standards/
 ## Governance-Fluss
 
 ```
-ATC-STD-000 (Verfassung, §35 Final Model)
-    -> Registry (§24: kein Eintrag = kein Standard)
-    -> Standards je Kategorie (§25)
-    -> Validator (§23, tools/) + CI
+ATC-STD-000 (Verfassung, §36 Final Model)
+    -> Registry (§25: kein Eintrag = kein Standard)
+    -> Standards je Kategorie (§26)
+    -> Validator (§24, tools/) + CI
     -> Implementierungen -> Compliance -> Production
 ```
 

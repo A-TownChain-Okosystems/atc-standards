@@ -7,7 +7,7 @@
 Creation → ATC Repo Auditor → (PASS → Development → CI → Security Gates →
 Architecture Gate → Release Gate → Production | FAIL → NO-GO).
 
-> **Grundsatz (ATC-STD-000 §21):** No ATC Standard is normative unless it is
+> **Grundsatz (ATC-STD-000 §22):** No ATC Standard is normative unless it is
 > registered, versioned, reviewed and explicitly approved according to this
 > specification. Registry + Repo schlagen README/Wiki/Issue/Chat.
 
@@ -45,7 +45,7 @@ Das Repositorium selbst erfuellt den ATC-STD-201 (self-compliant).
   -002 (Naming, Classification, Ownership, Lifecycle, S0-S4, Dependency Graph),
   -003 (Security, Release, Branching, Commits, PRs, Gates, Reproducible Builds)
 - `schemas/` — repository/compliance/ownership/lifecycle.schema.yaml
-- `registry/` — standards.yaml (Standard-Registry, ATC-STD-000 §19),
+- `registry/` — standards.yaml (Standard-Registry, ATC-STD-000 §20),
   categories.yaml, versions.yaml, lifecycle.yaml, dependencies.yaml
   (Repository- + Standard-Graph, Zyklenerkennung), repositories.yaml
   (23 Repos), teams.yaml, findings.yaml (F-Registry) + STANDARDS_REGISTRY/OVERVIEW
