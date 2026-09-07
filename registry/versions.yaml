@@ -19,14 +19,19 @@ versions:
     - {version: "1.0.1", date: "2026-09-07", change: "Unter ATC-STD-000 gestellt; REPO-003 → 203 umnummeriert (supersedes)"}
   ATC-STD-204:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung: Dependency-Deklaration (F-001), Interface-Registry (F-002), dreifache Versionierung (F-005), SemVer-Kompatibilitaet, Integration-Test-Pflicht; registry/interfaces.yaml mit 10 Seed-Interfaces angelegt"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Direktfreigabe (approval/APPROVAL-DECISION-2026-09-07-204-AI-DEV.md): PROPOSED -> APPROVED; normativ in Kraft, 30-Tage-Frist fuer Interface-Test-Suiten (IFC seed->active) bis 07.10.2026"}
   ATC-STD-AI-DEV-001:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Owner-Entwurf): AI-Agenten-Identitaet (ATC-AI-{ROLE}-NNN), Agent-Manifest (.github/ai/), Capability-Matrix, Evidence-Pflicht, Repository-Discovery-Protocol, AGENTS.md, Task-IDs (ATC-TASK-NNN), State Machine, OBSERVATION-vs-DECISION, Assumption-Register (ASSUMPTION-ANNN), Commit-Trailer, Completion-Gate, Cross-Repository-Konsistenz, Audit-Record; Familien-Dach fuer AI-DEV-002..012 (planned); Schema-Erweiterung: aiDevStandardId/aiAgentId/aiTaskId/aiActionId/aiAssumptionId; Templates templates/ai/"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Direktfreigabe: CANDIDATE -> APPROVED; 30-Tage-Uebergangsfristen (AGENT_PROTOCOL-Migration, Manifest-Nachruestung) ab 07.09.2026"}
   ATC-STD-AI-DEV-004:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung: Task-Record .github/ai/tasks/ATC-TASK-NNNN.yaml, Task-Lifecycle (CREATED..COMPLETED/CANCELLED mit history-Pflicht), ID-Allokation, Traceability-Bindung Issue/Branch/Commits/PR/CI/Tests/AUD, Handover-Regeln, Verbotsmuster, Completion nur mit Audit-Record; Template templates/ai/task.template.yaml"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Direktfreigabe: CANDIDATE -> APPROVED; Task-Records (ATC-TASK-NNNN.yaml) ab sofort Pflicht fuer Agentenarbeit"}
   ATC-STD-AI-DEV-007:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung: Commit-Format <TASK-ID>:<type>:<desc> mit normativem Trailer-Block (Agent-ID/Task-ID/Finding-ID/Action-ID/AI-Role/Validation), Branch-Namen ai/ATC-TASK-NNNN, PR-Pflichtstruktur ([AI]-Prefix + 8 Abschnitte), Label-Set, Merge-Gate (CI-Run-Referenz + Task-Status + Human-Review), [agent:]-Tag-Uebergangsregel (30 Tage)"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Direktfreigabe: CANDIDATE -> APPROVED; Commit-Trailer + PR-Pflichtstruktur normativ; [agent:]-Tag-Uebergang bis 07.10.2026"}
   ATC-STD-AI-DEV-009:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung: Audit-Record AUD-NNN in .github/ai/audit/, Pflichtstruktur mit validation.ci_run und Konsistenzmatrix, Anlagezeitpunkte (COMPLETED/BLOCKED/Handover), Append-Only (Korrektur nur per corrects:-Folgercord), Machine-Readability (IDs aus naming-conventions), unbegrenzte Aufbewahrung; Template templates/ai/audit-record.template.yaml"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Direktfreigabe: CANDIDATE -> APPROVED; Audit-Records (AUD-NNN, Append-Only) ab sofort Pflicht bei Task-Abschluss"}
   ATC-STD-BUG-001:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (AD-040): Bug-Finding-Standard, S0-S4-Schwere, F/AUD/TEST/SYNC-Objekt-IDs, registriert in findings.yaml"}
   ATC-STD-BUG-002:

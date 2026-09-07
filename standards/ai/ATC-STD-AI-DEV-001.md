@@ -3,7 +3,7 @@ standard:
   id: ATC-STD-AI-DEV-001
   title: "ATC-STD-AI-DEV-001 — Software Development AI Agent Identity & Workflow Standard"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: ai-dev
   authority: A-TownChain Ecosystems
   owner: ShivaCoreDev
@@ -14,9 +14,9 @@ standard:
   superseded_by: null
 ---
 
-# ATC-STD-AI-DEV-001 — Software Development AI Agent Identity & Workflow Standard (v1.0.0, CANDIDATE)
+# ATC-STD-AI-DEV-001 — Software Development AI Agent Identity & Workflow Standard (v1.0.0, APPROVED)
 
-> **Status:** CANDIDATE (Owner-Entwurf 07.09.2026; Normativkraft entsteht mit APPROVED, ATC-STD-000 §9)
+> **Status:** APPROVED (v1.0.0) — Owner-Freigabe 07.09.2026 (ATC-STD-000 §9); Übergangsfristen §14/§16 (30 Tage) laufen ab 07.09.2026
 > **Reihe:** ATC-STD-AI-DEV-001…012 (AI Development Governance Family, §23) · **Autoren:** Michael Wroblewski (Owner), Aurora (Superagent)
 > **Kernprinzip:** Ein KI-Agent ist kein unsichtbarer Bot. Jede Aktion folgt der Kette
 > **Identität → Kontext → Fundstelle → Entscheidung → nächste Aktion → Ergebnis.**
@@ -209,6 +209,6 @@ fortsetzen kann.
 
 ## 16. Inkrafttreten
 
-Status CANDIDATE. Mit APPROVED (ATC-STD-000 §9) für alle KI-Agenten der
+APPROVED per Owner-Freigabe 07.09.2026 (ATC-STD-000 §9). Für alle KI-Agenten der
 Organisation verbindlich; Übergangsfrist für Manifest-Nachrüstung und
 AGENT_PROTOCOL-Migration: 30 Tage.

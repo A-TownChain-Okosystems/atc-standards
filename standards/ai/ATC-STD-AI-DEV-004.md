@@ -3,7 +3,7 @@ standard:
   id: ATC-STD-AI-DEV-004
   title: "ATC-STD-AI-DEV-004 — AI Task Management Standard"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: ai-dev
   authority: A-TownChain Ecosystems
   owner: ShivaCoreDev
@@ -14,9 +14,9 @@ standard:
   superseded_by: null
 ---
 
-# ATC-STD-AI-DEV-004 — AI Task Management Standard (v1.0.0, CANDIDATE)
+# ATC-STD-AI-DEV-004 — AI Task Management Standard (v1.0.0, APPROVED)
 
-> **Status:** CANDIDATE (Owner-Freigabe ausstehend, ATC-STD-000 §9) · **Reihe:** ATC-STD-AI-DEV-001…012
+> **Status:** APPROVED (v1.0.0) — Owner-Freigabe 07.09.2026 (ATC-STD-000 §9); normativ in Kraft · **Reihe:** ATC-STD-AI-DEV-001…012
 > **Autoren:** Michael Wroblewski (Owner), Aurora (Superagent)
 > **Kernprinzip:** Jede Agentenarbeit hat eine Task-ID, die Issue → Branch →
 > Commits → PR → Tests → Doku → Audit verbindet. Ein Task ist niemals implizit.

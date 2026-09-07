@@ -3,7 +3,7 @@ standard:
   id: ATC-STD-204
   title: "ATC-STD-204 — Dependency & Interface Standard"
   version: "1.0.0"
-  status: proposed
+  status: approved
   category: repository
   authority: A-TownChain Ecosystems
   owner: ShivaCoreDev
@@ -15,7 +15,7 @@ standard:
 ---
 
 # ATC-STD-204 — Dependency & Interface Standard
-> **Status:** PROPOSED (v1.0.0) — Setzt die 26-Repo-Struktur (Restrukturierung 07.09.2026) technisch verbindlich um; Normativkraft entsteht mit APPROVED (ATC-STD-000 §9) | **Datum:** 07.09.2026 | **Autor:** Michael Wroblewski (Owner), Aurora (Superagent)
+> **Status:** APPROVED (v1.0.0) — Owner-Freigabe 07.09.2026 (ATC-STD-000 §9); normativ in Kraft, Übergangsfrist für Nachregistrierung: 30 Tage (§9) | **Datum:** 07.09.2026 | **Autor:** Michael Wroblewski (Owner), Aurora (Superagent)
 > **Standard-ID:** ATC-STD-204 | **Scope:** Alle 26 Repositories der Organisation
 > **Referenzen:** AD-026 (Dependency Graphs), AD-030/031 (Registry), ATC-STD-000, ATC-STD-201/-202/-203, Externe Bewertung 07.09.2026 (F-001 Dependency Governance P0, F-002 Interface Governance P0, F-005 Versioning P1)
 
@@ -160,7 +160,7 @@ Repos (ATC-STD-203 §2) und MUSS im Release-Gate grün sein.
 
 ## 9. Inkrafttreten
 
-Status PROPOSED. Mit APPROVED per ATC-STD-000 §9 wird der Standard für alle
+APPROVED per Owner-Freigabe 07.09.2026 (ATC-STD-000 §9). Der Standard ist für alle
 R2+-Repositories verbindlich; Übergangsfrist für Nachregistrierung bestehender
 Kanten: 30 Tage.
 

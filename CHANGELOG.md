@@ -1,3 +1,13 @@
+## 2026-09-07 — Owner-Freigabe: ATC-STD-204 + AI-DEV-001/004/007/009 APPROVED
+- Owner-Direktfreigabe (Builder-Chat 19:53 UTC+2; dokumentiert in
+  approval/APPROVAL-DECISION-2026-09-07-204-AI-DEV.md): 5 Standards
+  PROPOSED/CANDIDATE → APPROVED (ATC-STD-000 §9), normativ in Kraft.
+- Fristen ab 07.09.2026: ATC-STD-204 Interface-Test-Suiten (IFC-0001..0010
+  seed → active) bis 07.10.2026; AGENT_PROTOCOL.md-Migration auf
+  Commit-Trailer bis 07.10.2026; Agent-Manifeste + AGENTS.md in R2+-Repos
+  binnen 30 Tagen.
+- Immutabilität ab sofort (§30); Änderungen nur noch via SCR.
+
 ## 2026-09-07 — ATC-STD-AI-DEV-004/007/009 (erste Folge-Standards der AI-DEV-Familie)
 - **AI-DEV-004 AI Task Management** (candidate): Task-Record
   `.github/ai/tasks/ATC-TASK-NNNN.yaml`, Lifecycle CREATED→COMPLETED mit
