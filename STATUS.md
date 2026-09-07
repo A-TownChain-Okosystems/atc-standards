@@ -36,7 +36,19 @@ mit unverzichtbarer Auditierbarkeit, AI-Agent-Publish-Sperre, Update Manifest, C
 Update Audit (15 Fragen), Review-Kadenzen, Control Matrix, No-Silent-Update-Kernregel,
 UPD↔SCR-Kopplung. Change-Control-Kette: SCR → VERSION → UPDATE → AUDIT. §9-Freigabe ausstehend.
 
-Stand: 07.09.2026, 22:40 (Europe/Berlin) · Self-Compliance: R3 100/100 GATE PASS · Voll-Audit 103/103 Standards: ALLE CHECKS PASS
+ATC-STD-COMPAT-001 v1.0.0 DRAFT (SCR-0016): Major Version Compatibility & Recovery —
+verbindliche Kompatibilitätsprüfung des gesamten abhängigen Ökosystems nach MAJOR-Updates.
+14 REQ-COMPAT, 2 harte Kernregeln (ATC-MAJOR-COMPATIBILITY-GATE: Major-Version gilt erst
+als freigegeben, wenn Kompatibilität geprüft/dokumentiert und bestätigt oder wiederhergestellt;
+ATC-COMPATIBILITY-RESTORATION: jede kritische Inkompatibilität muss behoben, migriert,
+überbrückt oder als formal freigegebener Breaking Change akzeptiert werden), 23 Prüfbereiche,
+Unknown-Default, 6 Kompatibilitätsklassen, Compatibility Matrix, 5 Prüfebenen, 6
+Wiederherstellungsmethoden A–F, COMP-NNN-IDs (keine versteckten Kompatibilitäts-Fixes),
+YAML-Report, 18-Punkte-MAJOR-DoD. Pflicht-Gate in UPDATE-001 UPD-G04 (MAJOR, REQ-UPD-008
+verstärkt). Change-Control-Kette erweitert: SCR → VERSION → UPDATE → COMPAT → AUDIT.
+§9-Freigabe ausstehend.
+
+Stand: 07.09.2026, 23:00 (Europe/Berlin) · Self-Compliance: R3 100/100 GATE PASS · Voll-Audit 103/103 Standards: ALLE CHECKS PASS
 
 ## Standards-System
 
@@ -59,7 +71,8 @@ Stand: 07.09.2026, 22:40 (Europe/Berlin) · Self-Compliance: R3 100/100 GATE PAS
 | ATC-STD-AUDIT-001 | ATC Completeness & Audit Standard (Kontrollschicht über allen Standards) | APPROVED — SCR-0013, §9-Sammelfreigabe 22:25 |
 | ATC-STD-AI-DECISION-001 | ATC Agent Decision-Making Standard (Entscheidungsmodell über AAS/AI-DEV) | APPROVED — SCR-0014, §9-Sammelfreigabe 22:25 |
 | ATC-STD-UPDATE-001 | ATC Update Standard (Change Control: Lifecycle, Gates, Rollback, Emergency) | DRAFT — SCR-0015, §9-Freigabe ausstehend |
-| **Summe** | **109 Standards** | **108 APPROVED + 1 DRAFT** |
+| ATC-STD-COMPAT-001 | Major Version Compatibility & Recovery Standard (Major-Gate in UPD-G04) | DRAFT — SCR-0016, §9-Freigabe ausstehend |
+| **Summe** | **110 Standards** | **108 APPROVED + 2 DRAFT** |
 
 ## Qualitätssicherung (CI, self-compliant)
 
