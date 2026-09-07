@@ -276,3 +276,10 @@ findings:
   scr: null
   status: OPEN
   resolution: Backfill im F-034-Backfill-SCR bündeln
+- id: F-041
+  title: 16 Altbau-Standards ohne Status-/Versions-Suffix im H1-Header (Kopf-Konvention FRAMEWORK-001)
+  severity: P3
+  source: Tiefenpruefung 08.09.2026 (Builder-Chat, SCR-Ketten-Audit)
+  scr: null
+  status: OPEN
+  resolution: H1-Suffix "(vX.X.X, APPROVED)" bei ATC-STD-000/100/202/203/204/300 und ZKP-001..010 ergaenzen — im F-034-Backfill-SCR buendeln (kosmetisch, praesentational, keine normative Aenderung)
