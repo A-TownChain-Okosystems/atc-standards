@@ -1,5 +1,25 @@
 # Changelog
 
+## [1.4.12] - 2026-09-07
+
+### Added
+
+- **AUD-2026-0001 — erster Audit-Lauf unter ATC-STD-AUDIT-001** (Owner-Auftrag
+  „Prüfe ob alle Standards umgesetzt werden", 22:30): Standards-Umsetzungs-Audit
+  mit Audit Manifest (AUD-YYYY-NNNN), 20 Domänen (AUD-C01..C20), Evidence-Kette,
+  Unabhängigkeits-Notiz, DoD-Checkliste und Audit Trail. Ergebnis:
+  CONDITIONAL_PASS, Completeness Score C — Governance-Schicht vollständig
+  (108/108 validiert, DAG, CI grün), Durchsetzungsschicht bei 23% Umsetzungs-
+  decke: 8 Standards automatisiert erzwungen (ATC-STD-000, 201..204,
+  README/MD-001, AAS-025), 18 teilumgesetzt, 82 nur dokumentiert.
+- **Findings F-019..F-023** gemäß BUG-001: F-019 Enforcement-Lücke (S2),
+  F-020 DEC-Records-Infrastruktur (S2), F-021 Audit-Engine/Cross-System-Scanner
+  (S3), F-022 BUG-005-Analyse-Felder im Finding-Workflow (S3),
+  F-023 Cross-System-Stichprobe: atc-shivacore fehlen STATUS.md/ROADMAP.md/
+  ARCHITECTURE.md (MD-001-Verstoß, S2). Kein Release-Blocker (0× S0/S1).
+- **audits/AUD-2026-0001.md**: Audit-Report + Manifest, erste revisionsfähige
+  Audit-Historie unter REQ-AUDIT-027/028.
+
 ## [1.4.11] - 2026-09-07
 
 ### Added
