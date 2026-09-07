@@ -28,7 +28,12 @@ Das Repositorium selbst erfuellt den ATC-STD-201 (self-compliant).
 
 ## 3. Architecture
 
-- `governance/` — ATC-STD-000 v1.0.0: die Verfassung des Standardsystems
+- `governance/` — ATC-STD-000 v1.0.0 (Verfassung) + CHANGE_CONTROL.md
+  (SCR-Verfahren mit Registry) + APPROVAL_PROCESS.md (Freigabe-Ablauf
+  CANDIDATE→STABLE)
+- `approval/` — Formales Review-Paket ATC-STD-000 v1.0.0 (Snapshot, 3
+  Reviews, Requirement-Matrix, Decision: PENDING)
+- `change-requests/` — SCR-Registry-Dokumente SCR-0001…0004
   (ID-Raeder 000-1000+, Lifecycle IDEA…RETIRED, Metadaten-Pflicht, REQ-IDs,
   SemVer/Breaking Changes, SCR-Prozess, Review-Chain, Supersession,
   Registry-Pflicht, Validator-Anforderung)

@@ -1,5 +1,19 @@
 # Changelog — atc-standards
 
+## [1.4.0] — 2026-09-07 (fehlende Governance-Komponenten)
+- governance/CHANGE_CONTROL.md: SCR-Verfahren operationalisiert (Lebenszyklus
+  PROPOSED→REVIEW→DECIDED→IMPLEMENTED→CLOSED, SCR-Registry, Emergency-Rückkopplung).
+- governance/APPROVAL_PROCESS.md: Freigabe-Ablauf CANDIDATE→STABLE mit
+  Pflichten je Entscheidung (APPROVE/REQUEST CHANGES/REJECT) + Übergangs-Rollen.
+- change-requests/: SCR-0001 (ID-Allokation, PENDING), SCR-0002 (OBSOLETE —
+  durch Formalfassung §22 aufgelöst), SCR-0003 (§33-Integritätsumsetzung,
+  PENDING, Teilumsetzung CODEOWNERS), SCR-0004 (Rollenmodell, PENDING).
+- CODEOWNERS (§33-Teilumsetzung, SCR-0003).
+- Root-Metadateien vervollständigt (§27-Soll-Layout): ARCHITECTURE.md
+  (Repo-Architektur + Governance-Fluss), STATUS.md (Standard-/SCR-Status),
+  ROADMAP.md (Q3/2026 + Ausbau je Bereich).
+
+
 ## [1.3.0] — 2026-09-07 (AD-034)
 - ATC-STD-000 v1.0.0: Standards Governance & Specification Standard — die
   Verfassung des Standardsystems (Owner-Mandat). ID-System mit Domain-Raedern
