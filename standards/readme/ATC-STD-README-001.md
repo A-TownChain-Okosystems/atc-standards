@@ -3,7 +3,7 @@ standard:
   id: ATC-STD-README-001
   title: "ATC-STD-README-001 — README Standard"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: readme
   authority: A-TownChain-Okosystems
   owner: Michael (Owner-Entwurf) / ATC-AI-ARCH-001 (Formalfassung)
@@ -13,11 +13,11 @@ standard:
   supersedes: []
 ---
 
-# ATC-STD-README-001 — README Standard (v1.0.0, CANDIDATE)
+# ATC-STD-README-001 — README Standard (v1.0.0, APPROVED)
 
-> **Status:** CANDIDATE (v1.0.0) — Owner-Entwurf Michael 07.09.2026, Formalfassung
-> durch ATC-AI-ARCH-001; Freigabe nach ATC-STD-000 §9 ausstehend (Todo #116).
-> Nach Freigabe: Immutabilität per §30, Änderungen nur via SCR.
+> **Status:** APPROVED (v1.0.0) — Owner-Freigabe 07.09.2026, 20:36 UTC+2 (ATC-STD-000 §9,
+> „Freigeben"); dokumentiert in approval/APPROVAL-DECISION-2026-09-07-README-001.md.
+> Immutabilität per §30 — Änderungen nur via SCR.
 
 ## Abstract
 

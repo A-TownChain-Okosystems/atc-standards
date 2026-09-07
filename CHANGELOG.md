@@ -1,3 +1,11 @@
+## 2026-09-07 — ATC-STD-README-001 APPROVED (Owner-Freigabe „Freigeben", 20:36 UTC+2)
+- CANDIDATE → APPROVED per ATC-STD-000 §9; normativ in Kraft, Immutabilität
+  per §30.
+- Registry: **82 Standards, 82 APPROVED, 0 offen.**
+- Approval-Dokument: approval/APPROVAL-DECISION-2026-09-07-README-001.md.
+- Übergangsfrist bis 07.10.2026: README-Konformitäts-Rollout auf alle 26
+  Repos (Todo #116, Rollout-Komponente offen).
+
 ## 2026-09-07 — ATC-STD-README-001 v1.0.0 CANDIDATE (Owner-Entwurf): README als Einstiegsschnittstelle
 - **Neue Standard-Familie:** ATC-STD-README-001 (CANDIDATE, §9-Freigabe
   ausstehend, Todo #116) — README = standardisierte Einstiegsschnittstelle

@@ -11,8 +11,9 @@
 
 ## Bis 07.10.2026 (30-Tage-Fristen)
 
-0. **ATC-STD-README-001 (CANDIDATE):** §9-Freigabe + Rollout der
-   README-Konformität auf alle 26 Repos (Validator als CI-Gate je Repo)
+0. **ATC-STD-README-001 (APPROVED 07.09. 20:36):** Rollout der
+   README-Konformität auf alle 26 Repos (Validator als CI-Gate je Repo;
+   bis Workflow-Integration: Agenten-lokale Prüfung je Task)
 
 1. **SCR-0007 (F-017):** REQ-ID-Rollout AI-DEV/AAS/ENT + §9-Reststruktur — Owner-Entscheidung ausstehend
 2. **Interface-Test-Suiten IFC-0001..0010** (P0): seed → active (ATC-STD-204 §9)
