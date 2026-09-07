@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.4.1] - 2026-09-07
+
+### Added
+
+- Owner-Freigabe: ATC-STD-SC-001..020 v1.0.0 APPROVED (§9, 21:00 UTC+2)
+  — Smart Contract Standards Framework normativ in Kraft, Immutabilität
+  per §30; Approval-Dokument in approval/ dokumentiert
+- Registry: 102 APPROVED + 1 CANDIDATE (MD-001)
+
 ## [1.4.0] - 2026-09-07
 
 ### Added

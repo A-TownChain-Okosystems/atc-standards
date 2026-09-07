@@ -12,8 +12,8 @@
    ATC-STD-100/201-204/300, BUG-001..004, NET-001..008, ZKP-001..010,
    README-001 (§9-APPROVED 07.09. 20:36 UTC+2), MD-001 (CANDIDATE — gemäß
    dynamischer Bindung Ziffer 2 bereits verbindlich; §9-Freigabe ausstehend,
-   Todo #117) und SC-001..020 (CANDIDATE — Smart Contract Standards
-   Framework; §9-Freigabe ausstehend, Todo #118).
+   Todo #117) und SC-001..020 (§9-APPROVED 07.09. 21:00 UTC+2 — Smart
+   Contract Standards Framework, normativ in Kraft).
 2. **Dynamische Bindung:** Die Registry (`registry/standards.yaml`) ist SSOT
    (ATC-STD-000 §19). Jeder neue APPROVED-Standard ist ab Freigabe automatisch
    verbindlich — ohne dass dieses Manifest geändert werden MUSS. Die
