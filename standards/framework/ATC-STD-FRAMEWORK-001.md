@@ -3,16 +3,17 @@ standard:
   id: ATC-STD-FRAMEWORK-001
   title: "ATC Enterprise Standards Framework — Master-Dokument (ATC-STANDARDS-MASTER): Zusammenführung aller Standards, Katalog, Kollisionsauflösung, einheitliche Status-/Change-/Traceability-Modelle, Register-Architektur"
   version: "1.0.0"
-  status: draft
+  status: approved
   category: framework
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"
   created: "2026-09-07"
   updated: "2026-09-07"
-  normative: false
-  effective_date: ""
-  review_date: ""
+  normative: true
+  effective_date: "2026-09-07"
+  review_date: "2027-09-07"
   classification: PUBLIC
+  approved_by: "Michael Wroblewski (Owner, §9-Freigabe 07.09.2026, 23:48 UTC+2)"
   language: de-DE
   supersedes: null
   superseded_by: null
@@ -33,10 +34,10 @@ standard:
   license: "Copyright (c) 2026 Michael Wroblewski"
 ----
 
-# ATC-STD-FRAMEWORK-001 — ATC Enterprise Standards Framework (v1.0.0, DRAFT)
+# ATC-STD-FRAMEWORK-001 — ATC Enterprise Standards Framework (v1.0.0, APPROVED)
 
-> **Status:** DRAFT (v1.0.0) — Owner-Entwurf Michael Wroblewski (Builder-Chat 07.09.2026, 23:41 UTC+2);
-> Agenten-Review + Harmonisierung SCR-0019; Owner-§9-Freigabe ausstehend. Bei Freigabe: APPROVED, normativ, §30-eingefroren.
+> **Status:** APPROVED (v1.0.0) — §9-Freigabe Michael Wroblewski (Builder-Chat 07.09.2026, 23:48 UTC+2);
+> normativ in Kraft ab 07.09.2026, §30-eingefroren (ATC-STD-000). Harmonisierung SCR-0019 akzeptiert.
 > **Rolle:** Master-Dokument (ATC-STANDARDS-MASTER) — führt alle bestehenden Standards zusammen und definiert
 > die Zielarchitektur, den Enterprise-Katalog mit Lückenzuordnung und die einheitlichen Governance-Modelle.
 > **Eingebettete Familien:** ATC-STD (Numeric 000–999), BUG, ZKP, SC, AAS, ENT, README, MD, DESC, VERSION,
@@ -288,13 +289,13 @@ deckt AUDIT-001 die Audit-Kette ab. Agenten-Operationen ohne Mandatsbeantwortung
 
 ## Changelog (Standard-intern)
 
-- **1.0.0** (2026-09-07): Initial Release DRAFT — Owner-Entwurf Michael Wroblewski
+- **1.0.0** (2026-09-07): Initial Release — Owner-Entwurf Michael Wroblewski
   (Builder-Chat 23:41, 40-Familien-Katalog mit 423 Slots), harmonisiert mit ATC-STD-000,
   VERSION-001, UPDATE-001, COMPAT-001, AUDIT-001, MILESTONE-001, BUG-Familie,
   SC/ZKP/AAS/ENT-Familien. Kollisionsauflösung 100/201-204/300 dokumentiert;
   Agent Operating Mandate (14 Fragen); Master-Audit ATC-STD-999 reserviert;
   maschinenlesbar via registry/framework.yaml + Validator S-21. SCR-0019;
-  §9-Freigabe ausstehend.
+  §9-Freigabe Michael Wroblewski 07.09.2026, 23:48 UTC+2 — APPROVED, normativ, §30-eingefroren.
 
 ## References
 

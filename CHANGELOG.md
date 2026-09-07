@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.4.23] - 2026-09-07
+
+### Changed
+
+- **ATC-STD-FRAMEWORK-001 v1.0.0: §9-FREIGABE → APPROVED** (Owner-Freigabe Michael
+  Wroblewski, Builder-Chat 07.09. 23:48 UTC+2). Normativ in Kraft ab 07.09.2026,
+  §30-eingefroren (ATC-STD-000). Frontmatter: status approved, normative true,
+  effective_date 2026-09-07, review_date 2027-09-07, approved_by Owner. SCR-0019:
+  IMPLEMENTED → APPROVED. versions.yaml: 1.0.0-Approval-Eintrag.
+- **Registry FINAL: 112 Standards, 112 APPROVED, 0 DRAFT, 0 offen — alle normativ.**
+  Das Enterprise-Control-System ist verbindlich: Neue Standards folgen dem
+  40-Familien-Katalog (registry/framework.yaml, 423 Slots — Slot-Pflicht), den
+  einheitlichen Status-/Change-/Traceability-Modellen und der 11-Register-
+  Zielarchitektur; KONFLIKT-Slots (100/201-204/300) werden je Familie via SCR
+  aufgelöst. Gap-Roadmap P1: ATC-STD-AOS-001 (Agent Operating Standard),
+  ATC-STD-999 (Master-Audit), Requirements Registry.
+
+
 ## [1.4.22] - 2026-09-07
 
 ### Added
