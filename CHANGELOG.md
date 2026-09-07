@@ -1,3 +1,14 @@
+## 2026-09-07 — ATC-STD-NET-001…008 (Netzwerk-Umgebungen & Promotion, Owner-Mandat AD-041)
+- 8 neue Standards (candidate, normativ per Owner-Mandat): NET-001 Devnet,
+  NET-002 Testnet (24-Gebiete-Testpflicht), NET-003 Mainnet (658467
+  permanent, 7 Verbote), NET-004 Promotion-Pipeline (GATE-011/012/013,
+  EIN Code DREI Konfigurationen), NET-005 Genesis, NET-006 Upgrade,
+  NET-007 Security-Matrix, NET-008 Recovery.
+- Neue ID-Muster: ATC-STD-NET-NNN (+ Dateinamen), REQ-Domain NET.
+- schemas/network-environment.schema.json (Tier-Zwangsbedingungen per
+  if/then), registry/networks.yaml (Devnet 658469, Testnet 658468,
+  Mainnet 658467).
+
 ## 2026-09-07 — ATC-STD-BUG-001…004 (Bug- & Konsistenz-Lebenszyklus, Owner-Mandat AD-040)
 - 4 neue Standards (candidate, normativ per Owner-Mandat): BUG-001 Finding
   (Pflichtprozess + Pflichtfelder + Severity S0-S4), BUG-002 Documentation

@@ -34,7 +34,8 @@
     "bugStandardId",
     "testId",
     "syncCheckId",
-    "auditRecordId"
+    "auditRecordId",
+    "netStandardId"
    ],
    "properties": {
     "standardId": {
@@ -44,7 +45,7 @@
     },
     "requirementId": {
      "type": "string",
-     "pattern": "^REQ-(STD|REPO|SEC|PROTO)-[0-9]{3,}$",
+     "pattern": "^REQ-(STD|REPO|SEC|PROTO|NET)-[0-9]{3,}$",
      "example": "REQ-STD-001",
      "note": "Kanonisch REQ-STD-NNN; geschlossene Domaenen-Subklassen gemaess Abschnitt 10; Erweiterung per SCR"
     },
@@ -128,6 +129,11 @@
      "type": "string",
      "pattern": "^AUD-[0-9]{3,}$",
      "example": "AUD-031"
+    },
+    "netStandardId": {
+     "type": "string",
+     "pattern": "^ATC-STD-NET-[0-9]{3,}$",
+     "example": "ATC-STD-NET-001"
     }
    }
   },
@@ -180,7 +186,8 @@
     "integrity",
     "review",
     "compliance",
-    "bugStandardDoc"
+    "bugStandardDoc",
+    "netStandardDoc"
    ],
    "properties": {
     "standardDoc": {
@@ -209,6 +216,11 @@
      "type": "string",
      "pattern": "^ATC-STD-BUG-[0-9]{3,}[.]md$",
      "example": "ATC-STD-BUG-001.md"
+    },
+    "netStandardDoc": {
+     "type": "string",
+     "pattern": "^ATC-STD-NET-[0-9]{3,}[.]md$",
+     "example": "ATC-STD-NET-001.md"
     }
    }
   },

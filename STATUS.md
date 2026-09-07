@@ -15,6 +15,14 @@ Stand: 07.09.2026, 15:00 (Europe/Berlin)
 | ATC-STD-BUG-002 | 1.0.0 | candidate (Owner-Mandat) | Vorlage genutzt ab naechstem Finding |
 | ATC-STD-BUG-003 | 1.0.0 | candidate (Owner-Mandat) | SCR-Verkettung ab naechstem Fix |
 | ATC-STD-BUG-004 | 1.0.0 | candidate (Owner-Mandat) | Merge-Gate: SYNC-Nachweis-Pflicht |
+| ATC-STD-NET-001 | 1.0.0 | candidate (Owner-Mandat) | Devnet-Betrieb ab M4 |
+| ATC-STD-NET-002 | 1.0.0 | candidate (Owner-Mandat) | Testnet nach Devnet-GATE-011 |
+| ATC-STD-NET-003 | 1.0.0 | candidate (Owner-Mandat) | Mainnet nur via GATE-013 |
+| ATC-STD-NET-004 | 1.0.0 | candidate (Owner-Mandat) | Pipeline: GATE-011/012/013 |
+| ATC-STD-NET-005 | 1.0.0 | candidate (Owner-Mandat) | registry/networks.yaml aktiv |
+| ATC-STD-NET-006 | 1.0.0 | candidate (Owner-Mandat) | Erste Anwendung: Protokoll-Upgrades |
+| ATC-STD-NET-007 | 1.0.0 | candidate (Owner-Mandat) | Matrix mit GATE-012/013 verdrahtet |
+| ATC-STD-NET-008 | 1.0.0 | candidate (Owner-Mandat) | Recovery-Tests vor Promotion |
 
 ## Review- und Change-Status
 
