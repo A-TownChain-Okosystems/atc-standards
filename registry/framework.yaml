@@ -7,13 +7,13 @@ framework:
   note: 'ATC Enterprise Standards Framework Katalog — SSOT der Slot-Zuordnung (SCR-0019). Status: BELEGT/VERWEIST = durch Bestand abgedeckt, KONFLIKT = Slot kollidiert mit §30-ID, GEPLANT = reserviert,
     NEU = Lücke (via SCR zu erstellen). Regenerierung nur via SCR (REQ-FW-012).'
   stats:
-    families: 40
-    slots_total: 423
+    families: 41
+    slots_total: 426
     slots_neu: 264
     slots_verweist: 150
-    slots_belegt: 1
+    slots_belegt: 2
     slots_konflikt: 6
-    slots_geplant: 2
+    slots_geplant: 4
   families:
   - id: FAM-01
     name: Enterprise & Governance
@@ -1967,3 +1967,26 @@ framework:
       refs:
       - ATC-STD-AUDIT-001
       note: 16-Stufen-Audit-Kette + 13 Change-Nachweis-Fragen gem. FRAMEWORK-001 §9; Erweiterung von AUDIT-001, SCR empfohlen (P1)
+  - id: FAM-41
+    name: Repository Audit
+    range: ATC-STD-REPO-AUDIT-001..003
+    note: Neuer Namensraum gem. FRAMEWORK-001 §6.3 (BUG-/SC-/AAS-Muster); SCR-0020
+    family_refs: null
+    slots:
+    - id: ATC-STD-REPO-AUDIT-001
+      title: ATC Repository Audit Standard
+      status: BELEGT
+      refs:
+      - ATC-STD-REPO-AUDIT-001
+    - id: ATC-STD-REPO-AUDIT-002
+      title: Audit-Checklisten- und Health-Score-Standard (CHECK-001, CHECK-002, …)
+      status: GEPLANT
+      refs:
+      - ATC-STD-REPO-AUDIT-001
+      note: Automatisierbare Checks + standardisierter Repository Health Score; P1
+    - id: ATC-STD-REPO-AUDIT-003
+      title: Automatisierter ATC Repository Auditor (KI-/Automatisierungsagent)
+      status: GEPLANT
+      refs:
+      - ATC-STD-REPO-AUDIT-001
+      note: Agent-Spezifikation (AAS-Kopplung); P2

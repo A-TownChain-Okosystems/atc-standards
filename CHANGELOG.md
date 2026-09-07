@@ -1,5 +1,31 @@
 # Changelog
 
+## [1.4.24] - 2026-09-07
+
+### Added
+
+- **ATC-STD-REPO-AUDIT-001 v1.0.0 DRAFT (SCR-0020):** Verbindlicher Repository-Audit-
+  Standard (Owner-Entwurf, Builder-Chat 23:54) — 25 REQ-RA; reproduzierbarer Repository
+  Health Check über 16 Prüfbereiche; 26-Zeilen-Prüfmatrix; ATC-REPOSITORY-AUDIT-RULE;
+  SOLL/IST (13 Quellen, 8 Status); GAP-<KAT>-NNN-Kategorien; 11 kritische Code-Prüfungen;
+  Build 4-Status + Runtime-Regel (kompiliert ≠ fertig); Security-Mindestumfang mit
+  Verschärfung (Blockchain/Wallet/Contracts/Bridges/Mining/Admin APIs/KI-Agenten);
+  Dependency-Audit (9 Felder); 5-Ebenen-Sync; CI/CD- + GitHub-Audit; 8 Versionsquellen;
+  Kompatibilität 4-Status mit COMPAT-001-Kopplung (UNKNOWN bei Release verboten);
+  IMP-NNN-Verbesserungsaudit; P0-P4-Priorisierung (P0 blockiert Release); F-NNN auf
+  globalen findings.yaml-Namespace gemappt (Fortschreibung F-032+); RCA via BUG-005;
+  Health-Status A-E; 23 Abschlusskriterien; verbindliche 21-Schritte-Pipeline mit
+  AUD-Records (AUDIT-001). REPO-AUDIT-002 (CHECK-NNN + Health Score) und
+  REPO-AUDIT-003 (Auditor-Agent) GEPLANT.
+- **FAM-41 „Repository Audit"**: neue Katalog-Familie im Enterprise-Framework
+  (41 Familien, 426 Slots — 264 NEU / 150 VERWEIST / 2 BELEGT / 6 KONFLIKT /
+  4 GEPLANT). **ATC-STD-FRAMEWORK-001 v1.0.1 (PATCH, SCR-0020):** Zähler-
+  Synchronisation, keine semantischen Änderungen, Genehmigung gebündelt mit der
+  §9-Freigabe von REPO-AUDIT-001.
+- **Registry:** 113 Standards (112 APPROVED + 1 DRAFT REPO-AUDIT-001); Kategorie
+  repo-audit; 5 Naming-Patterns; DAG-Knoten; Agent-Manifest 113 Standards gebunden.
+
+
 ## [1.4.23] - 2026-09-07
 
 ### Changed

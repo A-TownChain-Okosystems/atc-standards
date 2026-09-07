@@ -2,7 +2,7 @@
 standard:
   id: ATC-STD-FRAMEWORK-001
   title: "ATC Enterprise Standards Framework — Master-Dokument (ATC-STANDARDS-MASTER): Zusammenführung aller Standards, Katalog, Kollisionsauflösung, einheitliche Status-/Change-/Traceability-Modelle, Register-Architektur"
-  version: "1.0.0"
+  version: "1.0.1"
   status: approved
   category: framework
   authority: A-TownChain-Okosystems
@@ -34,9 +34,9 @@ standard:
   license: "Copyright (c) 2026 Michael Wroblewski"
 ----
 
-# ATC-STD-FRAMEWORK-001 — ATC Enterprise Standards Framework (v1.0.0, APPROVED)
+# ATC-STD-FRAMEWORK-001 — ATC Enterprise Standards Framework (v1.0.1, APPROVED)
 
-> **Status:** APPROVED (v1.0.0) — §9-Freigabe Michael Wroblewski (Builder-Chat 07.09.2026, 23:48 UTC+2);
+> **Status:** APPROVED (v1.0.1) — §9-Freigabe Michael Wroblewski (Builder-Chat 07.09.2026, 23:48 UTC+2);
 > normativ in Kraft ab 07.09.2026, §30-eingefroren (ATC-STD-000). Harmonisierung SCR-0019 akzeptiert.
 > **Rolle:** Master-Dokument (ATC-STANDARDS-MASTER) — führt alle bestehenden Standards zusammen und definiert
 > die Zielarchitektur, den Enterprise-Katalog mit Lückenzuordnung und die einheitlichen Governance-Modelle.
@@ -131,7 +131,7 @@ Normative Referenzen: ATC-STD-000 §19–33 (SCR), UPDATE-001 (13-stufiger Lifec
 UPD-G01..G09), COMPAT-001 (MAJOR-Kompatibilität), AUDIT-001 (AUD-G-Gates),
 BUG-001..005 (Fehlerpfad), MILESTONE-001 (Acceptance).
 
-## §5 Enterprise-Katalog (40 Katalog-Familien, 423 Slots + 3 Governance-Modelle §2-§4)
+## §5 Enterprise-Katalog (41 Katalog-Familien, 426 Slots + 3 Governance-Modelle §2-§4)
 
 Der autoritative Katalog liegt maschinenlesbar in **`registry/framework.yaml`**
 (SSOT, REQ-FW-002): je Familie ID (FAM-NN), Name, ID-Bereich und je Slot
@@ -145,7 +145,7 @@ Titel + Status. Statuswerte:
 | GEPLANT | Slot für konkreten zukünftigen Standard reserviert (SCR empfohlen) |
 | NEU | Lücke — neuer Standard zu erstellen (via SCR, Katalog-Slot einhalten) |
 
-Familienübersicht (Zähler live in registry/framework.yaml: 423 Slots — 264 NEU, 150 VERWEIST, 1 BELEGT, 6 KONFLIKT, 2 GEPLANT):
+Familienübersicht (Zähler live in registry/framework.yaml: 426 Slots — 264 NEU, 150 VERWEIST, 2 BELEGT, 6 KONFLIKT, 4 GEPLANT):
 FAM-01 Enterprise & Governance (001–015) · FAM-02 Standards-Governance (020–033,
 weitgehend VERWEIST auf ATC-STD-000) · FAM-03 Repository (040–054, VERWEIST auf
 ATC-STD-201..204/README-001/MD-001) · FAM-04 Dokumentation (060–075) · FAM-05
@@ -167,7 +167,8 @@ VERWEIST auf MILESTONE-001) · FAM-32 Requirements (560–566) · FAM-33 UI/UX
 (580–587) · FAM-34 Mobile/Desktop/OS (600–607) · FAM-35 ATCLang (620–629) · FAM-36
 AuditTrail/LogChain (640–646) · FAM-37 Supply Chain (660–667) · FAM-38 Open Source
 (680–686) · FAM-39 Business/Economics (700–706) · FAM-40 Master-Audit (999,
-GEPLANT: ATC-STD-999, s. §9).
+GEPLANT: ATC-STD-999, s. §9) · FAM-41 Repository Audit (REPO-AUDIT-001..003:
+001 BELEGT, 002 Health-Score/CHECK-NNN + 003 Auditor-Agent GEPLANT, SCR-0020).
 
 ## §6 Harmonisierungs- & Kollisionsregeln
 
@@ -288,6 +289,11 @@ deckt AUDIT-001 die Audit-Kette ab. Agenten-Operationen ohne Mandatsbeantwortung
 (§8) sind governance-widrig (AI-DECISION-001 Human Gates bleiben übergeordnet).
 
 ## Changelog (Standard-intern)
+
+- **1.0.1** (2026-09-07): PATCH (SCR-0020) — Katalog-Erweiterung FAM-41 „Repository
+  Audit": Zähler-Synchronisation 40→41 Familien, 423→426 Slots (2 BELEGT, 4 GEPLANT);
+  keine semantischen Änderungen; Genehmigung gebündelt mit §9-Freigabe
+  ATC-STD-REPO-AUDIT-001.
 
 - **1.0.0** (2026-09-07): Initial Release — Owner-Entwurf Michael Wroblewski
   (Builder-Chat 23:41, 40-Familien-Katalog mit 423 Slots), harmonisiert mit ATC-STD-000,

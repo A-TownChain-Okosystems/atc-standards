@@ -446,6 +446,22 @@
         "frameworkFamilyId": {
           "pattern": "^FAM-[0-9]{2,3}$",
           "description": "Framework-Katalog-Familie (FAM-NN)"
+        },
+        "repoAuditStandardId": {
+          "pattern": "^ATC-STD-REPO-AUDIT-[0-9]{3,}$",
+          "description": "ATC Repository Audit Standard (ATC-STD-REPO-AUDIT-001)"
+        },
+        "repoAuditRequirementId": {
+          "pattern": "^REQ-RA-[0-9]{3,}$",
+          "description": "Repository-Audit-Anforderungs-ID (REQ-RA-NNN)"
+        },
+        "repoAuditGapId": {
+          "pattern": "^GAP-[A-Z]+-[0-9]{3,}$",
+          "description": "Gap-Analyse-ID (GAP-<KAT>-NNN, ATC-STD-REPO-AUDIT-001 §11)"
+        },
+        "repoAuditImprovementId": {
+          "pattern": "^IMP-[0-9]{3,}$",
+          "description": "Verbesserungs-ID (IMP-NNN, ATC-STD-REPO-AUDIT-001 §21)"
         }
       }
     },
@@ -606,6 +622,10 @@
         "frameworkStandardDoc": {
           "pattern": "^ATC-STD-FRAMEWORK-[0-9]{3,}[.]md$",
           "description": "Framework-Master-Dokument"
+        },
+        "repoAuditStandardDoc": {
+          "pattern": "^ATC-STD-REPO-AUDIT-[0-9]{3,}[.]md$",
+          "description": "Repository-Audit-Standard-Dokument"
         }
       }
     },
