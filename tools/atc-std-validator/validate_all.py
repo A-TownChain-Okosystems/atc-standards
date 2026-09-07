@@ -45,7 +45,7 @@ def collect():
 def file_id(path):
     try:
         head = open(path, encoding="utf-8").read(2500)
-        m = re.search(r"^\s*id:\s*(ATC-STD-(?:BUG-|NET-|ZKP-|AI-DEV-|MD-|SC-|README-|DESC-|VERSION-|AUDIT-|AI-DECISION-|UPDATE-|COMPAT-|MILESTONE-|FRAMEWORK-|REPO-AUDIT-|AOS-)?[0-9]{3,}|ATC-AAS-[0-9]{3,}|ATC-ENT-[0-9]{3,})\s*$", head, re.M)
+        m = re.search(r"^\s*id:\s*(ATC-STD-(?:BUG-|NET-|ZKP-|AI-DEV-|MD-|SC-|README-|DESC-|VERSION-|AUDIT-|AI-DECISION-|UPDATE-|COMPAT-|MILESTONE-|FRAMEWORK-|REPO-AUDIT-|AOS-|PROTOCOL-)?[0-9]{3,}|ATC-AAS-[0-9]{3,}|ATC-ENT-[0-9]{3,})\s*$", head, re.M)
         return m.group(1) if m else None
     except Exception:
         return None
@@ -300,6 +300,48 @@ def main():
         except Exception as e:
             print("S-22 RepoAuditChecks: FAIL — %s" % str(e)[:120]); checks_ok = False
     if not checks_ok:
+        fails += 1
+
+
+    # S-23 Protocol-Registry (ATC-STD-PROTOCOL-001 §20/§21)
+    proto_ok = True
+    PR_PATH = os.path.join(ROOT, "registry", "protocol-registry.yaml")
+    if not os.path.exists(PR_PATH):
+        print("S-23 ProtocolRegistry: PASS (keine protocol-registry.yaml)")
+    else:
+        try:
+            import yaml as _py
+            pr = (_py.safe_load(open(PR_PATH, encoding="utf-8")) or {}).get("protocol-registry") or {}
+            protos = pr.get("protocols") or []
+            if len(protos) < 20:
+                print("S-23 ProtocolRegistry: FAIL — nur %d Protokolle (>= 20 gefordert)" % len(protos)); proto_ok = False
+            seen = set()
+            statuses = {"planned", "draft", "active", "experimental", "deprecated"}
+            for e in protos:
+                pid = str(e.get("id", "?"))
+                if not re.match(r"^ATC-PROTO-[A-Z0-9]+(-[A-Z0-9]+)*-[0-9]{3,}$", pid):
+                    print("S-23 ProtocolRegistry: FAIL — %s: ID-Pattern verletzt" % pid); proto_ok = False
+                if pid in seen:
+                    print("S-23 ProtocolRegistry: FAIL — %s doppelt" % pid); proto_ok = False
+                seen.add(pid)
+                if e.get("status") not in statuses:
+                    print("S-23 ProtocolRegistry: FAIL — %s: Status %s ungueltig" % (pid, e.get("status"))); proto_ok = False
+                if e.get("priority") not in {"P0", "P1", "P2"}:
+                    print("S-23 ProtocolRegistry: FAIL — %s: Prioritaet %s ungueltig" % (pid, e.get("priority"))); proto_ok = False
+                if not re.match(r"^[0-9]+[.][0-9]+[.][0-9]+$", str(e.get("version", "?"))):
+                    print("S-23 ProtocolRegistry: FAIL — %s: Version %s kein SemVer" % (pid, e.get("version"))); proto_ok = False
+                for f in ("name", "domain", "layer", "specification"):
+                    if not e.get(f):
+                        print("S-23 ProtocolRegistry: FAIL — %s: Feld %s fehlt" % (pid, f)); proto_ok = False
+            sc = {}
+            for e in protos:
+                sc[e.get("status", "?")] = sc.get(e.get("status", "?"), 0) + 1
+            print("S-23 ProtocolRegistry: %s (%d Protokollfamilien, Status: %s)" % ("PASS" if proto_ok else "FAIL", len(protos), sc))
+        except ImportError:
+            print("S-23 ProtocolRegistry: WARN (Fallback-Modus, PyYAML fehlt)")
+        except Exception as e:
+            print("S-23 ProtocolRegistry: FAIL — %s" % str(e)[:120]); proto_ok = False
+    if not proto_ok:
         fails += 1
 
     print("RESULT: " + ("ALL COMPLIANT" if fails == 0 else "%d FAIL(s)" % fails))

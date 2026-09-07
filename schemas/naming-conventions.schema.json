@@ -96,9 +96,8 @@
           "example": "ATC-SCHEMA-001"
         },
         "protocolId": {
-          "type": "string",
-          "pattern": "^ATC-PROTO-[0-9]{3,}$",
-          "example": "ATC-PROTO-001"
+          "pattern": "^ATC-PROTO-[A-Z0-9]+(-[A-Z0-9]+)*-[0-9]{3,}$",
+          "description": "ATC-Protokoll-ID (ATC-PROTO-[DOMAIN]-[NUMBER], Registry-Pflicht)"
         },
         "specificationId": {
           "type": "string",
@@ -490,6 +489,18 @@
         "masterAuditRequirementId": {
           "pattern": "^REQ-MA-[0-9]{3,}$",
           "description": "Master-Audit-Anforderungs-ID (REQ-MA-NNN)"
+        },
+        "protocolStandardId": {
+          "pattern": "^ATC-STD-PROTOCOL-[0-9]{3,}$",
+          "description": "ATC Protocol Standards Dach-/Familienstandard (ATC-STD-PROTOCOL-001)"
+        },
+        "protocolErrorCode": {
+          "pattern": "^ATC-PROTO-[A-Z]+-[0-9]{3,}$",
+          "description": "ATC-Protokoll-Fehlercode (ATC-PROTO-<KAT>-NNN, RE-Standard §13)"
+        },
+        "protocolRequirementId": {
+          "pattern": "^REQ-PROTO-[0-9]{3,}$",
+          "description": "Protocol-Standards-Anforderungs-ID (REQ-PROTO-NNN)"
         }
       }
     },
@@ -662,6 +673,10 @@
         "masterAuditStandardDoc": {
           "pattern": "^ATC-STD-999(-[0-9]{3,})?[.]md$",
           "description": "Master-Audit-Standard-Dokument"
+        },
+        "protocolStandardDoc": {
+          "pattern": "^ATC-STD-PROTOCOL-[0-9]{3,}[.]md$",
+          "description": "Protocol-Standards-Dokument"
         }
       }
     },

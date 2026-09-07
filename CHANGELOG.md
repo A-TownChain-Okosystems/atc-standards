@@ -1,5 +1,38 @@
 # Changelog
 
+## [1.4.29] - 2026-09-08
+
+### Added
+
+- **ATC-STD-PROTOCOL-001 v1.0.0 DRAFT (SCR-0023, 117. Standard):** ATC Protocol
+  Standards — Dachstandard ÜBER allen Einzelprotokollen des Ökosystems. 21 REQ-PROTO:
+  Protocol Governance (12+ Pflichtfelder), 7-Schichten-Architektur, ID-Schema
+  ATC-PROTO-[DOMAIN]-[NUMBER], 9-Felder-Nachrichten-Envelope, Encoding-Standard
+  (JSON/YAML/TOML human-readable, CBOR/Protobuf machine, deterministische
+  Serialisierung für Blockchain), SemVer + Versionsfenster (supported/minimum/
+  maximum/deprecated), 7 Kompatibilitätsdimensionen mit Compatibility-Layer-Pflicht,
+  6-Phasen-Handshake mit Capability Exchange, Authentication (niemals nur IP/
+  Hostname) + Authorization (Capability-Modell), Threat-Model-Pflicht (12 Angriffe),
+  Cryptographic Abstraction Layer, maschinenlesbare Fehlercodes (13 Klassen),
+  Timeout/Retry/Circuit-Breaker, Rate-Limiting, Replay-Schutz mit Chain-ID-Pflicht,
+  Observability (11 Felder), Audit (AUD-Records), 13-Schritte-Upgrade-Prozess.
+- **Protocol-Registry:** `registry/protocol-registry.yaml` (SSOT via
+  tools/protocol/gen_protocol_registry.py) — 26 ATC-PROTO-Familien gem. Owner-Matrix
+  (P2P, NODE, CONSENSUS, BLOCK, TX, MEMPOOL, VALIDATOR, STAKING, MINING, WALLET,
+  IDENTITY, REPUTATION, GOVERNANCE, ORACLE, ZKP, BRIDGE, IBC, DATA, STORAGE, AI,
+  AGENT, API, EVENT, AUDIT, UPGRADE + KERNEL als 26.); Status-Ehrlichkeitsregel:
+  10 draft (Impl.-Spuren: ShivaCore K6/K9/K12/K14/K15/K16, a-townchain,
+  mempool.rs, Dev-Plattform-Repos), 16 planned, 0 active. **Validator NEU S-23**
+  (Integrität: ID-Pattern, Status, SemVer, Prioritäten, ≥20 Familien — Negativtest
+  verifiziert). Ein Protokoll ohne Registry-Eintrag ist kein ATC-Protokoll.
+- **FAM-42 „Protocol Standards"**: neue Katalog-Familie (42 Familien, 429 Slots —
+  6 BELEGT, 3 GEPLANT). **ATC-STD-FRAMEWORK-001 v1.0.4 (PATCH, SCR-0023):**
+  Zähler-Synchronisation; Genehmigung gebündelt mit §9-Freigabe PROTOCOL-001.
+- **Registry:** 117 Standards (114 APPROVED + 3 DRAFT); Kategorie protocol;
+  5 Naming-Patterns (protocolStandardId, protocolId, protocolErrorCode,
+  protocolRequirementId, Datei-Muster); DAG-Knoten; Agent-Manifest 117 gebunden.
+
+
 ## [1.4.28] - 2026-09-08
 
 ### Added

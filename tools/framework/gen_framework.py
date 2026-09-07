@@ -468,6 +468,11 @@ F("FAM-41", "Repository Audit", "ATC-STD-REPO-AUDIT-001..003", [
     sl("ATC-STD-REPO-AUDIT-002", "Audit-Checklisten- und Health-Score-Standard (CHECK-001, CHECK-002, …)", S_BELEGT, ["ATC-STD-REPO-AUDIT-002"], "Automatisierbare Checks + standardisierter Repository Health Score; erstellt via SCR-0021"),
     sl("ATC-STD-REPO-AUDIT-003", "Automatisierter ATC Repository Auditor (KI-/Automatisierungsagent)", S_GEPLANT, ["ATC-STD-REPO-AUDIT-001"], "Agent-Spezifikation (AAS-Kopplung); P2"),
 ], note="Neuer Namensraum gem. FRAMEWORK-001 §6.3 (BUG-/SC-/AAS-Muster); SCR-0020"),
+F("FAM-42", "Protocol Standards", "ATC-STD-PROTOCOL-001..003", [
+    sl("ATC-STD-PROTOCOL-001", "ATC Protocol Standards Dachstandard (Identität, Versionierung, Nachrichten, Sicherheit, Fehler, Kompatibilität, Governance, Auditing)", S_BELEGT, ["ATC-STD-PROTOCOL-001"]),
+    sl("ATC-STD-PROTOCOL-002", "Protocol Conformance- & Interoperabilitäts-Test-Standard", S_GEPLANT, ["ATC-STD-PROTOCOL-001"], "Test-Suiten je ATC-PROTO-Familie; P2"),
+    sl("ATC-STD-PROTOCOL-003", "Protocol Threat-Model- & Security-Audit-Standard", S_GEPLANT, ["ATC-STD-PROTOCOL-001"], "Vertiefung §11; P2"),
+], note="Neuer Namensraum gem. FRAMEWORK-001 §6.3; ATC-PROTO-Registry (26 Familien) via SCR-0023"),
 ]
 
 # Validierung der Daten: globale Slot-IDs eindeutig, Statistiken

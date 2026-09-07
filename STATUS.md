@@ -23,8 +23,8 @@ gemappt (12/15), Kill-Switch als dokumentierte Lücke (künftig AAS-026+).
 
 Sammelfreigabe 22:25 (Owner-Mandat „Freigabe"): BUG-005 + AUDIT-001 + AI-DECISION-001 → APPROVED,
 normativ, §30-eingefroren. Registry FINAL (00:05): 114 Standards, 114 APPROVED — REPO-AUDIT-002 (114.) via
-SCR-0021 00:05 (inkl. FRAMEWORK v1.0.2-PATCH). Stand 00:20: 116 Standards,
-114 APPROVED + 2 DRAFT (AOS-001, ATC-STD-999, §9 ausstehend). Change-Control-Kette SCR→VERSION→UPDATE→COMPAT→AUDIT +
+SCR-0021 00:05 (inkl. FRAMEWORK v1.0.2-PATCH). Stand 00:30: 117 Standards,
+114 APPROVED + 3 DRAFT (AOS-001, ATC-STD-999, PROTOCOL-001, §9 ausstehend). Change-Control-Kette SCR→VERSION→UPDATE→COMPAT→AUDIT +
 Meilenstein-Governance + Enterprise-Framework vollständig normativ in Kraft.
 
 ATC-STD-MILESTONE-001 v1.0.0 DRAFT (SCR-0018, Owner-Entwurf 23:31): Verbindliche
@@ -83,8 +83,27 @@ Quellen je Frage, Session-Lifecycle, maschinenlesbarem Session-Record
 Nachweis-Fragen je Änderung, MAUD-YYYY-NNNN als AUD-Record Typ MASTER,
 Register-Abdeckung (11 Register), Orchestrierung statt Duplikation (S-01..S-22,
 REPO-AUDIT Health Scores, RR-G01..G08, MILESTONE/COMPAT-Gates), MAJOR ohne
-Master-Audit-PASS verboten, Audit-der-Audits. FAM-20 + FAM-40 → BELEGT (nur noch
-REPO-AUDIT-003 GEPLANT); FRAMEWORK-001 PATCH v1.0.3 gebündelt. §9-Freigabe ausstehend.
+Master-Audit-PASS verboten, Audit-der-Audits. FAM-20 + FAM-40 → BELEGT; FRAMEWORK-001
+PATCH v1.0.3 gebündelt. §9-Freigabe ausstehend.
+
+ATC-STD-PROTOCOL-001 v1.0.0 DRAFT (SCR-0023, 117. Standard, Owner-Entwurf 00:12):
+ATC Protocol Standards — Dachstandard ÜBER allen Einzelprotokollen (Netzwerk,
+Blockchain, API, P2P, Cross-Chain, AI-Agent, Storage, System). 21 REQ-PROTO:
+7-Schichten-Protokollarchitektur, ID-Schema ATC-PROTO-[DOMAIN]-[NUMBER],
+9-Felder-Nachrichten-Envelope, Encoding-Standard (deterministische Serialisierung
+für Blockchain), SemVer + Versionsfenster, 7 Kompatibilitätsdimensionen mit
+Compatibility-Layer-Pflicht (kein unkontrollierter Node-Fall bei MAJOR),
+6-Phasen-Handshake, Authentication/Authorization-Trennung mit Capability-Modell,
+Threat-Model-Pflicht (12 Angriffsarten), Cryptographic Abstraction Layer,
+maschinenlesbare Fehlercodes ATC-PROTO-<KAT>-NNN (13 Klassen), Timeout/Retry/
+Circuit-Breaker (keine unendlichen Retries), Rate-Limiting, Replay-Schutz mit
+Chain-ID-Pflicht (658467), 11 Observability-Felder, AUD-Record-Kopplung,
+13-Schritte-Upgrade-Prozess. Maschinenlesbar: registry/protocol-registry.yaml
+(SSOT, 26 ATC-PROTO-Familien — 10 draft mit Impl.-Spuren, 16 planned, KERNEL als
+26. Familie ergänzt) + Validator NEU S-23 (Negativtest verifiziert). Neue
+Katalog-Familie FAM-42 (42 Familien, 429 Slots); FRAMEWORK-001 PATCH v1.0.4
+gebündelt. P0-Fundament = der Dachstandard selbst; P1 Blockchain + Interop,
+P2 Ökosystem folgen. §9-Freigabe ausstehend.
 
 AUD-2026-0001 (erster Lauf unter ATC-STD-AUDIT-001, 22:30): Standards-Umsetzungs-Audit —
 CONDITIONAL_PASS, Completeness Score C. Umsetzung: 8 AUTOMATED (7%) · 18 PARTIAL (16%) ·
@@ -119,7 +138,7 @@ Dependabot in 16 Manifest-Repos (F-025). Org-Settings per Owner-Entscheidung 23:
 Offen: F-026 (Version-Baseline), F-027 (Tag v2.0.0), F-028 (ATC-STD-202 22→26), F-029 (governance-ci 3 Repos,
 Owner-Aktion workflow-Scope). Report: docs/AUD-2026-0002_ORG_AUDIT.md · Issues #94..98 in a-townchain-os.
 
-Stand: 08.09.2026, 00:20 (Europe/Berlin) — REPO-AUDIT-002 §9-freigegeben 00:05 (Registry war FINAL 114/114); AOS-001 + ATC-STD-999 (SCR-0022) neue DRAFTs in §9-Prüfung · Self-Compliance: R3 100/100 GATE PASS ·
+Stand: 08.09.2026, 00:30 (Europe/Berlin) — REPO-AUDIT-002 §9-freigegeben 00:05 (Registry war FINAL 114/114); AOS-001 + ATC-STD-999 (SCR-0022) + PROTOCOL-001 (SCR-0023) neue DRAFTs in §9-Prüfung · Self-Compliance: R3 100/100 GATE PASS ·
 Voll-Validierung 110/110 Standards: ALL COMPLIANT (S-18 prüft alle 10 Registry-Dateien; Mutationssuite 12/12)
 
 ## Standards-System
@@ -144,11 +163,11 @@ Voll-Validierung 110/110 Standards: ALL COMPLIANT (S-18 prüft alle 10 Registry-
 | ATC-STD-AI-DECISION-001 | ATC Agent Decision-Making Standard (Entscheidungsmodell über AAS/AI-DEV) | APPROVED — SCR-0014, §9-Sammelfreigabe 22:25 |
 | ATC-STD-UPDATE-001 | ATC Update Standard (Change Control: Lifecycle, Gates, Rollback, Emergency) | DRAFT — SCR-0015, §9-Freigabe ausstehend |
 | ATC-STD-COMPAT-001 | Major Version Compatibility & Recovery Standard (Major-Gate in UPD-G04) | APPROVED — SCR-0016, §9-Freigabe 23:02, normativ, §30-eingefroren |
-| **Summe** | **116 Standards** | **114 APPROVED + 2 DRAFT (AOS-001, ATC-STD-999)** |
+| **Summe** | **117 Standards** | **114 APPROVED + 3 DRAFT (AOS-001, ATC-STD-999, PROTOCOL-001)** |
 
 ## Qualitätssicherung (CI, self-compliant)
 
-- Standards-Validierung: **116/116 COMPLIANT** (114 APPROVED + 2 DRAFT AOS-001/ATC-STD-999; AUD-FIX 21:30 — validate_all prüft real alle Dateien inkl. DESC-/VERSION-/COMPAT-Präfixe; Fehlercheck 23:30: S-18 Voll-Modus prüft alle 10 Registry-Dateien strukturell)
+- Standards-Validierung: **117/117 COMPLIANT** (114 APPROVED + 3 DRAFT AOS-001/999/PROTOCOL-001; AUD-FIX 21:30 — validate_all prüft real alle Dateien inkl. DESC-/VERSION-/COMPAT-Präfixe; Fehlercheck 23:30: S-18 Voll-Modus prüft alle 10 Registry-Dateien strukturell)
 - Mutationssuite S-19: **12/12** (synthetische Fixtures)
 - Repository-Audit R3: **100/100, GATE PASS** · README-Gate: **13/13 CONFORM** · MD-Gate: **CONFORM** · Contract-Registry-Gate: **CONFORM**
 - Abhängigkeitsgraph: 105 Knoten, 226 Kanten, azyklisch (DAG) — Voll-Audit 21:45 + DESC-001 21:55 + VERSION-001 22:05

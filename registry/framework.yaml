@@ -7,13 +7,13 @@ framework:
   note: 'ATC Enterprise Standards Framework Katalog — SSOT der Slot-Zuordnung (SCR-0019). Status: BELEGT/VERWEIST = durch Bestand abgedeckt, KONFLIKT = Slot kollidiert mit §30-ID, GEPLANT = reserviert,
     NEU = Lücke (via SCR zu erstellen). Regenerierung nur via SCR (REQ-FW-012).'
   stats:
-    families: 41
-    slots_total: 426
+    families: 42
+    slots_total: 429
     slots_neu: 264
     slots_verweist: 150
-    slots_belegt: 5
+    slots_belegt: 6
     slots_konflikt: 6
-    slots_geplant: 1
+    slots_geplant: 3
   families:
   - id: FAM-01
     name: Enterprise & Governance
@@ -1991,3 +1991,26 @@ framework:
       refs:
       - ATC-STD-REPO-AUDIT-001
       note: Agent-Spezifikation (AAS-Kopplung); P2
+  - id: FAM-42
+    name: Protocol Standards
+    range: ATC-STD-PROTOCOL-001..003
+    note: Neuer Namensraum gem. FRAMEWORK-001 §6.3; ATC-PROTO-Registry (26 Familien) via SCR-0023
+    family_refs: null
+    slots:
+    - id: ATC-STD-PROTOCOL-001
+      title: ATC Protocol Standards Dachstandard (Identität, Versionierung, Nachrichten, Sicherheit, Fehler, Kompatibilität, Governance, Auditing)
+      status: BELEGT
+      refs:
+      - ATC-STD-PROTOCOL-001
+    - id: ATC-STD-PROTOCOL-002
+      title: Protocol Conformance- & Interoperabilitäts-Test-Standard
+      status: GEPLANT
+      refs:
+      - ATC-STD-PROTOCOL-001
+      note: Test-Suiten je ATC-PROTO-Familie; P2
+    - id: ATC-STD-PROTOCOL-003
+      title: Protocol Threat-Model- & Security-Audit-Standard
+      status: GEPLANT
+      refs:
+      - ATC-STD-PROTOCOL-001
+      note: Vertiefung §11; P2
