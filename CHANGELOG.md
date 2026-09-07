@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.4.8] - 2026-09-07
+
+### Added
+
+- **ATC-STD-ERR-001 v1.0.0 (DRAFT):** ATC Fehleranalyse- und Root-Cause-Analysis-Standard —
+  Analyse-Schicht über dem bestehenden Bug-Lifecycle (BUG-001..004). 18 Fehlerklassen
+  (ERR-CL-CODE..GOV), 4-Ebenen-Analyse (Symptom → unmittelbare Ursache → Root Cause →
+  systemische Ursache), Five Whys, Fault Tree (S0/S1), Reproduzierbarkeit R0–R3,
+  Evidence-Standard, Timeline T0–T9, Impact-Analyse, Regression-Standard, Error Metrics
+  (MTTD/MTTA/MTTR/MTTV), Closure Gate mit S0-Zusatzgates, Corrective vs. Preventive
+  Action, KI-Agenten-Metadaten, 13 Root-Cause-Kategorien. 24 REQ-ERR-Anforderungen,
+  6 COM-ERR-Gates. SCR-0011 (inkl. F-NNN-Konsolidierung: keine separaten
+  BUG-/SEC-/SCBUG-/AIBUG-ID-Serien), Owner-Entwurf Michael Wroblewski (Builder-Chat
+  22:06). Status DRAFT — §9-Freigabe ausstehend.
+- **Schema:** ERR-Familie allockiert (errStandardId, errRequirementId, errErrorClassId,
+  errRootCauseCategoryId, errStandardDoc).
+
 ## [1.4.7] - 2026-09-07
 
 ### Fixed

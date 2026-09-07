@@ -112,3 +112,4 @@ standards:
   # ATC-STD-SC-020 -> AAS-007, AAS-017, AI-DEV-009 (Agenten)
   ATC-STD-DESC-001: {depends: [ATC-STD-000]}
   ATC-STD-VERSION-001: {depends: [ATC-STD-000]}
+  ATC-STD-ERR-001: {depends: [ATC-STD-000, ATC-STD-BUG-001, ATC-STD-BUG-003]}

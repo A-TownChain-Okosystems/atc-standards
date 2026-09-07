@@ -316,6 +316,30 @@
           "pattern": "^COM-VERSION-[0-9]{3,}$",
           "example": "COM-VERSION-001",
           "note": "Compliance-Gates der VERSION-Familie (ATC-STD-VERSION-001 Abschnitt 25; SCR-0010)"
+        },
+        "errStandardId": {
+          "type": "string",
+          "pattern": "^ATC-STD-ERR-[0-9]{3,}$",
+          "example": "ATC-STD-ERR-001",
+          "note": "Error-Analysis-Familie: Fehleranalyse, Root-Cause-Analysis, QMS (Owner-Entwurf 07.09., SCR-0011)"
+        },
+        "errRequirementId": {
+          "type": "string",
+          "pattern": "^REQ-ERR-[0-9]{3,}$",
+          "example": "REQ-ERR-001",
+          "note": "Requirements der ERR-Familie (SCR-0011)"
+        },
+        "errErrorClassId": {
+          "type": "string",
+          "pattern": "^ERR-CL-[A-Z0-9]{2,6}$",
+          "example": "ERR-CL-CONS",
+          "note": "Fehlerklassen des Error-Analysis-Standards (18 Klassen CODE..GOV; SCR-0011)"
+        },
+        "errRootCauseCategoryId": {
+          "type": "string",
+          "pattern": "^RC-[A-Z]+$",
+          "example": "RC-ARCH",
+          "note": "Root-Cause-Kategorien für Analytics (RC-CODE..RC-GOVERNANCE; SCR-0011)"
         }
       }
     },
@@ -449,6 +473,11 @@
           "type": "string",
           "pattern": "^ATC-STD-VERSION-[0-9]{3,}[.]md$",
           "example": "ATC-STD-VERSION-001.md"
+        },
+        "errStandardDoc": {
+          "type": "string",
+          "pattern": "^ATC-STD-ERR-[0-9]{3,}[.]md$",
+          "example": "ATC-STD-ERR-001.md"
         }
       }
     },
