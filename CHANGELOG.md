@@ -1,5 +1,26 @@
 # Changelog
 
+## [1.4.18] - 2026-09-07
+
+### Fixed
+
+- **Tiefenanalyse-Fixlauf (23:24-23:40):** Stale Zaehlstaende konsolidiert —
+  STATUS.md (105/105, 108 Standards FINAL, 103/103 Voll-Audit, 105/105 Q&A-Sektion,
+  Mangel 'Issues #94..5') und README.md (81/81, 82/82, 103 APPROVED, 'alle 103',
+  Registry-Header) auf Ist-Zustand 110/110 (109 APPROVED + 1 DRAFT UPDATE-001)
+  synchronisiert; historische Audit-Vermerke datiert erhalten.
+- **Agent-Manifest-Gate A1 repariert:** required_standards in .github/ai/agent.yaml
+  um 7 fehlende Standards ergänzt (DESC-001, VERSION-001, BUG-005, AUDIT-001,
+  AI-DECISION-001, UPDATE-001, COMPAT-001) — Manifest deckt Registry wieder
+  vollständig ab (110/110), check_agent_manifest GATE PASS (A1-A4).
+- **Tiefenanalyse verifiziert (kein Handlungsbedarf):** versions.yaml vollständig
+  (110/110 unter versions:-Key), categories.yaml vollständig (governance/
+  architecture/repository/development unter categories:-Key), dependencies.yaml
+  DAG intakt, SCR-0001..0016 lückenlos (SCR-0017 gemäß Issue #98 geplant),
+  0 tote Markdown-Links in 147 Dateien, Dreieck Frontmatter↔Registry↔versions
+  konsistent, keine zukünftigen effective_dates.
+
+
 ## [1.4.17] - 2026-09-07
 
 ### Fixed

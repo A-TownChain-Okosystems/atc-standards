@@ -43,9 +43,9 @@ ATC Standards provides the canonical normative governance layer of the
 A-TownChain ecosystem. It is responsible for:
 
 - Verfassung **ATC-STD-000** v1.2.0 (ID-System, Lifecycle, SCR, §30 Immutabilität)
-- Standard-Registry (**103 APPROVED**, 0 offen) mit
+- Standard-Registry (**110 Standards**: 109 APPROVED + 1 DRAFT, UPDATE-001) mit
   Versionierung, Dependencies (DAG) und Findings (BUG-001..004)
-- Maschinelle Qualitätssicherung: `atc-std-validator` (81/81 COMPLIANT),
+- Maschinelle Qualitätssicherung: `atc-std-validator` (110/110 COMPLIANT),
   Mutationssuite (12/12), `atc-repo-audit` (R3, 100/100 GATE PASS),
   Agent-Manifest-Gate (`check_agent_manifest.py`)
 - Naming-SSOT (`naming-conventions.schema.json`), Change-Requests (SCR-0001..0007)
@@ -58,7 +58,8 @@ kein Standard ohne Eintrag; kein Repository ohne Standards-Bezug).
 ## Status
 
 **Status:** `release-candidate` — Governance-Freeze abgeschlossen
-(07.09.2026): alle 103 Standards APPROVED und normativ in Kraft (README-001 20:36,
+(07.09.2026): 109 der 110 Standards APPROVED und normativ in Kraft — UPDATE-001 als
+einziger DRAFT (§9-Freigabe ausstehend); COMPAT-001 als 109. APPROVED 23:02 freigegeben (README-001 20:36,
 SC-Framework 001..020 21:00, MD-001 21:05). Übergangsfristen
 (Commit-Trailer, Repo-Manifeste, Interface-Test-Suiten) laufen bis 07.10.2026.
 
@@ -79,7 +80,7 @@ SC-Framework 001..020 21:00, MD-001 21:05). Übergangsfristen
 ### Data Flow
 
 Änderungsantrag → SCR (§19–33) → Owner-Freigabe (§9) → Registry-Eintrag →
-CI-Validierung (81/81 + Gates) → APPROVED → normativ in Kraft (§30 Immutabilität).
+CI-Validierung (110/110 + Gates) → APPROVED → normativ in Kraft (§30 Immutabilität).
 
 ### Dependencies
 
@@ -183,7 +184,7 @@ und dem AAS-008-Workflow; Commits nach AI-DEV-007 v1.0.1.
 Run the complete test suite:
 
 ```bash
-python3 tools/atc-std-validator/validate_all.py        # 82/82 COMPLIANT
+python3 tools/atc-std-validator/validate_all.py        # 110/110 COMPLIANT
 python3 tools/atc-std-validator/tests/test_s19_mutation.py  # 12/12 OK
 python3 tools/atc-repo-audit/atc_repo_audit.py . --level R3    # GATE PASS
 python3 tools/atc-std-validator/check_agent_manifest.py       # GATE PASS

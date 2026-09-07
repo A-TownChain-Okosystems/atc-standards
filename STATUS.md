@@ -1,6 +1,7 @@
 # STATUS — atc-standards
 
-Fehler-Audit 07.09. 22:01-22:15 (SCR-0010): Suite grün (105/105 COMPLIANT, R3 100/100).
+Fehler-Audit 07.09. 22:01-22:15 (SCR-0010): Suite grün (105/105 COMPLIANT zum Audit-Zeitpunkt,
+R3 100/100; aktueller Stand 23:30: 110/110 COMPLIANT).
 Fixes: COM-Patterns (descComplianceId, versionComplianceId) ins Schema, effective_date
 DESC-001/VERSION-001 gesetzt. Kategorien-Bestand verifiziert: alle 15 genutzten Kategorien
 allokiert (erster Scan-Verdacht war Methodik-Fehlalarm, Duplikate entfernt).
@@ -21,7 +22,8 @@ Evidence-First, Decision Records DEC-NNNNNN, Separation of Duties; §24-Familie 
 gemappt (12/15), Kill-Switch als dokumentierte Lücke (künftig AAS-026+).
 
 Sammelfreigabe 22:25 (Owner-Mandat „Freigabe"): BUG-005 + AUDIT-001 + AI-DECISION-001 → APPROVED,
-normativ, §30-eingefroren. Registry FINAL: 108 Standards, 108 APPROVED, 0 offen, alle normativ.
+normativ, §30-eingefroren. Registry Stand 23:02: 110 Standards, 109 APPROVED + 1 DRAFT
+(UPDATE-001, §9-Freigabe ausstehend; COMPAT-001 als 109. APPROVED via SCR-0016 hinzugekommen).
 
 AUD-2026-0001 (erster Lauf unter ATC-STD-AUDIT-001, 22:30): Standards-Umsetzungs-Audit —
 CONDITIONAL_PASS, Completeness Score C. Umsetzung: 8 AUTOMATED (7%) · 18 PARTIAL (16%) ·
@@ -54,9 +56,10 @@ AUD-2026-0002 (Organization Audit, 23:00–23:20): ATC Enterprise GitHub Organiz
 (4 ACTIVE, 12 DEVELOPMENT, 10 EXPERIMENTAL, 0 ARCHIVED/DUPLICATE/UNKNOWN). FIXED in diesem Lauf:
 Dependabot in 16 Manifest-Repos (F-025). Org-Settings per Owner-Entscheidung 23:13 übersprungen (F-024).
 Offen: F-026 (Version-Baseline), F-027 (Tag v2.0.0), F-028 (ATC-STD-202 22→26), F-029 (governance-ci 3 Repos,
-Owner-Aktion workflow-Scope). Report: docs/AUD-2026-0002_ORG_AUDIT.md · Issues #94..5 in a-townchain-os.
+Owner-Aktion workflow-Scope). Report: docs/AUD-2026-0002_ORG_AUDIT.md · Issues #94..98 in a-townchain-os.
 
-Stand: 07.09.2026, 23:02 (Europe/Berlin) · Self-Compliance: R3 100/100 GATE PASS · Voll-Audit 103/103 Standards: ALLE CHECKS PASS
+Stand: 07.09.2026, 23:30 (Europe/Berlin) · Self-Compliance: R3 100/100 GATE PASS ·
+Voll-Validierung 110/110 Standards: ALL COMPLIANT (S-18 prüft alle 10 Registry-Dateien; Mutationssuite 12/12)
 
 ## Standards-System
 
@@ -84,7 +87,7 @@ Stand: 07.09.2026, 23:02 (Europe/Berlin) · Self-Compliance: R3 100/100 GATE PAS
 
 ## Qualitätssicherung (CI, self-compliant)
 
-- Standards-Validierung: **105/105 COMPLIANT** (105 APPROVED, 0 offen; AUD-FIX 21:30 — validate_all prüft real alle Dateien inkl. DESC-/VERSION-Präfixe)
+- Standards-Validierung: **110/110 COMPLIANT** (109 APPROVED + 1 DRAFT UPDATE-001; AUD-FIX 21:30 — validate_all prüft real alle Dateien inkl. DESC-/VERSION-/COMPAT-Präfixe; Fehlercheck 23:30: S-18 Voll-Modus prüft alle 10 Registry-Dateien strukturell)
 - Mutationssuite S-19: **12/12** (synthetische Fixtures)
 - Repository-Audit R3: **100/100, GATE PASS** · README-Gate: **13/13 CONFORM** · MD-Gate: **CONFORM** · Contract-Registry-Gate: **CONFORM**
 - Abhängigkeitsgraph: 105 Knoten, 226 Kanten, azyklisch (DAG) — Voll-Audit 21:45 + DESC-001 21:55 + VERSION-001 22:05
