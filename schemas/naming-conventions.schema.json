@@ -233,6 +233,16 @@
           "type": "string",
           "pattern": "^REQ-README-[0-9]{3,}$",
           "example": "REQ-README-001"
+        },
+        "mdStandardId": {
+          "type": "string",
+          "pattern": "^ATC-STD-MD-[0-9]{3,}$",
+          "example": "ATC-STD-MD-001"
+        },
+        "mdRequirementId": {
+          "type": "string",
+          "pattern": "^REQ-MD-[0-9]{3,}$",
+          "example": "REQ-MD-001"
         }
       }
     },
@@ -346,6 +356,11 @@
           "type": "string",
           "pattern": "^ATC-STD-README-[0-9]{3,}[.]md$",
           "example": "ATC-STD-README-001.md"
+        },
+        "mdStandardDoc": {
+          "type": "string",
+          "pattern": "^ATC-STD-MD-[0-9]{3,}[.]md$",
+          "example": "ATC-STD-MD-001.md"
         }
       }
     },

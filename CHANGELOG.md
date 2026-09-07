@@ -1,3 +1,15 @@
+# Changelog
+
+## [1.3.0] - 2026-09-07
+
+### Added
+
+- ATC-STD-MD-001 v1.0.0 CANDIDATE (Owner-Entwurf): ATC Markdown &
+  Documentation Standard — REQ-MD-001..016, MD-Compliance-Validator
+  (tools/atc-md-validator/check_md.py)
+- ATC-STD-README-001 v1.0.0 APPROVED (Owner-Freigabe 20:36)
+- GOVERNANCE.md, CONTRIBUTING.md, CODE_OF_CONDUCT.md nach MD-001
+
 ## 2026-09-07 — ATC-STD-README-001 APPROVED (Owner-Freigabe „Freigeben", 20:36 UTC+2)
 - CANDIDATE → APPROVED per ATC-STD-000 §9; normativ in Kraft, Immutabilität
   per §30.
@@ -231,7 +243,7 @@
   SYNC-NNN, AUD-NNN + Dateinamenmuster ATC-STD-BUG-NNN.md.
 - templates/finding.template.md; Registry- und STATUS-Eintraege.
 
-# Changelog — atc-standards
+## Changelog — atc-standards (historische Eintraege)
 
 ## [1.5.0] — 2026-09-07 (Naming Convention, ATC-STD-000 §36)
 - ATC-STD-000 §36 Naming Convention per Owner-Mandat verankert

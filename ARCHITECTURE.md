@@ -4,7 +4,7 @@ Das Repository ist die KANONISCHE Standards-Heimat des A-TownChain-
 Oekosystems (AD-030). Die Architektur folgt ATC-STD-000 (Verfassung) und
 dem §28-Soll-Layout des Owners.
 
-```
+```text
 atc-standards/
 ├── governance/          Verfassung + Prozess-Doku (CHANGE_CONTROL, APPROVAL_PROCESS)
 ├── approval/            Formale Review-Pakete (ATC-STD-000 v1.0.0)
@@ -24,7 +24,7 @@ atc-standards/
 
 ## Governance-Fluss
 
-```
+```text
 ATC-STD-000 (Verfassung, §36 Final Model)
     -> Registry (§25: kein Eintrag = kein Standard)
     -> Standards je Kategorie (§26)

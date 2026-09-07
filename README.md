@@ -124,7 +124,7 @@ CI-Validierung (81/81 + Gates) → APPROVED → normativ in Kraft (§30 Immutabi
 ├── STATUS.md
 ├── SECURITY.md
 └── LICENSE
-```
+```text
 
 ## Requirements
 
@@ -153,7 +153,7 @@ Standards validieren (alle 82):
 ```bash
 python3 tools/atc-std-validator/validate_all.py
 # Expected: RESULT: ALL COMPLIANT
-```
+```text
 
 Repository-Audit R3:
 
@@ -167,7 +167,7 @@ README-Compliance eines Repos prüfen (ATC-STD-README-001):
 ```bash
 python3 tools/atc-readme-validator/check_readme.py /pfad/zum/repo
 # Expected: RESULT: CONFORM — alle 13 Gates bestanden
-```
+```text
 
 ## Development
 
