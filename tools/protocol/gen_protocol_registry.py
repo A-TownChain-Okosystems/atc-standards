@@ -5,7 +5,7 @@ import yaml
 
 # (Domain, Name, Priorität, Status, Layer, Notiz) — 26 Familien gem. Owner-Matrix
 PROTOCOLS = [
-    ("P2P",        "ATC Peer-to-Peer Protocol",      "P1", "draft",  "L1/L3", "Formale Spezifikation v1.0.0-DRAFT: protocols/p2p/ATC-PROTO-P2P-001.md (SCR-0027, 22 REQ-P2P, 6-Phasen-Handshake, v0.9-Kompatibilitaetsmodus; 30 Tests K14)"),
+    ("P2P",        "ATC Peer-to-Peer Protocol",      "P1", "draft",  "L1/L3", "Formale Spezifikation v1.0.0 APPROVED (08.09. 01:06): protocols/p2p/ATC-PROTO-P2P-001.md (SCR-0027, 22 REQ-P2P, 6-Phasen-Handshake, v0.9-Kompatibilitaetsmodus; 30 Tests K14)"),
     ("NODE",       "ATC Node Communication",        "P1", "planned","L1",    "Node-Discovery/Management auf P2P aufbauend"),
     ("CONSENSUS",  "ATC Consensus Protocol",        "P1", "draft",  "L1/L3", "Impl.-Spuren: ShivaCore K16 (DAG+PoH+Validator+Voting+Finality)"),
     ("BLOCK",      "ATC Block Propagation",         "P1", "draft",  "L3",    "Impl.-Spuren: a-townchain Blockchain"),
@@ -34,7 +34,7 @@ PROTOCOLS = [
 ]
 # Formale Spezifikationen (SCR-dokumentiert) — Override des Standard-Spezifikations-Texts
 SPEC_OVERRIDES = {
-    "P2P": "protocols/p2p/ATC-PROTO-P2P-001.md — formale Spezifikation v1.0.0-DRAFT (SCR-0027): 22 REQ-P2P, Envelope 9+1 Felder, 13 Message-Types, 6-Phasen-Handshake, v0.9-Kompatibilitaetsmodus (ShivaCore K12/K14), Threat Model, Fehlercodes ATC-PROTO-P2P-001..019",
+    "P2P": "protocols/p2p/ATC-PROTO-P2P-001.md — formale Spezifikation v1.0.0 APPROVED (§9-Freigabe 08.09. 01:06, SCR-0027): 22 REQ-P2P, Envelope 9+1 Felder, 13 Message-Types, 6-Phasen-Handshake, v0.9-Kompatibilitaetsmodus (ShivaCore K12/K14), Threat Model, Fehlercodes ATC-PROTO-P2P-001..019",
 }
 
 assert len(PROTOCOLS) == 26, f"Erwartet 26 Protokollfamilien, gefunden {len(PROTOCOLS)}"

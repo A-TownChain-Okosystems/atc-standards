@@ -3,7 +3,7 @@ protocol:
   id: ATC-PROTO-P2P-001
   name: "ATC Peer-to-Peer Protocol — Verbindliche Spezifikation des P2P-Netzwerkschichts-Protokolls (Discovery, Peer-Lifecycle, Envelope, Gossip, Handshake, Sicherheit, Versionierung)"
   version: "1.0.0"
-  status: draft
+  status: approved
   domain: P2P
   layer: L1/L3
   chain_id: 658467
@@ -32,12 +32,12 @@ protocol:
   license: "Copyright (c) 2026 Michael Wroblewski"
 ----
 
-# ATC-PROTO-P2P-001 — ATC Peer-to-Peer Protocol (v1.0.0, DRAFT)
+# ATC-PROTO-P2P-001 — ATC Peer-to-Peer Protocol (v1.0.0, APPROVED)
 
-> **Status:** DRAFT (v1.0.0) — erste formale Protokoll-Spezifikation unter dem
-> Dachstandard ATC-STD-PROTOCOL-001 (SCR-0027); Owner-Review/§9-Freigabe ausstehend.
-> **Registry:** registry/protocol-registry.yaml, Domain P2P, Status `draft`
-> (REQ-PROTO-021: Teilimplementierung existiert — Impl.-Spuren ShivaCore K12/K14).
+> **Status:** APPROVED (v1.0.0) — §9-Freigabe Michael Wroblewski (Builder-Chat
+> 08.09.2026, 01:06 UTC+2, SCR-0027); Spezifikation verbindlich. Protokoll-Status
+> bleibt bis zur verifizierten v1.0.0-Implementierung ehrlich `draft` (REQ-PROTO-021).
+> **Registry:** registry/protocol-registry.yaml, Domain P2P (Impl.-Spuren ShivaCore K12/K14).
 > **Referenzimplementierung:** atc-shivacore K14 `p2p.rs` (30 Tests) — das
 > bestehende Wire-Format wird hier als **v0.9-Kompatibilitätsmodus** dokumentiert
 > und nach normativem v1.0.0-Envelope weiterentwickelt.
@@ -63,7 +63,7 @@ DARF/KANN (optional) — RFC-2119 gemäß ATC-STD-000 §10.
 | Protocol ID | ATC-PROTO-P2P-001 |
 | Name | ATC Peer-to-Peer Protocol |
 | Version | 1.0.0 (DRAFT) |
-| Status | draft (Registry-SSOT; `active` erst nach verifizierter v1.0.0-Implementierung) |
+| Status | Spezifikation APPROVED (§9-Freigabe 08.09. 01:06); Protokoll-Registry-Status `draft` bis verifizierte v1.0.0-Implementierung |
 | Owner | Michael (Owner) / Standards Governance |
 | Scope | P2P-Netzwerkschicht: Discovery, Peer-Verwaltung, Nachrichtenaustausch, Gossip; NICHT Konsens-Logik (ATC-PROTO-CONSENSUS-001) und NICHT Block-/Tx-Semantik (ATC-PROTO-BLOCK/TX-001) |
 | Specification | diese Datei (protocols/p2p/ATC-PROTO-P2P-001.md) |
@@ -351,11 +351,12 @@ code-seitig erhalten bis v2.0.0.
 
 ## §21 Changelog
 
-- **1.0.0** (2026-09-08): Initial Release DRAFT (SCR-0027) — erste formale
+- **1.0.0** (2026-09-08): Initial Release (SCR-0027) — erste formale
   Spezifikation unter ATC-STD-PROTOCOL-001: 22 REQ-P2P, v1.0.0-Envelope
   (9+1 Felder), 13 Message-Types, 6-Phasen-Handshake, Threat-Model-Status,
   Fehlerkatalog ATC-PROTO-P2P-001..019, Timeout-/Rate-Limit-Defaults, v0.9-
-  Kompatibilitätsmodus (K14-Ist dokumentiert). Owner-§9-Freigabe ausstehend.
+  Kompatibilitätsmodus (K14-Ist dokumentiert). §9-Freigabe Michael Wroblewski
+  08.09.2026, 01:06 UTC+2 — APPROVED, verbindlich.
 
 ## §22 Deprecation Policy
 

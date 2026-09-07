@@ -151,7 +151,7 @@ offen: Altbau-Frontmatter-Backfill 107/119 ohne review_date (F-034, P2, Owner-
 Entscheidung), verwaister Release v1.1.0 (F-036), Approval-/License-Backfill (F-039/F-040).
 Report: docs/AUD-2026-0003_SELF_AUDIT.md.
 
-ATC-PROTO-P2P-001 v1.0.0 DRAFT (SCR-0027, 00:57): Erste formale Protokoll-Spezifikation
+ATC-PROTO-P2P-001 v1.0.0 §9-FREIGEGEBEN 01:06 (SCR-0027): Erste formale Protokoll-Spezifikation
 unter dem Dachstandard PROTOCOL-001 — Musterbildner für alle 26 Familien. Fundiert auf
 ShivaCore K14 (p2p.rs, 30 Tests): 22 REQ-P2P, Envelope 9+1 Felder (kanonische
 Serialisierung, Signatur, Chain-ID 658467), 13 Message-Types (9 Ist + 4 für 6-Phasen-
@@ -161,7 +161,9 @@ Fehlerkatalog ATC-PROTO-P2P-001..019, Timeout-/Rate-Limit-Defaults, 8 Kompatibil
 arten, Upgrade-Kette mit Human Gate, Deprecation v0.9→v1.1.0. Ehrlichkeitsregel: K14-
 Ist = v0.9-Kompatibilitätsmodus, Status draft bleibt bis verifizierte v1.0.0-Implementierung.
 Registry-SSOT regeneriert (SPEC_OVERRIDES). Protokoll-Spezifikationen sind KEINE
-ATC-STD-Standards (Schichtentrennung) — Registry bleibt 121 Standards.
+ATC-STD-Standards (Schichtentrennung) — Registry bleibt 121 Standards. §9-FREIGEGEBEN
+01:06 (Builder-Chat): Spezifikation verbindlich; Protokoll-Status bleibt ehrlich draft
+(REQ-PROTO-021) bis zur verifizierten v1.0.0-Implementierung in ShivaCore.
 
 AUD-2026-0001 (erster Lauf unter ATC-STD-AUDIT-001, 22:30): Standards-Umsetzungs-Audit —
 CONDITIONAL_PASS, Completeness Score C. Umsetzung: 8 AUTOMATED (7%) · 18 PARTIAL (16%) ·
@@ -196,7 +198,7 @@ Dependabot in 16 Manifest-Repos (F-025). Org-Settings per Owner-Entscheidung 23:
 Offen: F-026 (Version-Baseline), F-027 (Tag v2.0.0), F-028 (ATC-STD-202 22→26), F-029 (governance-ci 3 Repos,
 Owner-Aktion workflow-Scope). Report: docs/AUD-2026-0002_ORG_AUDIT.md · Issues #94..98 in a-townchain-os.
 
-Stand: 08.09.2026, 01:10 (Europe/Berlin) — Registry FINAL 121/121 APPROVED; AUD-2026-0003 abgeschlossen; ATC-PROTO-P2P-001 v1.0.0 DRAFT (erste Protokoll-Spezifikation, SCR-0027) · Self-Compliance: R3 100/100 GATE PASS ·
+Stand: 08.09.2026, 01:10 (Europe/Berlin) — Registry FINAL 121/121 APPROVED; ATC-PROTO-P2P-001 §9-freigegeben (erste Protokoll-Spezifikation verbindlich, SCR-0027) · Self-Compliance: R3 100/100 GATE PASS ·
 Voll-Validierung 110/110 Standards: ALL COMPLIANT (S-18 prüft alle 10 Registry-Dateien; Mutationssuite 12/12)
 
 ## Standards-System

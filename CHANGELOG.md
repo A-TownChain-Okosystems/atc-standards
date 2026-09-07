@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.4.37] - 2026-09-08
+
+### Changed
+
+- **ATC-PROTO-P2P-001 v1.0.0: §9-FREIGABE → APPROVED** (Owner-Freigabe Michael
+  Wroblewski, Builder-Chat 08.09. 01:06 UTC+2). Die erste formale Protokoll-
+  Spezifikation ist verbindlich; SCR-0027 IMPLEMENTED → APPROVED. Ehrlichkeitsregel
+  (REQ-PROTO-021) bleibt gewahrt: der Protokoll-Registry-Status bleibt `draft`, bis
+  die v1.0.0-Implementierung (Envelope, 6-Phasen-Handshake, Signaturpflicht) in
+  ShivaCore verifiziert ist — danach `active`. Nächste Schritte aus der Spezifikation:
+  Implementierungs-MINOR in ShivaCore (UPD-Request nach UPDATE-001-Kette) und
+  Conformance-Tests (ATC-PROTO-P2P-TEST, PROTOCOL-002).
+
+
 ## [1.4.36] - 2026-09-08
 
 ### Added
