@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.4.7] - 2026-09-07
+
+### Fixed
+
+- **Fehler-Audit (SCR-0010):** COM-ID-Patterns für die DESC- und VERSION-Familie
+  ins Schema übernommen (descComplianceId, versionComplianceId). effective_date
+  bei DESC-001/VERSION-001 nach APPROVAL gesetzt (reine Metadaten-Komplettierung,
+  §30 nicht berührt). Kategorien-Bestand verifiziert: alle 15 genutzten Kategorien
+  waren bereits allockiert (erster Scan-Verdacht: Methodik-Fehlalarm des Audit-Skripts;
+  kurzzeitig ergänzte Duplikate entfernt).
+  Alle übrigen Prüfungen grün: Dateipfade, Orphans, Versions-/Abhängigkeits-Deckung,
+  REQ-Abdeckung, SCR-Kontinuität 0001-0010, S-02↔Schema-Synchronität, keine
+  Titel-Duplikate.
+
 ## [1.4.6] - 2026-09-07
 
 ### Changed

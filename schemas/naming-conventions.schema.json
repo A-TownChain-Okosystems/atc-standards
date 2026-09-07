@@ -304,6 +304,18 @@
           "pattern": "^ATC-BUILD-[0-9]{3,}$",
           "example": "ATC-BUILD-1827",
           "note": "Build-Identitaet je Release-Build (SCR-0009); numerisch fortlaufend"
+        },
+        "descComplianceId": {
+          "type": "string",
+          "pattern": "^COM-DESC-[0-9]{3,}$",
+          "example": "COM-DESC-001",
+          "note": "Compliance-Gates der DESC-Familie (ATC-STD-DESC-001 Abschnitt 10; SCR-0010)"
+        },
+        "versionComplianceId": {
+          "type": "string",
+          "pattern": "^COM-VERSION-[0-9]{3,}$",
+          "example": "COM-VERSION-001",
+          "note": "Compliance-Gates der VERSION-Familie (ATC-STD-VERSION-001 Abschnitt 25; SCR-0010)"
         }
       }
     },

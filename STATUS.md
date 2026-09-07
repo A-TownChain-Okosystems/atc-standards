@@ -1,6 +1,13 @@
 # STATUS — atc-standards
 
-Stand: 07.09.2026, 21:57+ (Europe/Berlin) · Self-Compliance: R3 100/100 GATE PASS · Voll-Audit 103/103 Standards: ALLE CHECKS PASS
+Fehler-Audit 07.09. 22:01-22:15 (SCR-0010): Suite grün (105/105 COMPLIANT, R3 100/100).
+Fixes: COM-Patterns (descComplianceId, versionComplianceId) ins Schema, effective_date
+DESC-001/VERSION-001 gesetzt. Kategorien-Bestand verifiziert: alle 15 genutzten Kategorien
+allokiert (erster Scan-Verdacht war Methodik-Fehlalarm, Duplikate entfernt).
+Alle übrigen Prüfungen: Dateipfade, Orphans, Versions-/Abhängigkeits-Deckung, REQ-Abdeckung,
+SCR-Kontinuität 0001-0010, S-02↔Schema-Synchronität, Titel-Duplikate — keine Fehler.
+
+Stand: 07.09.2026, 22:15 (Europe/Berlin) · Self-Compliance: R3 100/100 GATE PASS · Voll-Audit 103/103 Standards: ALLE CHECKS PASS
 
 ## Standards-System
 

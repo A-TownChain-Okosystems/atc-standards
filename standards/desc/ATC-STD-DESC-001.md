@@ -10,7 +10,7 @@ standard:
   created: "2026-09-07"
   updated: "2026-09-07"
   normative: true
-  effective_date: ""
+  effective_date: "2026-09-07"
   review_date: ""
   classification: PUBLIC
   language: de-DE
