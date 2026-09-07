@@ -2,7 +2,7 @@
 standard:
   id: ATC-STD-FRAMEWORK-001
   title: "ATC Enterprise Standards Framework — Master-Dokument (ATC-STANDARDS-MASTER): Zusammenführung aller Standards, Katalog, Kollisionsauflösung, einheitliche Status-/Change-/Traceability-Modelle, Register-Architektur"
-  version: "1.0.5"
+  version: "1.0.6"
   status: approved
   category: framework
   authority: A-TownChain-Okosystems
@@ -34,9 +34,9 @@ standard:
   license: "Copyright (c) 2026 Michael Wroblewski"
 ----
 
-# ATC-STD-FRAMEWORK-001 — ATC Enterprise Standards Framework (v1.0.5, APPROVED)
+# ATC-STD-FRAMEWORK-001 — ATC Enterprise Standards Framework (v1.0.6, APPROVED)
 
-> **Status:** APPROVED (v1.0.5) — §9-Freigabe Michael Wroblewski (Builder-Chat 07.09.2026, 23:48 UTC+2);
+> **Status:** APPROVED (v1.0.6) — §9-Freigabe Michael Wroblewski (Builder-Chat 07.09.2026, 23:48 UTC+2);
 > normativ in Kraft ab 07.09.2026, §30-eingefroren (ATC-STD-000). Harmonisierung SCR-0019 akzeptiert.
 > **Rolle:** Master-Dokument (ATC-STANDARDS-MASTER) — führt alle bestehenden Standards zusammen und definiert
 > die Zielarchitektur, den Enterprise-Katalog mit Lückenzuordnung und die einheitlichen Governance-Modelle.
@@ -145,7 +145,7 @@ Titel + Status. Statuswerte:
 | GEPLANT | Slot für konkreten zukünftigen Standard reserviert (SCR empfohlen) |
 | NEU | Lücke — neuer Standard zu erstellen (via SCR, Katalog-Slot einhalten) |
 
-Familienübersicht (Zähler live im stats-Block von registry/framework.yaml, Stand v1.0.5: 433 Slots — 264 NEU, 150 VERWEIST, 7 BELEGT, 6 KONFLIKT, 6 GEPLANT):
+Familienübersicht (Zähler live im stats-Block von registry/framework.yaml, Stand v1.0.6: 433 Slots — 264 NEU, 150 VERWEIST, 10 BELEGT, 6 KONFLIKT, 3 GEPLANT):
 FAM-01 Enterprise & Governance (001–015) · FAM-02 Standards-Governance (020–033,
 weitgehend VERWEIST auf ATC-STD-000) · FAM-03 Repository (040–054, VERWEIST auf
 ATC-STD-201..204/README-001/MD-001) · FAM-04 Dokumentation (060–075) · FAM-05
@@ -171,9 +171,10 @@ ATC-STD-999, s. §9, SCR-0022) · FAM-41 Repository Audit (REPO-AUDIT-001..003:
 001+002 BELEGT (002 Health-Score/CHECK-NNN), 003 Auditor-Agent GEPLANT,
 SCR-0020/0021) · FAM-42 Protocol Standards (PROTOCOL-001 BELEGT,
 002 Conformance-Tests + 003 Threat-Model GEPLANT, SCR-0023; ATC-PROTO-Registry
-mit 26 Familien) · FAM-43 Standards Governance Core (TAXONOMY-001 BELEGT;
-STDDEV-001/REGISTRY-001/CHANGE-001 GEPLANT, SCR-0024; Taxonomie-Registry
-registry/taxonomy.yaml — 5 Domains, 33 Familien, S-24).
+mit 26 Familien) · FAM-43 Standards Governance Core (TAXONOMY-001 +
+STDDEV-001/REGISTRY-001/CHANGE-001 BELEGT, SCR-0024/0025; AUDIT-001 als fünftes
+Core-Mitglied bestehend; Taxonomie-Registry registry/taxonomy.yaml — 5 Domains,
+34 Familien, S-24).
 
 ## §6 Harmonisierungs- & Kollisionsregeln
 
@@ -295,6 +296,12 @@ deckt AUDIT-001 die Audit-Kette ab. Agenten-Operationen ohne Mandatsbeantwortung
 (§8) sind governance-widrig (AI-DECISION-001 Human Gates bleiben übergeordnet).
 
 ## Changelog (Standard-intern)
+
+- **1.0.6** (2026-09-08): PATCH (SCR-0025) — FAM-43 Standards Governance Core
+  komplett: STDDEV-001/REGISTRY-001/CHANGE-001 GEPLANT → BELEGT (Zähler-Sync:
+  10 BELEGT, 3 GEPLANT — offen: REPO-AUDIT-003, PROTOCOL-002, PROTOCOL-003);
+  Taxonomie-Zähler 33→34 Familien; keine semantischen Änderungen; Genehmigung
+  gebündelt mit §9-Freigabe der drei Core-Standards.
 
 - **1.0.5** (2026-09-08): PATCH (SCR-0024) — Neue Katalog-Familie FAM-43 „Standards
   Governance Core" (TAXONOMY-001 BELEGT; STDDEV-001/REGISTRY-001/CHANGE-001

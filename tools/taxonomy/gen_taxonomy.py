@@ -16,7 +16,7 @@ DOMAIN_MAP = {
     "readme": "SW", "md": "SW", "sc": "CHAIN", "net": "CHAIN", "desc": "GOV",
     "version": "GOV", "audit": "GOV", "ai-decision": "AI", "update": "GOV",
     "repo-audit": "GOV", "agent-operating": "AI", "master-audit": "GOV",
-    "framework": "GOV", "milestone": "GOV", "compat": "GOV",
+    "framework": "GOV", "milestone": "GOV", "compat": "GOV", "governance-core": "GOV",
     # neu via SCR-0024
     "taxonomy": "GOV",
 }
@@ -34,7 +34,7 @@ FAMILY_CODES = {
     "version": "VER", "audit": "AUD", "ai-decision": "AIDEC", "update": "UPD",
     "repo-audit": "RA", "protocol": "PROT", "agent-operating": "AOS",
     "master-audit": "MAUD", "framework": "FW", "milestone": "MIL", "compat": "CMP",
-    "taxonomy": "TAX",
+    "taxonomy": "TAX", "governance-core": "SGC",
 }
 
 cats = yaml.safe_load(open("registry/categories.yaml", encoding="utf-8"))
@@ -73,7 +73,7 @@ for name, meta in families.items():
         "id": meta["code"], "name": name, "status": "ACTIVE", "lifecycle": "ACTIVE",
         "id_range": meta["range"], "source": meta["source"],
         "description": meta["description"],
-        "standards_count": std_count.get(name, std_count.get(name + " (familie)", 0)),
+        "standards_count": std_count.get(name, 0),
         "categories": [{"id": "GENERAL", "name": "Allgemein (Bestand, keine Unterteilung)",
                         "status": "ACTIVE", "lifecycle": "ACTIVE"}],
     }

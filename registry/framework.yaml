@@ -11,9 +11,9 @@ framework:
     slots_total: 433
     slots_neu: 264
     slots_verweist: 150
-    slots_belegt: 7
+    slots_belegt: 10
     slots_konflikt: 6
-    slots_geplant: 6
+    slots_geplant: 3
   families:
   - id: FAM-01
     name: Enterprise & Governance
@@ -2017,7 +2017,7 @@ framework:
   - id: FAM-43
     name: Standards Governance Core
     range: ATC-STD-TAXONOMY-001 + STDDEV/REGISTRY/CHANGE-001
-    note: Standards Governance Core gem. Owner-Vorgabe 08.09.; TAXONOMY-001 via SCR-0024; Taxonomie-Registry (5 Domains, 33 Familien) S-24-geprueft
+    note: Standards Governance Core gem. Owner-Vorgabe 08.09.; TAXONOMY-001 via SCR-0024, STDDEV/REGISTRY/CHANGE via SCR-0025; Taxonomie-Registry S-24-geprueft
     family_refs: null
     slots:
     - id: ATC-STD-TAXONOMY-001
@@ -2027,20 +2027,16 @@ framework:
       - ATC-STD-TAXONOMY-001
     - id: ATC-STD-STDDEV-001
       title: Standards-Development-Standard (Erstellung/Review-Freigabe von Standards)
-      status: GEPLANT
+      status: BELEGT
       refs:
-      - ATC-STD-DESC-001
-      note: Governance Core; P1
+      - ATC-STD-STDDEV-001
     - id: ATC-STD-REGISTRY-001
       title: Registry-Management-Standard (SSOT-Verwaltung aller ATC-Registries)
-      status: GEPLANT
+      status: BELEGT
       refs:
-      - ATC-STD-TAXONOMY-001
-      note: Governance Core; P1
+      - ATC-STD-REGISTRY-001
     - id: ATC-STD-CHANGE-001
       title: Change-Control-Dachnorm (konsolidiert ATC-STD-000 §19-33 + UPDATE-001 + COMPAT-001)
-      status: GEPLANT
+      status: BELEGT
       refs:
-      - ATC-STD-UPDATE-001
-      - ATC-STD-COMPAT-001
-      note: Governance Core; P1 — Abgrenzung bei Erstellung klaeren
+      - ATC-STD-CHANGE-001

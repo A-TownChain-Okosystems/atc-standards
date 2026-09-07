@@ -1,5 +1,36 @@
 # Changelog
 
+## [1.4.33] - 2026-09-08
+
+### Added
+
+- **Standards Governance Core KOMPLETT (SCR-0025, 119.-121. Standard):** Die drei
+  verbleibenden Core-Standards aus FAM-43, Ausarbeitung nach Owner-Direktive
+  „Core bauen" — alle v1.0.0 DRAFT, §9-Freigabe ausstehend:
+  - **ATC-STD-STDDEV-001** (Standards Development): verbindlicher Lebenszyklus für
+    Standards — 10-Schritte-Erstellungsprozess, §9-Human-Gate als einzige
+    Freigabe-Instanz, Lifecycle IDEA→RETIRED, PATCH/MINOR/MAJOR-Wartung mit
+    COMPAT-Kopplung, 365-Tage-Review-Zyklus (Überfälligkeit = Finding),
+    Deprecation/Retirement, KI-Autoren-Regeln (14 REQ-SD).
+  - **ATC-STD-REGISTRY-001** (Registry Management): SSOT-Verwaltung aller
+    ATC-Registries — Inventar mit Generator/Gate-Tabelle (10 Registries +
+    Naming-Schema), SSOT-Prinzip ohne Parallelstrukturen, Generator-Pflicht
+    (Hand-Edits an generierten Dateien = P1-Finding), 5 Konsistenz-Gates je
+    CI-Lauf, 7-Schritte-Prozess für neue Registries, Manipulationsschutz (9 REQ-RM).
+  - **ATC-STD-CHANGE-001** (Change Control Dachnorm): eine Änderung, ein Kanal,
+    eine Gate-Landkarte — Änderungsarten-Matrix (6 Artefakttypen × PATCH/MINOR/
+    MAJOR), Pipeline SCR→VERSION→UPDATE→COMPAT→AUDIT→REGISTRY, RACI, Emergency
+    mit 48h-Nachholpflicht, lex specialis, die 13 Change-Nachweis-Fragen des
+    Master-Audits als Prüfraster je Änderung; ordnet ZU, ersetzt KEINE Fachnorm
+    (11 REQ-CH).
+- **Registry:** 121 Standards (118 APPROVED + 3 DRAFT); Kategorie governance-core
+  (neu); Taxonomie 34 Familien (SGC), alle 121 Standards zugeordnet; 9 Naming-
+  Patterns (REQ-SD/RM/CH); 3 DAG-Knoten; Agent-Manifest 121 gebunden.
+- **FRAMEWORK-001 v1.0.6 (PATCH, SCR-0025):** FAM-43 komplett BELEGT (10 BELEGT,
+  3 GEPLANT — offen: REPO-AUDIT-003, PROTOCOL-002, PROTOCOL-003); Genehmigung
+  gebündelt mit §9-Freigabe der drei Core-Standards.
+
+
 ## [1.4.32] - 2026-09-08
 
 ### Changed

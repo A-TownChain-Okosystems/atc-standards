@@ -525,6 +525,30 @@
         "taxCheckId": {
           "pattern": "^TAX-CHECK-[0-9]{3,}$",
           "description": "Taxonomie-Pruefungs-ID (TAX-CHECK-NNN)"
+        },
+        "stddevStandardId": {
+          "pattern": "^ATC-STD-STDDEV-[0-9]{3,}$",
+          "description": "ATC Standards Development Standard (ATC-STD-STDDEV-001)"
+        },
+        "sdRequirementId": {
+          "pattern": "^REQ-SD-[0-9]{3,}$",
+          "description": "Standards-Development-Anforderungs-ID (REQ-SD-NNN)"
+        },
+        "registryStandardId": {
+          "pattern": "^ATC-STD-REGISTRY-[0-9]{3,}$",
+          "description": "ATC Registry Management Standard (ATC-STD-REGISTRY-001)"
+        },
+        "rmRequirementId": {
+          "pattern": "^REQ-RM-[0-9]{3,}$",
+          "description": "Registry-Management-Anforderungs-ID (REQ-RM-NNN)"
+        },
+        "changeStandardId": {
+          "pattern": "^ATC-STD-CHANGE-[0-9]{3,}$",
+          "description": "ATC Change Control Dachnorm (ATC-STD-CHANGE-001)"
+        },
+        "chRequirementId": {
+          "pattern": "^REQ-CH-[0-9]{3,}$",
+          "description": "Change-Control-Anforderungs-ID (REQ-CH-NNN)"
         }
       }
     },
@@ -705,6 +729,18 @@
         "taxonomyStandardDoc": {
           "pattern": "^ATC-STD-TAXONOMY-[0-9]{3,}[.]md$",
           "description": "Taxonomy-Standard-Dokument"
+        },
+        "stddevStandardDoc": {
+          "pattern": "^ATC-STD-STDDEV-[0-9]{3,}[.]md$",
+          "description": "Standards-Development-Dokument"
+        },
+        "registryStandardDoc": {
+          "pattern": "^ATC-STD-REGISTRY-[0-9]{3,}[.]md$",
+          "description": "Registry-Management-Dokument"
+        },
+        "changeStandardDoc": {
+          "pattern": "^ATC-STD-CHANGE-[0-9]{3,}[.]md$",
+          "description": "Change-Control-Dokument"
         }
       }
     },

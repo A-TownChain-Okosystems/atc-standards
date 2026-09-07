@@ -64,7 +64,7 @@ STATES = ["idea", "proposed", "draft", "review", "candidate", "approved",
           "stable", "deprecated", "retired"]
 CATS = ["governance", "architecture", "repository", "development", "security",
         "protocol", "blockchain", "ai", "os", "infrastructure", "applications",
-        "bug", "net", "zkp", "ai-dev", "aas", "enterprise", "readme", "md", "sc", "desc", "version", "audit", "ai-decision", "update", "compat", "milestone", "framework", "repo-audit", "agent-operating", "master-audit", "protocol", "taxonomy"]
+        "bug", "net", "zkp", "ai-dev", "aas", "enterprise", "readme", "md", "sc", "desc", "version", "audit", "ai-decision", "update", "compat", "milestone", "framework", "repo-audit", "agent-operating", "master-audit", "protocol", "taxonomy", "governance-core"]
 REQ_RE = re.compile(r"REQ-[A-Z]+(?:-[A-Z]+)?-[0-9]{3}")
 
 
@@ -143,7 +143,7 @@ def validate(path, registry_path):
 
     # S-02 ID-Format (7.10/7.11: Muster aus naming-conventions.schema.json)
     sid = meta.get("id", "")
-    _ok02 = re.match(r"^ATC-STD-(?:BUG-|NET-|ZKP-|AI-DEV-|README-|MD-|SC-|DESC-|VERSION-|AUDIT-|AI-DECISION-|UPDATE-|COMPAT-|MILESTONE-|FRAMEWORK-|REPO-AUDIT-|AOS-|PROTOCOL-|TAXONOMY-)?[0-9]{3,}$", sid) or re.match(r"^ATC-(?:AAS|ENT)-[0-9]{3,}$", sid)
+    _ok02 = re.match(r"^ATC-STD-(?:BUG-|NET-|ZKP-|AI-DEV-|README-|MD-|SC-|DESC-|VERSION-|AUDIT-|AI-DECISION-|UPDATE-|COMPAT-|MILESTONE-|FRAMEWORK-|REPO-AUDIT-|AOS-|PROTOCOL-|TAXONOMY-|STDDEV-|REGISTRY-|CHANGE-)?[0-9]{3,}$", sid) or re.match(r"^ATC-(?:AAS|ENT)-[0-9]{3,}$", sid)
     v.add("S-02", "PASS" if _ok02 else "FAIL",
           "ID-Format: %s" % (sid if _ok02 else (sid or "FEHLT") + " (Schema: alle *StandardId-Muster)"))
 

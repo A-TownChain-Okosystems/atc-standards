@@ -43,9 +43,9 @@ ATC Standards provides the canonical normative governance layer of the
 A-TownChain ecosystem. It is responsible for:
 
 - Verfassung **ATC-STD-000** v1.2.0 (ID-System, Lifecycle, SCR, §30 Immutabilität)
-- Standard-Registry (**118 Standards**: 118 APPROVED, 0 offen) mit
+- Standard-Registry (**121 Standards**: 118 APPROVED + 3 DRAFT, Governance Core) mit
   Versionierung, Dependencies (DAG) und Findings (BUG-001..004)
-- Maschinelle Qualitätssicherung: `atc-std-validator` (118/118 COMPLIANT),
+- Maschinelle Qualitätssicherung: `atc-std-validator` (121/121 COMPLIANT),
   Mutationssuite (12/12), `atc-repo-audit` (R3, 100/100 GATE PASS),
   Agent-Manifest-Gate (`check_agent_manifest.py`)
 - Naming-SSOT (`naming-conventions.schema.json`), Change-Requests (SCR-0001..0007)
@@ -58,7 +58,8 @@ kein Standard ohne Eintrag; kein Repository ohne Standards-Bezug).
 ## Status
 
 **Status:** `release-candidate` — Governance-Freeze abgeschlossen
-(07./08.09.2026): alle 118 Standards APPROVED und normativ in Kraft — TAXONOMY-001
+(07./08.09.2026): 118 der 121 Standards APPROVED und normativ in Kraft — STDDEV-001,
+REGISTRY-001 und CHANGE-001 als einzige DRAFTs (§9-Freigabe ausstehend); TAXONOMY-001
 §9-freigegeben 00:27; AOS-001, ATC-STD-999 und PROTOCOL-001 §9-freigegeben 00:18
 (README-001 20:36,
 SC-Framework 001..020 21:00, MD-001 21:05). Übergangsfristen
@@ -81,7 +82,7 @@ SC-Framework 001..020 21:00, MD-001 21:05). Übergangsfristen
 ### Data Flow
 
 Änderungsantrag → SCR (§19–33) → Owner-Freigabe (§9) → Registry-Eintrag →
-CI-Validierung (118/118 + Gates) → APPROVED → normativ in Kraft (§30 Immutabilität).
+CI-Validierung (121/121 + Gates) → APPROVED → normativ in Kraft (§30 Immutabilität).
 
 ### Dependencies
 
@@ -185,7 +186,7 @@ und dem AAS-008-Workflow; Commits nach AI-DEV-007 v1.0.1.
 Run the complete test suite:
 
 ```bash
-python3 tools/atc-std-validator/validate_all.py        # 118/118 COMPLIANT
+python3 tools/atc-std-validator/validate_all.py        # 121/121 COMPLIANT
 python3 tools/atc-std-validator/tests/test_s19_mutation.py  # 12/12 OK
 python3 tools/atc-repo-audit/atc_repo_audit.py . --level R3    # GATE PASS
 python3 tools/atc-std-validator/check_agent_manifest.py       # GATE PASS
