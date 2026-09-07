@@ -15,6 +15,50 @@ import os
 import re
 import sys
 
+
+def _parse_flow_entry(body):
+    """Parst den Rumpf eines Fluss-Mappings '{id: X, title: "a, b", ...}' ohne PyYAML.
+    Kommas innerhalb gequoteter Werte bleiben erhalten."""
+    out = {}
+    buf = ""
+    in_q = None
+    parts = []
+    for ch in body:
+        if in_q:
+            buf += ch
+            if ch == in_q:
+                in_q = None
+            continue
+        if ch in ('"', "'"):
+            in_q = ch
+            buf += ch
+            continue
+        if ch == ",":
+            parts.append(buf.strip())
+            buf = ""
+        else:
+            buf += ch
+    parts.append(buf.strip())
+    for p in parts:
+        if ":" in p:
+            k, _, v = p.partition(":")
+            out[k.strip()] = v.strip().strip('"').strip("'")
+    return out
+
+
+def _find_registry_entry(reg_text, sid):
+    """Findet den Eintrag ausschliesslich innerhalb des 'standards:'-Abschnitts
+    (bis zum naechsten Top-Level-Key). Positionssensitiv, PyYAML-frei."""
+    sec = re.search(r"^standards:[ \t]*\n(.*?)(?=^[A-Za-z_][\w-]*:|\Z)", reg_text, re.S | re.M)
+    if not sec:
+        return None
+    for m in re.finditer(r"^\s+-\s+\{(.*)\}\s*$", sec.group(1), re.M):
+        d = _parse_flow_entry(m.group(1))
+        if d.get("id") == sid:
+            return d
+    return None
+
+
 VERSION = "0.2.0"
 STATES = ["idea", "proposed", "draft", "review", "candidate", "approved",
           "stable", "deprecated", "retired"]
@@ -220,23 +264,15 @@ def validate(path, registry_path):
     v.add("S-13", "PASS" if re.search(r"^##+\s.*References", text, re.M | re.I) else "WARN",
           "References (kategorisiert NORMATIVE/INFORMATIVE/…)")
 
-    # S-14 Registry-Eintrag (SCR-0013-Fix: YAML-Parsing der standards-Liste statt Rohtext-Suche —
-    # verhindert Fehl-PASS bei Eintraegen ausserhalb der Liste, z.B. in legacy_series)
+    # S-14 Registry-Eintrag (SCR-0013-Fix: positionssensitiver Section-Parser statt
+    # Rohtext-Suche — verhindert Fehl-PASS bei Eintraegen ausserhalb der standards-Liste,
+    # z.B. in legacy_series; ohne PyYAML-Abhaengigkeit, CI-ubuntu hat kein yaml)
     if registry_path and os.path.exists(registry_path):
-        reg_entry = None
-        try:
-            import yaml as _yaml
-            _reg = _yaml.safe_load(read(registry_path) or "{}")
-            for _e in (_reg.get("standards") or []):
-                if _e.get("id") == sid:
-                    reg_entry = _e
-                    break
-        except Exception:
-            reg_entry = None
+        reg_entry = _find_registry_entry(read(registry_path) or "", sid)
         if reg_entry:
             rv = reg_entry.get("version")
             rs = reg_entry.get("status")
-            konsistent = (not rv or str(rv) == ver) and (not rs or str(rs) == st)
+            konsistent = (not rv or rv == ver) and (not rs or rs == st)
             v.add("S-14", "PASS" if konsistent else "FAIL",
                   "Registry-Eintrag: vorhanden, " + ("Version/Status konsistent" if konsistent else
                   "Divergenz Datei(%s/%s) vs Registry(%s/%s)" % (ver, st, rv, rs)))
