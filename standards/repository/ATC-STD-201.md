@@ -16,7 +16,7 @@ standard:
 # ATC-STD-201 — Repository Structure Standard (v1.0.1, FORMALE SPEZIFIKATION)
 
 > **Status:** NORMATIV (RFC 2119) — verbindlich fuer NEUE Repositories sofort; Bestands-Repositories R2+ erfuellen MUST-Regeln bis M8 (AD-027), dokumentiert via atc-repo-audit
-> **Version:** 1.0.0 (FORMAL) · **Datum:** 07.09.2026 · **Autoren:** Michael Wroblewski (Owner), Aurora (Superagent)
+> **Version:** 1.0.1 (FORMAL) · **Datum:** 07.09.2026 · **Autoren:** Michael Wroblewski (Owner), Aurora (Superagent)
 > **Standard-ID:** ATC-STD-201 · **Scope:** Alle offiziellen Repositories der Organisation
 > **Referenzen:** AD-025/026/027/028/029/031, ATC-STD-202 (Naming/Classification/Ownership/Lifecycle/S-Klassen), ATC-STD-203 (Security/Release/Branching/Commits/Gates)
 > **Validator:** tools/atc-repo-audit (Regeln V-01…V-16) · **Registry:** registry/repositories.yaml

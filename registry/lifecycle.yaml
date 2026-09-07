@@ -15,3 +15,15 @@ rules:
     Verbindlichkeit mit STABLE.
   - APPROVED setzt die Review-Chain (Technical/Security/Architecture + Approval) voraus.
   - Aenderungen an STABLE nur via SCR (ATC-STD-000 §14).
+
+# Legacy-Status-Mapping (07.09.2026, Review-Befund): Historische
+# Statusbegriffe der Altsign (STANDARDS_REGISTRY.md, ATC-01…99 /
+# ATS-1000…1007) werden eindeutig auf den kanonischen Lifecycle
+# abgebildet. Nur der kanonische Lifecycle ist normativ (ATC-STD-000 §9).
+legacy_status_map:
+  FINAL:    {maps_to: approved, note: "historisch: in Kraft gesetzt"}
+  ACCEPTED: {maps_to: approved, note: "historisch: angenommen"}
+  MANDATE:  {maps_to: candidate, note: "historisch: Owner-Mandat ohne Review"}
+  ARCHIVED: {maps_to: retired,   note: "historisch: archiviert"}
+  DRAFT:    {maps_to: draft,     note: "identisch"}
+  REVIEW:   {maps_to: review,    note: "identisch"}

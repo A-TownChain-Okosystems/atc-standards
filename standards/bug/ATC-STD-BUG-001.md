@@ -15,7 +15,7 @@ standard:
 
 # ATC-STD-BUG-001 — Bug Finding Standard (v1.0.0, NORMATIV)
 
-> **Status:** NORMATIV per Owner-Mandat 07.09.2026 (Candidate-Revision gemaess ATC-STD-000 §33) — verbindlich sofort
+> **Status:** CANDIDATE (Owner-Mandat 07.09.2026, Candidate-Revision gemaess ATC-STD-000 §33; Normativkraft entsteht mit APPROVED §9)
 > **Reihe:** ATC-STD-BUG-001…004 (Bug- & Konsistenz-Lebenszyklus) · **Autoren:** Michael Wroblewski (Owner), Aurora (Superagent)
 > **Kernprinzip:** Trennung Finding → Dokumentation → Fix → Synchronitätsprüfung
 > **Scope:** Code-Repositories, Wiki-Repositories, Spezifikationen, Tests und technische Doku des Oekosystems. Nicht gilt: Feature-Anfragen ohne Fehlercharakter\n>\n> **Verweise:** ATC-STD-000 (§7 IDs, §24 Registry), ATC-STD-201/202/203, registry/findings.yaml, change-requests/

@@ -1,12 +1,12 @@
 # STATUS — atc-standards
 
-Stand: 07.09.2026, 15:00 (Europe/Berlin)
+Stand: 07.09.2026, 17:15 (Europe/Berlin)
 
 ## Standards-System
 
 | Standard | Version | Status | Naechster Schritt |
 |---|---|---|---|
-| ATC-STD-000 (Verfassung) | 1.0.0 | CANDIDATE | Owner-Approval -> APPROVED -> STABLE |
+| ATC-STD-000 (Verfassung) | 1.1.0 | APPROVED (07.09., Owner-Freigabe; Release+Tag v1.1.0) | STABLE nach Bewaehrung (§9) |
 | ATC-STD-201 Structure | 1.0.1 | draft | Review-Passage + Co-Approval |
 | ATC-STD-202 Naming | 1.0.1 | proposed | Review-Passage + Co-Approval |
 | ATC-STD-203 Security | 1.0.1 | proposed | Review-Passage + Co-Approval |
@@ -26,17 +26,22 @@ Stand: 07.09.2026, 15:00 (Europe/Berlin)
 
 ## Review- und Change-Status
 
-- ATC-STD-000 v1.0.0: Review-Chain 3/3 PASS (07.09., gegen die Owner-
-  Formalfassung, 35 Abschnitte). Approval BLOCKED -> Owner.
+- ATC-STD-000 v1.1.0: APPROVED (07.09., Owner-Freigabe Michael; Review-Chain
+  3/3 PASS, REQ-Matrix 21/21). Release v1.1.0 + immutables Tag erstellt.
 - SCR-0001 (ID-Allokation): PROPOSED/PENDING. SCR-0002: OBSOLETE (durch §23
-  aufgeloest). SCR-0003 (§34-Integritaet): PENDING, CODEOWNERS angelegt,
-  Branch-Absicherung wartet auf Owner-Option A/B. SCR-0004 (Rollenmodell):
-  PENDING.
+  aufgeloest). SCR-0003 (Branch/Tag-Integritaet): CLOSED — Branch-Protection
+  aktiv (Option B), Tag-Ruleset immutable-release-tags, Secret-Scanning +
+  Push-Protection enabled. SCR-0004 (Rollenmodell): CLOSED — §14.1 in v1.1.0.
+- ATC-STD-300 (Development & PM Standard, DTC): candidate v1.0.0, wartet auf
+  Owner-Freigabe (ATC-STD-000 §9).
+- ATC-STD-SELF-001 (Self-Governance): VORSCHLAG (07.09.), nicht priorisiert —
+  erst nach Governance-Freeze.
 
 ## Infrastruktur
 
-- CI: Repository-Audit (16/16 PASS, Score 100) + Standard-Validation (4/4
-  COMPLIANT) bei jedem Push. Validatoren: atc-repo-audit v0.1.0,
+- CI: Repository-Audit (16/16 PASS, Score 100) + Standard-Validation (17/17
+  COMPLIANT, registry-getrieben) bei jedem Push. Neuer Check S-19:
+  Header-/Frontmatter-/Registry-Versions-Sync. Validatoren: atc-repo-audit v0.1.0,
   atc-std-validator v0.2.0 (S-16 schema-basiert) + validate_all.py (S-17 Duplicate Detection) + CI naming-governance.yml.
 
 ## Metriken

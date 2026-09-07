@@ -137,6 +137,27 @@ def validate(path, registry_path):
     else:
         v.add("S-08", "WARN", "Keine REQ-ID-Deklarationen (ATC-STD-000 §11 empfiehlt REQ-<DOM>-NNN)")
 
+    # S-19 Header-Sync (Review-Befund 07.09.): Der Zitat-Kopf nach dem
+    # Frontmatter DARF keine abweichende Version/Status nennen. Nur der
+    # Kopf-Block wird geprueft — nicht Prosa-/Beispielblöcke.
+    fm_1 = text.find("\n---")
+    fm_2 = text.find("\n---", fm_1 + 4) if fm_1 > -1 else -1
+    head = text[fm_1:fm_2 if fm_2 > fm_1 else len(text)] if fm_1 > 0 else text[:1500]
+    hv = re.search(r">\s*\*\*Version:?\*\*\s*v?([\d.]+)", head)
+    hst = re.search(r">\s*\*\*Status:?\*\*\s*([A-Za-zÄÖÜäöü\- ]+)", head)
+    if hv and hv.group(1) != ver:
+        v.add("S-19", "FAIL", "Kopf-Version %s != Frontmatter %s (Registry ist SSOT)" % (hv.group(1), ver))
+    elif hst:
+        hst_n = hst.group(1).strip().upper()
+        if st.upper() not in hst_n and hst_n not in ("NORMATIV",):
+            v.add("S-19", "FAIL", "Kopf-Status '%s' != Frontmatter '%s'" % (hst.group(1).strip(), st))
+        else:
+            v.add("S-19", "PASS", "Kopf-/Frontmatter-Sync: Version+Status konsistent")
+    elif hv:
+        v.add("S-19", "PASS", "Kopf-/Frontmatter-Sync: Version konsistent")
+    else:
+        v.add("S-19", "PASS", "Kein Versions-/Status-Kopf — nichts zu syncen")
+
     # S-09 Normative Sprache
     normativ = meta.get("normative", "")
     hat_rf = re.search(r"\b(MUST|SHOULD|MAY)\b", text)

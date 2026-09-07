@@ -15,7 +15,7 @@ standard:
 
 # ATC-STD-NET-005 — Network Genesis Standard (v1.0.0, NORMATIV)
 
-> **Status:** NORMATIV per Owner-Mandat 07.09.2026 (Candidate-Revision gemaess ATC-STD-000 §33) — verbindlich sofort
+> **Status:** CANDIDATE (Owner-Mandat 07.09.2026, Candidate-Revision gemaess ATC-STD-000 §33; Normativkraft entsteht mit APPROVED §9)
 > **Reihe:** ATC-STD-NET-001…008 (Netzwerk-Umgebungen Devnet/Testnet/Mainnet) · **Autoren:** Michael Wroblewski (Owner), Aurora (Superagent)
 > **Scope:** Genesis-Konfiguration und -Lifecycle aller drei Stufen. Nicht gilt: laufender Chain-Betrieb
 > **Verweise:** ATC-STD-NET-001…008, ATC-STD-BUG-001…004, ATC-STD-203 (GATE-001…010), registry/networks.yaml, AD-004 (Chain-ID 658467), AD-027 (M4)

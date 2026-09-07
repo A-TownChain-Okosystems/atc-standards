@@ -15,7 +15,7 @@ standard:
 ---
 
 # ATC-STD-300 — Development & Project Management Standard
-> **Status:** KANDIDAT (v1.0.0) — Review-Chain | **Datum:** 07.09.2026 | **Autor:** Michael Wroblewski (Owner), Aurora (Superagent)
+> **Status:** CANDIDATE (v1.0.0) — Review-Chain | **Datum:** 07.09.2026 | **Autor:** Michael Wroblewski (Owner), Aurora (Superagent)
 > **Standard-ID:** ATC-STD-300 | **Scope:** Alle A-TownChain-Repositories und Entwicklungsprojekte
 > **Referenzen:** ATC-STD-000 (Governance), ATC-STD-201/-202/-203 (Repository-Serie), AD-023 (Quality-Driven), AD-026 (Bauhierarchie)
 > **Anwendungsregel:** NORMATIV ab APPROVED — definiert die verbindliche Entwicklungs-Traceability-Schicht (DTC) des gesamten Oekosystems.
