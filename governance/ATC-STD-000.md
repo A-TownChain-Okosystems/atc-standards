@@ -1,7 +1,7 @@
 standard:
   id: ATC-STD-000
   title: "Standards Governance & Specification Standard"
-  version: "1.0.0"
+  version: "1.1.0"
   status: approved
   category: governance
   authority: A-TownChain Ecosystems
@@ -328,6 +328,33 @@ Author -> Technical Review -> Security Review -> Architecture Review -> Approval
 
 Fuer bestimmte Standards koennen zusaetzliche Reviews erforderlich sein.
 
+### 14.1 Rollen- und Berechtigungsmodell
+
+Die Rollen des Standardsystems (verbindlich ab v1.1.0; SCR-0004,
+Owner-Mandat 07.09.2026):
+
+| Rolle | Berechtigungen | Besetzung |
+|-------|----------------|-----------|
+| **Owner** | Standard-Approval (§18), SCR-Entscheidungen (§20), Lifecycle-Uebergaenge STABLE/DEPRECATED/RETIRED, Rollenvergabe | Genau 1 (Michael Wroblewski) |
+| **Approver** | Approval im Auftrag des Owners (delegiert, dokumentiert) | 0..n; jede Delegation durch Owner-Entscheid verzeichnet |
+| **Reviewer** | Technical/Security/Architecture Review (§15-17) | Je Review-Typ mind. 1 bei REVIEW-Eintritt; Reviewer != Author |
+| **Maintainer** | Schreibrechte je Registry-Domain (atc/, ats/, standards/, registry/) | beliebig, je Domain zuordnungspflichtig |
+| **Agent** | Executor mit dokumentierter Policy (AGENT_POLICY.md, AGENT_COORDINATION.md, signierte Commits) | beliebig; niemals Approver; ausdrueckliche Owner-Freigabe je Massnahme |  
+
+**Erlass-Regeln:**
+
+1. Approvals und SCR-Entscheidungen liegen unuebertragbar beim Owner, sofern
+   nicht per dokumentierter Entscheidung an einen Approver delegiert.
+2. Agents fuehren Beschluesse aus, fassen sie nicht: jede normative Aenderung
+   durch einen Agent benoetigt ein Owner-Mandat (Commits + SCR verweisen
+   darauf). Agent-Commits ohne Mandat sind nicht konform (§34).
+3. Fuer einfache Standards (Kategorie documentation, informative Standards)
+   kann der Owner die Review-Chain per dokumentiertem Mandat auf einen
+   Review-Typ reduzieren ("Erlass"). Der Erlass ist im Approval-Paket zu
+   vermerken.
+4. Rollenaenderungen (Delegation, Maintainer-Zuordnung) werden in der
+   Registry (registry/teams.yaml) dokumentiert — Registry schlaegt Chat (§25).
+
 ## 15. Technical Review
 
 Bewertet: technische Konsistenz, Vollstaendigkeit, Implementierbarkeit,
@@ -508,6 +535,10 @@ keine Ausnahme von den Regeln, die es definiert — die Verfassung ist
 vollstaendig durch die eigene Kette gelaufen.
 
 ## Changelog
+
+- 1.1.0 (07.09.2026): SCR-0004 (Owner-Mandat) — neuer Abschnitt 14.1
+  Rollen- und Berechtigungsmodell (Owner/Approver/Reviewer/Maintainer/Agent,
+  Delegations-, Mandats- und Erlass-Regeln). MINOR, nicht-breaking.
 
 - 1.0.0 (07.09.2026): Owner-Formalfassung (35 Abschnitte) als verbindlicher
   v1.0.0-Text angenommen; Review-Chain §14 durchlaufen (3/3 PASS); Status

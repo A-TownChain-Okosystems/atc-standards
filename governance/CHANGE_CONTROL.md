@@ -23,8 +23,8 @@ PROPOSED -> REVIEW -> DECIDED (ACCEPTED | REJECTED | OBSOLETE) -> IMPLEMENTED ->
 |---|---|---|---|---|
 | SCR-0001 | ATC-STD-000 | ID-Allokationsprozess je Bereich | PROPOSED | PENDING |
 | SCR-0002 | ATC-STD-000 | L↔R-Compliance-Mapping | OBSOLETE | Aufgeloest durch Formalfassung §23 (07.09.) |
-| SCR-0003 | ATC-STD-000 | §34-Integritaetsumsetzung (Protected main, CODEOWNERS, Signed Tags) | PROPOSED (Teil-Umsetzung: CODEOWNERS) | PENDING |
-| SCR-0004 | ATC-STD-000 | Rollen- und Berechtigungsmodell | PROPOSED | PENDING |
+| SCR-0003 | ATC-STD-000 | §34-Integritaetsumsetzung (Protected main, CODEOWNERS, Signed Tags) | CLOSED | ACCEPTED (Option B) 07.09. — Implemented: Branch-Protection, Tags, Scanning |
+| SCR-0004 | ATC-STD-000 | Rollen- und Berechtigungsmodell | CLOSED | ACCEPTED 07.09. — Implemented: §14.1 in v1.1.0 |
 
 ## Regeln
 

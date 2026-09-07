@@ -21,4 +21,5 @@ requirements:
   - {id: REQ-STD-018, level: MUST, description: "ID-Immutability ueber gesamten Lifecycle", section: "§7.3", status: PASS, evidence: "Normtext MUST-Regel + Version-Pinning §30 + Registry-Allokation §7.7"}
   - {id: REQ-STD-019, level: MUST, description: "Duplicate Prevention: Registry = Allokations-Autoritaet, CI prueft dateiuebergreifend", section: "§7.8", status: PASS, evidence: "validate_all.py S-17 + Registry-Cross-Check"}
   - {id: REQ-STD-020, level: MUST, description: "CI Enforcement: FAIL blockiert Merge", section: "§7.11", status: PASS, evidence: ".github/workflows/naming-governance.yml (validate_all + Repo-Audit R3)"}
-summary: {total: 20, pass: 20, partial: 0, fail: 0, not_applicable: 0}
+  - {id: REQ-STD-021, level: MUST, description: "Rollen- und Berechtigungsmodell mit Mandats- und Delegationsregeln", section: "§14.1", status: PASS, evidence: "SCR-0004 (Owner-Mandat 07.09.) + Registry teams.yaml"}
+summary: {total: 21, pass: 21, partial: 0, fail: 0, not_applicable: 0}
