@@ -351,4 +351,5 @@ versions:
   ATC-STD-AI-DECISION-001:
     - {version: "1.0.0", date: "2026-09-07", change: "Initial Release APPROVED: Owner-Entwurf Michael Wroblewski (Builder-Chat 07.09. 22:15), Sammelfreigabe 22:25 — 23 REQ-AIDEC, 6 COM-AIDEC-Gates, D0-D5/L0-L5/RK0-RK5, Evidence-Zustände, Decision Records DEC-NNNNNN, Separation of Duties; §24-Familie auf AAS/AI-DEV-Bestand gemappt; SCR-0014"}
   ATC-STD-UPDATE-001:
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-§9-Freigabe (Builder-Chat 07.09. 23:28 UTC+2): DRAFT -> APPROVED, normativ in Kraft, §30-eingefroren. Letzter DRAFT des Repos — Registry 110/110 APPROVED. UPD-G04 (MAJOR) bindet COMPAT-001 als Pflicht-Gate; Change-Control-Kette SCR→VERSION→UPDATE→COMPAT→AUDIT vollständig normativ."}
     - {version: "1.0.0", date: "2026-09-07", change: "Initial Release DRAFT: Owner-Entwurf Michael Wroblewski (Builder-Chat 07.09. 22:40) — 19 REQ-UPD, 6 COM-UPD-Gates, UPD-NNN/UPD-G01..G09, No-Silent-Update, SCR-Kopplung, Rollback 5 Blockchain-Typen, Emergency-Prozess, Update Manifest, Review-Kadenzen, Control Matrix; SCR-0015; §9-Freigabe ausstehend"}

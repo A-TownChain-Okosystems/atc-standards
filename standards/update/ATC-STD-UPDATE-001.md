@@ -3,16 +3,17 @@ standard:
   id: ATC-STD-UPDATE-001
   title: "ATC Update Standard — Change Control für Artefakt-Updates (Lifecycle, Gates, Migration, Rollback, Emergency)"
   version: "1.0.0"
-  status: draft
+  status: approved
   category: update
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"
   created: "2026-09-07"
   updated: "2026-09-07"
-  normative: false
-  effective_date: ""
-  review_date: ""
+  normative: true
+  effective_date: "2026-09-07"
+  review_date: "2027-09-07"
   classification: PUBLIC
+  approved_by: "Michael Wroblewski (Owner, §9-Freigabe 07.09.2026, 23:28 UTC+2)"
   language: de-DE
   supersedes: null
   superseded_by: null
@@ -53,10 +54,10 @@ standard:
     - REQ-UPD-019
 ---
 
-# ATC-STD-UPDATE-001 — ATC Update Standard (v1.0.0, DRAFT)
+# ATC-STD-UPDATE-001 — ATC Update Standard (v1.0.0, APPROVED)
 
-> **Status:** DRAFT (v1.0.0) — Owner-Entwurf Michael Wroblewski (Builder-Chat 07.09.2026, 22:40 UTC+2);
-> Agenten-Review + Konfliktanalyse SCR-0015; Owner-§9-Freigabe ausstehend. Bei Freigabe: APPROVED, normativ, §30-eingefroren.
+> **Status:** APPROVED (v1.0.0) — §9-Freigabe Michael Wroblewski (Builder-Chat 07.09.2026, 23:28 UTC+2);
+> normativ in Kraft ab 07.09.2026, §30-eingefroren (ATC-STD-000). Konfliktanalyse SCR-0015 akzeptiert.
 > **Familie:** Update Standards (ATC-STD-UPDATE-001..999) — Kategorie `update`, SCR-0015.
 > **Rolle in der Change-Control-Kette:** SCR (ATC-STD-000 §30) → VERSION-001 → **UPDATE-001** → AUDIT-001 → CHANGELOG (geplant: CHANGE-001, RELEASE-001). Separate, miteinander verknüpfte Standards statt eines überladenen Einzelstandards.
 
@@ -296,4 +297,4 @@ Ausnahmen MÜSSEN gemäß ATC-STD-DESC-001 Abschnitt 11 (EXC-Verfahren) dokument
 - 19 normative Anforderungen (REQ-UPD-001..019), 6 COM-UPD-Gates
 - Update-Kategorien, 13-stufiger Lifecycle, UPD-NNN-Requests, UPD-G01..G09-Gates, Statusmodell (Normal-/Fehler-/Notfallpfad), Rollback (5 Blockchain-Typen), Emergency-Prozess, Update Manifest, CHANGELOG-Pflicht, Update Audit (15 Fragen), Integrity Manifest, Review-Kadenzen, Control Matrix
 - SCR-0015: UPD↔SCR-Kopplung (keine Doppelspur), Hierarchie auf echten Bestand korrigiert, Gates UPD-G vs AUD-G abgegrenzt
-- Status DRAFT — §9-Freigabe ausstehend
+- Status APPROVED — §9-Freigabe Michael Wroblewski 07.09.2026, 23:28 UTC+2, normativ, §30-eingefroren

@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.4.19] - 2026-09-07
+
+### Changed
+
+- **ATC-STD-UPDATE-001 v1.0.0: §9-FREIGABE → APPROVED** (Owner-Freigabe Michael
+  Wroblewski, Builder-Chat 07.09. 23:28 UTC+2). Normativ in Kraft ab 07.09.2026,
+  §30-eingefroren (ATC-STD-000). Frontmatter: status approved, normative true,
+  effective_date 2026-09-07, review_date 2027-09-07, approved_by Owner. SCR-0015:
+  IMPLEMENTED → APPROVED. versions.yaml: 1.0.0-Approval-Eintrag. Registry:
+  normative true. UPD-G04 (MAJOR) bindet COMPAT-001 als Pflicht-Gate — mit dieser
+  Freigabe ist die komplette Change-Control-Kette
+  SCR → VERSION → UPDATE → COMPAT → AUDIT normativ in Kraft.
+- **Registry FINAL: 110 Standards, 110 APPROVED, 0 DRAFT, 0 offen — alle normativ.**
+  Standards-System damit vollständig ohne offene Lifecycle-Posten.
+
+
 ## [1.4.18] - 2026-09-07
 
 ### Fixed

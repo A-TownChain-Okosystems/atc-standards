@@ -22,8 +22,10 @@ Evidence-First, Decision Records DEC-NNNNNN, Separation of Duties; §24-Familie 
 gemappt (12/15), Kill-Switch als dokumentierte Lücke (künftig AAS-026+).
 
 Sammelfreigabe 22:25 (Owner-Mandat „Freigabe"): BUG-005 + AUDIT-001 + AI-DECISION-001 → APPROVED,
-normativ, §30-eingefroren. Registry Stand 23:02: 110 Standards, 109 APPROVED + 1 DRAFT
-(UPDATE-001, §9-Freigabe ausstehend; COMPAT-001 als 109. APPROVED via SCR-0016 hinzugekommen).
+normativ, §30-eingefroren. Registry Stand 23:28: 110 Standards, 110 APPROVED, 0 DRAFT,
+0 offen — alle normativ. UPDATE-001 als 110. APPROVED via SCR-0015 §9-freigegeben (23:28);
+COMPAT-001 als 109. via SCR-0016 (23:02). Change-Control-Kette SCR→VERSION→UPDATE→COMPAT→AUDIT
+vollständig normativ in Kraft.
 
 AUD-2026-0001 (erster Lauf unter ATC-STD-AUDIT-001, 22:30): Standards-Umsetzungs-Audit —
 CONDITIONAL_PASS, Completeness Score C. Umsetzung: 8 AUTOMATED (7%) · 18 PARTIAL (16%) ·
@@ -31,7 +33,7 @@ CONDITIONAL_PASS, Completeness Score C. Umsetzung: 8 AUTOMATED (7%) · 18 PARTIA
 F-023 Cross-System MD-001-Verstoß atc-shivacore; S3: F-021 Audit-Engine, F-022 BUG-005-Felder).
 Offen: F-017 (SCR-0007-Entscheidung), Issue #80 (AIP-001). Kein Release-Blocker (0× S0/S1).
 
-ATC-STD-UPDATE-001 v1.0.0 DRAFT (SCR-0015): Change Control — Update-Kategorien (PATCH/MINOR/MAJOR
+ATC-STD-UPDATE-001 v1.0.0 APPROVED (SCR-0015, §9 23:28): Change Control — Update-Kategorien (PATCH/MINOR/MAJOR
 an VERSION-001 gekoppelt + SECURITY/EMERGENCY/GOVERNANCE), 13-stufiger Lifecycle, UPD-NNN-Requests,
 UPD-G01..G09-Gates, Statusmodell mit Notfallpfad, Rollback (5 Blockchain-Typen), Emergency-Prozess
 mit unverzichtbarer Auditierbarkeit, AI-Agent-Publish-Sperre, Update Manifest, CHANGELOG-Pflicht,
@@ -58,7 +60,7 @@ Dependabot in 16 Manifest-Repos (F-025). Org-Settings per Owner-Entscheidung 23:
 Offen: F-026 (Version-Baseline), F-027 (Tag v2.0.0), F-028 (ATC-STD-202 22→26), F-029 (governance-ci 3 Repos,
 Owner-Aktion workflow-Scope). Report: docs/AUD-2026-0002_ORG_AUDIT.md · Issues #94..98 in a-townchain-os.
 
-Stand: 07.09.2026, 23:30 (Europe/Berlin) · Self-Compliance: R3 100/100 GATE PASS ·
+Stand: 07.09.2026, 23:30 (Europe/Berlin) — §9-Freigabekette abgeschlossen 23:28 (UPDATE-001, letzter DRAFT) · Self-Compliance: R3 100/100 GATE PASS ·
 Voll-Validierung 110/110 Standards: ALL COMPLIANT (S-18 prüft alle 10 Registry-Dateien; Mutationssuite 12/12)
 
 ## Standards-System
@@ -83,11 +85,11 @@ Voll-Validierung 110/110 Standards: ALL COMPLIANT (S-18 prüft alle 10 Registry-
 | ATC-STD-AI-DECISION-001 | ATC Agent Decision-Making Standard (Entscheidungsmodell über AAS/AI-DEV) | APPROVED — SCR-0014, §9-Sammelfreigabe 22:25 |
 | ATC-STD-UPDATE-001 | ATC Update Standard (Change Control: Lifecycle, Gates, Rollback, Emergency) | DRAFT — SCR-0015, §9-Freigabe ausstehend |
 | ATC-STD-COMPAT-001 | Major Version Compatibility & Recovery Standard (Major-Gate in UPD-G04) | APPROVED — SCR-0016, §9-Freigabe 23:02, normativ, §30-eingefroren |
-| **Summe** | **110 Standards** | **109 APPROVED + 1 DRAFT** |
+| **Summe** | **110 Standards** | **110 APPROVED, 0 offen — alle normativ** |
 
 ## Qualitätssicherung (CI, self-compliant)
 
-- Standards-Validierung: **110/110 COMPLIANT** (109 APPROVED + 1 DRAFT UPDATE-001; AUD-FIX 21:30 — validate_all prüft real alle Dateien inkl. DESC-/VERSION-/COMPAT-Präfixe; Fehlercheck 23:30: S-18 Voll-Modus prüft alle 10 Registry-Dateien strukturell)
+- Standards-Validierung: **110/110 COMPLIANT** (110 APPROVED, 0 DRAFT; AUD-FIX 21:30 — validate_all prüft real alle Dateien inkl. DESC-/VERSION-/COMPAT-Präfixe; Fehlercheck 23:30: S-18 Voll-Modus prüft alle 10 Registry-Dateien strukturell)
 - Mutationssuite S-19: **12/12** (synthetische Fixtures)
 - Repository-Audit R3: **100/100, GATE PASS** · README-Gate: **13/13 CONFORM** · MD-Gate: **CONFORM** · Contract-Registry-Gate: **CONFORM**
 - Abhängigkeitsgraph: 105 Knoten, 226 Kanten, azyklisch (DAG) — Voll-Audit 21:45 + DESC-001 21:55 + VERSION-001 22:05
