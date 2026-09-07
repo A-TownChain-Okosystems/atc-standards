@@ -1,5 +1,35 @@
 # Changelog
 
+## [1.4.38] - 2026-09-08
+
+### Added
+
+- **P2P v1.0.0 IMPLEMENTIERT** (SCR-0028, UPD-Request MINOR nach UPDATE-001):
+  ShivaCore K14-Upgrade `p2p_secure.rs` (~1250 Zeilen, Commit ec05ced) setzt das
+  komplette Kern-Delta der freigegebenen Spezifikation ATC-PROTO-P2P-001 um:
+  Envelope 9+1 Pflichtfelder mit kanonischer Byte-Serialisierung und Signatur über
+  Domain-Separation; Message-Types 10..13 mit vollständiger 6-Phasen-Handshake-
+  State Machine inkl. Version-Verhandlung (0.9/1.0.0) und Capability-Bitmap;
+  Peer-Lifecycle Verified/Banned (24h-Fenster); Replay-Schutz (Nonce-Einmaligkeit
+  je Absender, Message-ID-Seen-Set bounded 4096 mit FIFO, Timestamp-Fenster ±120 s);
+  Rate-Limiting über K15 TokenBucket (100 msgs/s, 256 kiB/s je Peer); Fehlerkatalog
+  ATC-PROTO-P2P-001..019 mit Kategorie/Retryable/Severity; v0.9-Kompatibilitätsmodus
+  (K14-Wire-Format bleibt lesbar, Chain-ID-Abweisung in beiden Formaten).
+- **Kryptografie-Abstraction-Layer** (PROTOCOL-001 §12): `SignatureProvider`-Trait
+  mit deterministischem SimulatedSigner-Backend — der echte Ed25519-Backend ist
+  ohne Protokoll-Codeänderung austauschbar (folgt mit dem Crypto-HAL-Sprint);
+  symmetrische Session-Key-Ableitung mit kanonisch sortierten Public-Keys.
+- **29 neue Unit-Tests** in p2p_secure.rs — Kernel gesamt 423/423 grün
+  (394 Bestand + 29 neu), K14-Regression frei.
+
+### Changed
+
+- **Registry-SSOT:** ATC-PROTO-P2P-001-Eintrag auf „v1.0.0 IMPLEMENTIERT"
+  aktualisiert (Generator + Regen). Protokoll-Status bleibt ehrlich `draft`
+  (REQ-PROTO-021): Activation erst nach Testnet-Verifikation + Owner-Governance-
+  Approval gemäß PROTOCOL-001 §19-Kette.
+
+
 ## [1.4.37] - 2026-09-08
 
 ### Changed

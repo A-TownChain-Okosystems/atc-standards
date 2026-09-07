@@ -162,8 +162,19 @@ arten, Upgrade-Kette mit Human Gate, Deprecation v0.9→v1.1.0. Ehrlichkeitsrege
 Ist = v0.9-Kompatibilitätsmodus, Status draft bleibt bis verifizierte v1.0.0-Implementierung.
 Registry-SSOT regeneriert (SPEC_OVERRIDES). Protokoll-Spezifikationen sind KEINE
 ATC-STD-Standards (Schichtentrennung) — Registry bleibt 121 Standards. §9-FREIGEGEBEN
-01:06 (Builder-Chat): Spezifikation verbindlich; Protokoll-Status bleibt ehrlich draft
-(REQ-PROTO-021) bis zur verifizierten v1.0.0-Implementierung in ShivaCore.
+01:06 (Builder-Chat): Spezifikation verbindlich.
+
+P2P v1.0.0 IMPLEMENTIERT (SCR-0028, 01:35): ShivaCore K14-Upgrade p2p_secure.rs
+(~1250 Zeilen, Commit ec05ced) — UPD-Request MINOR nach UPDATE-001 (v0.9-Kompatibilitäts-
+modus, kein Breaking Change, kein COMPAT-Gate). Envelope 9+1 mit kanonischer
+Serialisierung + Signatur-Domain-Separation, Message-Types 10..13, vollständiger
+6-Phasen-Handshake mit Version-Verhandlung, Peer-Lifecycle Verified/Banned (24h),
+Replay-Schutz (Nonce je Absender, Message-ID-Seen-Set bounded 4096, Timestamp ±120 s),
+Rate-Limiting via K15 TokenBucket, Fehlerkatalog ATC-PROTO-P2P-001..019, Kryptografie-
+Abstraction-Layer (SignatureProvider-Trait, SimulatedSigner-Backend, Ed25519-
+Backend austauschbar). 29 neue Unit-Tests, Kernel gesamt 423/423 grün, K14-Regression
+frei. Protokoll-Status bleibt ehrlich draft (REQ-PROTO-021) bis Testnet-Verifikation +
+Owner-Governance-Approval (PROTOCOL-001 §19 Activation-Kette).
 
 AUD-2026-0001 (erster Lauf unter ATC-STD-AUDIT-001, 22:30): Standards-Umsetzungs-Audit —
 CONDITIONAL_PASS, Completeness Score C. Umsetzung: 8 AUTOMATED (7%) · 18 PARTIAL (16%) ·
@@ -198,7 +209,7 @@ Dependabot in 16 Manifest-Repos (F-025). Org-Settings per Owner-Entscheidung 23:
 Offen: F-026 (Version-Baseline), F-027 (Tag v2.0.0), F-028 (ATC-STD-202 22→26), F-029 (governance-ci 3 Repos,
 Owner-Aktion workflow-Scope). Report: docs/AUD-2026-0002_ORG_AUDIT.md · Issues #94..98 in a-townchain-os.
 
-Stand: 08.09.2026, 01:10 (Europe/Berlin) — Registry FINAL 121/121 APPROVED; ATC-PROTO-P2P-001 §9-freigegeben (erste Protokoll-Spezifikation verbindlich, SCR-0027) · Self-Compliance: R3 100/100 GATE PASS ·
+Stand: 08.09.2026, 01:35 (Europe/Berlin) — Registry FINAL 121/121 APPROVED; P2P-001 v1.0.0 spezifiziert (SCR-0027) UND implementiert (SCR-0028, ShivaCore 423/423) · Self-Compliance: R3 100/100 GATE PASS ·
 Voll-Validierung 110/110 Standards: ALL COMPLIANT (S-18 prüft alle 10 Registry-Dateien; Mutationssuite 12/12)
 
 ## Standards-System
