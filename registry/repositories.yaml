@@ -3,6 +3,7 @@
 repositories:
   - {name: atc-standards,    classification: SPEC,        maturity: R3, security: S3, status: beta,        layer: parallel,   domain: governance}
   - {name: atc-shivacore,   classification: CORE,        maturity: R4, security: S4, status: production,   layer: L1,         domain: kernel}
+  - {name: atc-vm,          classification: CORE,        maturity: R1, security: S4, status: experimental,  layer: L0,         domain: vm}
   - {name: atclang,         classification: CORE,        maturity: R4, security: S4, status: development,   layer: L0,         domain: language}
   - {name: a-townchain,     classification: CORE,        maturity: R4, security: S4, status: development,   layer: L3,         domain: blockchain}
   - {name: globus-os,       classification: OS,          maturity: R3, security: S4, status: development,   layer: L4,         domain: os}
