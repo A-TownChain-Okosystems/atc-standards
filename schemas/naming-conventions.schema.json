@@ -243,6 +243,36 @@
           "type": "string",
           "pattern": "^REQ-MD-[0-9]{3,}$",
           "example": "REQ-MD-001"
+        },
+        "scStandardId": {
+          "type": "string",
+          "pattern": "^ATC-STD-SC-[0-9]{3,}$",
+          "example": "ATC-STD-SC-001"
+        },
+        "scRequirementId": {
+          "type": "string",
+          "pattern": "^REQ-SC-[0-9]{3,}$",
+          "example": "REQ-SC-001"
+        },
+        "contractId": {
+          "type": "string",
+          "pattern": "^ATC-SC-[A-Z]+-[0-9]{3,}$",
+          "example": "ATC-SC-TOKEN-001"
+        },
+        "deploymentId": {
+          "type": "string",
+          "pattern": "^ATC-DEP-[0-9]{3,}$",
+          "example": "ATC-DEP-0001"
+        },
+        "scCategoryId": {
+          "type": "string",
+          "pattern": "^SC-[A-Z]+$",
+          "example": "SC-TOKEN"
+        },
+        "scGateId": {
+          "type": "string",
+          "pattern": "^SC-G([0-9]|1[0-3])$",
+          "example": "SC-G7"
         }
       }
     },
@@ -361,6 +391,11 @@
           "type": "string",
           "pattern": "^ATC-STD-MD-[0-9]{3,}[.]md$",
           "example": "ATC-STD-MD-001.md"
+        },
+        "scStandardDoc": {
+          "type": "string",
+          "pattern": "^ATC-STD-SC-[0-9]{3,}[.]md$",
+          "example": "ATC-STD-SC-001.md"
         }
       }
     },

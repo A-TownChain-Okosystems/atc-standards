@@ -250,3 +250,62 @@ versions:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Owner-Entwurf Michael: README als standardisierte Einstiegsschnittstelle jedes Repos — Pflichtstruktur, Status-Enum, Gates README-01..13, Metadaten-Block; Formalfassung ATC-AI-ARCH-001 mit REQ-README-001..015). Status: CANDIDATE — Owner-§9-Freigabe ausstehend (Todo #116)"}
   ATC-STD-MD-001:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Owner-Entwurf Michael: Markdown als verbindliches Documentation-Standard-Modell — Pflichtdateien, Hierarchie, UPPER_SNAKE_CASE, Metadaten-Header, Dokument-Status/SemVer, AI-Agenten-Schnittstelle, Drift-Gate; Formalfassung ATC-AI-ARCH-001 mit REQ-MD-001..016). Status: CANDIDATE — Owner-§9-Freigabe ausstehend (Todo #117)"}
+  ATC-STD-SC-001:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Owner-Entwurf Michael: Smart Contract Standards Framework — Familien-Hauptstandard: Kategorien, SSOT-Kette, Gates SC-G0..G13). Status: CANDIDATE — Owner-§9-Freigabe ausstehend (Todo #118)"}
+
+  ATC-STD-SC-002:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Owner-Entwurf Michael: Smart Contract Standards Framework — contract_id + Code-Repo-Commit-Deployment-Rueckverfolgung). Status: CANDIDATE — Owner-§9-Freigabe ausstehend (Todo #118)"}
+
+  ATC-STD-SC-003:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Owner-Entwurf Michael: Smart Contract Standards Framework — Pruefkatalog: Reentrancy/CEI, Overflow, Access Control, MEV, Storage Collision). Status: CANDIDATE — Owner-§9-Freigabe ausstehend (Todo #118)"}
+
+  ATC-STD-SC-004:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Owner-Entwurf Michael: Smart Contract Standards Framework — Unit/Fuzz/Invariant/Negative/Security/Upgrade/Gas-Tests, Invarianten). Status: CANDIDATE — Owner-§9-Freigabe ausstehend (Todo #118)"}
+
+  ATC-STD-SC-005:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Owner-Entwurf Michael: Smart Contract Standards Framework — Audit-Pipeline + Status-Enum (NOT_AUDITED..REJECTED)). Status: CANDIDATE — Owner-§9-Freigabe ausstehend (Todo #118)"}
+
+  ATC-STD-SC-006:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Owner-Entwurf Michael: Smart Contract Standards Framework — Deployment Records ATC-DEP-NNNN, Verification). Status: CANDIDATE — Owner-§9-Freigabe ausstehend (Todo #118)"}
+
+  ATC-STD-SC-007:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Owner-Entwurf Michael: Smart Contract Standards Framework — Default immutable; Proxy/Adm../Timelock-Pflicht). Status: CANDIDATE — Owner-§9-Freigabe ausstehend (Todo #118)"}
+
+  ATC-STD-SC-008:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Owner-Entwurf Michael: Smart Contract Standards Framework — Events fuer AuditTrail/LogChain/GPT-Watcher/Explorer). Status: CANDIDATE — Owner-§9-Freigabe ausstehend (Todo #118)"}
+
+  ATC-STD-SC-009:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Owner-Entwurf Michael: Smart Contract Standards Framework — Rollen OWNER..AUDITOR, Autorisierungskette mit Timelock). Status: CANDIDATE — Owner-§9-Freigabe ausstehend (Todo #118)"}
+
+  ATC-STD-SC-010:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Owner-Entwurf Michael: Smart Contract Standards Framework — FundsTransferred-Events, Multisig/Limits/Timelock). Status: CANDIDATE — Owner-§9-Freigabe ausstehend (Todo #118)"}
+
+  ATC-STD-SC-011:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Owner-Entwurf Michael: Smart Contract Standards Framework — ATC-001/8300/9900-Anforderungen, Mint/Burn-Rollen). Status: CANDIDATE — Owner-§9-Freigabe ausstehend (Todo #118)"}
+
+  ATC-STD-SC-012:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Owner-Entwurf Michael: Smart Contract Standards Framework — Token-IDs, Metadata, Royalties). Status: CANDIDATE — Owner-§9-Freigabe ausstehend (Todo #118)"}
+
+  ATC-STD-SC-013:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Owner-Entwurf Michael: Smart Contract Standards Framework — Staking/Liquidity/Swap-Invarianten, Manipulationsresistenz). Status: CANDIDATE — Owner-§9-Freigabe ausstehend (Todo #118)"}
+
+  ATC-STD-SC-014:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Owner-Entwurf Michael: Smart Contract Standards Framework — DAO/Voting/Proposals, Timelock vor Execution). Status: CANDIDATE — Owner-§9-Freigabe ausstehend (Todo #118)"}
+
+  ATC-STD-SC-015:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Owner-Entwurf Michael: Smart Contract Standards Framework — Cross-Chain-Nachrichten, Replay Protection, Finality). Status: CANDIDATE — Owner-§9-Freigabe ausstehend (Todo #118)"}
+
+  ATC-STD-SC-016:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Owner-Entwurf Michael: Smart Contract Standards Framework — Staleness/Deviation/Fallback/Emergency-Konfiguration). Status: CANDIDATE — Owner-§9-Freigabe ausstehend (Todo #118)"}
+
+  ATC-STD-SC-017:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Owner-Entwurf Michael: Smart Contract Standards Framework — Shivamon/Items/Rewards, Emission-Obergrenzen). Status: CANDIDATE — Owner-§9-Freigabe ausstehend (Todo #118)"}
+
+  ATC-STD-SC-018:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Owner-Entwurf Michael: Smart Contract Standards Framework — Emissionsplan, Double-Claim-Schutz, MinerWatcher-Events). Status: CANDIDATE — Owner-§9-Freigabe ausstehend (Todo #118)"}
+
+  ATC-STD-SC-019:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Owner-Entwurf Michael: Smart Contract Standards Framework — contracts/registry (contracts/deployments/versions.yaml), Registry-First). Status: CANDIDATE — Owner-§9-Freigabe ausstehend (Todo #118)"}
+
+  ATC-STD-SC-020:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Owner-Entwurf Michael: Smart Contract Standards Framework — Agenten-Workflow mit Human/Governance-Approval-Gates). Status: CANDIDATE — Owner-§9-Freigabe ausstehend (Todo #118)"}

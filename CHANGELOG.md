@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.4.0] - 2026-09-07
+
+### Added
+
+- ATC Smart Contract Standards Framework: ATC-STD-SC-001..020 v1.0.0
+  CANDIDATE (Owner-Entwurf Michael) — Kategorien SC-CORE..SC-SYSTEM,
+  SSOT-Kette, Compliance-Gates SC-G0..G13 (kein Gate — kein Mainnet),
+  REQ-SC-001..058
+- Contract Registry (contracts/registry/{contracts,deployments,versions}.yaml
+  + 9 Kategorie-Verzeichnisse), Seed: ATC-SC-TOKEN-001..003 (ATC-001/8300/9900)
+- tools/atc-sc-validator/check_contracts.py (Registry-Gate, CONFORM)
+- Geplant (ROADMAP): Deep-Standards ATC-STD-SC-BRIDGE-001, ATC-STD-FEE-001
+
 ## [1.3.0] - 2026-09-07
 
 ### Added

@@ -16,6 +16,11 @@
    bis Workflow-Integration: Agenten-lokale Prüfung je Task)
 0b. **ATC-STD-MD-001 (CANDIDATE):** §9-Freigabe + MD-Konformitäts-Rollout
    auf alle 26 Repos (check_md.py als Gate je Repo)
+0c. **ATC-STD-SC-001..020 (CANDIDATE):** §9-Freigabe des Smart Contract
+   Standards Framework; danach Gate-Rollout auf Contract-Repos
+   (a-townchain-os, atc-vm, atc-vm/atc-zkp-Verträge), Registry-Befüllung
+   (SC-G0 je Contract), geplante Deep-Standards: ATC-STD-SC-BRIDGE-001,
+   ATC-STD-FEE-001 (Fee Market & MEV Mitigation Layer)
 
 1. **SCR-0007 (F-017):** REQ-ID-Rollout AI-DEV/AAS/ENT + §9-Reststruktur — Owner-Entscheidung ausstehend
 2. **Interface-Test-Suiten IFC-0001..0010** (P0): seed → active (ATC-STD-204 §9)

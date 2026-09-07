@@ -1,0 +1,71 @@
+---
+standard:
+  id: ATC-STD-SC-014
+  title: "ATC-STD-SC-014 — Governance Contract Standard"
+  version: "1.0.0"
+  status: candidate
+  category: sc
+  authority: A-TownChain-Okosystems
+  owner: Michael (Owner-Entwurf) / ATC-AI-ARCH-001 (Formalfassung)
+  created: "2026-09-07"
+  normative: true
+  applies_to: "Alle Smart Contracts des A-TownChain-Oekosystems"
+  supersedes: []
+---
+
+# ATC-STD-SC-014 — Governance Contract Standard (v1.0.0, CANDIDATE)
+
+> **Status:** CANDIDATE (v1.0.0) — Owner-Entwurf Michael 07.09.2026, Formalfassung
+> durch ATC-AI-ARCH-001; Freigabe nach ATC-STD-000 §9 ausstehend (Todo #118).
+> **Familie:** ATC Smart Contract Standards Framework (ATC-STD-SC-001..020).
+
+## Abstract
+
+Anforderungen fuer DAO-, Voting- und Proposal-Contracts: Proposal-Lifecycle, Quorum/Threshold-Regeln, Stimmgewichtungs-Verfahren, Timelock vor Execution und vollstaendige Event-Nachvollziehbarkeit.
+
+## Scope
+
+Gilt fuer alle SC-GOV-Contracts; verzaehnt mit ATC-9900 (Governance/DAO-Token) und ATC-ENT-002 (Entscheidungen).
+
+## 1. Proposal-Lifecycle (REQ-SC-039)
+
+Proposals MUESSEN einen definierten Lifecycle haben (draft → active → passed → executed/defeated) mit dokumentierten Quorum- und Threshold-Regeln.
+
+## 2. Timelock vor Execution (REQ-SC-040)
+
+Verbindliche Governance-Aktionen MUESSEN einen Timelock vor Execution haben (Ausnahme: dokumentierte Emergency-Verfahren).
+
+## 3. Nachvollziehbarkeit (REQ-SC-041)
+
+Votes und Executions sind Event-pflichtig (SC-008); off-chain spiegelt die DEC-Record-Struktur (ATC-ENT-002) die On-Chain-Entscheidungen.
+
+
+
+## Anforderungs-Verzeichnis
+
+| REQ-ID | Anforderung | Verbindlichkeit |
+|---|---|---|
+| REQ-SC-039 | Proposal-Lifecycle (§1) | MUSS |
+| REQ-SC-040 | Timelock (§2) | MUSS |
+| REQ-SC-041 | Nachvollziehbarkeit (§3) | MUSS |
+
+## Compliance
+
+Pruefung im Rahmen der SC-Compliance-Gates (ATC-STD-SC-001, SC-G0..G13):
+kein Gate — kein Mainnet. Verstoege werden als Finding nach ATC-STD-BUG-001
+dokumentiert. Registry-Pflichten nach ATC-STD-SC-019.
+
+## Security Considerations
+
+Governance-Contracts steuern alle anderen Contracts (SC-009) — hoechste Integitaetsanforderungen.
+
+## Changelog
+
+| Version | Datum | Aenderung |
+|---|---|---|
+| 1.0.0 | 2026-09-07 | Initiale Fassung (Owner-Entwurf Michael, Formalfassung ATC-AI-ARCH-001) |
+
+## References
+
+- **NORMATIVE:** ATC-STD-000, ATC-STD-203, ATC-STD-204, ATC-STD-SC-001 (Familien-Hauptstandard), ATC-ENT-002 (Entscheidungen)
+- **INFORMATIVE:** ATC-AAS-001..025, AI-DEV-001..012, contracts/registry/

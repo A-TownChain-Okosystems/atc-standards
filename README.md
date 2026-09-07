@@ -43,7 +43,7 @@ ATC Standards provides the canonical normative governance layer of the
 A-TownChain ecosystem. It is responsible for:
 
 - Verfassung **ATC-STD-000** v1.2.0 (ID-System, Lifecycle, SCR, §30 Immutabilität)
-- Standard-Registry (**82 APPROVED**, 0 offen) mit
+- Standard-Registry (**82 APPROVED** + 21 CANDIDATE: MD-001, SC-001..020) mit
   Versionierung, Dependencies (DAG) und Findings (BUG-001..004)
 - Maschinelle Qualitätssicherung: `atc-std-validator` (81/81 COMPLIANT),
   Mutationssuite (12/12), `atc-repo-audit` (R3, 100/100 GATE PASS),
@@ -58,8 +58,8 @@ kein Standard ohne Eintrag; kein Repository ohne Standards-Bezug).
 ## Status
 
 **Status:** `release-candidate` — Governance-Freeze abgeschlossen
-(07.09.2026): alle 82 Standards APPROVED und normativ in Kraft
-(ATC-STD-README-001 freigegeben 20:36). Übergangsfristen
+(07.09.2026): 82 Standards APPROVED und normativ in Kraft
+(ATC-STD-README-001 freigegeben 20:36); 21 CANDIDATES: MD-001 + SC-Framework (001..020). Übergangsfristen
 (Commit-Trailer, Repo-Manifeste, Interface-Test-Suiten) laufen bis 07.10.2026.
 
 ## Architecture
@@ -98,6 +98,7 @@ CI-Validierung (81/81 + Gates) → APPROVED → normativ in Kraft (§30 Immutabi
 - CI-Gates: Standards-Validierung, Mutationssuite, Repo-Audit R3,
   Agent-Manifest-Enforcement
 - Findings-Lifecycle (F-001..F-018) mit Severity S0–S4
+- **Smart Contract Standards Framework** ATC-STD-SC-001..020 (Gates SC-G0..G13) mit Contract Registry (contracts/)
 
 ## Repository Structure
 
@@ -115,7 +116,8 @@ CI-Validierung (81/81 + Gates) → APPROVED → normativ in Kraft (§30 Immutabi
 ├── schemas/             # Naming-/Metadaten-Schemata
 ├── standards/           # 82 Standards in 10 Verzeichnissen
 ├── templates/           # Standard-Templates
-├── tools/               # Validator, Audit, README-Gates, Tests
+├── contracts/           # Contract Registry (SC-019) + Kategorie-Specs (SC-Framework)
+├── tools/               # Validator, Audit, README/MD/SC-Gates, Tests
 ├── .github/ai/          # Agent-Manifest, AGENTS.md, AUD-Records
 ├── AGENT_MANIFEST.md    # Agenten-Identität + Voll-Compliance-Mandat
 ├── AGENTS.md            # Repo-Agenten-Regeln

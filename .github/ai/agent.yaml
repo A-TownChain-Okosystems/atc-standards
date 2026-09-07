@@ -5,7 +5,7 @@ repository: atc-standards
 agents:
   allowed:                      # 1-Agent-per-Repo (AI-DEV-012 §1, AGENT_PROTOCOL)
     - ATC-AI-ARCH-001            # Aurora #1 (Superagent) — Governance-Registry
-required_standards:            # ALLE 83 Registry-Standards — Vollmandat (81 APPROVED + 1 CANDIDATE; dynamische Bindung an Registry)
+required_standards:            # ALLE 103 Registry-Standards — Vollmandat (81 APPROVED + 1 CANDIDATE; dynamische Bindung an Registry)
   - ATC-AAS-001
   - ATC-AAS-002
   - ATC-AAS-003
@@ -86,6 +86,26 @@ required_standards:            # ALLE 83 Registry-Standards — Vollmandat (81 A
   - ATC-STD-ZKP-007
   - ATC-STD-ZKP-008
   - ATC-STD-ZKP-009
+  - ATC-STD-SC-001
+  - ATC-STD-SC-002
+  - ATC-STD-SC-003
+  - ATC-STD-SC-004
+  - ATC-STD-SC-005
+  - ATC-STD-SC-006
+  - ATC-STD-SC-007
+  - ATC-STD-SC-008
+  - ATC-STD-SC-009
+  - ATC-STD-SC-010
+  - ATC-STD-SC-011
+  - ATC-STD-SC-012
+  - ATC-STD-SC-013
+  - ATC-STD-SC-014
+  - ATC-STD-SC-015
+  - ATC-STD-SC-016
+  - ATC-STD-SC-017
+  - ATC-STD-SC-018
+  - ATC-STD-SC-019
+  - ATC-STD-SC-020
   - ATC-STD-MD-001
   - ATC-STD-README-001
   - ATC-STD-ZKP-010
