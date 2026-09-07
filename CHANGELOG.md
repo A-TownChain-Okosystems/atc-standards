@@ -1,5 +1,25 @@
 # Changelog
 
+## [1.4.15] - 2026-09-07
+
+### Changed
+
+- **ATC-STD-COMPAT-001 v1.0.0: §9-FREIGABE → APPROVED** (Owner-Freigabe Michael
+  Wroblewski, Builder-Chat 07.09. 23:02 UTC+2). Normativ in Kraft ab 07.09.2026,
+  §30-eingefroren (ATC-STD-000). Frontmatter: status approved, normative true,
+  effective_date 2026-09-07, review_date 2027-09-07, approved_by Owner. SCR-0016:
+  IMPLEMENTED → APPROVED. Registry-Eintrag aktualisiert (normative: true).
+  Standards-Bilanz: 110 Standards, 109 APPROVED + 1 DRAFT (UPDATE-001).
+
+### Fixed
+
+- **Validator-Abdeckung COMPAT-Familie:** atc_std_validator S-02-Regex um COMPAT-
+  Präfix ergänzt; CATS-Liste um Kategorie `compat` erweitert;
+  naming-conventions.schema.json um compatStandardId, compatRequirementId,
+  compatRestorationId (COMP-NNN, REQ-COMPAT-009) und compatStandardDoc ergänzt.
+  Ergebnis: ALL COMPLIANT (inkl. COMPAT-001, Mutationssuite M1-M12 12/12).
+
+
 ## [1.4.14] - 2026-09-07
 
 ### Added

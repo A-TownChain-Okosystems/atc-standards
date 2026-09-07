@@ -3,16 +3,17 @@ standard:
   id: ATC-STD-COMPAT-001
   title: "ATC Major Version Compatibility & Recovery Standard — Verbindliche Kompatibilitätsprüfung, -Wiederherstellung und -Migration nach MAJOR-Updates"
   version: "1.0.0"
-  status: draft
+  status: approved
   category: compat
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"
   created: "2026-09-07"
   updated: "2026-09-07"
-  normative: false
-  effective_date: ""
-  review_date: ""
+  normative: true
+  effective_date: "2026-09-07"
+  review_date: "2027-09-07"
   classification: PUBLIC
+  approved_by: "Michael Wroblewski (Owner, §9-Freigabe 07.09.2026, 23:02 UTC+2)"
   language: de-DE
   supersedes: null
   superseded_by: null
@@ -45,10 +46,10 @@ standard:
     - REQ-COMPAT-014
 ---
 
-# ATC-STD-COMPAT-001 — ATC Major Version Compatibility & Recovery Standard (v1.0.0, DRAFT)
+# ATC-STD-COMPAT-001 — ATC Major Version Compatibility & Recovery Standard (v1.0.0, APPROVED)
 
-> **Status:** DRAFT (v1.0.0) — Owner-Entwurf Michael Wroblewski (Builder-Chat 07.09.2026, 22:55 UTC+2);
-> Owner-§9-Freigabe ausstehend. Bei Freigabe: APPROVED, normativ, §30-eingefroren.
+> **Status:** APPROVED (v1.0.0) — §9-Freigabe Michael Wroblewski (Builder-Chat 07.09.2026, 23:02 UTC+2);
+> normativ in Kraft ab 07.09.2026, §30-eingefroren (ATC-STD-000).
 > **Familie:** Compat Standards (ATC-STD-COMPAT-001..999) — Kategorie `compat`, Companion zur Update-Familie (SCR-0015).
 > **Rolle in der Change-Control-Kette:** SCR (ATC-STD-000 §30) → VERSION-001 → UPDATE-001 → **COMPAT-001 (MAJOR-Gate)** → AUDIT-001 → (geplant CHANGE-001, RELEASE-001).
 > **Verankerung:** Pflicht-Gate in ATC-STD-UPDATE-001 REQ-UPD-008, Gate UPD-G04 (Compatibility) — bei MAJOR-Updates verstärkt durch diesen Standard.
@@ -395,4 +396,4 @@ Dieser Standard ist als Pflicht-Gate im übergeordneten ATC-STD-UPDATE-001 veran
 - Nach §9-Freigabe: normativ in Kraft, §30-eingefroren
 
 ---
-*ATC-STD-COMPAT-001 v1.0.0 · Owner-Entwurf Michael Wroblewski · Aurora (Superagent) · 07.09.2026*
+*ATC-STD-COMPAT-001 v1.0.0 · Owner-Entwurf Michael Wroblewski · Aurora (Superagent) · 07.09.2026 · §9-APPROVED 23:02 UTC+2 — normativ, §30-eingefroren*
