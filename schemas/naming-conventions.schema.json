@@ -273,6 +273,18 @@
           "type": "string",
           "pattern": "^SC-G([0-9]|1[0-3])$",
           "example": "SC-G7"
+        },
+        "descStandardId": {
+          "type": "string",
+          "pattern": "^ATC-STD-DESC-[0-9]{3,}$",
+          "example": "ATC-STD-DESC-001",
+          "note": "Standard-Description-Familie: Beschreibung von Standards (Owner-Entwurf 07.09., SCR-0008)"
+        },
+        "descRequirementId": {
+          "type": "string",
+          "pattern": "^REQ-DESC-[0-9]{3,}$",
+          "example": "REQ-DESC-001",
+          "note": "Requirements der DESC-Familie (SCR-0008)"
         }
       }
     },
@@ -396,6 +408,11 @@
           "type": "string",
           "pattern": "^ATC-STD-SC-[0-9]{3,}[.]md$",
           "example": "ATC-STD-SC-001.md"
+        },
+        "descStandardDoc": {
+          "type": "string",
+          "pattern": "^ATC-STD-DESC-[0-9]{3,}[.]md$",
+          "example": "ATC-STD-DESC-001.md"
         }
       }
     },

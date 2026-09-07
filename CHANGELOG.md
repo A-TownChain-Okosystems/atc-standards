@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.4.4] - 2026-09-07
+
+### Added
+
+- **ATC-STD-DESC-001 v1.0.0 (DRAFT):** Standard Description Standard — Pflichtstruktur,
+  erweitertes Metadatenmodell, 7-Status-Lifecycle-Mapping auf Registry-Lifecycle,
+  14 REQ-DESC-Anforderungen, 5 COM-DESC-Compliance-Gates, Ausnahmeverfahren,
+  Quality Gate (17 Kriterien), Maschinenlesbarkeits-Modell. SCR-0008, Owner-Entwurf
+  Michael Wroblewski (Builder-Chat 21:42), harmonisiert mit ATC-STD-000 v1.2.0.
+  Status DRAFT — Owner-§9-Freigabe ausstehend.
+- **Schema:** desc-Familie allockiert (descStandardId, descRequirementId,
+  descStandardDoc) gemäß §37 ID-Allokation (AD-034).
+
 ## [1.4.3] - 2026-09-07
 
 ### Fixed

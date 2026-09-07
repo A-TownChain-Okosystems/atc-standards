@@ -330,3 +330,6 @@ versions:
   ATC-STD-SC-020:
     - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Freigabe (Builder-Chat 21:00 UTC+2, Sammelfreigabe Framework): CANDIDATE -> APPROVED; normativ in Kraft, Immutabilitaet per §30; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-SC-FRAMEWORK.md; Uebergangsfrist: SC-Gate-Rollout auf Contract-Repos, Registry-Befuellung SC-G0"}
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Owner-Entwurf Michael: Smart Contract Standards Framework — Agenten-Workflow mit Human/Governance-Approval-Gates). Status: CANDIDATE — Owner-§9-Freigabe ausstehend (Todo #118)"}
+
+  ATC-STD-DESC-001:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initial Release: Owner-Entwurf Michael Wroblewski (Builder-Chat 07.09. 21:42), harmonisiert mit ATC-STD-000 v1.2.0; 14 REQ-DESC, 5 COM-DESC-Gates, 7-Status-Lifecycle-Mapping, Quality Gate; SCR-0008; Status DRAFT — §9-Freigabe ausstehend"}

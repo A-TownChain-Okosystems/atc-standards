@@ -23,3 +23,4 @@ sc:      {name: sc,          range: "ATC-STD-SC-001-999",       description: "AT
 net:    {name: net,          range: "ATC-STD-NET-001-899",  description: "Netzwerk-Umgebungen Devnet/Testnet/Mainnet & Promotion (Owner-Mandat AD-041)"}
 # Zusatz-Serie (Owner-Mandat 07.09., AD-040): ATC-STD-BUG-001…004
 # Bug- & Konsistenz-Lebenszyklus — Dateien: standards/bug/ · Kategorie: bug
+desc:   {name: desc,        range: "ATC-STD-DESC-001-999",  description: "Standard-Description-Familie: Struktur, Metadaten, Lifecycle und Auditierung von Standards (Owner-Entwurf 07.09., SCR-0008)"}

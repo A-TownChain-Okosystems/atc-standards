@@ -110,3 +110,4 @@ standards:
   # ATC-STD-SC-003 -> ATC-STD-203 (Security)
   # ATC-STD-SC-019 -> ATC-STD-202 (Naming)
   # ATC-STD-SC-020 -> AAS-007, AAS-017, AI-DEV-009 (Agenten)
+  ATC-STD-DESC-001: {depends: [ATC-STD-000]}
