@@ -1,6 +1,6 @@
 # STATUS — atc-standards
 
-Stand: 07.09.2026, 21:30 (Europe/Berlin) · Self-Compliance: R3 100/100 GATE PASS
+Stand: 07.09.2026, 21:45 (Europe/Berlin) · Self-Compliance: R3 100/100 GATE PASS · Voll-Audit 103/103 Standards: ALLE CHECKS PASS
 
 ## Standards-System
 
@@ -24,7 +24,7 @@ Stand: 07.09.2026, 21:30 (Europe/Berlin) · Self-Compliance: R3 100/100 GATE PAS
 - Standards-Validierung: **103/103 COMPLIANT** (103 APPROVED, 0 offen; AUD-FIX 21:30 — validate_all prüft jetzt real 103 statt 81 Dateien, MD-/SC-/README-Präfixe im file_id()-Regex ergänzt)
 - Mutationssuite S-19: **12/12** (synthetische Fixtures)
 - Repository-Audit R3: **100/100, GATE PASS** · README-Gate: **13/13 CONFORM** · MD-Gate: **CONFORM** · Contract-Registry-Gate: **CONFORM**
-- Abhängigkeitsgraph: 81 Knoten, azyklisch (DAG)
+- Abhängigkeitsgraph: 103 Knoten, 224 Kanten, azyklisch (DAG) — Voll-Audit 21:45: alle Knoten registriert, keine Selbst-Referenzen
 
 ## Offene Punkte
 
