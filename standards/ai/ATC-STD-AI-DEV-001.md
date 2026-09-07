@@ -192,12 +192,12 @@ AGENT_PROTOCOL.md wird nach APPROVED auf diesen Standard verweisend umgestellt.
 | ATC-STD-AI-DEV-001 | AI Agent Identity & Workflow (dieser Standard, Dach) | candidate |
 | ATC-STD-AI-DEV-002 | Agent Capabilities & Permissions | planned |
 | ATC-STD-AI-DEV-003 | Repository Discovery | planned |
-| ATC-STD-AI-DEV-004 | AI Task Management | planned |
+| ATC-STD-AI-DEV-004 | AI Task Management | candidate |
 | ATC-STD-AI-DEV-005 | Finding & Evidence | planned |
 | ATC-STD-AI-DEV-006 | AI Decision & Action | planned |
-| ATC-STD-AI-DEV-007 | AI Git Commit / PR | planned |
+| ATC-STD-AI-DEV-007 | AI Git Commit / PR | candidate |
 | ATC-STD-AI-DEV-008 | AI Testing & Validation | planned |
-| ATC-STD-AI-DEV-009 | AI Audit Trail | planned |
+| ATC-STD-AI-DEV-009 | AI Audit Trail | candidate |
 | ATC-STD-AI-DEV-010 | AI Documentation Synchronization | planned |
 | ATC-STD-AI-DEV-011 | Human Approval & Escalation | planned |
 | ATC-STD-AI-DEV-012 | Multi-Agent Coordination | planned |

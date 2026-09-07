@@ -1,3 +1,20 @@
+## 2026-09-07 — ATC-STD-AI-DEV-004/007/009 (erste Folge-Standards der AI-DEV-Familie)
+- **AI-DEV-004 AI Task Management** (candidate): Task-Record
+  `.github/ai/tasks/ATC-TASK-NNNN.yaml`, Lifecycle CREATED→COMPLETED mit
+  lückenloser history, ID-Allokation (nie wiederverwendet), Traceability
+  Issue/Branch/Commits/PR/CI/Tests/AUD, Handover-Regeln, COMPLETED nur mit
+  Audit-Record.
+- **AI-DEV-007 AI Git Commit & PR** (candidate): Commit-Format mit normativem
+  Trailer-Block, Branch-Namen ai/ATC-TASK-NNNN, PR-Pflichtstruktur (8
+  Abschnitte), Label-Set, Merge-Gate mit CI-Run-Referenz und
+  Human-Review-Bindung, [agent:]-Tag-Übergangsregel 30 Tage.
+- **AI-DEV-009 AI Audit Trail** (candidate): Audit-Record AUD-NNN in
+  `.github/ai/audit/` (Append-Only, Korrektur nur per corrects:-Folgercord),
+  Konsistenzmatrix (Abweichung → BLOCKED), unbegrenzte Aufbewahrung.
+- Neue Templates: templates/ai/task.template.yaml,
+  templates/ai/audit-record.template.yaml.
+- AI-DEV-001 Familientabelle: 004/007/009 planned → candidate.
+
 ## 2026-09-07 — ATC-STD-AI-DEV-001 (AI Agent Identity & Workflow, Owner-Entwurf)
 - Neuer Standard (candidate): KI-Agenten sind keine unsichtbaren Bots —
   jede Aktion folgt Identität → Kontext → Fundstelle → Entscheidung →
