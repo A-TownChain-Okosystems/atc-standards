@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.4.16] - 2026-09-07
+
+### Added
+
+- **AUD-2026-0002: ATC Enterprise GitHub Organization Audit** (Owner-Auftrag,
+  18 Prüfbereiche, 26 Repos + Org): CONDITIONAL_PASS. Klassifizierung 4 ACTIVE /
+  12 DEVELOPMENT / 10 EXPERIMENTAL. Findings F-024..F-031 in registry/findings.yaml:
+  F-024 Org-Settings (SKIP per Owner 23:13), F-025 Dependabot/CodeQL (Dependabot in
+  16 Repos in diesem Lauf eingerichtet, CodeQL offen), F-026 Version-Baseline,
+  F-027 verwaister Tag v2.0.0 (a-townchain-os), F-028 ATC-STD-202 zählt 22 statt 26,
+  F-029 governance-ci fehlt in atc-vm/atc-algorithm/atc-zkp (GH013 workflow-Scope,
+  kongruent F-010), F-030 atc-whitepaper-Referenz existiert nicht, F-031
+  POSITIV-Befund Governance-Hygiene 26/26 + 0 Secrets. Cleanup-Roadmap als Issues
+  #AUD-1..5 in a-townchain-os. Report: docs/AUD-2026-0002_ORG_AUDIT.md.
+
+
 ## [1.4.15] - 2026-09-07
 
 ### Changed
