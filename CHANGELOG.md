@@ -1,3 +1,22 @@
+## 2026-09-07 — ATC-STD-README-001 v1.0.0 CANDIDATE (Owner-Entwurf): README als Einstiegsschnittstelle
+- **Neue Standard-Familie:** ATC-STD-README-001 (CANDIDATE, §9-Freigabe
+  ausstehend, Todo #116) — README = standardisierte Einstiegsschnittstelle
+  jedes Repos: Pflichtstruktur (21 Sektionen), Status-Enum (9 Werte),
+  Header-Identifikation, Architektur-Pflicht, maschinenlesbarer
+  Metadaten-Block, Dokumentationshierarchie (README=Einstiegspunkt),
+  kanonische Roadmap-Verlinkung, REQ-README-001..015.
+- **Quality Gates README-01..13** mit neuem Validator
+  tools/atc-readme-validator/check_readme.py (Gate-13 = automatisierter
+  Struktur-Abgleich README vs. Repository-Zustand).
+- **Selbstkompliance:** atc-standards-README komplett neu als konforme
+  Referenzimplementierung (13/13 CONFORM) — alte README fiel durch alle
+  Gates.
+- **Registry:** 82 Standards (81 APPROVED + 1 CANDIDATE); Kategorie readme;
+  Schema um readmeStandardId/readmeStandardDoc/readmeRequirementId
+  erweitert; dependencies: 000/201/202/ENT-009.
+- **Vollmandat dynamisiert:** AGENT_MANIFEST/agent.yaml auf "ALLE
+  Registry-Standards" (aktuell 82) umgestellt.
+
 ## 2026-09-07 — Agent-Manifest: Voll-Compliance-Mandat (alle 81 Standards)
 - **AGENT_MANIFEST.md:** Neues verbindliches Mandat — der Agent MUSS saemtliche
   Standards einhalten UND umsetzen; dynamische Bindung an die Registry (SSOT);

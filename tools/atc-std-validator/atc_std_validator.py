@@ -20,7 +20,7 @@ STATES = ["idea", "proposed", "draft", "review", "candidate", "approved",
           "stable", "deprecated", "retired"]
 CATS = ["governance", "architecture", "repository", "development", "security",
         "protocol", "blockchain", "ai", "os", "infrastructure", "applications",
-        "bug", "net", "zkp", "ai-dev", "aas", "enterprise"]
+        "bug", "net", "zkp", "ai-dev", "aas", "enterprise", "readme"]
 REQ_RE = re.compile(r"REQ-[A-Z]+(?:-[A-Z]+)?-[0-9]{3}")
 
 
@@ -99,7 +99,7 @@ def validate(path, registry_path):
 
     # S-02 ID-Format (7.10/7.11: Muster aus naming-conventions.schema.json)
     sid = meta.get("id", "")
-    _ok02 = re.match(r"^ATC-STD-(?:BUG-|NET-|ZKP-|AI-DEV-)?[0-9]{3,}$", sid) or re.match(r"^ATC-(?:AAS|ENT)-[0-9]{3,}$", sid)
+    _ok02 = re.match(r"^ATC-STD-(?:BUG-|NET-|ZKP-|AI-DEV-|README-)?[0-9]{3,}$", sid) or re.match(r"^ATC-(?:AAS|ENT)-[0-9]{3,}$", sid)
     v.add("S-02", "PASS" if _ok02 else "FAIL",
           "ID-Format: %s" % (sid if _ok02 else (sid or "FEHLT") + " (Schema: alle *StandardId-Muster)"))
 

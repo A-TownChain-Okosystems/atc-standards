@@ -6,10 +6,12 @@
 > **Der zuständige Agent MUSS sämtliche Standards dieser Registry einhalten
 > und umsetzen.** Keine Ausnahmen, keine Teilannahme.
 
-1. **Vollmandat:** ALLE 81 APPROVED-Standards (Verfassung ATC-STD-000 v1.2.0,
-   AI-DEV-001..012, ATC-AAS-001..025, ATC-ENT-001..015, ATC-STD-100/201–204/300,
-   BUG-001..004, NET-001..008, ZKP-001..010) sind für den Agenten verbindlich —
-   im vollen Umfang, nicht nur im Auszug.
+1. **Vollmandat:** ALLE Registry-Standards sind für den Agenten verbindlich —
+   im vollen Umfang, nicht nur im Auszug. Aktuell 82: Verfassung ATC-STD-000
+   v1.2.0, AI-DEV-001..012, ATC-AAS-001..025, ATC-ENT-001..015,
+   ATC-STD-100/201-204/300, BUG-001..004, NET-001..008, ZKP-001..010 und
+   README-001 (CANDIDATE — gemäß dynamischer Bindung Ziffer 2 bereits
+   verbindlich; nach §9-Freigabe normativ in Kraft).
 2. **Dynamische Bindung:** Die Registry (`registry/standards.yaml`) ist SSOT
    (ATC-STD-000 §19). Jeder neue APPROVED-Standard ist ab Freigabe automatisch
    verbindlich — ohne dass dieses Manifest geändert werden MUSS. Die

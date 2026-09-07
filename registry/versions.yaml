@@ -245,3 +245,5 @@ versions:
   ATC-ENT-015:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Definition of Done: Unternehmens-DoD ueber CODE/TEST/SECURITY/DOKU/GOVERNANCE/RELEASE, gilt fuer Menschen und Agenten, Evidenzpflicht AAS-010) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
     - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:20 UTC+2 (alles freigeben): CANDIDATE -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-AAS-ENT-AUDIT.md"}
+  ATC-STD-README-001:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Owner-Entwurf Michael: README als standardisierte Einstiegsschnittstelle jedes Repos — Pflichtstruktur, Status-Enum, Gates README-01..13, Metadaten-Block; Formalfassung ATC-AI-ARCH-001 mit REQ-README-001..015). Status: CANDIDATE — Owner-§9-Freigabe ausstehend (Todo #116)"}

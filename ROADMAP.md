@@ -11,6 +11,9 @@
 
 ## Bis 07.10.2026 (30-Tage-Fristen)
 
+0. **ATC-STD-README-001 (CANDIDATE):** §9-Freigabe + Rollout der
+   README-Konformität auf alle 26 Repos (Validator als CI-Gate je Repo)
+
 1. **SCR-0007 (F-017):** REQ-ID-Rollout AI-DEV/AAS/ENT + §9-Reststruktur — Owner-Entscheidung ausstehend
 2. **Interface-Test-Suiten IFC-0001..0010** (P0): seed → active (ATC-STD-204 §9)
 3. **Repo-Manifeste** .github/ai/agent.yaml in allen R2+-Repos (#111) — atc-standards als Vorreiter erledigt

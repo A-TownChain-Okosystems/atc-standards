@@ -223,6 +223,16 @@
           "type": "string",
           "pattern": "^REQ-ZKP-[0-9]{3,}$",
           "example": "REQ-ZKP-101"
+        },
+        "readmeStandardId": {
+          "type": "string",
+          "pattern": "^ATC-STD-README-[0-9]{3,}$",
+          "example": "ATC-STD-README-001"
+        },
+        "readmeRequirementId": {
+          "type": "string",
+          "pattern": "^REQ-README-[0-9]{3,}$",
+          "example": "REQ-README-001"
         }
       }
     },
@@ -331,6 +341,11 @@
           "type": "string",
           "pattern": "^ATC-ENT-[0-9]{3,}[.]md$",
           "example": "ATC-ENT-001.md"
+        },
+        "readmeStandardDoc": {
+          "type": "string",
+          "pattern": "^ATC-STD-README-[0-9]{3,}[.]md$",
+          "example": "ATC-STD-README-001.md"
         }
       }
     },
