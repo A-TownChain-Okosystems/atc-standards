@@ -64,11 +64,11 @@ Die Organisation ist nach der Restrukturierung vom 06.–07.09.2026 (26 Repos, L
 Vollständige Einträge in `registry/findings.yaml` (Registry-Gate). Kurzfassung:
 
 - **F-024 (S2, SKIP):** Org-Default-Repo-Permission `admin`, 2FA-Enforcement aus — per Owner-Entscheidung 07.09. 23:13 übersprungen (Builder-Chat); dokumentiert, kein Agent-Mandat.
-- **F-025 (S2, PARTIAL/FIXED):** Dependabot 0/26, CodeQL 0/26 → Dependabot in 16 Manifest-Repos in diesem Audit-Lauf eingerichtet (Commits je Repo, 07.09.); CodeQL-Rollout offen → Issue #AUD-2.
-- **F-026 (S3, OPEN):** Manifest-Versionen inkonsistent → VERSION-001-Baseline nötig → Issue #AUD-3.
-- **F-027 (S3, OPEN):** a-townchain-os verwaister Tag v2.0.0 neben Release v1.0.0 → Issue #AUD-4.
-- **F-028 (S3, OPEN):** ATC-STD-202 v1.1.0 klassifiziert 22 statt 26 Repos → SCR/Minor-Update → Issue #AUD-5.
-- **F-029 (S3, PARTIAL):** governance-ci.yml fehlt in atc-vm/atc-algorithm/atc-zkp — Agent-Push an Workflow-Dateien ohne workflow-Scope abgelehnt (s. F-010/GH013, bestätigt in diesem Lauf) → Owner-Aktion → Issue #AUD-1.
+- **F-025 (S2, PARTIAL/FIXED):** Dependabot 0/26, CodeQL 0/26 → Dependabot in 16 Manifest-Repos in diesem Audit-Lauf eingerichtet (Commits je Repo, 07.09.); CodeQL-Rollout offen → Issue #95.
+- **F-026 (S3, OPEN):** Manifest-Versionen inkonsistent → VERSION-001-Baseline nötig → Issue #96.
+- **F-027 (S3, OPEN):** a-townchain-os verwaister Tag v2.0.0 neben Release v1.0.0 → Issue #97.
+- **F-028 (S3, OPEN):** ATC-STD-202 v1.1.0 klassifiziert 22 statt 26 Repos → SCR/Minor-Update → Issue #98.
+- **F-029 (S3, PARTIAL):** governance-ci.yml fehlt in atc-vm/atc-algorithm/atc-zkp — Agent-Push an Workflow-Dateien ohne workflow-Scope abgelehnt (s. F-010/GH013, bestätigt in diesem Lauf) → Owner-Aktion → Issue #94.
 - **F-030 (S4, RESOLVED-DOKUMENTATION):** Externe Referenz „atc-whitepaper" (ChatGPT-Prüfung 07.09.) existiert nicht in Org noch GitHub-Suche — veraltet/halluziniert; kein Handlungsbedarf.
 - **F-031 (S4, POSITIV):** Governance-Hygiene 26/26 (README, CHANGELOG, LICENSE, SECURITY, CODEOWNERS, AGENT_MANIFEST, .atc/repository.yaml); Secret-Scan 0 Funde; keine Duplikate; Chain-ID + Copyright konsistent.
 
@@ -80,11 +80,11 @@ Vollständige Einträge in `registry/findings.yaml` (Registry-Gate). Kurzfassung
 3. ✅ Klassifizierung aller 26 Repos (Abschnitt 3)
 
 **Offene Roadmap (Issues in a-townchain-os):**
-1. P1 — governance-ci.yml für atc-vm/atc-algorithm/atc-zkp (Owner-Aktion, workflow-Scope; Issue #AUD-1)
-2. P2 — CodeQL Code-Scanning für Code-Repos (atc-shivacore, atclang, aurora-ai, a-townchain, atc-contracts, atc-zkp, globus-os, genesis-chronicles) (Issue #AUD-2)
-3. P2 — Version-Baseline nach ATC-STD-VERSION-001: einheitliche Startversion + Release/Tag-Disziplin für M-Repos (Issue #AUD-3)
-4. P3 — a-townchain-os Tag v2.0.0 entfernen oder Release nachziehen (Issue #AUD-4)
-5. P3 — ATC-STD-202 v1.2.0: Klassifizierungstabelle auf 26 Repos (SCR-0017) (Issue #AUD-5)
+1. P1 — governance-ci.yml für atc-vm/atc-algorithm/atc-zkp (Owner-Aktion, workflow-Scope; Issue #94)
+2. P2 — CodeQL Code-Scanning für Code-Repos (atc-shivacore, atclang, aurora-ai, a-townchain, atc-contracts, atc-zkp, globus-os, genesis-chronicles) (Issue #95)
+3. P2 — Version-Baseline nach ATC-STD-VERSION-001: einheitliche Startversion + Release/Tag-Disziplin für M-Repos (Issue #96)
+4. P3 — a-townchain-os Tag v2.0.0 entfernen oder Release nachziehen (Issue #97)
+5. P3 — ATC-STD-202 v1.2.0: Klassifizierungstabelle auf 26 Repos (SCR-0017) (Issue #98)
 6. ÜBERSPRUNGEN (Owner 07.09. 23:13): Org-Settings Default-Permission/2FA/Beschreibung (F-024) — bei Bedarf durch Owner direkt in GitHub-Org-Settings
 
 ## 6. Sign-off

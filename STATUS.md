@@ -54,7 +54,7 @@ AUD-2026-0002 (Organization Audit, 23:00–23:20): ATC Enterprise GitHub Organiz
 (4 ACTIVE, 12 DEVELOPMENT, 10 EXPERIMENTAL, 0 ARCHIVED/DUPLICATE/UNKNOWN). FIXED in diesem Lauf:
 Dependabot in 16 Manifest-Repos (F-025). Org-Settings per Owner-Entscheidung 23:13 übersprungen (F-024).
 Offen: F-026 (Version-Baseline), F-027 (Tag v2.0.0), F-028 (ATC-STD-202 22→26), F-029 (governance-ci 3 Repos,
-Owner-Aktion workflow-Scope). Report: docs/AUD-2026-0002_ORG_AUDIT.md · Issues #AUD-1..5 in a-townchain-os.
+Owner-Aktion workflow-Scope). Report: docs/AUD-2026-0002_ORG_AUDIT.md · Issues #94..5 in a-townchain-os.
 
 Stand: 07.09.2026, 23:02 (Europe/Berlin) · Self-Compliance: R3 100/100 GATE PASS · Voll-Audit 103/103 Standards: ALLE CHECKS PASS
 
