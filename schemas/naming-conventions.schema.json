@@ -317,29 +317,23 @@
           "example": "COM-VERSION-001",
           "note": "Compliance-Gates der VERSION-Familie (ATC-STD-VERSION-001 Abschnitt 25; SCR-0010)"
         },
-        "errStandardId": {
-          "type": "string",
-          "pattern": "^ATC-STD-ERR-[0-9]{3,}$",
-          "example": "ATC-STD-ERR-001",
-          "note": "Error-Analysis-Familie: Fehleranalyse, Root-Cause-Analysis, QMS (Owner-Entwurf 07.09., SCR-0011)"
-        },
-        "errRequirementId": {
-          "type": "string",
-          "pattern": "^REQ-ERR-[0-9]{3,}$",
-          "example": "REQ-ERR-001",
-          "note": "Requirements der ERR-Familie (SCR-0011)"
-        },
-        "errErrorClassId": {
+        "errorClassId": {
           "type": "string",
           "pattern": "^ERR-CL-[A-Z0-9]{2,6}$",
           "example": "ERR-CL-CONS",
-          "note": "Fehlerklassen des Error-Analysis-Standards (18 Klassen CODE..GOV; SCR-0011)"
+          "note": "Fehlerklassen der Bug-Familie (18 Klassen ERR-CL-CODE..GOV, ATC-STD-BUG-005 Abschnitt 4; SCR-0012)"
         },
-        "errRootCauseCategoryId": {
+        "rootCauseCategoryId": {
           "type": "string",
           "pattern": "^RC-[A-Z]+$",
           "example": "RC-ARCH",
-          "note": "Root-Cause-Kategorien für Analytics (RC-CODE..RC-GOVERNANCE; SCR-0011)"
+          "note": "Root-Cause-Kategorien für Analytics (RC-CODE..RC-GOVERNANCE, ATC-STD-BUG-005; SCR-0012)"
+        },
+        "bugComplianceId": {
+          "type": "string",
+          "pattern": "^COM-BUG-[0-9]{3,}$",
+          "example": "COM-BUG-501",
+          "note": "Compliance-Gates der Bug-Familie (ATC-STD-BUG-005 Abschnitt 17; SCR-0012)"
         }
       }
     },
@@ -473,11 +467,6 @@
           "type": "string",
           "pattern": "^ATC-STD-VERSION-[0-9]{3,}[.]md$",
           "example": "ATC-STD-VERSION-001.md"
-        },
-        "errStandardDoc": {
-          "type": "string",
-          "pattern": "^ATC-STD-ERR-[0-9]{3,}[.]md$",
-          "example": "ATC-STD-ERR-001.md"
         }
       }
     },

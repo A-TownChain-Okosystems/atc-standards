@@ -339,5 +339,6 @@ versions:
     - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-§9-Freigabe (Sammelfreigabe Builder-Chat 21:57 UTC+2): DRAFT -> APPROVED, normative: true; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-DESC-VERSION-v1.0.0.md; Immutabilität per §30"}
     - {version: "1.0.0", date: "2026-09-07", change: "Initial Release: Owner-Entwurf Michael Wroblewski (Builder-Chat 07.09. 21:50), harmonisiert mit ATC-STD-000 v1.2.0 und ATC-STD-DESC-001; 22 REQ-VERSION, 5 COM-VERSION-Gates, Release-ID-Dualformat, buildId; SCR-0009"}
 
-  ATC-STD-ERR-001:
-    - {version: "1.0.0", date: "2026-09-07", change: "Initial Release: Owner-Entwurf Michael Wroblewski (Builder-Chat 07.09. 22:06), harmonisiert mit BUG-001..004, DESC-001, VERSION-001; 24 REQ-ERR, 6 COM-ERR-Gates, 18 Fehlerklassen, 13 RC-Kategorien; SCR-0011"}
+  ATC-STD-BUG-005:
+    - {version: "1.0.0", date: "2026-09-07", change: "Integration in die Bug-Familie: Owner-Entscheid ERR in Bug einarbeiten (Builder-Chat 22:35) — aus ATC-STD-ERR-001 v1.0.0 DRAFT (SCR-0011) wird ATC-STD-BUG-005 (SCR-0012); REQ-STD-141..164, COM-BUG-501..506; ERR-Familie aufgelöst (Schema: errorClassId, rootCauseCategoryId, bugComplianceId)"}
+    - {version: "1.0.0", date: "2026-09-07", change: "Initial Release als ATC-STD-ERR-001: Owner-Entwurf Michael Wroblewski (Builder-Chat 07.09. 22:06), harmonisiert mit BUG-001..004, DESC-001, VERSION-001; 18 Fehlerklassen, 13 RC-Kategorien; SCR-0011"}

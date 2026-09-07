@@ -1,10 +1,10 @@
 ---
 standard:
-  id: ATC-STD-ERR-001
-  title: "ATC-STD-ERR-001 — ATC Fehleranalyse- und Root-Cause-Analysis-Standard"
+  id: ATC-STD-BUG-005
+  title: "ATC-STD-BUG-005 — Fehleranalyse- und Root-Cause-Analysis-Standard"
   version: "1.0.0"
   status: draft
-  category: err
+  category: bug
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"
   created: "2026-09-07"
@@ -26,39 +26,41 @@ standard:
     - ATC-STD-BUG-002
     - ATC-STD-BUG-004
   requirements:
-    - REQ-ERR-001
-    - REQ-ERR-002
-    - REQ-ERR-003
-    - REQ-ERR-004
-    - REQ-ERR-005
-    - REQ-ERR-006
-    - REQ-ERR-007
-    - REQ-ERR-008
-    - REQ-ERR-009
-    - REQ-ERR-010
-    - REQ-ERR-011
-    - REQ-ERR-012
-    - REQ-ERR-013
-    - REQ-ERR-014
-    - REQ-ERR-015
-    - REQ-ERR-016
-    - REQ-ERR-017
-    - REQ-ERR-018
-    - REQ-ERR-019
-    - REQ-ERR-020
-    - REQ-ERR-021
-    - REQ-ERR-022
-    - REQ-ERR-023
-    - REQ-ERR-024
+    - REQ-STD-141
+    - REQ-STD-142
+    - REQ-STD-143
+    - REQ-STD-144
+    - REQ-STD-145
+    - REQ-STD-146
+    - REQ-STD-147
+    - REQ-STD-148
+    - REQ-STD-149
+    - REQ-STD-150
+    - REQ-STD-151
+    - REQ-STD-152
+    - REQ-STD-153
+    - REQ-STD-154
+    - REQ-STD-155
+    - REQ-STD-156
+    - REQ-STD-157
+    - REQ-STD-158
+    - REQ-STD-159
+    - REQ-STD-160
+    - REQ-STD-161
+    - REQ-STD-162
+    - REQ-STD-163
+    - REQ-STD-164
 ---
 
-# ATC-STD-ERR-001 — ATC Fehleranalyse- und Root-Cause-Analysis-Standard (v1.0.0, DRAFT)
+# ATC-STD-BUG-005 — Fehleranalyse- und Root-Cause-Analysis-Standard (v1.0.0, DRAFT)
 
 > **Status:** DRAFT (v1.0.0) — Owner-Entwurf Michael Wroblewski (Builder-Chat 07.09.2026, 22:06 UTC+2);
-> Agenten-Review abgeschlossen (SCR-0011); Owner-§9-Freigabe ausstehend. Bei Freigabe: APPROVED/ACTIVE.
-> **Familie:** Error-Analysis Standards (ATC-STD-ERR-001..999) — Kategorie `err`, SCR-0011.
+> Ursprünglich als ATC-STD-ERR-001 entworfen (SCR-0011), per Owner-Entscheid „ERR in Bug einarbeiten"
+> als ATC-STD-BUG-005 in die Bug-Familie integriert (SCR-0012, Builder-Chat 07.09.2026, 22:35 UTC+2).
+> **Familie:** Bug & Konsistenz-Lebenszyklus (ATC-STD-BUG-001..499) — Kategorie `bug`, SCR-0011/0012.
+> Owner-§9-Freigabe ausstehend. Bei Freigabe: APPROVED/ACTIVE.
 
-> Einheitlicher Prozess für Fehleranalyse und Root-Cause-Analysis im gesamten Ökosystem: Fehler erkennen, reproduzieren, klassifizieren, Auswirkungen bestimmen, Ursache ermitteln, Ursache von Symptomen trennen, beheben, verifizieren, Regression ausschließen, Dokumentation synchronisieren, Lessons Learned erfassen, Wiederholung verhindern. Dieser Standard ist die Analyse-Schicht ÜBER dem Bug-Lifecycle (ATC-STD-BUG-001..004): jene regeln Finding, Dokumentation, Fix-Lifecycle und Merge-Gate; dieser Standard regelt die Analyse-Tiefe und das Quality Management.
+> Einheitlicher Prozess für Fehleranalyse und Root-Cause-Analysis im gesamten Ökosystem: Fehler erkennen, reproduzieren, klassifizieren, Auswirkungen bestimmen, Ursache ermitteln, Ursache von Symptomen trennen, beheben, verifizieren, Regression ausschließen, Dokumentation synchronisieren, Lessons Learned erfassen, Wiederholung verhindern. Dieser Standard ist das Analyse- und QMS-Mitglied der Bug-Familie (ATC-STD-BUG-001..004 regeln Finding, Dokumentation, Fix-Lifecycle und Merge-Gate; dieser Standard regelt Analyse-Tiefe und Quality Management) — ein vollständiger Defect & Incident Management Lifecycle in einer Familie.
 
 ## 1. Zweck (Purpose)
 
@@ -113,15 +115,15 @@ Der Standard definiert einen einheitlichen Prozess für:
 
 Normative Begriffe gemäß ATC-STD-DESC-001 (MUSS / DARF NICHT / SOLL / KANN).
 
-### REQ-ERR-001 — Grundprinzip
+### REQ-STD-141 — Grundprinzip
 
-id: REQ-ERR-001
+id: REQ-STD-141
 
 Kein Fehler DARF als vollständig bearbeitet gelten, solange Ursache, Auswirkung, Behebung und Verifikation nicht nachvollziehbar dokumentiert sind. Ein Fehler MUSS den 12-Schritte-Prozess (Abschnitt 1) durchlaufen.
 
-### REQ-ERR-002 — Fehlerklassen
+### REQ-STD-142 — Fehlerklassen
 
-id: REQ-ERR-002
+id: REQ-STD-142
 
 Jeder Fehler MUSS mindestens eine primäre Fehlerklasse (ERR-CL-*) erhalten. Zulässige Klassen:
 
@@ -146,15 +148,15 @@ Jeder Fehler MUSS mindestens eine primäre Fehlerklasse (ERR-CL-*) erhalten. Zul
 | ERR-CL-DEP | Dependency-Fehler | externe Bibliothek |
 | ERR-CL-GOV | Governancefehler | Prozessverletzung |
 
-### REQ-ERR-003 — Severity
+### REQ-STD-143 — Severity
 
-id: REQ-ERR-003
+id: REQ-STD-143
 
 Die Severity MUSS gemäß ATC-STD-BUG-001 REQ-STD-104 (S0 Critical bis S4 Informational) bestimmt werden. Fehlerklasse (WAS) und Severity (WIE SCHWER) SIND getrennt zu bestimmen. S0 (Existenzbedrohung: Verlust von Assets, Konsensbruch, kritische Sicherheitslücke, Private-Key-Kompromittierung, unkontrollierte Token-Erzeugung, Mainnet-Ausfall) erfordert SOFORTIGE Eskalation.
 
-### REQ-ERR-004 — Statusmaschine
+### REQ-STD-144 — Statusmaschine
 
-id: REQ-ERR-004
+id: REQ-STD-144
 
 Der Fehler-Status MUSS konsistent zum Fix-Lifecycle aus ATC-STD-BUG-003 (REQ-STD-121, 12 Stufen) sein. Die Analyse-Phasen verfeinern die Stufe ANALYZED wie folgt:
 
@@ -166,21 +168,21 @@ DETECTED → TRIAGED → REPRODUCING → ANALYZING → ROOT_CAUSE_IDENTIFIED
 
 Alternative Pfade: TRIAGED → DUPLICATE / TRIAGED → INVALID; ANALYZING → CANNOT_REPRODUCE; VERIFYING → REOPENED; REGRESSION_CHECK → REOPENED. Stufen DÜRFEN NICHT übersprungen werden (BUG-003 REQ-STD-122: Ausnahme nur S4 ohne Verhaltensänderung, begründet).
 
-### REQ-ERR-005 — Fehler-IDs
+### REQ-STD-145 — Fehler-IDs
 
-id: REQ-ERR-005
+id: REQ-STD-145
 
 Fehler-IDs MÜSSEN gemäß ATC-STD-BUG-001 REQ-STD-106 als F-NNN (fortlaufend, immutable, kanonisch `registry/findings.yaml`) vergeben werden. Sicherheits-, Smart-Contract- und KI-Fehler erhalten KEINE separaten ID-Serien (konsolidierte Entscheidung SCR-0011) — sie werden über die Fehlerklasse (ERR-CL-SEC, ERR-CL-SC, ERR-CL-AI/ERR-CL-AGENT) abgebildet. Reproduktionstests nutzen TEST-NNN (BUG-001).
 
-### REQ-ERR-006 — Pflichtinformationen
+### REQ-STD-146 — Pflichtinformationen
 
-id: REQ-ERR-006
+id: REQ-STD-146
 
 Jeder Fehlerdatensatz MUSS die Pflichtfelder aus ATC-STD-BUG-001 REQ-STD-103 erfüllen (Repository, Branch/Commit, Datei, Komponente, Beschreibung, Reproduktionsschritte, erwartetes/tatsächliches Verhalten, Severity) und zusätzlich die Analyse-Felder: detected_at, detected_by, environment, impact, affected_components, root_cause, contributing_factors, fix, verification, regression_test, documentation_impact, related_issues, closed_at, closed_by.
 
-### REQ-ERR-007 — Vier-Ebenen-Analyse
+### REQ-STD-147 — Vier-Ebenen-Analyse
 
-id: REQ-ERR-007
+id: REQ-STD-147
 
 Jede Fehleranalyse MUSS vier Ebenen unterscheiden:
 
@@ -193,105 +195,105 @@ Jede Fehleranalyse MUSS vier Ebenen unterscheiden:
 
 Die Fehlerbehebung DARF NICHT beim Symptom enden.
 
-### REQ-ERR-008 — Five Whys
+### REQ-STD-148 — Five Whys
 
-id: REQ-ERR-008
+id: REQ-STD-148
 
 Die Five-Whys-Technik MUSS als Standard-RCA-Methode angewendet werden, bis die Root Cause eine architectonische/systemische Ebene erreicht (Beispiel Abschnitt 5.1).
 
-### REQ-ERR-009 — Fault Tree Analysis
+### REQ-STD-149 — Fault Tree Analysis
 
-id: REQ-ERR-009
+id: REQ-STD-149
 
 Bei S0-Fehlern und ausgewählten S1-Fehlern MUSS eine Fault-Tree-Analyse (System Failure: Component / Configuration / Dependency / Human-Agent Error / Security Event / Data Integrity) durchgeführt werden.
 
-### REQ-ERR-010 — Reproduzierbarkeit
+### REQ-STD-150 — Reproduzierbarkeit
 
-id: REQ-ERR-010
+id: REQ-STD-150
 
 Jeder Fehler MUSS mit einem Reproduzierbarkeitsgrad klassifiziert werden: R0 (nicht reproduzierbar), R1 (selten), R2 (reproduzierbar), R3 (deterministisch). Für S0/S1 ist eine reproduzierbare Testumgebung ANZUSTREBEN.
 
-### REQ-ERR-011 — Evidence Standard
+### REQ-STD-151 — Evidence Standard
 
-id: REQ-ERR-011
+id: REQ-STD-151
 
 Eine Fehleranalyse DARF NICHT ausschließlich auf Behauptungen basieren. Zulässige Evidence: Log, Stack Trace, Screenshot, Video, Test Output, Transaction Hash, Block Height, Commit SHA, Build-ID (ATC-STD-VERSION-001), Docker Image, Configuration, Metrics, Trace, Database Record, AI Agent Log, Audit Log. Für kritische Fehler (S0/S1) MUSS Evidence immutable und referenzierbar sein.
 
-### REQ-ERR-012 — Zeitliche Analyse
+### REQ-STD-152 — Zeitliche Analyse
 
-id: REQ-ERR-012
+id: REQ-STD-152
 
 Bei komplexen Fehlern (S0/S1, R0/R1) MUSS eine Timeline dokumentiert werden (T0 Deployment, T1 Configuration Change, T2 First Warning, T3 First Error, T4 User Impact, T5 Detection, T6 Mitigation, T7 Fix, T8 Verification, T9 Closure), um Trigger, Fehlerentstehung und Fehlererkennung zu unterscheiden.
 
-### REQ-ERR-013 — Impact Analysis
+### REQ-STD-153 — Impact Analysis
 
-id: REQ-ERR-013
+id: REQ-STD-153
 
 Jeder Fehler MUSS eine Auswirkungsanalyse über die betroffenen Ebenen (Repository → Service → Application → Blockchain → Smart Contract → Wallet → User → Ecosystem) und Dimensionen (Verfügbarkeit, Integrität, Vertraulichkeit, Performance, finanzielle Auswirkungen, Sicherheitsauswirkungen, Governance-Auswirkungen) erhalten.
 
-### REQ-ERR-014 — Fix-Standard
+### REQ-STD-154 — Fix-Standard
 
-id: REQ-ERR-014
+id: REQ-STD-154
 
 Ein Fix MUSS der Kette aus ATC-STD-BUG-003 folgen (RCA → Fix → Unit Test → Integration Test → Regression Test → Security Check → Documentation Sync → Audit → CLOSED) und dabei die Root Cause adressieren. NICHT akzeptabel: „Bug → Code geändert → funktioniert lokal → CLOSED".
 
-### REQ-ERR-015 — Regression-Standard
+### REQ-STD-155 — Regression-Standard
 
-id: REQ-ERR-015
+id: REQ-STD-155
 
 Für jeden behobenen Fehler MUSS die Regression-Entscheidung dokumentiert werden (`regression_test: required/type: unit | integration | e2e | security | manual`). Bei wiederkehrenden Fehlern MUSS der Regressionstest als automatisierter CI-Test Bestandteil des dauerhaften Qualitätssystems werden.
 
-### REQ-ERR-016 — Dokumentations-Synchronisation
+### REQ-STD-156 — Dokumentations-Synchronisation
 
-id: REQ-ERR-016
+id: REQ-STD-156
 
 Nach einem Fix MÜSSEN Code, Tests, README, Wiki, Architecture, Specification, API-Dokumentation, CHANGELOG und ROADMAP auf Konsistenz geprüft werden (Merge-Gate: ATC-STD-BUG-004). Wenn sich die Implementierung gegenüber einem Standard verändert, MUSS eine Documentation Impact Analysis mit Standard-/Wiki-Update und Review erfolgen.
 
-### REQ-ERR-017 — KI-Agenten-Fehleranalyse
+### REQ-STD-157 — KI-Agenten-Fehleranalyse
 
-id: REQ-ERR-017
+id: REQ-STD-157
 
 Für von KI-Agenten erkannte, verursachte oder behobene Fehler MÜSSEN agent_id, agent_version, model, task_id, decision, action_taken, tools_used, repositories_accessed, files_changed, validation_performed, human_approval_required, human_approval und agent_confidence gespeichert werden. Damit MUSS später beantwortet werden können: Welcher Agent hat was erkannt, analysiert, geändert und wie wurde die Änderung verifiziert? (Agentenbetrieb: ATC-AAS-001..025)
 
-### REQ-ERR-018 — Root-Cause-Kategorien
+### REQ-STD-158 — Root-Cause-Kategorien
 
-id: REQ-ERR-018
+id: REQ-STD-158
 
 Jede ermittelte Root Cause MUSS für Analytics standardisiert klassifiziert werden: RC-CODE, RC-ARCH, RC-DATA, RC-CONFIG, RC-DEPENDENCY, RC-SECURITY, RC-TEST, RC-DOCUMENTATION, RC-INFRA, RC-HUMAN, RC-AI, RC-PROCESS, RC-GOVERNANCE.
 
-### REQ-ERR-019 — Error Metrics
+### REQ-STD-159 — Error Metrics
 
-id: REQ-ERR-019
+id: REQ-STD-159
 
 Das ATC Quality System SOLL mindestens messen: MTTD (Mean Time To Detect), MTTA (Mean Time To Acknowledge), MTTR (Mean Time To Repair), MTTV (Mean Time To Verify), Reopen Rate, Regression Rate, Critical Error Count (S0/S1), Root Cause Rate, Automation Rate, Detection Coverage.
 
-### REQ-ERR-020 — Closure Gate
+### REQ-STD-160 — Closure Gate
 
-id: REQ-ERR-020
+id: REQ-STD-160
 
 Ein Fehler DARF nur auf CLOSED gesetzt werden, wenn das Closure Gate vollständig erfüllt ist: Fehler identifiziert, Severity bestimmt, Impact analysiert, Ursache bestimmt, Fix implementiert, Test vorhanden, Regression geprüft, Security geprüft (falls relevant), Dokumentation synchronisiert, CHANGELOG geprüft, Review abgeschlossen, Evidence vorhanden. Für S0 ZUSÄTZLICH: Incident Review, Root Cause Analysis, Corrective Action, Preventive Action, Management-/Owner-Approval. (DoD-Grundlage: ATC-STD-BUG-003 REQ-STD-126.)
 
-### REQ-ERR-021 — Corrective vs. Preventive Action
+### REQ-STD-161 — Corrective vs. Preventive Action
 
-id: REQ-ERR-021
+id: REQ-STD-161
 
 ATC MUSS zwischen Corrective Action (behebt den aktuellen Fehler) und Preventive Action (verhindert, dass derselbe Fehlertyp erneut entsteht) unterscheiden. Beispiel: Corrective — Cache-Bug beheben; Preventive — automatischen Chain-State-vs-Cache-Konsistenztest einführen.
 
-### REQ-ERR-022 — S0-Incident-Review
+### REQ-STD-162 — S0-Incident-Review
 
-id: REQ-ERR-022
+id: REQ-STD-162
 
-Bei S0-Fehlern MUSS ein Incident Review mit Owner-Approval erfolgen (REQ-ERR-020-S0-Zusatzgates).
+Bei S0-Fehlern MUSS ein Incident Review mit Owner-Approval erfolgen (REQ-STD-160-S0-Zusatzgates).
 
-### REQ-ERR-023 — Wiederholungsverhinderung
+### REQ-STD-163 — Wiederholungsverhinderung
 
-id: REQ-ERR-023
+id: REQ-STD-163
 
 Bei wiederkehrenden Fehlermustern (gleiche RC-Kategorie ≥ 3×) MUSS eine Preventive Action definiert und umgesetzt sein, bevor der letzte zugehörige Fehler CLOSED wird.
 
-### REQ-ERR-024 — Analytics
+### REQ-STD-164 — Analytics
 
-id: REQ-ERR-024
+id: REQ-STD-164
 
 Root-Cause-Klassifikationen MÜSSEN statistisch auswertbar erfasst werden (Fehlerklasse × Severity × RC-Kategorie × Detection Source), damit wiederkehrende Ursachen systematisch erkennbar werden.
 
@@ -324,19 +326,19 @@ SYSTEM FAILURE
 
 ## 6. Fehlerstatus und Analysepfade
 
-Statusmaschine gemäß REQ-ERR-004: die Analyse-Phasen (DETECTED → TRIAGED → REPRODUCING → ANALYZING → ROOT_CAUSE_IDENTIFIED) verfeinern BUG-003s ANALYZED; FIX_PLANNED → FIXING → FIXED → VERIFYING → REGRESSION_CHECK → DOCUMENTATION_SYNC → CLOSED entsprechen FIX PLANNED → IMPLEMENTED → … → VERIFIED → CLOSED. Alternative Pfade: DUPLICATE, INVALID, CANNOT_REPRODUCE, REOPENED.
+Statusmaschine gemäß REQ-STD-144: die Analyse-Phasen (DETECTED → TRIAGED → REPRODUCING → ANALYZING → ROOT_CAUSE_IDENTIFIED) verfeinern BUG-003s ANALYZED; FIX_PLANNED → FIXING → FIXED → VERIFYING → REGRESSION_CHECK → DOCUMENTATION_SYNC → CLOSED entsprechen FIX PLANNED → IMPLEMENTED → … → VERIFIED → CLOSED. Alternative Pfade: DUPLICATE, INVALID, CANNOT_REPRODUCE, REOPENED.
 
 ## 7. Fehler-IDs und Finding-Registry
 
-Kanonisch: F-NNN gemäß ATC-STD-BUG-001 REQ-STD-106 (`registry/findings.yaml`, immutable). Spezialklassen werden über ERR-CL-SEC / ERR-CL-SC / ERR-CL-AI abgebildet, NICHT über separate ID-Serien (SCR-0011-Harmonisierung). Reproduktionstests: TEST-NNN.
+Kanonisch: F-NNN gemäß ATC-STD-BUG-001 REQ-STD-106 (`registry/findings.yaml`, immutable). Spezialklassen werden über ERR-CL-SEC / ERR-CL-SC / ERR-CL-AI abgebildet, NICHT über separate ID-Serien (SCR-0011/0012-Harmonisierung). Reproduktionstests: TEST-NNN.
 
 ## 8. Pflichtinformationen eines Findings
 
-Gemäß REQ-ERR-006: BUG-001-Pflichtfelder + Analyse-Erweiterung (root_cause, contributing_factors, timeline, evidence, impact, regression_test, documentation_impact, agent-Metadaten bei KI-Beteiligung).
+Gemäß REQ-STD-146: BUG-001-Pflichtfelder + Analyse-Erweiterung (root_cause, contributing_factors, timeline, evidence, impact, regression_test, documentation_impact, agent-Metadaten bei KI-Beteiligung).
 
 ## 9. Evidence und Reproduzierbarkeit
 
-Evidence-Arten gemäß REQ-ERR-011; Reproduzierbarkeitsgrade R0–R3 gemäß REQ-ERR-010. Kritische Fehler: Evidence MUSS immutable/referenceable sein (Commit SHA, Build-ID nach ATC-STD-VERSION-001, Block Height, Transaction Hash).
+Evidence-Arten gemäß REQ-STD-151; Reproduzierbarkeitsgrade R0–R3 gemäß REQ-STD-150. Kritische Fehler: Evidence MUSS immutable/referenceable sein (Commit SHA, Build-ID nach ATC-STD-VERSION-001, Block Height, Transaction Hash).
 
 ## 10. Impact-Analyse
 
@@ -344,7 +346,7 @@ Ebenen: Repository → Service → Application → Blockchain → Smart Contract
 
 ## 11. Fix- und Regression-Standard
 
-Fix-Kette gemäß BUG-003 (REQ-ERR-014). Regression-Entscheidung je Fehler (REQ-ERR-015); wiederkehrende Fehler → automatisierter CI-Test.
+Fix-Kette gemäß BUG-003 (REQ-STD-154). Regression-Entscheidung je Fehler (REQ-STD-155); wiederkehrende Fehler → automatisierter CI-Test.
 
 ## 12. Dokumentations-Synchronisation
 
@@ -357,15 +359,15 @@ Implementierungsabweichung vom Standard → Documentation Impact Analysis → St
 
 ## 13. KI-Agenten-Metadaten
 
-Struktur gemäß REQ-ERR-017; Agentenbetrieb-Referenz: ATC-AAS-001..025 (Agent-Identität, Versionierung: ATC-STD-VERSION-001 §16).
+Struktur gemäß REQ-STD-157; Agentenbetrieb-Referenz: ATC-AAS-001..025 (Agent-Identität, Versionierung: ATC-STD-VERSION-001 §16).
 
 ## 14. Error Metrics
 
-KPI-Set gemäß REQ-ERR-019 (MTTD/MTTA/MTTR/MTTV, Reopen/Regression Rate, Critical Error Count, Root Cause Rate, Automation Rate, Detection Coverage).
+KPI-Set gemäß REQ-STD-159 (MTTD/MTTA/MTTR/MTTV, Reopen/Regression Rate, Critical Error Count, Root Cause Rate, Automation Rate, Detection Coverage).
 
 ## 15. Corrective vs. Preventive Action
 
-Gemäß REQ-ERR-021/023. Der Unterschied zwischen einfacher Bug-Behebung und professionellem Quality Management System besteht genau darin: Corrective behebt den Einzelfall, Preventive schließt die Fehlerklasse systematisch.
+Gemäß REQ-STD-161/023. Der Unterschied zwischen einfacher Bug-Behebung und professionellem Quality Management System besteht genau darin: Corrective behebt den Einzelfall, Preventive schließt die Fehlerklasse systematisch.
 
 ## 16. Einordnung in die Standard-Hierarchie
 
@@ -374,54 +376,52 @@ ATC Enterprise Standards
 ├── Governance Standards
 ├── Software Development Standards (Coding, Repository, Versioning, CHANGELOG, Testing)
 ├── Quality Standards
-│   ├── Error Analysis Standard   ← ATC-STD-ERR-001 (DIESER Standard)
-│   ├── Bug Management            ← ATC-STD-BUG-001..004 (bestehend)
-│   ├── Regression Standard       ← ATC-STD-REG-001 (geplant)
-│   ├── Incident Management      ← ATC-STD-INC-001 (geplant)
-│   └── Audit & Verification      ← ATC-STD-AUD-001 (geplant)
+│   └── Bug & Konsistenz-Lebenszyklus (EINE Familie): Finding BUG-001 · Documentation BUG-002 ·
+│       Fix Lifecycle BUG-003 · Merge Gate BUG-004 · Error Analysis/RCA BUG-005 (DIESER STANDARD)
+│       (geplante Erweiterungen: Regression REG-001 · Incident INC-001 · Audit AUD-001 — je eigene SCR)
 ├── Security Standards
 ├── AI Agent Standards (ATC-AAS-001..025, ATC-ENT-001..015)
 ├── Blockchain Standards (ATC-STD-SC-001..020)
 └── Documentation Standards (ATC-STD-MD-001, ATC-STD-README-001)
 ```
 
-Trennung von Fehleranalyse (ERR) und Bugmanagement (BUG) ist implementiert: ERR-001 = Analyse/RCA/QMS; BUG-001..004 = Finding/Lifecycle/Docs/Merge-Gate.
+Fehleranalyse und Bugmanagement sind gemäß Owner-Entscheid (07.09., SCR-0012) in EINER Familie integriert: BUG-001..004 = Finding/Lifecycle/Docs/Merge-Gate; BUG-005 = Analyse/RCA/QMS.
 
 ## 17. Compliance / Prüfungen
 
-### COM-ERR-001
+### COM-BUG-501
 
-id: COM-ERR-001
+id: COM-BUG-501
 
-Fehlerklasse MUSS aus der 18-Klassen-Enumeration stammen (ERR-CL-*, automatisierbar gegen Schema `errErrorClassId`).
+Fehlerklasse MUSS aus der 18-Klassen-Enumeration stammen (ERR-CL-*, automatisierbar gegen Schema `errorClassId`).
 
-### COM-ERR-002
+### COM-BUG-502
 
-id: COM-ERR-002
+id: COM-BUG-502
 
 Bei S0/S1 MÜSSEN alle vier Analyse-Ebenen dokumentiert sein (Symptom, unmittelbare Ursache, Root Cause, systemische Ursache).
 
-### COM-ERR-003
+### COM-BUG-503
 
-id: COM-ERR-003
+id: COM-BUG-503
 
 Evidence MUSS vorliegen (nicht nur Behauptungen); S0/S1: immutable und referenzierbar.
 
-### COM-ERR-004
+### COM-BUG-504
 
-id: COM-ERR-004
+id: COM-BUG-504
 
 Ab Status ROOT_CAUSE_IDENTIFIED MUSS eine RC-Kategorie (RC-*) gesetzt sein.
 
-### COM-ERR-005
+### COM-BUG-505
 
-id: COM-ERR-005
+id: COM-BUG-505
 
 Closure Gate MUSS vollständig geprüft sein (12 Kriterien; S0: +5 Zusatzgates inkl. Owner-Approval) vor CLOSED.
 
-### COM-ERR-006
+### COM-BUG-506
 
-id: COM-ERR-006
+id: COM-BUG-506
 
 Regressionstest-Entscheidung (required/type) MUSS dokumentiert sein; wiederkehrende Muster: CI-Test vorhanden.
 
@@ -455,6 +455,6 @@ Ausnahmen von diesem Standard MÜSSEN gemäß ATC-STD-DESC-001 Abschnitt 11 (EXC
 
 ### 1.0.0 — 2026-09-07
 - Initial Release (Owner-Entwurf Michael Wroblewski, harmonisiert mit ATC-STD-BUG-001..004, ATC-STD-DESC-001, ATC-STD-VERSION-001)
-- 24 normative Anforderungen (REQ-ERR-001..024), 6 COM-ERR-Gates
-- SCR-0011: Konfliktlösung F-NNN vs. BUG-/SEC-/SCBUG-/AIBUG-NNNNN dokumentiert
+- 24 normative Anforderungen (REQ-STD-141..164), 6 COM-BUG-Gates (COM-BUG-501..506)
+- SCR-0011/0012: Konfliktlösung F-NNN vs. BUG-/SEC-/SCBUG-/AIBUG-NNNNN dokumentiert
 - Analyse-Schicht über BUG-Lifecycle; Status DRAFT — §9-Freigabe ausstehend

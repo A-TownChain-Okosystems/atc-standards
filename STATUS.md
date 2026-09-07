@@ -7,10 +7,12 @@ allokiert (erster Scan-Verdacht war Methodik-Fehlalarm, Duplikate entfernt).
 Alle übrigen Prüfungen: Dateipfade, Orphans, Versions-/Abhängigkeits-Deckung, REQ-Abdeckung,
 SCR-Kontinuität 0001-0010, S-02↔Schema-Synchronität, Titel-Duplikate — keine Fehler.
 
-ATC-STD-ERR-001 v1.0.0 DRAFT (SCR-0011): Fehleranalyse/RCA über BUG-Lifecycle; F-NNN-Konsolidierung,
-18 Fehlerklassen, 24 REQ-ERR, 6 COM-ERR-Gates. §9-Freigabe ausstehend.
+ATC-STD-BUG-005 v1.0.0 DRAFT (SCR-0011/0012): Fehleranalyse/RCA per Owner-Entscheid
+(„ERR in Bug einarbeiten", 22:35) in die Bug-Familie integriert — ERR-001 zurückgezogen,
+REQ-STD-141..164, COM-BUG-501..506. Bug-Familie jetzt vollständig: Finding · Docs ·
+Lifecycle · Merge Gate · Error Analysis/RCA. §9-Freigabe ausstehend.
 
-Stand: 07.09.2026, 22:30 (Europe/Berlin) · Self-Compliance: R3 100/100 GATE PASS · Voll-Audit 103/103 Standards: ALLE CHECKS PASS
+Stand: 07.09.2026, 22:35 (Europe/Berlin) · Self-Compliance: R3 100/100 GATE PASS · Voll-Audit 103/103 Standards: ALLE CHECKS PASS
 
 ## Standards-System
 
@@ -29,7 +31,7 @@ Stand: 07.09.2026, 22:30 (Europe/Berlin) · Self-Compliance: R3 100/100 GATE PAS
 | ATC-STD-SC-001..020 | ATC Smart Contract Standards Framework (Kategorien, Gates SC-G0..G13, Contract Registry) | APPROVED — normativ in Kraft (07.09., 21:00) |
 | ATC-STD-DESC-001 | Standard Description Standard (Beschreibung von Standards) | APPROVED — SCR-0008, §9-Freigabe 21:57 |
 | ATC-STD-VERSION-001 | ATC Versioning Standard (Software, Standards, APIs, Contracts, Protokolle, Releases) | APPROVED — SCR-0009, §9-Freigabe 21:57 |
-| ATC-STD-ERR-001 | Fehleranalyse- & Root-Cause-Analysis-Standard (Analyse-Schicht über BUG-Lifecycle) | DRAFT — SCR-0011, §9-Freigabe ausstehend |
+| ATC-STD-BUG-005 | Fehleranalyse- & Root-Cause-Analysis-Standard (Analyse-/QMS-Schicht der Bug-Familie) | DRAFT — SCR-0011/0012, §9-Freigabe ausstehend |
 | **Summe** | **106 Standards** | **105 APPROVED + 1 DRAFT** |
 
 ## Qualitätssicherung (CI, self-compliant)

@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.4.9] - 2026-09-07
+
+### Changed
+
+- **ERR in Bug integriert (SCR-0012):** ATC-STD-ERR-001 (DRAFT, nie approbiert)
+  zurückgezogen und als **ATC-STD-BUG-005** in die Bug-Familie integriert
+  (Owner-Entscheid „ERR in Bug einarbeiten", Builder-Chat 22:35). REQ-IDs auf den
+  Familienblock REQ-STD-141..164 umgestellt, Gates auf COM-BUG-501..506.
+  Bug-Familie damit vollständig: BUG-001 Finding · BUG-002 Documentation ·
+  BUG-003 Fix Lifecycle · BUG-004 Merge Gate · BUG-005 Error Analysis/RCA/QMS.
+  Schema: err-Familie aufgelöst; errorClassId + rootCauseCategoryId (familienagnostisch)
+  und bugComplianceId allockiert. SCR-0011: SUPERSEDED mit Nachtrag.
+  Inhalt unverändert — reine Neu-Identifizierung. Status DRAFT — §9-Freigabe ausstehend.
+
 ## [1.4.8] - 2026-09-07
 
 ### Added
