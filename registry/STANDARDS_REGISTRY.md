@@ -294,3 +294,18 @@ ATC-01…99 (Registry Tier 1-10) sind die ausdifferenzierte Nachfolger-Registry.
 | ATC-AAS-023 | Agent Role Standard | candidate | 1.0.0 | aas (P2) |
 | ATC-AAS-024 | Agent-to-Agent Protocol Standard | candidate | 1.0.0 | aas (P1) |
 | ATC-AAS-025 | Agent Repository Manifest Standard | candidate | 1.0.0 | aas (P1) |
+| ATC-ENT-001 | Enterprise Governance Standard | candidate | 1.0.0 | enterprise (P0) |
+| ATC-ENT-002 | Rollen & Verantwortlichkeiten Standard | candidate | 1.0.0 | enterprise (P0) |
+| ATC-ENT-003 | Entscheidungsmanagement Standard | candidate | 1.0.0 | enterprise (P0) |
+| ATC-ENT-004 | Delegation & Berechtigungen Standard | candidate | 1.0.0 | enterprise (P0) |
+| ATC-ENT-005 | Unternehmensrichtlinien Standard | candidate | 1.0.0 | enterprise (P1) |
+| ATC-ENT-006 | Interessenkonflikte Standard | candidate | 1.0.0 | enterprise (P2) |
+| ATC-ENT-007 | Eskalationsmanagement Standard | candidate | 1.0.0 | enterprise (P1) |
+| ATC-ENT-008 | Organisationsstruktur Standard | candidate | 1.0.0 | enterprise (P1) |
+| ATC-ENT-009 | Repository Governance Standard | candidate | 1.0.0 | enterprise (P1) |
+| ATC-ENT-010 | Enterprise Change Management Standard | candidate | 1.0.0 | enterprise (P0) |
+| ATC-ENT-011 | Risiko-Management Standard | candidate | 1.0.0 | enterprise (P0) |
+| ATC-ENT-012 | Wissensmanagement & Consistency-Gate Standard | candidate | 1.0.0 | enterprise (P1) |
+| ATC-ENT-013 | KPI & Performance Standard | candidate | 1.0.0 | enterprise (P2) |
+| ATC-ENT-014 | Audit & Nachvollziehbarkeit Standard | candidate | 1.0.0 | enterprise (P1) |
+| ATC-ENT-015 | Qualitätsmanagement & Definition of Done Standard | candidate | 1.0.0 | enterprise (P2) |

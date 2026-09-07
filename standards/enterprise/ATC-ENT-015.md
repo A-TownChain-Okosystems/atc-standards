@@ -1,0 +1,45 @@
+---
+standard:
+  id: ATC-ENT-015
+  title: "ATC-ENT-015 — Qualitätsmanagement & Definition of Done Standard"
+  version: "1.0.0"
+  status: candidate
+  category: enterprise
+  authority: A-TownChain Ecosystems
+  owner: ShivaCoreDev
+  created: "2026-09-07"
+  updated: "2026-09-07"
+  normative: true
+  supersedes: []
+  superseded_by: null
+---
+
+# ATC-ENT-015 — Qualitätsmanagement & Definition of Done Standard (v1.0.0, CANDIDATE)
+
+> **Status:** CANDIDATE · **Priorität:** P2 · **Bündelt:** AI-DEV-008 (Tests), AAS-011 (Verifikation), AI-DEV-010 (Doc-Sync) zum Unternehmens-DoD
+
+## 1. Definition of Done (Unternehmens-DoD)
+
+```
+CODE        ✓ implementiert (Review nach AI-DEV-007)
+TEST        ✓ Unit-Tests · ✓ Integration-Tests (L1-L4 je AAS-011)
+SECURITY    ✓ Security Scan · ✓ Dependency Scan (ATC-STD-203)
+DOKU        ✓ Wiki ✓ README ✓ Architektur aktualisiert (ENT-012)
+GOVERNANCE  ✓ Change Request/DEC ✓ Approval (ENT-003/010)
+RELEASE     ✓ Version ✓ Changelog ✓ Audit-Record (ENT-014)
+```
+
+## 2. Regeln
+
+- Nicht erfüllter DoD-Punkt = nicht Done: kein COMPLETED (AI-DEV-004),
+  kein Release (Consistency Gate ENT-012 §2).
+- DoD gilt für menschliche und Agenten-Beiträge gleichermaßen; Agenten
+  liefern für jeden Haken Evidenz (AAS-010), Menschen deklarieren mit
+  Verweis (Commit/PR/Record).
+- Abweichungen (z.B. reine Doku-Änderung ohne Tests) sind im Task-Record
+  als solche deklariert (AI-DEV-008 §1).
+
+## 3. Review
+
+DoD-Konformität wird stichprobenhaft auditiert (ROLE-AUDITOR, ENT-014 §4);
+Missachtung = Finding + KPI-Wirkung (ENT-013 §1 Rework/Regression Rate).

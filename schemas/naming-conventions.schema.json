@@ -178,6 +178,41 @@
           "type": "string",
           "pattern": "^A2A-[0-9]{3,}$",
           "example": "A2A-000001"
+        },
+        "entStandardId": {
+          "type": "string",
+          "pattern": "^ATC-ENT-[0-9]{3,}$",
+          "example": "ATC-ENT-001"
+        },
+        "roleId": {
+          "type": "string",
+          "pattern": "^ROLE-[A-Z][A-Z0-9-]*$",
+          "example": "ROLE-CISO"
+        },
+        "decisionId": {
+          "type": "string",
+          "pattern": "^DEC-[0-9]{4,}$",
+          "example": "DEC-0042"
+        },
+        "riskId": {
+          "type": "string",
+          "pattern": "^RISK-[0-9]{4,}$",
+          "example": "RISK-0001"
+        },
+        "repoId": {
+          "type": "string",
+          "pattern": "^REPO-[0-9]{3,}$",
+          "example": "REPO-001"
+        },
+        "orgUnitId": {
+          "type": "string",
+          "pattern": "^UNIT-[A-Z][A-Z0-9-]*$",
+          "example": "UNIT-BLOCKCHAIN"
+        },
+        "escalationId": {
+          "type": "string",
+          "pattern": "^ESC-[0-9]{4,}$",
+          "example": "ESC-0001"
         }
       }
     },

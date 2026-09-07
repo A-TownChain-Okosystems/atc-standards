@@ -1,3 +1,31 @@
+## 2026-09-07 — NEU: ATC Enterprise Standards Layer (ATC-ENT) — 15 Standards als CANDIDATE
+- **Neuer Layer über den technischen Familien** (Owner-Entwurf Michael
+  Wroblewski, 07.09.2026, 20:11 UTC+2): ATC-ENT-001…015 in
+  standards/enterprise/, alle v1.0.0 CANDIDATE. Position: zwischen
+  Verfassung ATC-STD-000 (Meta-Ebene) und den technischen Familien
+  (AI-DEV, AAS, 201-204, BUG, NET, ZKP, 100/300).
+- **Unternehmens-Governance:** 001 Governance/Dokumente, 002 Rollen
+  (ROLE-XXX, 11 kanonische Rollen, KI-Agenten als Mitarbeiter), 003
+  Entscheidungsmanagement (DEC-NNNN, Kernregel), 004 Delegation,
+  005 Richtlinien (POL-NNNN), 006 Interessenkonflikte, 007 Eskalation
+  (ESC-NNNN, E1-E4), 008 Organisationsstruktur (13 Einheiten,
+  UNIT-NNNN), 009 Repository Governance (REPO-NNNN), 010 Change
+  Management (Pipeline), 011 Risiko-Management (RISK-NNNN),
+  012 Wissensmanagement & Consistency Gate, 013 KPI (DORA/Security/AI/
+  Blockchain), 014 Audit & Nachvollziehbarkeit (audit_event), 015
+  Definition of Done.
+- **Aufbau ohne Duplikate:** Rollen bauen auf Verfassung §14.1 auf;
+  Agenten-Governance bleibt bei AI-DEV/AAS (statt parallelem ATC-AI-001);
+  Audit vereint AI-DEV-009 + AAS-018; SCR bleibt Änderungsspur für
+  Standards (ENT-010 deckt Org/Architektur/Policies ab); AD-Mandate
+  (AD-016..046) als DEC-Records grandfathered.
+- **Schema-Erweiterung:** entStandardId, roleId, decisionId, riskId,
+  repoId, orgUnitId, escalationId.
+- **Templates:** role.template.yaml, decision-record.template.md,
+  risk.template.yaml.
+- Registry: 81 Standards (41 approved + 50 candidate), Graph azyklisch
+  (58 Knoten deklariert), Versionshistorie 81/81.
+
 ## 2026-09-07 — NEU: Standardblock ATC-AAS (AI Agent Standards) — 25 Standards als CANDIDATE
 - **Neuer Standardbereich ATC-AAS** (Owner-Entwurf Michael Wroblewski,
   07.09.2026, Builder-Chat): 25 Agenten-Standards ATC-AAS-001…025 in

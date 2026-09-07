@@ -174,3 +174,33 @@ versions:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (A2A-Nachrichtenstruktur mit 9 Pflichtfeldern, 7 Nachrichtentypen, Antwortpflicht, persistente Ablage) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
   ATC-AAS-025:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Repo-Manifest .github/ai/agent.yaml je R2+-Repo (agents.allowed, required_standards, workflow-Gates); Rollout bis 07.10.2026) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+  ATC-ENT-001:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Enterprise-Governance: Zweck des Layers, Standard-Hierarchie (ATC-STD-000 > ENT > technische Familien), Dokumentenstandard-Metadaten, Geltungsbereich) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+  ATC-ENT-002:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Rollen: ROLE-XXX-Pflichtstruktur, 11 kanonische Rollen, Mapping zu Verfassung §14.1, KI-Agenten als Unternehmensmitglieder ueber AAS-001 (kein paralleles ATC-AI-001)) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+  ATC-ENT-003:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Entscheidungsmanagement: Kernregel Verantwortlicher/Status/Begruendung/Historie, DEC-NNNN-Record, Status-Lifecycle, Verhaeltnis zu §9-Freigaben und AD-Mandaten (grandfathered)) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+  ATC-ENT-004:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Delegation: Rollen-an-Rolle, befristet+ zweckgebunden, nicht delegierbare Approver-/Mainnet-/Verfassungsbefugnisse, Agenten-Deckelung durch AAS-002/003) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+  ATC-ENT-005:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Richtlinien: Hierarchie Verfassung>ENT>Domaene>Repo, POL-NNNN-Registry mit Enforcement, Mindest-Policies (Security/Data/AI/Release)) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+  ATC-ENT-006:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Interessenkonflikte: Konfliktklassen (Rollenkumulation, wirtschaftlich, Agenten-Zielkonflikte), Offenlegungspflicht im DEC-Record, Autor!=Approver) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+  ATC-ENT-007:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Eskalation: Stufen E1-E4, Pflichtgruende, ESC-NNNN-Record mit Reaktionszeiten, Agenten-Eskalation via AI-DEV-011 muendet immer in menschliche Rolle) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+  ATC-ENT-008:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Organisationsstruktur: 13 Organisationseinheiten der Hierarchie, Pflichtattribute (Owner/Deputy/KPIs/Repos/Standards/Audit), Registry org-units.yaml) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+  ATC-ENT-009:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Repository Governance: REPO-NNNN-Registry mit fachlichem/technischem/Security-Owner, classification, canonical-SSOT, Doku-Pflichten als Merge-Gate) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+  ATC-ENT-010:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Change Management: Pipeline CR>Impact>Reviews>Approval>Impl>Test>Audit>Doku>Release, Aenderungsklassen (Standards=SCR, Org/Architektur/Policies=ENT-010+DEC), Notfallregel) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+  ATC-ENT-011:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Risiko-Management: RISK-NNNN-Zentralregistry, 11 Kategorien, S0-S4-Verzahnung, Eskalation E3 bei Critical, Verhaeltnis Findings vs Risiken) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+  ATC-ENT-012:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Wissensmanagement: Kernregel Code/Standards/Wiki/Architektur/Roadmap laufen nicht auseinander, Consistency Gate als Release-Blocker, SSOT-Kette registry>abgeleitete Sichten) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+  ATC-ENT-013:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (KPI & Performance: 4 KPI-Familien (Engineering DORA, Security, AI, Blockchain), automatisierte Erhebung aus Audit-Records, Schwellen-Eskalation) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+  ATC-ENT-014:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Audit: WHO/WHAT/WHEN/WHERE/WHY/VERSION/RESULT-Pflicht, audit_event-Struktur mit actor/action/approval/tests, zweistufig append-only, Stichproben durch ROLE-AUDITOR) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+  ATC-ENT-015:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Definition of Done: Unternehmens-DoD ueber CODE/TEST/SECURITY/DOKU/GOVERNANCE/RELEASE, gilt fuer Menschen und Agenten, Evidenzpflicht AAS-010) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
