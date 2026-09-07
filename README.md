@@ -84,7 +84,7 @@ erfolgen via AD-Eintrag im zentralen DECISIONS_REGISTER (Hub) + Commit hier.
 ## 8. Testing
 
 Standards werden ueber die STANDARDS_REGISTRY validiert (Status-Tracking:
-FINAL/ACCEPTED/DRAFT/PROPOSED). .atc-Referenzen sind via atc-contracts
+FINAL/ACCEPTED/DRAFT/PROPOSED — historische Begriffe, normative Abbildung in registry/lifecycle.yaml legacy_status_map). .atc-Referenzen sind via atc-contracts
 ausfuehrbar pruefbar.
 
 ## 9. Security
@@ -93,7 +93,7 @@ Siehe SECURITY.md. Sicherheitsrelevante Standardregeln: ATC-STD-203.
 
 ## 10. Roadmap
 
-- Governance-Standards (ATC-STD-201/002/003): PROPOSED → STABLE nach
+- Governance-Standards (ATC-STD-201/202/203): PROPOSED → STABLE nach
   erstem vollstaendigen R2+-Compliance-Nachweis zweier Repositories
 - Laufende Ergaenzung neuer Standards entsprechend der Sprint-Planung
 

@@ -2,10 +2,10 @@
 
 ## Q3/2026 (laufend)
 
-1. **ATC-STD-000 in Kraft:** Owner-Approval -> APPROVED -> STABLE (wartet auf
-   Entscheidung; Paket liegt seit 07.09. bereit).
-2. **SCR-Klaerung:** SCR-0001 (ID-Allokation) + SCR-0004 (Rollenmodell)
-   nach STABLE; SCR-0003 Option A/B (Branch-Absicherung) jederzeit.
+1. **ATC-STD-000 STABLE:** APPROVED seit 07.09. (v1.1.0, Release+Tag) —
+   STABLE nach Bewaehrung gemaess §9.
+2. **SCR-Klaerung:** SCR-0001 (ID-Allokation) PENDING; SCR-0003 + SCR-0004
+   CLOSED (Branch-Protection Option B aktiv; Rollenmodell §14.1 in v1.1.0).
 3. **Co-Approval 201/202/203:** Kurze Review-Passagen + Owner-Sammelapproval.
 
 ## Danach (Standards-Ausbau je Bedarf)

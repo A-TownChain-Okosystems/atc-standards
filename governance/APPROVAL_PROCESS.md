@@ -31,12 +31,14 @@ APPROVAL-DECISION.md dem Owner vorgelegt
 
 ## Approval-Zustand im Repo
 
-- ATC-STD-000 v1.0.0: CANDIDATE seit 07.09.2026 — Approval BLOCKED, wartet auf
-  Owner-Entscheidung (approval/APPROVAL-DECISION.md).
+- ATC-STD-000 v1.1.0: APPROVED (07.09.2026, Owner-Freigabe; Review-Chain 3/3
+  PASS, REQ-Matrix 21/21; Release + immutables Tag v1.1.0). Naechster Schritt:
+  STABLE nach Bewaehrung (§9).
+- ATC-STD-300: candidate v1.0.0 — wartet auf Owner-Freigabe (ATC-STD-000 §9).
 - ATC-STD-201/202/203: draft/proposed — Co-Approval-Empfehlung im
   ATC-STD-000-Paket; eigene kurze Review-Passagen vor Approval.
 
-## Rollen (bis SCR-0004 entschieden ist)
+## Rollen (definitiv gemaess §14.1, SCR-0004 CLOSED)
 
 - **Owner (ShivaCoreDev):** Alleinige Approval-Entscheidung + SCR-Decision.
 - **Agent (Aurora):** Autor, Reviewer in der Kette (Technical/Security/
