@@ -3,13 +3,13 @@ standard:
   id: ATC-STD-DESC-001
   title: "ATC-STD-DESC-001 — Standard zur Beschreibung von Standards (Standard Description Standard)"
   version: "1.0.0"
-  status: draft
+  status: approved
   category: desc
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"
   created: "2026-09-07"
   updated: "2026-09-07"
-  normative: false
+  normative: true
   effective_date: ""
   review_date: ""
   classification: PUBLIC
@@ -38,10 +38,11 @@ standard:
     - REQ-DESC-014
 ---
 
-# ATC-STD-DESC-001 — Standard zur Beschreibung von Standards (v1.0.0, DRAFT)
+# ATC-STD-DESC-001 — Standard zur Beschreibung von Standards (v1.0.0, APPROVED)
 
-> **Status:** DRAFT (v1.0.0) — Owner-Entwurf Michael Wroblewski (Builder-Chat 07.09.2026, 21:42 UTC+2);
-> Agenten-Review abgeschlossen (SCR-0008); Owner-§9-Freigabe ausstehend. Bei Freigabe: APPROVED/ACTIVE.
+> **Status:** APPROVED (v1.0.0) — Owner-§9-Freigabe 07.09.2026, 21:57 UTC+2 (Sammelfreigabe
+> Builder-Chat); dokumentiert in approval/APPROVAL-DECISION-2026-09-07-DESC-VERSION-v1.0.0.md.
+> Immutabilität per §30 — Änderungen nur via SCR.
 > **Familie:** Standard Description Standards (ATC-STD-DESC-001..999) — Kategorie `desc`, SCR-0008.
 
 > Dieser Standard definiert die verbindliche Struktur, Metadaten, Lifecycle-Modelle und Prüfmechanismen für die Beschreibung von ATC-Standards. Er operationalisiert die Verfassung ATC-STD-000 (§7 Naming, §8 Metadaten, §9 Struktur, §10 Lifecycle, §13 Versionierung, §20 Änderungsmanagement) zu einer vollständigen Beschreibungsnorm und erweitert sie um Documentation-Layer, Ausnahmeverfahren und Quality Gates.
@@ -418,6 +419,7 @@ Damit KÖNNEN KI-Agenten, CI/CD, Validatoren und Audit-Systeme Standards automat
 
 ### 1.0.0 — 2026-09-07
 - Initial Release (Owner-Entwurf Michael Wroblewski, harmonisiert mit ATC-STD-000 v1.2.0 durch Standards Governance)
+- Owner-§9-Freigabe: APPROVED (21:57 UTC+2, Sammelfreigabe) — normativ ab sofort
 - 14 normative Anforderungen (REQ-DESC-001..014), 5 Compliance-Gates (COM-DESC-001..005)
 - 7-Status-Dokumentationsmodell auf Registry-Lifecycle abgebildet
 - Quality-Gate-Checkliste (17 Kriterien) definiert

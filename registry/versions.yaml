@@ -332,7 +332,9 @@ versions:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Owner-Entwurf Michael: Smart Contract Standards Framework — Agenten-Workflow mit Human/Governance-Approval-Gates). Status: CANDIDATE — Owner-§9-Freigabe ausstehend (Todo #118)"}
 
   ATC-STD-DESC-001:
-    - {version: "1.0.0", date: "2026-09-07", change: "Initial Release: Owner-Entwurf Michael Wroblewski (Builder-Chat 07.09. 21:42), harmonisiert mit ATC-STD-000 v1.2.0; 14 REQ-DESC, 5 COM-DESC-Gates, 7-Status-Lifecycle-Mapping, Quality Gate; SCR-0008; Status DRAFT — §9-Freigabe ausstehend"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-§9-Freigabe (Sammelfreigabe Builder-Chat 21:57 UTC+2): DRAFT -> APPROVED, normative: true; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-DESC-VERSION-v1.0.0.md; Immutabilität per §30"}
+    - {version: "1.0.0", date: "2026-09-07", change: "Initial Release: Owner-Entwurf Michael Wroblewski (Builder-Chat 07.09. 21:42), harmonisiert mit ATC-STD-000 v1.2.0; 14 REQ-DESC, 5 COM-DESC-Gates, 7-Status-Lifecycle-Mapping, Quality Gate; SCR-0008"}
 
   ATC-STD-VERSION-001:
-    - {version: "1.0.0", date: "2026-09-07", change: "Initial Release: Owner-Entwurf Michael Wroblewski (Builder-Chat 07.09. 21:50), harmonisiert mit ATC-STD-000 v1.2.0 und ATC-STD-DESC-001; 22 REQ-VERSION, 5 COM-VERSION-Gates, Release-ID-Dualformat, buildId; SCR-0009; Status DRAFT — §9-Freigabe ausstehend"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-§9-Freigabe (Sammelfreigabe Builder-Chat 21:57 UTC+2): DRAFT -> APPROVED, normative: true; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-DESC-VERSION-v1.0.0.md; Immutabilität per §30"}
+    - {version: "1.0.0", date: "2026-09-07", change: "Initial Release: Owner-Entwurf Michael Wroblewski (Builder-Chat 07.09. 21:50), harmonisiert mit ATC-STD-000 v1.2.0 und ATC-STD-DESC-001; 22 REQ-VERSION, 5 COM-VERSION-Gates, Release-ID-Dualformat, buildId; SCR-0009"}

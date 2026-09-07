@@ -3,13 +3,13 @@ standard:
   id: ATC-STD-VERSION-001
   title: "ATC-STD-VERSION-001 — ATC Versioning Standard"
   version: "1.0.0"
-  status: draft
+  status: approved
   category: version
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"
   created: "2026-09-07"
   updated: "2026-09-07"
-  normative: false
+  normative: true
   effective_date: ""
   review_date: ""
   classification: PUBLIC
@@ -47,10 +47,11 @@ standard:
     - REQ-VERSION-022
 ---
 
-# ATC-STD-VERSION-001 — ATC Versioning Standard (v1.0.0, DRAFT)
+# ATC-STD-VERSION-001 — ATC Versioning Standard (v1.0.0, APPROVED)
 
-> **Status:** DRAFT (v1.0.0) — Owner-Entwurf Michael Wroblewski (Builder-Chat 07.09.2026, 21:50 UTC+2);
-> Agenten-Review abgeschlossen (SCR-0009); Owner-§9-Freigabe ausstehend. Bei Freigabe: APPROVED/ACTIVE.
+> **Status:** APPROVED (v1.0.0) — Owner-§9-Freigabe 07.09.2026, 21:57 UTC+2 (Sammelfreigabe
+> Builder-Chat); dokumentiert in approval/APPROVAL-DECISION-2026-09-07-DESC-VERSION-v1.0.0.md.
+> Immutabilität per §30 — Änderungen nur via SCR.
 > **Familie:** Versioning Standards (ATC-STD-VERSION-001..999) — Kategorie `version`, SCR-0009.
 
 > Dieser Standard definiert eine einheitliche Versionierungsstrategie für das gesamte A-TownChain-Ökosystem: Software, Standards, APIs, Smart Contracts, Protokolle, Dokumentation und Releases werden eindeutig versioniert, nachvollziehbar geändert und auditierbar released.
@@ -574,3 +575,4 @@ Ausnahmen von diesem Standard MÜSSEN gemäß ATC-STD-DESC-001 Abschnitt 11 (EXC
 - 22 normative Anforderungen (REQ-VERSION-001..022)
 - Release-ID-Dualformat (versionsbasiert + datumsbasiert) ins Schema übernommen; buildId-Pattern allockiert
 - Verbotene Praktiken und Golden Rule verbindlich definiert
+- Owner-§9-Freigabe: APPROVED (21:57 UTC+2, Sammelfreigabe) — normativ ab sofort

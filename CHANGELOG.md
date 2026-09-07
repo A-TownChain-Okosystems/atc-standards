@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.4.6] - 2026-09-07
+
+### Changed
+
+- **ATC-STD-DESC-001 + ATC-STD-VERSION-001: APPROVED.** Owner-§9-Sammelfreigabe
+  07.09.2026, 21:57 UTC+2 (Builder-Chat). Beide Standards sind ab sofort normativ
+  (`normative: true`), eingefroren gemäß ATC-STD-000 §30 — Änderungen nur via SCR.
+  Dokumentiert in approval/APPROVAL-DECISION-2026-09-07-DESC-VERSION-v1.0.0.md;
+  SCR-0008 und SCR-0009 geschlossen. Registry: 105 Standards, 105 APPROVED, 0 offen.
+
 ## [1.4.5] - 2026-09-07
 
 ### Added
