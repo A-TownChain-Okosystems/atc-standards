@@ -33,6 +33,7 @@ versions:
   ATC-STD-AI-DEV-007:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung: Commit-Format <TASK-ID>:<type>:<desc> mit normativem Trailer-Block (Agent-ID/Task-ID/Finding-ID/Action-ID/AI-Role/Validation), Branch-Namen ai/ATC-TASK-NNNN, PR-Pflichtstruktur ([AI]-Prefix + 8 Abschnitte), Label-Set, Merge-Gate (CI-Run-Referenz + Task-Status + Human-Review), [agent:]-Tag-Uebergangsregel (30 Tage)"}
     - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Direktfreigabe: CANDIDATE -> APPROVED; Commit-Trailer + PR-Pflichtstruktur normativ; [agent:]-Tag-Uebergang bis 07.10.2026"}
+    - {version: "1.0.1", date: "2026-09-07", change: "SCR-0006 ACCEPTED (Owner, 20:20 UTC+2): Commit-Typ-Set erweitert um security/build/ci; Vereinheitlichung mit ATC-AAS-015"}
   ATC-STD-AI-DEV-009:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung: Audit-Record AUD-NNN in .github/ai/audit/, Pflichtstruktur mit validation.ci_run und Konsistenzmatrix, Anlagezeitpunkte (COMPLETED/BLOCKED/Handover), Append-Only (Korrektur nur per corrects:-Folgercord), Machine-Readability (IDs aus naming-conventions), unbegrenzte Aufbewahrung; Template templates/ai/audit-record.template.yaml"}
     - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Direktfreigabe: CANDIDATE -> APPROVED; Audit-Records (AUD-NNN, Append-Only) ab sofort Pflicht bei Task-Abschluss"}
@@ -126,81 +127,121 @@ versions:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (1-Agent-per-Repo-Exklusivitaet, Artefakt-basierte Kommunikation, Handover-Regeln, Konfliktbehandlung als Governance-Verstoss); sofort APPROVED per Owner-Sammelfreigabe 07.09.2026 (ATC-STD-000 §9)"}
   ATC-AAS-001:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Agenten-Identitaet: Pflichtstruktur agent.yaml, Manifest-Pflicht, erweitert AI-DEV-001 §2) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:20 UTC+2 (alles freigeben): CANDIDATE -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-AAS-ENT-AUDIT.md"}
   ATC-AAS-002:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Faehigkeits-Deklaration: 13 kanonische Kategorien; nicht deklarierte Faehigkeit gilt als nicht vorhanden) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:20 UTC+2 (alles freigeben): CANDIDATE -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-AAS-ENT-AUDIT.md"}
   ATC-AAS-003:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Berechtigungsstufen READ/WRITE/EXECUTE/MERGE/DEPLOY/ADMIN ohne implizite Hierarchie; Eskalation nur befristet) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:20 UTC+2 (alles freigeben): CANDIDATE -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-AAS-ENT-AUDIT.md"}
   ATC-AAS-004:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Arbeitsbereich auf Verzeichnisebene (repositories/directories/excluded); Blast-Radius-Begrenzung) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:20 UTC+2 (alles freigeben): CANDIDATE -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-AAS-ENT-AUDIT.md"}
   ATC-AAS-005:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Selbstfragen-Pflicht; Manifest-Dateiset in .github/ai/ inkl. instructions.md und context.yaml; Entry-Chain) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:20 UTC+2 (alles freigeben): CANDIDATE -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-AAS-ENT-AUDIT.md"}
   ATC-AAS-006:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Kontext-Hierarchie Org->Repo->Project->Issue->Task->Files->Code->Tests; Wahrheits-Prioritaetskette) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:20 UTC+2 (alles freigeben): CANDIDATE -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-AAS-ENT-AUDIT.md"}
   ATC-AAS-007:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Task-Zusatzfelder objective/requirements/allowed_files/forbidden_files/acceptance_criteria; COMPLETED nur bei erfuellten Kriterien) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:20 UTC+2 (alles freigeben): CANDIDATE -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-AAS-ENT-AUDIT.md"}
   ATC-AAS-008:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Makro-Lifecycle DISCOVER->...->MERGE (12 Stufen), gemappt auf AI-DEV-001 State Machine) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:20 UTC+2 (alles freigeben): CANDIDATE -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-AAS-ENT-AUDIT.md"}
   ATC-AAS-009:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Aenderungsdokumentation WHAT/WHY/WHERE/IMPACT/TEST/RISK/ROLLBACK je PR) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:20 UTC+2 (alles freigeben): CANDIDATE -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-AAS-ENT-AUDIT.md"}
   ATC-AAS-010:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Test-Evidenzblock mit command/totals/ci_run/timestamp; Aussage ohne Evidenz = Behauptung) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:20 UTC+2 (alles freigeben): CANDIDATE -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-AAS-ENT-AUDIT.md"}
   ATC-AAS-011:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Verifikationsebenen L1-L4 plus Blockchain-Zusatz-Dimensionen (Security/Consensus/Cryptography/State/Economics/Compatibility)) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:20 UTC+2 (alles freigeben): CANDIDATE -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-AAS-ENT-AUDIT.md"}
   ATC-AAS-012:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Aussagen-Klassifikation FACT/EVIDENCE/INFERENCE/ASSUMPTION/UNKNOWN; ohne Evidenz = UNKNOWN) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:20 UTC+2 (alles freigeben): CANDIDATE -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-AAS-ENT-AUDIT.md"}
   ATC-AAS-013:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Konflikt-Leiter Standard>Architecture>Specification>Requirement>Issue>Implementation; stillschweigende Loesung verboten) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:20 UTC+2 (alles freigeben): CANDIDATE -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-AAS-ENT-AUDIT.md"}
   ATC-AAS-014:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Secret-Klassen und Grundregel: niemals in Code/Logs/Issues/Commits/PRs; Umgebungssicherheit; Secret-Fund-Verfahren) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:20 UTC+2 (alles freigeben): CANDIDATE -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-AAS-ENT-AUDIT.md"}
   ATC-AAS-015:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Git-Operationen normativ; erweiterte Commit-Typen (security/build/ci); SCR-0006 fuer Vereinheitlichung mit AI-DEV-007) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:20 UTC+2 (alles freigeben): CANDIDATE -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-AAS-ENT-AUDIT.md"}
   ATC-AAS-016:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (PR created_by-Kennzeichnung (ai_agent/agent_id/version) plus erweiterte Pflichtabschnitte inkl. Breaking Changes/Rollback) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:20 UTC+2 (alles freigeben): CANDIDATE -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-AAS-ENT-AUDIT.md"}
   ATC-AAS-017:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Autonom-Liste vs. Human-Approval-Pflichtliste (Merge, Mainnet, Consensus, Tokenomics, Krypto, Security Policy, Rechte, Infra)) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:20 UTC+2 (alles freigeben): CANDIDATE -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-AAS-ENT-AUDIT.md"}
   ATC-AAS-018:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Aktionsprotokoll je Operation (10 Felder) als Event-Stream plus Abschluss-Record AUD-NNN; zweistufig append-only) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:20 UTC+2 (alles freigeben): CANDIDATE -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-AAS-ENT-AUDIT.md"}
   ATC-AAS-019:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Handoff-Record mit 10 Feldern; persistente Agent-to-Agent-Arbeitsuebergabe; nur bei uebergabefaehigem Task) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:20 UTC+2 (alles freigeben): CANDIDATE -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-AAS-ENT-AUDIT.md"}
   ATC-AAS-020:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Fehlerzustaende FAILED/BLOCKED/NEEDS-HUMAN/ROLLBACK-REQUIRED; max_attempts:3, keine Endlosschleifen) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:20 UTC+2 (alles freigeben): CANDIDATE -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-AAS-ENT-AUDIT.md"}
   ATC-AAS-021:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (8 Qualitaets-KPIs automatisiert aus Audit-Records inkl. False Claim Rate) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:20 UTC+2 (alles freigeben): CANDIDATE -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-AAS-ENT-AUDIT.md"}
   ATC-AAS-022:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (SemVer je Agent; Instruktion-Aenderung = Versions-Bump; Lifecycle ACTIVE->DEPRECATED->RETIRED) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:20 UTC+2 (alles freigeben): CANDIDATE -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-AAS-ENT-AUDIT.md"}
   ATC-AAS-023:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Rollenmodell Orchestrator + DEV/TEST/SEC/DOC/AUDIT mit Least Privilege und abschliessendem Human Review) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:20 UTC+2 (alles freigeben): CANDIDATE -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-AAS-ENT-AUDIT.md"}
   ATC-AAS-024:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (A2A-Nachrichtenstruktur mit 9 Pflichtfeldern, 7 Nachrichtentypen, Antwortpflicht, persistente Ablage) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:20 UTC+2 (alles freigeben): CANDIDATE -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-AAS-ENT-AUDIT.md"}
   ATC-AAS-025:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Repo-Manifest .github/ai/agent.yaml je R2+-Repo (agents.allowed, required_standards, workflow-Gates); Rollout bis 07.10.2026) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:20 UTC+2 (alles freigeben): CANDIDATE -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-AAS-ENT-AUDIT.md"}
   ATC-ENT-001:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Enterprise-Governance: Zweck des Layers, Standard-Hierarchie (ATC-STD-000 > ENT > technische Familien), Dokumentenstandard-Metadaten, Geltungsbereich) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:20 UTC+2 (alles freigeben): CANDIDATE -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-AAS-ENT-AUDIT.md"}
   ATC-ENT-002:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Rollen: ROLE-XXX-Pflichtstruktur, 11 kanonische Rollen, Mapping zu Verfassung §14.1, KI-Agenten als Unternehmensmitglieder ueber AAS-001 (kein paralleles ATC-AI-001)) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:20 UTC+2 (alles freigeben): CANDIDATE -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-AAS-ENT-AUDIT.md"}
   ATC-ENT-003:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Entscheidungsmanagement: Kernregel Verantwortlicher/Status/Begruendung/Historie, DEC-NNNN-Record, Status-Lifecycle, Verhaeltnis zu §9-Freigaben und AD-Mandaten (grandfathered)) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:20 UTC+2 (alles freigeben): CANDIDATE -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-AAS-ENT-AUDIT.md"}
   ATC-ENT-004:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Delegation: Rollen-an-Rolle, befristet+ zweckgebunden, nicht delegierbare Approver-/Mainnet-/Verfassungsbefugnisse, Agenten-Deckelung durch AAS-002/003) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:20 UTC+2 (alles freigeben): CANDIDATE -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-AAS-ENT-AUDIT.md"}
   ATC-ENT-005:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Richtlinien: Hierarchie Verfassung>ENT>Domaene>Repo, POL-NNNN-Registry mit Enforcement, Mindest-Policies (Security/Data/AI/Release)) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:20 UTC+2 (alles freigeben): CANDIDATE -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-AAS-ENT-AUDIT.md"}
   ATC-ENT-006:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Interessenkonflikte: Konfliktklassen (Rollenkumulation, wirtschaftlich, Agenten-Zielkonflikte), Offenlegungspflicht im DEC-Record, Autor!=Approver) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:20 UTC+2 (alles freigeben): CANDIDATE -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-AAS-ENT-AUDIT.md"}
   ATC-ENT-007:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Eskalation: Stufen E1-E4, Pflichtgruende, ESC-NNNN-Record mit Reaktionszeiten, Agenten-Eskalation via AI-DEV-011 muendet immer in menschliche Rolle) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:20 UTC+2 (alles freigeben): CANDIDATE -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-AAS-ENT-AUDIT.md"}
   ATC-ENT-008:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Organisationsstruktur: 13 Organisationseinheiten der Hierarchie, Pflichtattribute (Owner/Deputy/KPIs/Repos/Standards/Audit), Registry org-units.yaml) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:20 UTC+2 (alles freigeben): CANDIDATE -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-AAS-ENT-AUDIT.md"}
   ATC-ENT-009:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Repository Governance: REPO-NNNN-Registry mit fachlichem/technischem/Security-Owner, classification, canonical-SSOT, Doku-Pflichten als Merge-Gate) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:20 UTC+2 (alles freigeben): CANDIDATE -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-AAS-ENT-AUDIT.md"}
   ATC-ENT-010:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Change Management: Pipeline CR>Impact>Reviews>Approval>Impl>Test>Audit>Doku>Release, Aenderungsklassen (Standards=SCR, Org/Architektur/Policies=ENT-010+DEC), Notfallregel) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:20 UTC+2 (alles freigeben): CANDIDATE -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-AAS-ENT-AUDIT.md"}
   ATC-ENT-011:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Risiko-Management: RISK-NNNN-Zentralregistry, 11 Kategorien, S0-S4-Verzahnung, Eskalation E3 bei Critical, Verhaeltnis Findings vs Risiken) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:20 UTC+2 (alles freigeben): CANDIDATE -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-AAS-ENT-AUDIT.md"}
   ATC-ENT-012:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Wissensmanagement: Kernregel Code/Standards/Wiki/Architektur/Roadmap laufen nicht auseinander, Consistency Gate als Release-Blocker, SSOT-Kette registry>abgeleitete Sichten) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:20 UTC+2 (alles freigeben): CANDIDATE -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-AAS-ENT-AUDIT.md"}
   ATC-ENT-013:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (KPI & Performance: 4 KPI-Familien (Engineering DORA, Security, AI, Blockchain), automatisierte Erhebung aus Audit-Records, Schwellen-Eskalation) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:20 UTC+2 (alles freigeben): CANDIDATE -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-AAS-ENT-AUDIT.md"}
   ATC-ENT-014:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Audit: WHO/WHAT/WHEN/WHERE/WHY/VERSION/RESULT-Pflicht, audit_event-Struktur mit actor/action/approval/tests, zweistufig append-only, Stichproben durch ROLE-AUDITOR) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:20 UTC+2 (alles freigeben): CANDIDATE -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-AAS-ENT-AUDIT.md"}
   ATC-ENT-015:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Definition of Done: Unternehmens-DoD ueber CODE/TEST/SECURITY/DOKU/GOVERNANCE/RELEASE, gilt fuer Menschen und Agenten, Evidenzpflicht AAS-010) — Status CANDIDATE, Owner-Freigabe §9 ausstehend"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:20 UTC+2 (alles freigeben): CANDIDATE -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-AAS-ENT-AUDIT.md"}

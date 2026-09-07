@@ -1,3 +1,4 @@
+---
 standard:
   id: ATC-STD-NET-005
   title: "ATC-STD-NET-005 — Network Genesis Standard"

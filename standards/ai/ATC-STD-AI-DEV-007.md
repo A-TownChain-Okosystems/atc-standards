@@ -2,7 +2,7 @@
 standard:
   id: ATC-STD-AI-DEV-007
   title: "ATC-STD-AI-DEV-007 — AI Git Commit & Pull Request Standard"
-  version: "1.0.0"
+  version: "1.0.1"
   status: approved
   category: ai-dev
   authority: A-TownChain Ecosystems
@@ -48,7 +48,7 @@ AI-Role: software-development
 Validation: PASS|FAIL|PENDING
 ```
 
-- `<type>`: `feat|fix|docs|test|refactor|chore|spec` (Conventional Commits,
+- `<type>`: `feat|fix|docs|test|refactor|security|build|ci|chore|spec` (Conventional Commits,
   V-16-kompatibel).
 - Trailer sind verpflichtend; fehlende Trailer = Commit gilt als
   menschlicher Commit und wird als Agentenarbeit zurückgewiesen.

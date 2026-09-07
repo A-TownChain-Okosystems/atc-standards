@@ -3,7 +3,7 @@ standard:
   id: ATC-ENT-005
   title: "ATC-ENT-005 — Unternehmensrichtlinien Standard"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: enterprise
   authority: A-TownChain Ecosystems
   owner: ShivaCoreDev
@@ -14,9 +14,9 @@ standard:
   superseded_by: null
 ---
 
-# ATC-ENT-005 — Unternehmensrichtlinien Standard (v1.0.0, CANDIDATE)
+# ATC-ENT-005 — Unternehmensrichtlinien Standard (v1.0.0, APPROVED)
 
-> **Status:** CANDIDATE · **Priorität:** P1 · **Basiert auf:** ATC-STD-000 (Verfassung als oberste Richtlinie)
+> **Status:** APPROVED (Owner-Sammelfreigabe 07.09.2026, ATC-STD-000 §9) — normativ in Kraft
 
 ## 1. Richtlinien-Hierarchie
 

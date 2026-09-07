@@ -3,7 +3,7 @@ standard:
   id: ATC-AAS-015
   title: "ATC-AAS-015 — Agent Git Standard"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: aas
   authority: A-TownChain Ecosystems
   owner: ShivaCoreDev
@@ -14,9 +14,9 @@ standard:
   superseded_by: null
 ---
 
-# ATC-AAS-015 — Agent Git Standard (v1.0.0, CANDIDATE)
+# ATC-AAS-015 — Agent Git Standard (v1.0.0, APPROVED)
 
-> **Status:** CANDIDATE · **Priorität:** P0 · **Konkretisiert:** ATC-STD-AI-DEV-007 (Commit/PR/Branch)
+> **Status:** APPROVED (Owner-Sammelfreigabe 07.09.2026, ATC-STD-000 §9) — normativ in Kraft
 
 ## 1. Operationen (normativ)
 
@@ -33,13 +33,13 @@ Format & Trailer unverändert AI-DEV-007 §1: `ATC-TASK-NNNN: <type>: <desc>`
 plus Trailer-Block (Agent-ID, Task-ID, Finding-ID, Action-ID, AI-Role,
 Validation).
 
-## 3. SCR-0006 — Erweiterung des Typ-Sets (offen)
+## 3. SCR-0006 — Erweiterung des Typ-Sets (angenommen 07.09.2026)
 
 AI-DEV-007 §1 normierte feat|fix|docs|test|refactor|chore|spec; dieser
 Standard ergänzt `security`, `build`, `ci`, `refactor` (teils neu). Da
 AI-DEV-007 approved und unveränderlich ist (ATC-STD-000 §30), wird die
 Typ-Set-Vereinheitlichung über SCR-0006 formal nachgezogen; bis dahin
-gelten beide Sets gemeinsam, Duplikate sind identisch.
+sind beide Sets per AI-DEV-007 v1.0.1 vereinheitlicht (SCR-0006 ACCEPTED, 07.09.2026).
 
 ## 4. Pflichtbezug
 

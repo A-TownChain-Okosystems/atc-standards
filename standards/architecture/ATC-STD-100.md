@@ -1,3 +1,4 @@
+---
 standard:
   id: ATC-STD-100
   title: "ATC-STD-100 — Language & Technology Stack Standard"

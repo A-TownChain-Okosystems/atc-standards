@@ -3,7 +3,7 @@ standard:
   id: ATC-AAS-001
   title: "ATC-AAS-001 — Agent Identity Standard"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: aas
   authority: A-TownChain Ecosystems
   owner: ShivaCoreDev
@@ -14,9 +14,9 @@ standard:
   superseded_by: null
 ---
 
-# ATC-AAS-001 — Agent Identity Standard (v1.0.0, CANDIDATE)
+# ATC-AAS-001 — Agent Identity Standard (v1.0.0, APPROVED)
 
-> **Status:** CANDIDATE (Owner-Entwurf 07.09.2026; Normativkraft mit APPROVED, ATC-STD-000 §9)
+> **Status:** APPROVED (Owner-Sammelfreigabe 07.09.2026, ATC-STD-000 §9) — normativ in Kraft
 > **Block:** ATC-AAS (AI Agent Standards) · **Priorität:** P0 · **Erweitert:** ATC-STD-AI-DEV-001 §2 (Agent-Manifest)
 
 ## 1. Identitäts-Pflichtstruktur

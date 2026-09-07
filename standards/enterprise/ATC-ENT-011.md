@@ -3,7 +3,7 @@ standard:
   id: ATC-ENT-011
   title: "ATC-ENT-011 — Risiko-Management Standard"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: enterprise
   authority: A-TownChain Ecosystems
   owner: ShivaCoreDev
@@ -14,9 +14,9 @@ standard:
   superseded_by: null
 ---
 
-# ATC-ENT-011 — Risiko-Management Standard (v1.0.0, CANDIDATE)
+# ATC-ENT-011 — Risiko-Management Standard (v1.0.0, APPROVED)
 
-> **Status:** CANDIDATE · **Priorität:** P0 · **Nutzt:** Severity-Skala S0-S4 (ATC-STD-BUG-002) · **Registry:** registry/risks.yaml
+> **Status:** APPROVED (Owner-Sammelfreigabe 07.09.2026, ATC-STD-000 §9) — normativ in Kraft
 
 ## 1. Risiko-Registry (Zentral, RISK-NNNN)
 

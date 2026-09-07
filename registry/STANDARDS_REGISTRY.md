@@ -269,43 +269,43 @@ ATC-01…99 (Registry Tier 1-10) sind die ausdifferenzierte Nachfolger-Registry.
 ---
 
 *Standards Registry v1.0.0 — Aurora (MasterBrain · Base44) · 05.07.2026 · 99 ATC-Standards*
-| ATC-AAS-001 | Agent Identity Standard | candidate | 1.0.0 | aas (P0) |
-| ATC-AAS-002 | Agent Capability Standard | candidate | 1.0.0 | aas (P0) |
-| ATC-AAS-003 | Agent Permission Standard | candidate | 1.0.0 | aas (P0) |
-| ATC-AAS-004 | Agent Scope Standard | candidate | 1.0.0 | aas (P0) |
-| ATC-AAS-005 | Agent Discovery Standard | candidate | 1.0.0 | aas (P0) |
-| ATC-AAS-006 | Agent Context Standard | candidate | 1.0.0 | aas (P1) |
-| ATC-AAS-007 | Agent Task Standard | candidate | 1.0.0 | aas (P0) |
-| ATC-AAS-008 | Agent Workflow Standard | candidate | 1.0.0 | aas (P0) |
-| ATC-AAS-009 | Agent Change Standard | candidate | 1.0.0 | aas (P1) |
-| ATC-AAS-010 | Agent Evidence Standard | candidate | 1.0.0 | aas (P0) |
-| ATC-AAS-011 | Agent Verification Standard | candidate | 1.0.0 | aas (P0) |
-| ATC-AAS-012 | Agent Hallucination / Assumption Standard | candidate | 1.0.0 | aas (P0) |
-| ATC-AAS-013 | Agent Conflict Resolution Standard | candidate | 1.0.0 | aas (P1) |
-| ATC-AAS-014 | Agent Security Standard | candidate | 1.0.0 | aas (P0) |
-| ATC-AAS-015 | Agent Git Standard | candidate | 1.0.0 | aas (P0) |
-| ATC-AAS-016 | Agent PR Standard | candidate | 1.0.0 | aas (P0) |
-| ATC-AAS-017 | Agent Human Approval Standard | candidate | 1.0.0 | aas (P0) |
-| ATC-AAS-018 | Agent Audit Trail Standard | candidate | 1.0.0 | aas (P0) |
-| ATC-AAS-019 | Agent Handoff Standard | candidate | 1.0.0 | aas (P1) |
-| ATC-AAS-020 | Agent Failure Standard | candidate | 1.0.0 | aas (P1) |
-| ATC-AAS-021 | Agent Quality Standard | candidate | 1.0.0 | aas (P2) |
-| ATC-AAS-022 | Agent Versioning Standard | candidate | 1.0.0 | aas (P1) |
-| ATC-AAS-023 | Agent Role Standard | candidate | 1.0.0 | aas (P2) |
-| ATC-AAS-024 | Agent-to-Agent Protocol Standard | candidate | 1.0.0 | aas (P1) |
-| ATC-AAS-025 | Agent Repository Manifest Standard | candidate | 1.0.0 | aas (P1) |
-| ATC-ENT-001 | Enterprise Governance Standard | candidate | 1.0.0 | enterprise (P0) |
-| ATC-ENT-002 | Rollen & Verantwortlichkeiten Standard | candidate | 1.0.0 | enterprise (P0) |
-| ATC-ENT-003 | Entscheidungsmanagement Standard | candidate | 1.0.0 | enterprise (P0) |
-| ATC-ENT-004 | Delegation & Berechtigungen Standard | candidate | 1.0.0 | enterprise (P0) |
-| ATC-ENT-005 | Unternehmensrichtlinien Standard | candidate | 1.0.0 | enterprise (P1) |
-| ATC-ENT-006 | Interessenkonflikte Standard | candidate | 1.0.0 | enterprise (P2) |
-| ATC-ENT-007 | Eskalationsmanagement Standard | candidate | 1.0.0 | enterprise (P1) |
-| ATC-ENT-008 | Organisationsstruktur Standard | candidate | 1.0.0 | enterprise (P1) |
-| ATC-ENT-009 | Repository Governance Standard | candidate | 1.0.0 | enterprise (P1) |
-| ATC-ENT-010 | Enterprise Change Management Standard | candidate | 1.0.0 | enterprise (P0) |
-| ATC-ENT-011 | Risiko-Management Standard | candidate | 1.0.0 | enterprise (P0) |
-| ATC-ENT-012 | Wissensmanagement & Consistency-Gate Standard | candidate | 1.0.0 | enterprise (P1) |
-| ATC-ENT-013 | KPI & Performance Standard | candidate | 1.0.0 | enterprise (P2) |
-| ATC-ENT-014 | Audit & Nachvollziehbarkeit Standard | candidate | 1.0.0 | enterprise (P1) |
-| ATC-ENT-015 | Qualitätsmanagement & Definition of Done Standard | candidate | 1.0.0 | enterprise (P2) |
+| ATC-AAS-001 | Agent Identity Standard | approved | 1.0.0 | aas (P0) |
+| ATC-AAS-002 | Agent Capability Standard | approved | 1.0.0 | aas (P0) |
+| ATC-AAS-003 | Agent Permission Standard | approved | 1.0.0 | aas (P0) |
+| ATC-AAS-004 | Agent Scope Standard | approved | 1.0.0 | aas (P0) |
+| ATC-AAS-005 | Agent Discovery Standard | approved | 1.0.0 | aas (P0) |
+| ATC-AAS-006 | Agent Context Standard | approved | 1.0.0 | aas (P1) |
+| ATC-AAS-007 | Agent Task Standard | approved | 1.0.0 | aas (P0) |
+| ATC-AAS-008 | Agent Workflow Standard | approved | 1.0.0 | aas (P0) |
+| ATC-AAS-009 | Agent Change Standard | approved | 1.0.0 | aas (P1) |
+| ATC-AAS-010 | Agent Evidence Standard | approved | 1.0.0 | aas (P0) |
+| ATC-AAS-011 | Agent Verification Standard | approved | 1.0.0 | aas (P0) |
+| ATC-AAS-012 | Agent Hallucination / Assumption Standard | approved | 1.0.0 | aas (P0) |
+| ATC-AAS-013 | Agent Conflict Resolution Standard | approved | 1.0.0 | aas (P1) |
+| ATC-AAS-014 | Agent Security Standard | approved | 1.0.0 | aas (P0) |
+| ATC-AAS-015 | Agent Git Standard | approved | 1.0.0 | aas (P0) |
+| ATC-AAS-016 | Agent PR Standard | approved | 1.0.0 | aas (P0) |
+| ATC-AAS-017 | Agent Human Approval Standard | approved | 1.0.0 | aas (P0) |
+| ATC-AAS-018 | Agent Audit Trail Standard | approved | 1.0.0 | aas (P0) |
+| ATC-AAS-019 | Agent Handoff Standard | approved | 1.0.0 | aas (P1) |
+| ATC-AAS-020 | Agent Failure Standard | approved | 1.0.0 | aas (P1) |
+| ATC-AAS-021 | Agent Quality Standard | approved | 1.0.0 | aas (P2) |
+| ATC-AAS-022 | Agent Versioning Standard | approved | 1.0.0 | aas (P1) |
+| ATC-AAS-023 | Agent Role Standard | approved | 1.0.0 | aas (P2) |
+| ATC-AAS-024 | Agent-to-Agent Protocol Standard | approved | 1.0.0 | aas (P1) |
+| ATC-AAS-025 | Agent Repository Manifest Standard | approved | 1.0.0 | aas (P1) |
+| ATC-ENT-001 | Enterprise Governance Standard | approved | 1.0.0 | enterprise (P0) |
+| ATC-ENT-002 | Rollen & Verantwortlichkeiten Standard | approved | 1.0.0 | enterprise (P0) |
+| ATC-ENT-003 | Entscheidungsmanagement Standard | approved | 1.0.0 | enterprise (P0) |
+| ATC-ENT-004 | Delegation & Berechtigungen Standard | approved | 1.0.0 | enterprise (P0) |
+| ATC-ENT-005 | Unternehmensrichtlinien Standard | approved | 1.0.0 | enterprise (P1) |
+| ATC-ENT-006 | Interessenkonflikte Standard | approved | 1.0.0 | enterprise (P2) |
+| ATC-ENT-007 | Eskalationsmanagement Standard | approved | 1.0.0 | enterprise (P1) |
+| ATC-ENT-008 | Organisationsstruktur Standard | approved | 1.0.0 | enterprise (P1) |
+| ATC-ENT-009 | Repository Governance Standard | approved | 1.0.0 | enterprise (P1) |
+| ATC-ENT-010 | Enterprise Change Management Standard | approved | 1.0.0 | enterprise (P0) |
+| ATC-ENT-011 | Risiko-Management Standard | approved | 1.0.0 | enterprise (P0) |
+| ATC-ENT-012 | Wissensmanagement & Consistency-Gate Standard | approved | 1.0.0 | enterprise (P1) |
+| ATC-ENT-013 | KPI & Performance Standard | approved | 1.0.0 | enterprise (P2) |
+| ATC-ENT-014 | Audit & Nachvollziehbarkeit Standard | approved | 1.0.0 | enterprise (P1) |
+| ATC-ENT-015 | Qualitätsmanagement & Definition of Done Standard | approved | 1.0.0 | enterprise (P2) |

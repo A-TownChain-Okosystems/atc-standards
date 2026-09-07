@@ -1,3 +1,4 @@
+---
 standard:
   id: ATC-STD-NET-008
   title: "ATC-STD-NET-008 — Network Recovery Standard"

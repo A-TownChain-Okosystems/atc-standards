@@ -3,7 +3,7 @@ standard:
   id: ATC-AAS-022
   title: "ATC-AAS-022 — Agent Versioning Standard"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: aas
   authority: A-TownChain Ecosystems
   owner: ShivaCoreDev
@@ -14,9 +14,9 @@ standard:
   superseded_by: null
 ---
 
-# ATC-AAS-022 — Agent Versioning Standard (v1.0.0, CANDIDATE)
+# ATC-AAS-022 — Agent Versioning Standard (v1.0.0, APPROVED)
 
-> **Status:** CANDIDATE · **Priorität:** P1 · **Neu**
+> **Status:** APPROVED (Owner-Sammelfreigabe 07.09.2026, ATC-STD-000 §9) — normativ in Kraft
 
 ## 1. Schema
 

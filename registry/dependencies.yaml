@@ -1,49 +1,8 @@
-# ATC Dependency Graphs (AD-026 L0-L7, AD-031/034)
-# Zwei Graphen: Repository-Abhaengigkeiten (Richtung: nutzt -> wird genutzt)
-# und Standard-Abhaengigkeiten (Zyklenerkennung durch atc-std-validator).
-repositories:
-  atclang:            {uses: []}
-  atc-shivacore:      {uses: [atclang]}
-  aurora-ai:          {uses: [atc-shivacore]}
-  a-townchain:        {uses: [atc-shivacore, atclang]}
-  globus-os:          {uses: [atc-shivacore]}
-  atc-contracts:      {uses: [atclang, a-townchain]}
-  atc-wallet:         {uses: [atc-sdk, a-townchain]}
-  atc-sdk:            {uses: [atclang, a-townchain]}
-  atc-explorer:       {uses: [atc-sdk]}
-  atc-indexer:        {uses: [a-townchain]}
-  atc-interop:        {uses: [a-townchain, atc-contracts]}
-  atc-node:           {uses: [a-townchain, atc-shivacore]}
-  atc-storage:        {uses: [atc-shivacore]}
-  atc-compute:        {uses: [atc-shivacore]}
-  atc-oracle:         {uses: [a-townchain]}
-  atc-mining:         {uses: [a-townchain]}
-  atc-marketplace:    {uses: [atc-sdk, atc-contracts]}
-  atc-launchpad:      {uses: [atc-sdk]}
-  genesis-engine:     {uses: [atc-sdk]}
-  genesis-chronicles: {uses: [genesis-engine, atc-contracts]}
-  a-townchain-os:     {uses: [atc-shivacore, atclang, aurora-ai, a-townchain, globus-os]}
-  a-townchain-os-docs: {uses: []}
-  atc-standards:      {uses: []}
+# ATC Standards Dependency Graph — normativ per ATC-STD-204 (F-001)
+# Abhaengigkeiten: harter normativer Aufbau (Standard baut auf Standard).
+# Reine Nenn-Erwaehnungen ohne Aufbau-Bezug gelten als Referenz, nicht als Kante.
+# Zyklische Kanten sind unzulaessig; Peer-/Spiegelreferenzen bewusst nicht deklariert.
 standards:
-  ATC-STD-000: {depends: []}
-  ATC-STD-201: {depends: [ATC-STD-000]}
-  ATC-STD-202: {depends: [ATC-STD-000, ATC-STD-201]}
-  ATC-STD-203: {depends: [ATC-STD-000, ATC-STD-201]}
-  ATC-STD-204: {depends: [ATC-STD-000, ATC-STD-201, ATC-STD-202, ATC-STD-203]}
-  ATC-STD-AI-DEV-001: {depends: [ATC-STD-000, ATC-STD-203, ATC-STD-204, ATC-STD-BUG-001]}
-  ATC-STD-AI-DEV-004: {depends: [ATC-STD-AI-DEV-001, ATC-STD-000]}
-  ATC-STD-AI-DEV-007: {depends: [ATC-STD-AI-DEV-001, ATC-STD-AI-DEV-004, ATC-STD-203]}
-  ATC-STD-AI-DEV-009: {depends: [ATC-STD-AI-DEV-001, ATC-STD-AI-DEV-004]}
-  ATC-STD-AI-DEV-002: {depends: [ATC-STD-AI-DEV-001, ATC-STD-000]}
-  ATC-STD-AI-DEV-003: {depends: [ATC-STD-AI-DEV-001, ATC-STD-204]}
-  ATC-STD-AI-DEV-005: {depends: [ATC-STD-AI-DEV-001, ATC-STD-BUG-001, ATC-STD-BUG-002]}
-  ATC-STD-AI-DEV-006: {depends: [ATC-STD-AI-DEV-001, ATC-STD-AI-DEV-005]}
-  ATC-STD-AI-DEV-008: {depends: [ATC-STD-AI-DEV-001, ATC-STD-AI-DEV-004, ATC-STD-BUG-002]}
-  ATC-STD-AI-DEV-010: {depends: [ATC-STD-AI-DEV-001, ATC-STD-BUG-004]}
-  ATC-STD-AI-DEV-011: {depends: [ATC-STD-AI-DEV-001, ATC-STD-AI-DEV-004]}
-  ATC-STD-AI-DEV-012: {depends: [ATC-STD-AI-DEV-001, ATC-STD-AI-DEV-004, ATC-STD-AI-DEV-009]}
-  ATC-STD-300: {depends: [ATC-STD-000]}
   ATC-AAS-001: {depends: [ATC-STD-000, ATC-STD-AI-DEV-001]}
   ATC-AAS-002: {depends: [ATC-STD-000, ATC-STD-AI-DEV-002]}
   ATC-AAS-003: {depends: [ATC-STD-000, ATC-STD-AI-DEV-002]}
@@ -84,3 +43,44 @@ standards:
   ATC-ENT-013: {depends: [ATC-AAS-021, ATC-STD-AI-DEV-009, ATC-ENT-011]}
   ATC-ENT-014: {depends: [ATC-STD-AI-DEV-009, ATC-AAS-018, ATC-STD-BUG-001]}
   ATC-ENT-015: {depends: [ATC-STD-AI-DEV-008, ATC-AAS-011, ATC-STD-AI-DEV-010, ATC-ENT-012]}
+  ATC-STD-000: {depends: []}
+  ATC-STD-100: {depends: [ATC-STD-201]}
+  ATC-STD-201: {depends: [ATC-STD-000]}
+  ATC-STD-202: {depends: [ATC-STD-000, ATC-STD-100, ATC-STD-201]}
+  ATC-STD-203: {depends: [ATC-STD-000, ATC-STD-201, ATC-STD-202]}
+  ATC-STD-204: {depends: [ATC-STD-000, ATC-STD-201, ATC-STD-202, ATC-STD-203]}
+  ATC-STD-300: {depends: [ATC-STD-000]}
+  ATC-STD-AI-DEV-001: {depends: [ATC-STD-000, ATC-STD-203, ATC-STD-204, ATC-STD-BUG-001]}
+  ATC-STD-AI-DEV-002: {depends: [ATC-STD-AI-DEV-001, ATC-STD-000]}
+  ATC-STD-AI-DEV-003: {depends: [ATC-STD-AI-DEV-001, ATC-STD-204]}
+  ATC-STD-AI-DEV-004: {depends: [ATC-STD-000, ATC-STD-AI-DEV-001, ATC-STD-BUG-001]}
+  ATC-STD-AI-DEV-005: {depends: [ATC-STD-AI-DEV-001, ATC-STD-BUG-001, ATC-STD-BUG-002]}
+  ATC-STD-AI-DEV-006: {depends: [ATC-STD-AI-DEV-001, ATC-STD-AI-DEV-005]}
+  ATC-STD-AI-DEV-007: {depends: [ATC-STD-AI-DEV-001, ATC-STD-AI-DEV-004, ATC-STD-203]}
+  ATC-STD-AI-DEV-008: {depends: [ATC-STD-AI-DEV-001, ATC-STD-AI-DEV-004, ATC-STD-BUG-002]}
+  ATC-STD-AI-DEV-009: {depends: [ATC-STD-203, ATC-STD-AI-DEV-001, ATC-STD-AI-DEV-004]}
+  ATC-STD-AI-DEV-010: {depends: [ATC-STD-AI-DEV-001, ATC-STD-BUG-004]}
+  ATC-STD-AI-DEV-011: {depends: [ATC-STD-AI-DEV-001, ATC-STD-AI-DEV-004]}
+  ATC-STD-AI-DEV-012: {depends: [ATC-STD-AI-DEV-001, ATC-STD-AI-DEV-004, ATC-STD-AI-DEV-009]}
+  ATC-STD-BUG-001: {depends: [ATC-STD-201, ATC-STD-202, ATC-STD-203]}
+  ATC-STD-BUG-002: {depends: [ATC-STD-BUG-001]}
+  ATC-STD-BUG-003: {depends: [ATC-STD-BUG-001, ATC-STD-BUG-002]}
+  ATC-STD-BUG-004: {depends: [ATC-STD-BUG-001, ATC-STD-BUG-003]}
+  ATC-STD-NET-001: {depends: [ATC-STD-203, ATC-STD-BUG-001]}
+  ATC-STD-NET-002: {depends: [ATC-STD-203, ATC-STD-BUG-001, ATC-STD-NET-001]}
+  ATC-STD-NET-003: {depends: [ATC-STD-203, ATC-STD-BUG-001, ATC-STD-NET-001]}
+  ATC-STD-NET-004: {depends: [ATC-STD-203, ATC-STD-BUG-001, ATC-STD-NET-001]}
+  ATC-STD-NET-005: {depends: [ATC-STD-203, ATC-STD-BUG-001, ATC-STD-NET-001]}
+  ATC-STD-NET-006: {depends: [ATC-STD-203, ATC-STD-BUG-001, ATC-STD-NET-001]}
+  ATC-STD-NET-007: {depends: [ATC-STD-203, ATC-STD-BUG-001, ATC-STD-NET-001]}
+  ATC-STD-NET-008: {depends: [ATC-STD-203, ATC-STD-BUG-001, ATC-STD-NET-001]}
+  ATC-STD-ZKP-001: {depends: [ATC-STD-100, ATC-STD-BUG-001]}
+  ATC-STD-ZKP-002: {depends: [ATC-STD-ZKP-001]}
+  ATC-STD-ZKP-003: {depends: [ATC-STD-ZKP-001]}
+  ATC-STD-ZKP-004: {depends: [ATC-STD-ZKP-001]}
+  ATC-STD-ZKP-005: {depends: [ATC-STD-ZKP-001]}
+  ATC-STD-ZKP-006: {depends: [ATC-STD-ZKP-001, ATC-STD-ZKP-003]}
+  ATC-STD-ZKP-007: {depends: [ATC-STD-ZKP-001]}
+  ATC-STD-ZKP-008: {depends: [ATC-STD-ZKP-001]}
+  ATC-STD-ZKP-009: {depends: [ATC-STD-ZKP-001]}
+  ATC-STD-ZKP-010: {depends: [ATC-STD-BUG-001, ATC-STD-ZKP-001]}

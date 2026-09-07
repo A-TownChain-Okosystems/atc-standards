@@ -40,6 +40,6 @@ nicht als Finding. Ein Finding behauptet Verifiziertes.
 
 ## 4. Kette Finding → Action
 
-JedesFinding mündet in mindestens ein ACT-NNN (AI-DEV-006) oder eine
+Jedes Finding mündet in mindestens ein ACT-NNN (AI-DEV-006) oder eine
 dokumentierte Nicht-Handlungs-Entscheidung mit Begründung ("wont-fix because
 …" mit Standard-/Owner-Bezug).

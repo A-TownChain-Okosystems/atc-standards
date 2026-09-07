@@ -1,3 +1,4 @@
+---
 standard:
   id: ATC-STD-BUG-004
   title: "ATC-STD-BUG-004 — Repository Synchronization & Merge Gate Standard"

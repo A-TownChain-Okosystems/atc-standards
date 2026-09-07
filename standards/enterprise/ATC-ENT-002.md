@@ -3,7 +3,7 @@ standard:
   id: ATC-ENT-002
   title: "ATC-ENT-002 — Rollen & Verantwortlichkeiten Standard"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: enterprise
   authority: A-TownChain Ecosystems
   owner: ShivaCoreDev
@@ -14,9 +14,9 @@ standard:
   superseded_by: null
 ---
 
-# ATC-ENT-002 — Rollen & Verantwortlichkeiten Standard (v1.0.0, CANDIDATE)
+# ATC-ENT-002 — Rollen & Verantwortlichkeiten Standard (v1.0.0, APPROVED)
 
-> **Status:** CANDIDATE · **Priorität:** P0 · **Basiert auf:** ATC-STD-000 §14.1 (Owner/Approver/Reviewer/Maintainer/Agent) · **Erweitert:** AI-DEV-001 §2, AAS-001
+> **Status:** APPROVED (Owner-Sammelfreigabe 07.09.2026, ATC-STD-000 §9) — normativ in Kraft
 
 ## 1. Rollen-Definition (Pflichtstruktur)
 

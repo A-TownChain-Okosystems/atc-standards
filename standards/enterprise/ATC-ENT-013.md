@@ -3,7 +3,7 @@ standard:
   id: ATC-ENT-013
   title: "ATC-ENT-013 — KPI & Performance Standard"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: enterprise
   authority: A-TownChain Ecosystems
   owner: ShivaCoreDev
@@ -14,9 +14,9 @@ standard:
   superseded_by: null
 ---
 
-# ATC-ENT-013 — KPI & Performance Standard (v1.0.0, CANDIDATE)
+# ATC-ENT-013 — KPI & Performance Standard (v1.0.0, APPROVED)
 
-> **Status:** CANDIDATE · **Priorität:** P2 · **Erweitert:** AAS-021 (Agenten-KPIs) auf Unternehmensebene
+> **Status:** APPROVED (Owner-Sammelfreigabe 07.09.2026, ATC-STD-000 §9) — normativ in Kraft
 
 ## 1. KPI-Familien (kanonisch)
 

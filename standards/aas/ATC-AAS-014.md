@@ -3,7 +3,7 @@ standard:
   id: ATC-AAS-014
   title: "ATC-AAS-014 — Agent Security Standard"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: aas
   authority: A-TownChain Ecosystems
   owner: ShivaCoreDev
@@ -14,9 +14,9 @@ standard:
   superseded_by: null
 ---
 
-# ATC-AAS-014 — Agent Security Standard (v1.0.0, CANDIDATE)
+# ATC-AAS-014 — Agent Security Standard (v1.0.0, APPROVED)
 
-> **Status:** CANDIDATE · **Priorität:** P0 · **Erweitert:** ATC-STD-AI-DEV-002 §3 (Restriktions-Invariante no_secret_access), ATC-STD-000 §38, ATC-STD-203
+> **Status:** APPROVED (Owner-Sammelfreigabe 07.09.2026, ATC-STD-000 §9) — normativ in Kraft
 
 ## 1. Geschützte Klassen (niemals durch Agenten in Code/Logs/Issues/Commits/PRs)
 

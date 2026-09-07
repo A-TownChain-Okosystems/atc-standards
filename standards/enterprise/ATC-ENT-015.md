@@ -3,7 +3,7 @@ standard:
   id: ATC-ENT-015
   title: "ATC-ENT-015 — Qualitätsmanagement & Definition of Done Standard"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: enterprise
   authority: A-TownChain Ecosystems
   owner: ShivaCoreDev
@@ -14,9 +14,9 @@ standard:
   superseded_by: null
 ---
 
-# ATC-ENT-015 — Qualitätsmanagement & Definition of Done Standard (v1.0.0, CANDIDATE)
+# ATC-ENT-015 — Qualitätsmanagement & Definition of Done Standard (v1.0.0, APPROVED)
 
-> **Status:** CANDIDATE · **Priorität:** P2 · **Bündelt:** AI-DEV-008 (Tests), AAS-011 (Verifikation), AI-DEV-010 (Doc-Sync) zum Unternehmens-DoD
+> **Status:** APPROVED (Owner-Sammelfreigabe 07.09.2026, ATC-STD-000 §9) — normativ in Kraft
 
 ## 1. Definition of Done (Unternehmens-DoD)
 

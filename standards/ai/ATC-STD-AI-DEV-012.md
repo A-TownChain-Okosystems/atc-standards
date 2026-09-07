@@ -41,7 +41,7 @@ vermerkt `handover_from: ATC-AI-…-NNN`.
 
 ## 4. Konfliktbehandlung
 
-Bei parallelenÄnderungen am gleichen Ziel (Verstoß gegen §1): Owner-
-Eskalation (AI-DEV-011 §2), Fundings S1, Auflösung durch den zuständigen
+Bei parallelen Änderungen am gleichen Ziel (Verstoß gegen §1): Owner-
+Eskalation (AI-DEV-011 §2), Findings S1, Auflösung durch den zuständigen
 Agenten mit Sync-Record (BUG-004). Merge-Konflikte durch Regelverstoß
 sind keine technischen Zufälle, sondern Governance-Verstöße.

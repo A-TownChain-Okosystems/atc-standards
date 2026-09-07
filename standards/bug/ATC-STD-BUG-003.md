@@ -1,3 +1,4 @@
+---
 standard:
   id: ATC-STD-BUG-003
   title: "ATC-STD-BUG-003 — Bug Fix Lifecycle Standard"

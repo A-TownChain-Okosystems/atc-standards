@@ -3,7 +3,7 @@ standard:
   id: ATC-AAS-016
   title: "ATC-AAS-016 — Agent PR Standard"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: aas
   authority: A-TownChain Ecosystems
   owner: ShivaCoreDev
@@ -14,9 +14,9 @@ standard:
   superseded_by: null
 ---
 
-# ATC-AAS-016 — Agent PR Standard (v1.0.0, CANDIDATE)
+# ATC-AAS-016 — Agent PR Standard (v1.0.0, APPROVED)
 
-> **Status:** CANDIDATE · **Priorität:** P0 · **Erweitert:** ATC-STD-AI-DEV-007 §4 (PR-Pflichtstruktur), AAS-009 (Änderungsdokumentation)
+> **Status:** APPROVED (Owner-Sammelfreigabe 07.09.2026, ATC-STD-000 §9) — normativ in Kraft
 
 ## 1. KI-Kennzeichnung (Pflichtblock am PR-Anfang)
 

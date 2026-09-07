@@ -1,3 +1,4 @@
+---
 standard:
   id: ATC-STD-000
   title: "Standards Governance & Specification Standard"

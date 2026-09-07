@@ -1,3 +1,4 @@
+---
 standard:
   id: ATC-STD-BUG-002
   title: "ATC-STD-BUG-002 — Bug Documentation Standard"

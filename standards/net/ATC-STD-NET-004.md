@@ -1,3 +1,4 @@
+---
 standard:
   id: ATC-STD-NET-004
   title: "ATC-STD-NET-004 — Network Promotion Standard"

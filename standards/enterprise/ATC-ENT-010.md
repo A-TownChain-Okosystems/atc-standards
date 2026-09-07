@@ -3,7 +3,7 @@ standard:
   id: ATC-ENT-010
   title: "ATC-ENT-010 — Enterprise Change Management Standard"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: enterprise
   authority: A-TownChain Ecosystems
   owner: ShivaCoreDev
@@ -14,9 +14,9 @@ standard:
   superseded_by: null
 ---
 
-# ATC-ENT-010 — Enterprise Change Management Standard (v1.0.0, CANDIDATE)
+# ATC-ENT-010 — Enterprise Change Management Standard (v1.0.0, APPROVED)
 
-> **Status:** CANDIDATE · **Priorität:** P0 · **Erweitert:** ATC-STD-000 §19-33 (SCR, Standard-Änderungen) auf Organisations-/Architektur-/Richtlinien-Änderungen
+> **Status:** APPROVED (Owner-Sammelfreigabe 07.09.2026, ATC-STD-000 §9) — normativ in Kraft
 
 ## 1. Change-Pipeline (Pflichtreihenfolge)
 

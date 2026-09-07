@@ -3,7 +3,7 @@ standard:
   id: ATC-ENT-007
   title: "ATC-ENT-007 — Eskalationsmanagement Standard"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: enterprise
   authority: A-TownChain Ecosystems
   owner: ShivaCoreDev
@@ -14,9 +14,9 @@ standard:
   superseded_by: null
 ---
 
-# ATC-ENT-007 — Eskalationsmanagement Standard (v1.0.0, CANDIDATE)
+# ATC-ENT-007 — Eskalationsmanagement Standard (v1.0.0, APPROVED)
 
-> **Status:** CANDIDATE · **Priorität:** P1 · **Basiert auf:** AI-DEV-011 §2 (Agenten-Eskalationsstufen a-d) · **Erweitert:** auf Organisationsebene
+> **Status:** APPROVED (Owner-Sammelfreigabe 07.09.2026, ATC-STD-000 §9) — normativ in Kraft
 
 ## 1. Eskalationsstufen (Organisation)
 

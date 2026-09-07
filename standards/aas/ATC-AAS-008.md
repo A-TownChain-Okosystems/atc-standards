@@ -3,7 +3,7 @@ standard:
   id: ATC-AAS-008
   title: "ATC-AAS-008 — Agent Workflow Standard"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: aas
   authority: A-TownChain Ecosystems
   owner: ShivaCoreDev
@@ -14,9 +14,9 @@ standard:
   superseded_by: null
 ---
 
-# ATC-AAS-008 — Agent Workflow Standard (v1.0.0, CANDIDATE)
+# ATC-AAS-008 — Agent Workflow Standard (v1.0.0, APPROVED)
 
-> **Status:** CANDIDATE · **Priorität:** P0 · **Konkretisiert:** ATC-STD-AI-DEV-001 §7 (State Machine), AI-DEV-007 (Git/PR)
+> **Status:** APPROVED (Owner-Sammelfreigabe 07.09.2026, ATC-STD-000 §9) — normativ in Kraft
 
 ## 1. Makro-Lifecycle (Pflichtreihenfolge)
 
@@ -33,9 +33,9 @@ COMMIT/PR/HUMAN APPROVAL/MERGE = Git-Gates aus AI-DEV-007 (§1-§6).
 Rücksprünge: TEST→IMPLEMENT (FAIL), REVIEW→IMPLEMENT (CHANGES_REQUESTED),
 jede Stufe → BLOCKED (ATC-AAS-020).
 
-## 3. Schrittklassen (Teilschritt der betroffenen Makro-Stufe)
+## 3. Stufenwechsel-Dokumentation
 
-DISCOVER → UNDERSTAND → PLAN → IMPLEMENT → TEST → AUDIT → DOCUMENT →
-REVIEW → COMMIT → PULL REQUEST → HUMAN APPROVAL → MERGE — kein
-Stufenübergang ohne dokumentierten Stufenwechsel im Task-Record
-(`history`, AI-DEV-004 §2).
+Jeder Stufenübergang wird im Task-Record dokumentiert (`history`-Eintrag
+mit Ziel-Stufe, Zeitpunkt, Auslöser, AI-DEV-004 §2). Sprünge über Stufen
+hinweg (z.B. IMPLEMENT → COMMIT ohne TEST) sind unzulässig; Rücksprünge
+sind als solche zu kennzeichnen (Grund: Finding/FAIL/CHANGES_REQUESTED).

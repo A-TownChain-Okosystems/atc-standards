@@ -213,6 +213,11 @@
           "type": "string",
           "pattern": "^ESC-[0-9]{4,}$",
           "example": "ESC-0001"
+        },
+        "zkpStandardId": {
+          "type": "string",
+          "pattern": "^ATC-STD-ZKP-[0-9]{3,}$",
+          "example": "ATC-STD-ZKP-001"
         }
       }
     },

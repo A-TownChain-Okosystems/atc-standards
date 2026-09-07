@@ -3,7 +3,7 @@ standard:
   id: ATC-AAS-023
   title: "ATC-AAS-023 — Agent Role Standard"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: aas
   authority: A-TownChain Ecosystems
   owner: ShivaCoreDev
@@ -14,9 +14,9 @@ standard:
   superseded_by: null
 ---
 
-# ATC-AAS-023 — Agent Role Standard (v1.0.0, CANDIDATE)
+# ATC-AAS-023 — Agent Role Standard (v1.0.0, APPROVED)
 
-> **Status:** CANDIDATE · **Priorität:** P2 · **Erweitert:** ATC-STD-AI-DEV-012 (Multi-Agent Coordination), AGENT_PROTOCOL (1-Agent-per-Repo)
+> **Status:** APPROVED (Owner-Sammelfreigabe 07.09.2026, ATC-STD-000 §9) — normativ in Kraft
 
 ## 1. Rollenmodell (Least Privilege je Rolle)
 
