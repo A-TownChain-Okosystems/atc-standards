@@ -1,0 +1,60 @@
+---
+standard:
+  id: ATC-AAS-025
+  title: "ATC-AAS-025 — Agent Repository Manifest Standard"
+  version: "1.0.0"
+  status: candidate
+  category: aas
+  authority: A-TownChain Ecosystems
+  owner: ShivaCoreDev
+  created: "2026-09-07"
+  updated: "2026-09-07"
+  normative: true
+  supersedes: []
+  superseded_by: null
+---
+
+# ATC-AAS-025 — Agent Repository Manifest Standard (v1.0.0, CANDIDATE)
+
+> **Status:** CANDIDATE · **Priorität:** P1 · **Erweitert:** ATC-STD-AI-DEV-001 §6 (AGENT_MANIFEST.md), AGENT_PROTOCOL (Repo-Zuordnung)
+
+## 1. Repo-Manifest (Pflicht je R2+-Repository)
+
+Ablage: `.github/ai/agent.yaml` (Ablageort gemäß AI-DEV-001 §6; der
+Owner-Entwurf nannte `.agent/agent.yaml` — inhaltlich identisch übernommen).
+
+```yaml
+standard: ATC-AAS-025
+repository: atclang
+agents:
+  allowed: [ATC-AI-DEV-001, ATC-AI-TEST-001, ATC-AI-AUDIT-001]
+required_standards: [ATC-STD-000, ATC-AAS-001, ATC-AAS-003, ATC-AAS-007,
+                     ATC-AAS-008, ATC-AAS-011]
+workflow:
+  require_tests: true
+  require_audit: true
+  require_pr: true
+  require_human_merge: true
+```
+
+## 2. Verbindlichkeit
+
+- Ein Agent darf ein Repo nur betreten, wenn er in `agents.allowed`
+  steht UND sein Identity-Manifest (AAS-001) die Repo-Standards aus
+  `required_standards` referenziert.
+- Die `workflow`-Gates sind mit dem Merge-Gate (AI-DEV-007 §6) verzahnt:
+  require_human_merge=true verhindert Agent-Merges endgültig.
+
+## 3. Entry-Chain (automatisiert feststellbar)
+
+IDENTITY → SCOPE → RULES → TASK → ACTION → TEST → EVIDENCE → REVIEW
+
+Beim Repo-Eintritt prüft der Agent Manifest → Scope (AAS-004) →
+Standards (AAS-006 Priorität) → offene Tasks (AAS-007) und dokumentiert
+das Ergebnis im Task-Record (Discovery-Record, AI-DEV-003 §2).
+
+## 4. Rollout
+
+Nach APPROVED: Ablage in allen R2+-Repos binnen der 30-Tage-Frist
+(07.10.2026, identisch zur Agent-Manifest-Auflage aus AI-DEV-001 §16;
+Task #111 deckt beide ab).

@@ -1,0 +1,44 @@
+---
+standard:
+  id: ATC-AAS-019
+  title: "ATC-AAS-019 — Agent Handoff Standard"
+  version: "1.0.0"
+  status: candidate
+  category: aas
+  authority: A-TownChain Ecosystems
+  owner: ShivaCoreDev
+  created: "2026-09-07"
+  updated: "2026-09-07"
+  normative: true
+  supersedes: []
+  superseded_by: null
+---
+
+# ATC-AAS-019 — Agent Handoff Standard (v1.0.0, CANDIDATE)
+
+> **Status:** CANDIDATE · **Priorität:** P1 · **Konkretisiert:** ATC-STD-AI-DEV-004 §5, AI-DEV-012 §3
+
+## 1. Handoff-Record (Pflichtstruktur)
+
+```yaml
+handoff:
+  task_id: ATC-TASK-00427
+  current_state: IN_PROGRESS
+  completed: [ACT-001, ACT-002]
+  remaining: [ACT-003, ACT-005]
+  blockers: [F-009]
+  decisions: [{observation, decision, reason}]   # AI-DEV-006
+  modified_files: [src/parser.rs, tests/parser.rs]
+  tests: {result: PASS, ci_run: "#1234"}          # AAS-010
+  known_issues: []
+  next_action: {id: ACT-003, priority: P1, depends_on: []}
+```
+
+## 2. Regeln
+
+- Handoff nur bei übergabefähigem Task (AI-DEV-004 §5: Record vollständig,
+  next_action aktuell, Annahmen registriert, history lückenlos).
+- Übernehmender Agent startet DISCOVERING (AI-DEV-003), vermerkt
+  `handover_from` (AI-DEV-012 §3) und bestätigt Übernahme im Task-Record.
+- Handoff ist persistent (Artefakt-basiert, AI-DEV-012 §2) — keine
+  Session-abhängige Übergabe.

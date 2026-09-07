@@ -1,0 +1,52 @@
+---
+standard:
+  id: ATC-AAS-001
+  title: "ATC-AAS-001 — Agent Identity Standard"
+  version: "1.0.0"
+  status: candidate
+  category: aas
+  authority: A-TownChain Ecosystems
+  owner: ShivaCoreDev
+  created: "2026-09-07"
+  updated: "2026-09-07"
+  normative: true
+  supersedes: []
+  superseded_by: null
+---
+
+# ATC-AAS-001 — Agent Identity Standard (v1.0.0, CANDIDATE)
+
+> **Status:** CANDIDATE (Owner-Entwurf 07.09.2026; Normativkraft mit APPROVED, ATC-STD-000 §9)
+> **Block:** ATC-AAS (AI Agent Standards) · **Priorität:** P0 · **Erweitert:** ATC-STD-AI-DEV-001 §2 (Agent-Manifest)
+
+## 1. Identitäts-Pflichtstruktur
+
+Jeder KI-Agent ist eindeutig identifizierbar. Kanonische Ablage:
+`.github/ai/agent.yaml` (Ablageort gemäß AI-DEV-001 §6).
+
+```yaml
+agent_id: ATC-AI-DEV-001          # Namensraum AI-DEV-001 §2: ATC-AI-{ROLE}-NNN
+agent_name: ATC Development Agent
+agent_type: software-development
+agent_version: 1.0.0              # Versionierung nach ATC-AAS-022
+owner: A-TownChain-Okosystems
+repository_scope: []              # konkretisiert durch ATC-AAS-004
+capabilities: []                  # konkrete Kategorien: ATC-AAS-002
+permissions: {}                   # Operationen: ATC-AAS-003
+environment: {runtime, network, sandbox}   # konkrete Kategorien: ATC-AAS-014
+status: ACTIVE|RETIRED
+```
+
+## 2. Regeln
+
+- Agenten ohne gültiges Identity-Manifest gelten als nicht vorhanden
+  (kein Zugang, keine Commits, keine Tasks).
+- `agent_id` folgt AI-DEV-001 §2 und naming-conventions (`aiAgentId`).
+- Ein Agent ist immer genau EINEM Identity-Manifest zugeordnet; Session-
+  Kontext darf die Identität nicht ändern.
+
+## 3. Verhältnis zu AI-DEV-001
+
+AAS-001 konkretisiert die abstrakte Manifest-Pflicht aus AI-DEV-001 §2 um
+die Felder `environment` und `status`; kein Widerspruch — AI-DEV-001 bleibt
+Dach-Norm der Identität.

@@ -1,368 +1,378 @@
 {
- "$schema": "http://json-schema.org/draft-07/schema#",
- "title": "ATC Naming, Identification and Namespace Convention - Rule Definition (ATC-STD-000 s7)",
- "description": "Zentrale maschinenlesbare Regeldefinition (7.10). Validator und CI leiten alle Naming-Pruefungen NUR aus dieser Datei ab (7.11).",
- "type": "object",
- "additionalProperties": false,
- "required": [
-  "identifierPatterns",
-  "repositoryPatterns",
-  "filenamePatterns",
-  "versionPatterns",
-  "extensionRules",
-  "reservedNames"
- ],
- "properties": {
-  "identifierPatterns": {
-   "type": "object",
-   "additionalProperties": false,
-   "required": [
-    "standardId",
-    "requirementId",
-    "findingId",
-    "changeRequestId",
-    "adrId",
-    "securityAdvisoryId",
-    "testCaseId",
-    "testSuiteId",
-    "gateId",
-    "schemaId",
-    "protocolId",
-    "specificationId",
-    "documentId",
-    "releaseId",
-    "bugStandardId",
-    "testId",
-    "syncCheckId",
-    "auditRecordId",
-    "netStandardId",
-    "aiDevStandardId",
-    "aiAgentId",
-    "aiTaskId",
-    "aiActionId",
-    "aiAssumptionId"
-   ],
-   "properties": {
-    "standardId": {
-     "type": "string",
-     "pattern": "^ATC-STD-[0-9]{3,}$",
-     "example": "ATC-STD-000"
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ATC Naming, Identification and Namespace Convention - Rule Definition (ATC-STD-000 s7)",
+  "description": "Zentrale maschinenlesbare Regeldefinition (7.10). Validator und CI leiten alle Naming-Pruefungen NUR aus dieser Datei ab (7.11).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "identifierPatterns",
+    "repositoryPatterns",
+    "filenamePatterns",
+    "versionPatterns",
+    "extensionRules",
+    "reservedNames"
+  ],
+  "properties": {
+    "identifierPatterns": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "standardId",
+        "requirementId",
+        "findingId",
+        "changeRequestId",
+        "adrId",
+        "securityAdvisoryId",
+        "testCaseId",
+        "testSuiteId",
+        "gateId",
+        "schemaId",
+        "protocolId",
+        "specificationId",
+        "documentId",
+        "releaseId",
+        "bugStandardId",
+        "testId",
+        "syncCheckId",
+        "auditRecordId",
+        "netStandardId",
+        "aiDevStandardId",
+        "aiAgentId",
+        "aiTaskId",
+        "aiActionId",
+        "aiAssumptionId"
+      ],
+      "properties": {
+        "standardId": {
+          "type": "string",
+          "pattern": "^ATC-STD-[0-9]{3,}$",
+          "example": "ATC-STD-000"
+        },
+        "requirementId": {
+          "type": "string",
+          "pattern": "^REQ-(STD|REPO|SEC|PROTO|NET)-[0-9]{3,}$",
+          "example": "REQ-STD-001",
+          "note": "Kanonisch REQ-STD-NNN; geschlossene Domaenen-Subklassen gemaess Abschnitt 10; Erweiterung per SCR"
+        },
+        "findingId": {
+          "type": "string",
+          "pattern": "^F-[0-9]{3,}$",
+          "example": "F-001"
+        },
+        "changeRequestId": {
+          "type": "string",
+          "pattern": "^SCR-[0-9]{3,}$",
+          "example": "SCR-001"
+        },
+        "adrId": {
+          "type": "string",
+          "pattern": "^ADR-[0-9]{3,}$",
+          "example": "ADR-001",
+          "note": "Zentrales DECISIONS_REGISTER: grandfathered AD-NNN (reservedNames.grandfathered)"
+        },
+        "securityAdvisoryId": {
+          "type": "string",
+          "pattern": "^ATC-SA-[0-9]{3,}$",
+          "example": "ATC-SA-001"
+        },
+        "testCaseId": {
+          "type": "string",
+          "pattern": "^TC-[0-9]{3,}$",
+          "example": "TC-001"
+        },
+        "testSuiteId": {
+          "type": "string",
+          "pattern": "^TS-[0-9]{3,}$",
+          "example": "TS-001"
+        },
+        "gateId": {
+          "type": "string",
+          "pattern": "^GATE-[0-9]{3,}$",
+          "example": "GATE-001"
+        },
+        "schemaId": {
+          "type": "string",
+          "pattern": "^ATC-SCHEMA-[0-9]{3,}$",
+          "example": "ATC-SCHEMA-001"
+        },
+        "protocolId": {
+          "type": "string",
+          "pattern": "^ATC-PROTO-[0-9]{3,}$",
+          "example": "ATC-PROTO-001"
+        },
+        "specificationId": {
+          "type": "string",
+          "pattern": "^ATC-SPEC-[0-9]{3,}$",
+          "example": "ATC-SPEC-001"
+        },
+        "documentId": {
+          "type": "string",
+          "pattern": "^ATC-DOC-[0-9]{3,}$",
+          "example": "ATC-DOC-001"
+        },
+        "releaseId": {
+          "type": "string",
+          "pattern": "^ATC-REL-[0-9]+[.][0-9]+[.][0-9]+$",
+          "example": "ATC-REL-1.0.0"
+        },
+        "bugStandardId": {
+          "type": "string",
+          "pattern": "^ATC-STD-BUG-[0-9]{3,}$",
+          "example": "ATC-STD-BUG-001"
+        },
+        "testId": {
+          "type": "string",
+          "pattern": "^TEST-[0-9]{3,}$",
+          "example": "TEST-044"
+        },
+        "syncCheckId": {
+          "type": "string",
+          "pattern": "^SYNC-[0-9]{3,}$",
+          "example": "SYNC-012"
+        },
+        "auditRecordId": {
+          "type": "string",
+          "pattern": "^AUD-[0-9]{3,}$",
+          "example": "AUD-031"
+        },
+        "netStandardId": {
+          "type": "string",
+          "pattern": "^ATC-STD-NET-[0-9]{3,}$",
+          "example": "ATC-STD-NET-001"
+        },
+        "aiDevStandardId": {
+          "type": "string",
+          "pattern": "^ATC-STD-AI-DEV-[0-9]{3,}$",
+          "example": "ATC-STD-AI-DEV-001"
+        },
+        "aiAgentId": {
+          "type": "string",
+          "pattern": "^ATC-AI-(ARCH|DEV|TEST|SEC|DOC|AUDIT|RELEASE)-[0-9]{3,}$",
+          "example": "ATC-AI-DEV-001",
+          "note": "AI-Agenten-Identitaet (ATC-STD-AI-DEV-001 §1); GitHub-Bot-Account ist nur Ausfuehrungsidentitaet"
+        },
+        "aiTaskId": {
+          "type": "string",
+          "pattern": "^ATC-TASK-[0-9]{3,}$",
+          "example": "ATC-TASK-00427",
+          "note": "Verbindet Issue/Branch/Commits/PR/Tests/Doku/Audit (ATC-STD-AI-DEV-001 §7)"
+        },
+        "aiActionId": {
+          "type": "string",
+          "pattern": "^ACT-[0-9]{3,}$",
+          "example": "ACT-001",
+          "note": "Finding-zu-Action-Kette (ATC-STD-AI-DEV-001 §8)"
+        },
+        "aiAssumptionId": {
+          "type": "string",
+          "pattern": "^ASSUMPTION-A[0-9]{3,}$",
+          "example": "ASSUMPTION-A001",
+          "note": "AI Assumption Register (ATC-STD-AI-DEV-001 §10)"
+        },
+        "aasStandardId": {
+          "type": "string",
+          "pattern": "^ATC-AAS-[0-9]{3,}$",
+          "example": "ATC-AAS-025"
+        },
+        "a2aMessageId": {
+          "type": "string",
+          "pattern": "^A2A-[0-9]{3,}$",
+          "example": "A2A-000001"
+        }
+      }
     },
-    "requirementId": {
-     "type": "string",
-     "pattern": "^REQ-(STD|REPO|SEC|PROTO|NET)-[0-9]{3,}$",
-     "example": "REQ-STD-001",
-     "note": "Kanonisch REQ-STD-NNN; geschlossene Domaenen-Subklassen gemaess Abschnitt 10; Erweiterung per SCR"
+    "repositoryPatterns": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "canonical",
+        "families",
+        "grandfathered"
+      ],
+      "properties": {
+        "canonical": {
+          "type": "string",
+          "pattern": "^atc-[a-z0-9]+(-[a-z0-9]+)*$",
+          "example": "atc-standards-validator"
+        },
+        "families": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^(atc|atclang|globus|aurora)-[a-z0-9-]*$"
+          },
+          "description": "Projektfamilien-Namespaces (7.5): atc-*, atclang-*, globus-*, aurora-*"
+        },
+        "grandfathered": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "atclang",
+              "a-townchain",
+              "a-townchain-os",
+              "a-townchain-os-docs",
+              "globus-os",
+              "aurora-ai",
+              "genesis-engine",
+              "genesis-chronicles"
+            ]
+          },
+          "description": "Bestands-Repos behalten ihre Namen (7.3)"
+        }
+      }
     },
-    "findingId": {
-     "type": "string",
-     "pattern": "^F-[0-9]{3,}$",
-     "example": "F-001"
+    "filenamePatterns": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "standardDoc",
+        "schemaDoc",
+        "integrity",
+        "review",
+        "compliance",
+        "bugStandardDoc",
+        "netStandardDoc",
+        "aiDevStandardDoc"
+      ],
+      "properties": {
+        "standardDoc": {
+          "type": "string",
+          "pattern": "^ATC-STD-[0-9]{3,}[.]md$",
+          "example": "ATC-STD-000.md"
+        },
+        "schemaDoc": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+[.]schema[.](json|yaml)$",
+          "example": "naming-conventions.schema.json"
+        },
+        "integrity": {
+          "type": "string",
+          "pattern": "^ATC-STD-[0-9]{3,}[.]integrity[.]yaml$"
+        },
+        "review": {
+          "type": "string",
+          "pattern": "^ATC-STD-[0-9]{3,}[.]review[.]yaml$"
+        },
+        "compliance": {
+          "type": "string",
+          "pattern": "^ATC-STD-[0-9]{3,}[.]compliance[.]yaml$"
+        },
+        "bugStandardDoc": {
+          "type": "string",
+          "pattern": "^ATC-STD-BUG-[0-9]{3,}[.]md$",
+          "example": "ATC-STD-BUG-001.md"
+        },
+        "netStandardDoc": {
+          "type": "string",
+          "pattern": "^ATC-STD-NET-[0-9]{3,}[.]md$",
+          "example": "ATC-STD-NET-001.md"
+        },
+        "aiDevStandardDoc": {
+          "type": "string",
+          "pattern": "^ATC-STD-AI-DEV-[0-9]{3,}[.]md$",
+          "example": "ATC-STD-AI-DEV-001.md"
+        }
+      }
     },
-    "changeRequestId": {
-     "type": "string",
-     "pattern": "^SCR-[0-9]{3,}$",
-     "example": "SCR-001"
+    "versionPatterns": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "semver"
+      ],
+      "properties": {
+        "semver": {
+          "type": "string",
+          "pattern": "^[0-9]+[.][0-9]+[.][0-9]+$",
+          "example": "1.0.0",
+          "note": "Version getrennt von Identitaet (7.4); Pinning via ID@version"
+        }
+      }
     },
-    "adrId": {
-     "type": "string",
-     "pattern": "^ADR-[0-9]{3,}$",
-     "example": "ADR-001",
-     "note": "Zentrales DECISIONS_REGISTER: grandfathered AD-NNN (reservedNames.grandfathered)"
+    "extensionRules": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "allowed",
+        "prohibited"
+      ],
+      "properties": {
+        "allowed": {
+          "type": "array",
+          "items": {
+            "enum": [
+              ".md",
+              ".schema.json",
+              ".schema.yaml",
+              ".yaml",
+              ".json"
+            ]
+          },
+          "description": "Definierte Extensions fuer Governance-Dokumente"
+        },
+        "prohibited": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Ungueltig: Unterstriche (atc_std_000.md), Leerzeichen (ATC Standard 000.md), Status-/Final-Marker (standard-final.md, standard-final-v2.md)"
+        }
+      }
     },
-    "securityAdvisoryId": {
-     "type": "string",
-     "pattern": "^ATC-SA-[0-9]{3,}$",
-     "example": "ATC-SA-001"
-    },
-    "testCaseId": {
-     "type": "string",
-     "pattern": "^TC-[0-9]{3,}$",
-     "example": "TC-001"
-    },
-    "testSuiteId": {
-     "type": "string",
-     "pattern": "^TS-[0-9]{3,}$",
-     "example": "TS-001"
-    },
-    "gateId": {
-     "type": "string",
-     "pattern": "^GATE-[0-9]{3,}$",
-     "example": "GATE-001"
-    },
-    "schemaId": {
-     "type": "string",
-     "pattern": "^ATC-SCHEMA-[0-9]{3,}$",
-     "example": "ATC-SCHEMA-001"
-    },
-    "protocolId": {
-     "type": "string",
-     "pattern": "^ATC-PROTO-[0-9]{3,}$",
-     "example": "ATC-PROTO-001"
-    },
-    "specificationId": {
-     "type": "string",
-     "pattern": "^ATC-SPEC-[0-9]{3,}$",
-     "example": "ATC-SPEC-001"
-    },
-    "documentId": {
-     "type": "string",
-     "pattern": "^ATC-DOC-[0-9]{3,}$",
-     "example": "ATC-DOC-001"
-    },
-    "releaseId": {
-     "type": "string",
-     "pattern": "^ATC-REL-[0-9]+[.][0-9]+[.][0-9]+$",
-     "example": "ATC-REL-1.0.0"
-    },
-    "bugStandardId": {
-     "type": "string",
-     "pattern": "^ATC-STD-BUG-[0-9]{3,}$",
-     "example": "ATC-STD-BUG-001"
-    },
-    "testId": {
-     "type": "string",
-     "pattern": "^TEST-[0-9]{3,}$",
-     "example": "TEST-044"
-    },
-    "syncCheckId": {
-     "type": "string",
-     "pattern": "^SYNC-[0-9]{3,}$",
-     "example": "SYNC-012"
-    },
-    "auditRecordId": {
-     "type": "string",
-     "pattern": "^AUD-[0-9]{3,}$",
-     "example": "AUD-031"
-    },
-    "netStandardId": {
-     "type": "string",
-     "pattern": "^ATC-STD-NET-[0-9]{3,}$",
-     "example": "ATC-STD-NET-001"
-    },
-    "aiDevStandardId": {
-     "type": "string",
-     "pattern": "^ATC-STD-AI-DEV-[0-9]{3,}$",
-     "example": "ATC-STD-AI-DEV-001"
-    },
-    "aiAgentId": {
-     "type": "string",
-     "pattern": "^ATC-AI-(ARCH|DEV|TEST|SEC|DOC|AUDIT|RELEASE)-[0-9]{3,}$",
-     "example": "ATC-AI-DEV-001",
-     "note": "AI-Agenten-Identitaet (ATC-STD-AI-DEV-001 §1); GitHub-Bot-Account ist nur Ausfuehrungsidentitaet"
-    },
-    "aiTaskId": {
-     "type": "string",
-     "pattern": "^ATC-TASK-[0-9]{3,}$",
-     "example": "ATC-TASK-00427",
-     "note": "Verbindet Issue/Branch/Commits/PR/Tests/Doku/Audit (ATC-STD-AI-DEV-001 §7)"
-    },
-    "aiActionId": {
-     "type": "string",
-     "pattern": "^ACT-[0-9]{3,}$",
-     "example": "ACT-001",
-     "note": "Finding-zu-Action-Kette (ATC-STD-AI-DEV-001 §8)"
-    },
-    "aiAssumptionId": {
-     "type": "string",
-     "pattern": "^ASSUMPTION-A[0-9]{3,}$",
-     "example": "ASSUMPTION-A001",
-     "note": "AI Assumption Register (ATC-STD-AI-DEV-001 §10)"
+    "reservedNames": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "placeholders",
+        "statusMarkers",
+        "legacyRanges",
+        "grandfathered"
+      ],
+      "properties": {
+        "placeholders": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "NNN",
+              "X.Y.Z"
+            ]
+          },
+          "description": "Platzhalter, keine IDs"
+        },
+        "statusMarkers": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "DRAFT",
+              "REVIEW",
+              "CANDIDATE",
+              "APPROVED",
+              "STABLE",
+              "FINAL"
+            ]
+          },
+          "description": "Status ist niemals Bestandteil der ID (7.1)"
+        },
+        "legacyRanges": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "ATC-01..99",
+              "ATC-0001..0008",
+              "ATS-1000..1007"
+            ]
+          },
+          "description": "Legacy-Serien: Nummerierung bleibt gueltig, keine Neuallokation (7.9)"
+        },
+        "grandfathered": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^AD-[0-9]{3,}$"
+          },
+          "description": "DECISIONS_REGISTER-Form AD-NNN als Legacy-Form von ADR-NNN (7.9)"
+        }
+      }
     }
-   }
-  },
-  "repositoryPatterns": {
-   "type": "object",
-   "additionalProperties": false,
-   "required": [
-    "canonical",
-    "families",
-    "grandfathered"
-   ],
-   "properties": {
-    "canonical": {
-     "type": "string",
-     "pattern": "^atc-[a-z0-9]+(-[a-z0-9]+)*$",
-     "example": "atc-standards-validator"
-    },
-    "families": {
-     "type": "array",
-     "items": {
-      "type": "string",
-      "pattern": "^(atc|atclang|globus|aurora)-[a-z0-9-]*$"
-     },
-     "description": "Projektfamilien-Namespaces (7.5): atc-*, atclang-*, globus-*, aurora-*"
-    },
-    "grandfathered": {
-     "type": "array",
-     "items": {
-      "enum": [
-       "atclang",
-       "a-townchain",
-       "a-townchain-os",
-       "a-townchain-os-docs",
-       "globus-os",
-       "aurora-ai",
-       "genesis-engine",
-       "genesis-chronicles"
-      ]
-     },
-     "description": "Bestands-Repos behalten ihre Namen (7.3)"
-    }
-   }
-  },
-  "filenamePatterns": {
-   "type": "object",
-   "additionalProperties": false,
-   "required": [
-    "standardDoc",
-    "schemaDoc",
-    "integrity",
-    "review",
-    "compliance",
-    "bugStandardDoc",
-    "netStandardDoc",
-    "aiDevStandardDoc"
-   ],
-   "properties": {
-    "standardDoc": {
-     "type": "string",
-     "pattern": "^ATC-STD-[0-9]{3,}[.]md$",
-     "example": "ATC-STD-000.md"
-    },
-    "schemaDoc": {
-     "type": "string",
-     "pattern": "^[a-z0-9-]+[.]schema[.](json|yaml)$",
-     "example": "naming-conventions.schema.json"
-    },
-    "integrity": {
-     "type": "string",
-     "pattern": "^ATC-STD-[0-9]{3,}[.]integrity[.]yaml$"
-    },
-    "review": {
-     "type": "string",
-     "pattern": "^ATC-STD-[0-9]{3,}[.]review[.]yaml$"
-    },
-    "compliance": {
-     "type": "string",
-     "pattern": "^ATC-STD-[0-9]{3,}[.]compliance[.]yaml$"
-    },
-    "bugStandardDoc": {
-     "type": "string",
-     "pattern": "^ATC-STD-BUG-[0-9]{3,}[.]md$",
-     "example": "ATC-STD-BUG-001.md"
-    },
-    "netStandardDoc": {
-     "type": "string",
-     "pattern": "^ATC-STD-NET-[0-9]{3,}[.]md$",
-     "example": "ATC-STD-NET-001.md"
-    },
-    "aiDevStandardDoc": {
-     "type": "string",
-     "pattern": "^ATC-STD-AI-DEV-[0-9]{3,}[.]md$",
-     "example": "ATC-STD-AI-DEV-001.md"
-    }
-   }
-  },
-  "versionPatterns": {
-   "type": "object",
-   "additionalProperties": false,
-   "required": [
-    "semver"
-   ],
-   "properties": {
-    "semver": {
-     "type": "string",
-     "pattern": "^[0-9]+[.][0-9]+[.][0-9]+$",
-     "example": "1.0.0",
-     "note": "Version getrennt von Identitaet (7.4); Pinning via ID@version"
-    }
-   }
-  },
-  "extensionRules": {
-   "type": "object",
-   "additionalProperties": false,
-   "required": [
-    "allowed",
-    "prohibited"
-   ],
-   "properties": {
-    "allowed": {
-     "type": "array",
-     "items": {
-      "enum": [
-       ".md",
-       ".schema.json",
-       ".schema.yaml",
-       ".yaml",
-       ".json"
-      ]
-     },
-     "description": "Definierte Extensions fuer Governance-Dokumente"
-    },
-    "prohibited": {
-     "type": "array",
-     "items": {
-      "type": "string"
-     },
-     "description": "Ungueltig: Unterstriche (atc_std_000.md), Leerzeichen (ATC Standard 000.md), Status-/Final-Marker (standard-final.md, standard-final-v2.md)"
-    }
-   }
-  },
-  "reservedNames": {
-   "type": "object",
-   "additionalProperties": false,
-   "required": [
-    "placeholders",
-    "statusMarkers",
-    "legacyRanges",
-    "grandfathered"
-   ],
-   "properties": {
-    "placeholders": {
-     "type": "array",
-     "items": {
-      "enum": [
-       "NNN",
-       "X.Y.Z"
-      ]
-     },
-     "description": "Platzhalter, keine IDs"
-    },
-    "statusMarkers": {
-     "type": "array",
-     "items": {
-      "enum": [
-       "DRAFT",
-       "REVIEW",
-       "CANDIDATE",
-       "APPROVED",
-       "STABLE",
-       "FINAL"
-      ]
-     },
-     "description": "Status ist niemals Bestandteil der ID (7.1)"
-    },
-    "legacyRanges": {
-     "type": "array",
-     "items": {
-      "enum": [
-       "ATC-01..99",
-       "ATC-0001..0008",
-       "ATS-1000..1007"
-      ]
-     },
-     "description": "Legacy-Serien: Nummerierung bleibt gueltig, keine Neuallokation (7.9)"
-    },
-    "grandfathered": {
-     "type": "array",
-     "items": {
-      "type": "string",
-      "pattern": "^AD-[0-9]{3,}$"
-     },
-     "description": "DECISIONS_REGISTER-Form AD-NNN als Legacy-Form von ADR-NNN (7.9)"
-    }
-   }
   }
- }
 }

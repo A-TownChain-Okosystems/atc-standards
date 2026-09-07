@@ -1,0 +1,40 @@
+---
+standard:
+  id: ATC-AAS-016
+  title: "ATC-AAS-016 — Agent PR Standard"
+  version: "1.0.0"
+  status: candidate
+  category: aas
+  authority: A-TownChain Ecosystems
+  owner: ShivaCoreDev
+  created: "2026-09-07"
+  updated: "2026-09-07"
+  normative: true
+  supersedes: []
+  superseded_by: null
+---
+
+# ATC-AAS-016 — Agent PR Standard (v1.0.0, CANDIDATE)
+
+> **Status:** CANDIDATE · **Priorität:** P0 · **Erweitert:** ATC-STD-AI-DEV-007 §4 (PR-Pflichtstruktur), AAS-009 (Änderungsdokumentation)
+
+## 1. KI-Kennzeichnung (Pflichtblock am PR-Anfang)
+
+```yaml
+created_by:
+  type: ai_agent
+  agent_id: ATC-AI-DEV-001
+  agent_version: 1.2.0
+```
+
+## 2. Pflichtabschnitte (Erweiterung der 8 Abschnitte aus AI-DEV-007 §4)
+
+Ziel · Änderungen · betroffene Dateien · Tests (Evidenzblock AAS-010) ·
+Risiken · Breaking Changes · Dokumentationsstatus · Security-Auswirkungen ·
+Rollback-Informationen (AAS-009 §1).
+
+## 3. Merge-Gate (unverändert)
+
+AI-DEV-007 §6: Struktur + grüner CI-Run + Task-Status READY_FOR_REVIEW +
+Human-Approval, falls gefordert. `Human Decision Required: Yes` zwingt zur
+dokumentierten Owner-Entscheidung (AI-DEV-011 §3).

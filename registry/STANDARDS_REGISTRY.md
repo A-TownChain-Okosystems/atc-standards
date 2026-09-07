@@ -269,3 +269,28 @@ ATC-01…99 (Registry Tier 1-10) sind die ausdifferenzierte Nachfolger-Registry.
 ---
 
 *Standards Registry v1.0.0 — Aurora (MasterBrain · Base44) · 05.07.2026 · 99 ATC-Standards*
+| ATC-AAS-001 | Agent Identity Standard | candidate | 1.0.0 | aas (P0) |
+| ATC-AAS-002 | Agent Capability Standard | candidate | 1.0.0 | aas (P0) |
+| ATC-AAS-003 | Agent Permission Standard | candidate | 1.0.0 | aas (P0) |
+| ATC-AAS-004 | Agent Scope Standard | candidate | 1.0.0 | aas (P0) |
+| ATC-AAS-005 | Agent Discovery Standard | candidate | 1.0.0 | aas (P0) |
+| ATC-AAS-006 | Agent Context Standard | candidate | 1.0.0 | aas (P1) |
+| ATC-AAS-007 | Agent Task Standard | candidate | 1.0.0 | aas (P0) |
+| ATC-AAS-008 | Agent Workflow Standard | candidate | 1.0.0 | aas (P0) |
+| ATC-AAS-009 | Agent Change Standard | candidate | 1.0.0 | aas (P1) |
+| ATC-AAS-010 | Agent Evidence Standard | candidate | 1.0.0 | aas (P0) |
+| ATC-AAS-011 | Agent Verification Standard | candidate | 1.0.0 | aas (P0) |
+| ATC-AAS-012 | Agent Hallucination / Assumption Standard | candidate | 1.0.0 | aas (P0) |
+| ATC-AAS-013 | Agent Conflict Resolution Standard | candidate | 1.0.0 | aas (P1) |
+| ATC-AAS-014 | Agent Security Standard | candidate | 1.0.0 | aas (P0) |
+| ATC-AAS-015 | Agent Git Standard | candidate | 1.0.0 | aas (P0) |
+| ATC-AAS-016 | Agent PR Standard | candidate | 1.0.0 | aas (P0) |
+| ATC-AAS-017 | Agent Human Approval Standard | candidate | 1.0.0 | aas (P0) |
+| ATC-AAS-018 | Agent Audit Trail Standard | candidate | 1.0.0 | aas (P0) |
+| ATC-AAS-019 | Agent Handoff Standard | candidate | 1.0.0 | aas (P1) |
+| ATC-AAS-020 | Agent Failure Standard | candidate | 1.0.0 | aas (P1) |
+| ATC-AAS-021 | Agent Quality Standard | candidate | 1.0.0 | aas (P2) |
+| ATC-AAS-022 | Agent Versioning Standard | candidate | 1.0.0 | aas (P1) |
+| ATC-AAS-023 | Agent Role Standard | candidate | 1.0.0 | aas (P2) |
+| ATC-AAS-024 | Agent-to-Agent Protocol Standard | candidate | 1.0.0 | aas (P1) |
+| ATC-AAS-025 | Agent Repository Manifest Standard | candidate | 1.0.0 | aas (P1) |

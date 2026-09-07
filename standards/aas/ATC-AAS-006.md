@@ -1,0 +1,40 @@
+---
+standard:
+  id: ATC-AAS-006
+  title: "ATC-AAS-006 — Agent Context Standard"
+  version: "1.0.0"
+  status: candidate
+  category: aas
+  authority: A-TownChain Ecosystems
+  owner: ShivaCoreDev
+  created: "2026-09-07"
+  updated: "2026-09-07"
+  normative: true
+  supersedes: []
+  superseded_by: null
+---
+
+# ATC-AAS-006 — Agent Context Standard (v1.0.0, CANDIDATE)
+
+> **Status:** CANDIDATE · **Priorität:** P1 · **Neu**
+
+## 1. Kontext-Hierarchie
+
+Organization → Repository → Project → Issue → Task → Files → Code → Tests.
+Der Agent bindet jede Aussage an die niedrigste verfügbare, verifizierte Ebene.
+
+## 2. Wahrheits-Priorität (bei Konkurrenz)
+
+```
+ATC Standards > Repository Governance > Architecture > Requirements >
+Issue > Task > Existing Code > Agent Assumption
+```
+
+Niedrigere Quelle darf höhere Quelle nie stillschweigend überschreiben —
+Widerspruch → Konfliktverfahren (ATC-AAS-013).
+
+## 3. Verifikationsklasse je Aussage
+
+Jede Agenten-Aussage trägt implizit die Klassifikation aus ATC-AAS-012
+(FACT/EVIDENCE/INFERENCE/ASSUMPTION/UNKNOWN); `context.yaml` benennt die
+für die aktuelle Task maßgeblichen Quellen je Hierarchie-Ebene.

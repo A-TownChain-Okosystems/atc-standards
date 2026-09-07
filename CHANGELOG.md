@@ -1,3 +1,26 @@
+## 2026-09-07 — NEU: Standardblock ATC-AAS (AI Agent Standards) — 25 Standards als CANDIDATE
+- **Neuer Standardbereich ATC-AAS** (Owner-Entwurf Michael Wroblewski,
+  07.09.2026, Builder-Chat): 25 Agenten-Standards ATC-AAS-001…025 in
+  standards/aas/, alle v1.0.0 CANDIDATE (Owner-§9-Freigabe ausstehend).
+- **P0 (12):** 001 Identity, 003 Permission, 004 Scope, 005 Discovery,
+  007 Task, 008 Workflow, 010 Evidence, 011 Verification, 014 Security,
+  016 PR, 017 Human Approval, 018 Audit Trail.
+- **P1 (8):** 006 Context, 009 Change, 013 Conflict Resolution, 019 Handoff,
+  020 Failure, 022 Versioning, 024 A2A Protocol, 025 Repository Manifest.
+- **P2 (2):** 021 Quality/KPIs, 023 Roles; (002 Capability als P0-Zusatz).
+- **Aufbau ohne Duplikate:** Jeder AAS-Standard erweitert/konkretisiert die
+  freigegebenen AI-DEV-Standards 001…012 per Cross-Referenz; neu sind
+  Scope, Context-Priorität, Halluzinations-Taxonomie (FACT/EVIDENCE/
+  INFERENCE/ASSUMPTION/UNKNOWN), Conflict Resolution, Failure (max_attempts),
+  KPIs, Agent-Versioning, Rollen, A2A-Protokoll, Repo-Manifest.
+- **Harmonisierungen:** Ablageort .github/ai/ statt .agent/ (AI-DEV-001 §6
+  approved); Commit-Typ-Erweiterung (security/build/ci) via SCR-0006
+  (AI-DEV-007 unveränderlich, §30).
+- Schema: aasStandardId (^ATC-AAS-NNN) + a2aMessageId (^A2A-NNNNNN)
+  ergänzt; Templates: templates/aas/repository-manifest.template.yaml.
+- Registry: 66 Standards (41 approved + 25 candidate), Graph azyklisch
+  (43 Knoten deklariert), Versionshistorie 66/66.
+
 ## 2026-09-07 — Owner-Sammelfreigabe: ALLE restlichen offenen Punkte APPROVED — 41/41 Standards normativ
 - **27 bestehende Standards freigegeben** (draft/proposed/candidate →
   APPROVED): ATC-STD-201/202/203, BUG-001..004, NET-001..008, ATC-STD-100,

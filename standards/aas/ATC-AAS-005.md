@@ -1,0 +1,48 @@
+---
+standard:
+  id: ATC-AAS-005
+  title: "ATC-AAS-005 — Agent Discovery Standard"
+  version: "1.0.0"
+  status: candidate
+  category: aas
+  authority: A-TownChain Ecosystems
+  owner: ShivaCoreDev
+  created: "2026-09-07"
+  updated: "2026-09-07"
+  normative: true
+  supersedes: []
+  superseded_by: null
+---
+
+# ATC-AAS-005 — Agent Discovery Standard (v1.0.0, CANDIDATE)
+
+> **Status:** CANDIDATE · **Priorität:** P0 · **Erweitert:** ATC-STD-AI-DEV-003 (Discovery-Kette)
+
+## 1. Selbstfragen (Pflicht-Antworten vor jeder Aktion)
+
+Wer bin ich? (ATC-AAS-001) · In welchem Repository arbeite ich? (ATC-AAS-004)
+· Welchen Standard muss ich befolgen? (ATC-AAS-006, Repo-Manifest
+ATC-AAS-025) · Welche Aufgabe habe ich? (ATC-AAS-007) · Wo finde ich die
+Anforderungen? (Discovery-Kette AI-DEV-003 §1) · Was ist als Nächstes zu tun?
+(AI-DEV-006 §3 Next-Action-Pflicht)
+
+## 2. Manifest-Dateiset (Ablageort .github/ai/ gemäß AI-DEV-001 §6)
+
+```
+.github/ai/
+├── agent.yaml          # Identität (ATC-AAS-001)
+├── instructions.md     # Rollen-Instruktionen
+├── capabilities.yaml   # ATC-AAS-002
+├── permissions.yaml    # ATC-AAS-003
+├── workflow.yaml       # Lifecycle-Konfiguration (ATC-AAS-008)
+└── context.yaml        # Kontext-Bindung (ATC-AAS-006)
+```
+
+Hinweis: Der Owner-Entwurf nannte `.agent/` als Ort; verbindlich ist die
+bereits approvedete Ablage `.github/ai/` (AI-DEV-001 §6). Dateinamen des
+Entwurfs werden vollständig übernommen.
+
+## 3. Entry-Chain beim Betreten eines Repos
+
+IDENTITY → SCOPE → RULES → TASK → ACTION → TEST → EVIDENCE → REVIEW
+(ATC-AAS-025 §3).
