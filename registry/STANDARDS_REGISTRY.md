@@ -17,6 +17,22 @@
 
 ---
 
+## Aus dem Wiki konsolidiert (AD-032, 07.09.2026)
+
+| Dokument | Serie | Quelle (Hub-Archiv) | Status |
+|----------|-------|---------------------|--------|
+| ats/ATS_STANDARDS.md | ATS-1000…1007 (ShivaOS Kernel/Stack) | wiki/standards/docs + module-docs/kernel | DRAFT v1.0.0 |
+| atc/ATC_STANDARDS.md | ATC-0001…0008 (Core-Protokolle) | wiki/standards/docs (vollstaendige Fassung) | DRAFT v1.0.0 |
+| atc/ATC_TOKEN_STANDARD.md | ATC-001/8300/9000/9900 (Uebersicht) | docs/contracts | Referenz |
+| licensing/ATVM_LICENSE_GATE_SPEC.md | ATC-LIC-Enforcement (ATVM Gate) | docs/compliance | SPEC |
+| licensing/IP_LICENSE_DASHBOARD_SPEC.md | ATC-LIC Dashboard (GlobusOS) | docs/compliance | SPEC |
+| licensing/SMART_CONTRACT_RICHTLINIE.md | BaFin-Richtlinie Smart Contracts | docs/compliance | NORMATIV |
+
+Hinweis: ATC-0001ff/ATS-1000ff sind die historischen Kern-Serien (Juni 2026);
+ATC-01…99 (Registry Tier 1-10) sind die ausdifferenzierte Nachfolger-Registry.
+
+---
+
 ## Tier 1 — Blockchain Core (ATC-01–10)
 
 | ID | Titel | Status | Sprint | Implementierung |

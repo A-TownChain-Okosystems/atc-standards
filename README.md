@@ -23,9 +23,9 @@ Das Repositorium selbst erfuellt den ATC-STD-REPO-001 (self-compliant).
 
 ## 3. Architecture
 
-- `atc/` — 102 Blockchain-/AI-/ATCLang-Standards (ATC-01 bis ATC-99, ATC-LIC,
-  ATC_ECOSYSTEM_STANDARDS)
-- `ats/` — ATS-Standards (ATS-LIC System-/Hardware-Lizenz)
+- `atc/` — 105 Standards: ATC-01…99 + ATC-0001…0008 (ATC_STANDARDS.md,
+  Core-Protokolle) + ATC_TOKEN_STANDARD + ATC-LIC + ATC_ECOSYSTEM_STANDARDS
+- `ats/` — ATS-Standards: ATS-1000…1007 (ATS_STANDARDS.md, ShivaOS Kernel/Stack) + ATS-LIC System-/Hardware-Lizenz
 - `standards/repository/` — ATC-STD-REPO-001 v1.0.0 FORMALE SPEZIFIKATION
   (MUST/SHOULD/MAY, Compliance-Matrix R0-R4, Validator-Regeln V-01…V-16),
   -002 (Naming, Classification, Ownership, Lifecycle, S0-S4, Dependency Graph),
@@ -37,12 +37,14 @@ Das Repositorium selbst erfuellt den ATC-STD-REPO-001 (self-compliant).
 - `templates/` — repository- (.atc-Vorlagen, PR-Template) und workflow-Vorlagen
 - `docs/governance/` — Governance-Chain-Doku
 - `registry/` — STANDARDS_REGISTRY.md (Master-Registry), OVERVIEW.md
+- `licensing/` — Lizenz-Standard-Spezifikationen: ATVM License Gate, IP & License
+  Dashboard (GlobusOS), Smart-Contract-Richtlinie (BaFin)
 - `references/` — .atc-Referenzimplementierungen (registry.atc, Standards-
   Vertragsmuster) + ATC-Modul-Doku
 
 ## 4. Features
 
-- 109 Standard-Dokumente vollstaendig zentralisiert
+- 115 Standard-Dokumente vollstaendig zentralisiert
 - Normative 22-Repository-Klassifizierung (ATC-STD-REPO-002)
 - Governance-Standards mit Compliance-Level R0-R4
 - Maschinenlesbare Referenzvertraege (.atc)

@@ -1,5 +1,16 @@
 # Changelog — atc-standards
 
+## [1.2.0] — 2026-09-07 (AD-032)
+- Wiki-Konsolidierung II: 6 weitere Standards aus dem Docs-Hub uebernommen —
+  ats/ATS_STANDARDS.md (ATS-1000…1007 ShivaOS Kernel/Stack, vollstaendige
+  283-Zeilen-Fassung), atc/ATC_STANDARDS.md (ATC-0001…0008 Core-Protokolle,
+  vollstaendige 233-Zeilen-Fassung mit ATC-9000-Sektion),
+  atc/ATC_TOKEN_STANDARD.md (ATC-001/8300/9000/9900-Referenz),
+  licensing/ATVM_LICENSE_GATE_SPEC.md, licensing/IP_LICENSE_DASHBOARD_SPEC.md,
+  licensing/SMART_CONTRACT_RICHTLINIE.md (BaFin-Richtlinie)
+- README-Struktur und Std.-Zaehler aktualisiert (115 Dokumente)
+
+
 ## [1.1.0] — 2026-09-07 (AD-031)
 - ATC-STD-REPO-001 v1.0.0 FORMALE SPEZIFIKATION: MUST/SHOULD/MAY (RFC 2119),
   Compliance-Matrix R0-R4 (M-01…M-16), Validator-Regeln V-01…V-16
