@@ -1,7 +1,7 @@
 # ATC Standards Registry — das Herzstueck (ATC-STD-000 §24, AD-034)
 # Kein Eintrag = kein Standard. Status gemaess Lifecycle IDEA…RETIRED.
 standards:
-  - {id: ATC-STD-000, title: "Standards Governance & Specification Standard", version: "1.0.0", status: candidate, category: governance, authority: "A-TownChain Ecosystems", owner: ShivaCoreDev, normative: true, file: governance/ATC-STD-000.md}
+  - {id: ATC-STD-000, title: "Standards Governance & Specification Standard", version: "1.0.0", status: approved, category: governance, authority: "A-TownChain Ecosystems", owner: ShivaCoreDev, normative: true, file: governance/ATC-STD-000.md}
   - {id: ATC-STD-201, title: "Repository Structure Standard",                    version: "1.0.1", status: draft,     category: repository, authority: "A-TownChain Ecosystems", owner: ShivaCoreDev, normative: true,  file: standards/repository/ATC-STD-201.md, supersedes: "ATC-STD-REPO-001@1.0.x"}
   - {id: ATC-STD-202, title: "Repository Naming & Classification Standard",      version: "1.0.1", status: proposed,  category: repository, authority: "A-TownChain Ecosystems", owner: ShivaCoreDev, normative: true,  file: standards/repository/ATC-STD-202.md, supersedes: "ATC-STD-REPO-002@1.0.x"}
   - {id: ATC-STD-203, title: "Repository Security & Release Standard",            version: "1.0.1", status: proposed,  category: repository, authority: "A-TownChain Ecosystems", owner: ShivaCoreDev, normative: true,  file: standards/repository/ATC-STD-203.md, supersedes: "ATC-STD-REPO-003@1.0.x"}

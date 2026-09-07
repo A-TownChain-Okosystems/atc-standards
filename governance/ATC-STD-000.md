@@ -2,7 +2,7 @@ standard:
   id: ATC-STD-000
   title: "Standards Governance & Specification Standard"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: governance
   authority: A-TownChain Ecosystems
   owner: ShivaCoreDev
@@ -499,12 +499,13 @@ ATC-STD-000 v1.0.0
     +-- Technical Review    -> PASS   (07.09.2026)
     +-- Security Review      -> PASS   (07.09.2026)
     +-- Architecture Review  -> PASS   (07.09.2026)
-    +-- Approval             -> BLOCKED (Owner-Entscheidung ausstehend)
+    +-- Approval             -> APPROVED (07.09.2026, Owner-Mandat)
 ```
 
-Pfad: DRAFT -> REVIEW -> CANDIDATE. Erst nach Owner-Approval: APPROVED ->
-STABLE. Damit ist ATC-STD-000 keine Ausnahme von den Regeln, die es
-definiert — die Verfassung ist durch die eigene Kette gelaufen.
+Pfad: DRAFT -> REVIEW -> CANDIDATE -> APPROVED (07.09.2026, Owner-Freigabe).
+Naechster Schritt: STABLE per Owner-Entscheidung. Damit ist ATC-STD-000
+keine Ausnahme von den Regeln, die es definiert — die Verfassung ist
+vollstaendig durch die eigene Kette gelaufen.
 
 ## Changelog
 

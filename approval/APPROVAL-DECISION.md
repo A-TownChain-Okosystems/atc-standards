@@ -1,6 +1,15 @@
 # Approval Decision — ATC-STD-000 v1.0.0 (Owner-Formalfassung)
 
-**Datum:** 07.09.2026 · **Entscheider:** Owner (BLOCKED — ausstehend) · **Status: PENDING**
+**Datum:** 07.09.2026 · **Entscheider:** Owner (Michael Wroblewski) · **Status: APPROVED**
+
+## Owner-Approval
+
+**Entscheidung:** **APPROVED** am 07.09.2026, 16:30 UTC+2.
+Owner: Michael Wroblewski — Freigabe der v1.0.0-Formalfassung (36 Abschnitte)
+nach Review-Chain 3/3 PASS, 20/20 Requirement-Matrix, 0 Blocker.
+Lifecycle-Uebergang: CANDIDATE → APPROVED (§9). In derselben Entscheidung
+angenommen: SCR-0003 (§34-Integritaet, Option B) und SCR-0004 (Rollenmodell,
+umgesetzt als v1.1.0 / §14-Erweiterung).
 
 ## Review-Chain Ergebnis (gegen die 35-Abschnitt-Formalfassung)
 
