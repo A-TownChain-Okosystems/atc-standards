@@ -1,5 +1,32 @@
 # Changelog
 
+## [1.4.36] - 2026-09-08
+
+### Added
+
+- **ATC-PROTO-P2P-001 v1.0.0 DRAFT** (SCR-0027) — erste formale Protokoll-Spezifikation
+  unter dem Dachstandard ATC-STD-PROTOCOL-001, Musterbildner für alle 26 Familien:
+  - 22 REQ-P2P instanzieren alle 19 Dachstandard-Paragraphen
+  - v1.0.0-Envelope (9+1 Pflichtfelder inkl. Chain-ID 658467), kanonische Serialisierung
+    mit Signatur-Domain-Separation (ATC-P2P-v1)
+  - 13 Message-Types (9 aus ShivaCore K14 Ist + 4 NEU für den 6-Phasen-Handshake nach
+    PROTOCOL-001 §8: CapabilityExchange, AuthChallenge, AuthResponse, KeyExchange)
+  - Peer-Lifecycle (Disconnected/Connecting/Connected + NEU Banned/Verified),
+    Discovery mit Eclipse-/Subnetz-Regel, Gossip mit Seen-Set-Deduplizierung
+  - DID-basierte Authentication (K6/K6b Ed25519) + Capability-Authorization
+  - Threat Model mit ehrlichem Implementierungs-Status je der 12 Pflichtprüfungen
+  - Fehlerkatalog ATC-PROTO-P2P-001..019 (K14-Errors vollständig gemappt)
+  - Timeout-/Rate-Limiting-Defaults, Replay-Schutz (nonce/message_id/timestamp-window),
+    Observability- und Audit-Kopplung, 8 Kompatibilitätsarten, Upgrade-Kette mit
+    Human Gate, Deprecation v0.9 → v1.1.0 (Abschaltung v2.0.0)
+  - Ehrlichkeitsregel (REQ-PROTO-021): K14-Ist-Zustand als v0.9-Kompatibilitätsmodus
+    dokumentiert; Registry-Status bleibt `draft` bis zur verifizierten v1.0.0-Implementierung
+- **protocols/p2p/** als Ablageort für Protokoll-Spezifikationen (getrennt von
+  standards/ — Schichtentrennung Governance vs. Spezifikation)
+- **Generator:** SPEC_OVERRIDES-Hook in gen_protocol_registry.py — Registry-Eintrag
+  referenziert jetzt die formale Spezifikation (SSOT, keine Hand-Edits)
+
+
 ## [1.4.35] - 2026-09-08
 
 ### Added

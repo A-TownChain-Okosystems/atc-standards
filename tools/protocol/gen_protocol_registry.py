@@ -5,7 +5,7 @@ import yaml
 
 # (Domain, Name, Priorität, Status, Layer, Notiz) — 26 Familien gem. Owner-Matrix
 PROTOCOLS = [
-    ("P2P",        "ATC Peer-to-Peer Protocol",      "P1", "draft",  "L1/L3", "Impl.-Spuren: ShivaCore K12 (Netzwerk) + K14 (P2P-Consensus Foundation)"),
+    ("P2P",        "ATC Peer-to-Peer Protocol",      "P1", "draft",  "L1/L3", "Formale Spezifikation v1.0.0-DRAFT: protocols/p2p/ATC-PROTO-P2P-001.md (SCR-0027, 22 REQ-P2P, 6-Phasen-Handshake, v0.9-Kompatibilitaetsmodus; 30 Tests K14)"),
     ("NODE",       "ATC Node Communication",        "P1", "planned","L1",    "Node-Discovery/Management auf P2P aufbauend"),
     ("CONSENSUS",  "ATC Consensus Protocol",        "P1", "draft",  "L1/L3", "Impl.-Spuren: ShivaCore K16 (DAG+PoH+Validator+Voting+Finality)"),
     ("BLOCK",      "ATC Block Propagation",         "P1", "draft",  "L3",    "Impl.-Spuren: a-townchain Blockchain"),
@@ -32,6 +32,11 @@ PROTOCOLS = [
     ("UPGRADE",    "ATC Protocol Upgrade",           "P1", "planned","L0-L7", "Prozessnorm in ATC-STD-PROTOCOL-001 §19 verankert"),
     ("KERNEL",     "ATC Kernel Interface Protocol", "P2", "planned","L1",    "Syscall-Interface ATC-96 (ShivaCore K9)"),
 ]
+# Formale Spezifikationen (SCR-dokumentiert) — Override des Standard-Spezifikations-Texts
+SPEC_OVERRIDES = {
+    "P2P": "protocols/p2p/ATC-PROTO-P2P-001.md — formale Spezifikation v1.0.0-DRAFT (SCR-0027): 22 REQ-P2P, Envelope 9+1 Felder, 13 Message-Types, 6-Phasen-Handshake, v0.9-Kompatibilitaetsmodus (ShivaCore K12/K14), Threat Model, Fehlercodes ATC-PROTO-P2P-001..019",
+}
+
 assert len(PROTOCOLS) == 26, f"Erwartet 26 Protokollfamilien, gefunden {len(PROTOCOLS)}"
 STATUSES = {"planned", "draft", "active", "experimental", "deprecated"}
 assert all(s in STATUSES for _, _, _, s, _, _ in PROTOCOLS)
@@ -58,7 +63,7 @@ data = {
                 "status": s,
                 "priority": p,
                 "layer": lay,
-                "specification": f"Zu spezifizieren gem. ATC-STD-PROTOCOL-001 (SCR erforderlich)" if s == "planned" else f"Teilweise implementiert; formale Spezifikation gem. ATC-STD-PROTOCOL-001 nachzuziehen",
+                "specification": SPEC_OVERRIDES.get(d, f"Zu spezifizieren gem. ATC-STD-PROTOCOL-001 (SCR erforderlich)" if s == "planned" else f"Teilweise implementiert; formale Spezifikation gem. ATC-STD-PROTOCOL-001 nachzuziehen"),
                 "note": note,
             }
             for d, n, p, s, lay, note in PROTOCOLS
