@@ -334,6 +334,36 @@
           "pattern": "^COM-BUG-[0-9]{3,}$",
           "example": "COM-BUG-501",
           "note": "Compliance-Gates der Bug-Familie (ATC-STD-BUG-005 Abschnitt 17; SCR-0012)"
+        },
+        "auditStandardId": {
+          "type": "string",
+          "pattern": "^ATC-STD-AUDIT-[0-9]{3,}$",
+          "example": "ATC-STD-AUDIT-001",
+          "note": "Audit-Familie: Completeness & Audit (Kontrollschicht über allen Standards; Owner-Entwurf 07.09., SCR-0013)"
+        },
+        "auditRequirementId": {
+          "type": "string",
+          "pattern": "^REQ-AUDIT-[0-9]{3,}$",
+          "example": "REQ-AUDIT-001",
+          "note": "Requirements der AUDIT-Familie (SCR-0013)"
+        },
+        "auditDomainId": {
+          "type": "string",
+          "pattern": "^AUD-C[0-9]{2}$",
+          "example": "AUD-C13",
+          "note": "Audit-Domänen AUD-C01..AUD-C20 (ATC-STD-AUDIT-001 Abschnitt 4; SCR-0013)"
+        },
+        "auditGateId": {
+          "type": "string",
+          "pattern": "^AUD-G[0-9]{2}$",
+          "example": "AUD-G07",
+          "note": "Audit-Gates AUD-G01..AUD-G08, Release-Kette (ATC-STD-AUDIT-001 Abschnitt 18; SCR-0013)"
+        },
+        "auditRunId": {
+          "type": "string",
+          "pattern": "^AUD-[0-9]{4}-[0-9]{4,}$",
+          "example": "AUD-2026-0001",
+          "note": "Audit-Lauf-IDs: AUD-YYYY-NNNN, revisionsfähige Audit-Historie (SCR-0013; konsolidiert die Varianten AUD-NNNN/ATC-AUD-YYYY-NNNN aus dem Owner-Entwurf)"
         }
       }
     },
@@ -467,6 +497,11 @@
           "type": "string",
           "pattern": "^ATC-STD-VERSION-[0-9]{3,}[.]md$",
           "example": "ATC-STD-VERSION-001.md"
+        },
+        "auditStandardDoc": {
+          "type": "string",
+          "pattern": "^ATC-STD-AUDIT-[0-9]{3,}[.]md$",
+          "example": "ATC-STD-AUDIT-001.md"
         }
       }
     },

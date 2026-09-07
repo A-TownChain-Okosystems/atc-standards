@@ -342,3 +342,5 @@ versions:
   ATC-STD-BUG-005:
     - {version: "1.0.0", date: "2026-09-07", change: "Integration in die Bug-Familie: Owner-Entscheid ERR in Bug einarbeiten (Builder-Chat 22:35) — aus ATC-STD-ERR-001 v1.0.0 DRAFT (SCR-0011) wird ATC-STD-BUG-005 (SCR-0012); REQ-STD-141..164, COM-BUG-501..506; ERR-Familie aufgelöst (Schema: errorClassId, rootCauseCategoryId, bugComplianceId)"}
     - {version: "1.0.0", date: "2026-09-07", change: "Initial Release als ATC-STD-ERR-001: Owner-Entwurf Michael Wroblewski (Builder-Chat 07.09. 22:06), harmonisiert mit BUG-001..004, DESC-001, VERSION-001; 18 Fehlerklassen, 13 RC-Kategorien; SCR-0011"}
+  ATC-STD-AUDIT-001:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initial Release: Owner-Entwurf Michael Wroblewski (Builder-Chat 07.09. 22:15), harmonisiert mit BUG-001..005, VERSION-001, DESC-001, SC-003..005; 30 REQ-AUDIT, 6 COM-AUDIT-Gates, 20 Domänen, 8 Release-Gates, Completeness Score A-F, Audit-IDs AUD-YYYY-NNNN; SCR-0013"}

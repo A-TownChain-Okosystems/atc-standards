@@ -12,7 +12,11 @@ ATC-STD-BUG-005 v1.0.0 DRAFT (SCR-0011/0012): Fehleranalyse/RCA per Owner-Entsch
 REQ-STD-141..164, COM-BUG-501..506. Bug-Familie jetzt vollständig: Finding · Docs ·
 Lifecycle · Merge Gate · Error Analysis/RCA. §9-Freigabe ausstehend.
 
-Stand: 07.09.2026, 22:35 (Europe/Berlin) · Self-Compliance: R3 100/100 GATE PASS · Voll-Audit 103/103 Standards: ALLE CHECKS PASS
+ATC-STD-AUDIT-001 v1.0.0 DRAFT (SCR-0013): Completeness & Audit — Kontrollschicht über allen
+Standards; 20 Domänen, Traceability Matrix, Cross-System Integrity, 8 Release-Gates,
+Completeness Score A-F, AUD-YYYY-NNNN. BUG-005-Referenz AUD→AUDIT konsolidiert. §9-Freigabe ausstehend.
+
+Stand: 07.09.2026, 22:45 (Europe/Berlin) · Self-Compliance: R3 100/100 GATE PASS · Voll-Audit 103/103 Standards: ALLE CHECKS PASS
 
 ## Standards-System
 
@@ -32,7 +36,8 @@ Stand: 07.09.2026, 22:35 (Europe/Berlin) · Self-Compliance: R3 100/100 GATE PAS
 | ATC-STD-DESC-001 | Standard Description Standard (Beschreibung von Standards) | APPROVED — SCR-0008, §9-Freigabe 21:57 |
 | ATC-STD-VERSION-001 | ATC Versioning Standard (Software, Standards, APIs, Contracts, Protokolle, Releases) | APPROVED — SCR-0009, §9-Freigabe 21:57 |
 | ATC-STD-BUG-005 | Fehleranalyse- & Root-Cause-Analysis-Standard (Analyse-/QMS-Schicht der Bug-Familie) | DRAFT — SCR-0011/0012, §9-Freigabe ausstehend |
-| **Summe** | **106 Standards** | **105 APPROVED + 1 DRAFT** |
+| ATC-STD-AUDIT-001 | ATC Completeness & Audit Standard (Kontrollschicht über allen Standards) | DRAFT — SCR-0013, §9-Freigabe ausstehend |
+| **Summe** | **107 Standards** | **105 APPROVED + 2 DRAFT** |
 
 ## Qualitätssicherung (CI, self-compliant)
 

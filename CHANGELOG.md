@@ -1,5 +1,38 @@
 # Changelog
 
+## [1.4.10] - 2026-09-07
+
+### Added
+
+- **ATC-STD-AUDIT-001 v1.0.0 (DRAFT):** ATC Completeness & Audit Standard — die
+  Kontrollschicht über allen anderen ATC-Standards. 20 Audit-Domänen (AUD-C01..C20:
+  Anforderungen bis Gesamtintegrität), Completeness Score A–F, Pflichtprüfungskatalog
+  (Anforderungen/Architektur/Implementierung/Tests/Dokumentation), Traceability Matrix
+  (REQ→STD→ARCH→DESIGN→CODE→TEST→AUDIT→RELEASE→CHANGELOG), Artefakt-Vollständigkeit,
+  Open-Point-Indikatoren (TODO/FIXME/stub/mock/...), Dokumentations-Konsistenz,
+  Repository-/Versionierungs-/CHANGELOG-Prüfung (VERSION DRIFT, TRACEABILITY GAP),
+  Sicherheits-Audit (Code/Infra/Blockchain), Smart-Contract-Vollständigkeit (15 Artefakte),
+  KI-Agenten-Audit-Blöcke, Audit Gates AUD-G01..G08 (Release-Kette), Audit-Pyramide
+  (ATC-STD-000 → AUDIT-001 → Fach-Audits → Cross-System Integrity → Release Gate),
+  Audit Evidence (No Evidence → No Compliance), maschinenlesbares Audit Manifest,
+  Audit Trail AUD-YYYY-NNNN, Cross-System Integrity Audit (Standards↔Wiki↔Repo↔Code↔
+  Tests↔CI/CD↔Release↔CHANGELOG↔Roadmap↔Issues), Audit-DoD (17 Punkte).
+  30 REQ-AUDIT-Anforderungen, 6 COM-AUDIT-Gates. SCR-0013 (Harmonisierungen:
+  Severity-Aliase CRITICAL..INFO auf kanonisch S0..S4 gemappt, Audit-Lauf-ID auf
+  AUD-YYYY-NNNN konsolidiert, Findings im bestehenden F-NNN-System), Owner-Entwurf
+  Michael Wroblewski (Builder-Chat 22:15). Status DRAFT — §9-Freigabe ausstehend.
+- **Schema:** AUDIT-Familie allockiert (auditStandardId, auditRequirementId,
+  auditDomainId, auditGateId, auditRunId, auditStandardDoc).
+- **BUG-005:** Planungsreferenz AUD-001 → ATC-STD-AUDIT-001 konsolidiert.
+
+### Fixed
+
+- **S-14-Härtung (SCR-0013):** Registry-Check prüft jetzt per YAML-Parsing gegen die
+  standards-Liste statt per Rohtext-Suche. Zuvor meldete S-14 fälschlich PASS für einen
+  Eintrag, der außerhalb der Liste (in legacy_series) stand — während der AUDIT-001-
+  Registrierung entdeckt und per Negativtest verifiziert (FAIL bei Fehlposition,
+  PASS bei korrekter Position).
+
 ## [1.4.9] - 2026-09-07
 
 ### Changed

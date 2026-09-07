@@ -20,7 +20,7 @@ STATES = ["idea", "proposed", "draft", "review", "candidate", "approved",
           "stable", "deprecated", "retired"]
 CATS = ["governance", "architecture", "repository", "development", "security",
         "protocol", "blockchain", "ai", "os", "infrastructure", "applications",
-        "bug", "net", "zkp", "ai-dev", "aas", "enterprise", "readme", "md", "sc", "desc", "version"]
+        "bug", "net", "zkp", "ai-dev", "aas", "enterprise", "readme", "md", "sc", "desc", "version", "audit"]
 REQ_RE = re.compile(r"REQ-[A-Z]+(?:-[A-Z]+)?-[0-9]{3}")
 
 
@@ -99,7 +99,7 @@ def validate(path, registry_path):
 
     # S-02 ID-Format (7.10/7.11: Muster aus naming-conventions.schema.json)
     sid = meta.get("id", "")
-    _ok02 = re.match(r"^ATC-STD-(?:BUG-|NET-|ZKP-|AI-DEV-|README-|MD-|SC-|DESC-|VERSION-)?[0-9]{3,}$", sid) or re.match(r"^ATC-(?:AAS|ENT)-[0-9]{3,}$", sid)
+    _ok02 = re.match(r"^ATC-STD-(?:BUG-|NET-|ZKP-|AI-DEV-|README-|MD-|SC-|DESC-|VERSION-|AUDIT-)?[0-9]{3,}$", sid) or re.match(r"^ATC-(?:AAS|ENT)-[0-9]{3,}$", sid)
     v.add("S-02", "PASS" if _ok02 else "FAIL",
           "ID-Format: %s" % (sid if _ok02 else (sid or "FEHLT") + " (Schema: alle *StandardId-Muster)"))
 
@@ -220,20 +220,28 @@ def validate(path, registry_path):
     v.add("S-13", "PASS" if re.search(r"^##+\s.*References", text, re.M | re.I) else "WARN",
           "References (kategorisiert NORMATIVE/INFORMATIVE/…)")
 
-    # S-14 Registry-Eintrag
+    # S-14 Registry-Eintrag (SCR-0013-Fix: YAML-Parsing der standards-Liste statt Rohtext-Suche —
+    # verhindert Fehl-PASS bei Eintraegen ausserhalb der Liste, z.B. in legacy_series)
     if registry_path and os.path.exists(registry_path):
-        reg = read(registry_path) or ""
-        entry = re.search(r"\{\s*id:\s*%s\s*,(.*?)\}" % re.escape(sid), reg)
-        if entry:
-            zeile = entry.group(0)
-            rv = re.search(r'version:\s*"([\d.]+)"', zeile)
-            rs = re.search(r"status:\s*(\w+)", zeile)
-            konsistent = (not rv or rv.group(1) == ver) and (not rs or rs.group(1) == st)
+        reg_entry = None
+        try:
+            import yaml as _yaml
+            _reg = _yaml.safe_load(read(registry_path) or "{}")
+            for _e in (_reg.get("standards") or []):
+                if _e.get("id") == sid:
+                    reg_entry = _e
+                    break
+        except Exception:
+            reg_entry = None
+        if reg_entry:
+            rv = reg_entry.get("version")
+            rs = reg_entry.get("status")
+            konsistent = (not rv or str(rv) == ver) and (not rs or str(rs) == st)
             v.add("S-14", "PASS" if konsistent else "FAIL",
                   "Registry-Eintrag: vorhanden, " + ("Version/Status konsistent" if konsistent else
-                  "Divergenz Datei(%s/%s) vs Registry(%s/%s)" % (ver, st, rv.group(1) if rv else "?", rs.group(1) if rs else "?")))
+                  "Divergenz Datei(%s/%s) vs Registry(%s/%s)" % (ver, st, rv, rs)))
         else:
-            v.add("S-14", "FAIL", "KEIN Registry-Eintrag in standards.yaml (ATC-STD-000 §19: Kein Eintrag = kein Standard)")
+            v.add("S-14", "FAIL", "KEIN Registry-Eintrag in standards.yaml standards-Liste (ATC-STD-000 §19: Kein Eintrag = kein Standard)")
     else:
         v.add("S-14", "WARN", "Registry-Check uebersprungen (keine standards.yaml)")
 

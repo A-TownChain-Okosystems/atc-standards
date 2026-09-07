@@ -378,7 +378,7 @@ ATC Enterprise Standards
 ├── Quality Standards
 │   └── Bug & Konsistenz-Lebenszyklus (EINE Familie): Finding BUG-001 · Documentation BUG-002 ·
 │       Fix Lifecycle BUG-003 · Merge Gate BUG-004 · Error Analysis/RCA BUG-005 (DIESER STANDARD)
-│       (geplante Erweiterungen: Regression REG-001 · Incident INC-001 · Audit AUD-001 — je eigene SCR)
+│       (geplante Erweiterungen: Regression REG-001 · Incident INC-001 · Audit AUDIT-001 — je eigene SCR)
 ├── Security Standards
 ├── AI Agent Standards (ATC-AAS-001..025, ATC-ENT-001..015)
 ├── Blockchain Standards (ATC-STD-SC-001..020)
@@ -449,7 +449,7 @@ Ausnahmen von diesem Standard MÜSSEN gemäß ATC-STD-DESC-001 Abschnitt 11 (EXC
 
 - ATC-AAS-001..025 — AI Agent Standards (Agentenbetrieb)
 - schemas/naming-conventions.schema.json — errErrorClassId, errRootCauseCategoryId
-- Geplante Folge-Standards: ATC-STD-REG-001 (Regression Testing), ATC-STD-INC-001 (Incident Management), ATC-STD-AUD-001 (Audit & Verification) — je eigene SCR + ID-Allokation erforderlich
+- Geplante Folge-Standards: ATC-STD-REG-001 (Regression Testing), ATC-STD-INC-001 (Incident Management), ATC-STD-AUDIT-001 (Completeness & Audit) — je eigene SCR + ID-Allokation erforderlich
 
 ## Changelog
 
