@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.4.21] - 2026-09-07
+
+### Changed
+
+- **ATC-STD-MILESTONE-001 v1.0.0: §9-FREIGABE → APPROVED** (Owner-Freigabe Michael
+  Wroblewski, Builder-Chat 07.09. 23:38 UTC+2). Normativ in Kraft ab 07.09.2026,
+  §30-eingefroren (ATC-STD-000). Frontmatter: status approved, normative true,
+  effective_date 2026-09-07, review_date 2027-09-07, approved_by Owner. SCR-0018:
+  IMPLEMENTED → APPROVED. versions.yaml: 1.0.0-Approval-Eintrag.
+- **Registry FINAL: 111 Standards, 111 APPROVED, 0 DRAFT, 0 offen — alle normativ.**
+  Mit MILESTONE-001 sind Roadmap (AD-027 M1–M8 als ATC-M-001..008), Sprints, Releases,
+  Audits und KI-Agentensteuerung über die Meilenstein-Governance verbunden:
+  kein Abschluss ohne überprüfbaren Nachweis (ATC-MILESTONE-GOVERNANCE-RULE),
+  maschinell durchgesetzt via milestone.schema.json, registry/milestones.yaml
+  und Validator S-20 bei jedem CI-Lauf.
+
+
 ## [1.4.20] - 2026-09-07
 
 ### Added

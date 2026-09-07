@@ -3,16 +3,17 @@ standard:
   id: ATC-STD-MILESTONE-001
   title: "ATC Milestone Standard — Verbindliche Meilenstein-Governance: Zustandsnachweis, Lebenszyklus, Acceptance Gates, Evidence Packs, maschinenlesbare Registry"
   version: "1.0.0"
-  status: draft
+  status: approved
   category: milestone
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"
   created: "2026-09-07"
   updated: "2026-09-07"
-  normative: false
-  effective_date: ""
-  review_date: ""
+  normative: true
+  effective_date: "2026-09-07"
+  review_date: "2027-09-07"
   classification: PUBLIC
+  approved_by: "Michael Wroblewski (Owner, §9-Freigabe 07.09.2026, 23:38 UTC+2)"
   language: de-DE
   supersedes: null
   superseded_by: null
@@ -31,10 +32,10 @@ standard:
   license: "Copyright (c) 2026 Michael Wroblewski"
 ----
 
-# ATC-STD-MILESTONE-001 — ATC Milestone Standard (v1.0.0, DRAFT)
+# ATC-STD-MILESTONE-001 — ATC Milestone Standard (v1.0.0, APPROVED)
 
-> **Status:** DRAFT (v1.0.0) — Owner-Entwurf Michael Wroblewski (Builder-Chat 07.09.2026, 23:31 UTC+2);
-> Agenten-Review + Harmonisierung SCR-0018; Owner-§9-Freigabe ausstehend. Bei Freigabe: APPROVED, normativ, §30-eingefroren.
+> **Status:** APPROVED (v1.0.0) — §9-Freigabe Michael Wroblewski (Builder-Chat 07.09.2026, 23:38 UTC+2);
+> normativ in Kraft ab 07.09.2026, §30-eingefroren (ATC-STD-000). Harmonisierung SCR-0018 akzeptiert.
 > **Familie:** Milestone Standards (ATC-STD-MILESTONE-001..999) — Kategorie `milestone`, SCR-0018.
 > **Rolle in der Governance-Kette:** Roadmap → **MILESTONE-001** → Sprints/Issues/Tasks → Implementation → Tests → Audit → Acceptance.
 > **Referenzen:** ATC-STD-000 (Verfassung), VERSION-001 (Releases), UPDATE-001 (Change Control), COMPAT-001 (MAJOR-Gate), AUDIT-001 (Audit-Layer), AI-DECISION-001 (Human Gates), AD-027 (M1-M8-Roadmap).
@@ -365,12 +366,12 @@ eines CLOSED-Meilensteins sind nur über AUDIT-001-Records dokumentierbar.
 
 ## Changelog (Standard-intern)
 
-- **1.0.0** (2026-09-07): Initial Release DRAFT — Owner-Entwurf Michael Wroblewski
+- **1.0.0** (2026-09-07): Initial Release — Owner-Entwurf Michael Wroblewski
   (Builder-Chat 23:31), harmonisiert mit UPDATE-001 (Gates/Releases), COMPAT-001
   (MAJOR-Revalidation), AUDIT-001 (Audit-Gates), VERSION-001 (Release-Bindung),
   AI-DECISION-001 (Human Gates), DESC-001 (Beschreibungsstruktur), AD-027
   (M1-M8-Migration). 19 REQ-MS; maschinenlesbar via schemas/milestone.schema.json,
-  registry/milestones.yaml, Validator S-20. SCR-0018; §9-Freigabe ausstehend.
+  registry/milestones.yaml, Validator S-20. SCR-0018; §9-Freigabe Michael Wroblewski 07.09.2026, 23:38 UTC+2 — APPROVED, normativ, §30-eingefroren.
 
 ## References
 
