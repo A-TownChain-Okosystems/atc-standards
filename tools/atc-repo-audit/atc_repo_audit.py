@@ -17,7 +17,7 @@ import sys
 VERSION = "0.1.0"
 LEVELS = ["R0", "R1", "R2", "R3", "R4"]
 BAD_PATHS = [".env", "node_modules/", "target/debug/", "/dist/", "/*.log", "tmp/", ".DS_Store"]
-CC_RE = re.compile(r"^(feat|fix|docs|refactor|test|security|perf|build|ci|chore|spec|release)(\([^)]+\))?: .+")
+CC_RE = re.compile(r"^(feat|fix|docs|refactor|test|security|perf|build|ci|chore|spec|release|audit|approve|restore|sync|review|init)(\([^)]+\))?: .+")
 
 
 def lvl_ge(required, level):
