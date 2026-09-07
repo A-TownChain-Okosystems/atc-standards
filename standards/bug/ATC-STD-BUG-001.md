@@ -2,7 +2,7 @@ standard:
   id: ATC-STD-BUG-001
   title: "ATC-STD-BUG-001 — Bug Finding Standard"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: bug
   authority: A-TownChain Ecosystems
   owner: ShivaCoreDev
@@ -13,9 +13,9 @@ standard:
   superseded_by: null
 ---
 
-# ATC-STD-BUG-001 — Bug Finding Standard (v1.0.0, CANDIDATE)
+# ATC-STD-BUG-001 — Bug Finding Standard (v1.0.0, APPROVED)
 
-> **Status:** CANDIDATE (Owner-Mandat 07.09.2026, Candidate-Revision gemaess ATC-STD-000 §33; Normativkraft entsteht mit APPROVED §9)
+> **Status:** APPROVED (Owner-Sammelfreigabe 07.09.2026, ATC-STD-000 §9) — normativ in Kraft
 > **Reihe:** ATC-STD-BUG-001…004 (Bug- & Konsistenz-Lebenszyklus) · **Autoren:** Michael Wroblewski (Owner), Aurora (Superagent)
 > **Kernprinzip:** Trennung Finding → Dokumentation → Fix → Synchronitätsprüfung
 > **Scope:** Code-Repositories, Wiki-Repositories, Spezifikationen, Tests und technische Doku des Oekosystems. Nicht gilt: Feature-Anfragen ohne Fehlercharakter\n>\n> **Verweise:** ATC-STD-000 (§7 IDs, §24 Registry), ATC-STD-201/202/203, registry/findings.yaml, change-requests/

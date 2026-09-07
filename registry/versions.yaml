@@ -11,13 +11,16 @@ versions:
   ATC-STD-201:
     - {version: "1.0.0", date: "2026-09-07", change: "Formale Spezifikation (AD-031)"}
     - {version: "1.0.1", date: "2026-09-07", change: "Unter ATC-STD-000 gestellt; REPO-001 → 201 umnummeriert (supersedes)"}
+    - {version: "1.0.1-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:05 UTC+2 (alle restlichen offenen Punkte): -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-ALL-REMAINING.md"}
   ATC-STD-202:
     - {version: "1.0.0", date: "2026-09-07", change: "Naming & Classification (AD-029/031)"}
     - {version: "1.0.1", date: "2026-09-07", change: "Unter ATC-STD-000 gestellt; REPO-002 → 202 umnummeriert (supersedes)"}
     - {version: "1.1.0", date: "2026-09-07", change: "SCR-0005 Option A (Owner-Freigabe): Abschnitt 3a Rollenfestlegung Chain-Komponenten (a-townchain = Chain-Protokoll/Bibliothek, atc-node = Full-Node-Binary/Runtime, S4)"}
+    - {version: "1.1.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:05 UTC+2 (alle restlichen offenen Punkte): -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-ALL-REMAINING.md"}
   ATC-STD-203:
     - {version: "1.0.0", date: "2026-09-07", change: "Security & Release (AD-029/031)"}
     - {version: "1.0.1", date: "2026-09-07", change: "Unter ATC-STD-000 gestellt; REPO-003 → 203 umnummeriert (supersedes)"}
+    - {version: "1.0.1-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:05 UTC+2 (alle restlichen offenen Punkte): -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-ALL-REMAINING.md"}
   ATC-STD-204:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung: Dependency-Deklaration (F-001), Interface-Registry (F-002), dreifache Versionierung (F-005), SemVer-Kompatibilitaet, Integration-Test-Pflicht; registry/interfaces.yaml mit 10 Seed-Interfaces angelegt"}
     - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Direktfreigabe (approval/APPROVAL-DECISION-2026-09-07-204-AI-DEV.md): PROPOSED -> APPROVED; normativ in Kraft, 30-Tage-Frist fuer Interface-Test-Suiten (IFC seed->active) bis 07.10.2026"}
@@ -35,25 +38,89 @@ versions:
     - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Direktfreigabe: CANDIDATE -> APPROVED; Audit-Records (AUD-NNN, Append-Only) ab sofort Pflicht bei Task-Abschluss"}
   ATC-STD-BUG-001:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (AD-040): Bug-Finding-Standard, S0-S4-Schwere, F/AUD/TEST/SYNC-Objekt-IDs, registriert in findings.yaml"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:05 UTC+2 (alle restlichen offenen Punkte): -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-ALL-REMAINING.md"}
   ATC-STD-BUG-002:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (AD-040): Bug-Dokumentations-Standard, Doku-Pflicht je Finding"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:05 UTC+2 (alle restlichen offenen Punkte): -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-ALL-REMAINING.md"}
   ATC-STD-BUG-003:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (AD-040): Bug-Fix-Lifecycle, Loesungs-Verifikation"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:05 UTC+2 (alle restlichen offenen Punkte): -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-ALL-REMAINING.md"}
   ATC-STD-BUG-004:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (AD-040): Repository-Sync & Merge-Gate (z.B. git pull -X ours bei Aurora-Parallelarbeit)"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:05 UTC+2 (alle restlichen offenen Punkte): -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-ALL-REMAINING.md"}
   ATC-STD-NET-001:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (AD-041): Devnet-Standard"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:05 UTC+2 (alle restlichen offenen Punkte): -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-ALL-REMAINING.md"}
   ATC-STD-NET-002:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (AD-041): Testnet-Standard (Chain-ID 658467-Umgebung, 5-Node-Docker-Setup)"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:05 UTC+2 (alle restlichen offenen Punkte): -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-ALL-REMAINING.md"}
   ATC-STD-NET-003:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (AD-041): Mainnet-Standard (Launch per AD-023 unabhaengig vom Standard-Text)"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:05 UTC+2 (alle restlichen offenen Punkte): -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-ALL-REMAINING.md"}
   ATC-STD-NET-004:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (AD-041): Promotion Devnet→Testnet→Mainnet"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:05 UTC+2 (alle restlichen offenen Punkte): -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-ALL-REMAINING.md"}
   ATC-STD-NET-005:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (AD-041): Genesis-Standard (Genesis-Wallet, Validator-Keys)"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:05 UTC+2 (alle restlichen offenen Punkte): -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-ALL-REMAINING.md"}
   ATC-STD-NET-006:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (AD-041): Network-Upgrade-Standard"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:05 UTC+2 (alle restlichen offenen Punkte): -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-ALL-REMAINING.md"}
   ATC-STD-NET-007:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (AD-041): Network-Security-Standard"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:05 UTC+2 (alle restlichen offenen Punkte): -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-ALL-REMAINING.md"}
   ATC-STD-NET-008:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (AD-041): Network-Recovery-Standard"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:05 UTC+2 (alle restlichen offenen Punkte): -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-ALL-REMAINING.md"}
+  ATC-STD-100:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initialer Registry-Eintrag: Language & Technology Stack Standard v1.0.0 (Owner-Entwurf 07.09.2026)"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:05 UTC+2 (alle restlichen offenen Punkte): -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-ALL-REMAINING.md"}
+  ATC-STD-ZKP-001:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initialer Registry-Eintrag: ZKP Architecture Standard v1.0.0 (Owner-Entwurf 07.09.2026)"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:05 UTC+2 (alle restlichen offenen Punkte): -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-ALL-REMAINING.md"}
+  ATC-STD-ZKP-002:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initialer Registry-Eintrag: Proof System Interface Standard v1.0.0 (Owner-Entwurf 07.09.2026)"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:05 UTC+2 (alle restlichen offenen Punkte): -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-ALL-REMAINING.md"}
+  ATC-STD-ZKP-003:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initialer Registry-Eintrag: Circuit Standard v1.0.0 (Owner-Entwurf 07.09.2026)"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:05 UTC+2 (alle restlichen offenen Punkte): -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-ALL-REMAINING.md"}
+  ATC-STD-ZKP-004:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initialer Registry-Eintrag: On-Chain Verification Standard v1.0.0 (Owner-Entwurf 07.09.2026)"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:05 UTC+2 (alle restlichen offenen Punkte): -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-ALL-REMAINING.md"}
+  ATC-STD-ZKP-005:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initialer Registry-Eintrag: Commitment & Nullifier Standard v1.0.0 (Owner-Entwurf 07.09.2026)"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:05 UTC+2 (alle restlichen offenen Punkte): -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-ALL-REMAINING.md"}
+  ATC-STD-ZKP-006:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initialer Registry-Eintrag: ZK Identity Standard v1.0.0 (Owner-Entwurf 07.09.2026)"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:05 UTC+2 (alle restlichen offenen Punkte): -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-ALL-REMAINING.md"}
+  ATC-STD-ZKP-007:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initialer Registry-Eintrag: Private Transaction Standard v1.0.0 (Owner-Entwurf 07.09.2026)"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:05 UTC+2 (alle restlichen offenen Punkte): -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-ALL-REMAINING.md"}
+  ATC-STD-ZKP-008:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initialer Registry-Eintrag: ZK Rollup Standard v1.0.0 (Owner-Entwurf 07.09.2026)"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:05 UTC+2 (alle restlichen offenen Punkte): -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-ALL-REMAINING.md"}
+  ATC-STD-ZKP-009:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initialer Registry-Eintrag: ZKVM Standard v1.0.0 (Owner-Entwurf 07.09.2026)"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:05 UTC+2 (alle restlichen offenen Punkte): -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-ALL-REMAINING.md"}
+  ATC-STD-ZKP-010:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initialer Registry-Eintrag: ZKP Security & Audit Standard v1.0.0 (Owner-Entwurf 07.09.2026)"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:05 UTC+2 (alle restlichen offenen Punkte): -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-ALL-REMAINING.md"}
+  ATC-STD-300:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initialer Registry-Eintrag: Development & Project Management Standard v1.0.0 (Owner-Entwurf 07.09.2026)"}
+    - {version: "1.0.0-Approval", date: "2026-09-07", change: "Owner-Sammelfreigabe 07.09.2026 20:05 UTC+2 (alle restlichen offenen Punkte): -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-ALL-REMAINING.md"}
+  ATC-STD-AI-DEV-002:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Capability-Matrix normativ, Permission-Modell (Least Privilege), Restriktions-Invarianten, Verstossbehandlung); sofort APPROVED per Owner-Sammelfreigabe 07.09.2026 (ATC-STD-000 §9)"}
+  ATC-STD-AI-DEV-003:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Discovery-Kette (12 Stufen Pflichtreihenfolge), Discovery-Record, Governance-Discovery ueber Registry/Dependency-Graph, Verbot des Direktmusters); sofort APPROVED per Owner-Sammelfreigabe 07.09.2026 (ATC-STD-000 §9)"}
+  ATC-STD-AI-DEV-005:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Agenten-Findings F-NNN (BUG-001-Struktur), Evidence-Mindeststruktur je Fundstelle, Erkenntnis ohne Fundstelle ungueltig (ASSUMPTION-Trennung), Finding-zu-Action-Pflicht); sofort APPROVED per Owner-Sammelfreigabe 07.09.2026 (ATC-STD-000 §9)"}
+  ATC-STD-AI-DEV-006:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (OBSERVATION/DECISION/reason-Trennung, ACT-NNN-Struktur, Next-Action-Pflicht, Entscheidungsverbund ohne autonome Aenderung); sofort APPROVED per Owner-Sammelfreigabe 07.09.2026 (ATC-STD-000 §9)"}
+  ATC-STD-AI-DEV-008:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Test-Pflicht je Aenderung, Validierung nur mit CI-Run-Referenz (TEST-NNN), Fail-Handling (DEBUGGING-Pflicht, kein Bypass), Uebergabe an Audit-Record); sofort APPROVED per Owner-Sammelfreigabe 07.09.2026 (ATC-STD-000 §9)"}
+  ATC-STD-AI-DEV-010:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Synchronisationspflicht gegen SPEC/STANDARD/WIKI/ARCHITECTURE/ROADMAP, SYNC-NNN-Records, kein COMPLETED bei deviation, Automatisierungsvorgabe); sofort APPROVED per Owner-Sammelfreigabe 07.09.2026 (ATC-STD-000 §9)"}
+  ATC-STD-AI-DEV-011:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (Human-Decision-Pflichtfelder (Task+PR), Eskalationsstufen a-d, Genehmigungsformen (Mandat/Vermerk/SCR), Rollentrennung Agent nie Approver); sofort APPROVED per Owner-Sammelfreigabe 07.09.2026 (ATC-STD-000 §9)"}
+  ATC-STD-AI-DEV-012:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (1-Agent-per-Repo-Exklusivitaet, Artefakt-basierte Kommunikation, Handover-Regeln, Konfliktbehandlung als Governance-Verstoss); sofort APPROVED per Owner-Sammelfreigabe 07.09.2026 (ATC-STD-000 §9)"}

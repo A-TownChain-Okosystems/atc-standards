@@ -1,0 +1,45 @@
+---
+standard:
+  id: ATC-STD-AI-DEV-011
+  title: "ATC-STD-AI-DEV-011 — Human Approval & Escalation Standard"
+  version: "1.0.0"
+  status: approved
+  category: ai-dev
+  authority: A-TownChain Ecosystems
+  owner: ShivaCoreDev
+  created: "2026-09-07"
+  updated: "2026-09-07"
+  normative: true
+  supersedes: []
+  superseded_by: null
+---
+
+# ATC-STD-AI-DEV-011 — Human Approval & Escalation Standard (v1.0.0, APPROVED)
+
+> **Status:** APPROVED — Owner-Sammelfreigabe 07.09.2026 (ATC-STD-000 §9)
+> **Reihe:** ATC-STD-AI-DEV-001…012 · **Basiert auf:** AI-DEV-001 §13 (human_review), ATC-STD-000 §14.1 (Rollen)
+
+## 1. Human-Decision-Pflichtfelder
+
+`human_review: {required, requested}` je Task (AI-DEV-004 §1) UND je
+PR ("Human Decision Required", AI-DEV-007 §4). Required=true blockiert
+COMPLETED bis dokumentierte Owner-Entscheidung.
+
+## 2. Eskalationsstufen
+
+Eskalation an den Owner zwingend bei: (a) Annahmen mit
+verification.required, (b) Governance-Konflikten (Standard vs. Realität),
+(c) Autorisierungsbedarf jenseits der Capability-Matrix, (d) BLOCKED ohne
+selbst behebbaren Weg. Eskalation enthält: Befund, Optionen, Empfehlung,
+Frist.
+
+## 3. Genehmigungsformen
+
+Owner-Genehmigungen erfolgen als: Direktmandat (Chat, mit Zitat im
+Approval-Doc), Freigabe-Vermerk (approval/APPROVAL-DECISION-*.md) oder
+SCR-Entscheidung. Stillschweigende Zustimmung ist keine Genehmigung.
+
+## 4. Rollentrennung
+
+Agenten sind niemals Approver (ATC-STD-000 §14.1). Agenten-dokumentierte
+Freigaben sind ungültig und als Governance-Verstoß zu werten.

@@ -2,7 +2,7 @@ standard:
   id: ATC-STD-201
   title: "ATC-STD-201 — Repository Structure Standard"
   version: "1.0.1"
-  status: draft
+  status: approved
   category: repository
   authority: A-TownChain Ecosystems
   owner: ShivaCoreDev
@@ -13,9 +13,9 @@ standard:
   superseded_by: null
 ---
 
-# ATC-STD-201 — Repository Structure Standard (v1.0.1, FORMALE SPEZIFIKATION)
+# ATC-STD-201 — Repository Structure Standard (v1.0.1, APPROVED)
 
-> **Status:** DRAFT — Anwendbarkeit per Mandat: verbindlich fuer NEUE Repositories sofort; Bestands-Repositories R2+ erfuellen MUST-Regeln; Normativkraft entsteht mit APPROVED (ATC-STD-000 §9) M8 (AD-027), dokumentiert via atc-repo-audit
+> **Status:** APPROVED (Owner-Sammelfreigabe 07.09.2026, ATC-STD-000 §9) — normativ in Kraft
 > **Version:** 1.0.1 (FORMAL) · **Datum:** 07.09.2026 · **Autoren:** Michael Wroblewski (Owner), Aurora (Superagent)
 > **Standard-ID:** ATC-STD-201 · **Scope:** Alle offiziellen Repositories der Organisation
 > **Referenzen:** AD-025/026/027/028/029/031, ATC-STD-202 (Naming/Classification/Ownership/Lifecycle/S-Klassen), ATC-STD-203 (Security/Release/Branching/Commits/Gates)

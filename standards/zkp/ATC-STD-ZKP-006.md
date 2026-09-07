@@ -2,7 +2,7 @@ standard:
   id: ATC-STD-ZKP-006
   title: "ATC-STD-ZKP-006 — ZK Identity Standard"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: zkp
   authority: A-TownChain Ecosystems
   owner: ShivaCoreDev
@@ -17,7 +17,7 @@ standard:
 # ATC-STD-ZKP-006 — ZK Identity Standard
 
 > **Version:** 1.0.0 (FORMAL)
-> **Status:** CANDIDATE (Owner-Entwurf 07.09.2026; Normativkraft entsteht mit APPROVED gemaess ATC-STD-000 §9)
+> **Status:** APPROVED (Owner-Sammelfreigabe 07.09.2026, ATC-STD-000 §9) — normativ in Kraft
 > **Reihe:** ATC-STD-ZKP-001–010 (ZKP-Layer, AD-045) · **Autoren:** Michael Wroblewski (Owner), Aurora (Superagent)
 > **Scope:** ATC ZKP-Layer (Repo atc-zkp) und ihre Integration in die A-TownChain L1 (Chain-ID 658467, AD-004).
 > **Verweise:** ATC-STD-ZKP-001 (Architektur), ATC-STD-ZKP-010 (Security), AD-045, AD-001 (SHA-256)

@@ -2,7 +2,7 @@ standard:
   id: ATC-STD-NET-006
   title: "ATC-STD-NET-006 — Network Upgrade Standard"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: net
   authority: A-TownChain Ecosystems
   owner: ShivaCoreDev
@@ -13,9 +13,9 @@ standard:
   superseded_by: null
 ---
 
-# ATC-STD-NET-006 — Network Upgrade Standard (v1.0.0, CANDIDATE)
+# ATC-STD-NET-006 — Network Upgrade Standard (v1.0.0, APPROVED)
 
-> **Status:** CANDIDATE (Owner-Mandat 07.09.2026, Candidate-Revision gemaess ATC-STD-000 §33; Normativkraft entsteht mit APPROVED §9)
+> **Status:** APPROVED (Owner-Sammelfreigabe 07.09.2026, ATC-STD-000 §9) — normativ in Kraft
 > **Reihe:** ATC-STD-NET-001…008 (Netzwerk-Umgebungen Devnet/Testnet/Mainnet) · **Autoren:** Michael Wroblewski (Owner), Aurora (Superagent)
 > **Scope:** Formalisierter Protokoll-Upgrade-Prozess, insbesondere Mainnet. Nicht gilt: Devnet-Experimente (NET-001 §2)
 > **Verweise:** ATC-STD-NET-001…008, ATC-STD-BUG-001…004, ATC-STD-203 (GATE-001…010), registry/networks.yaml, AD-004 (Chain-ID 658467), AD-027 (M4)

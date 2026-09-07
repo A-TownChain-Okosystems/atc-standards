@@ -2,7 +2,7 @@ standard:
   id: ATC-STD-100
   title: "ATC-STD-100 — Language & Technology Stack Standard"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: architecture
   authority: A-TownChain Ecosystems
   owner: ShivaCoreDev
@@ -17,7 +17,7 @@ standard:
 # ATC-STD-100 — Language & Technology Stack Standard
 
 > **Version:** 1.0.0 (FORMAL)
-> **Status:** CANDIDATE (Owner-Entwurf 07.09.2026; Normativkraft entsteht mit APPROVED gemaess ATC-STD-000 §9)
+> **Status:** APPROVED (Owner-Sammelfreigabe 07.09.2026, ATC-STD-000 §9) — normativ in Kraft
 > **Reihe:** ATC-STD-100–199 (Architektur-Block, categories.yaml) · **Autoren:** Michael Wroblewski (Owner), Aurora (Superagent)
 > **Kernprinzip:** Eine Sprache je Ebene — Rust ist das System of Record der ATC-Kerntechnologie.
 > **Scope:** Alle Repositories der Organisation A-TownChain-Okosystems (25 aktive Repos, AD-044-Stand).

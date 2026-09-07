@@ -13,38 +13,46 @@
 | ID | Titel | Status | Version | Kategorie |
 |----|-------|--------|---------|-----------|
 | ATC-STD-000 | Standards Governance & Specification Standard | approved | 1.2.0 | governance |
-| ATC-STD-201 | Repository Structure Standard | draft | 1.0.1 | repository |
-| ATC-STD-202 | Repository Naming & Classification Standard | proposed | 1.1.0 | repository |
-| ATC-STD-203 | Repository Security & Release Standard | proposed | 1.0.1 | repository |
+| ATC-STD-201 | Repository Structure Standard | approved | 1.0.1 | repository |
+| ATC-STD-202 | Repository Naming & Classification Standard | approved | 1.1.0 | repository |
+| ATC-STD-203 | Repository Security & Release Standard | approved | 1.0.1 | repository |
 | ATC-STD-204 | Dependency & Interface Standard | approved | 1.0.0 | repository |
 | ATC-STD-AI-DEV-001 | Software Development AI Agent Identity & Workflow Standard | approved | 1.0.0 | ai-dev |
 | ATC-STD-AI-DEV-004 | AI Task Management Standard | approved | 1.0.0 | ai-dev |
 | ATC-STD-AI-DEV-007 | AI Git Commit & Pull Request Standard | approved | 1.0.0 | ai-dev |
 | ATC-STD-AI-DEV-009 | AI Audit Trail Standard | approved | 1.0.0 | ai-dev |
-| ATC-STD-BUG-001 | Bug Finding Standard | candidate | 1.0.0 | bug |
-| ATC-STD-BUG-002 | Bug Documentation Standard | candidate | 1.0.0 | bug |
-| ATC-STD-BUG-003 | Bug Fix Lifecycle Standard | candidate | 1.0.0 | bug |
-| ATC-STD-BUG-004 | Repository Synchronization & Merge Gate | candidate | 1.0.0 | bug |
-| ATC-STD-NET-001 | Devnet Standard | candidate | 1.0.0 | net |
-| ATC-STD-NET-002 | Testnet Standard | candidate | 1.0.0 | net |
-| ATC-STD-NET-003 | Mainnet Standard | candidate | 1.0.0 | net |
-| ATC-STD-NET-004 | Network Promotion Standard | candidate | 1.0.0 | net |
-| ATC-STD-NET-005 | Network Genesis Standard | candidate | 1.0.0 | net |
-| ATC-STD-NET-006 | Network Upgrade Standard | candidate | 1.0.0 | net |
-| ATC-STD-NET-007 | Network Security Standard | candidate | 1.0.0 | net |
-| ATC-STD-NET-008 | Network Recovery Standard | candidate | 1.0.0 | net |
-| ATC-STD-100 | Language & Technology Stack Standard | candidate | 1.0.0 | architecture |
-| ATC-STD-ZKP-001 | ZKP Architecture Standard | candidate | 1.0.0 | zkp |
-| ATC-STD-ZKP-002 | Proof System Interface Standard | candidate | 1.0.0 | zkp |
-| ATC-STD-ZKP-003 | Circuit Standard | candidate | 1.0.0 | zkp |
-| ATC-STD-ZKP-004 | On-Chain Verification Standard | candidate | 1.0.0 | zkp |
-| ATC-STD-ZKP-005 | Commitment & Nullifier Standard | candidate | 1.0.0 | zkp |
-| ATC-STD-ZKP-006 | ZK Identity Standard | candidate | 1.0.0 | zkp |
-| ATC-STD-ZKP-007 | Private Transaction Standard | candidate | 1.0.0 | zkp |
-| ATC-STD-ZKP-008 | ZK Rollup Standard | candidate | 1.0.0 | zkp |
-| ATC-STD-ZKP-009 | ZKVM Standard | candidate | 1.0.0 | zkp |
-| ATC-STD-ZKP-010 | ZKP Security & Audit Standard | candidate | 1.0.0 | zkp |
-| ATC-STD-300 | Development & Project Management Standard | candidate | 1.0.0 | development |
+| ATC-STD-AI-DEV-002 | Agent Capabilities & Permissions Standard | approved | 1.0.0 | ai-dev |
+| ATC-STD-AI-DEV-003 | Repository Discovery Standard | approved | 1.0.0 | ai-dev |
+| ATC-STD-AI-DEV-005 | Finding & Evidence Standard | approved | 1.0.0 | ai-dev |
+| ATC-STD-AI-DEV-006 | AI Decision & Action Standard | approved | 1.0.0 | ai-dev |
+| ATC-STD-AI-DEV-008 | AI Testing & Validation Standard | approved | 1.0.0 | ai-dev |
+| ATC-STD-AI-DEV-010 | AI Documentation Synchronization Standard | approved | 1.0.0 | ai-dev |
+| ATC-STD-AI-DEV-011 | Human Approval & Escalation Standard | approved | 1.0.0 | ai-dev |
+| ATC-STD-AI-DEV-012 | Multi-Agent Coordination Standard | approved | 1.0.0 | ai-dev |
+| ATC-STD-BUG-001 | Bug Finding Standard | approved | 1.0.0 | bug |
+| ATC-STD-BUG-002 | Bug Documentation Standard | approved | 1.0.0 | bug |
+| ATC-STD-BUG-003 | Bug Fix Lifecycle Standard | approved | 1.0.0 | bug |
+| ATC-STD-BUG-004 | Repository Synchronization & Merge Gate | approved | 1.0.0 | bug |
+| ATC-STD-NET-001 | Devnet Standard | approved | 1.0.0 | net |
+| ATC-STD-NET-002 | Testnet Standard | approved | 1.0.0 | net |
+| ATC-STD-NET-003 | Mainnet Standard | approved | 1.0.0 | net |
+| ATC-STD-NET-004 | Network Promotion Standard | approved | 1.0.0 | net |
+| ATC-STD-NET-005 | Network Genesis Standard | approved | 1.0.0 | net |
+| ATC-STD-NET-006 | Network Upgrade Standard | approved | 1.0.0 | net |
+| ATC-STD-NET-007 | Network Security Standard | approved | 1.0.0 | net |
+| ATC-STD-NET-008 | Network Recovery Standard | approved | 1.0.0 | net |
+| ATC-STD-100 | Language & Technology Stack Standard | approved | 1.0.0 | architecture |
+| ATC-STD-ZKP-001 | ZKP Architecture Standard | approved | 1.0.0 | zkp |
+| ATC-STD-ZKP-002 | Proof System Interface Standard | approved | 1.0.0 | zkp |
+| ATC-STD-ZKP-003 | Circuit Standard | approved | 1.0.0 | zkp |
+| ATC-STD-ZKP-004 | On-Chain Verification Standard | approved | 1.0.0 | zkp |
+| ATC-STD-ZKP-005 | Commitment & Nullifier Standard | approved | 1.0.0 | zkp |
+| ATC-STD-ZKP-006 | ZK Identity Standard | approved | 1.0.0 | zkp |
+| ATC-STD-ZKP-007 | Private Transaction Standard | approved | 1.0.0 | zkp |
+| ATC-STD-ZKP-008 | ZK Rollup Standard | approved | 1.0.0 | zkp |
+| ATC-STD-ZKP-009 | ZKVM Standard | approved | 1.0.0 | zkp |
+| ATC-STD-ZKP-010 | ZKP Security & Audit Standard | approved | 1.0.0 | zkp |
+| ATC-STD-300 | Development & Project Management Standard | approved | 1.0.0 | development |
 
 ## Aus dem Wiki konsolidiert (AD-032, 07.09.2026)
 

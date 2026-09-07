@@ -189,18 +189,18 @@ AGENT_PROTOCOL.md wird nach APPROVED auf diesen Standard verweisend umgestellt.
 
 | ID | Zweck | Status |
 |----|-------|--------|
-| ATC-STD-AI-DEV-001 | AI Agent Identity & Workflow (dieser Standard, Dach) | candidate |
-| ATC-STD-AI-DEV-002 | Agent Capabilities & Permissions | planned |
-| ATC-STD-AI-DEV-003 | Repository Discovery | planned |
-| ATC-STD-AI-DEV-004 | AI Task Management | candidate |
-| ATC-STD-AI-DEV-005 | Finding & Evidence | planned |
-| ATC-STD-AI-DEV-006 | AI Decision & Action | planned |
-| ATC-STD-AI-DEV-007 | AI Git Commit / PR | candidate |
-| ATC-STD-AI-DEV-008 | AI Testing & Validation | planned |
-| ATC-STD-AI-DEV-009 | AI Audit Trail | candidate |
-| ATC-STD-AI-DEV-010 | AI Documentation Synchronization | planned |
-| ATC-STD-AI-DEV-011 | Human Approval & Escalation | planned |
-| ATC-STD-AI-DEV-012 | Multi-Agent Coordination | planned |
+| ATC-STD-AI-DEV-001 | AI Agent Identity & Workflow (dieser Standard, Dach) | approved |
+| ATC-STD-AI-DEV-002 | Agent Capabilities & Permissions | approved |
+| ATC-STD-AI-DEV-003 | Repository Discovery | approved |
+| ATC-STD-AI-DEV-004 | AI Task Management | approved |
+| ATC-STD-AI-DEV-005 | Finding & Evidence | approved |
+| ATC-STD-AI-DEV-006 | AI Decision & Action | approved |
+| ATC-STD-AI-DEV-007 | AI Git Commit / PR | approved |
+| ATC-STD-AI-DEV-008 | AI Testing & Validation | approved |
+| ATC-STD-AI-DEV-009 | AI Audit Trail | approved |
+| ATC-STD-AI-DEV-010 | AI Documentation Synchronization | approved |
+| ATC-STD-AI-DEV-011 | Human Approval & Escalation | approved |
+| ATC-STD-AI-DEV-012 | Multi-Agent Coordination | approved |
 
 Zentrale IDs der Familie: **ATC-TASK, FINDING (F-NNN), ACTION (ACT-NNN),
 EVIDENCE, NEXT_ACTION** — die Grundlage einer AI-native Engineering-Pipeline,
