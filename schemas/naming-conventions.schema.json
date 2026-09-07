@@ -502,6 +502,14 @@
           "pattern": "^REQ-PROTO-[0-9]{3,}$",
           "description": "Protocol-Standards-Anforderungs-ID (REQ-PROTO-NNN)"
         },
+        "protocolConformanceRequirementId": {
+          "pattern": "^REQ-CONF-[0-9]{3,}$",
+          "description": "Conformance-Test-Anforderungs-ID (REQ-CONF-NNN, ATC-STD-PROTOCOL-002)"
+        },
+        "protocolSecurityRequirementId": {
+          "pattern": "^REQ-PTS-[0-9]{3,}$",
+          "description": "Protocol-Security-Anforderungs-ID (REQ-PTS-NNN, ATC-STD-PROTOCOL-003)"
+        },
         "taxonomyStandardId": {
           "pattern": "^ATC-STD-TAXONOMY-[0-9]{3,}$",
           "description": "ATC Standards Taxonomy & Family Creation Standard (ATC-STD-TAXONOMY-001)"

@@ -2,7 +2,7 @@
 standard:
   id: ATC-STD-FRAMEWORK-001
   title: "ATC Enterprise Standards Framework — Master-Dokument (ATC-STANDARDS-MASTER): Zusammenführung aller Standards, Katalog, Kollisionsauflösung, einheitliche Status-/Change-/Traceability-Modelle, Register-Architektur"
-  version: "1.0.6"
+  version: "1.0.7"
   status: approved
   category: framework
   authority: A-TownChain-Okosystems
@@ -34,9 +34,9 @@ standard:
   license: "Copyright (c) 2026 Michael Wroblewski"
 ----
 
-# ATC-STD-FRAMEWORK-001 — ATC Enterprise Standards Framework (v1.0.6, APPROVED)
+# ATC-STD-FRAMEWORK-001 — ATC Enterprise Standards Framework (v1.0.7, APPROVED)
 
-> **Status:** APPROVED (v1.0.6) — §9-Freigabe Michael Wroblewski (Builder-Chat 07.09.2026, 23:48 UTC+2);
+> **Status:** APPROVED (v1.0.7) — §9-Freigabe Michael Wroblewski (Builder-Chat 07.09.2026, 23:48 UTC+2);
 > normativ in Kraft ab 07.09.2026, §30-eingefroren (ATC-STD-000). Harmonisierung SCR-0019 akzeptiert.
 > **Rolle:** Master-Dokument (ATC-STANDARDS-MASTER) — führt alle bestehenden Standards zusammen und definiert
 > die Zielarchitektur, den Enterprise-Katalog mit Lückenzuordnung und die einheitlichen Governance-Modelle.
@@ -86,13 +86,15 @@ Zielarchitektur: **ATC Enterprise Governance** mit 11 Registern:
 | Milestone Registry | registry/milestones.yaml (REQ/ARCH-Verankerung via Meilensteine) | EXISTIERT |
 | Repository Registry | registry/repositories.yaml | EXISTIERT |
 | Framework-Katalog | registry/framework.yaml (dieser Standard) | EXISTIERT (NEU) |
-| Requirements Registry | geplant | GEPLANT (SCR) |
-| Architecture Registry | geplant | GEPLANT (SCR) |
-| Agent Registry | AGENT_MANIFEST-Bestand in Org-Repos, Konsolidierung | GEPLANT (SCR) |
-| Security Registry | geplant (Findings-Teilmenge existiert) | GEPLANT (SCR) |
+| Requirements Registry | registry/requirements.yaml (SSOT) | EXISTIERT (SCR-0029) |
+| Architecture Registry | registry/architecture.yaml (SSOT) | EXISTIERT (SCR-0029) |
+| Agent Registry | registry/agents.yaml (Konsolidierung) | EXISTIERT (SCR-0029) |
+| Security Registry | registry/security.yaml (Controls; Findings-SSOT bleibt findings.yaml) | EXISTIERT (SCR-0029) |
 | Audit Registry | AUD-Records + findings.yaml (Teilabdeckung) | TEILWEISE |
 | Change-Request Registry | change-requests/SCR-NNNN | EXISTIERT |
-| Release & Evidence Registry | geplant (Evidence Packs je ATC-M-NNN) | GEPLANT (SCR) |
+| Release & Evidence Registry | registry/releases.yaml (Evidence Packs je ATC-M-NNN) | EXISTIERT (SCR-0029) |
+| Protocol Conformance Registry | registry/protocol-conformance.yaml (ATC-STD-PROTOCOL-002 §4) | EXISTIERT (SCR-0029) |
+| Protocol Security Registry | registry/protocol-security.yaml (ATC-STD-PROTOCOL-003 §3) | EXISTIERT (SCR-0029) |
 
 Durchgängige Traceability-Kette (REQ-FW-006):
 
@@ -297,6 +299,11 @@ deckt AUDIT-001 die Audit-Kette ab. Agenten-Operationen ohne Mandatsbeantwortung
 
 ## Changelog (Standard-intern)
 
+- **1.0.7** (2026-09-08): PATCH (SCR-0029) — Register-Architektur vollständig:
+  Requirements/Architecture/Agent/Security/Release-&-Evidence-Registry angelegt
+  (registry/*.yaml, SSOT) plus Protocol-Conformance- und Protocol-Security-Registry;
+  Katalog 100% belegt (REPO-AUDIT-003, PROTOCOL-002, PROTOCOL-003; 0 GEPLANT).
+  Keine semantischen Änderungen.
 - **1.0.6** (2026-09-08): PATCH (SCR-0025) — FAM-43 Standards Governance Core
   komplett: STDDEV-001/REGISTRY-001/CHANGE-001 GEPLANT → BELEGT (Zähler-Sync:
   10 BELEGT, 3 GEPLANT — offen: REPO-AUDIT-003, PROTOCOL-002, PROTOCOL-003);

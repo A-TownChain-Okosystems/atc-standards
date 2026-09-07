@@ -1,5 +1,42 @@
 # Changelog
 
+## [1.4.39] - 2026-09-08
+
+### Added
+
+- **3 fehlende Standards (DRAFT, Registry 121→124)** (SCR-0029):
+  - **ATC-STD-REPO-AUDIT-003** (122.) — Automatisierter ATC Repository Auditor:
+    verbindliche Agent-Spezifikation mit 17-Schritte-Executor-Pipeline, Read-Only-
+    Pflicht auf Code, AUTO/HYBRID-Checks automatisch + MANUAL mit Human-Gate,
+    Stop-Pflichten (Health E, P0, Secrets, Chain-ID), AUD-Record-Report-Pflicht,
+    Determinismus-Gebot. Schließt FAM-41 (Repository Audit komplett).
+  - **ATC-STD-PROTOCOL-002** (123.) — Conformance- & Interoperabilitäts-Tests:
+    CONF-[FAMILY]-NNN-Pläne je Protokollfamilie, 10 Pflicht-Testkategorien
+    (Envelope, kanonische Serialisierung FAIL-scharf, Handshake, Replay, Rate-Limit,
+    100% Fehlerkatalog-Abdeckung, Kompatibilitätsmatrix, Interop, Malformed,
+    Security), Stufen CONF-BRONZE/SILBER/GOLD; `active` nur noch mit CONF-BRONZE
+    (Verschärfung von REQ-PROTO-021). Erste Instanz: CONF-P2P-001 (29/29 Tests).
+  - **ATC-STD-PROTOCOL-003** (124.) — Protocol Threat-Model & Security-Audit:
+    12 Pflicht-Angriffe je Familie (M1 MITM bis M12 Supply-Chain) mit Ehrlich-
+    heitsregel für Statuswerte, Protocol-Security-Registry, Audit-Kadenz je
+    Release/MAJOR/quartalsweise, Crypto-HAL-Disziplin (Ed25519-Backend-Pflicht
+    vor Mainnet-Wert-Transport). Schließt die FAM-42-Katalogflanken.
+- **Register-Bibliothek (7 neue SSOT-Registries, FRAMEWORK-001 REQ-FW-011
+  erfüllt):** requirements.yaml (Traceability-REQs), architecture.yaml (L0–L7),
+  agents.yaml (Agent-Konsolidierung), security.yaml (SEC-C-001..007-Controls),
+  releases.yaml (Evidence Packs EV-ATC-M-001/002, EV-P2P-SPEC-001),
+  protocol-conformance.yaml (CONF-P2P-001 erste Instanz),
+  protocol-security.yaml (P2P-Threat-Matrix, 12 Angriffe ehrlich bewertet).
+
+### Changed
+
+- **Framework-Katalog 100% BELEGT:** REPO-AUDIT-003/PROTOCOL-002/PROTOCOL-003
+  GEPLANT→BELEGT (Generator + Regen; 43 Familien, 433 Slots, 0 GEPLANT).
+- **FRAMEWORK-001 v1.0.7-PATCH:** §2-Register-Tabelle auf EXISTIERT aktualisiert
+  (5 GEPLANT→EXISTIERT + 2 neue Register-Zeilen); Genehmigung gebündelt mit den
+  §9-Freigaben.
+
+
 ## [1.4.38] - 2026-09-08
 
 ### Added

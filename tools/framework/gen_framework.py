@@ -466,12 +466,12 @@ F("FAM-40", "Master-Audit", "ATC-STD-999 (reserviert)", [
 F("FAM-41", "Repository Audit", "ATC-STD-REPO-AUDIT-001..003", [
     sl("ATC-STD-REPO-AUDIT-001", "ATC Repository Audit Standard", S_BELEGT, ["ATC-STD-REPO-AUDIT-001"]),
     sl("ATC-STD-REPO-AUDIT-002", "Audit-Checklisten- und Health-Score-Standard (CHECK-001, CHECK-002, …)", S_BELEGT, ["ATC-STD-REPO-AUDIT-002"], "Automatisierbare Checks + standardisierter Repository Health Score; erstellt via SCR-0021"),
-    sl("ATC-STD-REPO-AUDIT-003", "Automatisierter ATC Repository Auditor (KI-/Automatisierungsagent)", S_GEPLANT, ["ATC-STD-REPO-AUDIT-001"], "Agent-Spezifikation (AAS-Kopplung); P2"),
+    sl("ATC-STD-REPO-AUDIT-003", "Automatisierter ATC Repository Auditor (KI-/Automatisierungsagent)", S_BELEGT, ["ATC-STD-REPO-AUDIT-003"], "Erstellt via SCR-0029 (DRAFT): 11 REQ-RA3; schliesst FAM-41"),
 ], note="Neuer Namensraum gem. FRAMEWORK-001 §6.3 (BUG-/SC-/AAS-Muster); SCR-0020"),
 F("FAM-42", "Protocol Standards", "ATC-STD-PROTOCOL-001..003", [
     sl("ATC-STD-PROTOCOL-001", "ATC Protocol Standards Dachstandard (Identität, Versionierung, Nachrichten, Sicherheit, Fehler, Kompatibilität, Governance, Auditing)", S_BELEGT, ["ATC-STD-PROTOCOL-001"]),
-    sl("ATC-STD-PROTOCOL-002", "Protocol Conformance- & Interoperabilitäts-Test-Standard", S_GEPLANT, ["ATC-STD-PROTOCOL-001"], "Test-Suiten je ATC-PROTO-Familie; P2"),
-    sl("ATC-STD-PROTOCOL-003", "Protocol Threat-Model- & Security-Audit-Standard", S_GEPLANT, ["ATC-STD-PROTOCOL-001"], "Vertiefung §11; P2"),
+    sl("ATC-STD-PROTOCOL-002", "Protocol Conformance- & Interoperabilitäts-Test-Standard", S_BELEGT, ["ATC-STD-PROTOCOL-002"], "Erstellt via SCR-0029 (DRAFT): CONF-Stufen, active-Gate"),
+    sl("ATC-STD-PROTOCOL-003", "Protocol Threat-Model- & Security-Audit-Standard", S_BELEGT, ["ATC-STD-PROTOCOL-003"], "Erstellt via SCR-0029 (DRAFT): 12 Pflicht-Angriffe, Security-Registry"),
 ], note="Neuer Namensraum gem. FRAMEWORK-001 §6.3; ATC-PROTO-Registry (26 Familien) via SCR-0023"),
 F("FAM-43", "Standards Governance Core", "ATC-STD-TAXONOMY-001 + STDDEV/REGISTRY/CHANGE-001", [
     sl("ATC-STD-TAXONOMY-001", "ATC Standards Taxonomy & Family Creation Standard (vierstufige Taxonomie, FAM-/CAT-REQ/TCR, TAX-CHECK-001..018)", S_BELEGT, ["ATC-STD-TAXONOMY-001"]),

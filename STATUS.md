@@ -209,7 +209,19 @@ Dependabot in 16 Manifest-Repos (F-025). Org-Settings per Owner-Entscheidung 23:
 Offen: F-026 (Version-Baseline), F-027 (Tag v2.0.0), F-028 (ATC-STD-202 22→26), F-029 (governance-ci 3 Repos,
 Owner-Aktion workflow-Scope). Report: docs/AUD-2026-0002_ORG_AUDIT.md · Issues #94..98 in a-townchain-os.
 
-Stand: 08.09.2026, 01:35 (Europe/Berlin) — Registry FINAL 121/121 APPROVED; P2P-001 v1.0.0 spezifiziert (SCR-0027) UND implementiert (SCR-0028, ShivaCore 423/423) · Self-Compliance: R3 100/100 GATE PASS ·
+FEHLENDE STANDARDS + REGISTER-BIBLIOTHEK ANGELEGT (SCR-0029, 01:30-02:00): 3 neue
+Standards DRAFT — ATC-STD-REPO-AUDIT-003 (122., Auditor-Agent: Mandat, 17-Schritte-
+Pipeline, Read-Only-Pflicht, Stop-Gates, 11 REQ-RA3), ATC-STD-PROTOCOL-002 (123.,
+Conformance- & Interop-Tests: CONF-Pläne je Familie, 10 Pflicht-Kategorien,
+CONF-BRONZE/SILBER/GOLD, active-Gate-Verschärfung, 7 REQ-CONF), ATC-STD-PROTOCOL-003
+(124., Protocol Threat-Model: 12 Pflicht-Angriffe M1-M12, Ehrlichkeitsregel,
+Security-Registry, Audit-Kadenz, Ed25519-HAL-Pflicht, 6 REQ-PTS). Katalog 100% BELEGT
+(0 GEPLANT — FAM-41/42-Flanken geschlossen). Bibliothek: 7 neue Register-SSOTs
+(requirements/architecture/agents/security/releases + protocol-conformance/
+protocol-security) — FRAMEWORK-001 §2 REQ-FW-011 erfüllt; FRAMEWORK-001 v1.0.7-PATCH
+(§2-Tabelle, gebündelt zur Freigabe). Registry: 124 Standards (121 APPROVED + 3 DRAFT).
+
+Stand: 08.09.2026, 02:00 (Europe/Berlin) — Registry 124 Standards (121 APPROVED + 3 DRAFT SCR-0029); Katalog 100% belegt; 11 Register EXISTIERT · Self-Compliance: R3 100/100 GATE PASS ·
 Voll-Validierung 110/110 Standards: ALL COMPLIANT (S-18 prüft alle 10 Registry-Dateien; Mutationssuite 12/12)
 
 ## Standards-System
