@@ -1,3 +1,25 @@
+## 2026-09-07 — ATC-STD-AI-DEV-001 (AI Agent Identity & Workflow, Owner-Entwurf)
+- Neuer Standard (candidate): KI-Agenten sind keine unsichtbaren Bots —
+  jede Aktion folgt Identität → Kontext → Fundstelle → Entscheidung →
+  nächste Aktion → Ergebnis. Agent-Identität (ATC-AI-{ROLE}-NNN, getrennt
+  vom GitHub-Bot-Account), Agent-Manifest .github/ai/ (agent/capabilities/
+  permissions/workflow/memory-policy), Repository-Discovery-Protocol,
+  AGENTS.md je Repo (ab R2), Task-IDs ATC-TASK-NNN, State Machine,
+  Evidence-Pflicht, Finding→Action-Kette (F-NNN/ACT-NNN), OBSERVATION-vs-
+  DECISION-Grundsatz, Assumption-Register ASSUMPTION-ANNN, Commit-Trailer
+  (Agent-ID/Task-ID/Finding-ID/Action-ID), Completion-Gate mit
+  Cross-Repository-Konsistenzprüfung, Agent Audit Record.
+- Familien-Dach für ATC-STD-AI-DEV-002…012 (planned): Capabilities,
+  Discovery, Task Management, Finding & Evidence, Decision & Action,
+  Commit/PR, Testing, Audit Trail, Doc-Sync, Human Approval,
+  Multi-Agent Coordination.
+- Schema-Erweiterung (ATC-STD-000 §7): aiDevStandardId, aiAgentId,
+  aiTaskId, aiActionId, aiAssumptionId + aiDevStandardDoc (Datei-Muster).
+- Templates: templates/ai/agent-manifest.template.yaml,
+  templates/ai/AGENTS.template.md.
+- Übergangsregel: [agent: …]-Tag aus AGENT_PROTOCOL.md bleibt 30 Tage
+  nach APPROVED gültig, danach Commit-Trailer.
+
 ## 2026-09-07 — ATC-STD-204 (Dependency & Interface Standard, F-001/F-002/F-005)
 - Neuer Standard (proposed, normativ mit APPROVED): Dependency-Deklaration
   (registry/dependencies.yaml als SSOT, Zyklusfreiheit, SCR-Pflicht),

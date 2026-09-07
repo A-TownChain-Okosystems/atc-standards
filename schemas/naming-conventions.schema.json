@@ -35,7 +35,12 @@
     "testId",
     "syncCheckId",
     "auditRecordId",
-    "netStandardId"
+    "netStandardId",
+    "aiDevStandardId",
+    "aiAgentId",
+    "aiTaskId",
+    "aiActionId",
+    "aiAssumptionId"
    ],
    "properties": {
     "standardId": {
@@ -134,6 +139,35 @@
      "type": "string",
      "pattern": "^ATC-STD-NET-[0-9]{3,}$",
      "example": "ATC-STD-NET-001"
+    },
+    "aiDevStandardId": {
+     "type": "string",
+     "pattern": "^ATC-STD-AI-DEV-[0-9]{3,}$",
+     "example": "ATC-STD-AI-DEV-001"
+    },
+    "aiAgentId": {
+     "type": "string",
+     "pattern": "^ATC-AI-(ARCH|DEV|TEST|SEC|DOC|AUDIT|RELEASE)-[0-9]{3,}$",
+     "example": "ATC-AI-DEV-001",
+     "note": "AI-Agenten-Identitaet (ATC-STD-AI-DEV-001 §1); GitHub-Bot-Account ist nur Ausfuehrungsidentitaet"
+    },
+    "aiTaskId": {
+     "type": "string",
+     "pattern": "^ATC-TASK-[0-9]{3,}$",
+     "example": "ATC-TASK-00427",
+     "note": "Verbindet Issue/Branch/Commits/PR/Tests/Doku/Audit (ATC-STD-AI-DEV-001 §7)"
+    },
+    "aiActionId": {
+     "type": "string",
+     "pattern": "^ACT-[0-9]{3,}$",
+     "example": "ACT-001",
+     "note": "Finding-zu-Action-Kette (ATC-STD-AI-DEV-001 §8)"
+    },
+    "aiAssumptionId": {
+     "type": "string",
+     "pattern": "^ASSUMPTION-A[0-9]{3,}$",
+     "example": "ASSUMPTION-A001",
+     "note": "AI Assumption Register (ATC-STD-AI-DEV-001 §10)"
     }
    }
   },
@@ -187,7 +221,8 @@
     "review",
     "compliance",
     "bugStandardDoc",
-    "netStandardDoc"
+    "netStandardDoc",
+    "aiDevStandardDoc"
    ],
    "properties": {
     "standardDoc": {
@@ -221,6 +256,11 @@
      "type": "string",
      "pattern": "^ATC-STD-NET-[0-9]{3,}[.]md$",
      "example": "ATC-STD-NET-001.md"
+    },
+    "aiDevStandardDoc": {
+     "type": "string",
+     "pattern": "^ATC-STD-AI-DEV-[0-9]{3,}[.]md$",
+     "example": "ATC-STD-AI-DEV-001.md"
     }
    }
   },

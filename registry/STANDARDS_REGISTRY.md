@@ -17,6 +17,7 @@
 | ATC-STD-202 | Repository Naming & Classification Standard | proposed | 1.1.0 | repository |
 | ATC-STD-203 | Repository Security & Release Standard | proposed | 1.0.1 | repository |
 | ATC-STD-204 | Dependency & Interface Standard | proposed | 1.0.0 | repository |
+| ATC-STD-AI-DEV-001 | Software Development AI Agent Identity & Workflow Standard | candidate | 1.0.0 | ai-dev |
 | ATC-STD-BUG-001 | Bug Finding Standard | candidate | 1.0.0 | bug |
 | ATC-STD-BUG-002 | Bug Documentation Standard | candidate | 1.0.0 | bug |
 | ATC-STD-BUG-003 | Bug Fix Lifecycle Standard | candidate | 1.0.0 | bug |
