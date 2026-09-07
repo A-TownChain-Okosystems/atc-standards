@@ -45,7 +45,7 @@ def collect():
 def file_id(path):
     try:
         head = open(path, encoding="utf-8").read(2500)
-        m = re.search(r"^\s*id:\s*(ATC-STD-(?:BUG-|NET-|ZKP-|AI-DEV-|MD-|SC-|README-|DESC-|VERSION-|AUDIT-|AI-DECISION-|UPDATE-|COMPAT-|MILESTONE-)?[0-9]{3,}|ATC-AAS-[0-9]{3,}|ATC-ENT-[0-9]{3,})\s*$", head, re.M)
+        m = re.search(r"^\s*id:\s*(ATC-STD-(?:BUG-|NET-|ZKP-|AI-DEV-|MD-|SC-|README-|DESC-|VERSION-|AUDIT-|AI-DECISION-|UPDATE-|COMPAT-|MILESTONE-|FRAMEWORK-)?[0-9]{3,}|ATC-AAS-[0-9]{3,}|ATC-ENT-[0-9]{3,})\s*$", head, re.M)
         return m.group(1) if m else None
     except Exception:
         return None
@@ -193,6 +193,59 @@ def main():
         except Exception as e:
             print("S-20 Milestones: FAIL — %s" % str(e)[:120]); milestone_ok = False
     if not milestone_ok:
+        fails += 1
+
+
+    # S-21 Framework-Katalog-Check (ATC-STD-FRAMEWORK-001 §5/§17)
+    framework_ok = True
+    FW_PATH = os.path.join(ROOT, "registry", "framework.yaml")
+    if not os.path.exists(FW_PATH):
+        print("S-21 Framework: PASS (keine framework.yaml)")
+    else:
+        try:
+            import yaml as _fy
+            fw = _fy.safe_load(open(FW_PATH, encoding="utf-8")) or {}
+            fams = (fw.get("framework") or {}).get("families") or []
+            if not fams:
+                print("S-21 Framework: FAIL — framework.yaml ohne 'families:'-Liste")
+                framework_ok = False
+            else:
+                reg = open(REGISTRY, encoding="utf-8").read()
+                reg_ids = set(re.findall(r"id:\s*(ATC-[\w.-]+)", reg)) | set(re.findall(r'id:\s*"(ATC-[\w.-]+)"', reg))
+                allowed = {"NEU", "BELEGT", "VERWEIST", "KONFLIKT", "GEPLANT"}
+                fam_ids, slot_ids = set(), set()
+                for fam in fams:
+                    fid = str(fam.get("id", "?"))
+                    for req in ("id", "name", "range"):
+                        if req not in fam:
+                            print("S-21 Framework: FAIL — Familie %s fehlt '%s'" % (fid, req)); framework_ok = False
+                    if fid in fam_ids:
+                        print("S-21 Framework: FAIL — doppelte Familie %s" % fid); framework_ok = False
+                    fam_ids.add(fid)
+                    frefs = [str(r) for r in (fam.get("family_refs") or [])]
+                    for s in fam.get("slots") or []:
+                        sid = str(s.get("id", "?"))
+                        if "title" not in s or "status" not in s:
+                            print("S-21 Framework: FAIL — Slot %s unvollständig (title/status)" % sid); framework_ok = False
+                        if sid in slot_ids:
+                            print("S-21 Framework: FAIL — doppelter Slot %s" % sid); framework_ok = False
+                        slot_ids.add(sid)
+                        st = s.get("status")
+                        if st not in allowed:
+                            print("S-21 Framework: FAIL — Slot %s: Status %s ungueltig" % (sid, st)); framework_ok = False
+                        if st == "KONFLIKT" and not s.get("note"):
+                            print("S-21 Framework: FAIL — Slot %s: KONFLIKT ohne Note" % sid); framework_ok = False
+                        if st in ("BELEGT", "VERWEIST"):
+                            for ref in [str(r) for r in (s.get("refs") or [])] or frefs:
+                                if ref.startswith("ATC-") and ref not in reg_ids:
+                                    print("S-21 Framework: FAIL — Slot %s: Referenz %s nicht in Registry" % (sid, ref)); framework_ok = False
+                st_total = sum(len(f.get("slots") or []) for f in fams)
+                print("S-21 Framework: %s (%d Familien, %d Slots, Registry-Referenzen aufgeloest)" % ("PASS" if framework_ok else "FAIL", len(fams), st_total))
+        except ImportError:
+            print("S-21 Framework: WARN (Fallback-Modus, PyYAML fehlt)")
+        except Exception as e:
+            print("S-21 Framework: FAIL — %s" % str(e)[:120]); framework_ok = False
+    if not framework_ok:
         fails += 1
 
     print("RESULT: " + ("ALL COMPLIANT" if fails == 0 else "%d FAIL(s)" % fails))

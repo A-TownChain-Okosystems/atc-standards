@@ -1,5 +1,29 @@
 # Changelog
 
+## [1.4.22] - 2026-09-07
+
+### Added
+
+- **ATC-STD-FRAMEWORK-001 v1.0.0 DRAFT (SCR-0019):** ATC Enterprise Standards
+  Framework — das Master-Dokument (ATC-STANDARDS-MASTER). 12 REQ-FW; führt alle
+  111 Standards in eine Zielarchitektur: maschinenlesbarer 40-Familien-Katalog
+  (registry/framework.yaml, 423 Slots — 264 NEU, 150 VERWEIST auf Bestand,
+  1 BELEGT, 6 KONFLIKT, 2 GEPLANT); Kollisionsauflösung für §30-eingefrorene
+  Slots 100/201-204/300 dokumentiert; einheitliche Status-/Change-/Traceability-
+  Modelle auf den normativen Bestand abgebildet (kein Parallelprozess);
+  11-Register-Architektur (Standards/Milestones/Repos/Framework-Katalog/SCR/Audit
+  existieren, Requirements/Architecture/Agent/Security/Release&Evidence GEPLANT);
+  Release-Readiness RR-G01..G08; Agent Operating Mandate (14 Session-Fragen,
+  ATC-STD-AOS-001 reserviert); Master-Audit ATC-STD-999 reserviert (16-Stufen-
+  Audit-Kette); Gap-Roadmap P1-P3.
+- **Maschinenlesbarkeit:** registry/framework.yaml (SSOT-Katalog, generiert von
+  tools/framework/gen_framework.py) + Validator NEU S-21 (Familien/Slots,
+  Status-Enums, eindeutige IDs, Registry-Referenz-Auflösung, KONFLIKT-Pflicht-Note;
+  Negativtest FAIL verifiziert); Kategorien +framework; Naming 4 Patterns;
+  DAG-Knoten; Agent-Manifest 112 Standards gebunden.
+- **Registry:** 112 Standards (111 APPROVED + 1 DRAFT FRAMEWORK-001).
+
+
 ## [1.4.21] - 2026-09-07
 
 ### Changed

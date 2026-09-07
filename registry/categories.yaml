@@ -29,6 +29,8 @@ audit: {name: audit,        range: "ATC-STD-AUDIT-001-999", description: "Audit-
 ai-decision: {name: ai-decision, range: "ATC-STD-AI-DECISION-001-999", description: "AI-Decision-Familie: Agent Decision-Making — Entscheidungsmodell, Autonomie-Level, Evidence-First, Risk/Authority, Decision Records ÜBER den AAS-Betriebsstandards (Owner-Entwurf 07.09., SCR-0014)"}
 update: {name: update,        range: "ATC-STD-UPDATE-001-999", description: "Update-Familie: Change Control — Update-Kategorien, Lifecycle, Impact/Dependency, Gates, Rollback, Emergency, Manifeste (Owner-Entwurf 07.09., SCR-0015)"}
 
+framework: {name: framework,  range: "ATC-STD-FRAMEWORK-001-999", description: "Framework-Familie: ATC Enterprise Standards Framework — Master-Dokument, Katalog, einheitliche Governance-Modelle (Owner-Entwurf 07.09., SCR-0019)"}
+
 milestone: {name: milestone,  range: "ATC-STD-MILESTONE-001-999", description: "Milestone-Familie: Meilenstein-Governance — Zustandsnachweis, Lebenszyklus, Acceptance Gates, Evidence Packs, maschinenlesbare Registry (Owner-Entwurf 07.09., SCR-0018)"}
 
 compat: {name: compat,        range: "ATC-STD-COMPAT-001-999", description: "Compat-Familie: Major Version Compatibility & Recovery — Kompatibilitätsprüfung, -Wiederherstellung, -Migration nach MAJOR-Updates (Owner-Entwurf 07.09.; Pflicht-Gate UPD-G04 in UPDATE-001)"}
