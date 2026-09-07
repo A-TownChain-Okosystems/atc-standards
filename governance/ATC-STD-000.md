@@ -2,7 +2,7 @@ standard:
   id: ATC-STD-000
   title: "Standards Governance & Specification Standard"
   version: "1.2.0"
-  status: candidate
+  status: approved
   category: governance
   authority: A-TownChain Ecosystems
   owner: ShivaCoreDev
@@ -581,12 +581,20 @@ die Verfassung ist vollstaendig durch die eigene Kette gelaufen.
 
 **Fassungsstand:**
 - v1.1.0 = APPROVED-Fassung (07.09.2026, SCR-0004)
-- v1.2.0 = CANDIDATE (07.09.2026): §37 ID-Allokationsprozess (SCR-0001),
-  §38 Security Considerations (F-004). Review-Chain §14 gegen v1.2.0:
-  Technical PASS · Security PASS · Architecture PASS (07.09.2026).
-  **APPROVED per Owner-Freigabe §9 ausstehend** — bis dahin gilt v1.1.0.
+- v1.2.0 = APPROVED (07.09.2026, 20:00 UTC+2, Owner-Freigabe "Alles freigeben"):
+  §37 ID-Allokationsprozess (SCR-0001), §38 Security Considerations (F-004).
+  Review-Chain §14 gegen v1.2.0: Technical PASS · Security PASS ·
+  Architecture PASS (07.09.2026). Dokumentiert in
+  approval/APPROVAL-DECISION-2026-09-07-000-v1.2.0.md. v1.2.0 ist die
+  gültige Verfassungsfassung; Änderungen nur noch via SCR (§30).
 
 ## Changelog
+
+- 1.2.0 (07.09.2026, APPROVED): §37 ID-Allokationsprozess (REQ-STD-002,
+  Registry-First, keine Lückennachbesetzung) + §38 Security Considerations
+  (F-004: Branch Protection, CODEOWNERS, Immutable Tags, CI-Scanning —
+  physisch umgesetzt per SCR-0003 Option B). Owner-Freigabe 07.09.2026
+  20:00 UTC+2 ("Alles freigeben").
 
 - 1.1.0 (07.09.2026): SCR-0004 (Owner-Mandat) — neuer Abschnitt 14.1
   Rollen- und Berechtigungsmodell (Owner/Approver/Reviewer/Maintainer/Agent,

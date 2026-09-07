@@ -1,3 +1,14 @@
+## 2026-09-07 — Owner-Freigabe „Alles freigeben": ATC-STD-000 v1.2.0 APPROVED — Governance-Freeze abgeschlossen
+- ATC-STD-000 v1.2.0 (§37 ID-Allokation, §38 Security) CANDIDATE →
+  APPROVED; v1.2.0 ist die gültige Verfassungsfassung.
+- SCR-0003 Option B endgültig dokumentiert (physisch verifiziert: Protected
+  main aktiv, Agent-Push als Owner-Ausnahme).
+- V-16-WARN (Conventional Commits 75 %) dispositionsakzeptiert; Types ab
+  sofort normativ über AI-DEV-007 §1.
+- Entscheidungsdokument: approval/APPROVAL-DECISION-2026-09-07-000-v1.2.0.md.
+- Verbleibende operative Auflagen (bis 07.10.2026): Interface-Test-Suiten,
+  Commit-Trailer-Rollout, Agent-Manifeste + AGENTS.md in R2+-Repos.
+
 ## 2026-09-07 — Owner-Freigabe: ATC-STD-204 + AI-DEV-001/004/007/009 APPROVED
 - Owner-Direktfreigabe (Builder-Chat 19:53 UTC+2; dokumentiert in
   approval/APPROVAL-DECISION-2026-09-07-204-AI-DEV.md): 5 Standards

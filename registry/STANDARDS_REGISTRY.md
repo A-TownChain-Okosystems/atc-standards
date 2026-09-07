@@ -12,7 +12,7 @@
 
 | ID | Titel | Status | Version | Kategorie |
 |----|-------|--------|---------|-----------|
-| ATC-STD-000 | Standards Governance & Specification Standard | candidate | 1.2.0 | governance |
+| ATC-STD-000 | Standards Governance & Specification Standard | approved | 1.2.0 | governance |
 | ATC-STD-201 | Repository Structure Standard | draft | 1.0.1 | repository |
 | ATC-STD-202 | Repository Naming & Classification Standard | proposed | 1.1.0 | repository |
 | ATC-STD-203 | Repository Security & Release Standard | proposed | 1.0.1 | repository |
