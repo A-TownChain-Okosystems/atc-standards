@@ -236,7 +236,13 @@ Ehrlichkeitsregel — keine normative Wirkung bis Elaborierung + §9-Freigabe). 
 (FAM-10) bleibt ehrlich NEU (Gate, kein Standard). Katalog: 276 BELEGT / 150 VERWEIST /
 6 KONFLIKT / 1 NEU — kein ungenutzter Standard-Slot mehr.
 
-Stand: 08.09.2026, 02:05 (Europe/Berlin) — Registry: 387 Standards (124 APPROVED + 263 DRAFT SCR-0030); Katalog vollständig zugeordnet; 11 Register EXISTIERT · Self-Compliance: R3 100/100 GATE PASS ·
+§9-FREIGEGEBEN 08.09.2026, 02:15 UTC+2 (SCR-0030-Batch): alle 263 Grundgerüst-Standards — APPROVED,
+normativ, §30-eingefroren. Normativ verbindlich ist je Standard die Pflicht-Hülle
+(Definition, Katalog-Verortung, REQ-Deklaration, Compliance, Change-Control,
+Security-Dokumentation); die fachliche Elaborierung erfolgt laufend via SCR/MINOR
+(ATC-STD-UPDATE-001). Registry FINAL: 387 Standards, 387 APPROVED, 0 offen.
+
+Stand: 08.09.2026, 02:15 (Europe/Berlin) — Registry FINAL: 387 Standards, 387 APPROVED, 0 offen; Katalog vollständig zugeordnet (nur RR-G06 als Gate NEU); 11 Register EXISTIERT · Self-Compliance: R3 100/100 GATE PASS ·
 Voll-Validierung 110/110 Standards: ALL COMPLIANT (S-18 prüft alle 10 Registry-Dateien; Mutationssuite 12/12)
 
 ## Standards-System

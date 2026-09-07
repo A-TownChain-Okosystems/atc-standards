@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.4.42] - 2026-09-08
+
+### Changed
+
+- **§9-Freigabe SCR-0030-Batch (08.09.2026, 02:15 UTC+2):** Alle 263 Grundgerüst-Standards —
+  DRAFT → APPROVED, normativ in Kraft, §30-eingefroren. Normativ verbindlich
+  ist je Standard die Pflicht-Hülle (Definition, Katalog-Verortung,
+  REQ-Deklaration, Compliance-/Change-Control-/Security-Pflichten); die
+  fachliche Elaborierung erfolgt inkrementell via SCR/MINOR (ATC-STD-UPDATE-001).
+  **Registry FINAL: 387 Standards, 387 APPROVED, 0 offen** — der gesamte
+  Framework-Katalog ist normativ besetzt (43 Familien, 433 Slots; nur RR-G06
+  als Gate-Slot bleibt ehrlich NEU).
+
+
 ## [1.4.41] - 2026-09-08
 
 ### Added

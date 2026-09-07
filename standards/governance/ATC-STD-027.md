@@ -3,15 +3,15 @@ standard:
   id: ATC-STD-027
   title: "Standards Deprecation Standard"
   version: "1.0.0"
-  status: draft
+  status: approved
   category: governance
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"
   created: "2026-09-08"
   updated: "2026-09-08"
-  normative: false
-  effective_date: ""
-  review_date: ""
+  normative: true
+  effective_date: "2026-09-08"
+  review_date: "2027-09-08"
   classification: PUBLIC
   language: de-DE
   supersedes: null
@@ -22,11 +22,11 @@ standard:
   license: "Copyright (c) 2026 Michael Wroblewski"
 ----
 
-# ATC-STD-027 — Standards Deprecation (v1.0.0, DRAFT)
+# ATC-STD-027 — Standards Deprecation (v1.0.0, APPROVED)
 
-> **Status:** DRAFT (v1.0.0) — Grundgerüst-Standard aus Katalog-Slot der Familie
+> **Status:** APPROVED (v1.0.0, §30-eingefroren) — Grundgerüst-Standard aus Katalog-Slot der Familie
 > Standards-Governance (FAM-02); erstellt via SCR-0030. Inhaltliche Elaborierung (Volltext,
-> fachliche REQs) erfolgt via eigenem SCR; Owner-§9-Freigabe ausstehend.
+> fachliche REQs) erfolgt via eigenem SCR; §9-FREIGEGEBEN 08.09.2026, 02:15 UTC+2 — APPROVED, normativ, §30-eingefroren; Elaborierung via SCR (MINOR-Updates).
 
 ## Abstract
 
@@ -34,10 +34,9 @@ ATC-STD-027 (Standards Deprecation) ist der Grundgerüst-Standard für den gleic
 der Familie **Standards-Governance** (FAM-02, Range ATC-STD-020..033) im ATC Enterprise Standards
 Framework. Er schafft die normative Hülle: Definition des Gegenstandes, Verortung
 im Katalog, Kernpflichten, Compliance- und Verifikationsregeln sowie die
-Change-Control-Bindung. Der Standard ist DRAFT und entfaltet keine normative
-Wirkung, bis die inhaltliche Elaborierung erfolgt und der Owner nach §9
-freigibt (ATC-STD-000 §9/§19: Kein Registry-Eintrag ohne Verfahren — Eintrag
-erfolgt mit SCR-0030 als DRAFT; APPROVED nur mit Freigabe).
+Change-Control-Bindung. Der Standard ist mit Owner-§9-Freigabe (08.09.2026, 02:15 UTC+2) APPROVED, normativ in
+Kraft und §30-eingefroren (ATC-STD-000). Die inhaltliche Elaborierung erfolgt
+inkrementell via eigener SCR-Kette (MINOR-Updates gemäß ATC-STD-UPDATE-001).
 
 Schlüsselwörter: MUSS/MUSS NICHT, SOLLTE, DARF/KANN — RFC-2119 gemäß ATC-STD-000 §10.
 
@@ -90,9 +89,9 @@ Sicherheitsaussagen getroffen (Ehrlichkeitsregel — kein erfundener Status).
 
 ## Changelog (Standard-intern)
 
-- **1.0.0** (2026-09-08): Initial Release DRAFT — Grundgerüst-Standard aus
-  Katalog-Slot ATC-STD-027 (Familie Standards-Governance, FAM-02) via SCR-0030. Elaborierung und
-  §9-Freigabe ausstehend; bis dahin nicht normativ.
+- **1.0.0** (2026-09-08): Initial Release — Grundgerüst-Standard aus
+  Katalog-Slot ATC-STD-027 (Familie Standards-Governance, FAM-02) via SCR-0030; §9-FREIGEGEBEN 08.09.2026, 02:15 UTC+2 — APPROVED, normativ,
+  §30-eingefroren. Elaborierung via SCR (MINOR).
 
 ## References
 
