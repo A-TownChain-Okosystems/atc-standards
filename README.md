@@ -1,5 +1,11 @@
 # ATC Standards — Die normative Governance-Schicht der A-TownChain-Organisation
 
+> **ATC COMPLIANCE: R3 · BETA · Standard ATC-STD-REPO-001 v1.0.0 · GATE: AUDITED (07.09.2026)**
+
+**Governance Chain (AD-031):** ATC Standards → Repository Schema → Repository
+Template → Repository Creation → ATC Repo Auditor → (PASS → Development → CI →
+Security Gates → Architecture Gate → Release Gate → Production | FAIL → NO-GO).
+
 > **Standard-Repo:** ATC-STD-REPO-002 Typ SPEC · Level R3 · Chain-ID 658467 · AD-030 (07.09.2026)
 
 ## 1. Purpose
@@ -20,8 +26,16 @@ Das Repositorium selbst erfuellt den ATC-STD-REPO-001 (self-compliant).
 - `atc/` — 102 Blockchain-/AI-/ATCLang-Standards (ATC-01 bis ATC-99, ATC-LIC,
   ATC_ECOSYSTEM_STANDARDS)
 - `ats/` — ATS-Standards (ATS-LIC System-/Hardware-Lizenz)
-- `governance/` — ATC-STD-REPO-001 (Structure), -002 (Naming & Classification),
-  -003 (Security & Release)
+- `standards/repository/` — ATC-STD-REPO-001 v1.0.0 FORMALE SPEZIFIKATION
+  (MUST/SHOULD/MAY, Compliance-Matrix R0-R4, Validator-Regeln V-01…V-16),
+  -002 (Naming, Classification, Ownership, Lifecycle, S0-S4, Dependency Graph),
+  -003 (Security, Release, Branching, Commits, PRs, Gates, Reproducible Builds)
+- `schemas/` — repository/compliance/ownership/lifecycle.schema.yaml
+- `registry/` — repositories.yaml (23 Repos, zentrale Registry), teams.yaml,
+  dependencies.yaml (zentraler Dependency Graph) + STANDARDS_REGISTRY/OVERVIEW
+- `tools/atc-repo-audit/` — der automatische ATC Repository Auditor (v0.1.0)
+- `templates/` — repository- (.atc-Vorlagen, PR-Template) und workflow-Vorlagen
+- `docs/governance/` — Governance-Chain-Doku
 - `registry/` — STANDARDS_REGISTRY.md (Master-Registry), OVERVIEW.md
 - `references/` — .atc-Referenzimplementierungen (registry.atc, Standards-
   Vertragsmuster) + ATC-Modul-Doku

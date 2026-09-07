@@ -1,0 +1,26 @@
+# ATC Repository Dependency Graph (AD-026 L0-L7, AD-031) — Richtung: nutzt -> wird genutzt
+# Regel: keine Zyklen; hoehere Layer duerfen tiefere nutzen, NIEMALS umgekehrt.
+dependencies:
+  atclang:            {uses: []}
+  atc-shivacore:      {uses: [atclang]}
+  aurora-ai:          {uses: [atc-shivacore]}
+  a-townchain:        {uses: [atc-shivacore, atclang]}
+  globus-os:          {uses: [atc-shivacore]}
+  atc-contracts:      {uses: [atclang, a-townchain]}
+  atc-wallet:         {uses: [atc-sdk, a-townchain]}
+  atc-sdk:            {uses: [atclang, a-townchain]}
+  atc-explorer:       {uses: [atc-sdk]}
+  atc-indexer:        {uses: [a-townchain]}
+  atc-interop:        {uses: [a-townchain, atc-contracts]}
+  atc-node:           {uses: [a-townchain, atc-shivacore]}
+  atc-storage:        {uses: [atc-shivacore]}
+  atc-compute:        {uses: [atc-shivacore]}
+  atc-oracle:         {uses: [a-townchain]}
+  atc-mining:         {uses: [a-townchain]}
+  atc-marketplace:    {uses: [atc-sdk, atc-contracts]}
+  atc-launchpad:      {uses: [atc-sdk]}
+  genesis-engine:     {uses: [atc-sdk]}
+  genesis-chronicles: {uses: [genesis-engine, atc-contracts]}
+  a-townchain-os:     {uses: [atc-shivacore, atclang, aurora-ai, a-townchain, globus-os]}
+  a-townchain-os-docs: {uses: []}
+  atc-standards:      {uses: []}

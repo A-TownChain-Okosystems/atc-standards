@@ -1,0 +1,26 @@
+# ATC Repository Registry — zentrale, maschinenlesbare Registry (AD-030/031)
+# Gefuehrt kanonisch im atc-standards-Repository. Neue Repos MUSSSEN hier registriert werden.
+repositories:
+  - {name: atc-standards,    classification: SPEC,        maturity: R3, security: S3, status: beta,        layer: parallel,   domain: governance}
+  - {name: atc-shivacore,   classification: CORE,        maturity: R4, security: S4, status: production,   layer: L1,         domain: kernel}
+  - {name: atclang,         classification: CORE,        maturity: R4, security: S4, status: development,   layer: L0,         domain: language}
+  - {name: a-townchain,     classification: CORE,        maturity: R4, security: S4, status: development,   layer: L3,         domain: blockchain}
+  - {name: globus-os,       classification: OS,          maturity: R3, security: S4, status: development,   layer: L4,         domain: os}
+  - {name: aurora-ai,       classification: AI,          maturity: R3, security: S2, status: development,   layer: L2,         domain: ai}
+  - {name: a-townchain-os,  classification: INFRA,       maturity: R3, security: S3, status: development,   layer: L7,         domain: integration}
+  - {name: a-townchain-os-docs, classification: SPEC,    maturity: R3, security: S3, status: production,   layer: parallel,   domain: documentation}
+  - {name: atc-contracts,   classification: SPEC,        maturity: R3, security: S3, status: development,   layer: L5,         domain: contracts}
+  - {name: atc-sdk,         classification: SDK,         maturity: R2, security: S2, status: development,   layer: L5,         domain: sdk}
+  - {name: atc-wallet,      classification: APPLICATION, maturity: R2, security: S2, status: development,   layer: L5,         domain: wallet}
+  - {name: atc-explorer,    classification: APPLICATION, maturity: R2, security: S1, status: development,   layer: L5,         domain: explorer}
+  - {name: atc-marketplace, classification: APPLICATION, maturity: R2, security: S1, status: development,   layer: L5,         domain: marketplace}
+  - {name: atc-indexer,     classification: CORE,        maturity: R2, security: S2, status: development,   layer: L5,         domain: analytics}
+  - {name: atc-interop,     classification: CORE,        maturity: R2, security: S2, status: development,   layer: L5,         domain: bridge}
+  - {name: genesis-engine,  classification: GAME,        maturity: R2, security: S1, status: development,   layer: L6,         domain: game-engine}
+  - {name: genesis-chronicles, classification: GAME,     maturity: R2, security: S1, status: development,   layer: L6,         domain: game}
+  - {name: atc-node,        classification: CORE,        maturity: R1, security: S3, status: experimental,  layer: L5,         domain: node}
+  - {name: atc-storage,     classification: CORE,        maturity: R1, security: S2, status: experimental,  layer: L5,         domain: storage}
+  - {name: atc-compute,     classification: CORE,        maturity: R1, security: S2, status: experimental,  layer: L5,         domain: compute}
+  - {name: atc-oracle,      classification: CORE,        maturity: R1, security: S2, status: experimental,  layer: L5,         domain: oracle}
+  - {name: atc-mining,      classification: CORE,        maturity: R1, security: S2, status: experimental,  layer: L5,         domain: mining}
+  - {name: atc-launchpad,   classification: APPLICATION, maturity: R1, security: S1, status: experimental,  layer: L5,         domain: launchpad}

@@ -1,0 +1,15 @@
+name: ATC Governance CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  atc-repo-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: ATC Repository Audit (self-compliance, Level R3)
+        run: python3 tools/atc-repo-audit/atc_repo_audit.py . --level R3

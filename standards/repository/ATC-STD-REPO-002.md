@@ -1,5 +1,5 @@
 # ATC-STD-REPO-002 — Repository Naming & Classification Standard
-> **Status:** 📐 PROPOSED (v1.0.0) | **Datum:** 07.09.2026 | **Autor:** Michael Wroblewski (Owner), Aurora (Superagent)
+> **Status:** NORMATIV (v1.0.1) — Erweiterung AD-031 | **Datum:** 07.09.2026 | **Autor:** Michael Wroblewski (Owner), Aurora (Superagent)
 > **Standard-ID:** ATC-STD-REPO-002 | **Scope:** GitHub-Organisation A-TownChain-Okosystems
 > **Referenzen:** AD-025 (Genesis Chronicles Umbenennung), AD-026 (Bauhierarchie L0-L7), AD-029 (Governance-Mandat), ATC-STD-REPO-001/-003
 > **Anwendungsregel:** VERBINDLICH — die Klassifizierungstabelle ist die normative Einordnung aller 22 aktiven Repos.
@@ -98,3 +98,65 @@ L0 atclang → L1 Kernel → L2 Aurora → L3 Chain → L4 OS → L5 Dienste →
 
 ATCLang-Compilerkette: Specification → Lexer → Parser → AST → Semantic →
 Compiler → Bytecode → VM (G1-Spec: specs/language/SPEC.md).
+
+---
+
+## 7. Ownership-Standard (Abschnitt 17, MUST ab R2)
+
+Jedes Repository definiert `.atc/ownership.yaml`:
+
+```yaml
+repository: atc-standards
+maintainers:
+  - ShivaCoreDev
+  - aurora-superagent
+security:
+  team: ShivaCoreDev
+architecture:
+  team: ShivaCoreDev
+release:
+  team: ShivaCoreDev
+```
+
+GitHub CODEOWNERS MUSS daraus abgeleitet bzw. synchron gehalten werden.
+
+## 8. Lifecycle-Management (Abschnitt 18, MUST)
+
+Zulaessige Stadien und Uebergaenge (kein Springen):
+
+```
+experimental → development → beta → production → deprecated → archived
+```
+
+Ein Repository DARF NICHT Stadien ueberspringen (z.B. experimental → production
+ist UNZULAESSIG). Uebergaenge werden in `.atc/lifecycle.yaml` mit Datum
+dokumentiert. `archived` entspricht dem physischen GitHub-Archiv (irreversible
+Read-Only-Politik siehe AD-020-Erfahrung).
+
+## 9. Security-Klassifizierung S0-S4 (Abschnitt 31, MUST)
+
+| Klasse | Bedeutung | Zusatz-Anforderungen |
+|---|---|---|
+| S0 | Public/Non-Critical | Basis |
+| S1 | Standard | + Hygiene-Scan |
+| S2 | Important | + SECURITY.md, Dependency Policy |
+| S3 | Critical | + Security-Audit, Adversarial-Tests |
+| S4 | Protocol/Infrastructure Critical | + Reproducible Builds, Signierte Releases, Differential-Kriterien (AD-021/022) |
+
+Die S-Klasse MUSS in `.atc/repository.yaml` (security.criticality) und in
+registry/repositories.yaml gefuehrt werden. Hoehere S-Klasse = strengere Gates
+(ATC-STD-REPO-003 §9). Aktuelle Zuordnung: siehe registry/repositories.yaml.
+
+## 10. ATC Repository Dependency Graph (Abschnitt 32, MUST gepflegt)
+
+Der zentrale Abhaengigkeits-Graph wird in registry/dependencies.yaml gepflegt
+(konkrete Auspraegung = AD-026 L0-L7). Er beantwortet: Wer haengt von wem ab,
+welche Aenderungen propagieren, wo liegen Single Points of Failure, welche
+Komponenten sind vor einem Release erneut zu testen.
+
+## 11. Repository-Registry (Abschnitt 33, MUST)
+
+registry/repositories.yaml im atc-standards-Repository ist die ZENTRALE,
+maschinenlesbare Registry aller Repositories (name, classification, maturity,
+security, status, layer). Neue Repos MUSSEN bei Anlage registriert werden.
+teams.yaml (Team-Zuordnung) und dependencies.yaml (Graph) ergaenzen sie.
