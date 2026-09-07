@@ -13,7 +13,7 @@ standard:
   superseded_by: null
 ---
 
-# ATC-STD-NET-002 — Testnet Standard (v1.0.0, NORMATIV)
+# ATC-STD-NET-002 — Testnet Standard (v1.0.0, CANDIDATE)
 
 > **Status:** CANDIDATE (Owner-Mandat 07.09.2026, Candidate-Revision gemaess ATC-STD-000 §33; Normativkraft entsteht mit APPROVED §9)
 > **Reihe:** ATC-STD-NET-001…008 (Netzwerk-Umgebungen Devnet/Testnet/Mainnet) · **Autoren:** Michael Wroblewski (Owner), Aurora (Superagent)

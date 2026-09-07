@@ -14,7 +14,7 @@ standard:
 ---
 
 # ATC-STD-202 — Repository Naming & Classification Standard
-> **Status:** NORMATIV (v1.0.1) — Erweiterung AD-031 | **Datum:** 07.09.2026 | **Autor:** Michael Wroblewski (Owner), Aurora (Superagent)
+> **Status:** PROPOSED (v1.0.1) — Erweiterung AD-031; Normativkraft entsteht mit APPROVED (ATC-STD-000 §9) | **Datum:** 07.09.2026 | **Autor:** Michael Wroblewski (Owner), Aurora (Superagent)
 > **Standard-ID:** ATC-STD-202 | **Scope:** GitHub-Organisation A-TownChain-Okosystems
 > **Referenzen:** AD-025 (Genesis Chronicles Umbenennung), AD-026 (Bauhierarchie L0-L7), AD-029 (Governance-Mandat), ATC-STD-201/-003
 > **Anwendungsregel:** VERBINDLICH — die Klassifizierungstabelle ist die normative Einordnung aller 22 aktiven Repos.

@@ -14,7 +14,7 @@ standard:
 ---
 
 # ATC-STD-203 — Repository Security & Release Standard
-> **Status:** NORMATIV (v1.0.1) — Erweiterung AD-031 | **Datum:** 07.09.2026 | **Autor:** Michael Wroblewski (Owner), Aurora (Superagent)
+> **Status:** PROPOSED (v1.0.1) — Erweiterung AD-031; Normativkraft entsteht mit APPROVED (ATC-STD-000 §9) | **Datum:** 07.09.2026 | **Autor:** Michael Wroblewski (Owner), Aurora (Superagent)
 > **Standard-ID:** ATC-STD-203 | **Scope:** Alle produktiven (R2+) Repositories
 > **Referenzen:** AD-022 (19 Gates, KEIN FREEZE vor G18 Security Audit), AD-027 (Lauffaehigkeits-Roadmap), ATC-STD-201/-002, Issue #69 (Dependabot-Audit)
 

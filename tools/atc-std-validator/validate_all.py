@@ -134,6 +134,16 @@ def main():
     except Exception:
         pass
     print("RESULT: " + ("ALL COMPLIANT" if fails == 0 else "%d FAIL(s)" % fails))
+
+    # S-19 Mutationstest-Suite: Header-Drift-Erkennung muss zuverlaessig
+    # funktionieren — gezielte Mutanten gegen echte Standards. Laeuft in
+    # der CI automatisch mit (validate_all wird je Push/PR ausgefuehrt).
+    suite = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                         "tests", "test_s19_mutation.py")
+    if os.path.exists(suite):
+        rc = subprocess.run([sys.executable, suite]).returncode
+        if rc != 0:
+            return rc
     return 0 if fails == 0 else 1
 
 

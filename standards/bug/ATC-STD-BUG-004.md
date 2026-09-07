@@ -13,7 +13,7 @@ standard:
   superseded_by: null
 ---
 
-# ATC-STD-BUG-004 — Repository Synchronization & Merge Gate Standard (v1.0.0, NORMATIV)
+# ATC-STD-BUG-004 — Repository Synchronization & Merge Gate Standard (v1.0.0, CANDIDATE)
 
 > **Status:** CANDIDATE (Owner-Mandat 07.09.2026, Candidate-Revision gemaess ATC-STD-000 §33; Normativkraft entsteht mit APPROVED §9)
 > **Reihe:** ATC-STD-BUG-001…004 (Bug- & Konsistenz-Lebenszyklus) · **Autoren:** Michael Wroblewski (Owner), Aurora (Superagent)

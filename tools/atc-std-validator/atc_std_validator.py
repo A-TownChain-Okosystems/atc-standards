@@ -42,7 +42,7 @@ class V:
 
 def parse_meta(text):
     """Minimal-Parser fuer den YAML-Header (bis '---')."""
-    m = re.match(r"^standard:\s*\n(.*?)\n---", text, re.S)
+    m = re.match(r"^(?:---\s*\n)?standard:\s*\n(.*?)\n---", text, re.S)
     if not m:
         return None
     meta = {}
@@ -85,7 +85,7 @@ def validate(path, registry_path):
     v = V()
     name = os.path.basename(path)
     text = read(path) or ""
-    meta = parse_meta(text)
+    meta = parse_meta(text) or {}
 
     # S-01 Metadaten
     REQ_KEYS = ["id", "title", "version", "status", "category", "authority",
@@ -137,26 +137,60 @@ def validate(path, registry_path):
     else:
         v.add("S-08", "WARN", "Keine REQ-ID-Deklarationen (ATC-STD-000 §11 empfiehlt REQ-<DOM>-NNN)")
 
-    # S-19 Header-Sync (Review-Befund 07.09.): Der Zitat-Kopf nach dem
-    # Frontmatter DARF keine abweichende Version/Status nennen. Nur der
-    # Kopf-Block wird geprueft — nicht Prosa-/Beispielblöcke.
-    fm_1 = text.find("\n---")
-    fm_2 = text.find("\n---", fm_1 + 4) if fm_1 > -1 else -1
-    head = text[fm_1:fm_2 if fm_2 > fm_1 else len(text)] if fm_1 > 0 else text[:1500]
-    hv = re.search(r">\s*\*\*Version:?\*\*\s*v?([\d.]+)", head)
-    hst = re.search(r">\s*\*\*Status:?\*\*\s*([A-Za-zÄÖÜäöü\- ]+)", head)
-    if hv and hv.group(1) != ver:
-        v.add("S-19", "FAIL", "Kopf-Version %s != Frontmatter %s (Registry ist SSOT)" % (hv.group(1), ver))
-    elif hst:
-        hst_n = hst.group(1).strip().upper()
-        if st.upper() not in hst_n and hst_n not in ("NORMATIV",):
-            v.add("S-19", "FAIL", "Kopf-Status '%s' != Frontmatter '%s'" % (hst.group(1).strip(), st))
-        else:
-            v.add("S-19", "PASS", "Kopf-/Frontmatter-Sync: Version+Status konsistent")
-    elif hv:
-        v.add("S-19", "PASS", "Kopf-/Frontmatter-Sync: Version konsistent")
+    # S-19 Header-Sync (Review-Befund 07.09., hardened 07.09.): Der Zitat-
+    # Kopf nach dem Frontmatter DARF keine abweichende Version/Status
+    # nennen. Nur der Kopf-Block wird geprueft — nie Prosa-/Beispielbloecke.
+    # Kopf-Bereich robust bestimmen:
+    #   a) klassisches Frontmatter (Datei beginnt mit '---'): Kopf liegt
+    #      ZWISCHEN dem schliessenden '---' und dem naechsten '---'
+    #   b) Frontmatter ohne oeffnendes '---' (projektueblich): Kopf liegt
+    #      zwischen dem ersten und zweiten '---'
+    #   c) kein zweites '---': Kopf auf max. 1500 Zeichen begrenzt
+    #      (verhindert False Positives aus spaeteren Beispielbloecken)
+    if text.startswith("---"):
+        fm_close = text.find("\n---", 3)
+        head_start = fm_close if fm_close > 0 else 0
     else:
-        v.add("S-19", "PASS", "Kein Versions-/Status-Kopf — nichts zu syncen")
+        head_start = text.find("\n---")
+        head_start = head_start if head_start > 0 else 0
+    head_end = text.find("\n---", head_start + 4)
+    if head_end > head_start:
+        head = text[head_start:head_end]
+    else:
+        head = text[head_start:head_start + 1500]
+    hv = re.search(r">\s*\*\*Version:?\*\*\s*v?([\d.]+)", head)
+    hst = re.search(r">\s*\*\*Status:?\*\*\s*([A-Za-zÄÖÜäöü\-]+)", head)
+    fails = []
+    if hv and ver and hv.group(1) != ver:
+        fails.append("Kopf-Version %s != Frontmatter %s (Registry ist SSOT)" % (hv.group(1), ver))
+    if hst and st:
+        hst_n = hst.group(1).strip().upper()
+        if hst_n != st.upper():
+            fails.append("Kopf-Status '%s' != Frontmatter '%s'" % (hst.group(1).strip(), st))
+        # Eingebettete Versionsangabe in der Kopf-Statuszeile, z.B.
+        # '> **Status:** PROPOSED (v1.0.1) — ...' ist ebenfalls eine Version-
+        # Behauptung und muss zur Frontmatter-Version passen.
+        hsv = re.search(r">\s*\*\*Status:?\*\*[^\n]*\(v?([\d.]+)", head)
+        if hsv and ver and hsv.group(1) != ver:
+            fails.append("Kopf-Statuszeile Version %s != Frontmatter %s" % (hsv.group(1), ver))
+    # H1-Titel: '(vX.Y.Z[, LIFECYCLE])' ist eine Versions-/Status-Behauptung.
+    # Lifecycle-Vokabular wird erzwungen; Deskriptoren (z.B. FORMALE) werden
+    # ignoriert, damit keine False Positives entstehen.
+    LIFECYCLE = {"DRAFT", "PROPOSED", "CANDIDATE", "REVIEW", "APPROVED", "STABLE", "RETIRED", "NORMATIV"}
+    tm = re.search(r"^# .*\(v?([\d.]+)(?:,\s*([A-ZÄÖÜ]+))?", head, re.M)
+    if tm:
+        tv = tm.group(1)
+        if ver and tv != ver:
+            fails.append("Titel-Version %s != Frontmatter %s" % (tv, ver))
+        ts = tm.group(2)
+        if ts and ts.upper() in LIFECYCLE and st and ts.upper() != st.upper():
+            fails.append("Titel-Status '%s' != Frontmatter '%s'" % (ts, st))
+    if fails:
+        v.add("S-19", "FAIL", "; ".join(fails))
+    elif hv or hst:
+        v.add("S-19", "PASS", "Kopf-/Frontmatter-Sync: Version+Status konsistent")
+    else:
+        v.add("S-19", "WARN", "Kein Versions-/Status-Kopf im Kopfbereich — Kopf geloescht oder ausserhalb des Erwartungsbereichs")
 
     # S-09 Normative Sprache
     normativ = meta.get("normative", "")
