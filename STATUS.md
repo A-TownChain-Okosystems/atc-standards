@@ -47,4 +47,4 @@ Stand: 07.09.2026, 17:15 (Europe/Berlin)
 ## Metriken
 
 - 119 Standard-Dokumente + Verfassung; 6 Registry-, 7 Schema-, 6 Template-
-  Dateien; 2 Tools; 23 Repos in repositories.yaml.
+  Dateien; 2 Tools; 26 Repos in repositories.yaml.
