@@ -13,6 +13,7 @@ categories:
   1000:  {name: applications,   range: "ATC-STD-1000+",      description: "Applications / Ecosystem"}
 
 bug:   {name: bug,          range: "ATC-STD-BUG-001-499",  description: "Bug- & Konsistenz-Lebenszyklus (Owner-Mandat 07.09., AD-040)"}
+zkp:    {name: zkp,          range: "ATC-STD-ZKP-001-999",  description: "ZKP-Layer: Zero-Knowledge Proof Layer (Owner-Entwurf 07.09., AD-045)"}
 net:    {name: net,          range: "ATC-STD-NET-001-899",  description: "Netzwerk-Umgebungen Devnet/Testnet/Mainnet & Promotion (Owner-Mandat AD-041)"}
 # Zusatz-Serie (Owner-Mandat 07.09., AD-040): ATC-STD-BUG-001…004
 # Bug- & Konsistenz-Lebenszyklus — Dateien: standards/bug/ · Kategorie: bug
