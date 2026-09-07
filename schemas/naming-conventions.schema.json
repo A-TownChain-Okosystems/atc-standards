@@ -382,6 +382,30 @@
           "pattern": "^DEC-[0-9]{6,}$",
           "example": "DEC-000001",
           "note": "Mandatory Decision Records: DEC-NNNNNN fortlaufend, versionierbar, referenzierbar (ATC-STD-AI-DECISION-001 Abschnitt 16; SCR-0014; trennt Records von Regeln — Regeln sind REQ-AIDEC-IDs)"
+        },
+        "updateStandardId": {
+          "type": "string",
+          "pattern": "^ATC-STD-UPDATE-[0-9]{3,}$",
+          "example": "ATC-STD-UPDATE-001",
+          "note": "Update-Familie: Change Control für Artefakt-Updates (Lifecycle, Gates, Migration; Owner-Entwurf 07.09., SCR-0015)"
+        },
+        "updateRequirementId": {
+          "type": "string",
+          "pattern": "^REQ-UPD-[0-9]{3,}$",
+          "example": "REQ-UPD-001",
+          "note": "Requirements der UPDATE-Familie (SCR-0015)"
+        },
+        "updateRequestId": {
+          "type": "string",
+          "pattern": "^UPD-[0-9]{3,}$",
+          "example": "UPD-001",
+          "note": "Update Requests & Manifeste: UPD-NNN fortlaufend je Artefakt-Release; bei normativen Standardänderungen mit SCR-NNNN gekoppelt (REQ-UPD-019; SCR bleibt Pflicht gemäß ATC-STD-000 §30)"
+        },
+        "updateGateId": {
+          "type": "string",
+          "pattern": "^UPD-G[0-9]{2}$",
+          "example": "UPD-G09",
+          "note": "Update-Gates UPD-G01..UPD-G09, Release-Kette der Change Control (ATC-STD-UPDATE-001 Abschnitt 9; SCR-0015; abgegrenzt zu AUD-G01..G08 des Audit-Standards)"
         }
       }
     },
@@ -525,6 +549,11 @@
           "type": "string",
           "pattern": "^ATC-STD-AI-DECISION-[0-9]{3,}[.]md$",
           "example": "ATC-STD-AI-DECISION-001.md"
+        },
+        "updateStandardDoc": {
+          "type": "string",
+          "pattern": "^ATC-STD-UPDATE-[0-9]{3,}[.]md$",
+          "example": "ATC-STD-UPDATE-001.md"
         }
       }
     },

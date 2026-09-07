@@ -348,3 +348,5 @@ versions:
     - {version: "1.0.0", date: "2026-09-07", change: "Initial Release: Owner-Entwurf Michael Wroblewski (Builder-Chat 07.09. 22:15), harmonisiert mit BUG-001..005, VERSION-001, DESC-001, SC-003..005; 30 REQ-AUDIT, 6 COM-AUDIT-Gates, 20 Domänen, 8 Release-Gates, Completeness Score A-F, Audit-IDs AUD-YYYY-NNNN; SCR-0013"}
   ATC-STD-AI-DECISION-001:
     - {version: "1.0.0", date: "2026-09-07", change: "Initial Release APPROVED: Owner-Entwurf Michael Wroblewski (Builder-Chat 07.09. 22:15), Sammelfreigabe 22:25 — 23 REQ-AIDEC, 6 COM-AIDEC-Gates, D0-D5/L0-L5/RK0-RK5, Evidence-Zustände, Decision Records DEC-NNNNNN, Separation of Duties; §24-Familie auf AAS/AI-DEV-Bestand gemappt; SCR-0014"}
+  ATC-STD-UPDATE-001:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initial Release DRAFT: Owner-Entwurf Michael Wroblewski (Builder-Chat 07.09. 22:40) — 19 REQ-UPD, 6 COM-UPD-Gates, UPD-NNN/UPD-G01..G09, No-Silent-Update, SCR-Kopplung, Rollback 5 Blockchain-Typen, Emergency-Prozess, Update Manifest, Review-Kadenzen, Control Matrix; SCR-0015; §9-Freigabe ausstehend"}

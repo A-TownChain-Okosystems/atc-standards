@@ -29,7 +29,14 @@ CONDITIONAL_PASS, Completeness Score C. Umsetzung: 8 AUTOMATED (7%) · 18 PARTIA
 F-023 Cross-System MD-001-Verstoß atc-shivacore; S3: F-021 Audit-Engine, F-022 BUG-005-Felder).
 Offen: F-017 (SCR-0007-Entscheidung), Issue #80 (AIP-001). Kein Release-Blocker (0× S0/S1).
 
-Stand: 07.09.2026, 22:30 (Europe/Berlin) · Self-Compliance: R3 100/100 GATE PASS · Voll-Audit 103/103 Standards: ALLE CHECKS PASS
+ATC-STD-UPDATE-001 v1.0.0 DRAFT (SCR-0015): Change Control — Update-Kategorien (PATCH/MINOR/MAJOR
+an VERSION-001 gekoppelt + SECURITY/EMERGENCY/GOVERNANCE), 13-stufiger Lifecycle, UPD-NNN-Requests,
+UPD-G01..G09-Gates, Statusmodell mit Notfallpfad, Rollback (5 Blockchain-Typen), Emergency-Prozess
+mit unverzichtbarer Auditierbarkeit, AI-Agent-Publish-Sperre, Update Manifest, CHANGELOG-Pflicht,
+Update Audit (15 Fragen), Review-Kadenzen, Control Matrix, No-Silent-Update-Kernregel,
+UPD↔SCR-Kopplung. Change-Control-Kette: SCR → VERSION → UPDATE → AUDIT. §9-Freigabe ausstehend.
+
+Stand: 07.09.2026, 22:40 (Europe/Berlin) · Self-Compliance: R3 100/100 GATE PASS · Voll-Audit 103/103 Standards: ALLE CHECKS PASS
 
 ## Standards-System
 
@@ -51,7 +58,8 @@ Stand: 07.09.2026, 22:30 (Europe/Berlin) · Self-Compliance: R3 100/100 GATE PAS
 | ATC-STD-BUG-005 | Fehleranalyse- & Root-Cause-Analysis-Standard (Analyse-/QMS-Schicht der Bug-Familie) | APPROVED — SCR-0011/0012, §9-Sammelfreigabe 22:25 |
 | ATC-STD-AUDIT-001 | ATC Completeness & Audit Standard (Kontrollschicht über allen Standards) | APPROVED — SCR-0013, §9-Sammelfreigabe 22:25 |
 | ATC-STD-AI-DECISION-001 | ATC Agent Decision-Making Standard (Entscheidungsmodell über AAS/AI-DEV) | APPROVED — SCR-0014, §9-Sammelfreigabe 22:25 |
-| **Summe** | **108 Standards** | **108 APPROVED, 0 offen** |
+| ATC-STD-UPDATE-001 | ATC Update Standard (Change Control: Lifecycle, Gates, Rollback, Emergency) | DRAFT — SCR-0015, §9-Freigabe ausstehend |
+| **Summe** | **109 Standards** | **108 APPROVED + 1 DRAFT** |
 
 ## Qualitätssicherung (CI, self-compliant)
 

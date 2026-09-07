@@ -1,5 +1,33 @@
 # Changelog
 
+## [1.4.13] - 2026-09-07
+
+### Added
+
+- **ATC-STD-UPDATE-001 v1.0.0 (DRAFT):** ATC Update Standard — Change Control für
+  Artefakt-Updates. Update-Kategorien (PATCH/MINOR/MAJOR gekoppelt an
+  ATC-STD-VERSION-001; SECURITY/EMERGENCY/GOVERNANCE prozessoral), 13-stufiger
+  Lifecycle, UPD-NNN-Update-Requests (Schema updateRequestId), Impact Analysis
+  (direkt/indirekt/Governance), Dependency Check (dependencies.yaml-DAG-Basis),
+  Source-of-Truth-Regel + Synchronisationspflicht (13 Artefakte), 9 Update-Gates
+  (UPD-G01..G09, abgegrenzt zu AUD-G01..G08), Statusmodell mit Fehler- und
+  Notfallpfad, Rollback-Standard mit 5 Blockchain-Rollback-Typen
+  (Software/State/Daten/Contract-Migration/Consensus-Migration), Emergency-
+  Prozess (Auditierbarkeit entfällt nie; Post-Mortem-Pflichten via BUG-005),
+  AI-Agent-Update-Regel (kein autonomes normatives Publishing; Human Gates via
+  AI-DECISION-001), Update Manifest (VERSION-001-Release-Manifest-Kopplung),
+  CHANGELOG-Pflicht, Update Audit (15 Fragen), Integrity Manifest,
+  regelmäßige Standard-Reviews (Kadenzen: Critical/High jährlich, Normal 2J,
+  Low-Risk 2–3J), Update Control Matrix (Rollen per ATC-STD-000 §14.1),
+  No-Silent-Update-Kernregel. 19 REQ-UPD, 6 COM-UPD-Gates.
+  SCR-0015: UPD↔SCR-Kopplung (SCR bleibt Pflicht für normative Standard-
+  änderungen per §30; UPD deckt Release-Tracking) — keine Doppelspur;
+  Hierarchie-Diagramm auf den tatsächlichen Bestand korrigiert (ERROR-001→
+  BUG-005, AGENT-001→AAS, REPOSITORY-001→201..204, CODING/CHANGE→geplant).
+  Owner-Entwurf Michael Wroblewski (22:40). Status DRAFT — §9-Freigabe ausstehend.
+- **Schema:** UPDATE-Familie allockiert (updateStandardId, updateRequirementId,
+  updateRequestId, updateGateId, updateStandardDoc).
+
 ## [1.4.12] - 2026-09-07
 
 ### Added
