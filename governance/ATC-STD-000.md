@@ -1,9 +1,10 @@
 standard:
   id: ATC-STD-000
-  title: ATC Standards Governance & Specification Standard
+  title: "Standards Governance & Specification Standard"
   version: "1.0.0"
   status: candidate
   category: governance
+  authority: A-TownChain Ecosystems
   owner: ShivaCoreDev
   created: "2026-09-07"
   updated: "2026-09-07"
@@ -12,240 +13,369 @@ standard:
   superseded_by: null
 ---
 
-# ATC-STD-000 — ATC Standards Governance & Specification Standard
+# ATC-STD-000 — Standards Governance & Specification Standard
 
-> **Der Standard fuer Standards.** ATC-STD-000 definiert den verbindlichen
-> Rahmen, wie ATC-Standards erstellt, versioniert, geprueft, verabschiedet,
-> geaendert und ausser Kraft gesetzt werden. Alle anderen ATC Standards
-> MUSSSEN diesem Rahmen folgen.
+> ATC-STD-000 ist der Meta-Standard fuer alle ATC Standards: Er definiert das
+> uebergeordnete Governance- und Spezifikationsmodell des gesamten
+> ATC-Standardsystems. Kein untergeordneter Standard darf seinen
+> grundlegenden Governance-Regeln widersprechen.
 
-## 1. Status
+## 1. Purpose
 
-CANDIDATE v1.0.0 (07.09.2026). Review-Chain nach §15 bestanden (Technical,
-Security, Architecture: alle PASS, 0 blockierende Befunde; Berichte:
-approval/{TECHNICAL,SECURITY,ARCHITECTURE}-REVIEW.md, REQUIREMENT-MATRIX.yaml,
-APPROVAL-DECISION.md). Pfad: DRAFT → REVIEW → CANDIDATE.
-Offen: formale Owner-Approval → APPROVED → STABLE. Bootstrapping-Regel:
-ATC-STD-000 befolgt seine eigenen Regeln ab Errichtung.
+ATC-STD-000 definiert das uebergeordnete Governance- und Spezifikationsmodell
+fuer saemtliche offiziellen A-TownChain Standards. Dieser Standard legt fest:
 
-## 2. Abstract
+- wie Standards erstellt werden,
+- wie Standards strukturiert werden,
+- wie Anforderungen formuliert werden,
+- wie Standards versioniert werden,
+- wie Aenderungen kontrolliert werden,
+- wie Standards geprueft werden,
+- wie Standards genehmigt werden,
+- wie Standards miteinander verknuepft werden,
+- wie Compliance festgestellt wird,
+- wie Standards deprecated und retired werden.
 
-Diese Spezifikation definiert den Governance-Rahmen des gesamten
-ATC-Standardsystems: Standard-IDs, maschinenlesbare Metadaten, den
-Standard-Lifecycle (IDEA bis RETIRED), die normative Struktur von Standards,
-Requirement-IDs und -Klassifizierung, Compliance-Verfahren, Semantic
-Versioning mit Breaking-Change-Definition, Change Control ueber Standard
-Change Requests (SCR), Review-Pflichten, Supersession und Migration —
-sowie die zentrale Standard-Registry und den Validator
-(tools/atc-std-validator).
+ATC-STD-000 ist der Meta-Standard fuer alle ATC Standards.
 
-## 3. Scope
+## 2. Scope
 
-GILT FUER: alle normativen Standards der A-TownChain-Okosystems (ATC-STD-*
-sowie die Legacy-Serien ATC-01…99, ATC-0001…0008, ATS-1000…1007 inklusive
-ihrer Pflege und kuenftiger Aenderungen), das atc-standards-Repository als
-kanonische Heimat, alle Standards-Registry-Dateien und Validator-Tools.
+Dieser Standard gilt fuer alle normativen Standards innerhalb des
+ATC-Standardsystems. Insbesondere:
 
-DEFINIERT NICHT: fachliche Inhalte einzelner Standards (Protokolle,
-Repository-Struktur, Security-Regeln), Produktdokumentation, ADRs.
+- Architecture
+- Repository
+- Development
+- Security
+- Protocol
+- Blockchain
+- AI
+- OS
+- Infrastructure
+- Applications
+- Interoperability
+- Token Standards
+- GameFi
 
-## 4. Goals
+Nicht-normative Dokumentation ist davon ausgenommen, sofern sie nicht
+ausdruecklich als ATC Standard registriert wird.
 
-- Eine einzige Wahrheit: Registry + Repo schlagen README/Wiki/Issue/Chat.
-- Maschinenlesbare, automatisch validierbare Standard-Landschaft.
-- Nachvollziehbare Entscheidungs- und Aenderungshistorie je Standard.
-- Skalierbare ID-Kategorien (000–1000+).
+## 3. Governance Hierarchy
 
-## 5. Non-Goals
+Die normative Hierarchie lautet:
 
-- Festlegung fachlicher Architekturentscheidungen (dafuer: AD-Register).
-- Ersetzung des zentralen DECISIONS_REGISTER (Zwei-Ebenen-Modell AD-029:
-  ATC-STD-000 = formale Norm, DECISIONS_REGISTER = Organisations-Entscheidungen).
-- Werkzeug- oder Sprachauswahl fuer Implementierungen.
+```
+ATC-STD-000
+    |
+    v
+Standards Registry
+    |
+    +--------------+--------------+
+    v              v              v
+Architecture   Security      Protocol
+    |              |              |
+    +--------------+--------------+
+    v
+Implementations
+    |
+    v
+Compliance
+```
 
-## 6. Terminologie (RFC 2119)
+Kein untergeordneter Standard darf die grundlegenden Governance-Regeln von
+ATC-STD-000 widersprechen.
 
-MUST / MUST NOT / REQUIRED / SHALL = zwingend. SHOULD / SHOULD NOT =
-empfohlen (Abweichung begruendungspflichtig). MAY = optional. Jeder
-normative Standard MUSS diese Begriffe in diesem Sinne verwenden.
+## 4. Normative Language
 
-## 7. Standard-ID-System
+ATC Standards verwenden folgende Begriffe:
 
-Jeder Standard erhaelt eine unverwechselbare ID `ATC-STD-XXX` im
-kategorisierten Nummernraum (Scalability-Bereiche):
-
-| Bereich | Domaine |
+| Keyword | Bedeutung |
 |---|---|
-| ATC-STD-000 | Standard Governance (diese Verfassung) |
-| ATC-STD-100-199 | Architecture |
-| ATC-STD-200-299 | Repository & Git |
-| ATC-STD-300-399 | Development / Coding |
-| ATC-STD-400-499 | Security |
-| ATC-STD-500-599 | Protocol |
-| ATC-STD-600-699 | Blockchain |
-| ATC-STD-700-799 | AI |
-| ATC-STD-800-899 | OS / Runtime |
-| ATC-STD-900-999 | Infrastructure |
-| ATC-STD-1000+ | Applications / Ecosystem |
+| MUST | zwingende Anforderung |
+| MUST NOT | zwingendes Verbot |
+| REQUIRED | verpflichtend |
+| SHOULD | starke Empfehlung |
+| SHOULD NOT | starke Empfehlung dagegen |
+| MAY | optional |
 
-Spezialisierte Legacy-Erweiterungen (ATC-STD-REPO-001 usw.) sind ALIASE,
-die langfristig auf einheitliche Registry-IDs abzubilden sind. Vollzogen:
-ATC-STD-201/202/203 superseden ATC-STD-REPO-001/002/003 (v1.0.x).
+Normative Anforderungen muessen eindeutig interpretierbar sein.
 
-Legacy-Serien behalten ihre historische Nummerierung (ATC-01…99,
-ATC-0001…0008, ATS-1000…1007), werden aber fuer ALLE Aenderungen durch
-diesen Standard regiert.
+## 5. Standard Identity
 
-## 8. Standard-Metadaten (MUST)
+Jeder Standard MUST eine eindeutige Standard-ID besitzen. Primaeres Format:
+`ATC-STD-XXX` — Beispiele: ATC-STD-000, ATC-STD-100, ATC-STD-200,
+ATC-STD-400, ATC-STD-600.
 
-Jeder Standard MUSS einen maschinenlesbaren YAML-Header besitzen:
+Die ID darf nach Veroeffentlichung nicht wiederverwendet werden.
+
+## 6. Standard Metadata
+
+Jeder Standard MUST einen maschinenlesbaren Metadatenblock besitzen:
 
 ```yaml
 standard:
-  id: ATC-STD-XXX          # MUST, eindeutig, Registry-konform
-  title: <Titel>           # MUST
-  version: "MAJOR.MINOR.PATCH"  # MUST, SemVer
-  status: <lifecycle>     # MUST, gemaess Abschnitt 9
-  category: <domaine>      # MUST, gemaess Abschnitt 7 Tabelle
-  owner: <owner>           # MUST
-  created: "YYYY-MM-DD"    # MUST
-  updated: "YYYY-MM-DD"    # MUST
-  normative: true|false    # MUST
-  supersedes: [...]         # SHOULD (bei Ablaesung Pflicht)
-  superseded_by: <id>       # SHOULD (nach Ablaesung Pflicht)
+  id: ATC-STD-000
+  title: Standards Governance & Specification Standard
+  version: "1.0.0"
+  status: candidate
+  normative: true
+  category: governance
+  authority: A-TownChain Ecosystems
+  created: 2026-09-07
+  updated: 2026-09-07
+  supersedes: null
+  superseded_by: null
 ```
 
-Tools koennen damit die komplette Standardlandschaft automatisch auswerten.
+## 7. Standard Lifecycle
 
-## 9. Standardstatus (Lifecycle)
+Ein Standard durchlaeuft einen kontrollierten Lifecycle:
 
 ```
-IDEA → PROPOSED → DRAFT → REVIEW → CANDIDATE → APPROVED → STABLE → DEPRECATED → RETIRED
+IDEA -> PROPOSED -> DRAFT -> REVIEW -> CANDIDATE -> APPROVED -> STABLE -> DEPRECATED -> RETIRED
 ```
 
-Nur sequenzielle Uebergaenge; Springen ist UNZULAESSIG (ausgenommen
-Rueckstufung nach abgelehntem Review: CANDIDATE/REVIEW → DRAFT).
-- IDEA: nur Konzept · PROPOSED: formaler Vorschlag · DRAFT: ausgearbeiteter
-  Entwurf · REVIEW: aktive Pruefung · CANDIDATE: bereit zur Freigabe ·
-  APPROVED: offiziell angenommen · STABLE: produktiv · DEPRECATED: nicht
-  mehr fuer neue Implementierungen · RETIRED: ausser Kraft.
-Ein Standard DARF NICHT allein durch Existenz normativ werden (Abschnitt 29).
+Ein Statuswechsel muss nachvollziehbar dokumentiert werden.
 
-## 10. Standardstruktur (SHOULD, normative Standards MUESSEN relevante
-Abschnitte tragen)
+## 8. Standard Structure
 
-Vollstruktur: 1 Status · 2 Abstract · 3 Scope · 4 Goals · 5 Non-Goals ·
-6 Terminology · 7 Normative Requirements · 8 Architecture · 9 Requirements ·
-10 Security Considerations · 11 Compatibility · 12 Validation · 13
-Compliance · 14 Migration · 15 Versioning · 16 References · 17 Changelog.
-Abstract (maximal praezise) und Scope (Gilt/Nicht-Gilt, gegen Scope Creep)
-sind MUST; Goals/Non-Goals MUSS jeder grosse Standard definieren.
+Ein normativer ATC Standard sollte mindestens folgende Struktur besitzen:
 
-## 11. Normative Requirements & IDs
+1. Purpose · 2. Scope · 3. Terminology · 4. Normative Language ·
+5. Requirements · 6. Architecture / Model · 7. Security Considerations ·
+8. Compatibility · 9. Validation · 10. Compliance · 11. Migration ·
+12. Versioning · 13. References · 14. Changelog
 
-Jede Anforderung erhaelt eine eindeutige ID `REQ-XXX` (grosse Standards:
-`REQ-<DOM>-NNN`, z.B. REQ-REPO-001) und eine Klassifizierung:
+Zusaetzliche Abschnitte sind zulaessig.
 
-- MANDATORY (MUST) · RECOMMENDED (SHOULD) · OPTIONAL (MAY)
-- CONDITIONAL mit Bedingung, z.B. `Condition: criticality >= S3`
+## 9. Requirements
 
-Beispiel:
+Normative Anforderungen erhalten eindeutige IDs (`REQ-XXX`), bei
+domaenenspezifischen Standards z.B. `REQ-REPO-001`, `REQ-SEC-001`,
+`REQ-PROTO-001`. Jede normative Anforderung MUST eindeutig sein.
+
+## 10. Requirement Definition
+
+Eine Requirement Definition sollte mindestens enthalten: Requirement ID,
+Normative Level, Description, Applicability, Validation Method.
+
 ```yaml
 requirement:
-  id: REQ-REPO-001
+  id: REQ-STD-001
   level: MUST
-  description: Repository MUST contain README.md
+  description: "Every normative ATC Standard MUST have a unique identifier."
+  applicability: all_standards
+  validation: {automated: true}
 ```
 
-## 12. Compliance
+## 11. Standard Dependencies
 
-Jeder Standard MUSS definieren, wie seine Einhaltung geprueft wird.
-Ergebnisse: PASS / FAIL / PARTIAL / NOT-APPLICABLE — je REQ-ID messbar.
-Compliance-Level (L0 Informational, L1 Basic, L2 Compliant, L3 Production,
-L4 Critical) erlauben abgestufte Konformitaet statt binaer.
+Standards duerfen andere Standards referenzieren (`dependencies`).
+Zirkulaere Abhaengigkeiten sind VERBOTEN (STD-A -> STD-B -> STD-C -> STD-A
+= INVALID). Der Validator erkennt Zyklen.
 
-## 13. Versionierung & Breaking Changes
+## 12. Normative Authority
 
-Semantic Versioning MAJOR.MINOR.PATCH. MAJOR = breaking normative Aenderung
-(MUST→MUST NOT, SHOULD→MUST, API-Format, Pflichtfeld entfernt,
-Anforderungs-Semantik oder Compliance-Auslegung geaendert). MINOR = neue
-kompatible Anforderungen. PATCH = Korrekturen ohne normative Aenderung.
-Breaking Changes MUESSEN im Changelog explizit dokumentiert werden.
+Ein Standard muss eindeutig festlegen, welche Teile normativ sind:
 
-## 14. Change Control & SCR
+- **Normative:** Requirements, Definitions, Protocol Rules, Compliance Rules
+- **Informative:** Examples, Explanations, Background, Rationale
 
-Aenderungen an STABLE-Standards erfolgen NICHT direkt. Kette:
-Change Proposal → Impact Analysis → Draft Revision → Review → Approval →
-New Version. Jede Aenderung erhaelt eine Standard Change Request-ID
-`SCR-0001` mit Schema: Affected Standard, Proposed Change, Motivation,
-Compatibility Impact, Security Impact, Migration Impact, Decision
-(ACCEPTED/REJECTED). Vorlage: templates/SCR_TEMPLATE.md.
+Informative Inhalte duerfen keine widerspruechlichen Regeln enthalten.
 
-## 15. Reviewpflicht
+## 13. Review Chain
 
-Minimal-Review-Chain vor APPROVED:
-Author → Technical Review → Security Review → Architecture Review →
-Approval. Bei einfachen Standards DARF dieser Standard einzelne Reviews
-ausdruecklich erlassen (Dokumentation im Standard-Header).
+Ein Standard darf nicht ohne Pruefung den Status APPROVED oder STABLE
+erhalten. Die minimale Review Chain:
 
-## 16. Evidence Requirement
+```
+Author -> Technical Review -> Security Review -> Architecture Review -> Approval
+```
 
-Jeder Standard SHOULD seine Design-Entscheidungen begruenden: Requirement +
-Technical/Security/Compatibility Rationale — Standards bestehen nicht aus
-Meinungen.
+Fuer bestimmte Standards koennen zusaetzliche Reviews erforderlich sein.
 
-## 17. References & Dependencies
+## 14. Technical Review
 
-Referenzen werden kategorisiert: NORMATIVE / INFORMATIVE / IMPLEMENTATION /
-EXTERNAL. Standards duerfen andere Standards referenzieren (dependencies
-im Metadaten-Header); der Validator MUSS zyklische Abhaengigkeiten
-erkennen und als ERROR werten.
+Bewertet: technische Konsistenz, Vollstaendigkeit, Implementierbarkeit,
+Requirement-Qualitaet, Terminologie, Testbarkeit, Versionierung,
+Kompatibilitaet. Ergebnis: PASS | REQUEST CHANGES | REJECT.
 
-## 18. Supersession & Migration
+## 15. Security Review
 
-Ein neuer Standard KANN einen alten ersetzen (`supersedes` /
-`superseded_by` Pflicht ab Ablaesung). Bei jeder MAJOR-Version MUSS eine
-Migration Guide definiert werden: Current → Guide → Target.
+Bewertet: Security Impact, Attack Surface, Trust Boundaries,
+Missbrauchsmoeglichkeiten, Governance-Manipulation, Supply-Chain-Risiken,
+Secrets und Credentials, Recovery-Mechanismen. Ergebnis:
+PASS | REQUEST CHANGES | REJECT.
 
-## 19. Standard Registry (MUST)
+## 16. Architecture Review
 
-registry/standards.yaml im atc-standards-Repository ist das HERZSTUECK:
-Jeder Standard MUSS dort registriert sein (id, title, version, status,
-category, owner). Ergaenzt durch: categories.yaml (Domainen-Raeder),
-versions.yaml (Versionshistorie), dependencies.yaml (Standard-Graph,
-Zyklenerkennung), lifecycle.yaml (Zustandsmaschine). Kein Eintrag =
-kein Standard.
+Bewertet: Systemarchitektur, Dependency Direction, Layering,
+Interoperabilitaet, langfristige Erweiterbarkeit, Konflikte mit bestehenden
+Standards, Breaking Changes. Ergebnis: PASS | REQUEST CHANGES | REJECT.
 
-## 20. Automatischer Standard Validator (SHOULD als Tool, MUST als Verfahren)
+## 17. Approval
 
-tools/atc-std-validator prueft je Standard: ID-Format, Metadaten-Vollstaendigkeit,
-SemVer, Lifecycle-Status, Abstract/Scope, REQ-IDs, normative Sprache,
-Compliance-/Security-Sektion, Changelog, References, Registry-Eintrag und
-Abhaengigkeitszyklen. Ergebnis: COMPLIANT / NON-COMPLIANT (exit-tauglich).
+Ein Standard darf APPROVED werden, wenn Technical Review PASS, Security
+Review PASS, Architecture Review PASS — und keine offenen kritischen
+Findings vorhanden sind.
 
-## 21. Der Governance-Grundsatz (Kernanforderung REQ-STD-000)
+## 18. Stable
 
-> **No ATC Standard is normative unless it is registered, versioned,
-> reviewed and explicitly approved according to this specification.**
+STABLE bedeutet: Der Standard ist offiziell, normativ und fuer produktive
+ATC-Systeme verbindlich. Ein Stable Standard darf nicht stillschweigend
+geaendert werden — jede Aenderung erzeugt eine neue Version oder einen
+kontrollierten Change Process.
 
-Damit gilt: Registry + Repo sind die einzige Wahrheit; README, Wiki,
-Issues, Chat und Code haben bei Widerspruch NACHZUSTEHEN.
+## 19. Change Management
 
-## 22. Changelog
+Aenderungen an Standards werden ueber einen Standard Change Request
+gesteuert (`SCR-XXXX`) mit Schema: SCR ID, Affected Standard, Current
+Version, Proposed Version, Motivation, Technical Impact, Security Impact,
+Architecture Impact, Compatibility Impact, Migration, Decision.
 
-- 1.0.0 (07.09.2026): Initiale Verfassung (Owner-Mandat AD-034). Am selben
-  Tag: Review-Chain §15 bestanden (3/3 PASS, 5 nicht-blockierende Befunde als
-  SCR-Empfehlungen: T-F01, T-F02, S-F01, S-F02, A-F01) → Status CANDIDATE.
-  Approval-Paket: approval/ (formal, v1.0.0).
-  ID-System mit Domain-Raedern, Lifecycle-Maschine, Metadaten-Pflicht,
-  REQ-IDs, Compliance-Verfahren, SemVer + Breaking-Change-Definition,
-  SCR-Prozess, Review-Chain, Supersession/Migration, Registry-Pflicht,
-  Validator-Anforderung, Governance-Grundsatz. Vollzogene Umnummerierung:
-  ATC-STD-201/202/203 superseden ATC-STD-REPO-001/002/003.
+## 20. Versioning
 
-## 23. References
+ATC Standards verwenden Semantic Versioning MAJOR.MINOR.PATCH:
 
-NORMATIVE: ATC-STD-201 (Structure), ATC-STD-202 (Naming & Classification),
-ATC-STD-203 (Security & Release) · INFORMATIVE: AD-029/030/031/034
-(DECISIONS_REGISTER, Hub), RFC 2119, RFC 2140 (Versioning) ·
-IMPLEMENTATION: tools/atc-std-validator, registry/standards.yaml.
+- MAJOR: Breaking normative change (1.0.0 -> 2.0.0)
+- MINOR: Kompatible Erweiterung (1.0.0 -> 1.1.0)
+- PATCH: Fehlerkorrektur ohne Aenderung der normativen Bedeutung (1.0.0 -> 1.0.1)
+
+## 21. Breaking Changes
+
+Gelten als Breaking Change: MUST -> MUST NOT, SHOULD -> MUST, Entfernung
+einer REQUIRED Rule, Aenderung einer normativen Semantik, inkompatibles
+Datenformat/Protokoll/API, Aenderung von Compliance-Kriterien. Diese
+benoetigen eine MAJOR-Version.
+
+## 22. Compliance
+
+Jede normative Anforderung muss grundsaetzlich pruefbar sein. Zustaende:
+PASS | FAIL | PARTIAL | NOT-APPLICABLE (je REQ; ein FAIL = Compliance FAIL).
+
+## 23. Validation
+
+Standards sollten, soweit moeglich, automatisch validiert werden:
+Schema Validation -> Requirement Validation -> Reference Validation ->
+Dependency Validation -> Compliance Validation.
+
+## 24. Standard Registry
+
+Alle offiziellen Standards muessen in einer zentralen Registry registriert
+werden. Ein nicht registrierter Standard ist kein offizieller ATC Standard.
+
+## 25. Standard Categories
+
+Empfohlene Numm erraeume: 000-099 Governance, 100-199 Architecture,
+200-299 Repository/Git, 300-399 Development, 400-499 Security, 500-599
+Protocol, 600-699 Blockchain, 700-799 AI, 800-899 OS/Runtime, 900-999
+Infrastructure, 1000+ Applications/Ecosystem.
+
+## 26. Supersession
+
+Ein Standard kann einen bestehenden Standard ersetzen (`supersedes`; die
+alte Version wird DEPRECATED). Die alte Version bleibt fuer historische
+Nachvollziehbarkeit erhalten.
+
+## 27. Deprecation
+
+Bei DEPRECATED muessen dokumentiert werden: Grund, Ersatz-Standard,
+Migration, End-of-Support, Auswirkungen.
+
+## 28. Retirement
+
+RETIRED bedeutet: Der Standard besitzt keine normative Gueltigkeit mehr.
+Ein retired Standard darf nicht fuer neue Implementierungen verwendet
+werden. Die historische Fassung bleibt archiviert.
+
+## 29. Immutability & Auditability
+
+Eine veroeffentlichte Stable-Version sollte unveraenderlich behandelt
+werden: ATC-STD-000@1.0.0 bleibt exakt diese Fassung. Aenderungen erzeugen
+1.0.1 / 1.1.0 / 2.0.0. Jede Version muss nachvollziehbar sein.
+
+## 30. Conflict Resolution
+
+Bei widerspruechlichen normativen Anforderungen zweier Standards:
+Conflict -> Identify Authority -> Dependency Analysis -> Architecture
+Review -> Resolution -> Change Request. ATC-STD-000 besitzt dabei die
+hoechste Governance-Prioritaet innerhalb des Standard-Frameworks.
+
+## 31. Emergency Changes
+
+Fuer kritische Security-Probleme darf ein Emergency-Prozess existieren:
+Security Incident -> Emergency Review -> Temporary Decision ->
+Implementation -> Formal Standard Revision. Emergency Changes duerfen die
+normale Governance nicht dauerhaft ersetzen.
+
+## 32. Conformance Statement
+
+Ein Repository oder System kann Konformitaet erklaeren (Standard, Version,
+Status, Validation, Datum). Die Behauptung muss durch ueberpruefbare
+Evidence unterstuetzt werden.
+
+## 33. Standard Integrity
+
+Die Integritaet des Standardsystems muss geschuetzt werden. Fuer das
+zentrale atc-standards-Repository: Protected main, Required Reviews,
+CODEOWNERS, CI Validation, Secret Scanning, Dependency Scanning, Signed
+Releases, Immutable Tags, Audit Log.
+
+## 34. Meta-Compliance
+
+ATC-STD-000 darf nicht vollstaendig durch einen darunterliegenden Standard
+definiert werden (sonst: STD-000 -> STD-001 -> STD-000, Zirkel). Die
+Meta-Governance muss unabhaengig bleiben.
+
+## 35. Final Governance Model
+
+```
+ATC-STD-000 (Standards Constitution)
+    |
+    +---------------+---------------+
+    v               v               v
+Registry       Lifecycle      Change Control
+    |               |               |
+    +---------------+---------------+
+    v
+Official ATC Standards
+    |
+    +-------+-------+-------+-------+
+    v       v       v       v       v
+Architecture Security Protocol Blockchain AI
+    |       |       |       |       |
+    +-------+-------+---+---+-------+
+                    v
+             Implementations
+                    v
+               Compliance
+                    v
+               Production
+```
+
+## Aktueller Status
+
+Review-Chain nach §13 gegen diese Fassung durchgefuehrt und dokumentiert
+(approval/TECHNICAL-REVIEW.md, approval/SECURITY-REVIEW.md,
+approval/ARCHITECTURE-REVIEW.md):
+
+```
+ATC-STD-000 v1.0.0
+    |
+    +-- Technical Review    -> PASS   (07.09.2026)
+    +-- Security Review      -> PASS   (07.09.2026)
+    +-- Architecture Review  -> PASS   (07.09.2026)
+    +-- Approval             -> BLOCKED (Owner-Entscheidung ausstehend)
+```
+
+Pfad: DRAFT -> REVIEW -> CANDIDATE. Erst nach Owner-Approval: APPROVED ->
+STABLE. Damit ist ATC-STD-000 keine Ausnahme von den Regeln, die es
+definiert — die Verfassung ist durch die eigene Kette gelaufen.
+
+## Changelog
+
+- 1.0.0 (07.09.2026): Owner-Formalfassung (35 Abschnitte) als verbindlicher
+  v1.0.0-Text angenommen (ersetzt den Agent-Entwurf vom Morgen). Am selben
+  Tag Review-Chain §13 durchlaufen: Technical/Security/Architecture alle
+  PASS (0 kritische Findings; Berichte unter approval/). Status CANDIDATE —
+  wartet auf Owner-Approval.

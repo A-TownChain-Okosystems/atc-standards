@@ -1,25 +1,20 @@
-# Requirement-Matrix fuer ATC-STD-000 v1.0.0 (Approval Package)
-# Kernanforderung + abgeleitete Governance-Pflichten, geprueft am 07.09.2026.
-core_requirement:
-  id: REQ-STD-000
-  level: MUST
-  description: "No ATC Standard is normative unless it is registered, versioned,
-    reviewed and explicitly approved according to this specification."
-  status: PASS
-  evidence: "§21 + §19 Registry-Pflicht + §15 Review-Chain + Validator S-14;
-    umgesetzt an 4 Standards (000/201/202/203), 3 davon mit laufender Kette."
-derived_requirements:
-  - {id: REQ-STD-001, level: MUST, description: "Eindeutige ID ATC-STD-XXX im kategorisierten Nummernraum", status: PASS, evidence: "§7 + categories.yaml + Validator S-02/S-05"}
-  - {id: REQ-STD-002, level: MUST, description: "Maschinenlesbarer Metadaten-Header mit 9 Pflichtschluesseln", status: PASS, evidence: "§8 + standard.schema.yaml + Validator S-01"}
-  - {id: REQ-STD-003, level: MUST, description: "Lifecycle sequenziell IDEA…RETIRED, kein Springen", status: PASS, evidence: "§9 + lifecycle.yaml"}
-  - {id: REQ-STD-004, level: MUST, description: "SemVer; MAJOR = Breaking mit Changelog-Dokumentation", status: PASS, evidence: "§13 + Validator S-03"}
-  - {id: REQ-STD-005, level: MUST, description: "REQ-IDs mit Klassifizierung je Anforderung", status: PARTIAL, evidence: "§11 definiert; Verfassung selbst nutzt Prosa — Matrix gleicht nach (T-F03)"}
-  - {id: REQ-STD-006, level: MUST, description: "Compliance-Definition je Standard (PASS/FAIL/PARTIAL/N-A)", status: PASS, evidence: "§12 + Validator S-10"}
-  - {id: REQ-STD-007, level: MUST, description: "Registry-Eintrag in standards.yaml (kein Eintrag = kein Standard)", status: PASS, evidence: "§19 + Validator S-14; 4/4 Standards eingetragen"}
-  - {id: REQ-STD-008, level: MUST, description: "Aenderungen an STABLE nur via SCR + Impact-Analyse", status: PASS, evidence: "§14 + templates/SCR_TEMPLATE.md"}
-  - {id: REQ-STD-009, level: MUST, description: "Review-Chain vor APPROVED (Technical/Security/Architecture/Approval)", status: PASS, evidence: "§15 + approval/*-REVIEW.md (dieses Paket)"}
-  - {id: REQ-STD-010, level: MUST, description: "Zyklische Abhaengigkeiten unzulaessig", status: PASS, evidence: "§17 + Validator S-15 (azyklisch verifiziert)"}
-  - {id: REQ-STD-011, level: MUST, description: "Supersession via supersedes/superseded_by + Migration-Guide bei MAJOR", status: PASS, evidence: "§18; angewendet: REPO-001/002/003 → 201/202/203"}
-summary: {total: 12, pass: 11, partial: 1, fail: 0, not_applicable: 0}
-note: "REQ-STD-005 PARTIAL ist T-F03 (MINOR, nicht-blockierend): Anforderungs-
-  Matrix in der Verfassung selbst; fuer v1.0.0 durch diese Datei kompensiert."
+# Requirement-Matrix fuer ATC-STD-000 v1.0.0 (Owner-Formalfassung)
+# Pruefung der Normativ-Pflichten je Abschnitt am 07.09.2026.
+requirements:
+  - {id: REQ-STD-001, level: MUST, description: "Eindeutige Standard-ID, nicht wiederverwendbar", section: "§5", status: PASS, evidence: "ID-Muster + Validator S-02; 4 Standards registriert"}
+  - {id: REQ-STD-002, level: MUST, description: "Maschinenlesbarer Metadatenblock", section: "§6", status: PASS, evidence: "standard.schema.yaml + Validator S-01"}
+  - {id: REQ-STD-003, level: MUST, description: "Kontrollierter Lifecycle, dokumentierte Uebergaenge", section: "§7", status: PASS, evidence: "lifecycle.yaml + Changelog je Standard"}
+  - {id: REQ-STD-004, level: SHOULD, description: "Mindeststruktur (Purpose/Scope/Terminology/…/Changelog)", section: "§8", status: PASS, evidence: "Validator S-06/S-07; Formalfassung erfuellt §8"}
+  - {id: REQ-STD-005, level: MUST, description: "Eindeutige REQ-IDs je Anforderung", section: "§9-10", status: PASS, evidence: "requirement.schema.yaml + Validator S-08"}
+  - {id: REQ-STD-006, level: MUST, description: "Keine zirkulaeren Standard-Abhaengigkeiten", section: "§11", status: PASS, evidence: "Validator S-15 — Graph azyklisch (000 = Wurzel)"}
+  - {id: REQ-STD-007, level: MUST, description: "Normative/Informative-Trennung ohne Widersprueche", section: "§12", status: PASS, evidence: "§12 formuliert; Validator S-09"}
+  - {id: REQ-STD-008, level: MUST, description: "Review-Chain vor APPROVED/STABLE", section: "§13-17", status: PASS, evidence: "approval/*-REVIEW.md (dieses Paket)"}
+  - {id: REQ-STD-009, level: MUST, description: "Change Management via SCR", section: "§19", status: PASS, evidence: "SCR-Template + SCR-Backlog 0001-0006"}
+  - {id: REQ-STD-010, level: MUST, description: "SemVer + Breaking-Change-Kriterien", section: "§20-21", status: PASS, evidence: "8 MAJOR-Kriterien definiert; Validator S-03"}
+  - {id: REQ-STD-011, level: MUST, description: "Pruefbare Compliance je REQ", section: "§22-23", status: PASS, evidence: "PASS/FAIL/PARTIAL/N-A + Validation-Kette; atc-std-validator"}
+  - {id: REQ-STD-012, level: MUST, description: "Registry-Pflicht: kein Eintrag = kein Standard", section: "§24", status: PASS, evidence: "registry/standards.yaml + Validator S-14"}
+  - {id: REQ-STD-013, level: MUST, description: "Supersession/Deprecation/Retirement dokumentiert", section: "§26-28", status: PASS, evidence: "supersedes angewendet: REPO-001ff -> 201/202/203"}
+  - {id: REQ-STD-014, level: MUST, description: "Konflikt-Resolution mit hoechster Governance-Prioritaet fuer STD-000", section: "§30", status: PASS, evidence: "Verfahren definiert (Identify Authority -> … -> Change Request)"}
+  - {id: REQ-STD-015, level: MUST, description: "Emergency-Prozess begrenzt, keine dauerhafte Governance-Umgehung", section: "§31", status: PASS, evidence: "Temporary Decision -> Formal Standard Revision"}
+  - {id: REQ-STD-016, level: MUST, description: "Meta-Compliance: STD-000 nicht durch untergeordnete Standards definiert", section: "§34", status: PASS, evidence: "Zirkel-Verbot formuliert; Validator-Zyklenerkennung"}
+summary: {total: 16, pass: 16, partial: 0, fail: 0, not_applicable: 0}

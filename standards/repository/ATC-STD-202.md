@@ -4,6 +4,7 @@ standard:
   version: "1.0.1"
   status: proposed
   category: repository
+  authority: A-TownChain Ecosystems
   owner: ShivaCoreDev
   created: "2026-09-07"
   updated: "2026-09-07"

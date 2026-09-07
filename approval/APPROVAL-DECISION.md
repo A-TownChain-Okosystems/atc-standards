@@ -1,50 +1,47 @@
-# Approval Decision — ATC-STD-000 v1.0.0
+# Approval Decision — ATC-STD-000 v1.0.0 (Owner-Formalfassung)
 
-**Datum:** 07.09.2026 · **Entscheider:** Owner (ausstehend) · **Status: PENDING**
+**Datum:** 07.09.2026 · **Entscheider:** Owner (BLOCKED — ausstehend) · **Status: PENDING**
 
-## Review-Chain Ergebnis
+## Review-Chain Ergebnis (gegen die 35-Abschnitt-Formalfassung)
 
 | Review | Urteil | Blocker | Findings |
 |---|---|---|---|
-| Technical | PASS | 0 | 3 MINOR (T-F01 ID-Allokation, T-F02 L↔R-Mapping, T-F03 REQ-Matrix) |
-| Security | PASS | 0 | 3 MEDIUM (S-F01 main-Zweig-Absicherung, S-F03 Emergency Changes, S-F04 Rollenmodell), 2 LOW (S-F02 Security-Kapitel, S-F05 Signatur-Pflicht) |
-| Architecture | PASS | 0 | 2 MINOR (A-F01 Registry-Naming, A-F02 Parallelspruchs-Verfahren) |
+| Technical (§14) | PASS | 0 | 1 MINOR (T-F01 ID-Allokation) |
+| Security (§15) | PASS | 0 | 2 MEDIUM (S-F01 §33-Umsetzung physisch offen, S-F02 Rollenmodell), 1 LOW |
+| Architecture (§16) | PASS | 0 | 1 MINOR (A-F01 Registry-Naming) |
 
-**Gesamt: 3/3 PASS · 0 Blocker · 10 nicht-blockierende Findings.**
-Requirement-Matrix: 11 PASS / 1 PARTIAL / 0 FAIL (siehe REQUIREMENT-MATRIX.yaml).
+**Gesamt: 3/3 PASS · 0 Blocker · 5 nicht-blockierende Findings.**
+Requirement-Matrix: 16/16 PASS / 0 FAIL (approval/REQUIREMENT-MATRIX.yaml).
 
-## Entscheidungs-Optionen
+Gegenueber dem Agent-Entwurf durch die Formalfassung behoben:
+Emergency Changes (§31), Konflikt-Resolution (§30), L-Skalen-Doppellung
+(aufgeloest durch §22), Meta-Compliance (§34) neu.
 
-- **APPROVE** → ATC-STD-000 v1.0.0 wird STABLE und normativ in Kraft;
-  SCR-Backlog (SCR-0001…0006) wird als Auflagen-Paket mitgefuehrt.
-- **REQUEST CHANGES** → Rueckgabe an DRAFT; die MEDIUM-Findings werden per
-  Revision v1.0.1/v1.1.0 vor Freigabe behoben.
-- **REJECT** → Verfassung wird neu entworfen (angemessen nur bei
-  Fundamentalkritik am Governance-Modell selbst).
+## Entscheidungs-Optionen (§17)
+
+- **APPROVE** → APPROVED → STABLE: Die Verfassung ist normativ in Kraft und
+  Governance-Basis fuer alle weiteren ATC Standards. SCR-Backlog als Auflagen.
+- **REQUEST CHANGES** → Rueckgabe an DRAFT; Auflagen vor Freigabe per
+  v1.0.1/1.1.0 loesen.
+- **REJECT** → Neuentwurf.
 
 ## Empfehlung des Reviewers
 
-**APPROVE.** Begruendung: 0 Blocker; die 3 MEDIUM-Findings adressieren
-Absicherungs- und Skalierungsluecken (Zweig-Schutz, Notverfahren, Rollen),
-nicht Konzeptionsfehler der Verfassung. §21 + Registry-Pflicht +
-Review-Chain wirken ab Tag 1; die Luecken sind als SCR-0003/0004/0005 mit
-klaren Loesungsskizzen dokumentiert. Ein REQUEST CHANGES wuerde die
-Norm-Luecke verlaengern (solange keine Verfassung in Kraft ist, gilt
-§21 nicht formal).
+**APPROVE.** 0 Blocker; die 2 MEDIUM-Findings adressieren physische
+Umsetzung (Zweig-Absicherung, Rollenmodell), nicht die Konzeption. Die
+Formalfassung ist vollstaendiger als der Agent-Entwurf (35 Abschnitte,
+Meta-Compliance, Emergency- und Konflikt-Verfahren) und bereits durch die
+eigene Kette gelaufen — keine Ausnahme von den Regeln, die sie definiert.
 
 ## SCR-Backlog (bei APPROVE mitzubreiten)
 
-- SCR-0001: ID-Allokationsprozess (naechste freie Nummer je Bereich)
-- SCR-0002: L↔R-Compliance-Mapping-Tabelle
-- SCR-0003: main-Zweig-Absicherung atc-standards (Owner-Entscheidung: Schutz
-  konfigurieren und Agent auf PR/Workflow umstellen oder dokumentierte
-  Ausnahme)
-- SCR-0004: Rollen- und Berechtigungsmodell (Owner/Reviewer/Maintainer/Agent)
-- SCR-0005: Emergency-Change-Verfahren fuer STABLE-Standards
-- SCR-0006 (optional): Signatur-/Integritaets-Pflicht fuer Standard-Dokumente
+- SCR-0001: ID-Allokationsprozess · SCR-0003: §33-Integritaetsumsetzung
+  (Protected main, Signed Releases, Immutable Tags — Owner-Entscheidung
+  Agent-Workflow) · SCR-0004: Rollen- und Berechtigungsmodell ·
+  SCR-0005/0006: Remainder aus v1.0.0-Entwurf (superseded durch §30/§31).
 
 ## Entscheidung (vom Owner auszufuellen)
 
 - [ ] APPROVE — Datum/Vermerk: ____________
-- [ ] REQUEST CHANGES — Begrundung: ____________
+- [ ] REQUEST CHANGES — Begruendung: ____________
 - [ ] REJECT — Begruendung: ____________

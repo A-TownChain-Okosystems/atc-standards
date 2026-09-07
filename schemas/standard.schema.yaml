@@ -4,13 +4,14 @@ required: [standard]
 properties:
   standard:
     type: object
-    required: [id, title, version, status, category, owner, created, updated, normative]
+    required: [id, title, version, status, category, authority, owner, created, updated, normative]
     properties:
       id: {type: string, pattern: "^ATC-STD-[0-9]{3,}$"}
       title: {type: string}
       version: {type: string, pattern: "^\\d+\\.\\d+\\.\\d+$"}
       status: {enum: [idea, proposed, draft, review, candidate, approved, stable, deprecated, retired]}
       category: {enum: [governance, architecture, repository, development, security, protocol, blockchain, ai, os, infrastructure, applications]}
+      authority: {type: string}
       owner: {type: string}
       created: {type: string, format: date}
       updated: {type: string, format: date}

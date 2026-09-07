@@ -11,3 +11,15 @@
   frueher) wird Zeiger auf dieses Verzeichnis — eine Quelle der Wahrheit.
 - Evidenz: atc-std-validator COMPLIANT, atc-repo-audit GATE PASS,
   Snapshot byte-identisch zur geprueften Fassung.
+
+## 1.1.0 — 07.09.2026 (Nachmittag)
+- Review-Chain ERNEUT durchgefuehrt — gegen die Owner-Formalfassung
+  (35 Abschnitte), die den Agent-Entwurf als verbindlichen v1.0.0-Text
+  ersetzt hat. Sequenz sauber: Registry DRAFT → Reviews (3/3 PASS) →
+  Statusuebergang CANDIDATE (Datei/Registry/Snapshot synchron).
+- Findings aktualisiert: 3 fruehere Findings durch Formalfassung behoben
+  (Emergency Changes §31, Konflikt-Resolution §30, L-Skalen); neu: 5
+  nicht-blockierende (T-F01, S-F01, S-F02, S-F03-LOW, A-F01).
+- Requirement-Matrix neu: 16/16 PASS. Schema/Validator um authority-Feld
+  erweitert (§6 der Formalfassung); S-06 akzeptiert Purpose-Struktur (§8).
+- APPROVAL-DECISION: PENDING — Approval bleibt beim Owner BLOCKED.

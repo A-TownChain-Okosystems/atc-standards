@@ -46,7 +46,7 @@ def parse_meta(text):
         return None
     meta = {}
     for line in m.group(1).splitlines():
-        km = re.match(r"^\s*(id|title|version|status|category|owner|created|updated|normative|superseded_by):\s*(.+)$", line)
+        km = re.match(r"^\s*(id|title|version|status|category|authority|owner|created|updated|normative|superseded_by):\s*(.+)$", line)
         if km:
             val = km.group(2).strip().strip('"').strip("'")
             meta[km.group(1)] = val
@@ -87,8 +87,8 @@ def validate(path, registry_path):
     meta = parse_meta(text)
 
     # S-01 Metadaten
-    REQ_KEYS = ["id", "title", "version", "status", "category", "owner",
-                "created", "updated", "normative"]
+    REQ_KEYS = ["id", "title", "version", "status", "category", "authority",
+                "owner", "created", "updated", "normative"]
     if not meta:
         v.add("S-01", "FAIL", "Kein maschinenlesbarer Metadaten-Header (ATC-STD-000 §8)")
     else:
@@ -118,8 +118,8 @@ def validate(path, registry_path):
           "Kategorie: %s" % (kat if kat in CATS else kat + " (nicht in categories.yaml)"))
 
     # S-06 Abstract
-    v.add("S-06", "PASS" if re.search(r"^##+\s.*Abstract", text, re.M | re.I) else "FAIL",
-          "Abstract-Sektion")
+    v.add("S-06", "PASS" if re.search(r"^##+\s.*(?:Abstract|Purpose)", text, re.M | re.I) else "FAIL",
+          "Abstract/Purpose-Sektion (§8-Struktur)")
 
     # S-07 Scope
     hat_scope = re.search(r"^##+\s.*Scope", text, re.M | re.I) or re.search(r"Scope:", text)

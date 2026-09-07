@@ -2,6 +2,7 @@
 versions:
   ATC-STD-000:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Verfassung (AD-034): ID-System, Lifecycle, Metadaten, REQ-IDs, SemVer, SCR, Registry-Pflicht, Validator-Anforderung, Governance-Grundsatz"}
+    - {version: "1.0.0-Formalfassung", date: "2026-09-07", change: "Owner-Formalfassung (35 Abschnitte) als verbindlicher v1.0.0-Text angenommen (ersetzt Agent-Entwurf; Review-Chain erneut durchlaufen -> CANDIDATE)"}
   ATC-STD-201:
     - {version: "1.0.0", date: "2026-09-07", change: "Formale Spezifikation (AD-031)"}
     - {version: "1.0.1", date: "2026-09-07", change: "Unter ATC-STD-000 gestellt; REPO-001 → 201 umnummeriert (supersedes)"}
