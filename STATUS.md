@@ -38,7 +38,7 @@ als ATC-M-001..008 registriert; M1/M2 ACCEPTED mit Evidence, M3 IN_PROGRESS) +
 Validator S-20 (Negativtest verifiziert). §9-FREIGEGEBEN 23:38 (SCR-0018) — APPROVED, normativ, §30-eingefroren.
 
 ATC-STD-FRAMEWORK-001 v1.0.0 DRAFT (SCR-0019, Owner-Entwurf 23:41): ATC Enterprise
-Standards Framework — das Master-Dokument (ATC-STANDARDS-MASTER) führt alle 111
+Standards Framework — das Master-Dokument (ATC-STANDARDS-MASTER) führt alle 112
 Standards zusammen: maschinenlesbarer 40-Familien-Katalog (registry/framework.yaml,
 423 Slots: 264 NEU-Lücken / 150 VERWEIST auf Bestand / 1 BELEGT / 6 KONFLIKT / 2 GEPLANT),
 Kollisionsauflösung 100/201-204/300, einheitliche Status-/Change-/Traceability-Modelle
