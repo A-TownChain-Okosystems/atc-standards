@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.4.27] - 2026-09-08
+
+### Changed
+
+- **ATC-STD-REPO-AUDIT-002 v1.0.0: §9-FREIGABE → APPROVED** (Owner-Freigabe Michael
+  Wroblewski, Builder-Chat 08.09. 00:05 UTC+2). Normativ in Kraft ab 08.09.2026,
+  §30-eingefroren (ATC-STD-000). SCR-0021: IMPLEMENTED → APPROVED. versions.yaml:
+  1.0.0-Approval-Eintrag. **Gebündelt genehmigt: ATC-STD-FRAMEWORK-001 v1.0.2-PATCH**
+  (FAM-41 Slot 002 BELEGT, Zähler-Referenz auf stats-Block).
+- **Registry FINAL: 114 Standards, 114 APPROVED, 0 DRAFT, 0 offen — alle normativ.**
+  Repository-Audits ab sofort mit verbindlichem CHECK-Katalog (CHECK-001..064, 64
+  Checks, AUTO(30)/HYBRID(19)/MANUAL(15)) und standardisiertem Health Score (0–100 →
+  A–E, P0→E-Blockade); Validator S-22 erzwingt Katalog-Integrität je CI-Lauf.
+  Offen in der Familie: REPO-AUDIT-003 (Auditor-Agent) GEPLANT (P2).
+
+
 ## [1.4.26] - 2026-09-08
 
 ### Added

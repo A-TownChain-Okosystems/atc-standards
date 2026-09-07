@@ -43,7 +43,7 @@ ATC Standards provides the canonical normative governance layer of the
 A-TownChain ecosystem. It is responsible for:
 
 - Verfassung **ATC-STD-000** v1.2.0 (ID-System, Lifecycle, SCR, §30 Immutabilität)
-- Standard-Registry (**114 Standards**: 113 APPROVED + 1 DRAFT, REPO-AUDIT-002) mit
+- Standard-Registry (**114 Standards**: 114 APPROVED, 0 offen) mit
   Versionierung, Dependencies (DAG) und Findings (BUG-001..004)
 - Maschinelle Qualitätssicherung: `atc-std-validator` (114/114 COMPLIANT),
   Mutationssuite (12/12), `atc-repo-audit` (R3, 100/100 GATE PASS),
@@ -58,9 +58,9 @@ kein Standard ohne Eintrag; kein Repository ohne Standards-Bezug).
 ## Status
 
 **Status:** `release-candidate` — Governance-Freeze abgeschlossen
-(07.09.2026): 113 der 114 Standards APPROVED und normativ in Kraft — REPO-AUDIT-002
-als einziger DRAFT (§9-Freigabe ausstehend); REPO-AUDIT-001 als 113. APPROVED 23:58
-(inkl. FRAMEWORK-001 v1.0.1-PATCH) (README-001 20:36,
+(07./08.09.2026): alle 114 Standards APPROVED und normativ in Kraft — REPO-AUDIT-002
+als 114. APPROVED 00:05 (inkl. FRAMEWORK-001 v1.0.2-PATCH); REPO-AUDIT-001 als 113.
+APPROVED 23:58 (README-001 20:36,
 SC-Framework 001..020 21:00, MD-001 21:05). Übergangsfristen
 (Commit-Trailer, Repo-Manifeste, Interface-Test-Suiten) laufen bis 07.10.2026.
 

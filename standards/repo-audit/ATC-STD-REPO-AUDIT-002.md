@@ -3,16 +3,17 @@ standard:
   id: ATC-STD-REPO-AUDIT-002
   title: "ATC Repository Audit Checklisten- & Health-Score-Standard — Konkrete automatisierbare Checks (CHECK-001, CHECK-002, …) und standardisierter Repository Health Score für jeden KI-/Automatisierungsagenten"
   version: "1.0.0"
-  status: draft
+  status: approved
   category: repo-audit
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"
   created: "2026-09-07"
   updated: "2026-09-07"
-  normative: false
-  effective_date: ""
-  review_date: ""
+  normative: true
+  effective_date: "2026-09-08"
+  review_date: "2027-09-08"
   classification: PUBLIC
+  approved_by: "Michael Wroblewski (Owner, §9-Freigabe 08.09.2026, 00:05 UTC+2)"
   language: de-DE
   supersedes: null
   superseded_by: null
@@ -29,11 +30,10 @@ standard:
   license: "Copyright (c) 2026 Michael Wroblewski"
 ----
 
-# ATC-STD-REPO-AUDIT-002 — Audit-Checklisten- & Health-Score-Standard (v1.0.0, DRAFT)
+# ATC-STD-REPO-AUDIT-002 — Audit-Checklisten- & Health-Score-Standard (v1.0.0, APPROVED)
 
-> **Status:** DRAFT (v1.0.0) — Owner-Richtung aus REPO-AUDIT-001 §28 („nächste Ebene");
-> Agenten-Ausarbeitung SCR-0021; Owner-§9-Freigabe ausstehend. Bei Freigabe: APPROVED,
-> normativ, §30-eingefroren.
+> **Status:** APPROVED (v1.0.0) — §9-Freigabe Michael Wroblewski (Builder-Chat 08.09.2026, 00:05 UTC+2);
+> normativ in Kraft ab 08.09.2026, §30-eingefroren (ATC-STD-000). SCR-0021 akzeptiert.
 > **Familie:** Repository Audit (FAM-41, Slot 002). **Kopplungen:** REPO-AUDIT-001
 > (Prozess/A-E-Status), AUDIT-001 (AUD-Records), BUG-005 (Findings/RCA), FRAMEWORK-001.
 
@@ -192,12 +192,12 @@ S-22-Integritätsprüfung.
 
 ## Changelog (Standard-intern)
 
-- **1.0.0** (2026-09-07): Initial Release DRAFT — Ausarbeitung der „nächsten Ebene"
+- **1.0.0** (2026-09-07): Initial Release — Ausarbeitung der „nächsten Ebene"
   aus REPO-AUDIT-001 §28 (Owner-Richtung 23:54): 64 Checks (CHECK-001..064, je 4
   je Prüfbereich), Gewichte (Bereichssumme 100, Checkgewichte 1–3), Scoring-Formel,
   A–E-Mapping mit P0→E-Regel, Health-Report-Format (AUD-Record-Kopplung),
   Human-Gate-Regel, Katalog-Governance via SCR, S-22-Integritätsprüfung;
-  REPO-AUDIT-003 GEPLANT. SCR-0021; §9-Freigabe ausstehend.
+  REPO-AUDIT-003 GEPLANT. SCR-0021; §9-Freigabe Michael Wroblewski 08.09.2026, 00:05 UTC+2 — APPROVED, normativ, §30-eingefroren.
 
 ## References
 
