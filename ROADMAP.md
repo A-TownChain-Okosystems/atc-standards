@@ -14,7 +14,7 @@
 0. **ATC-STD-README-001 (APPROVED 07.09. 20:36):** Rollout der
    README-Konformität auf alle 26 Repos (Validator als CI-Gate je Repo;
    bis Workflow-Integration: Agenten-lokale Prüfung je Task)
-0b. **ATC-STD-MD-001 (CANDIDATE):** §9-Freigabe + MD-Konformitäts-Rollout
+0b. **ATC-STD-MD-001 (APPROVED 07.09. 21:05):** MD-Konformitäts-Rollout
    auf alle 26 Repos (check_md.py als Gate je Repo)
 0c. **ATC-STD-SC-001..020 (APPROVED 07.09. 21:00):** SC-Gate-Rollout auf
    die Contract-Repos (a-townchain-os, atc-vm), Registry-Befüllung

@@ -3,7 +3,7 @@ standard:
   id: ATC-STD-MD-001
   title: "ATC-STD-MD-001 — ATC Markdown & Documentation Standard"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: md
   authority: A-TownChain-Okosystems
   owner: Michael (Owner-Entwurf) / ATC-AI-ARCH-001 (Formalfassung)
@@ -13,10 +13,11 @@ standard:
   supersedes: []
 ---
 
-# ATC-STD-MD-001 — ATC Markdown & Documentation Standard (v1.0.0, CANDIDATE)
+# ATC-STD-MD-001 — ATC Markdown & Documentation Standard (v1.0.0, APPROVED)
 
-> **Status:** CANDIDATE (v1.0.0) — Owner-Entwurf Michael 07.09.2026, Formalfassung
-> durch ATC-AI-ARCH-001; Freigabe nach ATC-STD-000 §9 ausstehend (Todo #117).
+> **Status:** APPROVED (v1.0.0) — Owner-Freigabe 07.09.2026, 21:05 UTC+2 (ATC-STD-000 §9,
+> „Freigabe"); dokumentiert in approval/APPROVAL-DECISION-2026-09-07-MD-001.md.
+> Immutabilität per §30 — Änderungen nur via SCR.
 > **Normenhierarchie:** Für `README.md` gilt lex specialis **ATC-STD-README-001**
 > (spezifisch) vor diesem Standard (allgemein). ATC-STD-000 §9 bleibt für
 > Standard-Dokumente selbst maßgeblich (eigene Frontmatter-Pflicht).

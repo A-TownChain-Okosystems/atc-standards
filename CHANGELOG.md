@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.4.2] - 2026-09-07
+
+### Added
+
+- Owner-Freigabe: ATC-STD-MD-001 v1.0.0 APPROVED (§9, 21:05 UTC+2) —
+  ATC Markdown & Documentation Standard normativ in Kraft, Immutabilität
+  per §30
+- Registry: **103 Standards, 103 APPROVED, 0 offen — GOVERNANCE-KOMPLETT**
+
 ## [1.4.1] - 2026-09-07
 
 ### Added
