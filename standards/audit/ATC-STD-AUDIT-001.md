@@ -61,7 +61,7 @@ standard:
     - REQ-AUDIT-030
 ---
 
-# ATC-STD-AUDIT-001 — ATC Completeness & Audit Standard (v1.0.0, DRAFT)
+# ATC-STD-AUDIT-001 — ATC Completeness & Audit Standard (v1.0.0, APPROVED)
 
 > **Status:** APPROVED (v1.0.0, Owner-Sammelfreigabe 07.09.2026 22:25 UTC+2, ATC-STD-000 §9) — normativ in Kraft, §30-eingefroren (Änderungen nur via SCR). Owner-Entwurf 07.09.2026, 22:15 UTC+2; Agenten-Review SCR-0013.
 > **Familie:** Audit Standards (ATC-STD-AUDIT-001..999) — Kategorie `audit`, SCR-0013.

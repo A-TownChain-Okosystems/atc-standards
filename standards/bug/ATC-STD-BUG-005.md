@@ -52,7 +52,7 @@ standard:
     - REQ-STD-164
 ---
 
-# ATC-STD-BUG-005 — Fehleranalyse- und Root-Cause-Analysis-Standard (v1.0.0, DRAFT)
+# ATC-STD-BUG-005 — Fehleranalyse- und Root-Cause-Analysis-Standard (v1.0.0, APPROVED)
 
 > **Status:** APPROVED (v1.0.0, Owner-Sammelfreigabe 07.09.2026 22:25 UTC+2, ATC-STD-000 §9) — normativ in Kraft, §30-eingefroren (Änderungen nur via SCR). Owner-Entwurf 07.09.2026, 22:06 UTC+2;
 > Ursprünglich als ATC-STD-ERR-001 entworfen (SCR-0011), per Owner-Entscheid „ERR in Bug einarbeiten"
