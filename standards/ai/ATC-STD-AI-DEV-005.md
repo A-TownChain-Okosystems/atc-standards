@@ -19,6 +19,16 @@ standard:
 > **Status:** APPROVED — Owner-Sammelfreigabe 07.09.2026 (ATC-STD-000 §9)
 > **Reihe:** ATC-STD-AI-DEV-001…012 · **Basiert auf:** AI-DEV-001 §4 (Evidence-Pflicht), ATC-STD-BUG-001/BUG-002
 
+## Abstract
+
+ATC-STD-AI-DEV-005 (Finding & Evidence Standard) — Agenten-Findings F-NNN (BUG-001-Struktur), Evidence-Mindeststruktur je Fundstelle, Erkenntnis ohne Fundstelle ungueltig (ASSUMPTION-Trennung), Finding-zu-Action-Pflicht); sofort APPROVED per Owner-Sammelfreigabe 07.09.2026 (ATC-STD-000 §9.
+Normative Aussagen sind verbindlich (MUSS/SOLLTE/DARF im Sinne von RFC 2119).
+
+## Scope
+
+**Scope:** Gilt für: AI-Entwicklungstätigkeiten von Agenten in allen ATC-Repositories (Manifeste, Commits, PRs, Tests, Dokumentation, Audit).
+Nicht-Gilt: menschliche Entwicklungsprozesse ohne Agentenbezug; Enterprise-Entscheidungen (ATC-ENT).
+
 ## 1. Findings der Agentenarbeit
 
 Agenten-Findings nutzen F-NNN (BUG-001-Struktur): severity (S0-S4), category,

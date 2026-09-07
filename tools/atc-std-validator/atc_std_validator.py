@@ -20,7 +20,7 @@ STATES = ["idea", "proposed", "draft", "review", "candidate", "approved",
           "stable", "deprecated", "retired"]
 CATS = ["governance", "architecture", "repository", "development", "security",
         "protocol", "blockchain", "ai", "os", "infrastructure", "applications",
-        "bug", "net"]
+        "bug", "net", "zkp", "ai-dev", "aas", "enterprise"]
 REQ_RE = re.compile(r"REQ-[A-Z]+(?:-[A-Z]+)?-[0-9]{3}")
 
 
@@ -99,9 +99,9 @@ def validate(path, registry_path):
 
     # S-02 ID-Format (7.10/7.11: Muster aus naming-conventions.schema.json)
     sid = meta.get("id", "")
-    _ok02 = re.match(r"^ATC-STD-[0-9]{3,}$", sid) or re.match(r"^ATC-STD-BUG-[0-9]{3,}$", sid) or re.match(r"^ATC-STD-NET-[0-9]{3,}$", sid)
+    _ok02 = re.match(r"^ATC-STD-(?:BUG-|NET-|ZKP-|AI-DEV-)?[0-9]{3,}$", sid) or re.match(r"^ATC-(?:AAS|ENT)-[0-9]{3,}$", sid)
     v.add("S-02", "PASS" if _ok02 else "FAIL",
-          "ID-Format: %s" % (sid if _ok02 else (sid or "FEHLT") + " (Schema: standardId|bugStandardId)"))
+          "ID-Format: %s" % (sid if _ok02 else (sid or "FEHLT") + " (Schema: alle *StandardId-Muster)"))
 
     # S-03 SemVer
     ver = meta.get("version", "")
@@ -170,7 +170,7 @@ def validate(path, registry_path):
         # Eingebettete Versionsangabe in der Kopf-Statuszeile, z.B.
         # '> **Status:** PROPOSED (v1.0.1) — ...' ist ebenfalls eine Version-
         # Behauptung und muss zur Frontmatter-Version passen.
-        hsv = re.search(r">\s*\*\*Status:?\*\*[^\n]*\(v?([\d.]+)", head)
+        hsv = re.search(r">\s*\*\*Status:?\*\*[^\n]*\(v([\d.]+)\b", head)
         if hsv and ver and hsv.group(1) != ver:
             fails.append("Kopf-Statuszeile Version %s != Frontmatter %s" % (hsv.group(1), ver))
     # H1-Titel: '(vX.Y.Z[, LIFECYCLE])' ist eine Versions-/Status-Behauptung.
@@ -188,16 +188,19 @@ def validate(path, registry_path):
     if fails:
         v.add("S-19", "FAIL", "; ".join(fails))
     elif hv or hst:
-        v.add("S-19", "PASS", "Kopf-/Frontmatter-Sync: Version+Status konsistent")
+        if hst or not st:
+            v.add("S-19", "PASS", "Kopf-/Frontmatter-Sync: Version+Status konsistent")
+        else:
+            v.add("S-19", "WARN", "Kopf-Statuszeile fehlt bei vorhandenem Frontmatter-Status")
     else:
         v.add("S-19", "WARN", "Kein Versions-/Status-Kopf im Kopfbereich — Kopf geloescht oder ausserhalb des Erwartungsbereichs")
 
     # S-09 Normative Sprache
     normativ = meta.get("normative", "")
-    hat_rf = re.search(r"\b(MUST|SHOULD|MAY)\b", text)
+    hat_rf = re.search(r"\b(MUST|SHOULD|MAY|MUSS|SOLLTE|DARF)\b", text)
     if normativ == "true":
         v.add("S-09", "PASS" if hat_rf else "FAIL",
-              "RFC-2119-Terminologie" if hat_rf else "normativ: true ohne MUST/SHOULD/MAY")
+              "RFC-2119-Terminologie (MUST/SHOULD/MAY oder MUSS/SOLLTE/DARF)" if hat_rf else "normativ: true ohne MUST/SHOULD/MAY bzw. MUSS/SOLLTE/DARF")
     else:
         v.add("S-09", "PASS", "nicht normativ — Terminologie optional")
 
@@ -247,7 +250,8 @@ def validate(path, registry_path):
                 _ip = _s["properties"]["identifierPatterns"]["properties"]
                 _fp = _s["properties"]["filenamePatterns"]["properties"]
                 std_p = "|".join("(?:" + pat["pattern"] + ")" for k, pat in _ip.items() if k.lower().endswith("standardid"))
-                req_p = _ip["requirementId"]["pattern"]
+                req_p = "|".join("(?:" + pat["pattern"] + ")" for k, pat in _ip.items()
+                      if k.lower().endswith("requirementid")) or _dflt_req
                 fn_p = "|".join("(?:" + pat["pattern"] + ")" for k, pat in _fp.items() if k.endswith("Doc"))
                 schema_ok = True
             except Exception:

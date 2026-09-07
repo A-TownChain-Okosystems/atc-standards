@@ -18,6 +18,16 @@ standard:
 
 > **Status:** APPROVED (Owner-Sammelfreigabe 07.09.2026, ATC-STD-000 §9) — normativ in Kraft
 
+## Abstract
+
+ATC-AAS-015 (Agent Git Standard) — Owner-Sammelfreigabe 07.09.2026 20:20 UTC+2 (alles freigeben): CANDIDATE -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-AAS-ENT-AUDIT.md.
+Normative Aussagen sind verbindlich (MUSS/SOLLTE/DARF im Sinne von RFC 2119).
+
+## Scope
+
+**Scope:** Gilt für: alle KI-Agenten der A-TownChain-Organisation und deren Betrieb in sämtlichen R2+-Repositories (Identität bis Repository-Manifest).
+Nicht-Gilt: menschliche Rollen (ATC-ENT-002); Mainnet-Betrieb (ATC-STD-NET).
+
 ## 1. Operationen (normativ)
 
 branch · commit · push · pull request · review · merge · tag · release.

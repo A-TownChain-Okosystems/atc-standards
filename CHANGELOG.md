@@ -1,3 +1,20 @@
+## 2026-09-07 — Self-Compliance-Audit: atc-standards implementiert jetzt seine eigenen Standards
+- **Befund:** Die eigene CI pruefte nur 19/81 Standards (Coverage-Regex),
+  die Mutationssuite war von Live-Freigaben abhaengig (9/12), S-09 kannte
+  keine deutschen RFC-2119-Keywords, 62 Standards verstiessen gegen die
+  §9-Pflichtstruktur (Abstract/Scope), .github/ai/ fehlte komplett,
+  STATUS/ROADMAP waren stale.
+- **Remediation:** Validator (Coverage 81/81, S-09, S-16 REQ-Union,
+  hsv-Regex, S-19 WARN), Mutationssuite synthetisch (12/12), 48 Abstract +
+  49 Scope nachgeruestet, categories/Schema erweitert, .github/ai/-Rollout
+  (Repo-Manifest AAS-025, AGENTS.md, AUD-001..005 rueckwirkend),
+  STATUS/ROADMAP synchronisiert.
+- **Endstand: 81/81 COMPLIANT · Mutationssuite 12/12 · Repo-Audit R3
+  100/100 GATE PASS.**
+- Findings F-012..F-016 RESOLVED; F-017 (REQ-ID-Rollout) OPEN mit SCR-0007
+  (Owner-Entscheidung ausstehend, Frist 07.10.2026).
+- Bericht: docs/SELF_COMPLIANCE_2026-09-07.md.
+
 ## 2026-09-07 — Voll-Audit + Sammelfreigabe: ALLE 81 Standards APPROVED
 - **Voll-Audit (Owner-Auftrag) über 81 Standards:** Schema-Lücke ZKP
   (zkpStandardId ergänzt), 28 fehlende Frontmatter-Fences ergänzt,

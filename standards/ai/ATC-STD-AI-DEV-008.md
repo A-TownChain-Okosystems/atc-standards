@@ -19,6 +19,16 @@ standard:
 > **Status:** APPROVED — Owner-Sammelfreigabe 07.09.2026 (ATC-STD-000 §9)
 > **Reihe:** ATC-STD-AI-DEV-001…012 · **Basiert auf:** AI-DEV-001 §7 (TESTING/VALIDATING), §12 (Test Gate)
 
+## Abstract
+
+ATC-STD-AI-DEV-008 (AI Testing & Validation Standard) — Test-Pflicht je Aenderung, Validierung nur mit CI-Run-Referenz (TEST-NNN), Fail-Handling (DEBUGGING-Pflicht, kein Bypass), Uebergabe an Audit-Record); sofort APPROVED per Owner-Sammelfreigabe 07.09.2026 (ATC-STD-000 §9.
+Normative Aussagen sind verbindlich (MUSS/SOLLTE/DARF im Sinne von RFC 2119).
+
+## Scope
+
+**Scope:** Gilt für: AI-Entwicklungstätigkeiten von Agenten in allen ATC-Repositories (Manifeste, Commits, PRs, Tests, Dokumentation, Audit).
+Nicht-Gilt: menschliche Entwicklungsprozesse ohne Agentenbezug; Enterprise-Entscheidungen (ATC-ENT).
+
 ## 1. Test-Pflicht
 
 Keine IMPLEMENTING-Änderung ohne zugehörige Tests (neu oder erweitert).

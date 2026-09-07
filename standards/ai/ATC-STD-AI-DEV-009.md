@@ -31,6 +31,11 @@ AI-DEV-009 normiert Struktur, Ablage, Unveränderlichkeit und Auswertbarkeit von
 Audit-Records. Ein Audit-Record ist die zusammenfassende Antwort auf: Wer hat
 was, warum, worauf gestützt, wie verifiziert — und was ist als Nächstes zu tun?
 
+## Scope
+
+**Scope:** Gilt für: AI-Entwicklungstätigkeiten von Agenten in allen ATC-Repositories (Manifeste, Commits, PRs, Tests, Dokumentation, Audit).
+Nicht-Gilt: menschliche Entwicklungsprozesse ohne Agentenbezug; Enterprise-Entscheidungen (ATC-ENT).
+
 ## 1. Audit-Record (Pflichtstruktur)
 
 ID: `AUD-NNN` (naming-conventions `auditRecordId`, fortlaufend, nie wiederverwendet).

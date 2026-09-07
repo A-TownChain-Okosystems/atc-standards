@@ -18,6 +18,11 @@ standard:
 
 > **Status:** APPROVED (Owner-Sammelfreigabe 07.09.2026, ATC-STD-000 §9) — normativ in Kraft
 
+## Abstract
+
+ATC-AAS-023 (Agent Role Standard) — Owner-Sammelfreigabe 07.09.2026 20:20 UTC+2 (alles freigeben): CANDIDATE -> APPROVED, normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-AAS-ENT-AUDIT.md.
+Normative Aussagen sind verbindlich (MUSS/SOLLTE/DARF im Sinne von RFC 2119).
+
 ## 1. Rollenmodell (Least Privilege je Rolle)
 
 ```

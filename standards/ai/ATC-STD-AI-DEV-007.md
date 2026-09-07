@@ -14,9 +14,9 @@ standard:
   superseded_by: null
 ---
 
-# ATC-STD-AI-DEV-007 — AI Git Commit & Pull Request Standard (v1.0.0, APPROVED)
+# ATC-STD-AI-DEV-007 — AI Git Commit & Pull Request Standard (v1.0.1, APPROVED)
 
-> **Status:** APPROVED (v1.0.0) — Owner-Freigabe 07.09.2026 (ATC-STD-000 §9); normativ in Kraft · **Reihe:** ATC-STD-AI-DEV-001…012
+> **Status:** APPROVED (v1.0.1) — Owner-Freigabe (SCR-0006) 07.09.2026 (ATC-STD-000 §9); normativ in Kraft · **Reihe:** ATC-STD-AI-DEV-001…012
 > **Autoren:** Michael Wroblewski (Owner), Aurora (Superagent)
 > **Kernprinzip:** Commit und PR sind die öffentlichen, maschinenlesbaren
 > Nachweise der Agentenarbeit. GitHub-Automationen werten die Historie
@@ -28,10 +28,16 @@ standard:
 ## Abstract
 
 AI-DEV-007 normiert Commit-Format, Commit-Trailer, Branch-Namen, Pull-Request-
-Struktur und Labels für KI-Agenten. Ziel: Jeder Commit und jedes PR ist ohne
+Struktur und Labels für KI-Agenten. Aussagen sind verbindlich (MUSS/SOLLTE/DARF
+im Sinne von RFC 2119). Ziel: Jeder Commit und jedes PR ist ohne
 Kontextwissen einer externen Person (oder eines anderen Agenten) vollständig
 zuordbar: welcher Agent, welcher Task, welches Finding, welche Aktion, welches
 Validierungsergebnis.
+
+## Scope
+
+**Scope:** Gilt für: AI-Entwicklungstätigkeiten von Agenten in allen ATC-Repositories (Manifeste, Commits, PRs, Tests, Dokumentation, Audit).
+Nicht-Gilt: menschliche Entwicklungsprozesse ohne Agentenbezug; Enterprise-Entscheidungen (ATC-ENT).
 
 ## 1. Commit-Format (normativ)
 

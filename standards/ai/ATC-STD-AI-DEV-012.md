@@ -19,6 +19,16 @@ standard:
 > **Status:** APPROVED — Owner-Sammelfreigabe 07.09.2026 (ATC-STD-000 §9)
 > **Reihe:** ATC-STD-AI-DEV-001…012 · **Basiert auf:** AI-DEV-001, AGENT_PROTOCOL (1-Agent-per-Repo)
 
+## Abstract
+
+ATC-STD-AI-DEV-012 (Multi-Agent Coordination Standard) — 1-Agent-per-Repo-Exklusivitaet, Artefakt-basierte Kommunikation, Handover-Regeln, Konfliktbehandlung als Governance-Verstoss); sofort APPROVED per Owner-Sammelfreigabe 07.09.2026 (ATC-STD-000 §9.
+Normative Aussagen sind verbindlich (MUSS/SOLLTE/DARF im Sinne von RFC 2119).
+
+## Scope
+
+**Scope:** Gilt für: AI-Entwicklungstätigkeiten von Agenten in allen ATC-Repositories (Manifeste, Commits, PRs, Tests, Dokumentation, Audit).
+Nicht-Gilt: menschliche Entwicklungsprozesse ohne Agentenbezug; Enterprise-Entscheidungen (ATC-ENT).
+
 ## 1. Repo-Exklusivität
 
 Pro Repository arbeitet zu jedem Zeitpunkt genau EIN Agent (1-Agent-per-Repo,

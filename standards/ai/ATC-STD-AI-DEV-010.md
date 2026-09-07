@@ -19,6 +19,16 @@ standard:
 > **Status:** APPROVED — Owner-Sammelfreigabe 07.09.2026 (ATC-STD-000 §9)
 > **Reihe:** ATC-STD-AI-DEV-001…012 · **Basiert auf:** AI-DEV-001 §12 (Konsistenzmatrix), ATC-STD-BUG-004 (Sync)
 
+## Abstract
+
+ATC-STD-AI-DEV-010 (AI Documentation Synchronization Standard) — Synchronisationspflicht gegen SPEC/STANDARD/WIKI/ARCHITECTURE/ROADMAP, SYNC-NNN-Records, kein COMPLETED bei deviation, Automatisierungsvorgabe); sofort APPROVED per Owner-Sammelfreigabe 07.09.2026 (ATC-STD-000 §9.
+Normative Aussagen sind verbindlich (MUSS/SOLLTE/DARF im Sinne von RFC 2119).
+
+## Scope
+
+**Scope:** Gilt für: AI-Entwicklungstätigkeiten von Agenten in allen ATC-Repositories (Manifeste, Commits, PRs, Tests, Dokumentation, Audit).
+Nicht-Gilt: menschliche Entwicklungsprozesse ohne Agentenbezug; Enterprise-Entscheidungen (ATC-ENT).
+
 ## 1. Synchronisationspflicht
 
 Jede Code-Änderung ist gegen die Dokumentations-Landschaft geprüft: SPEC,

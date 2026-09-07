@@ -28,7 +28,8 @@ standard:
 ## Abstract
 
 Der Standard macht aus einem Coding-Bot einen auditierbaren Software-Engineering-
-Agenten. Jede KI-Aktion muss auf die Nachvollziehbarkeitskette zurückführbar sein:
+Agenten. Jede KI-Aktion MUSS auf die Nachvollziehbarkeitskette zurückführbar sein.
+Normative Aussagen sind verbindlich (MUSS/SOLLTE/DARF im Sinne von RFC 2119):
 
 ```
 AGENT → IDENTITY → MISSION → CONTEXT → DISCOVERY → FINDING → DECISION

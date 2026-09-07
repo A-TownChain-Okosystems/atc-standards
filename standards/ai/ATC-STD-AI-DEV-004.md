@@ -32,6 +32,11 @@ Agentenarbeit hängen — sie ist Voraussetzung dafür, dass ein anderer Agent
 einen unterbrochenen Prozess übernehmen kann, ohne die Historie neu zu
 interpretieren.
 
+## Scope
+
+**Scope:** Gilt für: AI-Entwicklungstätigkeiten von Agenten in allen ATC-Repositories (Manifeste, Commits, PRs, Tests, Dokumentation, Audit).
+Nicht-Gilt: menschliche Entwicklungsprozesse ohne Agentenbezug; Enterprise-Entscheidungen (ATC-ENT).
+
 ## 1. Task-Record (Pflichtstruktur)
 
 Jeder Task ist maschinenlesbar in `.github/ai/tasks/ATC-TASK-NNNN.yaml` abgelegt

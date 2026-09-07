@@ -19,6 +19,16 @@ standard:
 > **Status:** APPROVED — Owner-Sammelfreigabe 07.09.2026 (ATC-STD-000 §9)
 > **Reihe:** ATC-STD-AI-DEV-001…012 · **Basiert auf:** AI-DEV-001 §9 (OBSERVATION vs. DECISION), §8 (Actions)
 
+## Abstract
+
+ATC-STD-AI-DEV-006 (AI Decision & Action Standard) — OBSERVATION/DECISION/reason-Trennung, ACT-NNN-Struktur, Next-Action-Pflicht, Entscheidungsverbund ohne autonome Aenderung); sofort APPROVED per Owner-Sammelfreigabe 07.09.2026 (ATC-STD-000 §9.
+Normative Aussagen sind verbindlich (MUSS/SOLLTE/DARF im Sinne von RFC 2119).
+
+## Scope
+
+**Scope:** Gilt für: AI-Entwicklungstätigkeiten von Agenten in allen ATC-Repositories (Manifeste, Commits, PRs, Tests, Dokumentation, Audit).
+Nicht-Gilt: menschliche Entwicklungsprozesse ohne Agentenbezug; Enterprise-Entscheidungen (ATC-ENT).
+
 ## 1. Trennungsgrundsatz
 
 Jede Entscheidung besteht aus drei getrennten Feldern:

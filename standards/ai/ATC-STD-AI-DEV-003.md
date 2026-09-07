@@ -19,6 +19,16 @@ standard:
 > **Status:** APPROVED — Owner-Sammelfreigabe 07.09.2026 (ATC-STD-000 §9)
 > **Reihe:** ATC-STD-AI-DEV-001…012 · **Basiert auf:** AI-DEV-001 §5 (Discovery-Protocol)
 
+## Abstract
+
+ATC-STD-AI-DEV-003 (Repository Discovery Standard) — Discovery-Kette (12 Stufen Pflichtreihenfolge), Discovery-Record, Governance-Discovery ueber Registry/Dependency-Graph, Verbot des Direktmusters); sofort APPROVED per Owner-Sammelfreigabe 07.09.2026 (ATC-STD-000 §9.
+Normative Aussagen sind verbindlich (MUSS/SOLLTE/DARF im Sinne von RFC 2119).
+
+## Scope
+
+**Scope:** Gilt für: AI-Entwicklungstätigkeiten von Agenten in allen ATC-Repositories (Manifeste, Commits, PRs, Tests, Dokumentation, Audit).
+Nicht-Gilt: menschliche Entwicklungsprozesse ohne Agentenbezug; Enterprise-Entscheidungen (ATC-ENT).
+
 ## 1. Discovery-Kette (Pflichtreihenfolge)
 
 1. Repository Identity → 2. README → 3. CONTRIBUTING → 4. AGENTS.md →

@@ -218,6 +218,11 @@
           "type": "string",
           "pattern": "^ATC-STD-ZKP-[0-9]{3,}$",
           "example": "ATC-STD-ZKP-001"
+        },
+        "zkpRequirementId": {
+          "type": "string",
+          "pattern": "^REQ-ZKP-[0-9]{3,}$",
+          "example": "REQ-ZKP-101"
         }
       }
     },
@@ -311,6 +316,21 @@
           "type": "string",
           "pattern": "^ATC-STD-AI-DEV-[0-9]{3,}[.]md$",
           "example": "ATC-STD-AI-DEV-001.md"
+        },
+        "zkpStandardDoc": {
+          "type": "string",
+          "pattern": "^ATC-STD-ZKP-[0-9]{3,}[.]md$",
+          "example": "ATC-STD-ZKP-001.md"
+        },
+        "aasStandardDoc": {
+          "type": "string",
+          "pattern": "^ATC-AAS-[0-9]{3,}[.]md$",
+          "example": "ATC-AAS-001.md"
+        },
+        "entStandardDoc": {
+          "type": "string",
+          "pattern": "^ATC-ENT-[0-9]{3,}[.]md$",
+          "example": "ATC-ENT-001.md"
         }
       }
     },

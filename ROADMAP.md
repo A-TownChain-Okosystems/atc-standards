@@ -1,29 +1,23 @@
 # ROADMAP — atc-standards
 
-## Q3/2026 (laufend)
+## Q3/2026 (abgeschlossen)
 
-1. **ATC-STD-000 STABLE:** APPROVED seit 07.09. (v1.1.0, Release+Tag) —
-   STABLE nach Bewaehrung gemaess §9.
-2. **SCR-Klaerung:** SCR-0001 (ID-Allokation) PENDING; SCR-0003 + SCR-0004
-   CLOSED (Branch-Protection Option B aktiv; Rollenmodell §14.1 in v1.1.0).
-3. **Co-Approval 201/202/203:** Kurze Review-Passagen + Owner-Sammelapproval.
+1. ✅ **ATC-STD-000 STABLE:** APPROVED v1.2.0 (07.09., §37 ID-Allokation, §38 Security)
+2. ✅ **AI-DEV-Familie 001–012:** komplett APPROVED (07.09., 8 Standards ergänzt)
+3. ✅ **ATC-AAS-Block 001–025:** APPROVED (07.09., Owner-Entwurf)
+4. ✅ **ATC-ENT-Layer 001–015:** APPROVED (07.09., Owner-Entwurf)
+5. ✅ **Voll-Audit 81 Standards:** bestanden, 5 Fundstellen behoben (07.09.)
+6. ✅ **Self-Compliance:** CI prüft 81/81, Repo R3 100/100 (07.09., F-012..F-016 resolved)
 
-## Danach (Standards-Ausbau je Bedarf)
+## Bis 07.10.2026 (30-Tage-Fristen)
 
-4. **100er-Bereich (Architecture):** Erste Architektur-Standards nach
-   ID-Allokationsregel (SCR-0001) — Kandidaten: Kernel-/Service-Space-Architektur
-   (Querverweis AD-012/028), Chain-Architektur (Chain-ID 658467).
-5. **400er-Bereich (Security):** Security-Basistandard (Secret-Handling,
-   Release-Gates) — Verallgemeinerung aus ATC-STD-203 + Issue #69-Ergebnissen.
-6. **800er-Bereich (OS/Runtime):** ATS-Serie (ATS-1000…1007) perspektivisch in
-   die STD-Registry-Nomenklatur ueberfuehren (Alias-Mapping, keine Renumbering-
-   Pflicht; Legacy-Nummern bleiben gueltig).
-7. **Registry-Automation:** atc-std-validator um Registry-Sync-Pruefung
-   (Header == Registry je Standard) erweitern; ggf. Version-Sync gegen
-   versions.yaml.
+1. **SCR-0007 (F-017):** REQ-ID-Rollout AI-DEV/AAS/ENT + §9-Reststruktur — Owner-Entscheidung ausstehend
+2. **Interface-Test-Suiten IFC-0001..0010** (P0): seed → active (ATC-STD-204 §9)
+3. **Repo-Manifeste** .github/ai/agent.yaml in allen R2+-Repos (#111) — atc-standards als Vorreiter erledigt
+4. **Commit-Trailer-Rollout** statt Inline-[agent:]-Tag (#112)
 
-## Regel
+## Danach (Q4/2026)
 
-Neue Standards nur nach Bedarf aus Bauhierarchie L0-L7 (AD-026) und
-Lauffaehigkeits-Roadmap M1-M8 (AD-027) — Standards folgen der Baulogik,
-nicht umgekehrt.
+- ENT-Ableitungen: org-units.yaml, repositories.yaml (Felder nach ENT-009), risks.yaml (ENT-011)
+- Erste DEC-Records (ENT-003) und RISK-Registry-Seed (ENT-011)
+- KPI-Reporting (ENT-013) anbinden
