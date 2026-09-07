@@ -1,3 +1,15 @@
+## 2026-09-07 — Agent-Manifest: Voll-Compliance-Mandat (alle 81 Standards)
+- **AGENT_MANIFEST.md:** Neues verbindliches Mandat — der Agent MUSS saemtliche
+  Standards einhalten UND umsetzen; dynamische Bindung an die Registry (SSOT);
+  Konfliktregel nach Verfassung §9; Nachweispflicht via AUD-Records/Evidenz.
+- **.github/ai/agent.yaml:** required_standards von 6 auf ALLE 81
+  Registry-Standards erweitert.
+- **AGENTS.md:** Vollmandat statt "Auszug".
+- **CI-Enforcement:** Neues Gate check_agent_manifest.py (A1: Vollstaendigkeit
+  gegen Registry, A2: Mandat-Klauseln, A3: AGENTS.md, A4: AUD-Records) als
+  Schritt in naming-governance.yml.
+- **Finding F-018** registriert und RESOLVED.
+
 ## 2026-09-07 — Self-Compliance-Audit: atc-standards implementiert jetzt seine eigenen Standards
 - **Befund:** Die eigene CI pruefte nur 19/81 Standards (Coverage-Regex),
   die Mutationssuite war von Live-Freigaben abhaengig (9/12), S-09 kannte

@@ -1,6 +1,35 @@
 # AGENT_MANIFEST.md
 > Letzte Aktualisierung: 2026-09-07 18:55 UTC | Aurora Master Sync v3.1.7 | 26-Repo-Stand (AD-016–AD-046) | Rollout auf alle 26 Repos
 
+## ⚖️ Standard-Compliance-Mandat (verbindlich — ATC-AAS-003/AAS-004, AI-DEV-001 §6)
+
+> **Der zuständige Agent MUSS sämtliche Standards dieser Registry einhalten
+> und umsetzen.** Keine Ausnahmen, keine Teilannahme.
+
+1. **Vollmandat:** ALLE 81 APPROVED-Standards (Verfassung ATC-STD-000 v1.2.0,
+   AI-DEV-001..012, ATC-AAS-001..025, ATC-ENT-001..015, ATC-STD-100/201–204/300,
+   BUG-001..004, NET-001..008, ZKP-001..010) sind für den Agenten verbindlich —
+   im vollen Umfang, nicht nur im Auszug.
+2. **Dynamische Bindung:** Die Registry (`registry/standards.yaml`) ist SSOT
+   (ATC-STD-000 §19). Jeder neue APPROVED-Standard ist ab Freigabe automatisch
+   verbindlich — ohne dass dieses Manifest geändert werden MUSS. Die
+   maschinenlesbare Konkretisierung führt `.github/ai/agent.yaml`
+   (`required_standards`), geprüft durch CI.
+3. **Umsetzungspflicht:** Einhalten genügt nicht — der Agent setzt die
+   Standards aktiv um (Repo-Manifeste, AGENTS.md, Audit-Records, Tests,
+   CI-Gates, Findings nach BUG-001..004, Interface-Test-Suiten nach
+   ATC-STD-204 §9).
+4. **Konfliktregel:** Bei Konflikten gilt die Rangfolge der Verfassung
+   (ATC-STD-000 §9): Verfassung > ATC-ENT > ATC-AAS > AI-DEV > Domänen-
+   Standards. Konflikte MUSS der Agent als Finding (BUG-001, Severity nach
+   BUG-002) dokumentieren, nicht stillschweigend auflösen.
+5. **Nachweis:** Jede Agenten-Aktion wird über AUD-Records (AI-DEV-009,
+   `.github/ai/audit/`) und Evidenz (AAS-010) nachgewiesen. Verstöße gegen
+   dieses Mandat sind selbst findings-pflichtig (S1).
+6. **CI-Enforcement:** `check_agent_manifest.py` prüft bei jedem Push, dass
+   das Repo-Manifest alle Registry-Standards referenziert und dieses Mandat
+   vorhanden ist. Gate-Verstoß = Build-FAIL.
+
 ## Repositories (26 aktive — AD-016 + AD-024 + atc-standards + AD-043/044/045 + SCR-0005/AD-046)
 ### Kern-Plattform (9)
 | Repo | Rolle | Zustand (07.09.2026) |

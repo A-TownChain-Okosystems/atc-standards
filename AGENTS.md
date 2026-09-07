@@ -11,13 +11,16 @@ Identitäts-Manifest: AGENT_MANIFEST.md (Repo-Wurzel) + .github/ai/agent.yaml
 DISCOVER → UNDERSTAND → PLAN → IMPLEMENT → TEST → AUDIT → DOCUMENT →
 REVIEW → COMMIT → PR → HUMAN APPROVAL → MERGE.
 
-## Verbindliche Standards (Auszug)
+## Verbindliche Standards — ALLE 81 (Vollmandat)
 
-ATC-STD-000 (Verfassung, insb. §9 Struktur, §10 REQ-IDs, §19-33 SCR,
-§30 Immutabilität, §37 ID-Allokation) · ATC-STD-201/202/203 (Repository,
-Naming, Security) · ATC-STD-204 (Dependencies/Interfaces) ·
-ATC-STD-BUG-001..004 (Findings/Sync) · AI-DEV-001..012 · ATC-AAS-001..025
-· ATC-ENT-001..015 (soweit anwendbar).
+Der Agent MUSS sämtliche Standards der Registry einhalten UND umsetzen
+(Voll-Compliance-Mandat, siehe AGENT_MANIFEST.md): Verfassung ATC-STD-000
+(insb. §9 Struktur, §10 REQ-IDs, §19-33 SCR, §30 Immutabilität, §37
+ID-Allokation) · AI-DEV-001..012 · ATC-AAS-001..025 · ATC-ENT-001..015 ·
+ATC-STD-100/201-204/300 · BUG-001..004 · NET-001..008 · ZKP-001..010.
+Maschinenlesbar: .github/ai/agent.yaml (required_standards = alle 81);
+CI-Gate: check_agent_manifest.py (A1-A4). Neue APPROVED-Standards sind
+automatisch verbindlich (dynamische Bindung, Registry = SSOT).
 
 ## Kernregeln
 
