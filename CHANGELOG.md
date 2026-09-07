@@ -1,5 +1,33 @@
 # Changelog
 
+## [1.4.11] - 2026-09-07
+
+### Added
+
+- **ATC-STD-AI-DECISION-001 v1.0.0 (APPROVED):** ATC Agent Decision-Making Standard —
+  das Entscheidungsmodell ÜBER den AAS-Betriebsstandards und AI-DEV-Entwicklungsstandards.
+  15-stufige Pipeline, Identitätspflichtfelder, Entscheidungstypen D0–D5, Autonomie-Level
+  L0–L5 (L5 Governance ohne uneingeschränkte Kontrolle), Evidence-First, Confidence/
+  Eligibility, Risiko RK0–RK5 auf 10 Risikoachsen, Reversibility, Option-Scoring,
+  Policy-First, Authority Check, Human Approval Gates, Conflict-Resolution-Priorität,
+  Decision Records DEC-NNNNNN, kein Hidden Decision Making (kein Chain-of-Thought als
+  Audit), Fail-Safe, Multi-Agent Separation of Duties, Vier-Augen-Prinzip,
+  Post-Decision Verification. 23 REQ-AIDEC, 6 COM-AIDEC-Gates.
+  SCR-0014: Die vorgeschlagene Familie ATC-STD-AI-001..015 wurde auf den Bestand
+  gemappt (12/15 durch AAS/AI-DEV abgedeckt — KEINE Parallel-Familie); Kill-Switch
+  als dokumentierte Lücke. RK-Skala statt R (Kollision mit Reproduzierbarkeit
+  R0–R3, BUG-005). Owner-Entwurf Michael Wroblewski (22:15).
+- **Schema:** AI-DECISION-Familie allockiert (aiDecisionStandardId,
+  aiDecisionRequirementId, decisionRecordId, aiDecisionStandardDoc).
+
+### Changed
+
+- **Sammelfreigabe (Owner-Mandat „Freigabe", 22:25):** ATC-STD-BUG-005 und
+  ATC-STD-AUDIT-001 von DRAFT auf APPROVED gesetzt (normativ, §30-eingefroren).
+  Registry FINAL: 108 Standards, 108 APPROVED, 0 offen, alle normativ.
+  Approval-Dokument: approval/APPROVAL-DECISION-2026-09-07-BUG005-AUDIT-AIDECISION-v1.0.0.md.
+  SCR-0011/0012/0013/0014 Owner-§9-Checkboxen gesetzt.
+
 ## [1.4.10] - 2026-09-07
 
 ### Added

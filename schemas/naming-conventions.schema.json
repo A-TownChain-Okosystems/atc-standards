@@ -364,6 +364,24 @@
           "pattern": "^AUD-[0-9]{4}-[0-9]{4,}$",
           "example": "AUD-2026-0001",
           "note": "Audit-Lauf-IDs: AUD-YYYY-NNNN, revisionsfähige Audit-Historie (SCR-0013; konsolidiert die Varianten AUD-NNNN/ATC-AUD-YYYY-NNNN aus dem Owner-Entwurf)"
+        },
+        "aiDecisionStandardId": {
+          "type": "string",
+          "pattern": "^ATC-STD-AI-DECISION-[0-9]{3,}$",
+          "example": "ATC-STD-AI-DECISION-001",
+          "note": "AI-Decision-Familie: Agent Decision-Making (Entscheidungsmodell über AAS-Betriebsstandards; Owner-Entwurf 07.09., SCR-0014)"
+        },
+        "aiDecisionRequirementId": {
+          "type": "string",
+          "pattern": "^REQ-AIDEC-[0-9]{3,}$",
+          "example": "REQ-AIDEC-001",
+          "note": "Requirements der AI-DECISION-Familie (SCR-0014)"
+        },
+        "decisionRecordId": {
+          "type": "string",
+          "pattern": "^DEC-[0-9]{6,}$",
+          "example": "DEC-000001",
+          "note": "Mandatory Decision Records: DEC-NNNNNN fortlaufend, versionierbar, referenzierbar (ATC-STD-AI-DECISION-001 Abschnitt 16; SCR-0014; trennt Records von Regeln — Regeln sind REQ-AIDEC-IDs)"
         }
       }
     },
@@ -502,6 +520,11 @@
           "type": "string",
           "pattern": "^ATC-STD-AUDIT-[0-9]{3,}[.]md$",
           "example": "ATC-STD-AUDIT-001.md"
+        },
+        "aiDecisionStandardDoc": {
+          "type": "string",
+          "pattern": "^ATC-STD-AI-DECISION-[0-9]{3,}[.]md$",
+          "example": "ATC-STD-AI-DECISION-001.md"
         }
       }
     },

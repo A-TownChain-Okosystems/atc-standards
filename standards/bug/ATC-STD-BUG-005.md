@@ -3,14 +3,14 @@ standard:
   id: ATC-STD-BUG-005
   title: "ATC-STD-BUG-005 — Fehleranalyse- und Root-Cause-Analysis-Standard"
   version: "1.0.0"
-  status: draft
+  status: approved
   category: bug
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"
   created: "2026-09-07"
   updated: "2026-09-07"
-  normative: false
-  effective_date: ""
+  normative: true
+  effective_date: "2026-09-07"
   review_date: ""
   classification: PUBLIC
   language: de-DE
@@ -54,11 +54,11 @@ standard:
 
 # ATC-STD-BUG-005 — Fehleranalyse- und Root-Cause-Analysis-Standard (v1.0.0, DRAFT)
 
-> **Status:** DRAFT (v1.0.0) — Owner-Entwurf Michael Wroblewski (Builder-Chat 07.09.2026, 22:06 UTC+2);
+> **Status:** APPROVED (v1.0.0, Owner-Sammelfreigabe 07.09.2026 22:25 UTC+2, ATC-STD-000 §9) — normativ in Kraft, §30-eingefroren (Änderungen nur via SCR). Owner-Entwurf 07.09.2026, 22:06 UTC+2;
 > Ursprünglich als ATC-STD-ERR-001 entworfen (SCR-0011), per Owner-Entscheid „ERR in Bug einarbeiten"
 > als ATC-STD-BUG-005 in die Bug-Familie integriert (SCR-0012, Builder-Chat 07.09.2026, 22:35 UTC+2).
 > **Familie:** Bug & Konsistenz-Lebenszyklus (ATC-STD-BUG-001..499) — Kategorie `bug`, SCR-0011/0012.
-> Owner-§9-Freigabe ausstehend. Bei Freigabe: APPROVED/ACTIVE.
+> Mit der Sammelfreigabe 22:25 UTC+2: APPROVED/ACTIVE.
 
 > Einheitlicher Prozess für Fehleranalyse und Root-Cause-Analysis im gesamten Ökosystem: Fehler erkennen, reproduzieren, klassifizieren, Auswirkungen bestimmen, Ursache ermitteln, Ursache von Symptomen trennen, beheben, verifizieren, Regression ausschließen, Dokumentation synchronisieren, Lessons Learned erfassen, Wiederholung verhindern. Dieser Standard ist das Analyse- und QMS-Mitglied der Bug-Familie (ATC-STD-BUG-001..004 regeln Finding, Dokumentation, Fix-Lifecycle und Merge-Gate; dieser Standard regelt Analyse-Tiefe und Quality Management) — ein vollständiger Defect & Incident Management Lifecycle in einer Familie.
 

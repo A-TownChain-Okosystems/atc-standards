@@ -3,14 +3,14 @@ standard:
   id: ATC-STD-AUDIT-001
   title: "ATC Completeness & Audit Standard — Vollständigkeitsprüfung & Audit"
   version: "1.0.0"
-  status: draft
+  status: approved
   category: audit
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"
   created: "2026-09-07"
   updated: "2026-09-07"
-  normative: false
-  effective_date: ""
+  normative: true
+  effective_date: "2026-09-07"
   review_date: ""
   classification: PUBLIC
   language: de-DE
@@ -63,8 +63,7 @@ standard:
 
 # ATC-STD-AUDIT-001 — ATC Completeness & Audit Standard (v1.0.0, DRAFT)
 
-> **Status:** DRAFT (v1.0.0) — Owner-Entwurf Michael Wroblewski (Builder-Chat 07.09.2026, 22:15 UTC+2);
-> Agenten-Review abgeschlossen (SCR-0013); Owner-§9-Freigabe ausstehend. Bei Freigabe: APPROVED/ACTIVE.
+> **Status:** APPROVED (v1.0.0, Owner-Sammelfreigabe 07.09.2026 22:25 UTC+2, ATC-STD-000 §9) — normativ in Kraft, §30-eingefroren (Änderungen nur via SCR). Owner-Entwurf 07.09.2026, 22:15 UTC+2; Agenten-Review SCR-0013.
 > **Familie:** Audit Standards (ATC-STD-AUDIT-001..999) — Kategorie `audit`, SCR-0013.
 > **Rolle:** Kontrollschicht über allen anderen ATC-Standards — nicht nur ein Dokument.
 
@@ -456,4 +455,4 @@ Ausnahmen MÜSSEN gemäß ATC-STD-DESC-001 Abschnitt 11 (EXC-Verfahren) dokument
 - 30 normative Anforderungen (REQ-AUDIT-001..030), 6 COM-AUDIT-Gates
 - 20 Audit-Domänen (AUD-C01..C20), 8 Release-Gates (AUD-G01..G08), Completeness Score A–F
 - SCR-0013: Severity-Alias-Mapping (CRITICAL..INFO → S0..S4), Audit-Lauf-ID konsolidiert zu AUD-YYYY-NNNN
-- Status DRAFT — §9-Freigabe ausstehend
+- APPROVED per Owner-Sammelfreigabe 07.09.2026, 22:25 UTC+2

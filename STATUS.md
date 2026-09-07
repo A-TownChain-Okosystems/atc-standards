@@ -16,7 +16,14 @@ ATC-STD-AUDIT-001 v1.0.0 DRAFT (SCR-0013): Completeness & Audit — Kontrollschi
 Standards; 20 Domänen, Traceability Matrix, Cross-System Integrity, 8 Release-Gates,
 Completeness Score A-F, AUD-YYYY-NNNN. BUG-005-Referenz AUD→AUDIT konsolidiert. §9-Freigabe ausstehend.
 
-Stand: 07.09.2026, 22:45 (Europe/Berlin) · Self-Compliance: R3 100/100 GATE PASS · Voll-Audit 103/103 Standards: ALLE CHECKS PASS
+ATC-STD-AI-DECISION-001 v1.0.0 (SCR-0014): Agent Decision-Making — Pipeline, D0-D5/L0-L5/RK0-RK5,
+Evidence-First, Decision Records DEC-NNNNNN, Separation of Duties; §24-Familie auf AAS/AI-DEV-Bestand
+gemappt (12/15), Kill-Switch als dokumentierte Lücke (künftig AAS-026+).
+
+Sammelfreigabe 22:25 (Owner-Mandat „Freigabe"): BUG-005 + AUDIT-001 + AI-DECISION-001 → APPROVED,
+normativ, §30-eingefroren. Registry FINAL: 108 Standards, 108 APPROVED, 0 offen, alle normativ.
+
+Stand: 07.09.2026, 22:25 (Europe/Berlin) · Self-Compliance: R3 100/100 GATE PASS · Voll-Audit 103/103 Standards: ALLE CHECKS PASS
 
 ## Standards-System
 
@@ -35,9 +42,10 @@ Stand: 07.09.2026, 22:45 (Europe/Berlin) · Self-Compliance: R3 100/100 GATE PAS
 | ATC-STD-SC-001..020 | ATC Smart Contract Standards Framework (Kategorien, Gates SC-G0..G13, Contract Registry) | APPROVED — normativ in Kraft (07.09., 21:00) |
 | ATC-STD-DESC-001 | Standard Description Standard (Beschreibung von Standards) | APPROVED — SCR-0008, §9-Freigabe 21:57 |
 | ATC-STD-VERSION-001 | ATC Versioning Standard (Software, Standards, APIs, Contracts, Protokolle, Releases) | APPROVED — SCR-0009, §9-Freigabe 21:57 |
-| ATC-STD-BUG-005 | Fehleranalyse- & Root-Cause-Analysis-Standard (Analyse-/QMS-Schicht der Bug-Familie) | DRAFT — SCR-0011/0012, §9-Freigabe ausstehend |
-| ATC-STD-AUDIT-001 | ATC Completeness & Audit Standard (Kontrollschicht über allen Standards) | DRAFT — SCR-0013, §9-Freigabe ausstehend |
-| **Summe** | **107 Standards** | **105 APPROVED + 2 DRAFT** |
+| ATC-STD-BUG-005 | Fehleranalyse- & Root-Cause-Analysis-Standard (Analyse-/QMS-Schicht der Bug-Familie) | APPROVED — SCR-0011/0012, §9-Sammelfreigabe 22:25 |
+| ATC-STD-AUDIT-001 | ATC Completeness & Audit Standard (Kontrollschicht über allen Standards) | APPROVED — SCR-0013, §9-Sammelfreigabe 22:25 |
+| ATC-STD-AI-DECISION-001 | ATC Agent Decision-Making Standard (Entscheidungsmodell über AAS/AI-DEV) | APPROVED — SCR-0014, §9-Sammelfreigabe 22:25 |
+| **Summe** | **108 Standards** | **108 APPROVED, 0 offen** |
 
 ## Qualitätssicherung (CI, self-compliant)
 
