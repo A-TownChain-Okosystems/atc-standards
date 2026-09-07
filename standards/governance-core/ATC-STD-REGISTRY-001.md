@@ -3,16 +3,17 @@ standard:
   id: ATC-STD-REGISTRY-001
   title: "ATC Registry Management Standard — Verbindliche SSOT-Verwaltung aller ATC-Registries: Registry-Inventar mit Zuständigkeiten, Single-Source-of-Truth-Prinzip, Generatoren statt Handarbeit, Cross-Registry-Konsistenz über Validator-Gates, Prozess für neue Registries, Manipulationsschutz"
   version: "1.0.0"
-  status: draft
+  status: approved
   category: governance-core
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"
   created: "2026-09-08"
   updated: "2026-09-08"
-  normative: false
-  effective_date: ""
-  review_date: ""
+  normative: true
+  effective_date: "2026-09-08"
+  review_date: "2027-09-08"
   classification: PUBLIC
+  approved_by: "Michael Wroblewski (Owner, §9-Freigabe 08.09.2026, 00:36 UTC+2)"
   language: de-DE
   supersedes: null
   superseded_by: null
@@ -29,11 +30,10 @@ standard:
   license: "Copyright (c) 2026 Michael Wroblewski"
 ----
 
-# ATC-STD-REGISTRY-001 — ATC Registry Management Standard (v1.0.0, DRAFT)
+# ATC-STD-REGISTRY-001 — ATC Registry Management Standard (v1.0.0, APPROVED)
 
-> **Status:** DRAFT (v1.0.0) — Governance Core FAM-43, Slot via SCR-0024 reserviert,
-> Ausarbeitung SCR-0025 (Owner-Direktive „Core bauen" 08.09.2026); Owner-§9-Freigabe
-> ausstehend. Bei Freigabe: APPROVED, normativ, §30-eingefroren.
+> **Status:** APPROVED (v1.0.0) — §9-Freigabe Michael Wroblewski (Builder-Chat 08.09.2026, 00:36 UTC+2);
+> normativ in Kraft ab 08.09.2026, §30-eingefroren (ATC-STD-000). SCR-0025 akzeptiert.
 > **Familie:** Standards Governance Core (FAM-43). **Kopplungen:** TAXONOMY-001
 > (Meta-Registry), STDDEV-001 (Standard-Einträge), CHANGE-001 (Änderungskanal),
 > AUDIT-001 (Evidence), REPO-AUDIT-002 (Health-Report als Registry-Nutzer).
@@ -158,11 +158,11 @@ sind verboten — Zugangsdaten gehören in verschlüsselte Stores.
 
 ## Changelog (Standard-intern)
 
-- **1.0.0** (2026-09-08): Initial Release DRAFT — Kodifizierung des etablierten
+- **1.0.0** (2026-09-08): Initial Release — Kodifizierung des etablierten
   Registry-Systems: SSOT-Inventar (10 Registries + Naming-Schema mit Generator/Gate-
   Tabelle), SSOT-Prinzip mit AUD-Typ-Lehre, Generator-Pflicht, 5 Konsistenz-Gates,
   7-Schritte-Prozess für neue Registries, Maschinenlesbarkeits- und Schutzregeln,
-  RETIRE-Prozess. 9 REQ-RM. SCR-0025; §9-Freigabe ausstehend.
+  RETIRE-Prozess. 9 REQ-RM. SCR-0025; §9-Freigabe Michael Wroblewski 08.09.2026, 00:36 UTC+2 — APPROVED, normativ, §30-eingefroren.
 
 ## References
 

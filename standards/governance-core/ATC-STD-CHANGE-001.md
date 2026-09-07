@@ -3,16 +3,17 @@ standard:
   id: ATC-STD-CHANGE-001
   title: "ATC Change Control Dachnorm — Eine Änderung, ein Kanal, eine Gate-Landkarte: konsolidierte Zuordnung von ATC-STD-000 §19–33 (SCR), VERSION-001, UPDATE-001 und COMPAT-001 zur verbindlichen Entscheidungsmatrix „welches Instrument für welche Änderung" — mit RACI, Notfallpfad und den 13 Change-Nachweis-Fragen als Prüfraster"
   version: "1.0.0"
-  status: draft
+  status: approved
   category: governance-core
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"
   created: "2026-09-08"
   updated: "2026-09-08"
-  normative: false
-  effective_date: ""
-  review_date: ""
+  normative: true
+  effective_date: "2026-09-08"
+  review_date: "2027-09-08"
   classification: PUBLIC
+  approved_by: "Michael Wroblewski (Owner, §9-Freigabe 08.09.2026, 00:36 UTC+2)"
   language: de-DE
   supersedes: null
   superseded_by: null
@@ -30,11 +31,10 @@ standard:
   license: "Copyright (c) 2026 Michael Wroblewski"
 ----
 
-# ATC-STD-CHANGE-001 — ATC Change Control Dachnorm (v1.0.0, DRAFT)
+# ATC-STD-CHANGE-001 — ATC Change Control Dachnorm (v1.0.0, APPROVED)
 
-> **Status:** DRAFT (v1.0.0) — Governance Core FAM-43, Slot via SCR-0024 reserviert,
-> Ausarbeitung SCR-0025 (Owner-Direktive „Core bauen" 08.09.2026); Owner-§9-Freigabe
-> ausstehend. Bei Freigabe: APPROVED, normativ, §30-eingefroren.
+> **Status:** APPROVED (v1.0.0) — §9-Freigabe Michael Wroblewski (Builder-Chat 08.09.2026, 00:36 UTC+2);
+> normativ in Kraft ab 08.09.2026, §30-eingefroren (ATC-STD-000). SCR-0025 akzeptiert.
 > **Familie:** Standards Governance Core (FAM-43). **Rolle:** Dachnorm — ordnet ZU,
 > ersetzt NICHT: ATC-STD-000 §19–33, VERSION-001, UPDATE-001, COMPAT-001 bleiben
 > unverändert normativ. **Kopplungen:** STDDEV-001, REGISTRY-001, MILESTONE-001,
@@ -166,14 +166,14 @@ des Nachweises — Git-Historie + AUD-Records decken Widersprüche auf.
 
 ## Changelog (Standard-intern)
 
-- **1.0.0** (2026-09-08): Initial Release DRAFT — Konsolidierung der Change-Control-
+- **1.0.0** (2026-09-08): Initial Release — Konsolidierung der Change-Control-
   Kette als Dachnorm: Änderungsarten-Matrix (6 Artefakttypen × PATCH/MINOR/MAJOR),
   eine Pipeline (SCR→VERSION→UPDATE→COMPAT→AUDIT→REGISTRY), Lifecycle-Zuordnung,
   Gate-Landkarte (UPD-G01..09, RR-G01..08, S-01..24, TAX, Milestone, MAUD), RACI,
   Emergency-Pfad mit 48h-Nachholpflicht, lex-specialis-Regel, 13 Change-Nachweis-
   Fragen als Prüfraster. Ersetzt keine Fachnorm — ordnet zu (Abgrenzung zu
   ATC-STD-000 §19–33, VERSION-001, UPDATE-001, COMPAT-001 dokumentiert). 11 REQ-CH.
-  SCR-0025; §9-Freigabe ausstehend.
+  SCR-0025; §9-Freigabe Michael Wroblewski 08.09.2026, 00:36 UTC+2 — APPROVED, normativ, §30-eingefroren.
 
 ## References
 

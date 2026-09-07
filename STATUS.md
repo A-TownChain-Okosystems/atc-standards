@@ -22,10 +22,9 @@ Evidence-First, Decision Records DEC-NNNNNN, Separation of Duties; §24-Familie 
 gemappt (12/15), Kill-Switch als dokumentierte Lücke (künftig AAS-026+).
 
 Sammelfreigabe 22:25 (Owner-Mandat „Freigabe"): BUG-005 + AUDIT-001 + AI-DECISION-001 → APPROVED,
-normativ, §30-eingefroren. Registry FINAL (00:27): 118 Standards, 118 APPROVED — TAXONOMY-001 (118.) via
-SCR-0024 00:27 (inkl. FRAMEWORK v1.0.5-PATCH); AOS-001/ATC-STD-999/PROTOCOL-001
-via SCR-0022/0023 00:18. Stand 00:45: 121 Standards, 118 APPROVED + 3 DRAFT
-(Governance Core STDDEV/REGISTRY/CHANGE, §9 ausstehend). Change-Control-Kette SCR→VERSION→UPDATE→COMPAT→AUDIT +
+normativ, §30-eingefroren. Registry FINAL (00:36): 121 Standards, 121 APPROVED, 0 DRAFT,
+0 offen — alle normativ. Standards Governance Core via SCR-0025 00:36 (inkl.
+FRAMEWORK v1.0.6-PATCH): STDDEV-001 (119.), REGISTRY-001 (120.), CHANGE-001 (121.). Change-Control-Kette SCR→VERSION→UPDATE→COMPAT→AUDIT +
 Meilenstein-Governance + Enterprise-Framework vollständig normativ in Kraft.
 
 ATC-STD-MILESTONE-001 v1.0.0 DRAFT (SCR-0018, Owner-Entwurf 23:31): Verbindliche
@@ -137,7 +136,7 @@ RR-G01..G08, S-01..S-24, TAX, Milestone, MAUD-PASS bei Ecosystem-MAJOR), RACI
 (Owner immer Accountable), Emergency mit 48h-Nachholpflicht, 13 Change-Nachweis-Fragen
 als Prüfraster; Dachnorm ordnet zu, ersetzt keine Fachnorm (11 REQ-CH). FRAMEWORK-001
 PATCH v1.0.6 gebündelt (10 BELEGT, 3 GEPLANT — offen: REPO-AUDIT-003, PROTOCOL-002/003).
-§9-Freigabe ausstehend.
+§9-FREIGEGEBEN 00:36 (SCR-0025) — alle drei APPROVED, normativ, §30-eingefroren.
 
 AUD-2026-0001 (erster Lauf unter ATC-STD-AUDIT-001, 22:30): Standards-Umsetzungs-Audit —
 CONDITIONAL_PASS, Completeness Score C. Umsetzung: 8 AUTOMATED (7%) · 18 PARTIAL (16%) ·
@@ -172,7 +171,7 @@ Dependabot in 16 Manifest-Repos (F-025). Org-Settings per Owner-Entscheidung 23:
 Offen: F-026 (Version-Baseline), F-027 (Tag v2.0.0), F-028 (ATC-STD-202 22→26), F-029 (governance-ci 3 Repos,
 Owner-Aktion workflow-Scope). Report: docs/AUD-2026-0002_ORG_AUDIT.md · Issues #94..98 in a-townchain-os.
 
-Stand: 08.09.2026, 00:45 (Europe/Berlin) — Registry war FINAL 118/118 (00:27); STDDEV-001 + REGISTRY-001 + CHANGE-001 (SCR-0025, Governance Core) neue DRAFTs in §9-Prüfung · Self-Compliance: R3 100/100 GATE PASS ·
+Stand: 08.09.2026, 00:36 (Europe/Berlin) — Registry FINAL 121/121 APPROVED; Standards Governance Core §9-freigegeben 00:36 (inkl. FRAMEWORK v1.0.6-PATCH) · Self-Compliance: R3 100/100 GATE PASS ·
 Voll-Validierung 110/110 Standards: ALL COMPLIANT (S-18 prüft alle 10 Registry-Dateien; Mutationssuite 12/12)
 
 ## Standards-System
@@ -197,11 +196,11 @@ Voll-Validierung 110/110 Standards: ALL COMPLIANT (S-18 prüft alle 10 Registry-
 | ATC-STD-AI-DECISION-001 | ATC Agent Decision-Making Standard (Entscheidungsmodell über AAS/AI-DEV) | APPROVED — SCR-0014, §9-Sammelfreigabe 22:25 |
 | ATC-STD-UPDATE-001 | ATC Update Standard (Change Control: Lifecycle, Gates, Rollback, Emergency) | DRAFT — SCR-0015, §9-Freigabe ausstehend |
 | ATC-STD-COMPAT-001 | Major Version Compatibility & Recovery Standard (Major-Gate in UPD-G04) | APPROVED — SCR-0016, §9-Freigabe 23:02, normativ, §30-eingefroren |
-| **Summe** | **121 Standards** | **118 APPROVED + 3 DRAFT (Governance Core)** |
+| **Summe** | **121 Standards** | **121 APPROVED, 0 offen — alle normativ** |
 
 ## Qualitätssicherung (CI, self-compliant)
 
-- Standards-Validierung: **121/121 COMPLIANT** (118 APPROVED + 3 DRAFT STDDEV/REGISTRY/CHANGE; AUD-FIX 21:30 — validate_all prüft real alle Dateien inkl. DESC-/VERSION-/COMPAT-Präfixe; Fehlercheck 23:30: S-18 Voll-Modus prüft alle 10 Registry-Dateien strukturell)
+- Standards-Validierung: **121/121 COMPLIANT** (121 APPROVED, 0 DRAFT; AUD-FIX 21:30 — validate_all prüft real alle Dateien inkl. DESC-/VERSION-/COMPAT-Präfixe; Fehlercheck 23:30: S-18 Voll-Modus prüft alle 10 Registry-Dateien strukturell)
 - Mutationssuite S-19: **12/12** (synthetische Fixtures)
 - Repository-Audit R3: **100/100, GATE PASS** · README-Gate: **13/13 CONFORM** · MD-Gate: **CONFORM** · Contract-Registry-Gate: **CONFORM**
 - Abhängigkeitsgraph: 105 Knoten, 226 Kanten, azyklisch (DAG) — Voll-Audit 21:45 + DESC-001 21:55 + VERSION-001 22:05

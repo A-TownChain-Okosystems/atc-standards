@@ -1,5 +1,31 @@
 # Changelog
 
+## [1.4.34] - 2026-09-08
+
+### Changed
+
+- **Standards Governance Core §9-FREIGEGEBEN → APPROVED** (Owner-Freigabe Michael
+  Wroblewski, Builder-Chat 08.09. 00:36 UTC+2). Alle normativ in Kraft ab
+  08.09.2026, §30-eingefroren (ATC-STD-000). SCR-0025: IMPLEMENTED → APPROVED.
+  versions.yaml: drei 1.0.0-Approval-Einträge:
+  - **ATC-STD-STDDEV-001** (119.): Standards Development — Erstellungsprozess,
+    §9-Human-Gate, Lifecycle, Wartung, 365-Tage-Review-Zyklus.
+  - **ATC-STD-REGISTRY-001** (120.): Registry Management — SSOT-Inventar,
+    Generator-Pflicht, Konsistenz-Gates, Neuanlage-Prozess, Schutzregeln.
+  - **ATC-STD-CHANGE-001** (121.): Change Control Dachnorm — Änderungsarten-Matrix,
+    eine Pipeline, Gate-Landkarte, RACI, Emergency-Pfad, 13 Nachweis-Fragen;
+    ordnet zu, ersetzt keine Fachnorm.
+- **Gebündelt genehmigt: ATC-STD-FRAMEWORK-001 v1.0.6-PATCH** (FAM-43 komplett
+  BELEGT; 10 BELEGT, 3 GEPLANT).
+- **Registry FINAL: 121 Standards, 121 APPROVED, 0 DRAFT, 0 offen — alle
+  normativ.** Der Standards Governance Core (TAXONOMY-001 + STDDEV-001 +
+  REGISTRY-001 + CHANGE-001 + AUDIT-001) ist damit vollständig in Kraft.
+  Offene Katalog-Flanken: REPO-AUDIT-003, PROTOCOL-002 (Conformance-Tests),
+  PROTOCOL-003 (Threat-Model). Nächste Züge: ATC-PROTO-P2P-001 (erste formale
+  Protokoll-Spezifikation), ATC-M-003 / K-Sprint 41 (aurora-ai via
+  Kernel-Event-Bridge), Issues #94–98 aus dem Org-Audit.
+
+
 ## [1.4.33] - 2026-09-08
 
 ### Added

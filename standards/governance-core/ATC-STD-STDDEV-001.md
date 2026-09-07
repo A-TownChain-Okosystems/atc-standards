@@ -3,16 +3,17 @@ standard:
   id: ATC-STD-STDDEV-001
   title: "ATC Standards Development Standard — Verbindlicher Lebenszyklus für Standards: Erstellung im Hausformat, Review, §9-Freigabe, §30-Einfrierung, Wartung (MINOR/MAJOR), Review-Zyklen, Deprecation und Retirement — die Prozessnorm, mit der Standards selbst entstehen"
   version: "1.0.0"
-  status: draft
+  status: approved
   category: governance-core
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"
   created: "2026-09-08"
   updated: "2026-09-08"
-  normative: false
-  effective_date: ""
-  review_date: ""
+  normative: true
+  effective_date: "2026-09-08"
+  review_date: "2027-09-08"
   classification: PUBLIC
+  approved_by: "Michael Wroblewski (Owner, §9-Freigabe 08.09.2026, 00:36 UTC+2)"
   language: de-DE
   supersedes: null
   superseded_by: null
@@ -30,11 +31,10 @@ standard:
   license: "Copyright (c) 2026 Michael Wroblewski"
 ----
 
-# ATC-STD-STDDEV-001 — ATC Standards Development Standard (v1.0.0, DRAFT)
+# ATC-STD-STDDEV-001 — ATC Standards Development Standard (v1.0.0, APPROVED)
 
-> **Status:** DRAFT (v1.0.0) — Governance Core FAM-43, Slot via SCR-0024 reserviert,
-> Ausarbeitung SCR-0025 (Owner-Direktive „Core bauen" 08.09.2026); Owner-§9-Freigabe
-> ausstehend. Bei Freigabe: APPROVED, normativ, §30-eingefroren.
+> **Status:** APPROVED (v1.0.0) — §9-Freigabe Michael Wroblewski (Builder-Chat 08.09.2026, 00:36 UTC+2);
+> normativ in Kraft ab 08.09.2026, §30-eingefroren (ATC-STD-000). SCR-0025 akzeptiert.
 > **Familie:** Standards Governance Core (FAM-43). **Kopplungen:** ATC-STD-000
 > (§9/§30), DESC-001 (Standard-Lifecycle), TAXONOMY-001 (Meta-Governance),
 > REGISTRY-001 (SSOT), CHANGE-001 (Dachnorm).
@@ -177,12 +177,12 @@ Angriff auf die Freigabe-Historie — Git-Historie + Validator decken es auf.
 
 ## Changelog (Standard-intern)
 
-- **1.0.0** (2026-09-08): Initial Release DRAFT — Kodifizierung der etablierten
+- **1.0.0** (2026-09-08): Initial Release — Kodifizierung der etablierten
   Erstellungspraxis (SCR-0001..0025) als normativer Prozess: 10-Schritte-
   Erstellungsprozess, Rollenmodell mit §9-Human-Gate, Lifecycle IDEA→RETIRED,
   Hausformat-Pflicht, PATCH/MINOR/MAJOR-Wartung mit COMPAT-Kopplung, 365-Tage-
   Review-Zyklus mit Finding-Regel, Deprecation/Retirement, KI-Autoren-Regeln
-  (AOS-001/TAXONOMY-001). 14 REQ-SD. SCR-0025; §9-Freigabe ausstehend.
+  (AOS-001/TAXONOMY-001). 14 REQ-SD. SCR-0025; §9-Freigabe Michael Wroblewski 08.09.2026, 00:36 UTC+2 — APPROVED, normativ, §30-eingefroren.
 
 ## References
 
