@@ -501,6 +501,30 @@
         "protocolRequirementId": {
           "pattern": "^REQ-PROTO-[0-9]{3,}$",
           "description": "Protocol-Standards-Anforderungs-ID (REQ-PROTO-NNN)"
+        },
+        "taxonomyStandardId": {
+          "pattern": "^ATC-STD-TAXONOMY-[0-9]{3,}$",
+          "description": "ATC Standards Taxonomy & Family Creation Standard (ATC-STD-TAXONOMY-001)"
+        },
+        "taxonomyRequirementId": {
+          "pattern": "^REQ-TAX-[0-9]{3,}$",
+          "description": "Taxonomy-Anforderungs-ID (REQ-TAX-NNN)"
+        },
+        "familyRequestId": {
+          "pattern": "^ATC-FAM-REQ-[0-9]{3,}$",
+          "description": "Familien-Erstellungs-Request (ATC-FAM-REQ-NNN)"
+        },
+        "categoryRequestId": {
+          "pattern": "^ATC-CAT-REQ-[0-9]{3,}$",
+          "description": "Kategorie-Erstellungs-Request (ATC-CAT-REQ-NNN)"
+        },
+        "taxonomyChangeRequestId": {
+          "pattern": "^ATC-TCR-[0-9]{3,}$",
+          "description": "Taxonomy Change Request (ATC-TCR-NNN)"
+        },
+        "taxCheckId": {
+          "pattern": "^TAX-CHECK-[0-9]{3,}$",
+          "description": "Taxonomie-Pruefungs-ID (TAX-CHECK-NNN)"
         }
       }
     },
@@ -677,6 +701,10 @@
         "protocolStandardDoc": {
           "pattern": "^ATC-STD-PROTOCOL-[0-9]{3,}[.]md$",
           "description": "Protocol-Standards-Dokument"
+        },
+        "taxonomyStandardDoc": {
+          "pattern": "^ATC-STD-TAXONOMY-[0-9]{3,}[.]md$",
+          "description": "Taxonomy-Standard-Dokument"
         }
       }
     },

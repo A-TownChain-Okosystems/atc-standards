@@ -31,6 +31,8 @@ update: {name: update,        range: "ATC-STD-UPDATE-001-999", description: "Upd
 
 repo-audit: {name: repo-audit,  range: "ATC-STD-REPO-AUDIT-001-999", description: "Repository-Audit-Familie: Verbindlicher Repository Health Check — 16 Pruefbereiche, Pruefmatrix, SOLL/IST, Gap Analysis, Findings, Health Score A-E (Owner-Entwurf 07.09., SCR-0020)"}
 
+taxonomy: {name: taxonomy,  range: "ATC-STD-TAXONOMY-001-999", description: "Standards Taxonomy & Family Creation (Meta-Governance, ATC-FAM-REQ/ATC-CAT-REQ/ATC-TCR, TAX-CHECK-001..018; Owner-Entwurf 08.09., SCR-0024)"}
+
 protocol: {name: protocol,  range: "ATC-STD-PROTOCOL-001-999", description: "Protocol-Standards-Familie: Dachstandard oberhalb der Einzelprotokolle — Identitaet, Versionierung, Nachrichten, Sicherheit, Fehler, Kompatibilitaet, Governance, Auditing (Owner-Entwurf 08.09., SCR-0023)"}
 
 agent-operating: {name: agent-operating,  range: "ATC-STD-AOS-001-999", description: "Agent-Operating-Familie: Verbindliches 14-Fragen-Session-Mandat fuer alle KI-Agenten, Session-Records, Audit-Nachweis (Owner-Entwurf 07.09., SCR-0022)"}

@@ -1,5 +1,37 @@
 # Changelog
 
+## [1.4.31] - 2026-09-08
+
+### Added
+
+- **ATC-STD-TAXONOMY-001 v1.0.0 DRAFT (SCR-0024, 118. Standard):** ATC Standards
+  Taxonomy & Family Creation Standard — Meta-Governance ÜBER der Taxonomie: wie
+  Familien, Kategorien, Namensräume und Abhängigkeiten kontrolliert entstehen,
+  verschoben, zusammengeführt, aufgeteilt, umbenannt und archiviert werden.
+  16 REQ-TAX: vierstufige Hierarchie (Domain→Familie→Kategorie→Standard) mit
+  Grandfathering (Bestand behält IDs, §30), ATC-FAM-REQ (8-Punkte-Pflichtprüfung,
+  Mindestkriterium ≥3 Standards oder eigenständige Domäne), ATC-CAT-REQ, ATC-TCR
+  (CREATE/RENAME/MERGE/SPLIT/MOVE/RETIRE — nie Standard-IDs ändernd), Lifecycle
+  PROPOSED→RETIRED, siebenstufige automatische ID-Vergabekette, KI-Agenten-GAP-Prozess
+  mit Owner-Human-Gate (dokumentierter Negativfall: Owner-Beispielfamilie AIA
+  überlappt Bestands-Familie AAS → Request würde zurückgewiesen), TAX-CHECK-001..018.
+- **Standards Governance Core (FAM-43):** TAXONOMY-001 + GEPLANT: ATC-STD-STDDEV-001
+  (Standards-Development), ATC-STD-REGISTRY-001 (Registry-Management),
+  ATC-STD-CHANGE-001 (Change-Control-Dachnorm, konsolidiert ATC-STD-000 §19–33 +
+  UPDATE-001 + COMPAT-001) + bestehendes ATC-STD-AUDIT-001.
+- **Taxonomie-Registry:** `registry/taxonomy.yaml` (SSOT via tools/taxonomy/
+  gen_taxonomy.py) — Bestands-Abbild: 5 Domains (GOV/SW/CHAIN/AI/TRUST), 33 Familien
+  (12 numerische ID-Bereiche + 21 benannte), alle 118 Standards zugeordnet
+  (Registry-Konsistenz verifiziert). **Validator NEU S-24** (TAX-CHECK-Untermenge:
+  Domain-/Familien-/Kategorie-Eindeutigkeit, Lifecycle, Registry-Konsistenz —
+  Negativtest verifiziert).
+- **FRAMEWORK-001 v1.0.5 (PATCH, SCR-0024):** FAM-43 → 43 Familien, 433 Slots
+  (7 BELEGT, 6 GEPLANT); Genehmigung gebündelt mit §9-Freigabe TAXONOMY-001.
+- **Registry:** 118 Standards (117 APPROVED + 1 DRAFT); Kategorie taxonomy;
+  7 Naming-Patterns (ATC-FAM-REQ/ATC-CAT-REQ/ATC-TCR/TAX-CHECK-IDs); DAG-Knoten;
+  Agent-Manifest 118 gebunden.
+
+
 ## [1.4.30] - 2026-09-08
 
 ### Changed

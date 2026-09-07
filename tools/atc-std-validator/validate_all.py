@@ -45,7 +45,7 @@ def collect():
 def file_id(path):
     try:
         head = open(path, encoding="utf-8").read(2500)
-        m = re.search(r"^\s*id:\s*(ATC-STD-(?:BUG-|NET-|ZKP-|AI-DEV-|MD-|SC-|README-|DESC-|VERSION-|AUDIT-|AI-DECISION-|UPDATE-|COMPAT-|MILESTONE-|FRAMEWORK-|REPO-AUDIT-|AOS-|PROTOCOL-)?[0-9]{3,}|ATC-AAS-[0-9]{3,}|ATC-ENT-[0-9]{3,})\s*$", head, re.M)
+        m = re.search(r"^\s*id:\s*(ATC-STD-(?:BUG-|NET-|ZKP-|AI-DEV-|MD-|SC-|README-|DESC-|VERSION-|AUDIT-|AI-DECISION-|UPDATE-|COMPAT-|MILESTONE-|FRAMEWORK-|REPO-AUDIT-|AOS-|PROTOCOL-|TAXONOMY-)?[0-9]{3,}|ATC-AAS-[0-9]{3,}|ATC-ENT-[0-9]{3,})\s*$", head, re.M)
         return m.group(1) if m else None
     except Exception:
         return None
@@ -342,6 +342,59 @@ def main():
         except Exception as e:
             print("S-23 ProtocolRegistry: FAIL — %s" % str(e)[:120]); proto_ok = False
     if not proto_ok:
+        fails += 1
+
+
+    # S-24 Standards Taxonomy (ATC-STD-TAXONOMY-001 §8/§13)
+    tax_ok = True
+    TAX_PATH = os.path.join(ROOT, "registry", "taxonomy.yaml")
+    if not os.path.exists(TAX_PATH):
+        print("S-24 Taxonomy: PASS (keine taxonomy.yaml)")
+    else:
+        try:
+            import yaml as _py
+            t = (_py.safe_load(open(TAX_PATH, encoding="utf-8")) or {}).get("taxonomy") or {}
+            domains = t.get("domains") or []
+            LIFECYCLE = {"PROPOSED", "ANALYZED", "APPROVED", "ACTIVE", "DEPRECATED", "RETIRED"}
+            dom_ids, fam_names, fam_codes = set(), [], []
+            n_dom = n_fam = 0
+            for d in domains:
+                if not d.get("id") or d["id"] in dom_ids:
+                    print("S-24 Taxonomy: FAIL — Domain-ID fehlt/doppelt: %s" % d.get("id")); tax_ok = False
+                dom_ids.add(d.get("id"))
+                if d.get("lifecycle") not in LIFECYCLE:
+                    print("S-24 Taxonomy: FAIL — Domain %s: Lifecycle ungueltig" % d.get("id")); tax_ok = False
+                n_dom += 1
+                for f in d.get("families") or []:
+                    n_fam += 1
+                    if f.get("id") in fam_codes:
+                        print("S-24 Taxonomy: FAIL — Familien-Code doppelt: %s" % f.get("id")); tax_ok = False
+                    if f.get("name") in fam_names:
+                        print("S-24 Taxonomy: FAIL — Familien-Name doppelt: %s" % f.get("name")); tax_ok = False
+                    if f.get("lifecycle") not in LIFECYCLE:
+                        print("S-24 Taxonomy: FAIL — Familie %s: Lifecycle ungueltig" % f.get("id")); tax_ok = False
+                    fam_codes.append(f.get("id")); fam_names.append(f.get("name"))
+                    cat_ids = [c2.get("id") for c2 in f.get("categories") or []]
+                    if len(cat_ids) != len(set(cat_ids)):
+                        print("S-24 Taxonomy: FAIL — Familie %s: Kategorie-Codes doppelt" % f.get("id")); tax_ok = False
+            # TAX-CHECK-013/014: Registry-Konsistenz (jede standards.yaml-Kategorie -> Familie)
+            sr = _py.safe_load(open(os.path.join(ROOT, "registry", "standards.yaml"), encoding="utf-8"))
+            fam_set = set(fam_names)
+            missing = set()
+            for e in sr.get("standards") or []:
+                cat = e.get("category", "?")
+                if cat not in fam_set and (cat + " (familie)") not in fam_set:
+                    missing.add(cat)
+            if missing:
+                print("S-24 Taxonomy: FAIL — Kategorien ohne Taxonomie-Familie: %s" % sorted(missing)); tax_ok = False
+            n_std = sum(f.get("standards_count", 0) for d in domains for f in d.get("families") or [])
+            print("S-24 Taxonomy: %s (%d Domains, %d Familien, %d Standards zugeordnet, Registry-Konsistenz %s)" % (
+                "PASS" if tax_ok else "FAIL", n_dom, n_fam, n_std, "OK" if not missing else "FEHLER"))
+        except ImportError:
+            print("S-24 Taxonomy: WARN (Fallback-Modus, PyYAML fehlt)")
+        except Exception as e:
+            print("S-24 Taxonomy: FAIL — %s" % str(e)[:120]); tax_ok = False
+    if not tax_ok:
         fails += 1
 
     print("RESULT: " + ("ALL COMPLIANT" if fails == 0 else "%d FAIL(s)" % fails))

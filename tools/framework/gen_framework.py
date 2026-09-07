@@ -473,6 +473,12 @@ F("FAM-42", "Protocol Standards", "ATC-STD-PROTOCOL-001..003", [
     sl("ATC-STD-PROTOCOL-002", "Protocol Conformance- & Interoperabilitäts-Test-Standard", S_GEPLANT, ["ATC-STD-PROTOCOL-001"], "Test-Suiten je ATC-PROTO-Familie; P2"),
     sl("ATC-STD-PROTOCOL-003", "Protocol Threat-Model- & Security-Audit-Standard", S_GEPLANT, ["ATC-STD-PROTOCOL-001"], "Vertiefung §11; P2"),
 ], note="Neuer Namensraum gem. FRAMEWORK-001 §6.3; ATC-PROTO-Registry (26 Familien) via SCR-0023"),
+F("FAM-43", "Standards Governance Core", "ATC-STD-TAXONOMY-001 + STDDEV/REGISTRY/CHANGE-001", [
+    sl("ATC-STD-TAXONOMY-001", "ATC Standards Taxonomy & Family Creation Standard (vierstufige Taxonomie, FAM-/CAT-REQ/TCR, TAX-CHECK-001..018)", S_BELEGT, ["ATC-STD-TAXONOMY-001"]),
+    sl("ATC-STD-STDDEV-001", "Standards-Development-Standard (Erstellung/Review-Freigabe von Standards)", S_GEPLANT, ["ATC-STD-DESC-001"], "Governance Core; P1"),
+    sl("ATC-STD-REGISTRY-001", "Registry-Management-Standard (SSOT-Verwaltung aller ATC-Registries)", S_GEPLANT, ["ATC-STD-TAXONOMY-001"], "Governance Core; P1"),
+    sl("ATC-STD-CHANGE-001", "Change-Control-Dachnorm (konsolidiert ATC-STD-000 §19-33 + UPDATE-001 + COMPAT-001)", S_GEPLANT, ["ATC-STD-UPDATE-001", "ATC-STD-COMPAT-001"], "Governance Core; P1 — Abgrenzung bei Erstellung klaeren"),
+], note="Standards Governance Core gem. Owner-Vorgabe 08.09.; TAXONOMY-001 via SCR-0024; Taxonomie-Registry (5 Domains, 33 Familien) S-24-geprueft"),
 ]
 
 # Validierung der Daten: globale Slot-IDs eindeutig, Statistiken

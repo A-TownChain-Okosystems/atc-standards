@@ -1,0 +1,496 @@
+# ATC Standards Taxonomy — ATC-STD-TAXONOMY-001 §8 (SSOT)
+# Generiert von tools/taxonomy/gen_taxonomy.py — Aenderungen nur via ATC-TCR + SCR.
+taxonomy:
+  standard: ATC-STD-TAXONOMY-001
+  version: 1.0.0
+  generated: '2026-09-08'
+  hierarchy:
+  - DOMAIN
+  - FAMILY
+  - CATEGORY
+  - STANDARD
+  id_scheme_new_families: ATC-STD-<FAMCODE>[-<CATEGORY>]-NNN
+  grandfathering: Bestehende Standards behalten ihre IDs (§30); Bestands-Familien fuehren Kategorie GENERAL bis Unterteilung via ATC-CAT-REQ.
+  lifecycle:
+  - PROPOSED
+  - ANALYZED
+  - APPROVED
+  - ACTIVE
+  - DEPRECATED
+  - RETIRED
+  requests:
+    family: ATC-FAM-REQ-NNN
+    category: ATC-CAT-REQ-NNN
+    change: ATC-TCR-NNN
+  tax_checks: TAX-CHECK-001..018 (S-24 automatisiert 001-006, 013, 014, 015)
+  governance_core:
+    family: FAM-43 Standards Governance Core
+    members:
+    - id: ATC-STD-TAXONOMY-001
+      status: DRAFT (SCR-0024, §9 ausstehend)
+    - id: ATC-STD-STDDEV-001
+      status: GEPLANT (Standards-Development-Standard)
+    - id: ATC-STD-REGISTRY-001
+      status: GEPLANT (Registry-Management)
+    - id: ATC-STD-CHANGE-001
+      status: GEPLANT (Change-Control-Dachnorm; konsolidiert ATC-STD-000 §19-33 + UPDATE-001 + COMPAT-001; Abgrenzung bei Erstellung klaeren)
+    - id: ATC-STD-AUDIT-001
+      status: APPROVED
+  documented_negativfall: Owner-Beispielfamilie AIA (AI Agents) ueberlappt Bestands-Familie AAS (ATC-AAS-001..025) — TAX-CHECK-008/010 wuerden ATC-FAM-REQ zurueckweisen bzw. auf MERGE lenken.
+  domains:
+  - id: GOV
+    name: Governance & Meta-Standards
+    status: ACTIVE
+    lifecycle: ACTIVE
+    families:
+    - id: N0
+      name: governance
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-STD-000
+      source: numeric-§7
+      description: Standard Governance (Verfassung)
+      standards_count: 1
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
+    - id: BUG
+      name: bug
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-STD-BUG-001-499
+      source: named-family
+      description: Bug- & Konsistenz-Lebenszyklus (Owner-Mandat 07.09., AD-040)
+      standards_count: 5
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
+    - id: ENT
+      name: enterprise
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-ENT-001-015
+      source: named-family
+      description: Enterprise Standards Layer (Org-Governance, Freigabe 07.09.)
+      standards_count: 15
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
+    - id: DESC
+      name: desc
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-STD-DESC-001-999
+      source: named-family
+      description: 'Standard-Description-Familie: Struktur, Metadaten, Lifecycle und Auditierung von Standards (Owner-Entwurf 07.09., SCR-0008)'
+      standards_count: 1
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
+    - id: VER
+      name: version
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-STD-VERSION-001-999
+      source: named-family
+      description: 'Versioning-Familie: einheitliche Versionierung von Software, Standards, APIs, Smart Contracts, Protokollen, Dokumentation und Releases (Owner-Entwurf 07.09., SCR-0009)'
+      standards_count: 1
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
+    - id: AUD
+      name: audit
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-STD-AUDIT-001-999
+      source: named-family
+      description: 'Audit-Familie: Completeness & Audit, Traceability, Cross-System Integrity — Kontrollschicht über allen Standards (Owner-Entwurf 07.09., SCR-0013)'
+      standards_count: 1
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
+    - id: UPD
+      name: update
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-STD-UPDATE-001-999
+      source: named-family
+      description: 'Update-Familie: Change Control — Update-Kategorien, Lifecycle, Impact/Dependency, Gates, Rollback, Emergency, Manifeste (Owner-Entwurf 07.09., SCR-0015)'
+      standards_count: 1
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
+    - id: RA
+      name: repo-audit
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-STD-REPO-AUDIT-001-999
+      source: named-family
+      description: 'Repository-Audit-Familie: Verbindlicher Repository Health Check — 16 Pruefbereiche, Pruefmatrix, SOLL/IST, Gap Analysis, Findings, Health Score A-E (Owner-Entwurf 07.09., SCR-0020)'
+      standards_count: 2
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
+    - id: MAUD
+      name: master-audit
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-STD-999
+      source: named-family
+      description: 'Master-Audit-Familie: Enterprise Completeness & Consistency Audit — 16-Stufen-Kette, 13 Change-Nachweis-Fragen, MAUD-Records, Orchestrierung (Owner-Entwurf 07.09., SCR-0022)'
+      standards_count: 1
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
+    - id: FW
+      name: framework
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-STD-FRAMEWORK-001-999
+      source: named-family
+      description: 'Framework-Familie: ATC Enterprise Standards Framework — Master-Dokument, Katalog, einheitliche Governance-Modelle (Owner-Entwurf 07.09., SCR-0019)'
+      standards_count: 1
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
+    - id: MIL
+      name: milestone
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-STD-MILESTONE-001-999
+      source: named-family
+      description: 'Milestone-Familie: Meilenstein-Governance — Zustandsnachweis, Lebenszyklus, Acceptance Gates, Evidence Packs, maschinenlesbare Registry (Owner-Entwurf 07.09., SCR-0018)'
+      standards_count: 1
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
+    - id: CMP
+      name: compat
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-STD-COMPAT-001-999
+      source: named-family
+      description: 'Compat-Familie: Major Version Compatibility & Recovery — Kompatibilitätsprüfung, -Wiederherstellung, -Migration nach MAJOR-Updates (Owner-Entwurf 07.09.; Pflicht-Gate UPD-G04 in UPDATE-001)'
+      standards_count: 1
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
+    - id: TAX
+      name: taxonomy
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-STD-TAXONOMY-001-999
+      source: named-family
+      description: Standards Taxonomy & Family Creation (Meta-Governance, SCR-0024)
+      standards_count: 0
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
+  - id: SW
+    name: Software Engineering
+    status: ACTIVE
+    lifecycle: ACTIVE
+    families:
+    - id: N100
+      name: architecture
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-STD-100–199
+      source: numeric-§7
+      description: Architektur-Standards
+      standards_count: 1
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
+    - id: N200
+      name: repository
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-STD-200–299
+      source: numeric-§7
+      description: Repository & Git
+      standards_count: 4
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
+    - id: N300
+      name: development
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-STD-300–399
+      source: numeric-§7
+      description: Development / Coding
+      standards_count: 1
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
+    - id: N800
+      name: os
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-STD-800–899
+      source: numeric-§7
+      description: OS / Runtime
+      standards_count: 0
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
+    - id: N900
+      name: infrastructure
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-STD-900–999
+      source: numeric-§7
+      description: Infrastructure
+      standards_count: 0
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
+    - id: N1000
+      name: applications
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-STD-1000+
+      source: numeric-§7
+      description: Applications / Ecosystem
+      standards_count: 0
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
+    - id: RDM
+      name: readme
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-STD-README-001-999
+      source: named-family
+      description: README & Documentation Entry Standard (Owner-Entwurf 07.09.)
+      standards_count: 1
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
+    - id: MD
+      name: md
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-STD-MD-001-999
+      source: named-family
+      description: ATC Markdown & Documentation Standard (Owner-Entwurf 07.09.)
+      standards_count: 1
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
+  - id: CHAIN
+    name: Blockchain, Smart Contracts & Protokolle
+    status: ACTIVE
+    lifecycle: ACTIVE
+    families:
+    - id: N500
+      name: protocol
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-STD-500–599
+      source: numeric-§7
+      description: Protocol
+      standards_count: 1
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
+    - id: N600
+      name: blockchain
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-STD-600–699
+      source: numeric-§7
+      description: Blockchain
+      standards_count: 0
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
+    - id: SC
+      name: sc
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-STD-SC-001-999
+      source: named-family
+      description: ATC Smart Contract Standards Framework (Owner-Entwurf 07.09., SC-001..020 + Deep-Standards)
+      standards_count: 20
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
+    - id: NET
+      name: net
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-STD-NET-001-899
+      source: named-family
+      description: Netzwerk-Umgebungen Devnet/Testnet/Mainnet & Promotion (Owner-Mandat AD-041)
+      standards_count: 8
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
+    - id: PROT
+      name: protocol (familie)
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-STD-PROTOCOL-001-999
+      source: named-family
+      description: 'Protocol-Standards-Familie: Dachstandard oberhalb der Einzelprotokolle — Identitaet, Versionierung, Nachrichten, Sicherheit, Fehler, Kompatibilitaet, Governance, Auditing (Owner-Entwurf
+        08.09., SCR-0023)'
+      standards_count: 1
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
+  - id: AI
+    name: Artificial Intelligence & Agenten
+    status: ACTIVE
+    lifecycle: ACTIVE
+    families:
+    - id: N700
+      name: ai
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-STD-700–799
+      source: numeric-§7
+      description: AI
+      standards_count: 0
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
+    - id: AID
+      name: ai-dev
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-STD-AI-DEV-001-012
+      source: named-family
+      description: AI Development Governance Family (Agenten-Entwicklung, Freigabe 07.09.)
+      standards_count: 12
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
+    - id: AAS
+      name: aas
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-AAS-001-025
+      source: named-family
+      description: AI Agent Standards (Agentenbetrieb, Freigabe 07.09.)
+      standards_count: 25
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
+    - id: AIDEC
+      name: ai-decision
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-STD-AI-DECISION-001-999
+      source: named-family
+      description: 'AI-Decision-Familie: Agent Decision-Making — Entscheidungsmodell, Autonomie-Level, Evidence-First, Risk/Authority, Decision Records ÜBER den AAS-Betriebsstandards (Owner-Entwurf 07.09.,
+        SCR-0014)'
+      standards_count: 1
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
+    - id: AOS
+      name: agent-operating
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-STD-AOS-001-999
+      source: named-family
+      description: 'Agent-Operating-Familie: Verbindliches 14-Fragen-Session-Mandat fuer alle KI-Agenten, Session-Records, Audit-Nachweis (Owner-Entwurf 07.09., SCR-0022)'
+      standards_count: 1
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
+  - id: TRUST
+    name: Security & Trust
+    status: ACTIVE
+    lifecycle: ACTIVE
+    families:
+    - id: N400
+      name: security
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-STD-400–499
+      source: numeric-§7
+      description: Security
+      standards_count: 0
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
+    - id: ZKP
+      name: zkp
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-STD-ZKP-001-999
+      source: named-family
+      description: 'ZKP-Layer: Zero-Knowledge Proof Layer (Owner-Entwurf 07.09., AD-045)'
+      standards_count: 10
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
