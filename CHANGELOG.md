@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.4.25] - 2026-09-07
+
+### Changed
+
+- **ATC-STD-REPO-AUDIT-001 v1.0.0: §9-FREIGABE → APPROVED** (Owner-Freigabe Michael
+  Wroblewski, Builder-Chat 07.09. 23:58 UTC+2). Normativ in Kraft ab 07.09.2026,
+  §30-eingefroren (ATC-STD-000). SCR-0020: IMPLEMENTED → APPROVED. versions.yaml:
+  1.0.0-Approval-Eintrag. **Gebündelt genehmigt: ATC-STD-FRAMEWORK-001 v1.0.1-PATCH**
+  (FAM-41 Katalog-Erweiterung, Zähler-Synchronisation).
+- **Registry FINAL: 113 Standards, 113 APPROVED, 0 DRAFT, 0 offen — alle normativ.**
+  Repository-Audits ab sofort verbindlich über die 21-Schritte-Pipeline mit
+  AUD-Records (AUDIT-001), globalen F-NNN-Findings (F-032+), P0-Release-Block,
+  Health-Status A-E. Nächste Ebene REPO-AUDIT-002 (CHECK-NNN + Repository Health
+  Score) GEPLANT (P1).
+
+
 ## [1.4.24] - 2026-09-07
 
 ### Added

@@ -3,16 +3,17 @@ standard:
   id: ATC-STD-REPO-AUDIT-001
   title: "ATC Repository Audit Standard — Verbindlicher, reproduzierbarer Repository Health Check: 16 Prüfbereiche, Prüfmatrix, SOLL/IST, Gap Analysis, Findings, Health Score A-E"
   version: "1.0.0"
-  status: draft
+  status: approved
   category: repo-audit
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"
   created: "2026-09-07"
   updated: "2026-09-07"
-  normative: false
-  effective_date: ""
-  review_date: ""
+  normative: true
+  effective_date: "2026-09-07"
+  review_date: "2027-09-07"
   classification: PUBLIC
+  approved_by: "Michael Wroblewski (Owner, §9-Freigabe 07.09.2026, 23:58 UTC+2)"
   language: de-DE
   supersedes: null
   superseded_by: null
@@ -33,10 +34,10 @@ standard:
   license: "Copyright (c) 2026 Michael Wroblewski"
 ----
 
-# ATC-STD-REPO-AUDIT-001 — ATC Repository Audit Standard (v1.0.0, DRAFT)
+# ATC-STD-REPO-AUDIT-001 — ATC Repository Audit Standard (v1.0.0, APPROVED)
 
-> **Status:** DRAFT (v1.0.0) — Owner-Entwurf Michael Wroblewski (Builder-Chat 07.09.2026, 23:54 UTC+2);
-> Agenten-Review + Harmonisierung SCR-0020; Owner-§9-Freigabe ausstehend. Bei Freigabe: APPROVED, normativ, §30-eingefroren.
+> **Status:** APPROVED (v1.0.0) — §9-Freigabe Michael Wroblewski (Builder-Chat 07.09.2026, 23:58 UTC+2);
+> normativ in Kraft ab 07.09.2026, §30-eingefroren (ATC-STD-000). Harmonisierung SCR-0020 akzeptiert.
 > **Familie:** Repository Audit (ATC-STD-REPO-AUDIT-001..999, FAM-41) — neuer Namensraum gem.
 > FRAMEWORK-001 §6.3 (BUG-/SC-/AAS-Muster).
 > **Kopplungen:** AUDIT-001 (AUD-Records), BUG-005 (RCA/Evidence), COMPAT-001 (MAJOR-Prüfung),
@@ -345,7 +346,7 @@ erzeugen keine APPROVAL-Stufen (MILESTONE-001 §13, AI-DECISION-001 Human Gates)
 
 ## Changelog (Standard-intern)
 
-- **1.0.0** (2026-09-07): Initial Release DRAFT — Owner-Entwurf Michael Wroblewski
+- **1.0.0** (2026-09-07): Initial Release — Owner-Entwurf Michael Wroblewski
   (Builder-Chat 23:54, 28 Abschnitte), harmonisiert mit AUDIT-001 (AUD-Records),
   BUG-001..005 (Findings/RCA/Merge-Gate), COMPAT-001 (§20), MILESTONE-001 (Acceptance),
   UPDATE-001 (Gates), FRAMEWORK-001 (FAM-41, neuer Namensraum). F-IDs auf globalen
