@@ -3,16 +3,17 @@ standard:
   id: ATC-STD-TAXONOMY-001
   title: "ATC Standards Taxonomy & Family Creation Standard — Meta-Governance: vierstufige Taxonomie (Domain→Familie→Kategorie→Standard), kontrollierte Familien-/Kategorie-Erstellung (ATC-FAM-REQ/ATC-CAT-REQ/ATC-TCR), Lifecycle, automatische ID-Vergabe, TAX-CHECK-001..018, maschinenlesbare Taxonomie-Registry"
   version: "1.0.0"
-  status: draft
+  status: approved
   category: taxonomy
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"
   created: "2026-09-08"
   updated: "2026-09-08"
-  normative: false
-  effective_date: ""
-  review_date: ""
+  normative: true
+  effective_date: "2026-09-08"
+  review_date: "2027-09-08"
   classification: PUBLIC
+  approved_by: "Michael Wroblewski (Owner, §9-Freigabe 08.09.2026, 00:27 UTC+2)"
   language: de-DE
   supersedes: null
   superseded_by: null
@@ -30,11 +31,10 @@ standard:
   license: "Copyright (c) 2026 Michael Wroblewski"
 ----
 
-# ATC-STD-TAXONOMY-001 — Standards Taxonomy & Family Creation (v1.0.0, DRAFT)
+# ATC-STD-TAXONOMY-001 — Standards Taxonomy & Family Creation (v1.0.0, APPROVED)
 
-> **Status:** DRAFT (v1.0.0) — Owner-Entwurf Michael Wroblewski (Builder-Chat 08.09.2026,
-> 14 Abschnitte); Ausarbeitung SCR-0024; Owner-§9-Freigabe ausstehend. Bei Freigabe:
-> APPROVED, normativ, §30-eingefroren.
+> **Status:** APPROVED (v1.0.0) — §9-Freigabe Michael Wroblewski (Builder-Chat 08.09.2026, 00:27 UTC+2);
+> normativ in Kraft ab 08.09.2026, §30-eingefroren (ATC-STD-000). SCR-0024 akzeptiert.
 > **Ebene:** Meta-Governance (P0). **Familie:** Standards Governance Core (FAM-43).
 > **Maschinenlesbar:** registry/taxonomy.yaml (SSOT der Taxonomie, generiert von
 > tools/taxonomy/gen_taxonomy.py, Validator S-24 mit TAX-CHECK-Untermenge).
@@ -226,7 +226,7 @@ die Meta-Governance — nur via TCR + SCR; §30-Analogie für TAX-IDs.
 
 ## Changelog (Standard-intern)
 
-- **1.0.0** (2026-09-08): Initial Release DRAFT — Owner-Entwurf (14 Abschnitte):
+- **1.0.0** (2026-09-08): Initial Release — Owner-Entwurf (14 Abschnitte):
   vierstufige Taxonomie (Domain→Familie→Kategorie→Standard), ATC-FAM-REQ/ATC-CAT-REQ/
   ATC-TCR-Anfrageketten, Familien-Mindestkriterium, Lifecycle (PROPOSED→RETIRED),
   automatische ID-Vergabe (siebenstufige Kette), KI-Agenten-GAP-Prozess mit
@@ -235,7 +235,7 @@ die Meta-Governance — nur via TCR + SCR; §30-Analogie für TAX-IDs.
   GEPLANT + AUDIT-001). Maschinenlesbar: registry/taxonomy.yaml (SSOT, initialer
   Bestands-Abbild: 5 Domains, 32 Familien aus categories.yaml) + Validator NEU S-24
   (Negativtest verifiziert). Grandfathering: keine Retro-Nummerierung (§30).
-  SCR-0024; §9-Freigabe ausstehend.
+  SCR-0024; §9-Freigabe Michael Wroblewski 08.09.2026, 00:27 UTC+2 — APPROVED, normativ, §30-eingefroren.
 
 ## References
 

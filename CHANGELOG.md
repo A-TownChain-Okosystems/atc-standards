@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.4.32] - 2026-09-08
+
+### Changed
+
+- **ATC-STD-TAXONOMY-001 v1.0.0: §9-FREIGABE → APPROVED** (Owner-Freigabe Michael
+  Wroblewski, Builder-Chat 08.09. 00:27 UTC+2). Normativ in Kraft ab 08.09.2026,
+  §30-eingefroren (ATC-STD-000). SCR-0024: IMPLEMENTED → APPROVED. versions.yaml:
+  1.0.0-Approval-Eintrag. **Gebündelt genehmigt: ATC-STD-FRAMEWORK-001 v1.0.5-PATCH**
+  (FAM-43 Standards Governance Core, 43 Familien, 433 Slots).
+- **Registry FINAL: 118 Standards, 118 APPROVED, 0 DRAFT, 0 offen — alle normativ.**
+  Meta-Governance ab sofort verbindlich: Familien-/Kategorie-Erstellung nur via
+  ATC-FAM-REQ/ATC-CAT-REQ (Pflichtprüfung, Mindestkriterium, Owner-Human-Gate),
+  Taxonomie-Änderungen via ATC-TCR, ID-Vergabe nur über die siebenstufige Kette,
+  TAX-CHECK-001..018 je Request (S-24 automatisiert je CI-Lauf). Standards
+  Governance Core FAM-43: offene Flanken STDDEV-001, REGISTRY-001, CHANGE-001
+  (GEPLANT, P1) — daneben REPO-AUDIT-003, PROTOCOL-002/003, Requirements Registry,
+  ATC-M-003/K-Sprint 41.
+
+
 ## [1.4.31] - 2026-09-08
 
 ### Added
