@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.4.17] - 2026-09-07
+
+### Fixed
+
+- **Registry-Fehlerpruefung (Fehlercheck-Lauf 23:25):** findings.yaml — F-024-Eintrag
+  hatte durch strip() die Block-Einrueckung verloren (YAML-Parse-Fehler, vom CI-Validator
+  im Fallback-Modus nicht erkannt); Einrueckung restauriert, 31 Findings F-001..F-031
+  parsen sauber. versions.yaml — ATC-STD-COMPAT-001 v1.0.0 Eintrag nachgetragen
+  (§13-Versionshistorien-Pflicht, wie F-008-Muster).
+- **Validator S-18 erweitert (Voll-Modus):** prueft jetzt ALLE registry/*.yaml
+  (10 Dateien) strukturell statt nur standards.yaml — Negativtest mit absichtlich
+  gebrochener findings.yaml laeuft korrekt auf FAIL, regulärer Lauf PASS
+  (110 Eintraege, 10 Registry-Dateien).
+
+
 ## [1.4.16] - 2026-09-07
 
 ### Added

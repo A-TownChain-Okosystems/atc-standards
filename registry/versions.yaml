@@ -346,6 +346,8 @@ versions:
   ATC-STD-AUDIT-001:
     - {version: "1.0.0", date: "2026-09-07", change: "APPROVED per Owner-Sammelfreigabe 22:25 UTC+2 (§9) — normativ in Kraft, §30-eingefroren"}
     - {version: "1.0.0", date: "2026-09-07", change: "Initial Release: Owner-Entwurf Michael Wroblewski (Builder-Chat 07.09. 22:15), harmonisiert mit BUG-001..005, VERSION-001, DESC-001, SC-003..005; 30 REQ-AUDIT, 6 COM-AUDIT-Gates, 20 Domänen, 8 Release-Gates, Completeness Score A-F, Audit-IDs AUD-YYYY-NNNN; SCR-0013"}
+  ATC-STD-COMPAT-001:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initial Release APPROVED: Owner-Entwurf Michael Wroblewski (Builder-Chat 07.09. 22:55) — 14 REQ-COMPAT, ATC-MAJOR-COMPATIBILITY-GATE + ATC-COMPATIBILITY-RESTORATION, 6 Kompatibilitätsklassen, 5 Prüfebenen, 6 Wiederherstellungsmethoden A-F, COMP-NNN-IDs, Matrix + YAML-Report, 18-Punkte-MAJOR-DoD; Pflicht-Gate in UPDATE-001 UPD-G04 (MAJOR); SCR-0016; §9-Freigabe 07.09. 23:02, APPROVED, normativ, §30-eingefroren"}
   ATC-STD-AI-DECISION-001:
     - {version: "1.0.0", date: "2026-09-07", change: "Initial Release APPROVED: Owner-Entwurf Michael Wroblewski (Builder-Chat 07.09. 22:15), Sammelfreigabe 22:25 — 23 REQ-AIDEC, 6 COM-AIDEC-Gates, D0-D5/L0-L5/RK0-RK5, Evidence-Zustände, Decision Records DEC-NNNNNN, Separation of Duties; §24-Familie auf AAS/AI-DEV-Bestand gemappt; SCR-0014"}
   ATC-STD-UPDATE-001:

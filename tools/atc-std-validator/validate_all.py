@@ -85,6 +85,12 @@ def main():
     registry_ok = True
     try:
         import yaml
+        # Voll-Modus (AUD-2026-0002 Nachtrag): ALLE Registry-Dateien strukturell pruefen
+        import glob as _glob
+        _reg_files = sorted(_glob.glob(os.path.join(ROOT, "registry", "*.yaml")))
+        for _rf in _reg_files:
+            with open(_rf, encoding="utf-8") as fh:
+                yaml.safe_load(fh)  # wirft bei Strukturfehlern (z.B. Einrueckungs-Bruch)
         with open(REGISTRY, encoding="utf-8") as fh:
             data = yaml.safe_load(fh)
         entries = data.get("standards", []) if isinstance(data, dict) else []
@@ -97,7 +103,7 @@ def main():
                     if req not in e:
                         print("S-18 Registry-Parse: FAIL — %s fehlt Pflichtfeld '%s'" % (e.get("id", "?"), req))
                         registry_ok = False
-            print("S-18 Registry-Parse: %s (%d Eintraege)" % ("PASS" if registry_ok else "FAIL", len(entries)))
+            print("S-18 Registry-Parse: %s (%d Eintraege, %d Registry-Dateien geprueft)" % ("PASS" if registry_ok else "FAIL", len(entries), len(_reg_files)))
     except ImportError:
         # Fallback ohne PyYAML: Fluss-Mapping-Zeilen muessen Klammer-/Anfuehrungsbalanz haben
         for n, line in enumerate(open(REGISTRY, encoding="utf-8"), 1):
