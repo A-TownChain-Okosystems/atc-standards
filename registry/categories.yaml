@@ -11,3 +11,7 @@ categories:
   800:   {name: os,             range: "ATC-STD-800–899",    description: "OS / Runtime"}
   900:   {name: infrastructure, range: "ATC-STD-900–999",    description: "Infrastructure"}
   1000:  {name: applications,   range: "ATC-STD-1000+",      description: "Applications / Ecosystem"}
+
+bug:   {name: bug,          range: "ATC-STD-BUG-001-499",  description: "Bug- & Konsistenz-Lebenszyklus (Owner-Mandat 07.09., AD-040)"}
+# Zusatz-Serie (Owner-Mandat 07.09., AD-040): ATC-STD-BUG-001…004
+# Bug- & Konsistenz-Lebenszyklus — Dateien: standards/bug/ · Kategorie: bug

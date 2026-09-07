@@ -21,20 +21,31 @@ CAND = ["governance", "standards"]
 
 
 def collect():
+    # Registry-getrieben (ATC-STD-000 §24): alle file:-Eintraege aus standards.yaml
     files = []
+    try:
+        with open(REGISTRY, encoding="utf-8") as fh:
+            for line in fh:
+                m = re.search(r"file:\s*([^},]+)", line)
+                if m:
+                    files.append(os.path.join(ROOT, m.group(1).strip()))
+    except OSError:
+        pass
     for d in CAND:
         base = os.path.join(ROOT, d)
         for dirpath, _dirs, names in os.walk(base):
             for n in names:
                 if n.endswith(".md"):
-                    files.append(os.path.join(dirpath, n))
+                    f = os.path.join(dirpath, n)
+                    if f not in files:
+                        files.append(f)
     return sorted(files)
 
 
 def file_id(path):
     try:
         head = open(path, encoding="utf-8").read(2500)
-        m = re.search(r"^\s*id:\s*(ATC-STD-[0-9]{3,})\s*$", head, re.M)
+        m = re.search(r"^\s*id:\s*(ATC-STD-(?:BUG-)?[0-9]{3,})\s*$", head, re.M)
         return m.group(1) if m else None
     except Exception:
         return None

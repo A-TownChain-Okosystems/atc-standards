@@ -1,3 +1,13 @@
+## 2026-09-07 — ATC-STD-BUG-001…004 (Bug- & Konsistenz-Lebenszyklus, Owner-Mandat AD-040)
+- 4 neue Standards (candidate, normativ per Owner-Mandat): BUG-001 Finding
+  (Pflichtprozess + Pflichtfelder + Severity S0-S4), BUG-002 Documentation
+  (F-NNN-Pflichtstruktur, Nachvollziehbarkeit), BUG-003 Fix-Lifecycle
+  (12 Stufen + SCR-Pflicht + DoD), BUG-004 Repository Sync & Merge Gate
+  (Konsistenzmatrix, SYNC-Statusmodell, Gate-Regel).
+- Neue ID-Formen (Schema-Erweiterung §7): ATC-STD-BUG-NNN, TEST-NNN,
+  SYNC-NNN, AUD-NNN + Dateinamenmuster ATC-STD-BUG-NNN.md.
+- templates/finding.template.md; Registry- und STATUS-Eintraege.
+
 # Changelog — atc-standards
 
 ## [1.5.0] — 2026-09-07 (Naming Convention, ATC-STD-000 §36)

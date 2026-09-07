@@ -19,7 +19,8 @@ VERSION = "0.2.0"
 STATES = ["idea", "proposed", "draft", "review", "candidate", "approved",
           "stable", "deprecated", "retired"]
 CATS = ["governance", "architecture", "repository", "development", "security",
-        "protocol", "blockchain", "ai", "os", "infrastructure", "applications"]
+        "protocol", "blockchain", "ai", "os", "infrastructure", "applications",
+        "bug"]
 REQ_RE = re.compile(r"REQ-[A-Z]+(?:-[A-Z]+)?-[0-9]{3}")
 
 
@@ -96,11 +97,11 @@ def validate(path, registry_path):
         v.add("S-01", "FAIL" if fehlt else "PASS",
               "Metadaten: " + ("vollstaendig" if not fehlt else "fehlt: " + ", ".join(fehlt)))
 
-    # S-02 ID-Format
+    # S-02 ID-Format (7.10/7.11: Muster aus naming-conventions.schema.json)
     sid = meta.get("id", "")
-    ok = re.match(r"^ATC-STD-[0-9]{3,}$", sid)
-    v.add("S-02", "PASS" if ok else "FAIL",
-          "ID-Format: %s" % (sid if ok else (sid or "FEHLT") + " (erwartet ATC-STD-XXX)"))
+    _ok02 = re.match(r"^ATC-STD-[0-9]{3,}$", sid) or re.match(r"^ATC-STD-BUG-[0-9]{3,}$", sid)
+    v.add("S-02", "PASS" if _ok02 else "FAIL",
+          "ID-Format: %s" % (sid if _ok02 else (sid or "FEHLT") + " (Schema: standardId|bugStandardId)"))
 
     # S-03 SemVer
     ver = meta.get("version", "")
@@ -190,7 +191,9 @@ def validate(path, registry_path):
                 _s = _json.load(open(_sp, encoding="utf-8"))
                 _ip = _s["properties"]["identifierPatterns"]["properties"]
                 _fp = _s["properties"]["filenamePatterns"]["properties"]
-                std_p = _ip["standardId"]["pattern"]; req_p = _ip["requirementId"]["pattern"]; fn_p = _fp["standardDoc"]["pattern"]
+                std_p = "|".join("(?:" + pat["pattern"] + ")" for k, pat in _ip.items() if k.lower().endswith("standardid"))
+                req_p = _ip["requirementId"]["pattern"]
+                fn_p = "|".join("(?:" + pat["pattern"] + ")" for k, pat in _fp.items() if k.endswith("Doc"))
                 schema_ok = True
             except Exception:
                 pass

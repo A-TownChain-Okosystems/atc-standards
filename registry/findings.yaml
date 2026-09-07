@@ -9,3 +9,9 @@ findings:
 # Aufgeloest vor Registrierung (Agent-Entwurf, durch Owner-Formalfassung behoben,
 # dokumentiert in approval/CHANGELOG.md): Emergency Changes (§32), Konflikt-Resolution
 # (§31), L-Skalen-Doppellung (§23).
+# Severity-Notiz (ATC-STD-BUG-002 ab 07.09.): Neue Findings nutzen S0-S4
+# (S0=Critical…S4=Informational). Bestands-Eintraege F-001…F-005 bleiben
+# in alter Notation (MINOR/MEDIUM/LOW ≈ S3/S2/S3) — grandfathered.
+# Neue operative Objekte: TEST-NNN (Regressionstests), SYNC-NNN
+# (Synchronitaetspruefungen), AUD-NNN (Abschlusspruefungen) — gemaess
+# ATC-STD-BUG-001…004, referenziert in den Finding-Eintraegen.

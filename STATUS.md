@@ -11,6 +11,10 @@ Stand: 07.09.2026, 15:00 (Europe/Berlin)
 | ATC-STD-202 Naming | 1.0.1 | proposed | Review-Passage + Co-Approval |
 | ATC-STD-203 Security | 1.0.1 | proposed | Review-Passage + Co-Approval |
 | ATC-01…99 / ATC-0001…0008 / ATS-1000…1007 | Legacy | final (historisch) | Aenderungen nur via ATC-STD-000 |
+| ATC-STD-BUG-001 | 1.0.0 | candidate (Owner-Mandat) | Live-Uebung: Findings nach G2/Parser-Bug |
+| ATC-STD-BUG-002 | 1.0.0 | candidate (Owner-Mandat) | Vorlage genutzt ab naechstem Finding |
+| ATC-STD-BUG-003 | 1.0.0 | candidate (Owner-Mandat) | SCR-Verkettung ab naechstem Fix |
+| ATC-STD-BUG-004 | 1.0.0 | candidate (Owner-Mandat) | Merge-Gate: SYNC-Nachweis-Pflicht |
 
 ## Review- und Change-Status
 
