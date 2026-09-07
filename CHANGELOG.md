@@ -1,5 +1,28 @@
 # Changelog
 
+## [1.4.26] - 2026-09-08
+
+### Added
+
+- **ATC-STD-REPO-AUDIT-002 v1.0.0 DRAFT (SCR-0021):** Audit-Checklisten- & Health-
+  Score-Standard (Owner-Richtung aus REPO-AUDIT-001 §28) — 12 REQ-RB. CHECK-Katalog
+  `registry/repo-audit-checks.yaml` (SSOT, generiert von tools/repo-audit/gen_checks.py):
+  **64 Checks (CHECK-001..064)**, je 4 je Prüfbereich, Methoden AUTO(30)/HYBRID(19)/
+  MANUAL(15), Checkgewichte 1–3, 16 Bereichsgewichte (Summe 100; Sicherheit 12,
+  Tests 10, Build 9). Ergebnis je Check PASS/WARN/FAIL/SKIP mit Evidence-Pflicht;
+  SKIP ohne Begründung = P1-Finding. Scoring-Formel (Bereichs-/Gesamtscore 0–100);
+  Health-Score→A-E-Mapping mit P0→E-Regel; maschinenlesbarer Health-Report mit
+  AUD-Record-Kopplung (AUDIT-001); Human-Gate für Agenten-Audits (AI-DECISION-001);
+  CI-Integration (governance-ci); Katalog-Governance via SCR.
+- **Validator NEU S-22:** Katalog-Integrität (≥48 Checks, ≥3 je Bereich, Gewichte,
+  eindeutige CHECK-IDs, Bereichsgewichte Summe 100) — Negativtest FAIL verifiziert.
+- **FRAMEWORK-001 v1.0.2 (PATCH, SCR-0021):** FAM-41 Slot 002 GEPLANT→BELEGT
+  (3 BELEGT, 3 GEPLANT); Zähler-Angabe auf stats-Block-Referenz umgestellt;
+  Genehmigung mit §9-Freigabe REPO-AUDIT-002 gebündelt (ausstehend).
+- **Registry:** 114 Standards (113 APPROVED + 1 DRAFT REPO-AUDIT-002);
+  Naming +repoAuditCheckId; DAG-Knoten; Agent-Manifest 114 Standards gebunden.
+
+
 ## [1.4.25] - 2026-09-07
 
 ### Changed

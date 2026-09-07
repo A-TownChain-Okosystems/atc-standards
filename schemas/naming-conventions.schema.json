@@ -453,7 +453,7 @@
         },
         "repoAuditRequirementId": {
           "pattern": "^REQ-RA-[0-9]{3,}$",
-          "description": "Repository-Audit-Anforderungs-ID (REQ-RA-NNN)"
+          "description": "Repository-Audit-Anforderungs-ID (REQ-RA-NNN, ATC-STD-REPO-AUDIT-001)"
         },
         "repoAuditGapId": {
           "pattern": "^GAP-[A-Z]+-[0-9]{3,}$",
@@ -462,6 +462,14 @@
         "repoAuditImprovementId": {
           "pattern": "^IMP-[0-9]{3,}$",
           "description": "Verbesserungs-ID (IMP-NNN, ATC-STD-REPO-AUDIT-001 §21)"
+        },
+        "repoAuditCheckId": {
+          "pattern": "^CHECK-[0-9]{3,}$",
+          "description": "Repo-Audit-Check-ID (CHECK-NNN, ATC-STD-REPO-AUDIT-002 §2)"
+        },
+        "repoAuditScoreRequirementId": {
+          "pattern": "^REQ-RB-[0-9]{3,}$",
+          "description": "Repo-Audit-Score-Anforderungs-ID (REQ-RB-NNN, ATC-STD-REPO-AUDIT-002)"
         }
       }
     },

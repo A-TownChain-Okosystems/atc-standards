@@ -465,7 +465,7 @@ F("FAM-40", "Master-Audit", "ATC-STD-999 (reserviert)", [
 ]),
 F("FAM-41", "Repository Audit", "ATC-STD-REPO-AUDIT-001..003", [
     sl("ATC-STD-REPO-AUDIT-001", "ATC Repository Audit Standard", S_BELEGT, ["ATC-STD-REPO-AUDIT-001"]),
-    sl("ATC-STD-REPO-AUDIT-002", "Audit-Checklisten- und Health-Score-Standard (CHECK-001, CHECK-002, …)", S_GEPLANT, ["ATC-STD-REPO-AUDIT-001"], "Automatisierbare Checks + standardisierter Repository Health Score; P1"),
+    sl("ATC-STD-REPO-AUDIT-002", "Audit-Checklisten- und Health-Score-Standard (CHECK-001, CHECK-002, …)", S_BELEGT, ["ATC-STD-REPO-AUDIT-002"], "Automatisierbare Checks + standardisierter Repository Health Score; erstellt via SCR-0021"),
     sl("ATC-STD-REPO-AUDIT-003", "Automatisierter ATC Repository Auditor (KI-/Automatisierungsagent)", S_GEPLANT, ["ATC-STD-REPO-AUDIT-001"], "Agent-Spezifikation (AAS-Kopplung); P2"),
 ], note="Neuer Namensraum gem. FRAMEWORK-001 §6.3 (BUG-/SC-/AAS-Muster); SCR-0020"),
 ]

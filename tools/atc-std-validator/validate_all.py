@@ -248,6 +248,60 @@ def main():
     if not framework_ok:
         fails += 1
 
+
+    # S-22 Repo-Audit-Check-Katalog (ATC-STD-REPO-AUDIT-002 §2/§9)
+    checks_ok = True
+    RC_PATH = os.path.join(ROOT, "registry", "repo-audit-checks.yaml")
+    if not os.path.exists(RC_PATH):
+        print("S-22 RepoAuditChecks: PASS (keine repo-audit-checks.yaml)")
+    else:
+        try:
+            import yaml as _cy
+            rc = (_cy.safe_load(open(RC_PATH, encoding="utf-8")) or {}).get("repo-audit-checks") or {}
+            areas = rc.get("areas") or []
+            checks = rc.get("checks") or []
+            if not areas or not checks:
+                print("S-22 RepoAuditChecks: FAIL — areas/checks fehlen"); checks_ok = False
+            else:
+                area_ids = [a.get("id") for a in areas]
+                if len(area_ids) != len(set(area_ids)):
+                    print("S-22 RepoAuditChecks: FAIL — doppelte Bereichs-IDs"); checks_ok = False
+                wsum = sum(a.get("weight") or 0 for a in areas)
+                if wsum != 100:
+                    print("S-22 RepoAuditChecks: FAIL — Bereichsgewichte Summe %s != 100" % wsum); checks_ok = False
+                seen = set()
+                per_area = {aid: 0 for aid in area_ids}
+                methods = {"AUTO", "MANUAL", "HYBRID"}
+                for chk in checks:
+                    cid = str(chk.get("id", "?"))
+                    if not re.match(r"^CHECK-[0-9]{3,}$", cid):
+                        print("S-22 RepoAuditChecks: FAIL — %s: ID-Pattern verletzt" % cid); checks_ok = False
+                    if cid in seen:
+                        print("S-22 RepoAuditChecks: FAIL — %s doppelt" % cid); checks_ok = False
+                    seen.add(cid)
+                    if chk.get("area") not in area_ids:
+                        print("S-22 RepoAuditChecks: FAIL — %s: unbekannter Bereich %s" % (cid, chk.get("area"))); checks_ok = False
+                    else:
+                        per_area[chk["area"]] += 1
+                    if chk.get("method") not in methods:
+                        print("S-22 RepoAuditChecks: FAIL — %s: Methode %s ungueltig" % (cid, chk.get("method"))); checks_ok = False
+                    if not isinstance(chk.get("weight"), int) or not (1 <= chk.get("weight", 0) <= 3):
+                        print("S-22 RepoAuditChecks: FAIL — %s: Gewicht %s ungueltig (1-3)" % (cid, chk.get("weight"))); checks_ok = False
+                    if not chk.get("title") or not chk.get("description"):
+                        print("S-22 RepoAuditChecks: FAIL — %s: title/description fehlt" % cid); checks_ok = False
+                if len(checks) < 48:
+                    print("S-22 RepoAuditChecks: FAIL — nur %d Checks (>= 48 gefordert)" % len(checks)); checks_ok = False
+                for aid, n in per_area.items():
+                    if n < 3:
+                        print("S-22 RepoAuditChecks: FAIL — Bereich %s: nur %d Checks (>= 3)" % (aid, n)); checks_ok = False
+                print("S-22 RepoAuditChecks: %s (%d Bereiche/Gewichtsumme %d, %d Checks)" % ("PASS" if checks_ok else "FAIL", len(areas), wsum, len(checks)))
+        except ImportError:
+            print("S-22 RepoAuditChecks: WARN (Fallback-Modus, PyYAML fehlt)")
+        except Exception as e:
+            print("S-22 RepoAuditChecks: FAIL — %s" % str(e)[:120]); checks_ok = False
+    if not checks_ok:
+        fails += 1
+
     print("RESULT: " + ("ALL COMPLIANT" if fails == 0 else "%d FAIL(s)" % fails))
 
     # S-19 Mutationstest-Suite: Header-Drift-Erkennung muss zuverlaessig

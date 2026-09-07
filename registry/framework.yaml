@@ -11,9 +11,9 @@ framework:
     slots_total: 426
     slots_neu: 264
     slots_verweist: 150
-    slots_belegt: 2
+    slots_belegt: 3
     slots_konflikt: 6
-    slots_geplant: 4
+    slots_geplant: 3
   families:
   - id: FAM-01
     name: Enterprise & Governance
@@ -1980,10 +1980,10 @@ framework:
       - ATC-STD-REPO-AUDIT-001
     - id: ATC-STD-REPO-AUDIT-002
       title: Audit-Checklisten- und Health-Score-Standard (CHECK-001, CHECK-002, …)
-      status: GEPLANT
+      status: BELEGT
       refs:
-      - ATC-STD-REPO-AUDIT-001
-      note: Automatisierbare Checks + standardisierter Repository Health Score; P1
+      - ATC-STD-REPO-AUDIT-002
+      note: Automatisierbare Checks + standardisierter Repository Health Score; erstellt via SCR-0021
     - id: ATC-STD-REPO-AUDIT-003
       title: Automatisierter ATC Repository Auditor (KI-/Automatisierungsagent)
       status: GEPLANT
