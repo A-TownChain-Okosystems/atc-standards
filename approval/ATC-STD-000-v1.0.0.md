@@ -353,6 +353,53 @@ Architecture Security Protocol Blockchain AI
                Production
 ```
 
+## 36. Naming Convention
+
+Die zentrale Benennungsnorm des ATC-Standardsystems:
+
+| Objekt | Standardisierte Form | Beispiel |
+|---|---|---|
+| Standards | ATC-STD-NNN | ATC-STD-000 |
+| Anforderungen | REQ-<DOMAENE>-NNN | REQ-STD-001, REQ-REPO-001 |
+| Findings | F-NNN | F-001 |
+| Change Requests | SCR-NNN | SCR-001 |
+| Architecture Decisions | ADR-NNN (zentrales Register: AD-NNN, bestehende Nummern unveraendert) | ADR-001 |
+| Security Advisories | ATC-SA-NNN | ATC-SA-001 |
+| Test Cases | TC-NNN | TC-001 |
+| Test Suites | TS-NNN | TS-001 |
+| Validation Gates | GATE-NNN | GATE-001 |
+| Schemas | ATC-SCHEMA-NNN | ATC-SCHEMA-001 |
+| Protocols | ATC-PROTO-NNN | ATC-PROTO-001 |
+| Specifications | ATC-SPEC-NNN | ATC-SPEC-001 |
+| Releases | ATC-REL-X.Y.Z | ATC-REL-1.0.0 |
+| Dokumente | ATC-DOC-NNN | ATC-DOC-001 |
+
+Nummern: NNN = mindestens dreistellig, fuehrende Nullen erlaubt (SCR-001 ==
+SCR-0001-Notation bleibt gueltig; Bestand: SCR-0001…0004).
+
+**Repository-Namen:** Neue Repositories folgen `atc-<domain>-<component>`
+(z.B. atc-standards, atc-node, atc-wallet, atc-consensus; aufteilbare
+Produkte: atclang-compiler, globus-kernel). Bestehende Brand-Repos behalten
+ihre Namen (Immutabilitaet): atclang, a-townchain, globus-os, aurora-ai,
+genesis-engine, genesis-chronicles, a-townchain-os, a-townchain-os-docs.
+
+**Dateinamen:** `ATC-STD-NNN.md` je Standard; `<name>.schema.json` je Schema;
+Begleit-Metadaten je Standard als `ATC-STD-NNN.integrity.yaml`,
+`ATC-STD-NNN.review.yaml`, `ATC-STD-NNN.compliance.yaml` (aktuelle
+Realisierung: approval/-Paket + registry/, gleiche Funktion).
+
+**ID-Immutabilitaet:** Eine ID wird NIE umbenannt, wiederverwendet oder
+neu vergeben — auch wenn sich Titel, Version, Status oder Kategorie aendern.
+Nur die Version entwickelt sich weiter: ATC-STD-042 v1.0.0 -> v1.1.0 -> v2.0.0.
+Version-Pinning gemaess §29: ATC-STD-042@1.0.0 bleibt exakt diese Fassung.
+
+**Maschinenpruefbarkeit (MUST):** Die Naming Convention ist als
+`schemas/naming-conventions.schema.json` maschinenpruefbar definiert; der
+atc-std-validator prueft sie (Regel S-16); CI lehnt ungueltige Namen ab
+(NON-COMPLIANT = NO-GO). Findings werden fortlaufend in
+`registry/findings.yaml` registriert (F-NNN); Review-Kontext-Aliase
+(T-Fxx/S-Fxx/A-Fxx) bleiben als Herkunftsverweis gueltig.
+
 ## Aktueller Status
 
 Review-Chain nach §13 gegen diese Fassung durchgefuehrt und dokumentiert
@@ -379,3 +426,8 @@ definiert — die Verfassung ist durch die eigene Kette gelaufen.
   Tag Review-Chain §13 durchlaufen: Technical/Security/Architecture alle
   PASS (0 kritische Findings; Berichte unter approval/). Status CANDIDATE —
   wartet auf Owner-Approval.
+- 1.0.0, Ergaenzung (07.09.): §36 Naming Convention per Owner-Mandat
+  ergänzt (Candidate-Revision vor Approval; keine SCR noetig, da nicht
+  STABLE): ID-Tabelle, Repository-Namen (atc-<domain>-<component>, Bestand
+  immutable), Dateinamen, ID-Immutabilitaet, maschinenpruefbares Schema +
+  Validator S-16 + Findings-Registry.

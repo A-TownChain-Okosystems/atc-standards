@@ -48,7 +48,7 @@ Das Repositorium selbst erfuellt den ATC-STD-201 (self-compliant).
 - `registry/` — standards.yaml (Standard-Registry, ATC-STD-000 §19),
   categories.yaml, versions.yaml, lifecycle.yaml, dependencies.yaml
   (Repository- + Standard-Graph, Zyklenerkennung), repositories.yaml
-  (23 Repos), teams.yaml + STANDARDS_REGISTRY/OVERVIEW
+  (23 Repos), teams.yaml, findings.yaml (F-Registry) + STANDARDS_REGISTRY/OVERVIEW
 - `tools/` — atc-repo-audit v0.1.0 (Repository-Validator, 16 Regeln) und
   atc-std-validator v0.1.0 (Standard-Validator, 15 Regeln S-01…S-15)
 - `templates/` — repository- (.atc-Vorlagen, PR-Template) und workflow-Vorlagen

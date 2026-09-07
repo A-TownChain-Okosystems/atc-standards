@@ -16,5 +16,6 @@ requirements:
   - {id: REQ-STD-013, level: MUST, description: "Supersession/Deprecation/Retirement dokumentiert", section: "§26-28", status: PASS, evidence: "supersedes angewendet: REPO-001ff -> 201/202/203"}
   - {id: REQ-STD-014, level: MUST, description: "Konflikt-Resolution mit hoechster Governance-Prioritaet fuer STD-000", section: "§30", status: PASS, evidence: "Verfahren definiert (Identify Authority -> … -> Change Request)"}
   - {id: REQ-STD-015, level: MUST, description: "Emergency-Prozess begrenzt, keine dauerhafte Governance-Umgehung", section: "§31", status: PASS, evidence: "Temporary Decision -> Formal Standard Revision"}
+  - {id: REQ-STD-017, level: MUST, description: "Naming Convention maschinenpruefbar (Schema + Validator S-16), CI lehnt ungueltige Namen ab", section: "§36", status: PASS, evidence: "schemas/naming-conventions.schema.json + atc-std-validator S-16 + registry/findings.yaml"}
   - {id: REQ-STD-016, level: MUST, description: "Meta-Compliance: STD-000 nicht durch untergeordnete Standards definiert", section: "§34", status: PASS, evidence: "Zirkel-Verbot formuliert; Validator-Zyklenerkennung"}
-summary: {total: 16, pass: 16, partial: 0, fail: 0, not_applicable: 0}
+summary: {total: 17, pass: 17, partial: 0, fail: 0, not_applicable: 0}

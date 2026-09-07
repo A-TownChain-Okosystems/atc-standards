@@ -25,9 +25,9 @@ Stand: 07.09.2026, 15:00 (Europe/Berlin)
 
 - CI: Repository-Audit (16/16 PASS, Score 100) + Standard-Validation (4/4
   COMPLIANT) bei jedem Push. Validatoren: atc-repo-audit v0.1.0,
-  atc-std-validator v0.1.0.
+  atc-std-validator v0.1.1 (S-16 Naming).
 
 ## Metriken
 
-- 119 Standard-Dokumente + Verfassung; 5 Registry-, 7 Schema-, 6 Template-
+- 119 Standard-Dokumente + Verfassung; 6 Registry-, 7 Schema-, 6 Template-
   Dateien; 2 Tools; 23 Repos in repositories.yaml.

@@ -1,5 +1,23 @@
 # Changelog — atc-standards
 
+## [1.5.0] — 2026-09-07 (Naming Convention, ATC-STD-000 §36)
+- ATC-STD-000 §36 Naming Convention per Owner-Mandat verankert
+  (Candidate-Revision): ID-Tabelle (ATC-STD-NNN, REQ-<DOM>-NNN, F-NNN, SCR-NNN,
+  ADR-/AD-NNN, ATC-SA-NNN, TC-/TS-/GATE-NNN, ATC-SCHEMA/-PROTO/-SPEC/-DOC-NNN,
+  ATC-REL-X.Y.Z), Repository-Namen (atc-<domain>-<component>; Bestand-Brand-Repos
+  immutable), Dateinamen (ATC-STD-NNN.md, *.schema.json, *.integrity/review/
+  compliance.yaml), ID-Immutabilitaet + Version-Pinning.
+- schemas/naming-conventions.schema.json: maschinenpruefbare Norm (valides JSON).
+- atc-std-validator v0.1.1: Regel S-16 Naming Compliance (Dateiname==ID,
+  3-stellige Mindest-IDs, Schema-Existenz) — CI lehnt ungueltige Namen ab.
+- registry/findings.yaml: Findings-Registry F-001…F-005 (kanonische IDs,
+  Aliase T-F01/S-F01…/A-F01, SCR-Verweise).
+- ATC-STD-203: Gate-IDs auf 3-stellige Form migriert (GATE-01…10 →
+  GATE-001…010, Naming-konform).
+- Approval-Paket: Snapshot + Requirement-Matrix um REQ-STD-017 erweitert
+  (17/17 PASS); Validator-Re-Lauf 4/4 COMPLIANT.
+
+
 ## [1.4.0] — 2026-09-07 (fehlende Governance-Komponenten)
 - governance/CHANGE_CONTROL.md: SCR-Verfahren operationalisiert (Lebenszyklus
   PROPOSED→REVIEW→DECIDED→IMPLEMENTED→CLOSED, SCR-Registry, Emergency-Rückkopplung).

@@ -23,3 +23,10 @@
 - Requirement-Matrix neu: 16/16 PASS. Schema/Validator um authority-Feld
   erweitert (§6 der Formalfassung); S-06 akzeptiert Purpose-Struktur (§8).
 - APPROVAL-DECISION: PENDING — Approval bleibt beim Owner BLOCKED.
+
+## 1.2.0 — 07.09.2026 (Naming Convention)
+- §36 per Owner-Mandat ergänzt (ID-Tabelle, Repo-/Datei-Namen,
+  ID-Immutabilität, maschinenprüfbares Schema naming-conventions.schema.json,
+  Validator S-16, Findings-Registry registry/findings.yaml mit F-001…F-005
+  als kanonische IDs). Snapshot aktualisiert; Matrix 17/17 PASS;
+  Validator-Re-Lauf COMPLIANT.

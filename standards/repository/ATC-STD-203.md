@@ -99,20 +99,20 @@ Breaking Changes, Tests, Documentation, Migration. Fuer kritische Komponenten
 (S3/S4) ZUSAETZLICH: Threat Model Impact, Consensus Impact, State Transition
 Impact, Backward Compatibility. Vorlage: templates/repository/PULL_REQUEST_TEMPLATE.md.
 
-## 9. Release-Gates GATE-01…GATE-10 (Abschnitt 24, MUST ab R3; R4 alle zwingend)
+## 9. Release-Gates GATE-001…GATE-010 (Abschnitt 24, MUST ab R3; R4 alle zwingend)
 
 | Gate | Pruefung |
 |---|---|
-| GATE-01 | Structure (ATC-STD-201 Matrix) |
-| GATE-02 | Build/Compile reproduzierbar |
-| GATE-03 | Unit-Tests |
-| GATE-04 | Integration-Tests |
-| GATE-05 | Security-Checks (Secret-Scan, Security-Tests) |
-| GATE-06 | Dependency Audit (Policy-konform) |
-| GATE-07 | API/Protokoll-Kompatibilitaet |
-| GATE-08 | Dokumentation aktuell |
-| GATE-09 | Architektur (Abhaengigkeitsrichtung, Layer-Grenzen) |
-| GATE-10 | Release-Approvals + Artefakt-Hashes/-Signaturen |
+| GATE-001 | Structure (ATC-STD-201 Matrix) |
+| GATE-002 | Build/Compile reproduzierbar |
+| GATE-003 | Unit-Tests |
+| GATE-004 | Integration-Tests |
+| GATE-005 | Security-Checks (Secret-Scan, Security-Tests) |
+| GATE-006 | Dependency Audit (Policy-konform) |
+| GATE-007 | API/Protokoll-Kompatibilitaet |
+| GATE-008 | Dokumentation aktuell |
+| GATE-009 | Architektur (Abhaengigkeitsrichtung, Layer-Grenzen) |
+| GATE-010 | Release-Approvals + Artefakt-Hashes/-Signaturen |
 
 Ein fehlgeschlagenes Gate = **NO-GO**. Reihenfolge: CI → Security → Tests →
 Architecture → Documentation → Approved.
@@ -186,3 +186,7 @@ IMPLEMENTATION: tools/atc-repo-audit, schemas/repository.schema.yaml.
   ergaenzt.
 - 1.0.0 (07.09.2026): Formale Spezifikation (AD-031): RFC-2119,
   Compliance-Matrix M-01…M-16, Validator-Regeln V-01…V-16.
+
+**Naming-Anpassung (07.09.):** Gate-IDs per ATC-STD-000 §36 auf
+dreistellige Form migriert (GATE-001…10 → GATE-001…010; Candidate-Revision
+vor Approval, Gate-Substanz unveraendert).

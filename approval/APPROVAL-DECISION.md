@@ -17,6 +17,12 @@ Gegenueber dem Agent-Entwurf durch die Formalfassung behoben:
 Emergency Changes (§31), Konflikt-Resolution (§30), L-Skalen-Doppellung
 (aufgeloest durch §22), Meta-Compliance (§34) neu.
 
+**Zusatz nach Chain (07.09.):** §36 Naming Convention wurde per Owner-Mandat
+nach der Review-Chain ergänzt (Candidate-Revision, keine SCR-Pflicht da nicht
+STABLE). Validator-Re-Lauf: COMPLIANT; Requirement-Matrix um REQ-STD-017
+erweitert (17/17 PASS). Die Owner-Entscheidung deckt die erweiterte Fassung
+(36 Abschnitte) ab; Snapshot aktualisiert.
+
 ## Entscheidungs-Optionen (§17)
 
 - **APPROVE** → APPROVED → STABLE: Die Verfassung ist normativ in Kraft und

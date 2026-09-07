@@ -178,6 +178,21 @@ def validate(path, registry_path):
     else:
         v.add("S-14", "WARN", "Registry-Check uebersprungen (keine standards.yaml)")
 
+    # S-16 Naming Convention (ATC-STD-000 §36)
+    fname = os.path.basename(path)
+    fname_ok = sid and fname == sid + ".md"
+    kurz = re.findall(r"\b(?:REQ|SCR|F|TC|TS|GATE|ADR|AD|ATC-SA|ATC-SCHEMA|ATC-PROTO|ATC-SPEC|ATC-DOC)-[0-9]{1,2}\b", text)
+    schema_da = os.path.exists(os.path.join(os.path.dirname(registry_path or ""), "..", "schemas", "naming-conventions.schema.json")) if registry_path else False
+    msgs = []
+    if not fname_ok:
+        msgs.append("Dateiname %s != %s.md" % (fname, sid))
+    if kurz:
+        msgs.append("Malforme IDs (weniger als 3 Ziffern): " + ", ".join(sorted(set(kurz))))
+    if not schema_da:
+        msgs.append("naming-conventions.schema.json nicht gefunden")
+    v.add("S-16", "PASS" if not msgs else "FAIL",
+          "Naming Convention §36: " + ("Datei-/ID-Formate konform, Schema vorhanden" if not msgs else "; ".join(msgs)))
+
     # S-15 Abhaengigkeitszyklen
     dep_path = os.path.join(os.path.dirname(registry_path or ""), "dependencies.yaml") if registry_path else None
     dep = read(dep_path) if dep_path else None
