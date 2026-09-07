@@ -1,0 +1,103 @@
+---
+standard:
+  id: ATC-STD-342
+  title: "Mining Manager Standard"
+  version: "1.0.0"
+  status: draft
+  category: blockchain
+  authority: A-TownChain-Okosystems
+  owner: "Michael (Owner-Entwurf) / Standards Governance"
+  created: "2026-09-08"
+  updated: "2026-09-08"
+  normative: false
+  effective_date: ""
+  review_date: ""
+  classification: PUBLIC
+  language: de-DE
+  supersedes: null
+  superseded_by: null
+  dependencies:
+    - ATC-STD-000
+  related_standards: []
+  license: "Copyright (c) 2026 Michael Wroblewski"
+----
+
+# ATC-STD-342 — Mining Manager (v1.0.0, DRAFT)
+
+> **Status:** DRAFT (v1.0.0) — Grundgerüst-Standard aus Katalog-Slot der Familie
+> Mining Standards (FAM-21); erstellt via SCR-0030. Inhaltliche Elaborierung (Volltext,
+> fachliche REQs) erfolgt via eigenem SCR; Owner-§9-Freigabe ausstehend.
+
+## Abstract
+
+ATC-STD-342 (Mining Manager) ist der Grundgerüst-Standard für den gleichnamigen Katalog-Slot
+der Familie **Mining Standards** (FAM-21, Range ATC-STD-340..350) im ATC Enterprise Standards
+Framework. Er schafft die normative Hülle: Definition des Gegenstandes, Verortung
+im Katalog, Kernpflichten, Compliance- und Verifikationsregeln sowie die
+Change-Control-Bindung. Der Standard ist DRAFT und entfaltet keine normative
+Wirkung, bis die inhaltliche Elaborierung erfolgt und der Owner nach §9
+freigibt (ATC-STD-000 §9/§19: Kein Registry-Eintrag ohne Verfahren — Eintrag
+erfolgt mit SCR-0030 als DRAFT; APPROVED nur mit Freigabe).
+
+Schlüsselwörter: MUSS/MUSS NICHT, SOLLTE, DARF/KANN — RFC-2119 gemäß ATC-STD-000 §10.
+
+## Scope
+
+**Gilt:** Der durch den Slot-Titel (Mining Manager) bezeichnete Gegenstandsbereich im
+Zuständigkeitsfeld der Familie Mining Standards. **Gilt nicht:** Bereiche, die durch
+fachlich konkretere Standards derselben Familie verbindlich geregelt sind
+(Subsidiarität: der konkrete Standard geht vor).
+
+## §1 Gegenstand & Verortung
+
+Dieser Standard adressiert **Mining Manager**. Er ist dem Katalog-Slot ATC-STD-342 der
+Familie Mining Standards (FAM-21) zugeordnet; die Zuordnung folgt registry/framework.yaml
+(S-21) und darf nur via SCR geändert werden.
+
+## §2 Kernpflichten (Grundgerüst)
+
+1. Der Gegenstand MUSS eindeutig definiert und gegen benachbarte Standards
+   derselben Familie abgegrenzt sein.
+2. Fachliche Regeln MÜSSEN als REQ-IDs deklariert und maschinell prüfbar oder
+   dokumentiert nachweisbar sein (ATC-STD-000 §11).
+3. Compliance MUSS über die Validator-Gates bzw. dokumentierte Prüfung
+   nachweisbar sein (AUD-Record bei Abweichung).
+4. Jede Änderung folgt der Change-Control-Kette SCR → VERSION → UPDATE →
+   COMPAT → AUDIT (ATC-STD-CHANGE-001, ATC-STD-UPDATE-001).
+5. Sicherheitsrelevante Aspekte MÜSSEN in den Security Considerations
+   benannt werden (ATC-STD-000 §12).
+
+## §3 Compliance & Verifikation
+
+Compliance wird über die Gesamt-Validierung (CI, S-01..S-25) je Registry-Eintrag
+geprüft: Metadaten-Vollständigkeit, Naming, Status-/Version-Konsistenz und
+Registry-Konsistenz. Abweichungen werden als Findings (F-NNN) geführt und nach
+ATC-STD-BUG-005 (RCA) bearbeitet.
+
+## Requirements (normativ)
+
+- **REQ-STD-001** (§1): Gegenstand eindeutig definiert und im Katalog verortet.
+- **REQ-STD-002** (§2): Fachliche Regeln als deklarierte, verifizierbare REQ-IDs.
+- **REQ-STD-003** (§2): Compliance nachweisbar über Validator-Gates oder Prüfung.
+- **REQ-STD-004** (§2): Änderungen ausschließlich über die Change-Control-Kette.
+- **REQ-STD-005** (§2): Sicherheitsaspekte dokumentiert (Security Considerations).
+
+## Security Considerations
+
+Bis zur Elaborierung gilt: Sicherheitsrelevante Auswirkungen des Gegenstandes
+(Mining Manager) sind bei der Elaborierung zwingend zu bewerten; bis dahin werden keine
+Sicherheitsaussagen getroffen (Ehrlichkeitsregel — kein erfundener Status).
+
+## Changelog (Standard-intern)
+
+- **1.0.0** (2026-09-08): Initial Release DRAFT — Grundgerüst-Standard aus
+  Katalog-Slot ATC-STD-342 (Familie Mining Standards, FAM-21) via SCR-0030. Elaborierung und
+  §9-Freigabe ausstehend; bis dahin nicht normativ.
+
+## References
+
+- ATC-STD-000 (Standards Governance & Specification)
+- ATC-STD-FRAMEWORK-001 (Katalog/Slots), ATC-STD-CHANGE-001/UPDATE-001 (Change-Control)
+- registry/framework.yaml (FAM-21), registry/standards.yaml (Eintrag via SCR-0030)
+
+*ATC-STD-342 v1.0.0 · Grundgerüst via SCR-0030 · Aurora (Superagent) · 08.09.2026*

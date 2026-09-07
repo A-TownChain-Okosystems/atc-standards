@@ -9,9 +9,9 @@ framework:
   stats:
     families: 43
     slots_total: 433
-    slots_neu: 264
+    slots_neu: 1
     slots_verweist: 150
-    slots_belegt: 13
+    slots_belegt: 276
     slots_konflikt: 6
     slots_geplant: 0
   families:
@@ -23,7 +23,10 @@ framework:
     slots:
     - id: ATC-STD-001
       title: Enterprise Governance Standard
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-001
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-002
       title: Organisationsstruktur Standard
       status: VERWEIST
@@ -64,7 +67,10 @@ framework:
       note: §14.1
     - id: ATC-STD-006
       title: Policy Management
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-006
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-007
       title: Risk Management
       status: VERWEIST
@@ -73,7 +79,10 @@ framework:
       note: §12 Risikomodell je Meilenstein; Org-Ebene offen
     - id: ATC-STD-008
       title: Compliance Management
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-008
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-009
       title: Audit Standard
       status: VERWEIST
@@ -93,10 +102,16 @@ framework:
       note: §19-33 SCR + UPD-Lifecycle
     - id: ATC-STD-012
       title: Incident Governance
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-012
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-013
       title: Escalation Standard
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-013
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-014
       title: Evidence & Traceability
       status: VERWEIST
@@ -106,7 +121,10 @@ framework:
       note: BUG-005 Evidence + MILESTONE-001 §6 Evidence Packs
     - id: ATC-STD-015
       title: Records Management
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-015
+      note: Grundgeruest via SCR-0030 (DRAFT)
   - id: FAM-02
     name: Standards-Governance
     range: ATC-STD-020..033
@@ -144,8 +162,10 @@ framework:
       note: §11 Lifecycle
     - id: ATC-STD-025
       title: Standards Review
-      status: NEU
-      note: Review-Kadenzen teils in UPDATE-001; eigenständig bei Bedarf
+      status: BELEGT
+      refs:
+      - ATC-STD-025
+      note: Review-Kadenzen teils in UPDATE-001; eigenständig bei Bedarf; Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-026
       title: Standards Approval
       status: VERWEIST
@@ -154,8 +174,10 @@ framework:
       note: §9 Freigabe
     - id: ATC-STD-027
       title: Standards Deprecation
-      status: NEU
-      note: Deprecation-Pfad in ATC-STD-000 §11; Ausprägung offen
+      status: BELEGT
+      refs:
+      - ATC-STD-027
+      note: Deprecation-Pfad in ATC-STD-000 §11; Ausprägung offen; Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-028
       title: Standards Compatibility
       status: VERWEIST
@@ -196,7 +218,10 @@ framework:
     slots:
     - id: ATC-STD-040
       title: Repository Architecture
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-040
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-041
       title: Repository Naming
       status: VERWEIST
@@ -204,7 +229,10 @@ framework:
       - ATC-STD-202
     - id: ATC-STD-042
       title: Repository Ownership
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-042
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-043
       title: Repository README
       status: VERWEIST
@@ -217,7 +245,10 @@ framework:
       - ATC-STD-201
     - id: ATC-STD-045
       title: Repository Metadata
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-045
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-046
       title: Repository Documentation
       status: VERWEIST
@@ -230,7 +261,10 @@ framework:
       - ATC-STD-203
     - id: ATC-STD-048
       title: Repository Branching
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-048
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-049
       title: Repository Permissions
       status: VERWEIST
@@ -239,13 +273,22 @@ framework:
       note: Security & Release-Teilabdeckung; Org-Settings F-024 SKIP
     - id: ATC-STD-050
       title: Repository Archiving
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-050
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-051
       title: Repository Deprecation
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-051
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-052
       title: Repository Health
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-052
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-053
       title: Repository Dependency Management
       status: VERWEIST
@@ -275,14 +318,22 @@ framework:
       - ATC-STD-README-001
     - id: ATC-STD-062
       title: Wiki Standard
-      status: NEU
-      note: Alte Wiki-Struktur archiviert; künftiges Wissens-Management
+      status: BELEGT
+      refs:
+      - ATC-STD-062
+      note: Alte Wiki-Struktur archiviert; künftiges Wissens-Management; Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-063
       title: API Documentation
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-063
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-064
       title: Architecture Documentation
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-064
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-065
       title: Specification Standard
       status: VERWEIST
@@ -290,10 +341,16 @@ framework:
       - ATC-STD-DESC-001
     - id: ATC-STD-066
       title: Whitepaper Standard
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-066
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-067
       title: Technical Paper Standard
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-067
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-068
       title: CHANGELOG Standard
       status: VERWEIST
@@ -302,10 +359,16 @@ framework:
       - ATC-STD-UPDATE-001
     - id: ATC-STD-069
       title: Release Notes
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-069
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-070
       title: TODO Standard
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-070
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-071
       title: Roadmap Standard
       status: VERWEIST
@@ -314,7 +377,10 @@ framework:
       note: §9 Roadmap→Milestone; AD-027
     - id: ATC-STD-072
       title: Sprint Documentation
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-072
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-073
       title: Decision Log
       status: VERWEIST
@@ -347,10 +413,16 @@ framework:
       note: UPD-Lifecycle als Change-Sicht; SDLC-Ausprägung offen
     - id: ATC-STD-081
       title: Coding Standard
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-081
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-082
       title: Code Style
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-082
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-083
       title: Naming Convention
       status: VERWEIST
@@ -365,7 +437,10 @@ framework:
       note: ATC-STD-100 ist der Architecture Standard
     - id: ATC-STD-085
       title: Modularisation
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-085
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-086
       title: Dependency Standard
       status: VERWEIST
@@ -373,19 +448,34 @@ framework:
       - ATC-STD-204
     - id: ATC-STD-087
       title: Error Handling
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-087
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-088
       title: Logging
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-088
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-089
       title: Configuration Management
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-089
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-090
       title: Environment Management
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-090
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-091
       title: Testing
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-091
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-092
       title: Code Review
       status: VERWEIST
@@ -394,13 +484,22 @@ framework:
       note: Merge-Gate-Teilabdeckung
     - id: ATC-STD-093
       title: Refactoring
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-093
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-094
       title: Technical Debt
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-094
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-095
       title: Build Standard
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-095
+      note: Grundgeruest via SCR-0030 (DRAFT)
   - id: FAM-06
     name: Git & Version Control
     range: ATC-STD-100..113
@@ -413,7 +512,10 @@ framework:
       note: 'Slot belegt durch ATC-STD-100 (Architecture Standard, §30-eingefroren). Auflösung via SCR: Git-Familie auf freie Slots/Namensraum legen (Empfehlung SCR-0019 §6.2)'
     - id: ATC-STD-101
       title: Branch Naming
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-101
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-102
       title: Commit Naming
       status: VERWEIST
@@ -422,13 +524,22 @@ framework:
       note: Commit-Trailer-Konventionen teils in 202/UPDATE-001
     - id: ATC-STD-103
       title: Commit Message
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-103
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-104
       title: Pull Request
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-104
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-105
       title: Merge Policy
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-105
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-106
       title: Branch Protection
       status: VERWEIST
@@ -437,7 +548,10 @@ framework:
       note: SCR-0003 umgesetzt (Branch-Protection aktiv)
     - id: ATC-STD-107
       title: Tagging
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-107
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-108
       title: Release Management
       status: VERWEIST
@@ -531,10 +645,16 @@ framework:
       note: Closure Gate
     - id: ATC-STD-129
       title: Incident Correlation
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-129
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-130
       title: Post-Incident Review
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-130
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-131
       title: Code/Wiki/Repository Consistency Check
       status: VERWEIST
@@ -549,19 +669,34 @@ framework:
     slots:
     - id: ATC-STD-140
       title: QA Framework
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-140
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-141
       title: Unit Testing
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-141
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-142
       title: Integration Testing
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-142
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-143
       title: System Testing
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-143
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-144
       title: End-to-End Testing
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-144
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-145
       title: Regression Testing
       status: VERWEIST
@@ -569,16 +704,28 @@ framework:
       - ATC-STD-UPDATE-001
     - id: ATC-STD-146
       title: Performance Testing
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-146
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-147
       title: Load Testing
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-147
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-148
       title: Stress Testing
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-148
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-149
       title: Security Testing
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-149
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-150
       title: Acceptance Testing
       status: VERWEIST
@@ -611,11 +758,16 @@ framework:
     slots:
     - id: ATC-STD-160
       title: CI/CD
-      status: NEU
-      note: governance-ci + validator-Workflows existieren als Bestandspraxis
+      status: BELEGT
+      refs:
+      - ATC-STD-160
+      note: governance-ci + validator-Workflows existieren als Bestandspraxis; Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-161
       title: Automated Build
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-161
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-162
       title: Automated Testing
       status: VERWEIST
@@ -624,10 +776,16 @@ framework:
       note: Validator-Suite als Bestandspraxis
     - id: ATC-STD-163
       title: Artifact Management
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-163
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-164
       title: Deployment
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-164
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-165
       title: Environment Promotion
       status: VERWEIST
@@ -652,16 +810,28 @@ framework:
       - ATC-STD-NET-003
     - id: ATC-STD-169
       title: Infrastructure as Code
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-169
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-170
       title: Container Standard
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-170
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-171
       title: Kubernetes Standard
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-171
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-172
       title: Terraform Standard
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-172
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-173
       title: Secrets Management
       status: VERWEIST
@@ -670,7 +840,10 @@ framework:
       note: Secret-Scanning aktiv (AUD-2026-0002); Ausprägung offen
     - id: ATC-STD-174
       title: Disaster Recovery
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-174
+      note: Grundgeruest via SCR-0030 (DRAFT)
   - id: FAM-10
     name: Release Readiness (RR-Gates)
     range: RR-G01..RR-G08
@@ -725,61 +898,112 @@ framework:
     slots:
     - id: ATC-STD-180
       title: Blockchain Architecture
-      status: NEU
-      note: 'Referenz: a-townchain (L3), Kernel K14/K16'
+      status: BELEGT
+      refs:
+      - ATC-STD-180
+      note: 'Referenz: a-townchain (L3), Kernel K14/K16; Grundgeruest via SCR-0030 (DRAFT)'
     - id: ATC-STD-181
       title: Node Standard
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-181
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-182
       title: Consensus
-      status: NEU
-      note: 'Kernel K16: DAG+PoH+Validator+Voting+Finality'
+      status: BELEGT
+      refs:
+      - ATC-STD-182
+      note: 'Kernel K16: DAG+PoH+Validator+Voting+Finality; Grundgeruest via SCR-0030 (DRAFT)'
     - id: ATC-STD-183
       title: PoW
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-183
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-184
       title: PoS
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-184
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-185
       title: PoH
-      status: NEU
-      note: Kernel K16 PoH
+      status: BELEGT
+      refs:
+      - ATC-STD-185
+      note: Kernel K16 PoH; Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-186
       title: Validator
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-186
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-187
       title: Staking
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-187
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-188
       title: Delegation
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-188
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-189
       title: Slashing
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-189
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-190
       title: Block
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-190
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-191
       title: Transaction
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-191
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-192
       title: Mempool
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-192
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-193
       title: Fee Market
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-193
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-194
       title: MEV Mitigation
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-194
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-195
       title: Fork Handling
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-195
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-196
       title: Chain Recovery
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-196
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-197
       title: Genesis
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-197
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-198
       title: Network Upgrade
       status: VERWEIST
@@ -794,7 +1018,10 @@ framework:
     slots:
     - id: ATC-STD-200
       title: ATC Token
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-200
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-201
       title: Tokenomics
       status: KONFLIKT
@@ -813,22 +1040,40 @@ framework:
       note: Slot belegt durch ATC-STD-204 (Dependency & Interface, §30-eingefroren). Auflösung via SCR
     - id: ATC-STD-205
       title: Minting
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-205
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-206
       title: Staking Rewards
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-206
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-207
       title: Treasury
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-207
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-208
       title: Governance Token
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-208
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-209
       title: Token Allocation
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-209
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-210
       title: Vesting
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-210
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-211
       title: Token Migration
       status: VERWEIST
@@ -914,34 +1159,64 @@ framework:
     slots:
     - id: ATC-STD-240
       title: Interoperability
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-240
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-241
       title: Bridge
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-241
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-242
       title: Bridge Security
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-242
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-243
       title: Cross-Chain Messaging
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-243
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-244
       title: IBC
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-244
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-245
       title: EVM Compatibility
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-245
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-246
       title: Ethereum Integration
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-246
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-247
       title: Solana Integration
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-247
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-248
       title: Polygon Integration
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-248
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-249
       title: BSC Integration
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-249
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-250
       title: Bridge Recovery
       status: VERWEIST
@@ -1003,25 +1278,46 @@ framework:
     slots:
     - id: ATC-STD-270
       title: Oracle Architecture
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-270
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-271
       title: External Data
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-271
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-272
       title: Data Verification
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-272
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-273
       title: Oracle Consensus
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-273
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-274
       title: Price Feeds
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-274
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-275
       title: Oracle Failure
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-275
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-276
       title: External API Binding
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-276
+      note: Grundgeruest via SCR-0030 (DRAFT)
   - id: FAM-17
     name: Identity & Reputation
     range: ATC-STD-280..286
@@ -1030,8 +1326,10 @@ framework:
     slots:
     - id: ATC-STD-280
       title: Identity
-      status: NEU
-      note: Kernel K6 DID als Referenzimplementierung
+      status: BELEGT
+      refs:
+      - ATC-STD-280
+      note: Kernel K6 DID als Referenzimplementierung; Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-281
       title: Decentralised Identity
       status: VERWEIST
@@ -1040,20 +1338,34 @@ framework:
       note: ATC-03 Legacy (DID) als historische Basis
     - id: ATC-STD-282
       title: Wallet Identity
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-282
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-283
       title: Reputation
-      status: NEU
-      note: Kernel K15 Reputation als Referenz
+      status: BELEGT
+      refs:
+      - ATC-STD-283
+      note: Kernel K15 Reputation als Referenz; Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-284
       title: Sybil Resistance
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-284
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-285
       title: Identity Recovery
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-285
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-286
       title: Credential Verification
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-286
+      note: Grundgeruest via SCR-0030 (DRAFT)
   - id: FAM-18
     name: Cybersecurity
     range: ATC-STD-300..313
@@ -1066,16 +1378,28 @@ framework:
       note: 'Slot belegt durch ATC-STD-300 (Development Standard, §30-eingefroren). Auflösung via SCR: Cybersecurity-Familie auf 301+ bzw. eigenen Namensraum'
     - id: ATC-STD-301
       title: Secure Development
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-301
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-302
       title: Authentication
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-302
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-303
       title: Authorisation
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-303
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-304
       title: Key Management
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-304
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-305
       title: Secrets
       status: VERWEIST
@@ -1084,17 +1408,28 @@ framework:
       note: Secret-Scanning aktiv
     - id: ATC-STD-306
       title: Encryption
-      status: NEU
-      note: Kernel K6b Ed25519 als Referenz
+      status: BELEGT
+      refs:
+      - ATC-STD-306
+      note: Kernel K6b Ed25519 als Referenz; Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-307
       title: Network Security
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-307
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-308
       title: Endpoint Security
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-308
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-309
       title: Supply Chain Security
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-309
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-310
       title: Dependency Security
       status: VERWEIST
@@ -1103,10 +1438,16 @@ framework:
       note: Dependabot/CodeQL aktiv (AUD-2026-0002)
     - id: ATC-STD-311
       title: Vulnerability Management
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-311
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-312
       title: Penetration Testing
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-312
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-313
       title: Security Incident Response
       status: VERWEIST
@@ -1234,37 +1575,70 @@ framework:
     slots:
     - id: ATC-STD-340
       title: Mining Architecture
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-340
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-341
       title: Miner
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-341
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-342
       title: Mining Manager
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-342
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-343
       title: CPU Mining
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-343
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-344
       title: GPU Mining
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-344
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-345
       title: Mobile Mining
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-345
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-346
       title: Mining Algorithms
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-346
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-347
       title: Miner Plugins
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-347
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-348
       title: Mining Rewards
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-348
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-349
       title: Mining Security
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-349
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-350
       title: Miner Monitoring
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-350
+      note: Grundgeruest via SCR-0030 (DRAFT)
   - id: FAM-22
     name: Wallet Standards
     range: ATC-STD-360..368
@@ -1273,31 +1647,58 @@ framework:
     slots:
     - id: ATC-STD-360
       title: Wallet Architecture
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-360
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-361
       title: Address
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-361
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-362
       title: Key Management
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-362
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-363
       title: Transaction Signing
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-363
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-364
       title: Wallet Recovery
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-364
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-365
       title: Hardware Wallet
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-365
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-366
       title: Wallet Security
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-366
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-367
       title: Wallet UI
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-367
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-368
       title: Burning Wallet
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-368
+      note: Grundgeruest via SCR-0030 (DRAFT)
   - id: FAM-23
     name: DeFi Standards
     range: ATC-STD-380..389
@@ -1306,34 +1707,64 @@ framework:
     slots:
     - id: ATC-STD-380
       title: DeFi Architecture
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-380
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-381
       title: DEX
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-381
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-382
       title: Liquidity
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-382
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-383
       title: Liquidity Pools
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-383
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-384
       title: Staking
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-384
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-385
       title: Lending
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-385
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-386
       title: Yield
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-386
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-387
       title: Oracle
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-387
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-388
       title: DeFi Risk
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-388
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-389
       title: DeFi Security
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-389
+      note: Grundgeruest via SCR-0030 (DRAFT)
   - id: FAM-24
     name: NFT / Marketplace
     range: ATC-STD-400..409
@@ -1342,34 +1773,64 @@ framework:
     slots:
     - id: ATC-STD-400
       title: NFT Architecture
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-400
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-401
       title: NFT Metadata
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-401
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-402
       title: NFT Minting
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-402
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-403
       title: NFT Ownership
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-403
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-404
       title: NFT Transfer
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-404
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-405
       title: NFT Marketplace
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-405
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-406
       title: NFT Royalties
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-406
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-407
       title: NFT Storage
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-407
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-408
       title: NFT Verification
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-408
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-409
       title: NFT Security
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-409
+      note: Grundgeruest via SCR-0030 (DRAFT)
   - id: FAM-25
     name: GameFi / Shivamon
     range: ATC-STD-420..434
@@ -1378,49 +1839,94 @@ framework:
     slots:
     - id: ATC-STD-420
       title: GameFi Architecture
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-420
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-421
       title: Shivamon
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-421
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-422
       title: Game Economy
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-422
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-423
       title: PvE
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-423
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-424
       title: PvP
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-424
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-425
       title: Guild
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-425
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-426
       title: Alliance
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-426
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-427
       title: Territory
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-427
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-428
       title: Crafting
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-428
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-429
       title: Mods
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-429
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-430
       title: DNA
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-430
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-431
       title: Evolution
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-431
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-432
       title: Genesis
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-432
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-433
       title: Game Assets
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-433
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-434
       title: Game Blockchain Integration
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-434
+      note: Grundgeruest via SCR-0030 (DRAFT)
   - id: FAM-26
     name: API Standards
     range: ATC-STD-440..450
@@ -1429,22 +1935,40 @@ framework:
     slots:
     - id: ATC-STD-440
       title: API Architecture
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-440
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-441
       title: REST API
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-441
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-442
       title: GraphQL
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-442
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-443
       title: RPC
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-443
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-444
       title: WebSocket
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-444
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-445
       title: Authentication
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-445
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-446
       title: API Versioning
       status: VERWEIST
@@ -1452,17 +1976,28 @@ framework:
       - ATC-STD-VERSION-001
     - id: ATC-STD-447
       title: Rate Limiting
-      status: NEU
-      note: Kernel K15 Rate-Limit als Referenz
+      status: BELEGT
+      refs:
+      - ATC-STD-447
+      note: Kernel K15 Rate-Limit als Referenz; Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-448
       title: API Errors
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-448
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-449
       title: API Security
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-449
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-450
       title: API Documentation
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-450
+      note: Grundgeruest via SCR-0030 (DRAFT)
   - id: FAM-27
     name: Datenstandards
     range: ATC-STD-460..469
@@ -1471,16 +2006,28 @@ framework:
     slots:
     - id: ATC-STD-460
       title: Data Architecture
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-460
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-461
       title: Data Model
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-461
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-462
       title: Data Validation
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-462
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-463
       title: Data Integrity
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-463
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-464
       title: Data Versioning
       status: VERWEIST
@@ -1493,16 +2040,28 @@ framework:
       - ATC-STD-COMPAT-001
     - id: ATC-STD-466
       title: Database
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-466
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-467
       title: Firestore
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-467
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-468
       title: Backup
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-468
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-469
       title: Data Recovery
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-469
+      note: Grundgeruest via SCR-0030 (DRAFT)
   - id: FAM-28
     name: Observability
     range: ATC-STD-480..488
@@ -1511,25 +2070,46 @@ framework:
     slots:
     - id: ATC-STD-480
       title: Observability
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-480
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-481
       title: Logging
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-481
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-482
       title: Metrics
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-482
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-483
       title: Tracing
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-483
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-484
       title: Monitoring
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-484
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-485
       title: Alerting
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-485
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-486
       title: Health Checks
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-486
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-487
       title: Audit Logs
       status: VERWEIST
@@ -1537,7 +2117,10 @@ framework:
       - ATC-STD-AUDIT-001
     - id: ATC-STD-488
       title: Performance Monitoring
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-488
+      note: Grundgeruest via SCR-0030 (DRAFT)
   - id: FAM-29
     name: Incident & Recovery
     range: ATC-STD-500..509
@@ -1546,13 +2129,22 @@ framework:
     slots:
     - id: ATC-STD-500
       title: Incident Management
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-500
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-501
       title: Incident Classification
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-501
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-502
       title: Incident Response
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-502
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-503
       title: Emergency Response
       status: VERWEIST
@@ -1561,10 +2153,16 @@ framework:
       note: Emergency-Prozess UPD
     - id: ATC-STD-504
       title: Disaster Recovery
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-504
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-505
       title: Fault Recovery
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-505
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-506
       title: Rollback
       status: VERWEIST
@@ -1572,13 +2170,22 @@ framework:
       - ATC-STD-UPDATE-001
     - id: ATC-STD-507
       title: Failover
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-507
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-508
       title: Backup Recovery
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-508
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-509
       title: Business/System Continuity
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-509
+      note: Grundgeruest via SCR-0030 (DRAFT)
   - id: FAM-30
     name: Release & Update Standards
     range: ATC-STD-520..529
@@ -1648,27 +2255,46 @@ framework:
     slots:
     - id: ATC-STD-540
       title: Project Management
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-540
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-541
       title: Epic
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-541
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-542
       title: Feature
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-542
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-543
       title: Requirement
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-543
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-544
       title: Task
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-544
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-545
       title: TODO
-      status: NEU
-      note: KaiOsTodo-Entity als Bestandspraxis
+      status: BELEGT
+      refs:
+      - ATC-STD-545
+      note: KaiOsTodo-Entity als Bestandspraxis; Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-546
       title: Sprint
-      status: NEU
-      note: Sprint ≠ Meilenstein (MILESTONE-001 §9)
+      status: BELEGT
+      refs:
+      - ATC-STD-546
+      note: Sprint ≠ Meilenstein (MILESTONE-001 §9); Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-547
       title: Milestone
       status: VERWEIST
@@ -1694,13 +2320,22 @@ framework:
     slots:
     - id: ATC-STD-560
       title: Requirements
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-560
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-561
       title: Functional Requirements
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-561
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-562
       title: Non-Functional Requirements
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-562
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-563
       title: Acceptance Criteria
       status: VERWEIST
@@ -1718,7 +2353,10 @@ framework:
       - ATC-STD-UPDATE-001
     - id: ATC-STD-566
       title: Requirement Validation
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-566
+      note: Grundgeruest via SCR-0030 (DRAFT)
   - id: FAM-33
     name: UI/UX
     range: ATC-STD-580..587
@@ -1727,28 +2365,52 @@ framework:
     slots:
     - id: ATC-STD-580
       title: UI/UX
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-580
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-581
       title: Design System
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-581
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-582
       title: Component Standard
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-582
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-583
       title: Accessibility
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-583
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-584
       title: Responsive Design
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-584
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-585
       title: UX Consistency
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-585
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-586
       title: Error UI
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-586
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-587
       title: Admin UI
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-587
+      note: Grundgeruest via SCR-0030 (DRAFT)
   - id: FAM-34
     name: Mobile / Desktop / OS
     range: ATC-STD-600..607
@@ -1757,32 +2419,52 @@ framework:
     slots:
     - id: ATC-STD-600
       title: Platform Architecture
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-600
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-601
       title: Mobile
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-601
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-602
       title: Desktop
-      status: NEU
-      note: atc-windows-edition/atc-linux-edition, egui
+      status: BELEGT
+      refs:
+      - ATC-STD-602
+      note: atc-windows-edition/atc-linux-edition, egui; Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-603
       title: Globus OS
-      status: NEU
-      note: globus-os (L4), AD-026
+      status: BELEGT
+      refs:
+      - ATC-STD-603
+      note: globus-os (L4), AD-026; Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-604
       title: Shiva OS
-      status: NEU
-      note: 'atc-shivacore Kernel (L1) — OS-Standard: Rust no_std'
+      status: BELEGT
+      refs:
+      - ATC-STD-604
+      note: 'atc-shivacore Kernel (L1) — OS-Standard: Rust no_std; Grundgeruest via SCR-0030 (DRAFT)'
     - id: ATC-STD-605
       title: Aurora OS
-      status: NEU
-      note: aurora-ai (L2)
+      status: BELEGT
+      refs:
+      - ATC-STD-605
+      note: aurora-ai (L2); Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-606
       title: Device Integration
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-606
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-607
       title: Offline Mode
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-607
+      note: Grundgeruest via SCR-0030 (DRAFT)
   - id: FAM-35
     name: ATCLang
     range: ATC-STD-620..629
@@ -1791,8 +2473,10 @@ framework:
     slots:
     - id: ATC-STD-620
       title: ATCLang Architecture
-      status: NEU
-      note: atclang (L0), AD-022 Gates G1-G6
+      status: BELEGT
+      refs:
+      - ATC-STD-620
+      note: atclang (L0), AD-022 Gates G1-G6; Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-621
       title: ATCLang Syntax
       status: VERWEIST
@@ -1807,21 +2491,34 @@ framework:
       note: G1 SPEC.md + registry.json
     - id: ATC-STD-623
       title: Compiler
-      status: NEU
-      note: compile_source-Referenzpipeline
+      status: BELEGT
+      refs:
+      - ATC-STD-623
+      note: compile_source-Referenzpipeline; Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-624
       title: VM
-      status: NEU
-      note: ATVM (atc-vm, L0)
+      status: BELEGT
+      refs:
+      - ATC-STD-624
+      note: ATVM (atc-vm, L0); Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-625
       title: REPL
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-625
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-626
       title: Package System
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-626
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-627
       title: Standard Library
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-627
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-628
       title: Compatibility
       status: VERWEIST
@@ -1840,11 +2537,16 @@ framework:
     slots:
     - id: ATC-STD-640
       title: AuditTrail
-      status: NEU
-      note: Kernel K15 security_audit als Referenz
+      status: BELEGT
+      refs:
+      - ATC-STD-640
+      note: Kernel K15 security_audit als Referenz; Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-641
       title: LogChain
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-641
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-642
       title: Immutable Audit Log
       status: VERWEIST
@@ -1852,7 +2554,10 @@ framework:
       - ATC-STD-AUDIT-001
     - id: ATC-STD-643
       title: Event Recording
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-643
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-644
       title: Evidence
       status: VERWEIST
@@ -1865,7 +2570,10 @@ framework:
       - ATC-STD-AUDIT-001
     - id: ATC-STD-646
       title: Audit Retention
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-646
+      note: Grundgeruest via SCR-0030 (DRAFT)
   - id: FAM-37
     name: Supply Chain & Dependencies
     range: ATC-STD-660..667
@@ -1874,7 +2582,10 @@ framework:
     slots:
     - id: ATC-STD-660
       title: Software Supply Chain
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-660
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-661
       title: Dependency Management
       status: VERWEIST
@@ -1882,7 +2593,10 @@ framework:
       - ATC-STD-204
     - id: ATC-STD-662
       title: Dependency Pinning
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-662
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-663
       title: Vulnerability Scanning
       status: VERWEIST
@@ -1891,16 +2605,28 @@ framework:
       note: Dependabot/CodeQL aktiv (F-025/#95)
     - id: ATC-STD-664
       title: SBOM
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-664
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-665
       title: Third-Party Software
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-665
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-666
       title: License Compliance
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-666
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-667
       title: Artifact Integrity
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-667
+      note: Grundgeruest via SCR-0030 (DRAFT)
   - id: FAM-38
     name: Open Source & Lizenzierung
     range: ATC-STD-680..686
@@ -1909,25 +2635,46 @@ framework:
     slots:
     - id: ATC-STD-680
       title: Open Source
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-680
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-681
       title: License
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-681
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-682
       title: Contributor
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-682
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-683
       title: CLA
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-683
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-684
       title: Code of Conduct
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-684
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-685
       title: Security Disclosure
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-685
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-686
       title: Vulnerability Disclosure
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-686
+      note: Grundgeruest via SCR-0030 (DRAFT)
   - id: FAM-39
     name: Business / Economics
     range: ATC-STD-700..706
@@ -1936,25 +2683,46 @@ framework:
     slots:
     - id: ATC-STD-700
       title: Business Model
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-700
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-701
       title: Treasury
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-701
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-702
       title: Revenue
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-702
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-703
       title: Cost Management
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-703
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-704
       title: Incentive Alignment
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-704
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-705
       title: Economic Security
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-705
+      note: Grundgeruest via SCR-0030 (DRAFT)
     - id: ATC-STD-706
       title: Sustainability
-      status: NEU
+      status: BELEGT
+      refs:
+      - ATC-STD-706
+      note: Grundgeruest via SCR-0030 (DRAFT)
   - id: FAM-40
     name: Master-Audit
     range: ATC-STD-999 (reserviert)

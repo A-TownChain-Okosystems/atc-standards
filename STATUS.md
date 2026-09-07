@@ -229,7 +229,14 @@ Conformance-Registry ehrlich: CONF-P2P-001 BRONZE noch nicht erreicht (Kategorie
 PARTIAL, Ed25519-Backend ausstehend). Nächste Züge: Protokoll-Familienspezifikationen
 im P2P-Muster (BLOCK/TX/CONSENSUS…), Validator S-26, ATC-M-003 (K-Sprint 41).
 
-Stand: 08.09.2026, 01:41 (Europe/Berlin) — Registry FINAL: 124 Standards, 124 APPROVED, 0 offen; Katalog 100% belegt; 11 Register EXISTIERT · Self-Compliance: R3 100/100 GATE PASS ·
+GRUNDGERÜST-BATCH (SCR-0030, 01:50-02:05): Für alle 263 leeren Standard-Slots des
+Katalogs Grundgerüst-Standards erzeugt (Registry 124 → 387: 124 APPROVED + 263 DRAFT).
+Je Slot Hausformat-Datei (Definition, Kernpflichten, 5 REQ-STD, Compliance-Regeln,
+Ehrlichkeitsregel — keine normative Wirkung bis Elaborierung + §9-Freigabe). RR-G06
+(FAM-10) bleibt ehrlich NEU (Gate, kein Standard). Katalog: 276 BELEGT / 150 VERWEIST /
+6 KONFLIKT / 1 NEU — kein ungenutzter Standard-Slot mehr.
+
+Stand: 08.09.2026, 02:05 (Europe/Berlin) — Registry: 387 Standards (124 APPROVED + 263 DRAFT SCR-0030); Katalog vollständig zugeordnet; 11 Register EXISTIERT · Self-Compliance: R3 100/100 GATE PASS ·
 Voll-Validierung 110/110 Standards: ALL COMPLIANT (S-18 prüft alle 10 Registry-Dateien; Mutationssuite 12/12)
 
 ## Standards-System

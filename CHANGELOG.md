@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.4.41] - 2026-09-08
+
+### Added
+
+- **263 Grundgerüst-Standards (SCR-0030):** Für jeden leeren Standard-Slot des
+  Framework-Katalogs (264 NEU-Slots; 263 Standard-Slots + 1 Gate-Slot) wurde ein
+  passender Grundgerüst-Standard im Hausformat erzeugt: je Definition, Verortung
+  im Katalog, Kernpflichten, Compliance-/Verifikationsregeln, 5 REQ-STD-Anforderungen,
+  Security Considerations mit Ehrlichkeitsregel (keine normative Wirkung vor
+  Elaborierung + §9-Freigabe). Registry 124 → 387 Standards (124 APPROVED + 263
+  DRAFT). Kategorien je Familie: enterprise, governance, repository, md,
+  development, bug, infrastructure, blockchain, security, applications, os, audit.
+  RR-G06 (Performance-Gate, FAM-10) bleibt ehrlich NEU — Gates sind keine Standards.
+  Der Katalog ist vollständig zugeordnet: 276 BELEGT / 150 VERWEIST / 6 KONFLIKT /
+  1 NEU (RR-G06).
+
+
 ## [1.4.40] - 2026-09-08
 
 ### Changed
