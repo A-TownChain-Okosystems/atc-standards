@@ -1273,16 +1273,34 @@ versions:
       REQ-UPD, 6 COM-UPD-Gates, UPD-NNN/UPD-G01..G09, No-Silent-Update, SCR-Kopplung, Rollback 5 Blockchain-Typen,
       Emergency-Prozess, Update Manifest, Review-Kadenzen, Control Matrix; SCR-0015; §9-Freigabe ausstehend'
   ATC-STD-REPO-AUDIT-003:
+  - version: 1.0.0-Approval
+    date: '2026-09-08'
+    change: 'Owner-§9-Freigabe (Builder-Chat 08.09. 01:41 UTC+2, SCR-0029): DRAFT -> APPROVED, normativ
+      in Kraft, §30-eingefroren. 122. Standard — Auditor-Agent-Spezifikation verbindlich (FAM-41 komplett:
+      001/002/003). Gebuendelt genehmigt: FRAMEWORK-001 v1.0.7-PATCH. Registry FINAL: 124 Standards, 124
+      APPROVED, 0 offen.'
   - version: 1.0.0
     date: '2026-09-08'
     change: 'Initial Release DRAFT (122. Standard, SCR-0029): Katalog-Slot GEPLANT->BELEGT; siehe Mandat-Feld
       der Standards-Registry; §9-Freigabe ausstehend'
   ATC-STD-PROTOCOL-002:
+  - version: 1.0.0-Approval
+    date: '2026-09-08'
+    change: 'Owner-§9-Freigabe (Builder-Chat 08.09. 01:41 UTC+2, SCR-0029): DRAFT -> APPROVED, normativ
+      in Kraft, §30-eingefroren. 123. Standard — CONF-Plan-Pflicht je Protokollfamilie, 10 Pflicht-Kategorien,
+      CONF-BRONZE als active-Gate (Verschaerfung von REQ-PROTO-021). Gebuendelt genehmigt: FRAMEWORK-001
+      v1.0.7-PATCH. Registry FINAL: 124 Standards, 124 APPROVED, 0 offen.'
   - version: 1.0.0
     date: '2026-09-08'
     change: 'Initial Release DRAFT (123. Standard, SCR-0029): Katalog-Slot GEPLANT->BELEGT; siehe Mandat-Feld
       der Standards-Registry; §9-Freigabe ausstehend'
   ATC-STD-PROTOCOL-003:
+  - version: 1.0.0-Approval
+    date: '2026-09-08'
+    change: 'Owner-§9-Freigabe (Builder-Chat 08.09. 01:41 UTC+2, SCR-0029): DRAFT -> APPROVED, normativ
+      in Kraft, §30-eingefroren. 124. Standard — 12 Pflicht-Angriffe je Protokollfamilie, Ehrlichkeitsregel,
+      Security-Registry, Ed25519-HAL-Pflicht vor Mainnet-Wert-Transport. Gebuendelt genehmigt: FRAMEWORK-001
+      v1.0.7-PATCH. Registry FINAL: 124 Standards, 124 APPROVED, 0 offen. Katalog 100% BELEGT (0 GEPLANT).'
   - version: 1.0.0
     date: '2026-09-08'
     change: 'Initial Release DRAFT (124. Standard, SCR-0029): Katalog-Slot GEPLANT->BELEGT; siehe Mandat-Feld

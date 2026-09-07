@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.4.40] - 2026-09-08
+
+### Changed
+
+- **§9-Freigaben (SCR-0029, 01:41 UTC+2):** ATC-STD-REPO-AUDIT-003 (122.),
+  ATC-STD-PROTOCOL-002 (123.) und ATC-STD-PROTOCOL-003 (124.) — DRAFT → APPROVED,
+  normativ, §30-eingefroren; gebündelt genehmigt: FRAMEWORK-001 v1.0.7-PATCH.
+  Registry FINAL: 124 Standards, 124 APPROVED, 0 offen. Der Framework-Katalog ist
+  damit 100% belegt (43 Familien, 433 Slots, 0 GEPLANT).
+- **Conformance-Registry ehrlich nachgezogen:** CONF-P2P-001 erreicht CONF-BRONZE
+  noch nicht — Kategorie 10 (security_basis) PARTIAL, da der echte Ed25519-Backend
+  aussteht (REQ-PTS-006); Standard-Freigabe hebt die Exception-Formulierung auf.
+
+
 ## [1.4.39] - 2026-09-08
 
 ### Added

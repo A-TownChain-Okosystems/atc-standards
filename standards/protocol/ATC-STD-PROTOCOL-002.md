@@ -3,15 +3,15 @@ standard:
   id: ATC-STD-PROTOCOL-002
   title: "ATC Protocol Conformance- & Interoperabilitäts-Test-Standard — verbindliche Testpyramide je Protokollfamilie: CONF-Pläne, Testkategorien, Konferenz-Stufen, Konformance-Registry, active-Gate"
   version: "1.0.0"
-  status: draft
+  status: approved
   category: protocol
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"
   created: "2026-09-08"
   updated: "2026-09-08"
-  normative: false
-  effective_date: ""
-  review_date: ""
+  normative: true
+  effective_date: "2026-09-08"
+  review_date: "2027-09-08"
   classification: PUBLIC
   language: de-DE
   supersedes: null
@@ -30,9 +30,9 @@ standard:
   license: "Copyright (c) 2026 Michael Wroblewski"
 ----
 
-# ATC-STD-PROTOCOL-002 — Conformance- & Interoperabilitäts-Tests (v1.0.0, DRAFT)
+# ATC-STD-PROTOCOL-002 — Conformance- & Interoperabilitäts-Tests (v1.0.0, APPROVED)
 
-> **Status:** DRAFT (v1.0.0) — 123. Standard; Agenten-Review + Integration SCR-0029;
+> **Status:** APPROVED (v1.0.0, §30-eingefroren) — 123. Standard; Agenten-Review + Integration SCR-0029;
 > Owner-§9-Freigabe ausstehend. Bei Freigabe: APPROVED, normativ, §30-eingefroren.
 > **Familie:** Protocol Governance (Katalog FAM-42) — schließt mit PROTOCOL-003
 > die offenen Flanken des Protokoll-Dachstandards.
@@ -141,6 +141,7 @@ Produktivdatenbestand. Fuzzing-Korpora werden versioniert, Ausgaben nicht.
 
 ## Changelog (Standard-intern)
 
+- **1.0.0-Approval** (2026-09-08): Owner-§9-Freigabe (Builder-Chat 08.09. 01:41 UTC+2, SCR-0029): DRAFT → APPROVED, normativ in Kraft, §30-eingefroren. Gebündelt genehmigt: FRAMEWORK-001 v1.0.7-PATCH. Registry FINAL: 124 Standards, 124 APPROVED.
 - **1.0.0** (2026-09-08): Initial Release DRAFT — 123. Standard; 10 Pflicht-
   Kategorien, CONF-BRONZE/SILBER/GOLD, Conformance-Registry + Validator S-26
   (GEPLANT als automatisierte Prüfung), active-Gate-Verschärfung von

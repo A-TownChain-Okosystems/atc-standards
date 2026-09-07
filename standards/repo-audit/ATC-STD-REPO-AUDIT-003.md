@@ -3,15 +3,15 @@ standard:
   id: ATC-STD-REPO-AUDIT-003
   title: "Automatisierter ATC Repository Auditor — verbindliche Spezifikation des KI-/Automatisierungsagenten für reproduzierbare Repository-Audits: Mandat, Pipeline, Befugnisse, Gates, Report-Erzeugung"
   version: "1.0.0"
-  status: draft
+  status: approved
   category: repo-audit
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"
   created: "2026-09-08"
   updated: "2026-09-08"
-  normative: false
-  effective_date: ""
-  review_date: ""
+  normative: true
+  effective_date: "2026-09-08"
+  review_date: "2027-09-08"
   classification: PUBLIC
   language: de-DE
   supersedes: null
@@ -32,9 +32,9 @@ standard:
   license: "Copyright (c) 2026 Michael Wroblewski"
 ----
 
-# ATC-STD-REPO-AUDIT-003 — Automatisierter ATC Repository Auditor (v1.0.0, DRAFT)
+# ATC-STD-REPO-AUDIT-003 — Automatisierter ATC Repository Auditor (v1.0.0, APPROVED)
 
-> **Status:** DRAFT (v1.0.0) — 122. Standard; Agenten-Review + Integration SCR-0029;
+> **Status:** APPROVED (v1.0.0, §30-eingefroren) — 122. Standard; Agenten-Review + Integration SCR-0029;
 > Owner-§9-Freigabe ausstehend. Bei Freigabe: APPROVED, normativ, §30-eingefroren.
 > **Familie:** Repository Audit (FAM-41, Slot 003 — letzte offene Flanke der Familie).
 > Schließt die Audit-Familie: 001 (Prozess) + 002 (Checks/Health Score) + 003 (Agent).
@@ -154,6 +154,7 @@ Anti-Injection-Regel), Isolation des Build-Runners.
 
 ## Changelog (Standard-intern)
 
+- **1.0.0-Approval** (2026-09-08): Owner-§9-Freigabe (Builder-Chat 08.09. 01:41 UTC+2, SCR-0029): DRAFT → APPROVED, normativ in Kraft, §30-eingefroren. Gebündelt genehmigt: FRAMEWORK-001 v1.0.7-PATCH. Registry FINAL: 124 Standards, 124 APPROVED.
 - **1.0.0** (2026-09-08): Initial Release DRAFT — 122. Standard; schließt FAM-41
   (Repository Audit komplett: 001/002/003). Aus Owner-Entwurf REPO-AUDIT-001 §28
   (Auditor-Agent) als eigenständiger Standard entwickelt; AAS-/MILESTONE-001-/
