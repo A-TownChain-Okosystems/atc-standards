@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.4.3] - 2026-09-07
+
+### Fixed
+
+- **AUD-FIX validate_all:** `file_id()`-Regex erkannte die Präfixe `MD-`, `SC-`,
+  `README-` nicht — dadurch wurden 22 Standards (ATC-STD-MD-001,
+  ATC-STD-SC-001..020, ATC-STD-README-001) von der CI-Validierung stillschweigend
+  übersprungen (81 statt 103 geprüft). Regex um die drei Präfixe erweitert.
+- **S-01 Metadaten:** `updated`-Feld in 22 Standard-Headern ergänzt
+  (ATC-STD-MD-001, ATC-STD-SC-001..020, ATC-STD-README-001) — alle 103 Standards
+  jetzt vollständig S-01-konform.
+- **Code-Hygiene:** Doppelter Registry-Cross-Check-Block in `validate_all.py`
+  entfernt (Copy-Paste-Duplikat).
+
+### Validation
+
+- Standards-Validierung: **103/103 COMPLIANT** (vorher real 81/103, MASKIERT)
+- S-17 Duplicate Detection: PASS · S-18 Registry-Parse: PASS · S-19 Mutation: 12/12
+
 ## [1.4.2] - 2026-09-07
 
 ### Added

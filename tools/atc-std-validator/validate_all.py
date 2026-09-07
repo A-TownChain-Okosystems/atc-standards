@@ -45,7 +45,7 @@ def collect():
 def file_id(path):
     try:
         head = open(path, encoding="utf-8").read(2500)
-        m = re.search(r"^\s*id:\s*(ATC-STD-(?:BUG-|NET-|ZKP-|AI-DEV-)?[0-9]{3,}|ATC-AAS-[0-9]{3,}|ATC-ENT-[0-9]{3,})\s*$", head, re.M)
+        m = re.search(r"^\s*id:\s*(ATC-STD-(?:BUG-|NET-|ZKP-|AI-DEV-|MD-|SC-|README-)?[0-9]{3,}|ATC-AAS-[0-9]{3,}|ATC-ENT-[0-9]{3,})\s*$", head, re.M)
         return m.group(1) if m else None
     except Exception:
         return None
@@ -115,15 +115,6 @@ def main():
     if not registry_ok:
         fails += 1
 
-    # Registry-Cross-Check: Registry-Eintraege muessen Dateien haben
-    try:
-        reg = open(REGISTRY, encoding="utf-8").read()
-        reg_ids = set(re.findall(r"id:\s*(ATC-STD-[0-9]{3,})", reg))
-        missing = reg_ids - set(ids)
-        if missing:
-            print("WARN: Registry ohne Datei: " + ", ".join(sorted(missing)))
-    except Exception:
-        pass
     # Registry-Cross-Check: Registry-Eintraege muessen Dateien haben
     try:
         reg = open(REGISTRY, encoding="utf-8").read()

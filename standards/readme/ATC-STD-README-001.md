@@ -8,6 +8,7 @@ standard:
   authority: A-TownChain-Okosystems
   owner: Michael (Owner-Entwurf) / ATC-AI-ARCH-001 (Formalfassung)
   created: "2026-09-07"
+  updated: "2026-09-07"
   normative: true
   applies_to: "Alle öffentlichen und internen ATC-Repositories"
   supersedes: []
