@@ -11,9 +11,9 @@ framework:
     slots_total: 426
     slots_neu: 264
     slots_verweist: 150
-    slots_belegt: 3
+    slots_belegt: 5
     slots_konflikt: 6
-    slots_geplant: 3
+    slots_geplant: 1
   families:
   - id: FAM-01
     name: Enterprise & Governance
@@ -1222,10 +1222,10 @@ framework:
     slots:
     - id: ATC-STD-AOS-001
       title: ATC Agent Operating Standard — 14 Session-Fragen (Wer bin ich? … Welcher Audit-Nachweis entsteht?)
-      status: GEPLANT
+      status: BELEGT
       refs:
-      - ATC-STD-FRAMEWORK-001
-      note: 'Mandatsregel bis Erstellung: FRAMEWORK-001 §8; Erstellung via SCR (P1)'
+      - ATC-STD-AOS-001
+      note: Erstellt via SCR-0022 (REQ-FW-009); Mandatsregel gilt seit FRAMEWORK-001 §8
   - id: FAM-21
     name: Mining Standards
     range: ATC-STD-340..350
@@ -1963,10 +1963,11 @@ framework:
     slots:
     - id: ATC-STD-999
       title: Enterprise Completeness & Consistency Audit
-      status: GEPLANT
+      status: BELEGT
       refs:
+      - ATC-STD-999
       - ATC-STD-AUDIT-001
-      note: 16-Stufen-Audit-Kette + 13 Change-Nachweis-Fragen gem. FRAMEWORK-001 §9; Erweiterung von AUDIT-001, SCR empfohlen (P1)
+      note: Erstellt via SCR-0022 (REQ-FW-010); AUD-Record Typ MASTER als Erweiterung von AUDIT-001
   - id: FAM-41
     name: Repository Audit
     range: ATC-STD-REPO-AUDIT-001..003

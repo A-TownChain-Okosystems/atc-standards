@@ -1,5 +1,37 @@
 # Changelog
 
+## [1.4.28] - 2026-09-08
+
+### Added
+
+- **ATC-STD-AOS-001 v1.0.0 DRAFT (SCR-0022, 115. Standard):** ATC Agent Operating
+  Standard — Ausarbeitung des 14-Fragen-Mandats aus FRAMEWORK-001 §8 (Owner-Entwurf
+  „20. KI-Softwareentwicklungsagent"). 17 REQ-AOS: Session-Lifecycle (SESSION_START →
+  14 Fragen → Record → Aktionsreihe → Verifikation → Doku-Sync → Audit-Nachweis →
+  SESSION_END), 14 Fragen mit autorisierten Quellen (Manifest, Registry, SCR, AD,
+  MILESTONE), maschinenlesbarer Session-Record `AOS-SESS-YYYYMMDD-NNN` (YAML/JSON),
+  Fragen 1–10 vor der ersten Aktion / 11–14 bis SESSION_END, Mandatsverstoß =
+  Finding (BUG-005); Human Gates übergeordnet (AI-DECISION-001).
+- **ATC-STD-999 v1.0.0 DRAFT (SCR-0022, 116. Standard):** ATC Master-Audit —
+  Enterprise Completeness & Consistency Audit (Owner-Entwurf „40. Master-Audit").
+  12 REQ-MA: 16-Stufen-Audit-Kette (Requirement → Specification → Architecture →
+  Code → Tests → Build → Deployment → Runtime → Security → Documentation → Wiki →
+  README → CHANGELOG → Roadmap → Standards → Audit Evidence) mit Status je Stufe
+  (CONSISTENT/PARTIAL/INCONSISTENT/MISSING) und P0/P1-Blockade; 13 Change-Nachweis-
+  Fragen (WHAT … AUDIT EVIDENCE) je Änderung; MAUD-YYYY-NNNN als AUD-Record Typ
+  MASTER (keine Parallelstruktur); Register-Abdeckung (11 Register); Orchestrierung
+  statt Duplikation (S-01..S-22, REPO-AUDIT Health Scores, RR-G01..G08,
+  MILESTONE/COMPAT-Gates); MAJOR ohne Master-Audit-PASS verboten; Audit-der-Audits
+  als Continuous-Improvement-Schleife.
+- **FRAMEWORK-001 v1.0.3 (PATCH, SCR-0022):** FAM-20 + FAM-40 GEPLANT → BELEGT
+  (5 BELEGT, 1 GEPLANT — offen: REPO-AUDIT-003); Genehmigung gebündelt mit §9-Freigabe
+  beider neuen Standards.
+- **Registry:** 116 Standards (114 APPROVED + 2 DRAFT); Kategorien +agent-operating,
+  +master-audit; 7 Naming-Patterns (AOS-SESS-Session-IDs, REQ-AOS/REQ-MA);
+  2 DAG-Knoten; Agent-Manifest 116 Standards gebunden. P1 der Gap-Roadmap damit
+  abgearbeitet (Requirements Registry folgt).
+
+
 ## [1.4.27] - 2026-09-08
 
 ### Changed

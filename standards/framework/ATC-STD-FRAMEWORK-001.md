@@ -2,7 +2,7 @@
 standard:
   id: ATC-STD-FRAMEWORK-001
   title: "ATC Enterprise Standards Framework — Master-Dokument (ATC-STANDARDS-MASTER): Zusammenführung aller Standards, Katalog, Kollisionsauflösung, einheitliche Status-/Change-/Traceability-Modelle, Register-Architektur"
-  version: "1.0.2"
+  version: "1.0.3"
   status: approved
   category: framework
   authority: A-TownChain-Okosystems
@@ -34,9 +34,9 @@ standard:
   license: "Copyright (c) 2026 Michael Wroblewski"
 ----
 
-# ATC-STD-FRAMEWORK-001 — ATC Enterprise Standards Framework (v1.0.2, APPROVED)
+# ATC-STD-FRAMEWORK-001 — ATC Enterprise Standards Framework (v1.0.3, APPROVED)
 
-> **Status:** APPROVED (v1.0.2) — §9-Freigabe Michael Wroblewski (Builder-Chat 07.09.2026, 23:48 UTC+2);
+> **Status:** APPROVED (v1.0.3) — §9-Freigabe Michael Wroblewski (Builder-Chat 07.09.2026, 23:48 UTC+2);
 > normativ in Kraft ab 07.09.2026, §30-eingefroren (ATC-STD-000). Harmonisierung SCR-0019 akzeptiert.
 > **Rolle:** Master-Dokument (ATC-STANDARDS-MASTER) — führt alle bestehenden Standards zusammen und definiert
 > die Zielarchitektur, den Enterprise-Katalog mit Lückenzuordnung und die einheitlichen Governance-Modelle.
@@ -145,7 +145,7 @@ Titel + Status. Statuswerte:
 | GEPLANT | Slot für konkreten zukünftigen Standard reserviert (SCR empfohlen) |
 | NEU | Lücke — neuer Standard zu erstellen (via SCR, Katalog-Slot einhalten) |
 
-Familienübersicht (Zähler live im stats-Block von registry/framework.yaml, Stand v1.0.2: 426 Slots — 264 NEU, 150 VERWEIST, 3 BELEGT, 6 KONFLIKT, 3 GEPLANT):
+Familienübersicht (Zähler live im stats-Block von registry/framework.yaml, Stand v1.0.3: 426 Slots — 264 NEU, 150 VERWEIST, 5 BELEGT, 6 KONFLIKT, 1 GEPLANT):
 FAM-01 Enterprise & Governance (001–015) · FAM-02 Standards-Governance (020–033,
 weitgehend VERWEIST auf ATC-STD-000) · FAM-03 Repository (040–054, VERWEIST auf
 ATC-STD-201..204/README-001/MD-001) · FAM-04 Dokumentation (060–075) · FAM-05
@@ -157,8 +157,8 @@ Testing & QA (140–153) · FAM-09 CI/CD & DevOps (160–174) · FAM-10 Release-
 FAM-14 Interoperability (240–250) · FAM-15 ZKP/Privacy (260–267, VERWEIST auf
 ZKP-001..010) · FAM-16 Oracle (270–276) · FAM-17 Identity (280–286) · FAM-18
 Cybersecurity (300–313, Slot 300 KONFLIKT) · FAM-19 AI Agents (320–335, VERWEIST
-auf AAS-001..025 + AI-DECISION-001) · FAM-20 Agent Operating (GEPLANT:
-ATC-STD-AOS-001, s. §8) · FAM-21 Mining (340–350) · FAM-22 Wallet (360–368) ·
+auf AAS-001..025 + AI-DECISION-001) · FAM-20 Agent Operating (BELEGT:
+ATC-STD-AOS-001, s. §8, SCR-0022) · FAM-21 Mining (340–350) · FAM-22 Wallet (360–368) ·
 FAM-23 DeFi (380–389) · FAM-24 NFT (400–409) · FAM-25 GameFi/Shivamon (420–434) ·
 FAM-26 API (440–450) · FAM-27 Daten (460–469) · FAM-28 Observability (480–488) ·
 FAM-29 Incident & Recovery (500–509) · FAM-30 Release & Update (520–529, VERWEIST
@@ -166,8 +166,8 @@ auf VERSION-001/UPDATE-001/COMPAT-001) · FAM-31 Projektmanagement (540–549,
 VERWEIST auf MILESTONE-001) · FAM-32 Requirements (560–566) · FAM-33 UI/UX
 (580–587) · FAM-34 Mobile/Desktop/OS (600–607) · FAM-35 ATCLang (620–629) · FAM-36
 AuditTrail/LogChain (640–646) · FAM-37 Supply Chain (660–667) · FAM-38 Open Source
-(680–686) · FAM-39 Business/Economics (700–706) · FAM-40 Master-Audit (999,
-GEPLANT: ATC-STD-999, s. §9) · FAM-41 Repository Audit (REPO-AUDIT-001..003:
+(680–686) · FAM-39 Business/Economics (700–706) · FAM-40 Master-Audit (999, BELEGT:
+ATC-STD-999, s. §9, SCR-0022) · FAM-41 Repository Audit (REPO-AUDIT-001..003:
 001+002 BELEGT (002 Health-Score/CHECK-NNN), 003 Auditor-Agent GEPLANT,
 SCR-0020/0021).
 
@@ -216,14 +216,15 @@ Session-Fragen:
 synchronisiert werden? · 14. Welcher Audit-Nachweis entsteht?
 
 Ausprägung als eigener verbindlicher Standard: **ATC-STD-AOS-001 (Agent Operating
-Standard)** — GEPLANT im Katalog (FAM-20), Erstellung via SCR; bis dahin gilt
-dieser Abschnitt als verbindliche Mandatsregel (Kopplung: AI-DECISION-001
+Standard)** — ERSTELLT (FAM-20, SCR-0022, DRAFT, §9-Freigabe ausstehend); bis zu deren
+Freigabe gilt dieser Abschnitt als verbindliche Mandatsregel (Kopplung: AI-DECISION-001
 Human Gates, AAS-017, AAS-009).
 
-## §9 Master-Audit — ATC-STD-999 (reserviert)
+## §9 Master-Audit — ATC-STD-999 (erstellt, DRAFT)
 
-Der wichtigste übergeordnete Standard wird als **ATC-STD-999 — Enterprise
-Completeness & Consistency Audit** reserviert (GEPLANT, FAM-40): Er prüft nicht
+Der wichtigste übergeordnete Standard ist als **ATC-STD-999 — Enterprise
+Completeness & Consistency Audit** erstellt (FAM-40, SCR-0022, DRAFT, §9-Freigabe
+ausstehend): Er prüft nicht
 nur Code, sondern das gesamte System über die Audit-Kette (REQ-FW-010):
 
 ```
@@ -241,8 +242,8 @@ F-021) und wird die bestehenden Validator-Gates (S-01..S-21) einbinden.
 ## §10 Gap-Roadmap (Priorisierung der NEU-Slots)
 
 Priorisierungsempfehlung (jede Erstellung via SCR + §9-Freigabe):
-- **P1 (Governance-Kern):** ATC-STD-AOS-001 (§8) · ATC-STD-999 (§9) ·
-  Requirements Registry · FAM-31/FAM-32-Lücken (Project/Requirements)
+- **P1 (Governance-Kern):** ATC-STD-AOS-001 (§8) · ATC-STD-999 (§9) — beide ERSTELLT
+  via SCR-0022 (§9 ausstehend) · Requirements Registry · FAM-31/FAM-32-Lücken (Project/Requirements)
 - **P2 (Engineering-Qualität):** FAM-08 Testing · FAM-09 CI/CD · FAM-05/06
   (incl. KONFLIKT-Auflösung 100) · FAM-04-Lücken (API-Doc, Release Notes)
 - **P3 (Ökosystem-Standardisierung):** FAM-11/12/13-Rest · FAM-18 Security ·
@@ -272,7 +273,7 @@ Priorisierungsempfehlung (jede Erstellung via SCR + §9-Freigabe):
   Wiederherstellen→Testen→Auditieren→Freigeben) ausgeführt werden.
 - **REQ-FW-009** (§8): Das Agent Operating Mandate (14 Fragen) MUSS von jedem
   KI-Agenten vor jeder Aktionsreihe beantwortet sein; Ausprägung als
-  ATC-STD-AOS-001 ist GEPLANT.
+  ATC-STD-AOS-001 ist ERSTELLT (SCR-0022, DRAFT).
 - **REQ-FW-010** (§9): ATC-STD-999 ist als Master-Audit-Standard reserviert;
   jede Änderung MUSS die 13 Nachweis-Fragen beantworten können.
 - **REQ-FW-011** (§2): Die 11 Register MÜSSEN vollständig aufgebaut werden
@@ -290,6 +291,12 @@ deckt AUDIT-001 die Audit-Kette ab. Agenten-Operationen ohne Mandatsbeantwortung
 (§8) sind governance-widrig (AI-DECISION-001 Human Gates bleiben übergeordnet).
 
 ## Changelog (Standard-intern)
+
+- **1.0.3** (2026-09-08): PATCH (SCR-0022) — FAM-20 (AOS-001) und FAM-40
+  (ATC-STD-999) GEPLANT → BELEGT: Zähler-Synchronisation (5 BELEGT, 1 GEPLANT —
+  offen bleibt nur REPO-AUDIT-003); §8/§9/P1-Roadmap auf Erstellt-Status
+  aktualisiert; keine semantischen Änderungen; Genehmigung gebündelt mit §9-Freigabe
+  ATC-STD-AOS-001 + ATC-STD-999.
 
 - **1.0.2** (2026-09-07): PATCH (SCR-0021) — FAM-41 Slot 002 (REPO-AUDIT-002) GEPLANT
   → BELEGT: Zähler-Synchronisation (3 BELEGT, 3 GEPLANT); Zähler-Angabe auf

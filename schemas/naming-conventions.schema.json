@@ -470,6 +470,26 @@
         "repoAuditScoreRequirementId": {
           "pattern": "^REQ-RB-[0-9]{3,}$",
           "description": "Repo-Audit-Score-Anforderungs-ID (REQ-RB-NNN, ATC-STD-REPO-AUDIT-002)"
+        },
+        "aosStandardId": {
+          "pattern": "^ATC-STD-AOS-[0-9]{3,}$",
+          "description": "ATC Agent Operating Standard (ATC-STD-AOS-001)"
+        },
+        "aosRequirementId": {
+          "pattern": "^REQ-AOS-[0-9]{3,}$",
+          "description": "AOS-Anforderungs-ID (REQ-AOS-NNN)"
+        },
+        "aosSessionId": {
+          "pattern": "^AOS-SESS-[0-9]{8}-[0-9]{3,}$",
+          "description": "Agent-Session-Record-ID (AOS-SESS-YYYYMMDD-NNN)"
+        },
+        "masterAuditStandardId": {
+          "pattern": "^ATC-STD-999(-[0-9]{3,})?$",
+          "description": "ATC Master-Audit-Standard (ATC-STD-999)"
+        },
+        "masterAuditRequirementId": {
+          "pattern": "^REQ-MA-[0-9]{3,}$",
+          "description": "Master-Audit-Anforderungs-ID (REQ-MA-NNN)"
         }
       }
     },
@@ -634,6 +654,14 @@
         "repoAuditStandardDoc": {
           "pattern": "^ATC-STD-REPO-AUDIT-[0-9]{3,}[.]md$",
           "description": "Repository-Audit-Standard-Dokument"
+        },
+        "aosStandardDoc": {
+          "pattern": "^ATC-STD-AOS-[0-9]{3,}[.]md$",
+          "description": "AOS-Standard-Dokument"
+        },
+        "masterAuditStandardDoc": {
+          "pattern": "^ATC-STD-999(-[0-9]{3,})?[.]md$",
+          "description": "Master-Audit-Standard-Dokument"
         }
       }
     },

@@ -22,10 +22,9 @@ Evidence-First, Decision Records DEC-NNNNNN, Separation of Duties; §24-Familie 
 gemappt (12/15), Kill-Switch als dokumentierte Lücke (künftig AAS-026+).
 
 Sammelfreigabe 22:25 (Owner-Mandat „Freigabe"): BUG-005 + AUDIT-001 + AI-DECISION-001 → APPROVED,
-normativ, §30-eingefroren. Registry FINAL (00:05): 114 Standards, 114 APPROVED, 0 DRAFT,
-0 offen — alle normativ. FRAMEWORK-001 (112.) via SCR-0019 23:48 (v1.0.1),
-REPO-AUDIT-001 (113.) via SCR-0020 23:58, REPO-AUDIT-002 (114.) via SCR-0021 00:05
-(inkl. FRAMEWORK v1.0.2-PATCH). Change-Control-Kette SCR→VERSION→UPDATE→COMPAT→AUDIT +
+normativ, §30-eingefroren. Registry FINAL (00:05): 114 Standards, 114 APPROVED — REPO-AUDIT-002 (114.) via
+SCR-0021 00:05 (inkl. FRAMEWORK v1.0.2-PATCH). Stand 00:20: 116 Standards,
+114 APPROVED + 2 DRAFT (AOS-001, ATC-STD-999, §9 ausstehend). Change-Control-Kette SCR→VERSION→UPDATE→COMPAT→AUDIT +
 Meilenstein-Governance + Enterprise-Framework vollständig normativ in Kraft.
 
 ATC-STD-MILESTONE-001 v1.0.0 DRAFT (SCR-0018, Owner-Entwurf 23:31): Verbindliche
@@ -74,6 +73,19 @@ Mapping mit P0→E-Regel, maschinenlesbarer Health-Report mit AUD-Record-Kopplun
 FRAMEWORK-001 PATCH v1.0.2 gebündelt (3 BELEGT, 3 GEPLANT). REPO-AUDIT-003
 (Auditor-Agent) GEPLANT. §9-FREIGEGEBEN 00:05 (SCR-0021) — APPROVED, normativ, §30-eingefroren.
 
+ATC-STD-AOS-001 v1.0.0 DRAFT (SCR-0022, 115. Standard) + ATC-STD-999 v1.0.0 DRAFT
+(SCR-0022, 116. Standard) — die P1-Lücken der Framework-Gap-Roadmap: (a) Agent
+Operating Standard: 14-Fragen-Session-Mandat (FRAMEWORK-001 §8) mit autorisierten
+Quellen je Frage, Session-Lifecycle, maschinenlesbarem Session-Record
+(AOS-SESS-YYYYMMDD-NNN), Mandatsverstoß = Finding (BUG-005); Human Gates übergeordnet
+(AI-DECISION-001). (b) Master-Audit (ATC-STD-999): 16-Stufen-System-Audit-Kette
+(Requirement→…→Audit Evidence) mit Status je Stufe und P0/P1-Blockade, 13 Change-
+Nachweis-Fragen je Änderung, MAUD-YYYY-NNNN als AUD-Record Typ MASTER,
+Register-Abdeckung (11 Register), Orchestrierung statt Duplikation (S-01..S-22,
+REPO-AUDIT Health Scores, RR-G01..G08, MILESTONE/COMPAT-Gates), MAJOR ohne
+Master-Audit-PASS verboten, Audit-der-Audits. FAM-20 + FAM-40 → BELEGT (nur noch
+REPO-AUDIT-003 GEPLANT); FRAMEWORK-001 PATCH v1.0.3 gebündelt. §9-Freigabe ausstehend.
+
 AUD-2026-0001 (erster Lauf unter ATC-STD-AUDIT-001, 22:30): Standards-Umsetzungs-Audit —
 CONDITIONAL_PASS, Completeness Score C. Umsetzung: 8 AUTOMATED (7%) · 18 PARTIAL (16%) ·
 82 DOCUMENTED (75%). Neue Findings F-019..F-023 (S2: F-019 Enforcement-Lücke, F-020 DEC-Records,
@@ -107,7 +119,7 @@ Dependabot in 16 Manifest-Repos (F-025). Org-Settings per Owner-Entscheidung 23:
 Offen: F-026 (Version-Baseline), F-027 (Tag v2.0.0), F-028 (ATC-STD-202 22→26), F-029 (governance-ci 3 Repos,
 Owner-Aktion workflow-Scope). Report: docs/AUD-2026-0002_ORG_AUDIT.md · Issues #94..98 in a-townchain-os.
 
-Stand: 08.09.2026, 00:05 (Europe/Berlin) — Registry FINAL 114/114 APPROVED; REPO-AUDIT-002 §9-freigegeben 00:05 (inkl. FRAMEWORK v1.0.2-PATCH) · Self-Compliance: R3 100/100 GATE PASS ·
+Stand: 08.09.2026, 00:20 (Europe/Berlin) — REPO-AUDIT-002 §9-freigegeben 00:05 (Registry war FINAL 114/114); AOS-001 + ATC-STD-999 (SCR-0022) neue DRAFTs in §9-Prüfung · Self-Compliance: R3 100/100 GATE PASS ·
 Voll-Validierung 110/110 Standards: ALL COMPLIANT (S-18 prüft alle 10 Registry-Dateien; Mutationssuite 12/12)
 
 ## Standards-System
@@ -132,11 +144,11 @@ Voll-Validierung 110/110 Standards: ALL COMPLIANT (S-18 prüft alle 10 Registry-
 | ATC-STD-AI-DECISION-001 | ATC Agent Decision-Making Standard (Entscheidungsmodell über AAS/AI-DEV) | APPROVED — SCR-0014, §9-Sammelfreigabe 22:25 |
 | ATC-STD-UPDATE-001 | ATC Update Standard (Change Control: Lifecycle, Gates, Rollback, Emergency) | DRAFT — SCR-0015, §9-Freigabe ausstehend |
 | ATC-STD-COMPAT-001 | Major Version Compatibility & Recovery Standard (Major-Gate in UPD-G04) | APPROVED — SCR-0016, §9-Freigabe 23:02, normativ, §30-eingefroren |
-| **Summe** | **114 Standards** | **114 APPROVED, 0 offen — alle normativ** |
+| **Summe** | **116 Standards** | **114 APPROVED + 2 DRAFT (AOS-001, ATC-STD-999)** |
 
 ## Qualitätssicherung (CI, self-compliant)
 
-- Standards-Validierung: **114/114 COMPLIANT** (114 APPROVED, 0 DRAFT; AUD-FIX 21:30 — validate_all prüft real alle Dateien inkl. DESC-/VERSION-/COMPAT-Präfixe; Fehlercheck 23:30: S-18 Voll-Modus prüft alle 10 Registry-Dateien strukturell)
+- Standards-Validierung: **116/116 COMPLIANT** (114 APPROVED + 2 DRAFT AOS-001/ATC-STD-999; AUD-FIX 21:30 — validate_all prüft real alle Dateien inkl. DESC-/VERSION-/COMPAT-Präfixe; Fehlercheck 23:30: S-18 Voll-Modus prüft alle 10 Registry-Dateien strukturell)
 - Mutationssuite S-19: **12/12** (synthetische Fixtures)
 - Repository-Audit R3: **100/100, GATE PASS** · README-Gate: **13/13 CONFORM** · MD-Gate: **CONFORM** · Contract-Registry-Gate: **CONFORM**
 - Abhängigkeitsgraph: 105 Knoten, 226 Kanten, azyklisch (DAG) — Voll-Audit 21:45 + DESC-001 21:55 + VERSION-001 22:05

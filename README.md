@@ -43,9 +43,9 @@ ATC Standards provides the canonical normative governance layer of the
 A-TownChain ecosystem. It is responsible for:
 
 - Verfassung **ATC-STD-000** v1.2.0 (ID-System, Lifecycle, SCR, §30 Immutabilität)
-- Standard-Registry (**114 Standards**: 114 APPROVED, 0 offen) mit
+- Standard-Registry (**116 Standards**: 114 APPROVED + 2 DRAFT, AOS-001/ATC-STD-999) mit
   Versionierung, Dependencies (DAG) und Findings (BUG-001..004)
-- Maschinelle Qualitätssicherung: `atc-std-validator` (114/114 COMPLIANT),
+- Maschinelle Qualitätssicherung: `atc-std-validator` (116/116 COMPLIANT),
   Mutationssuite (12/12), `atc-repo-audit` (R3, 100/100 GATE PASS),
   Agent-Manifest-Gate (`check_agent_manifest.py`)
 - Naming-SSOT (`naming-conventions.schema.json`), Change-Requests (SCR-0001..0007)
@@ -58,9 +58,9 @@ kein Standard ohne Eintrag; kein Repository ohne Standards-Bezug).
 ## Status
 
 **Status:** `release-candidate` — Governance-Freeze abgeschlossen
-(07./08.09.2026): alle 114 Standards APPROVED und normativ in Kraft — REPO-AUDIT-002
-als 114. APPROVED 00:05 (inkl. FRAMEWORK-001 v1.0.2-PATCH); REPO-AUDIT-001 als 113.
-APPROVED 23:58 (README-001 20:36,
+(07./08.09.2026): 114 der 116 Standards APPROVED und normativ in Kraft — AOS-001 und
+ATC-STD-999 als einzige DRAFTs (§9-Freigabe ausstehend); REPO-AUDIT-002 als 114.
+APPROVED 00:05 (README-001 20:36,
 SC-Framework 001..020 21:00, MD-001 21:05). Übergangsfristen
 (Commit-Trailer, Repo-Manifeste, Interface-Test-Suiten) laufen bis 07.10.2026.
 
@@ -81,7 +81,7 @@ SC-Framework 001..020 21:00, MD-001 21:05). Übergangsfristen
 ### Data Flow
 
 Änderungsantrag → SCR (§19–33) → Owner-Freigabe (§9) → Registry-Eintrag →
-CI-Validierung (114/114 + Gates) → APPROVED → normativ in Kraft (§30 Immutabilität).
+CI-Validierung (116/116 + Gates) → APPROVED → normativ in Kraft (§30 Immutabilität).
 
 ### Dependencies
 
@@ -185,7 +185,7 @@ und dem AAS-008-Workflow; Commits nach AI-DEV-007 v1.0.1.
 Run the complete test suite:
 
 ```bash
-python3 tools/atc-std-validator/validate_all.py        # 114/114 COMPLIANT
+python3 tools/atc-std-validator/validate_all.py        # 116/116 COMPLIANT
 python3 tools/atc-std-validator/tests/test_s19_mutation.py  # 12/12 OK
 python3 tools/atc-repo-audit/atc_repo_audit.py . --level R3    # GATE PASS
 python3 tools/atc-std-validator/check_agent_manifest.py       # GATE PASS

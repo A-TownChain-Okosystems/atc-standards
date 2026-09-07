@@ -299,7 +299,7 @@ F("FAM-19", "AI-Agent Standards", "ATC-STD-320..335", [
     sl("ATC-STD-335", "Agent Failure Recovery", S_VERWEIST, ["ATC-STD-AI-DECISION-001"]),
 ], note="Abgedeckt durch ATC-AAS-001..025 + ATC-STD-AI-DECISION-001 (über den Betriebsstandards)"),
 F("FAM-20", "Agent Operating (KI-Softwareentwicklungsagent)", "ATC-STD-AOS-001 (reserviert)", [
-    sl("ATC-STD-AOS-001", "ATC Agent Operating Standard — 14 Session-Fragen (Wer bin ich? … Welcher Audit-Nachweis entsteht?)", S_GEPLANT, ["ATC-STD-FRAMEWORK-001"], "Mandatsregel bis Erstellung: FRAMEWORK-001 §8; Erstellung via SCR (P1)"),
+    sl("ATC-STD-AOS-001", "ATC Agent Operating Standard — 14 Session-Fragen (Wer bin ich? … Welcher Audit-Nachweis entsteht?)", S_BELEGT, ["ATC-STD-AOS-001"], "Erstellt via SCR-0022 (REQ-FW-009); Mandatsregel gilt seit FRAMEWORK-001 §8"),
 ], note="14 Fragen verbindlich je Agenten-Session gem. FRAMEWORK-001 §8 (REQ-FW-009)"),
 F("FAM-21", "Mining Standards", "ATC-STD-340..350", [
     sl("ATC-STD-340", "Mining Architecture"), sl("ATC-STD-341", "Miner"),
@@ -461,7 +461,7 @@ F("FAM-39", "Business / Economics", "ATC-STD-700..706", [
     sl("ATC-STD-706", "Sustainability"),
 ]),
 F("FAM-40", "Master-Audit", "ATC-STD-999 (reserviert)", [
-    sl("ATC-STD-999", "Enterprise Completeness & Consistency Audit", S_GEPLANT, ["ATC-STD-AUDIT-001"], "16-Stufen-Audit-Kette + 13 Change-Nachweis-Fragen gem. FRAMEWORK-001 §9; Erweiterung von AUDIT-001, SCR empfohlen (P1)"),
+    sl("ATC-STD-999", "Enterprise Completeness & Consistency Audit", S_BELEGT, ["ATC-STD-999", "ATC-STD-AUDIT-001"], "Erstellt via SCR-0022 (REQ-FW-010); AUD-Record Typ MASTER als Erweiterung von AUDIT-001"),
 ]),
 F("FAM-41", "Repository Audit", "ATC-STD-REPO-AUDIT-001..003", [
     sl("ATC-STD-REPO-AUDIT-001", "ATC Repository Audit Standard", S_BELEGT, ["ATC-STD-REPO-AUDIT-001"]),

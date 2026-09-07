@@ -31,6 +31,10 @@ update: {name: update,        range: "ATC-STD-UPDATE-001-999", description: "Upd
 
 repo-audit: {name: repo-audit,  range: "ATC-STD-REPO-AUDIT-001-999", description: "Repository-Audit-Familie: Verbindlicher Repository Health Check — 16 Pruefbereiche, Pruefmatrix, SOLL/IST, Gap Analysis, Findings, Health Score A-E (Owner-Entwurf 07.09., SCR-0020)"}
 
+agent-operating: {name: agent-operating,  range: "ATC-STD-AOS-001-999", description: "Agent-Operating-Familie: Verbindliches 14-Fragen-Session-Mandat fuer alle KI-Agenten, Session-Records, Audit-Nachweis (Owner-Entwurf 07.09., SCR-0022)"}
+
+master-audit: {name: master-audit,  range: "ATC-STD-999", description: "Master-Audit-Familie: Enterprise Completeness & Consistency Audit — 16-Stufen-Kette, 13 Change-Nachweis-Fragen, MAUD-Records, Orchestrierung (Owner-Entwurf 07.09., SCR-0022)"}
+
 framework: {name: framework,  range: "ATC-STD-FRAMEWORK-001-999", description: "Framework-Familie: ATC Enterprise Standards Framework — Master-Dokument, Katalog, einheitliche Governance-Modelle (Owner-Entwurf 07.09., SCR-0019)"}
 
 milestone: {name: milestone,  range: "ATC-STD-MILESTONE-001-999", description: "Milestone-Familie: Meilenstein-Governance — Zustandsnachweis, Lebenszyklus, Acceptance Gates, Evidence Packs, maschinenlesbare Registry (Owner-Entwurf 07.09., SCR-0018)"}
