@@ -80,6 +80,50 @@ def main():
     for i, fs in dups.items():
         print("  %s in: %s" % (i, ", ".join(fs)))
         fails += 1
+    # S-18 Registry-Parse-Check: standards.yaml muss strukturell gueltig sein
+    # (AUD-001 Governance-Audit 07.09.2026: korrupte Registry wurde nicht erkannt)
+    registry_ok = True
+    try:
+        import yaml
+        with open(REGISTRY, encoding="utf-8") as fh:
+            data = yaml.safe_load(fh)
+        entries = data.get("standards", []) if isinstance(data, dict) else []
+        if not entries:
+            print("S-18 Registry-Parse: FAIL — standards.yaml enthaelt keine 'standards:'-Liste")
+            registry_ok = False
+        else:
+            for e in entries:
+                for req in ("id", "title", "version", "status", "owner", "file"):
+                    if req not in e:
+                        print("S-18 Registry-Parse: FAIL — %s fehlt Pflichtfeld '%s'" % (e.get("id", "?"), req))
+                        registry_ok = False
+            print("S-18 Registry-Parse: %s (%d Eintraege)" % ("PASS" if registry_ok else "FAIL", len(entries)))
+    except ImportError:
+        # Fallback ohne PyYAML: Fluss-Mapping-Zeilen muessen Klammer-/Anfuehrungsbalanz haben
+        for n, line in enumerate(open(REGISTRY, encoding="utf-8"), 1):
+            s = line.strip()
+            if s.startswith("- {") and not s.endswith("}"):
+                print("S-18 Registry-Parse: FAIL — Zeile %d unbalanciert (kein '}' am Ende)" % n)
+                registry_ok = False
+            if s.count("{") != s.count("}") or s.count('"') % 2:
+                print("S-18 Registry-Parse: FAIL — Zeile %d Klammer-/Quote-Balanz defekt" % n)
+                registry_ok = False
+        print("S-18 Registry-Parse: %s (Fallback-Modus, PyYAML fehlt)" % ("PASS" if registry_ok else "FAIL"))
+    except Exception as e:
+        print("S-18 Registry-Parse: FAIL — %s" % str(e)[:120])
+        registry_ok = False
+    if not registry_ok:
+        fails += 1
+
+    # Registry-Cross-Check: Registry-Eintraege muessen Dateien haben
+    try:
+        reg = open(REGISTRY, encoding="utf-8").read()
+        reg_ids = set(re.findall(r"id:\s*(ATC-STD-[0-9]{3,})", reg))
+        missing = reg_ids - set(ids)
+        if missing:
+            print("WARN: Registry ohne Datei: " + ", ".join(sorted(missing)))
+    except Exception:
+        pass
     # Registry-Cross-Check: Registry-Eintraege muessen Dateien haben
     try:
         reg = open(REGISTRY, encoding="utf-8").read()

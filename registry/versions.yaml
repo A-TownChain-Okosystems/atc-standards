@@ -13,3 +13,27 @@ versions:
   ATC-STD-203:
     - {version: "1.0.0", date: "2026-09-07", change: "Security & Release (AD-029/031)"}
     - {version: "1.0.1", date: "2026-09-07", change: "Unter ATC-STD-000 gestellt; REPO-003 → 203 umnummeriert (supersedes)"}
+  ATC-STD-BUG-001:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (AD-040): Bug-Finding-Standard, S0-S4-Schwere, F/AUD/TEST/SYNC-Objekt-IDs, registriert in findings.yaml"}
+  ATC-STD-BUG-002:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (AD-040): Bug-Dokumentations-Standard, Doku-Pflicht je Finding"}
+  ATC-STD-BUG-003:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (AD-040): Bug-Fix-Lifecycle, Loesungs-Verifikation"}
+  ATC-STD-BUG-004:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (AD-040): Repository-Sync & Merge-Gate (z.B. git pull -X ours bei Aurora-Parallelarbeit)"}
+  ATC-STD-NET-001:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (AD-041): Devnet-Standard"}
+  ATC-STD-NET-002:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (AD-041): Testnet-Standard (Chain-ID 658467-Umgebung, 5-Node-Docker-Setup)"}
+  ATC-STD-NET-003:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (AD-041): Mainnet-Standard (Launch per AD-023 unabhaengig vom Standard-Text)"}
+  ATC-STD-NET-004:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (AD-041): Promotion Devnet→Testnet→Mainnet"}
+  ATC-STD-NET-005:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (AD-041): Genesis-Standard (Genesis-Wallet, Validator-Keys)"}
+  ATC-STD-NET-006:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (AD-041): Network-Upgrade-Standard"}
+  ATC-STD-NET-007:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (AD-041): Network-Security-Standard"}
+  ATC-STD-NET-008:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (AD-041): Network-Recovery-Standard"}
