@@ -1,3 +1,14 @@
+## 2026-09-07 — ATC-STD-204 (Dependency & Interface Standard, F-001/F-002/F-005)
+- Neuer Standard (proposed, normativ mit APPROVED): Dependency-Deklaration
+  (registry/dependencies.yaml als SSOT, Zyklusfreiheit, SCR-Pflicht),
+  Interface-Registry registry/interfaces.yaml (10 Seed-Interfaces IFC-0001..0010,
+  Pflichtfelder inkl. api_version/compatibility/security_level/test),
+  dreifache Versionierung Protocol/Specification/Implementation,
+  SemVer-Kompatibilitaet, Integration-Test-Pflicht je Kante,
+  Conformance-Level R0-R4, Validator-Checks DEP-001..003.
+- Setzt Findings der externen Bewertung (07.09.2026) um: F-001 (P0),
+  F-002 (P0), F-005 (P1).
+
 ## 2026-09-07 — ATC-STD-NET-001…008 (Netzwerk-Umgebungen & Promotion, Owner-Mandat AD-041)
 - 8 neue Standards (candidate, normativ per Owner-Mandat): NET-001 Devnet,
   NET-002 Testnet (24-Gebiete-Testpflicht), NET-003 Mainnet (658467

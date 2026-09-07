@@ -17,6 +17,8 @@ versions:
   ATC-STD-203:
     - {version: "1.0.0", date: "2026-09-07", change: "Security & Release (AD-029/031)"}
     - {version: "1.0.1", date: "2026-09-07", change: "Unter ATC-STD-000 gestellt; REPO-003 → 203 umnummeriert (supersedes)"}
+  ATC-STD-204:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung: Dependency-Deklaration (F-001), Interface-Registry (F-002), dreifache Versionierung (F-005), SemVer-Kompatibilitaet, Integration-Test-Pflicht; registry/interfaces.yaml mit 10 Seed-Interfaces angelegt"}
   ATC-STD-BUG-001:
     - {version: "1.0.0", date: "2026-09-07", change: "Initiale Fassung (AD-040): Bug-Finding-Standard, S0-S4-Schwere, F/AUD/TEST/SYNC-Objekt-IDs, registriert in findings.yaml"}
   ATC-STD-BUG-002:
