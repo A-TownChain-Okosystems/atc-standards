@@ -333,3 +333,6 @@ versions:
 
   ATC-STD-DESC-001:
     - {version: "1.0.0", date: "2026-09-07", change: "Initial Release: Owner-Entwurf Michael Wroblewski (Builder-Chat 07.09. 21:42), harmonisiert mit ATC-STD-000 v1.2.0; 14 REQ-DESC, 5 COM-DESC-Gates, 7-Status-Lifecycle-Mapping, Quality Gate; SCR-0008; Status DRAFT — §9-Freigabe ausstehend"}
+
+  ATC-STD-VERSION-001:
+    - {version: "1.0.0", date: "2026-09-07", change: "Initial Release: Owner-Entwurf Michael Wroblewski (Builder-Chat 07.09. 21:50), harmonisiert mit ATC-STD-000 v1.2.0 und ATC-STD-DESC-001; 22 REQ-VERSION, 5 COM-VERSION-Gates, Release-ID-Dualformat, buildId; SCR-0009; Status DRAFT — §9-Freigabe ausstehend"}

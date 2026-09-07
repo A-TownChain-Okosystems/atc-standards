@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.4.5] - 2026-09-07
+
+### Added
+
+- **ATC-STD-VERSION-001 v1.0.0 (DRAFT):** ATC Versioning Standard — SemVer 2.0.0,
+  Pre-Release-Kette, getrennte Ebenen (Software/API/Protokoll/Konsens/State/Network/
+  Contracts/Agents/Doku), Git-Tags, kanonische Versionsquelle, Release-/Build-IDs,
+  Release-Manifest, Monorepo-Regel, Kompatibilitäts-Deklaration, Verbotene Praktiken,
+  Golden Rule. 22 REQ-VERSION-Anforderungen, 5 COM-VERSION-Gates. SCR-0009,
+  Owner-Entwurf Michael Wroblewski (Builder-Chat 21:50). Status DRAFT — §9-Freigabe ausstehend.
+- **Schema:** version-Familie allockiert (versionStandardId, versionRequirementId,
+  versionStandardDoc); releaseId-Dualformat (versionsbasiert + datumsbasiert);
+  buildId-Pattern (ATC-BUILD-NNN) neu.
+
 ## [1.4.4] - 2026-09-07
 
 ### Added

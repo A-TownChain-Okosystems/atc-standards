@@ -24,3 +24,4 @@ net:    {name: net,          range: "ATC-STD-NET-001-899",  description: "Netzwe
 # Zusatz-Serie (Owner-Mandat 07.09., AD-040): ATC-STD-BUG-001…004
 # Bug- & Konsistenz-Lebenszyklus — Dateien: standards/bug/ · Kategorie: bug
 desc:   {name: desc,        range: "ATC-STD-DESC-001-999",  description: "Standard-Description-Familie: Struktur, Metadaten, Lifecycle und Auditierung von Standards (Owner-Entwurf 07.09., SCR-0008)"}
+version: {name: version,     range: "ATC-STD-VERSION-001-999", description: "Versioning-Familie: einheitliche Versionierung von Software, Standards, APIs, Smart Contracts, Protokollen, Dokumentation und Releases (Owner-Entwurf 07.09., SCR-0009)"}

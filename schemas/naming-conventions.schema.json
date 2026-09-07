@@ -112,8 +112,9 @@
         },
         "releaseId": {
           "type": "string",
-          "pattern": "^ATC-REL-[0-9]+[.][0-9]+[.][0-9]+$",
-          "example": "ATC-REL-1.0.0"
+          "pattern": "^ATC-REL-(?:[0-9]+[.][0-9]+[.][0-9]+|[0-9]{8}-[0-9]{3})$",
+          "example": "ATC-REL-1.4.0",
+          "note": "Zwei gueltige Formate (SCR-0009): versionsbasiert ATC-REL-X.Y.Z oder datumsbasiert ATC-REL-YYYYMMDD-NNN"
         },
         "bugStandardId": {
           "type": "string",
@@ -285,6 +286,24 @@
           "pattern": "^REQ-DESC-[0-9]{3,}$",
           "example": "REQ-DESC-001",
           "note": "Requirements der DESC-Familie (SCR-0008)"
+        },
+        "versionStandardId": {
+          "type": "string",
+          "pattern": "^ATC-STD-VERSION-[0-9]{3,}$",
+          "example": "ATC-STD-VERSION-001",
+          "note": "Versioning-Familie: Versionierung von Software, Standards, APIs, Contracts, Protokollen, Releases (Owner-Entwurf 07.09., SCR-0009)"
+        },
+        "versionRequirementId": {
+          "type": "string",
+          "pattern": "^REQ-VERSION-[0-9]{3,}$",
+          "example": "REQ-VERSION-001",
+          "note": "Requirements der VERSION-Familie (SCR-0009)"
+        },
+        "buildId": {
+          "type": "string",
+          "pattern": "^ATC-BUILD-[0-9]{3,}$",
+          "example": "ATC-BUILD-1827",
+          "note": "Build-Identitaet je Release-Build (SCR-0009); numerisch fortlaufend"
         }
       }
     },
@@ -413,6 +432,11 @@
           "type": "string",
           "pattern": "^ATC-STD-DESC-[0-9]{3,}[.]md$",
           "example": "ATC-STD-DESC-001.md"
+        },
+        "versionStandardDoc": {
+          "type": "string",
+          "pattern": "^ATC-STD-VERSION-[0-9]{3,}[.]md$",
+          "example": "ATC-STD-VERSION-001.md"
         }
       }
     },
