@@ -1,5 +1,32 @@
 # Changelog
 
+## [1.4.14] - 2026-09-07
+
+### Added
+
+- **ATC-STD-COMPAT-001 v1.0.0 (DRAFT):** ATC Major Version Compatibility & Recovery
+  Standard — verbindliche Kompatibilitätsprüfung des gesamten abhängigen
+  Ökosystems nach MAJOR-Version-Updates. 14 REQ-COMPAT; 2 harte Kernregeln
+  (ATC-MAJOR-COMPATIBILITY-GATE: Major-Version gilt erst als freigegeben, wenn
+  Kompatibilität geprüft/dokumentiert und bestätigt oder wiederhergestellt;
+  ATC-COMPATIBILITY-RESTORATION: jede kritische Inkompatibilität muss behoben,
+  migriert, überbrückt oder als formal freigegebener Breaking Change akzeptiert
+  werden). 6 Kompatibilitätsklassen (COMPATIBLE, COMPATIBLE_AFTER_MIGRATION,
+  INCOMPATIBLE, BLOCKED, UNKNOWN, DEPRECATED — kein UNKNOWN verbleibt bei
+  Release), 5 Prüfebenen (Syntax/Semantik/Daten/Runtime/System), 6
+  Wiederherstellungsmethoden (A Adapter, B Migration, C Wrapper, D
+  Compatibility Layer, E kaskadiertes Upgrade, F Breaking Change nur mit
+  Owner-Freigabe), COMP-NNN-Wiederherstellungs-IDs (keine versteckten
+  Kompatibilitäts-Fixes durch Agenten), Compatibility Matrix, YAML-Reportformat
+  (compatibility_audit), 18-Punkte-MAJOR-Definition-of-Done. Als Pflicht-Gate in
+  ATC-STD-UPDATE-001 verankert (UPD-G04 Compatibility bei MAJOR, REQ-UPD-008
+  verstärkt); Change-Control-Kette erweitert: SCR → VERSION → UPDATE →
+  COMPAT → AUDIT. Neue Kategorie `compat` (ATC-STD-COMPAT-001..999) in
+  registry/categories.yaml; Registry-Eintrag in registry/standards.yaml.
+  Owner-Entwurf Michael Wroblewski (Builder-Chat 07.09. 22:55); §9-Freigabe
+  ausstehend.
+
+
 ## [1.4.13] - 2026-09-07
 
 ### Added

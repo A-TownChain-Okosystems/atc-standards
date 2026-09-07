@@ -25,6 +25,7 @@ standard:
     - ATC-STD-AI-DECISION-001
     - ATC-STD-BUG-001
     - ATC-STD-BUG-003
+    - ATC-STD-COMPAT-001
     - ATC-STD-DESC-001
     - ATC-STD-MD-001
     - ATC-AAS-009
@@ -77,7 +78,7 @@ Der Standard definiert: wann ein Artefakt aktualisiert werden darf, wer ein Upda
 
 **Gilt:** Alle ATC-Artefakte des Ökosystems — Standards, Repositories, Spezifikationen, Software, Smart Contracts, KI-Agenten, APIs, Protokolle und Governance-Dokumente — für jedes Update (PATCH/MINOR/MAJOR/SECURITY/EMERGENCY/GOVERNANCE). Verbindlich normativ nach §9-Freigabe.
 
-**Nicht im Gilt (Abgrenzung, SCR-0015):** SemVer-Vergabe und Release-/Build-ID-Formate (ATC-STD-VERSION-001); SCR-Governance-Review normativer Änderungen selbst (ATC-STD-000 §30 — UPDATE-001 koppelt, ersetzt nicht); System-Audits (ATC-STD-AUDIT-001); Fehleranalyse-Methodik (ATC-STD-BUG-005); CHANGELOG-Detailformat (geplant ATC-STD-CHANGELOG-001); Release-Prozess-Orchestrierung (geplant ATC-STD-RELEASE-001); Agenten-Change-Abläufe im Betrieb (ATC-AAS-009). UPDATE-001 definiert die übergreifende Change-Control-Pflicht über diesen Standards.
+**Nicht im Gilt (Abgrenzung, SCR-0015):** SemVer-Vergabe und Release-/Build-ID-Formate (ATC-STD-VERSION-001); SCR-Governance-Review normativer Änderungen selbst (ATC-STD-000 §30 — UPDATE-001 koppelt, ersetzt nicht); System-Audits (ATC-STD-AUDIT-001); Fehleranalyse-Methodik (ATC-STD-BUG-005); CHANGELOG-Detailformat (geplant ATC-STD-CHANGELOG-001); Release-Prozess-Orchestrierung (geplant ATC-STD-RELEASE-001); Agenten-Change-Abläufe im Betrieb (ATC-AAS-009). UPDATE-001 definiert die übergreifende Change-Control-Pflicht über diesen Standards. Die MAJOR-spezifische Kompatibilitätsprüfung, -Wiederherstellung und -Migration ist im Companion-Standard ATC-STD-COMPAT-001 geregelt (Pflicht-Gate: UPD-G04 bei MAJOR).
 
 ## 3. Begriffe und Definitionen
 
@@ -137,7 +138,7 @@ Für jedes Artefakt MUSS eine kanonische Quelle definiert sein (Standard Source 
 
 id: REQ-UPD-008
 
-Ein Update DARF nur veröffentlicht werden, wenn die Gates erfüllt sind: UPD-G01 Validity (fachlich begründet) · UPD-G02 Impact (alle Auswirkungen bekannt) · UPD-G03 Security (keine neuen Risiken) · UPD-G04 Compatibility (Rückwärtskompatibilität) · UPD-G05 Testing (Tests erfolgreich) · UPD-G06 Documentation (synchron) · UPD-G07 Audit (nachvollziehbar/reproduzierbar) · UPD-G08 Approval (zuständige Instanz) · UPD-G09 Release (Version eindeutig identifiziert).
+Ein Update DARF nur veröffentlicht werden, wenn die Gates erfüllt sind: UPD-G01 Validity (fachlich begründet) · UPD-G02 Impact (alle Auswirkungen bekannt) · UPD-G03 Security (keine neuen Risiken) · UPD-G04 Compatibility (Rückwärtskompatibilität; bei MAJOR-Updates verpflichtend als vollständiges Verfahren nach ATC-STD-COMPAT-001 — ATC-MAJOR-COMPATIBILITY-GATE) · UPD-G05 Testing (Tests erfolgreich) · UPD-G06 Documentation (synchron) · UPD-G07 Audit (nachvollziehbar/reproduzierbar) · UPD-G08 Approval (zuständige Instanz) · UPD-G09 Release (Version eindeutig identifiziert).
 
 ### REQ-UPD-009 — Statusmodell
 
