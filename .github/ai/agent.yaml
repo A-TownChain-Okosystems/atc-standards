@@ -1,11 +1,11 @@
-# Repository Manifest — ATC-AAS-025 §1 · Vollmandat: required_standards = ALLE Registry-Standards (110)
+# Repository Manifest — ATC-AAS-025 §1 · Vollmandat: required_standards = ALLE Registry-Standards (111)
 # Dynamische Bindung: Registry (registry/standards.yaml) ist SSOT — neue APPROVED-Standards sind automatisch verbindlich.
 standard: ATC-AAS-025
 repository: atc-standards
 agents:
   allowed:                      # 1-Agent-per-Repo (AI-DEV-012 §1, AGENT_PROTOCOL)
     - ATC-AI-ARCH-001            # Aurora #1 (Superagent) — Governance-Registry
-required_standards:            # ALLE 110 Registry-Standards — Vollmandat (109 APPROVED + 1 DRAFT; dynamische Bindung an Registry als SSOT)
+required_standards:            # ALLE 111 Registry-Standards — Vollmandat (109 APPROVED + 1 DRAFT; dynamische Bindung an Registry als SSOT)
   - ATC-STD-000
   - ATC-STD-201
   - ATC-STD-202
@@ -116,6 +116,7 @@ required_standards:            # ALLE 110 Registry-Standards — Vollmandat (109
   - ATC-STD-AI-DECISION-001
   - ATC-STD-UPDATE-001
   - ATC-STD-COMPAT-001
+  - ATC-STD-MILESTONE-001
 
 workflow:
   require_tests: true            # validate_all.py + Mutationssuite + Repo-Audit (CI)

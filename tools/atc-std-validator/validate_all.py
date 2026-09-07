@@ -45,7 +45,7 @@ def collect():
 def file_id(path):
     try:
         head = open(path, encoding="utf-8").read(2500)
-        m = re.search(r"^\s*id:\s*(ATC-STD-(?:BUG-|NET-|ZKP-|AI-DEV-|MD-|SC-|README-|DESC-|VERSION-|AUDIT-|AI-DECISION-|UPDATE-|COMPAT-)?[0-9]{3,}|ATC-AAS-[0-9]{3,}|ATC-ENT-[0-9]{3,})\s*$", head, re.M)
+        m = re.search(r"^\s*id:\s*(ATC-STD-(?:BUG-|NET-|ZKP-|AI-DEV-|MD-|SC-|README-|DESC-|VERSION-|AUDIT-|AI-DECISION-|UPDATE-|COMPAT-|MILESTONE-)?[0-9]{3,}|ATC-AAS-[0-9]{3,}|ATC-ENT-[0-9]{3,})\s*$", head, re.M)
         return m.group(1) if m else None
     except Exception:
         return None
@@ -130,6 +130,71 @@ def main():
             print("WARN: Registry ohne Datei: " + ", ".join(sorted(missing)))
     except Exception:
         pass
+
+    # S-20 Milestone-Registry-Check (ATC-STD-MILESTONE-001 §17)
+    milestone_ok = True
+    MS_PATH = os.path.join(ROOT, "registry", "milestones.yaml")
+    if not os.path.exists(MS_PATH):
+        print("S-20 Milestones: PASS (keine milestones.yaml — Standard ohne Registry-Nutzung)")
+    else:
+        try:
+            import yaml as _yaml
+            ms_data = _yaml.safe_load(open(MS_PATH, encoding="utf-8")) or {}
+            entries = ms_data.get("milestones", [])
+            if not isinstance(entries, list) or not entries:
+                print("S-20 Milestones: FAIL — milestones.yaml ohne 'milestones:'-Liste")
+                milestone_ok = False
+            else:
+                required = ("id", "name", "category", "status", "owner", "goal", "scope",
+                            "acceptance_criteria", "dependencies", "risk", "evidence",
+                            "start", "target_date", "audit_ref")
+                allowed_status = {"PLANNED","DEFINED","IN_PROGRESS","BLOCKED","FEATURE_COMPLETE",
+                                  "VALIDATION","AUDIT","FAILED","ACCEPTED","RELEASED",
+                                  "VERIFIED","CLOSED","SUPERSEDED"}
+                ids, stat = set(), {}
+                for m in entries:
+                    mid = str(m.get("id", "?"))
+                    for req in required:
+                        if req not in m:
+                            print("S-20 Milestones: FAIL — %s fehlt Pflichtfeld '%s'" % (mid, req)); milestone_ok = False
+                    if not re.match(r"^ATC-M-(?:[A-Z]+-)?[0-9]{3,}$", mid):
+                        print("S-20 Milestones: FAIL — %s: ID-Pattern verletzt" % mid); milestone_ok = False
+                    if mid in ids:
+                        print("S-20 Milestones: FAIL — %s: doppelte ID" % mid); milestone_ok = False
+                    ids.add(mid); stat[mid] = m.get("status")
+                    if m.get("category") not in {"M%d" % i for i in range(9)}:
+                        print("S-20 Milestones: FAIL — %s: Kategorie %s ungueltig" % (mid, m.get("category"))); milestone_ok = False
+                    if m.get("status") not in allowed_status:
+                        print("S-20 Milestones: FAIL — %s: Status %s ungueltig" % (mid, m.get("status"))); milestone_ok = False
+                    if not isinstance(m.get("risk"), dict) or "overall" not in (m.get("risk") or {}):
+                        print("S-20 Milestones: FAIL — %s: risk.overall fehlt" % mid); milestone_ok = False
+                for m in entries:
+                    mid = str(m.get("id", "?"))
+                    if m.get("status") in {"ACCEPTED", "RELEASED", "VERIFIED", "CLOSED"}:
+                        if not m.get("evidence"):
+                            print("S-20 Milestones: FAIL — %s: ACCEPTED ohne Evidence (§6)" % mid); milestone_ok = False
+                        if not m.get("audit_result"):
+                            print("S-20 Milestones: FAIL — %s: ACCEPTED ohne audit_result" % mid); milestone_ok = False
+                        if not m.get("actual_completion"):
+                            print("S-20 Milestones: FAIL — %s: ACCEPTED ohne actual_completion" % mid); milestone_ok = False
+                        if m.get("compatibility_status") == "UNKNOWN":
+                            print("S-20 Milestones: FAIL — %s: ACCEPTED mit compatibility UNKNOWN (COMPAT-001)" % mid); milestone_ok = False
+                    for dep in m.get("dependencies") or []:
+                        if str(dep).startswith("ATC-M-"):
+                            if dep not in ids:
+                                print("S-20 Milestones: FAIL — %s: unbekannte Dependency %s" % (mid, dep)); milestone_ok = False
+                            elif stat.get(dep) not in (None, "ACCEPTED", "RELEASED", "VERIFIED", "CLOSED", "SUPERSEDED") and m.get("status") in {"ACCEPTED", "RELEASED", "VERIFIED", "CLOSED"}:
+                                print("S-20 Milestones: FAIL — %s: ACCEPTED bei offener kritischer Dependency %s (%s) (§8)" % (mid, dep, stat.get(dep))); milestone_ok = False
+                print("S-20 Milestones: %s (%d Eintraege, IDs: %s)" % ("PASS" if milestone_ok else "FAIL", len(entries), ", ".join(sorted(ids))))
+        except ImportError:
+            n_ok = sum(1 for l in open(MS_PATH, encoding="utf-8") if re.match(r"^\s*- id: ATC-M-(?:[A-Z]+-)?\d{3,}$", l))
+            bal = all(l.count("{") == l.count("}") or ":" in l for l in open(MS_PATH, encoding="utf-8"))
+            print("S-20 Milestones: %s (Fallback-Modus, PyYAML fehlt; %d ATC-M-Eintraege)" % ("PASS" if (n_ok and bal) else "WARN"))
+        except Exception as e:
+            print("S-20 Milestones: FAIL — %s" % str(e)[:120]); milestone_ok = False
+    if not milestone_ok:
+        fails += 1
+
     print("RESULT: " + ("ALL COMPLIANT" if fails == 0 else "%d FAIL(s)" % fails))
 
     # S-19 Mutationstest-Suite: Header-Drift-Erkennung muss zuverlaessig

@@ -418,6 +418,22 @@
         "compatRestorationId": {
           "pattern": "^COMP-[0-9]{3,}$",
           "description": "Compatibility Restoration ID (COMP-NNN, REQ-COMPAT-009)"
+        },
+        "milestoneStandardId": {
+          "pattern": "^ATC-STD-MILESTONE-[0-9]{3,}$",
+          "description": "ATC Milestone Standard (ATC-STD-MILESTONE-001)"
+        },
+        "milestoneId": {
+          "pattern": "^ATC-M-[0-9]{3,}$",
+          "description": "Meilenstein-ID Basis-Serie (ATC-M-NNN, REQ-MS-003)"
+        },
+        "milestoneProgramId": {
+          "pattern": "^ATC-M-[A-Z]+-[0-9]{3,}$",
+          "description": "Programm-Meilenstein-ID (ATC-M-<PROG>-NNN, REQ-MS-003)"
+        },
+        "milestoneRequirementId": {
+          "pattern": "^REQ-MS-[0-9]{3,}$",
+          "description": "Milestone-Anforderungs-ID (REQ-MS-NNN, ATC-STD-MILESTONE-001)"
         }
       }
     },
@@ -570,6 +586,10 @@
         "compatStandardDoc": {
           "pattern": "^ATC-STD-COMPAT-[0-9]{3,}[.]md$",
           "description": "ATC Compat Standard-Dokument"
+        },
+        "milestoneStandardDoc": {
+          "pattern": "^ATC-STD-MILESTONE-[0-9]{3,}[.]md$",
+          "description": "ATC Milestone Standard-Dokument"
         }
       }
     },

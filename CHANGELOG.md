@@ -1,5 +1,29 @@
 # Changelog
 
+## [1.4.20] - 2026-09-07
+
+### Added
+
+- **ATC-STD-MILESTONE-001 v1.0.0 DRAFT (SCR-0018):** Verbindlicher Meilenstein-
+  Standard (Owner-Entwurf, Builder-Chat 23:31) — 19 REQ-MS; Meilenstein = nachweisbar
+  erreichter Systemzustand; 13-Status-Lifecycle ohne Sprünge; 19 Pflichtfelder;
+  Reifeklassen M0-M8; Evidence Packs; 8 Acceptance Gates (ATC-MILESTONE-ACCEPTANCE-
+  GATE); Dependency-Deklaration (kein ACCEPTED bei offener kritischer Dependency);
+  Sprint-/Release-Trennung; MAJOR-Revalidation (Kopplung COMPAT-001/UPD-G04);
+  Risikomodell (4 Level, 6 Arten); KI-Agenten-Regeln (kein agentisches ACCEPTED ohne
+  Human Gate); 18-Punkte-DoD; ATC-MILESTONE-GOVERNANCE-RULE als Hartregel.
+- **Maschinenlesbarkeit:** schemas/milestone.schema.json (inkl. if/then: ACCEPTED+
+  erzwingt Evidence/Audit/actual_completion/compatibility ≠ UNKNOWN);
+  registry/milestones.yaml als SSOT mit AD-027-Migration ATC-M-001..008 (M1/M2
+  ACCEPTED mit Evidence, M3 IN_PROGRESS, M4-M8 PLANNED); Validator S-20 neu
+  (Pflichtfelder, ID-Pattern, Status/Kategorie-Enums, Evidence-Pflicht bei
+  ACCEPTED+, Dependency-Auflösung — Negativtest FAIL verifiziert).
+- **Registry:** 111 Standards (110 APPROVED + 1 DRAFT MILESTONE-001); Kategorie
+  milestone; Naming-Patterns milestoneStandardId/milestoneId/milestoneProgramId/
+  milestoneRequirementId/milestoneStandardDoc; DAG-Knoten; Agent-Manifest 111/111.
+- **§9-Freigabe ausstehend** (Registry FINAL wäre 111/111 APPROVED).
+
+
 ## [1.4.19] - 2026-09-07
 
 ### Changed

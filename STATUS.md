@@ -22,10 +22,19 @@ Evidence-First, Decision Records DEC-NNNNNN, Separation of Duties; §24-Familie 
 gemappt (12/15), Kill-Switch als dokumentierte Lücke (künftig AAS-026+).
 
 Sammelfreigabe 22:25 (Owner-Mandat „Freigabe"): BUG-005 + AUDIT-001 + AI-DECISION-001 → APPROVED,
-normativ, §30-eingefroren. Registry Stand 23:28: 110 Standards, 110 APPROVED, 0 DRAFT,
-0 offen — alle normativ. UPDATE-001 als 110. APPROVED via SCR-0015 §9-freigegeben (23:28);
-COMPAT-001 als 109. via SCR-0016 (23:02). Change-Control-Kette SCR→VERSION→UPDATE→COMPAT→AUDIT
-vollständig normativ in Kraft.
+normativ, §30-eingefroren. Registry Stand 23:45: 111 Standards, 110 APPROVED + 1 DRAFT
+(MILESTONE-001, §9 ausstehend). UPDATE-001 als 110. APPROVED via SCR-0015 §9-freigegeben
+(23:28); COMPAT-001 als 109. via SCR-0016 (23:02). Change-Control-Kette
+SCR→VERSION→UPDATE→COMPAT→AUDIT vollständig normativ in Kraft.
+
+ATC-STD-MILESTONE-001 v1.0.0 DRAFT (SCR-0018, Owner-Entwurf 23:31): Verbindliche
+Meilenstein-Governance — Zustandsnachweis statt Fertig-Behauptung, 13-Status-Lifecycle
+ohne Sprünge, 19 Pflichtfelder, Reifeklassen M0-M8, Evidence Packs, 8 Acceptance Gates,
+Dependency-Deklaration, Sprint/Release-Trennung, MAJOR-Revalidation (COMPAT-001-Kopplung),
+Risikomodell, KI-Agenten-Human-Gate-Regel, 18-Punkte-DoD, ATC-MILESTONE-GOVERNANCE-RULE.
+Maschinenlesbar: schemas/milestone.schema.json + registry/milestones.yaml (AD-027 M1-M8
+als ATC-M-001..008 registriert; M1/M2 ACCEPTED mit Evidence, M3 IN_PROGRESS) +
+Validator S-20 (Negativtest verifiziert). §9-Freigabe ausstehend.
 
 AUD-2026-0001 (erster Lauf unter ATC-STD-AUDIT-001, 22:30): Standards-Umsetzungs-Audit —
 CONDITIONAL_PASS, Completeness Score C. Umsetzung: 8 AUTOMATED (7%) · 18 PARTIAL (16%) ·
@@ -60,7 +69,7 @@ Dependabot in 16 Manifest-Repos (F-025). Org-Settings per Owner-Entscheidung 23:
 Offen: F-026 (Version-Baseline), F-027 (Tag v2.0.0), F-028 (ATC-STD-202 22→26), F-029 (governance-ci 3 Repos,
 Owner-Aktion workflow-Scope). Report: docs/AUD-2026-0002_ORG_AUDIT.md · Issues #94..98 in a-townchain-os.
 
-Stand: 07.09.2026, 23:30 (Europe/Berlin) — §9-Freigabekette abgeschlossen 23:28 (UPDATE-001, letzter DRAFT) · Self-Compliance: R3 100/100 GATE PASS ·
+Stand: 07.09.2026, 23:45 (Europe/Berlin) — §9-Freigabekette abgeschlossen 23:28 (UPDATE-001); MILESTONE-001 (SCR-0018) neuer DRAFT in §9-Prüfung · Self-Compliance: R3 100/100 GATE PASS ·
 Voll-Validierung 110/110 Standards: ALL COMPLIANT (S-18 prüft alle 10 Registry-Dateien; Mutationssuite 12/12)
 
 ## Standards-System
@@ -85,11 +94,11 @@ Voll-Validierung 110/110 Standards: ALL COMPLIANT (S-18 prüft alle 10 Registry-
 | ATC-STD-AI-DECISION-001 | ATC Agent Decision-Making Standard (Entscheidungsmodell über AAS/AI-DEV) | APPROVED — SCR-0014, §9-Sammelfreigabe 22:25 |
 | ATC-STD-UPDATE-001 | ATC Update Standard (Change Control: Lifecycle, Gates, Rollback, Emergency) | DRAFT — SCR-0015, §9-Freigabe ausstehend |
 | ATC-STD-COMPAT-001 | Major Version Compatibility & Recovery Standard (Major-Gate in UPD-G04) | APPROVED — SCR-0016, §9-Freigabe 23:02, normativ, §30-eingefroren |
-| **Summe** | **110 Standards** | **110 APPROVED, 0 offen — alle normativ** |
+| **Summe** | **111 Standards** | **110 APPROVED + 1 DRAFT (MILESTONE-001)** |
 
 ## Qualitätssicherung (CI, self-compliant)
 
-- Standards-Validierung: **110/110 COMPLIANT** (110 APPROVED, 0 DRAFT; AUD-FIX 21:30 — validate_all prüft real alle Dateien inkl. DESC-/VERSION-/COMPAT-Präfixe; Fehlercheck 23:30: S-18 Voll-Modus prüft alle 10 Registry-Dateien strukturell)
+- Standards-Validierung: **111/111 COMPLIANT** (110 APPROVED + 1 DRAFT MILESTONE-001; AUD-FIX 21:30 — validate_all prüft real alle Dateien inkl. DESC-/VERSION-/COMPAT-Präfixe; Fehlercheck 23:30: S-18 Voll-Modus prüft alle 10 Registry-Dateien strukturell)
 - Mutationssuite S-19: **12/12** (synthetische Fixtures)
 - Repository-Audit R3: **100/100, GATE PASS** · README-Gate: **13/13 CONFORM** · MD-Gate: **CONFORM** · Contract-Registry-Gate: **CONFORM**
 - Abhängigkeitsgraph: 105 Knoten, 226 Kanten, azyklisch (DAG) — Voll-Audit 21:45 + DESC-001 21:55 + VERSION-001 22:05
