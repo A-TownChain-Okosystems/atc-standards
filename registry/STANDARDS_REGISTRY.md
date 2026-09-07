@@ -11,9 +11,9 @@
 
 | ID | Titel | Status | Umsetzung |
 |----|-------|--------|------------|
-| ATC-STD-REPO-001 | Repository Structure Standard | 📐 PROPOSED v1.0.0 | AD-029; verbindlich fuer neue Repos, Bestand dokumentiert Mapping bis M8 |
-| ATC-STD-REPO-002 | Repository Naming & Classification Standard | 📐 PROPOSED v1.0.0 | 22-Repos-Klassifizierung normativ (CORE/SPEC/SDK/APPLICATION/INFRA/AI/OS/GAME, R0-R4) |
-| ATC-STD-REPO-003 | Repository Security & Release Standard | 📐 PROPOSED v1.0.0 | SECURITY.md-Pflicht ab R2, CI/CD-Minimum, SemVer + Protokoll-Trennung |
+| ATC-STD-201 | Repository Structure Standard | 📐 PROPOSED v1.0.0 | AD-029; verbindlich fuer neue Repos, Bestand dokumentiert Mapping bis M8 |
+| ATC-STD-202 | Repository Naming & Classification Standard | 📐 PROPOSED v1.0.0 | 22-Repos-Klassifizierung normativ (CORE/SPEC/SDK/APPLICATION/INFRA/AI/OS/GAME, R0-R4) |
+| ATC-STD-203 | Repository Security & Release Standard | 📐 PROPOSED v1.0.0 | SECURITY.md-Pflicht ab R2, CI/CD-Minimum, SemVer + Protokoll-Trennung |
 
 ---
 

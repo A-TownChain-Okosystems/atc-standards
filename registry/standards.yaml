@@ -1,0 +1,13 @@
+# ATC Standards Registry — das Herzstueck (ATC-STD-000 §19, AD-034)
+# Kein Eintrag = kein Standard. Status gemaess Lifecycle IDEA…RETIRED.
+standards:
+  - {id: ATC-STD-000, title: "ATC Standards Governance & Specification Standard", version: "1.0.0", status: draft,     category: governance, owner: ShivaCoreDev, normative: true,  file: governance/ATC-STD-000.md}
+  - {id: ATC-STD-201, title: "Repository Structure Standard",                    version: "1.0.1", status: draft,     category: repository, owner: ShivaCoreDev, normative: true,  file: standards/repository/ATC-STD-201.md, supersedes: "ATC-STD-REPO-001@1.0.x"}
+  - {id: ATC-STD-202, title: "Repository Naming & Classification Standard",      version: "1.0.1", status: proposed,  category: repository, owner: ShivaCoreDev, normative: true,  file: standards/repository/ATC-STD-202.md, supersedes: "ATC-STD-REPO-002@1.0.x"}
+  - {id: ATC-STD-203, title: "Repository Security & Release Standard",            version: "1.0.1", status: proposed,  category: repository, owner: ShivaCoreDev, normative: true,  file: standards/repository/ATC-STD-203.md, supersedes: "ATC-STD-REPO-003@1.0.x"}
+
+# Legacy-Serien: behalten historische Nummerierung, Aenderungen regiert durch ATC-STD-000
+legacy_series:
+  - {id: "ATC-01..99",  title: "ATC Ecosystem Standards (Tier 1-10, 99 Standards)", registry: "registry/STANDARDS_REGISTRY.md", location: "atc/", governance: ATC-STD-000}
+  - {id: "ATC-0001..0008", title: "ATC Core Standards",                           file: "atc/ATC_STANDARDS.md",          governance: ATC-STD-000}
+  - {id: "ATS-1000..1007", title: "ATS System Standards (ShivaOS)",              file: "ats/ATS_STANDARDS.md",          governance: ATC-STD-000}

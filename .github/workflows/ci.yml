@@ -13,3 +13,8 @@ jobs:
           fetch-depth: 0
       - name: ATC Repository Audit (self-compliance, Level R3)
         run: python3 tools/atc-repo-audit/atc_repo_audit.py . --level R3
+      - name: ATC Standards Validation (ATC-STD-000 Compliance)
+        run: |
+          for s in governance/ATC-STD-000.md standards/repository/ATC-STD-201.md standards/repository/ATC-STD-202.md standards/repository/ATC-STD-203.md; do
+            python3 tools/atc-std-validator/atc_std_validator.py "$s"
+          done

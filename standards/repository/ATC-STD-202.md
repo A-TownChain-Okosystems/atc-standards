@@ -1,14 +1,28 @@
-# ATC-STD-REPO-002 — Repository Naming & Classification Standard
+standard:
+  id: ATC-STD-202
+  title: "ATC-STD-202 — Repository Naming & Classification Standard"
+  version: "1.0.1"
+  status: proposed
+  category: repository
+  owner: ShivaCoreDev
+  created: "2026-09-07"
+  updated: "2026-09-07"
+  normative: true
+  supersedes: ["ATC-STD-REPO-002@1.0.x"]
+  superseded_by: null
+---
+
+# ATC-STD-202 — Repository Naming & Classification Standard
 > **Status:** NORMATIV (v1.0.1) — Erweiterung AD-031 | **Datum:** 07.09.2026 | **Autor:** Michael Wroblewski (Owner), Aurora (Superagent)
-> **Standard-ID:** ATC-STD-REPO-002 | **Scope:** GitHub-Organisation A-TownChain-Okosystems
-> **Referenzen:** AD-025 (Genesis Chronicles Umbenennung), AD-026 (Bauhierarchie L0-L7), AD-029 (Governance-Mandat), ATC-STD-REPO-001/-003
+> **Standard-ID:** ATC-STD-202 | **Scope:** GitHub-Organisation A-TownChain-Okosystems
+> **Referenzen:** AD-025 (Genesis Chronicles Umbenennung), AD-026 (Bauhierarchie L0-L7), AD-029 (Governance-Mandat), ATC-STD-201/-003
 > **Anwendungsregel:** VERBINDLICH — die Klassifizierungstabelle ist die normative Einordnung aller 22 aktiven Repos.
 
 ---
 
 ## Abstract
 
-ATC-STD-REPO-002 definiert Namensregeln, Repository-Typen, Compliance-Level
+ATC-STD-202 definiert Namensregeln, Repository-Typen, Compliance-Level
 (R0-R4), die Monorepo-/Multi-Repo-Grenze und die Abhaengigkeitsrichtungen der
 gesamten Organisation.
 
@@ -145,7 +159,7 @@ Read-Only-Politik siehe AD-020-Erfahrung).
 
 Die S-Klasse MUSS in `.atc/repository.yaml` (security.criticality) und in
 registry/repositories.yaml gefuehrt werden. Hoehere S-Klasse = strengere Gates
-(ATC-STD-REPO-003 §9). Aktuelle Zuordnung: siehe registry/repositories.yaml.
+(ATC-STD-203 §9). Aktuelle Zuordnung: siehe registry/repositories.yaml.
 
 ## 10. ATC Repository Dependency Graph (Abschnitt 32, MUST gepflegt)
 
@@ -160,3 +174,23 @@ registry/repositories.yaml im atc-standards-Repository ist die ZENTRALE,
 maschinenlesbare Registry aller Repositories (name, classification, maturity,
 security, status, layer). Neue Repos MUSSEN bei Anlage registriert werden.
 teams.yaml (Team-Zuordnung) und dependencies.yaml (Graph) ergaenzen sie.
+
+## Security Considerations
+
+Struktur-/Hygiene-Regeln sind Security-relevant (keine Secrets im Tree,
+ATC-STD-203 zusaetzlich anwendbar). Vertiefte Security-Anforderungen:
+ATC-STD-203.
+
+## References
+
+NORMATIVE: ATC-STD-000 (Governance), ATC-STD-202, ATC-STD-203 ·
+INFORMATIVE: AD-025/026/028/029/031 (DECISIONS_REGISTER, Hub) ·
+IMPLEMENTATION: tools/atc-repo-audit, schemas/repository.schema.yaml.
+
+## Changelog
+
+- 1.0.1 (07.09.2026): Unter ATC-STD-000 Governance gestellt; ID von
+  ATC-STD-REPO-001 auf ATC-STD-201 umgestellt (supersedes); Metadaten-Header
+  ergaenzt.
+- 1.0.0 (07.09.2026): Formale Spezifikation (AD-031): RFC-2119,
+  Compliance-Matrix M-01…M-16, Validator-Regeln V-01…V-16.

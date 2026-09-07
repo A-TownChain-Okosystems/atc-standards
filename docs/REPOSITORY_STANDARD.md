@@ -1,7 +1,7 @@
 # REPOSITORY STANDARD — atc-standards
 
-**Standard:** ATC-STD-REPO-001 v1.0.0 (PROPOSED) · **Klassifizierung:**
-SPEC (ATC-STD-REPO-002) · **Level:** R3 · **Datum:** 07.09.2026 · **AD-030**
+**Standard:** ATC-STD-201 v1.0.0 (PROPOSED) · **Klassifizierung:**
+SPEC (ATC-STD-202) · **Level:** R3 · **Datum:** 07.09.2026 · **AD-030**
 
 **Required:** README.md (12 Abschnitte) ✓, LICENSE ✓, SECURITY.md ✓,
 CHANGELOG.md ✓, docs/ (REPOSITORY_STANDARD.md) ✓, tests/ — N/A fuer

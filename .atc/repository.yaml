@@ -1,4 +1,4 @@
-standard: ATC-STD-REPO-001
+standard: ATC-STD-201
 standard_version: "1.0.0"
 repository:
   name: atc-standards

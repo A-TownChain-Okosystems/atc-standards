@@ -1,12 +1,34 @@
-# ATC-STD-REPO-001 — Repository Structure Standard (v1.0.0, FORMALE SPEZIFIKATION)
+standard:
+  id: ATC-STD-201
+  title: "ATC-STD-201 — Repository Structure Standard"
+  version: "1.0.1"
+  status: draft
+  category: repository
+  owner: ShivaCoreDev
+  created: "2026-09-07"
+  updated: "2026-09-07"
+  normative: true
+  supersedes: ["ATC-STD-REPO-001@1.0.x"]
+  superseded_by: null
+---
+
+# ATC-STD-201 — Repository Structure Standard (v1.0.1, FORMALE SPEZIFIKATION)
 
 > **Status:** NORMATIV (RFC 2119) — verbindlich fuer NEUE Repositories sofort; Bestands-Repositories R2+ erfuellen MUST-Regeln bis M8 (AD-027), dokumentiert via atc-repo-audit
 > **Version:** 1.0.0 (FORMAL) · **Datum:** 07.09.2026 · **Autoren:** Michael Wroblewski (Owner), Aurora (Superagent)
-> **Standard-ID:** ATC-STD-REPO-001 · **Scope:** Alle offiziellen Repositories der Organisation
-> **Referenzen:** AD-025/026/027/028/029/031, ATC-STD-REPO-002 (Naming/Classification/Ownership/Lifecycle/S-Klassen), ATC-STD-REPO-003 (Security/Release/Branching/Commits/Gates)
+> **Standard-ID:** ATC-STD-201 · **Scope:** Alle offiziellen Repositories der Organisation
+> **Referenzen:** AD-025/026/027/028/029/031, ATC-STD-202 (Naming/Classification/Ownership/Lifecycle/S-Klassen), ATC-STD-203 (Security/Release/Branching/Commits/Gates)
 > **Validator:** tools/atc-repo-audit (Regeln V-01…V-16) · **Registry:** registry/repositories.yaml
 
 ---
+
+## Abstract
+
+Diese Spezifikation definiert die verbindliche Repository-Struktur aller
+offiziellen ATC-Repositories: Top-Level-Layout, Verantwortlichkeits-Trennung,
+maschinenlesbare Metadaten (.atc/), Dokumentations-Mindeststandard, Hygiene
+und die Compliance-Matrix M-01…M-16 je Reifegrad R0-R4 mit maschinenpruefbaren
+Validator-Regeln V-01…V-16.
 
 ## 0. Normativitaet
 
@@ -17,8 +39,8 @@ Spezifikation sind im Sinne von RFC 2119 zu verstehen.
 - **SHOULD** = empfohlen; Verstoss = WARN (Score-Abzug, kein NO-GO allein)
 - **MAY** = optional; nicht geprueft
 
-Ein Repository gilt als ATC-STD-REPO-001-konform, wenn ALLE fuer sein
-Compliance-Level (R0-R4, ATC-STD-REPO-002) geltenden MUST-Regeln erfuellt sind.
+Ein Repository gilt als ATC-STD-201-konform, wenn ALLE fuer sein
+Compliance-Level (R0-R4, ATC-STD-202) geltenden MUST-Regeln erfuellt sind.
 
 ## 1. Repository-Metadaten (Abschnitt 16 des Erweiterungs-Mandats)
 
@@ -26,7 +48,7 @@ Jedes offizielles Repository MUSS eine maschinenlesbare Metadatei
 `.atc/repository.yaml` besitzen (ab R1) mit mindestens:
 
 ```yaml
-standard: ATC-STD-REPO-001
+standard: ATC-STD-201
 standard_version: "1.0.0"
 repository:
   name: <repo-name>          # MUSS mit GitHub-Name uebereinstimmen
@@ -50,8 +72,8 @@ protocol:
 ```
 
 Zusaetzlich MUSS ab R2 vorliegen:
-- `.atc/ownership.yaml` (Verantwortlichkeiten, ATC-STD-REPO-002 Abschnitt 2)
-- `.atc/lifecycle.yaml` (Lebenszyklus, ATC-STD-REPO-002 Abschnitt 3)
+- `.atc/ownership.yaml` (Verantwortlichkeiten, ATC-STD-202 Abschnitt 2)
+- `.atc/lifecycle.yaml` (Lebenszyklus, ATC-STD-202 Abschnitt 3)
 - `.atc/compliance.yaml` (Gate-Status-Selbstdeklaration, durch Audit ersetzt)
 
 Ein automatischer ATC Repository Validator (atc-repo-audit) prueft MUSS-Regeln maschinell.
@@ -155,20 +177,40 @@ Jede V-Regel prueft eine M-Regel. Semantik:
 | V-13 | docs/decisions/ ODER Verweis auf zentrales DECISIONS_REGISTER | M-14 |
 | V-14 | Compliance-Badge-Zeile im README | M-15 |
 | V-15 | Repo in registry/repositories.yaml gelistet (Konsistenz name/level) | M-16 |
-| V-16 | Conventional-Commits-Disziplin (letzte 20 Commits, ≥80%) | ATC-STD-REPO-003 §2 |
+| V-16 | Conventional-Commits-Disziplin (letzte 20 Commits, ≥80%) | ATC-STD-203 §2 |
 
 Referenz-Implementierung: **tools/atc-repo-audit** (v0.1.0, Python, stdlib-only).
 
-## 10. Score-Modell (Health Score, ATC-STD-REPO-003 §8)
+## 10. Score-Modell (Health Score, ATC-STD-203 §8)
 
 Kategorien mit Gewichtung: Structure, Documentation, Testing, Security,
 CI/CD, Ownership, Versioning, Dependencies. Schwellenwerte und Badge-Ableitung:
-ATC-STD-REPO-003. GATE: PASS erfordert Score >= 85 UND 0 MUST-FAILs.
+ATC-STD-203. GATE: PASS erfordert Score >= 85 UND 0 MUST-FAILs.
 
 ## 11. Obergrenzen dieser Spezifikation
 
 Struktur, Metadaten, Dokumentation, Hygiene, Badge. Naming, Classification,
 Ownership-Teams, Lifecycle-Uebergange, S-Klassen und der zentrale Dependency
-Graph: ATC-STD-REPO-002. Security, Branching, Commits, PRs, Release-Gates,
+Graph: ATC-STD-202. Security, Branching, Commits, PRs, Release-Gates,
 Dependency Policy, Third-Party, API-Stability, Breaking Changes, Reproducible
-Builds, Artifact Management: ATC-STD-REPO-003.
+Builds, Artifact Management: ATC-STD-203.
+
+## Security Considerations
+
+Struktur-/Hygiene-Regeln sind Security-relevant (keine Secrets im Tree,
+ATC-STD-203 zusaetzlich anwendbar). Vertiefte Security-Anforderungen:
+ATC-STD-203.
+
+## References
+
+NORMATIVE: ATC-STD-000 (Governance), ATC-STD-202, ATC-STD-203 ·
+INFORMATIVE: AD-025/026/028/029/031 (DECISIONS_REGISTER, Hub) ·
+IMPLEMENTATION: tools/atc-repo-audit, schemas/repository.schema.yaml.
+
+## Changelog
+
+- 1.0.1 (07.09.2026): Unter ATC-STD-000 Governance gestellt; ID von
+  ATC-STD-REPO-001 auf ATC-STD-201 umgestellt (supersedes); Metadaten-Header
+  ergaenzt.
+- 1.0.0 (07.09.2026): Formale Spezifikation (AD-031): RFC-2119,
+  Compliance-Matrix M-01…M-16, Validator-Regeln V-01…V-16.

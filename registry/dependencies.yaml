@@ -1,6 +1,7 @@
-# ATC Repository Dependency Graph (AD-026 L0-L7, AD-031) — Richtung: nutzt -> wird genutzt
-# Regel: keine Zyklen; hoehere Layer duerfen tiefere nutzen, NIEMALS umgekehrt.
-dependencies:
+# ATC Dependency Graphs (AD-026 L0-L7, AD-031/034)
+# Zwei Graphen: Repository-Abhaengigkeiten (Richtung: nutzt -> wird genutzt)
+# und Standard-Abhaengigkeiten (Zyklenerkennung durch atc-std-validator).
+repositories:
   atclang:            {uses: []}
   atc-shivacore:      {uses: [atclang]}
   aurora-ai:          {uses: [atc-shivacore]}
@@ -24,3 +25,8 @@ dependencies:
   a-townchain-os:     {uses: [atc-shivacore, atclang, aurora-ai, a-townchain, globus-os]}
   a-townchain-os-docs: {uses: []}
   atc-standards:      {uses: []}
+standards:
+  ATC-STD-000: {depends: []}
+  ATC-STD-201: {depends: [ATC-STD-000]}
+  ATC-STD-202: {depends: [ATC-STD-000, ATC-STD-201]}
+  ATC-STD-203: {depends: [ATC-STD-000, ATC-STD-201]}

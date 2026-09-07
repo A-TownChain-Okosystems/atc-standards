@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # Copyright (c) 2026 Michael Wroblewski / ShivaCore / A-TownChain-Okosystems. All Rights Reserved.
-"""ATC Repository Auditor v0.1.0 — Validator fuer ATC-STD-REPO-001 v1.0.0 (AD-031).
+"""ATC Repository Auditor v0.1.0 — Validator fuer ATC-STD-201 v1.0.0 (AD-031).
 
 Prueft die MUST/SHOULD-Regeln der Compliance-Matrix (V-01…V-16), erzeugt einen
-Health Score (ATC-STD-REPO-003 §15) und entscheidet GATE: PASS / NO-GO.
+Health Score (ATC-STD-203 §15) und entscheidet GATE: PASS / NO-GO.
 
 Aufruf: python3 atc_repo_audit.py <repo-pfad> [--level R2] [--registry <repositories.yaml>]
 Exit:   0 = GATE: PASS, 1 = GATE: NO-GO. Abhaengigkeiten: nur Python-stdlib.
@@ -244,7 +244,7 @@ def main():
 
     print("ATC Repository Audit")
     print("=" * 60)
-    print("Repository: %s   Level: %s   Standard: ATC-STD-REPO-001 v1.0.0" % (anzeige, level))
+    print("Repository: %s   Level: %s   Standard: ATC-STD-201 v1.0.0" % (anzeige, level))
     print()
     for regel, status, kat, msg in a.results:
         print("[%s] %s (%s): %s" % (status, regel, kat, msg))

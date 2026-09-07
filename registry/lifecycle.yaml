@@ -1,0 +1,17 @@
+# ATC Standard Lifecycle-Zustandsmaschine (ATC-STD-000 §9)
+states: [idea, proposed, draft, review, candidate, approved, stable, deprecated, retired]
+transitions:
+  idea:         [proposed]
+  proposed:     [draft]
+  draft:        [review]
+  review:       [candidate, draft]        # draft = Rueckstufung nach abgelehntem Review
+  candidate:    [approved, draft]
+  approved:     [stable]
+  stable:       [deprecated]
+  deprecated:   [retired]
+rules:
+  - Nur sequenzielle Uebergaende; Springen UNZULAESSIG (Ausnahme: Rueckstufung).
+  - Normativkraft (Geltung fuer Implementierungen) entsteht mit APPROVED, volle
+    Verbindlichkeit mit STABLE.
+  - APPROVED setzt die Review-Chain (Technical/Security/Architecture + Approval) voraus.
+  - Aenderungen an STABLE nur via SCR (ATC-STD-000 §14).

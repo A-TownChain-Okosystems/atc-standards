@@ -2,7 +2,7 @@
 type: object
 required: [standard, standard_version, repository, project, language, license, security, api]
 properties:
-  standard: {const: ATC-STD-REPO-001}
+  standard: {const: ATC-STD-201}
   standard_version: {type: string}
   repository:
     type: object

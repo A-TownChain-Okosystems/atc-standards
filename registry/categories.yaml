@@ -1,0 +1,13 @@
+# ATC Standard Kategorien / ID-Raeder (ATC-STD-000 §7, AD-034)
+categories:
+  000:   {name: governance,     range: "ATC-STD-000",        description: "Standard Governance (Verfassung)"}
+  100:   {name: architecture,   range: "ATC-STD-100–199",    description: "Architektur-Standards"}
+  200:   {name: repository,     range: "ATC-STD-200–299",    description: "Repository & Git"}
+  300:   {name: development,    range: "ATC-STD-300–399",    description: "Development / Coding"}
+  400:   {name: security,       range: "ATC-STD-400–499",    description: "Security"}
+  500:   {name: protocol,       range: "ATC-STD-500–599",    description: "Protocol"}
+  600:   {name: blockchain,     range: "ATC-STD-600–699",    description: "Blockchain"}
+  700:   {name: ai,             range: "ATC-STD-700–799",    description: "AI"}
+  800:   {name: os,             range: "ATC-STD-800–899",    description: "OS / Runtime"}
+  900:   {name: infrastructure, range: "ATC-STD-900–999",    description: "Infrastructure"}
+  1000:  {name: applications,   range: "ATC-STD-1000+",      description: "Applications / Ecosystem"}

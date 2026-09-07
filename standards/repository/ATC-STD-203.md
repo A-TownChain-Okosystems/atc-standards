@@ -1,14 +1,28 @@
-# ATC-STD-REPO-003 — Repository Security & Release Standard
+standard:
+  id: ATC-STD-203
+  title: "ATC-STD-203 — Repository Security & Release Standard"
+  version: "1.0.1"
+  status: proposed
+  category: repository
+  owner: ShivaCoreDev
+  created: "2026-09-07"
+  updated: "2026-09-07"
+  normative: true
+  supersedes: ["ATC-STD-REPO-003@1.0.x"]
+  superseded_by: null
+---
+
+# ATC-STD-203 — Repository Security & Release Standard
 > **Status:** NORMATIV (v1.0.1) — Erweiterung AD-031 | **Datum:** 07.09.2026 | **Autor:** Michael Wroblewski (Owner), Aurora (Superagent)
-> **Standard-ID:** ATC-STD-REPO-003 | **Scope:** Alle produktiven (R2+) Repositories
-> **Referenzen:** AD-022 (19 Gates, KEIN FREEZE vor G18 Security Audit), AD-027 (Lauffaehigkeits-Roadmap), ATC-STD-REPO-001/-002, Issue #69 (Dependabot-Audit)
+> **Standard-ID:** ATC-STD-203 | **Scope:** Alle produktiven (R2+) Repositories
+> **Referenzen:** AD-022 (19 Gates, KEIN FREEZE vor G18 Security Audit), AD-027 (Lauffaehigkeits-Roadmap), ATC-STD-201/-002, Issue #69 (Dependabot-Audit)
 
 ---
 
 ## Abstract
 
-ATC-STD-REPO-003 definiert Security-Gates, CI/CD-Mindeststandards, Versionierung
-und Release-Disziplin. Das Compliance-Level aus ATC-STD-REPO-002 bestimmt die
+ATC-STD-203 definiert Security-Gates, CI/CD-Mindeststandards, Versionierung
+und Release-Disziplin. Das Compliance-Level aus ATC-STD-202 bestimmt die
 harteste Gate-Stufe.
 
 ## 1. SECURITY.md (Pflicht ab R2)
@@ -58,7 +72,7 @@ Chain-ID 658467 sind Konstanten, keine Versionsnummern.
 
 ## 5. Secrets & Credentials
 
-Keine Secrets im Repository (Detailregeln ATC-STD-REPO-001 Abschnitt 6).
+Keine Secrets im Repository (Detailregeln ATC-STD-201 Abschnitt 6).
 `.env.example` dokumentiert die erwarteten Variablen OHNE Werte.
 Secret-Rotation ueber Plattform-/Deployment-Mechanismen, nie ueber Commits.
 
@@ -88,7 +102,7 @@ Impact, Backward Compatibility. Vorlage: templates/repository/PULL_REQUEST_TEMPL
 
 | Gate | Pruefung |
 |---|---|
-| GATE-01 | Structure (ATC-STD-REPO-001 Matrix) |
+| GATE-01 | Structure (ATC-STD-201 Matrix) |
 | GATE-02 | Build/Compile reproduzierbar |
 | GATE-03 | Unit-Tests |
 | GATE-04 | Integration-Tests |
@@ -150,4 +164,24 @@ Versioning, Dependencies. Schwellenwerte:
 | 50-69 | NON-COMPLIANT |
 | <50 | CRITICAL |
 
-GATE: PASS erfordert Score >= 85 UND 0 MUST-FAILs (ATC-STD-REPO-001 §10).
+GATE: PASS erfordert Score >= 85 UND 0 MUST-FAILs (ATC-STD-201 §10).
+
+## Security Considerations
+
+Struktur-/Hygiene-Regeln sind Security-relevant (keine Secrets im Tree,
+ATC-STD-203 zusaetzlich anwendbar). Vertiefte Security-Anforderungen:
+ATC-STD-203.
+
+## References
+
+NORMATIVE: ATC-STD-000 (Governance), ATC-STD-202, ATC-STD-203 ·
+INFORMATIVE: AD-025/026/028/029/031 (DECISIONS_REGISTER, Hub) ·
+IMPLEMENTATION: tools/atc-repo-audit, schemas/repository.schema.yaml.
+
+## Changelog
+
+- 1.0.1 (07.09.2026): Unter ATC-STD-000 Governance gestellt; ID von
+  ATC-STD-REPO-001 auf ATC-STD-201 umgestellt (supersedes); Metadaten-Header
+  ergaenzt.
+- 1.0.0 (07.09.2026): Formale Spezifikation (AD-031): RFC-2119,
+  Compliance-Matrix M-01…M-16, Validator-Regeln V-01…V-16.

@@ -1,5 +1,5 @@
 compliance:
-  standard: ATC-STD-REPO-001
+  standard: ATC-STD-201
   version: "1.0.0"
   level: R3
   gates:

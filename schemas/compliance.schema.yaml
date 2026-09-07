@@ -5,7 +5,7 @@ properties:
     type: object
     required: [standard, version, level, gates]
     properties:
-      standard: {const: ATC-STD-REPO-001}
+      standard: {const: ATC-STD-201}
       version: {type: string}
       level: {enum: [R0, R1, R2, R3, R4]}
       gates: {type: object, properties: {structure: {enum: [pass, fail]}, documentation: {enum: [pass, fail]}, security: {enum: [pass, fail]}, ci: {enum: [pass, fail]}, architecture: {enum: [pass, fail]}}}
