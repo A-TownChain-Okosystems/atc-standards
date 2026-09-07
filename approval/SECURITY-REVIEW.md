@@ -29,3 +29,15 @@
   Formalfassung behoben.
 
 **URTEIL: PASS** — 0 Blocker, 2 MEDIUM (Auflagen), 1 LOW.
+
+---
+
+## Nachtrag v1.2.0 (07.09.2026)
+
+Gegenstand: ATC-STD-000 v1.2.0 — neu §37 ID-Allokationsprozess (SCR-0001,
+REQ-STD-002) und §38 Security Considerations (F-004, REQ-STD-003).
+v1.1.0 (APPROVED) unveraendert; beide Absaetze rein additiv, keine
+Aenderung bestehender Abschnitte.
+
+
+**Ergebnis: PASS.** §38 adressiert die offene Security-Luecke (F-004): Secrets-Policy, Branch-Protection, GPG-Signierung, Integritaet, Reviewer-Unabhaengigkeit. Keine neuen Angriffsflaechen durch §37 (rein prozedural).

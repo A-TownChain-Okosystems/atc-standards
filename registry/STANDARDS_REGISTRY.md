@@ -1,22 +1,45 @@
 # 📐 A-TownChain Standards Registry
 
-> **Stand:** 05.07.2026 13:55 | **Version:** 1.0.0 | **Roadmap:** v2.0
-> **99 ATC-Standards (ATC-01 bis ATC-99)** — 80 FINAL + 10 ACCEPTED + 7 DRAFT + 1 REVIEW + 1 MANDATE
-> **Gepflegt von:** StandardsAgent (Aurora Ecosystem Brain)
-> **Non-EVM · SHA-256 · Chain-ID 658467**
+> **ABGELEITETE DOKUMENTATIONS-SICHT (F-005, 07.09.2026)** — Single Source of Truth ist
+> **registry/standards.yaml** (Regel: Registry + Repository schlägt README/Wiki). Diese Datei
+> dokumentiert ergänzend die historischen ATC-01–99-Standards; bei Änderungen an der Registry
+> ist der Governance-Block oben aus der YAML zu regenerieren.
+> **Gepflegt von:** StandardsAgent (Aurora) · **Non-EVM · SHA-256 · Chain-ID 658467**
 
 ---
 
-## Governance-Standards (ATC-STD-REPO-Serie, 07.09.2026)
+## Governance-Standards (registry/standards.yaml — SSOT, Stand 07.09.2026)
 
-| ID | Titel | Status | Umsetzung |
-|----|-------|--------|------------|
-| ATC-STD-201 | Repository Structure Standard | 📐 PROPOSED v1.0.0 | AD-029; verbindlich fuer neue Repos, Bestand dokumentiert Mapping bis M8 |
-| ATC-STD-202 | Repository Naming & Classification Standard | 📐 PROPOSED v1.0.0 | 22-Repos-Klassifizierung normativ (CORE/SPEC/SDK/APPLICATION/INFRA/AI/OS/GAME, R0-R4) |
-| ATC-STD-203 | Repository Security & Release Standard | 📐 PROPOSED v1.0.0 | SECURITY.md-Pflicht ab R2, CI/CD-Minimum, SemVer + Protokoll-Trennung |
-| ATC-STD-300 | Development & Project Management Standard (DTC) | 📐 CANDIDATE v1.0.0 | Verbindliche Entwicklungs-Traceability: DTC-Kette, Artefakt-IDs, Wiki-/Roadmap-/TODO-/Sprint-/Gate-/Release-Standard, Consistency Checker |
-
----
+| ID | Titel | Status | Version | Kategorie |
+|----|-------|--------|---------|-----------|
+| ATC-STD-000 | Standards Governance & Specification Standard | candidate | 1.2.0 | governance |
+| ATC-STD-201 | Repository Structure Standard | draft | 1.0.1 | repository |
+| ATC-STD-202 | Repository Naming & Classification Standard | proposed | 1.1.0 | repository |
+| ATC-STD-203 | Repository Security & Release Standard | proposed | 1.0.1 | repository |
+| ATC-STD-BUG-001 | Bug Finding Standard | candidate | 1.0.0 | bug |
+| ATC-STD-BUG-002 | Bug Documentation Standard | candidate | 1.0.0 | bug |
+| ATC-STD-BUG-003 | Bug Fix Lifecycle Standard | candidate | 1.0.0 | bug |
+| ATC-STD-BUG-004 | Repository Synchronization & Merge Gate | candidate | 1.0.0 | bug |
+| ATC-STD-NET-001 | Devnet Standard | candidate | 1.0.0 | net |
+| ATC-STD-NET-002 | Testnet Standard | candidate | 1.0.0 | net |
+| ATC-STD-NET-003 | Mainnet Standard | candidate | 1.0.0 | net |
+| ATC-STD-NET-004 | Network Promotion Standard | candidate | 1.0.0 | net |
+| ATC-STD-NET-005 | Network Genesis Standard | candidate | 1.0.0 | net |
+| ATC-STD-NET-006 | Network Upgrade Standard | candidate | 1.0.0 | net |
+| ATC-STD-NET-007 | Network Security Standard | candidate | 1.0.0 | net |
+| ATC-STD-NET-008 | Network Recovery Standard | candidate | 1.0.0 | net |
+| ATC-STD-100 | Language & Technology Stack Standard | candidate | 1.0.0 | architecture |
+| ATC-STD-ZKP-001 | ZKP Architecture Standard | candidate | 1.0.0 | zkp |
+| ATC-STD-ZKP-002 | Proof System Interface Standard | candidate | 1.0.0 | zkp |
+| ATC-STD-ZKP-003 | Circuit Standard | candidate | 1.0.0 | zkp |
+| ATC-STD-ZKP-004 | On-Chain Verification Standard | candidate | 1.0.0 | zkp |
+| ATC-STD-ZKP-005 | Commitment & Nullifier Standard | candidate | 1.0.0 | zkp |
+| ATC-STD-ZKP-006 | ZK Identity Standard | candidate | 1.0.0 | zkp |
+| ATC-STD-ZKP-007 | Private Transaction Standard | candidate | 1.0.0 | zkp |
+| ATC-STD-ZKP-008 | ZK Rollup Standard | candidate | 1.0.0 | zkp |
+| ATC-STD-ZKP-009 | ZKVM Standard | candidate | 1.0.0 | zkp |
+| ATC-STD-ZKP-010 | ZKP Security & Audit Standard | candidate | 1.0.0 | zkp |
+| ATC-STD-300 | Development & Project Management Standard | candidate | 1.0.0 | development |
 
 ## Aus dem Wiki konsolidiert (AD-032, 07.09.2026)
 

@@ -20,3 +20,15 @@
   eruebrigt sich das fruehere L↔R-Mapping-Finding.
 
 **URTEIL: PASS** — 0 Blocker, 1 MINOR.
+
+---
+
+## Nachtrag v1.2.0 (07.09.2026)
+
+Gegenstand: ATC-STD-000 v1.2.0 — neu §37 ID-Allokationsprozess (SCR-0001,
+REQ-STD-002) und §38 Security Considerations (F-004, REQ-STD-003).
+v1.1.0 (APPROVED) unveraendert; beide Absaetze rein additiv, keine
+Aenderung bestehender Abschnitte.
+
+
+**Ergebnis: PASS.** §37 konsistent mit §7.11 Namespace Allocation und Registry-Praxis (ATC-STD-100/300-Allokation); §38 konsistent mit ATC-STD-203 und der Secrets-Policy (Sicherheitsregel). REQ-STD-002/003 testbar, 3-stellig, eindeutig.

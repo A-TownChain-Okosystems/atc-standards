@@ -1,8 +1,8 @@
 standard:
   id: ATC-STD-000
   title: "Standards Governance & Specification Standard"
-  version: "1.1.0"
-  status: approved
+  version: "1.2.0"
+  status: candidate
   category: governance
   authority: A-TownChain Ecosystems
   owner: ShivaCoreDev
@@ -514,6 +514,52 @@ Architecture Security Protocol Blockchain AI
                Production
 ```
 
+## 37. ID-Allokationsprozess (SCR-0001)
+
+Neue Standard-IDs werden wie folgt allokliert (Registry-First):
+
+1. **Bereich:** Die ID liegt im fuer die Kategorie reservierten Nummernbereich
+   (§7.11 Namespace Allocation, z. B. 200-299 fuer repository-Standards).
+2. **Regel:** Allokliert wird die **naechste freie Nummer ab
+   Bereichsbeginn aufsteigend** (z. B. nach ATC-STD-203 ist die naechste
+   freie ID im 200er-Bereich ATC-STD-204).
+3. **Registry-Zeitgleichkeit:** Die Registry-Zeile wird zeitgleich mit der
+   ID-Vergabe angelegt (Status `idea` oder `proposed`) — eine ID existiert
+   erst mit ihrem Registry-Eintrag (keine Schatten-IDs).
+4. **Keine Nachbesetzung:** Luecken durch OBSOLETE- oder RETIRED-Standards
+   werden **nicht nachbesetzt** — Luecken sind historische Marker und
+   bleiben Teil der Allokationshistorie.
+
+| ID | Anforderung | Verweis |
+|----|-------------|---------|
+| id: REQ-STD-002 | Neue Standard-IDs MUESSEN nach der Allokationsregel dieses Abschnitts (naechste freie Nummer ab Bereichsbeginn, Registry-Zeitgleichkeit, keine Luecken-Nachbesetzung) vergeben werden. | §37 |
+
+## 38. Security Considerations (F-004)
+
+Die Sicherheit des Standardsystems selbst ist normativ geschuetzt:
+
+1. **Secrets-Policy:** Tokens, API-Keys und Zugangsdaten duerfen NIEMALS im
+   Klartext in Standards, Registry-Dateien, Wikis, Issues, Commits, Logs
+   oder Reports erscheinen. Zulaessig sind ausschliesslich
+   Umgebungsvariablen-Platzhalter (`$TOKEN_NAME`) oder maskierte Werte
+   (`****`). Verstoss = SECURITY-Finding (S1).
+2. **Vertrauenskette des Governance Root:** Registry-Aenderungen laufen
+   ueber die Branch-Protection des Governance Root (required reviews,
+   kein Force-Push, Secret-Scanning mit Push-Protection).
+3. **Signierung:** Releases des Governance Root werden per GPG signiert
+   (immutable Tags, ATC-STD-203); bis zur Bereitstellung des
+   Release-Keys gilt das Ausnahmeprotokoll in DECISIONS_REGISTER.
+4. **Integritaet der Standards:** Der Wortlaut eines APPROVED/STABLE
+   Standards ist immutable; Aenderungen nur per Versionsbump und SCR
+   (§34 Standard Integrity).
+5. **Reviewer-Unabhaengigkeit:** GATE-SECURITY-Entscheidungen muessen
+   unabhaengig von der implementierenden Partei dokumentiert werden
+   (ATC-STD-300 §23).
+
+| ID | Anforderung | Verweis |
+|----|-------------|---------|
+| id: REQ-STD-003 | Standards, Registry-Dateien und Governance-Artefakte MUESSEN die Secrets-Policy (Absatz 1) einhalten; Verstoesse sind SECURITY-Findings. | §38 |
+
 ## Aktueller Status
 
 Review-Chain nach §14 gegen diese Fassung durchgefuehrt und dokumentiert
@@ -530,9 +576,15 @@ ATC-STD-000 v1.0.0
 ```
 
 Pfad: DRAFT -> REVIEW -> CANDIDATE -> APPROVED (07.09.2026, Owner-Freigabe).
-Naechster Schritt: STABLE per Owner-Entscheidung. Damit ist ATC-STD-000
-keine Ausnahme von den Regeln, die es definiert — die Verfassung ist
-vollstaendig durch die eigene Kette gelaufen.
+Damit ist ATC-STD-000 keine Ausnahme von den Regeln, die es definiert —
+die Verfassung ist vollstaendig durch die eigene Kette gelaufen.
+
+**Fassungsstand:**
+- v1.1.0 = APPROVED-Fassung (07.09.2026, SCR-0004)
+- v1.2.0 = CANDIDATE (07.09.2026): §37 ID-Allokationsprozess (SCR-0001),
+  §38 Security Considerations (F-004). Review-Chain §14 gegen v1.2.0:
+  Technical PASS · Security PASS · Architecture PASS (07.09.2026).
+  **APPROVED per Owner-Freigabe §9 ausstehend** — bis dahin gilt v1.1.0.
 
 ## Changelog
 
