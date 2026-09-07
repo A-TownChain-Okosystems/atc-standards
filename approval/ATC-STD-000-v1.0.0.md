@@ -23,8 +23,7 @@ standard:
 
 CANDIDATE v1.0.0 (07.09.2026). Review-Chain nach §15 bestanden (Technical,
 Security, Architecture: alle PASS, 0 blockierende Befunde; Berichte:
-approval/{TECHNICAL,SECURITY,ARCHITECTURE}-REVIEW.md, REQUIREMENT-MATRIX.yaml,
-APPROVAL-DECISION.md). Pfad: DRAFT → REVIEW → CANDIDATE.
+governance/APPROVAL_PACKAGE_ATC-STD-000.md). Pfad: DRAFT → REVIEW → CANDIDATE.
 Offen: formale Owner-Approval → APPROVED → STABLE. Bootstrapping-Regel:
 ATC-STD-000 befolgt seine eigenen Regeln ab Errichtung.
 
@@ -236,7 +235,7 @@ Issues, Chat und Code haben bei Widerspruch NACHZUSTEHEN.
 - 1.0.0 (07.09.2026): Initiale Verfassung (Owner-Mandat AD-034). Am selben
   Tag: Review-Chain §15 bestanden (3/3 PASS, 5 nicht-blockierende Befunde als
   SCR-Empfehlungen: T-F01, T-F02, S-F01, S-F02, A-F01) → Status CANDIDATE.
-  Approval-Paket: approval/ (formal, v1.0.0).
+  Approval-Paket: governance/APPROVAL_PACKAGE_ATC-STD-000.md.
   ID-System mit Domain-Raedern, Lifecycle-Maschine, Metadaten-Pflicht,
   REQ-IDs, Compliance-Verfahren, SemVer + Breaking-Change-Definition,
   SCR-Prozess, Review-Chain, Supersession/Migration, Registry-Pflicht,
