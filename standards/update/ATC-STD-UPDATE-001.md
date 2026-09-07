@@ -73,7 +73,13 @@ Der Standard definiert: wann ein Artefakt aktualisiert werden darf, wer ein Upda
 
 > ATC-NO-SILENT-UPDATE: Keine normative, sicherheitsrelevante, protokollrelevante oder produktive Änderung darf ohne identifizierbaren Change Request, Versionsstatus und nachvollziehbaren Änderungsnachweis durchgeführt werden.
 
-## 2. Begriffe und Definitionen
+## 2. Geltungsbereich (Scope)
+
+**Gilt:** Alle ATC-Artefakte des Ökosystems — Standards, Repositories, Spezifikationen, Software, Smart Contracts, KI-Agenten, APIs, Protokolle und Governance-Dokumente — für jedes Update (PATCH/MINOR/MAJOR/SECURITY/EMERGENCY/GOVERNANCE). Verbindlich normativ nach §9-Freigabe.
+
+**Nicht im Gilt (Abgrenzung, SCR-0015):** SemVer-Vergabe und Release-/Build-ID-Formate (ATC-STD-VERSION-001); SCR-Governance-Review normativer Änderungen selbst (ATC-STD-000 §30 — UPDATE-001 koppelt, ersetzt nicht); System-Audits (ATC-STD-AUDIT-001); Fehleranalyse-Methodik (ATC-STD-BUG-005); CHANGELOG-Detailformat (geplant ATC-STD-CHANGELOG-001); Release-Prozess-Orchestrierung (geplant ATC-STD-RELEASE-001); Agenten-Change-Abläufe im Betrieb (ATC-AAS-009). UPDATE-001 definiert die übergreifende Change-Control-Pflicht über diesen Standards.
+
+## 3. Begriffe und Definitionen
 
 | Begriff | Definition |
 |---|---|
@@ -83,7 +89,7 @@ Der Standard definiert: wann ein Artefakt aktualisiert werden darf, wer ein Upda
 | Update-Gate | Freigabepunkt UPD-G01..UPD-G09 (abgegrenzt zu AUD-G01..G08, ATC-STD-AUDIT-001) |
 | Canonical Source | die eine kanonische Quelle je Artefakt, von der alle anderen Darstellungen abgeleitet sind |
 
-## 3. Normative Anforderungen
+## 4. Normative Anforderungen
 
 ### REQ-UPD-001 — Grundsatz und No-Silent-Update
 
@@ -199,7 +205,7 @@ id: REQ-UPD-019
 
 Für normative Änderungen approbierter Standards bleibt ATC-STD-000 §30 verbindlich: Änderungen NUR via SCR (SCR-NNNN). Der Update Request `UPD-NNN` koppelt daran: UPD-NNN MUSS bei normativen Standardänderungen auf das zugehörige SCR verweisen; SCR deckt Governance-Review und Freigabe, UPD-NNN deckt Release-Tracking, Manifest und Synchronisation. Keine Doppelspur: SCR ersetzt UPD nicht, UPD ersetzt SCR nicht.
 
-## 4. Change-Control-Kette (Einordnung)
+## 5. Change-Control-Kette (Einordnung)
 
 ```
 ATC ENTERPRISE GOVERNANCE (tatsächlicher Bestand, Stand 07.09.2026)
@@ -218,7 +224,7 @@ ATC ENTERPRISE GOVERNANCE (tatsächlicher Bestand, Stand 07.09.2026)
 
 > Korrektur gegenüber dem Owner-Entwurf: ATC-STD-ERROR-001 wurde als ATC-STD-BUG-005 in die Bug-Familie integriert (SCR-0012); ATC-STD-AGENT-001 ist die AAS-Familie; ATC-STD-REPOSITORY-001 ist der Legacy-Name (heute 201–204); ATC-STD-CODING-001/CHANGE-001 sind geplante Standards. CHANGE, UPDATE, VERSION, AUDIT und RELEASE BLEIBEN separate, miteinander verknüpfte Standards — damit entsteht eine belastbare Change-Control-Kette.
 
-## 5. Compliance / Prüfungen
+## 6. Compliance / Prüfungen
 
 ### COM-UPD-001
 
@@ -256,15 +262,15 @@ id: COM-UPD-006
 
 Emergency Updates MÜSSEN Post-Update-Audit + RCA + Incident Record + Security Review nachholen (REQ-UPD-011) — Auditierbarkeit entfällt nie.
 
-## 6. Security Considerations
+## 7. Security Considerations
 
 Update-Manifeste DÜRFEN keine Secrets enthalten. Emergency-Prozesse dürfe Approval-Pflichten verkürzen (APPROVE bleibt Pflicht), aber NIE Auditierbarkeit. Rollback-Verfahren für Consensus-/Smart-Contract-Änderungen sind sicherheitskritisch und MÜSSEN vor Release getestet sein. KI-Agenten-Publish-Rechte: kein autonomes normatives Publishing (REQ-UPD-012; ATC-AAS-014 Security).
 
-## 7. Ausnahmen
+## 8. Ausnahmen
 
 Ausnahmen MÜSSEN gemäß ATC-STD-DESC-001 Abschnitt 11 (EXC-Verfahren) dokumentiert und durch den Owner genehmigt werden.
 
-## 8. Referenzen (References)
+## 9. Referenzen (References)
 
 ### NORMATIVE Referenzen
 
