@@ -1,8 +1,8 @@
 ---
 standard:
   id: ATC-STD-CHANGE-001
-  title: "ATC Change Control Dachnorm — Eine Änderung, ein Kanal, eine Gate-Landkarte: konsolidierte Zuordnung von ATC-STD-000 §19–33 (SCR), VERSION-001, UPDATE-001 und COMPAT-001 zur verbindlichen Entscheidungsmatrix „welches Instrument für welche Änderung" — mit RACI, Notfallpfad und den 13 Change-Nachweis-Fragen als Prüfraster"
-  version: "1.0.0"
+  title: "ATC Change Control Dachnorm — Eine Änderung, ein Kanal, eine Gate-Landkarte: konsolidierte Zuordnung von ATC-STD-000 §19–33 (SCR), VERSION-001, UPDATE-001 und COMPAT-001 zur verbindlichen Entscheidungsmatrix „welches Instrument für welche Änderung“ — mit RACI, Notfallpfad und den 13 Change-Nachweis-Fragen als Prüfraster"
+  version: "1.0.1"
   status: approved
   category: governance-core
   authority: A-TownChain-Okosystems
@@ -31,9 +31,9 @@ standard:
   license: "Copyright (c) 2026 Michael Wroblewski"
 ----
 
-# ATC-STD-CHANGE-001 — ATC Change Control Dachnorm (v1.0.0, APPROVED)
+# ATC-STD-CHANGE-001 — ATC Change Control Dachnorm (v1.0.1, APPROVED)
 
-> **Status:** APPROVED (v1.0.0) — §9-Freigabe Michael Wroblewski (Builder-Chat 08.09.2026, 00:36 UTC+2);
+> **Status:** APPROVED (v1.0.1) — §9-Freigabe Michael Wroblewski (Builder-Chat 08.09.2026, 00:36 UTC+2);
 > normativ in Kraft ab 08.09.2026, §30-eingefroren (ATC-STD-000). SCR-0025 akzeptiert.
 > **Familie:** Standards Governance Core (FAM-43). **Rolle:** Dachnorm — ordnet ZU,
 > ersetzt NICHT: ATC-STD-000 §19–33, VERSION-001, UPDATE-001, COMPAT-001 bleiben
@@ -185,4 +185,4 @@ des Nachweises — Git-Historie + AUD-Records decken Widersprüche auf.
 - Praxis-Nachweis: komplette Kette gelebt in SCR-0016..0024 (COMPAT→UPDATE→
   MILESTONE→REPO-AUDIT→PROTOCOL→TAXONOMY)
 
-*ATC-STD-CHANGE-001 v1.0.0 · Owner-Entwurf Michael Wroblewski · Aurora (Superagent) · 08.09.2026 · SCR-0025*
+*ATC-STD-CHANGE-001 v1.0.1 · Owner-Entwurf Michael Wroblewski · Aurora (Superagent) · 08.09.2026 · SCR-0025*

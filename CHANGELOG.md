@@ -1,5 +1,40 @@
 # Changelog
 
+## [1.4.35] - 2026-09-08
+
+### Added
+
+- **AUD-2026-0003 Selbst-Audit** (SCR-0026): Prüfung, ob atc-standards seine eigenen
+  Standards einhält — 16 Prüfbereiche / 54 von 64 Checks bewertet (10 SKIP mit
+  Begründung), Health Score IST 86/100 → **B**, nach den Fixes dieses Releases
+  projiziert 91/100 → **A**. Bericht: docs/AUD-2026-0003_SELF_AUDIT.md.
+- **Validator NEU S-25 (Frontmatter-Strict-YAML)**: Frontmatter jeder Standard-Datei
+  wird je CI-Lauf mit strictem YAML-Parsing geprüft — schließt die Erkennungslücke,
+  durch die ein YAML-Bruch in ATC-STD-CHANGE-001 unentdeckt blieb.
+- **requirements.txt (pyyaml>=6.0)**: Laufzeit-Abhängigkeit der Validator-Suite erstmals
+  deklariert. Die Workflow-Härtung (pip install im naming-governance-Workflow) liegt
+  bereit, ist aber vom Agent-Token nicht pushbar (GH013, kein workflow-Scope) — als
+  Owner-Aktion via Issue dokumentiert. CI läuft bis dahin im geprüften Fallback-Modus
+  (ALL COMPLIANT ohne PyYAML, lokal verifiziert).
+
+### Fixed
+
+- **CI rot auf main** (F-037): naming-governance-Workflow schlug seit 22:19 in 4+
+  konsekutiven Runs fehl — Ursachenkette: fehlendes PyYAML auf dem Runner (F-035,
+  undeklarierte Abhängigkeit) + TypeError im S-20-Fallback (F-033, Format-String mit
+  2 Platzhaltern/1 Argument). Beide gefixt.
+- **ATC-STD-CHANGE-001 v1.0.0 → v1.0.1 (PATCH, F-032)**: inneres ASCII-
+  Anführungszeichen im Frontmatter-Titel brach strictes YAML-Parsing; normalisiert,
+  redaktionell ohne semantische Änderung.
+
+### Changed
+
+- **registry/findings.yaml:** +9 Findings (F-032..F-040): 6 RESOLVED in diesem Release,
+  3 OPEN mit Empfehlungen (F-034 Altbau-Frontmatter-Backfill 107/119 ohne review_date
+  seit STDDEV-001 in Kraft — P2, Owner-Entscheidung; F-036 verwaister GitHub-Release
+  v1.1.0 vs. CHANGELOG v1.4.x — Owner-Entscheidung; F-039/F-040 Backfill-Begleitpunkte).
+
+
 ## [1.4.34] - 2026-09-08
 
 ### Changed

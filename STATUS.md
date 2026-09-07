@@ -138,6 +138,19 @@ als Prüfraster; Dachnorm ordnet zu, ersetzt keine Fachnorm (11 REQ-CH). FRAMEWO
 PATCH v1.0.6 gebündelt (10 BELEGT, 3 GEPLANT — offen: REPO-AUDIT-003, PROTOCOL-002/003).
 §9-FREIGEGEBEN 00:36 (SCR-0025) — alle drei APPROVED, normativ, §30-eingefroren.
 
+AUD-2026-0003 SELBST-AUDIT (SCR-0026, 00:39–00:55): atc-standards gegen die eigenen
+Standards geprüft (REPO-AUDIT-001/002: 16 Bereiche, 54/64 Checks bewertet, 10 SKIP mit
+Begründung; + Governance Core STDDEV/REGISTRY/CHANGE/TAXONOMY + 999er-Nachweis-Fragen).
+Health Score IST 86/100 → B; nach SCR-0026-Fixes projiziert 91/100 → A. Befund: Maschinerie
+hält (S-16..S-25 PASS, Generator-Disziplin 100%, Registry↔Datei 121/121, SCR-Kette
+0016–0025 lückenlos, 0 Version-Drift, 0 Secrets, Branch-Protection aktiv) — aber 9 echte
+Findings F-032..F-040: CI rot seit 22:19 (F-037, gefixt), PyYAML undeklariert (F-035,
+gefixt), S-20-Fallback-Crash (F-033, gefixt), CHANGE-001 brach strictes YAML (F-032,
+v1.0.1-PATCH), Validator-Gap → NEU S-25 Strict-Frontmatter-Gate (F-038, gefixt);
+offen: Altbau-Frontmatter-Backfill 107/119 ohne review_date (F-034, P2, Owner-
+Entscheidung), verwaister Release v1.1.0 (F-036), Approval-/License-Backfill (F-039/F-040).
+Report: docs/AUD-2026-0003_SELF_AUDIT.md.
+
 AUD-2026-0001 (erster Lauf unter ATC-STD-AUDIT-001, 22:30): Standards-Umsetzungs-Audit —
 CONDITIONAL_PASS, Completeness Score C. Umsetzung: 8 AUTOMATED (7%) · 18 PARTIAL (16%) ·
 82 DOCUMENTED (75%). Neue Findings F-019..F-023 (S2: F-019 Enforcement-Lücke, F-020 DEC-Records,
@@ -171,7 +184,7 @@ Dependabot in 16 Manifest-Repos (F-025). Org-Settings per Owner-Entscheidung 23:
 Offen: F-026 (Version-Baseline), F-027 (Tag v2.0.0), F-028 (ATC-STD-202 22→26), F-029 (governance-ci 3 Repos,
 Owner-Aktion workflow-Scope). Report: docs/AUD-2026-0002_ORG_AUDIT.md · Issues #94..98 in a-townchain-os.
 
-Stand: 08.09.2026, 00:36 (Europe/Berlin) — Registry FINAL 121/121 APPROVED; Standards Governance Core §9-freigegeben 00:36 (inkl. FRAMEWORK v1.0.6-PATCH) · Self-Compliance: R3 100/100 GATE PASS ·
+Stand: 08.09.2026, 00:55 (Europe/Berlin) — Registry FINAL 121/121 APPROVED; AUD-2026-0003 Selbst-Audit abgeschlossen (Health B→A projiziert, SCR-0026) · Self-Compliance: R3 100/100 GATE PASS ·
 Voll-Validierung 110/110 Standards: ALL COMPLIANT (S-18 prüft alle 10 Registry-Dateien; Mutationssuite 12/12)
 
 ## Standards-System

@@ -189,7 +189,7 @@ def main():
         except ImportError:
             n_ok = sum(1 for l in open(MS_PATH, encoding="utf-8") if re.match(r"^\s*- id: ATC-M-(?:[A-Z]+-)?\d{3,}$", l))
             bal = all(l.count("{") == l.count("}") or ":" in l for l in open(MS_PATH, encoding="utf-8"))
-            print("S-20 Milestones: %s (Fallback-Modus, PyYAML fehlt; %d ATC-M-Eintraege)" % ("PASS" if (n_ok and bal) else "WARN"))
+            print("S-20 Milestones: %s (Fallback-Modus, PyYAML fehlt; %d ATC-M-Eintraege)" % ("PASS" if (n_ok and bal) else "WARN", n_ok))
         except Exception as e:
             print("S-20 Milestones: FAIL — %s" % str(e)[:120]); milestone_ok = False
     if not milestone_ok:
@@ -395,6 +395,31 @@ def main():
         except Exception as e:
             print("S-24 Taxonomy: FAIL — %s" % str(e)[:120]); tax_ok = False
     if not tax_ok:
+        fails += 1
+
+
+    # S-25 Frontmatter-Strict-YAML (AUD-2026-0003 / F-032+F-038: Frontmatter muss strictes YAML sein)
+    fm_ok = True
+    try:
+        import yaml as _fy
+        import glob as _g2
+        _n = 0
+        for _f in sorted(_g2.glob(os.path.join(ROOT, "standards", "**", "*.md"), recursive=True)):
+            _t = open(_f, encoding="utf-8").read()
+            _m = re.match(r"^---\n(.*?)\n----\n", _t, re.S) or re.match(r"^---\n(.*?)\n---\n", _t, re.S)
+            if not _m:
+                continue
+            try:
+                _d = _fy.safe_load(_m.group(1))
+                if not (isinstance(_d, dict) and "standard" in _d):
+                    raise ValueError("kein 'standard:'-Objekt")
+            except Exception as _e:
+                print("S-25 Frontmatter-YAML: FAIL — %s: %s" % (os.path.basename(_f), str(_e)[:100])); fm_ok = False
+            _n += 1
+        print("S-25 Frontmatter-YAML: %s (%d Dateien strict geparst)" % ("PASS" if fm_ok else "FAIL", _n))
+    except ImportError:
+        print("S-25 Frontmatter-YAML: WARN (Fallback-Modus, PyYAML fehlt)")
+    if not fm_ok:
         fails += 1
 
     print("RESULT: " + ("ALL COMPLIANT" if fails == 0 else "%d FAIL(s)" % fails))
