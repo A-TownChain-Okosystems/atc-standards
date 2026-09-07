@@ -19,6 +19,7 @@ standards:
   - {id: ATC-STD-NET-006, title: "Network Upgrade Standard", version: "1.0.0", status: candidate, category: net, authority: "A-TownChain Ecosystems", owner: ShivaCoreDev, normative: true, file: standards/net/ATC-STD-NET-006.md, mandate: "Owner-Mandat 07.09. (AD-041)"}
   - {id: ATC-STD-NET-007, title: "Network Security Standard", version: "1.0.0", status: candidate, category: net, authority: "A-TownChain Ecosystems", owner: ShivaCoreDev, normative: true, file: standards/net/ATC-STD-NET-007.md, mandate: "Owner-Mandat 07.09. (AD-041)"}
   - {id: ATC-STD-NET-008, title: "Network Recovery Standard", version: "1.0.0", status: candidate, category: net, authority: "A-TownChain Ecosystems", owner: ShivaCoreDev, normative: true, file: standards/net/ATC-STD-NET-008.md, mandate: "Owner-Mandat 07.09. (AD-041)"}
+  - {id: ATC-STD-100, title: "Language & Technology Stack Standard", version: "1.0.0", status: candidate, category: architecture, authority: "A-TownChain Ecosystems", owner: ShivaCoreDev, normative: true, file: standards/architecture/ATC-STD-100.md, mandate: "Owner-Entwurf 07.09. (Language Policy, 100er-Block)"}
   - {id: ATC-STD-300, title: "Development & Project Management Standard", version: "1.0.0", status: candidate, category: development, authority: "A-TownChain Ecosystems", owner: ShivaCoreDev, normative: true, file: standards/development/ATC-STD-300.md, mandate: "Owner-Entwurf 07.09. (DTC-Traceability, ID 300er-Block)"}
 
 # Legacy-Serien: behalten historische Nummerierung, Aenderungen regiert durch ATC-STD-000
