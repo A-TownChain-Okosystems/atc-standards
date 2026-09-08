@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.4.49] - 2026-09-08
+
+### Added
+
+- **INDEX.md — zentraler Master-Index (ATC-STD-INDEX-001, SCR-0038):** Single
+  Entry Point / Registry-Navigation, zu 100 % aus den SSOT-Registern generiert
+  (tools/index/gen_index.py — drift-sicher, manuelle Änderungen verboten).
+  Nicht-normativ; SSOT-Kaskade: Governance > Standard > Registry > INDEX >
+  Implementierung. Inhalt: Register-SSOT-Ebene (16 registry-Dateien), 44
+  Familien mit Slot-Statistik, Master-Tabelle aller 396 Standards (ID/Titel/
+  Kategorie/Version/Status/Datei), Status-/Prioritätsmodell, offene Punkte,
+  Integrität via Validator-Pipeline S-01..S-25, Governance-Regel, Ist-
+  Verzeichnisstruktur. Der übermittelte Fremd-Entwurf wurde als Gliederung
+  übernommen; seine konfligierenden Eigenwahrheiten (22-Familien-Modell,
+  DRAFT-Statusse, docs/standards-Pfade, „fehlende" Standards) wurden
+  bewusst NICHT übernommen — die Registry bleibt SSOT.
+
+
 ## [1.4.48] - 2026-09-08
 
 ### Added

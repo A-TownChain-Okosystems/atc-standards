@@ -283,7 +283,11 @@ AI), MANIFEST.schema.json. Kein Pseudo-Open-Source (OSD-Pflicht für OPEN; Revie
 ehrlich ausstehend). Klar getrennt von Apache-2.0-Basisschicht (SCR-0036). Backlog:
 ATC-LICENSE.yaml je Repo, License Scanner S-26, 5 PLANNED-Typen spezifizieren.
 
-Stand: 08.09.2026, 03:55 (Europe/Berlin) — Registry FINAL: 396 Standards, 396 APPROVED, 0 offen; Katalog 44 Familien, 442 Slots; 11 Register EXISTIERT · Self-Compliance: R3 100/100 GATE PASS ·
+MASTER-INDEX (SCR-0038, 04:45 UTC+2): INDEX.md (ATC-STD-INDEX-001) als Single Entry
+Point — vollständig aus den SSOT-Registern generiert (tools/index/gen_index.py,
+573 Zeilen: 396 Standards, 44 Familien, 16 Register); nicht-normativ, drift-sicher.
+
+Stand: 08.09.2026, 04:45 (Europe/Berlin) — Registry FINAL: 396 Standards, 396 APPROVED, 0 offen; Katalog 44 Familien, 442 Slots; 11 Register EXISTIERT · Self-Compliance: R3 100/100 GATE PASS ·
 Voll-Validierung 110/110 Standards: ALL COMPLIANT (S-18 prüft alle 10 Registry-Dateien; Mutationssuite 12/12)
 
 ## Standards-System
