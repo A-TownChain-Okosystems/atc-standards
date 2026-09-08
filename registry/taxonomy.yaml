@@ -50,7 +50,7 @@ taxonomy:
       id_range: ATC-STD-000
       source: numeric-§7
       description: Standard Governance (Verfassung)
-      standards_count: 1
+      standards_count: 10
       categories:
       - id: GENERAL
         name: Allgemein (Bestand, keine Unterteilung)
@@ -63,7 +63,7 @@ taxonomy:
       id_range: ATC-STD-BUG-001-499
       source: named-family
       description: Bug- & Konsistenz-Lebenszyklus (Owner-Mandat 07.09., AD-040)
-      standards_count: 5
+      standards_count: 7
       categories:
       - id: GENERAL
         name: Allgemein (Bestand, keine Unterteilung)
@@ -76,7 +76,7 @@ taxonomy:
       id_range: ATC-ENT-001-015
       source: named-family
       description: Enterprise Standards Layer (Org-Governance, Freigabe 07.09.)
-      standards_count: 15
+      standards_count: 28
       categories:
       - id: GENERAL
         name: Allgemein (Bestand, keine Unterteilung)
@@ -115,7 +115,7 @@ taxonomy:
       id_range: ATC-STD-AUDIT-001-999
       source: named-family
       description: 'Audit-Familie: Completeness & Audit, Traceability, Cross-System Integrity — Kontrollschicht über allen Standards (Owner-Entwurf 07.09., SCR-0013)'
-      standards_count: 1
+      standards_count: 5
       categories:
       - id: GENERAL
         name: Allgemein (Bestand, keine Unterteilung)
@@ -141,7 +141,7 @@ taxonomy:
       id_range: ATC-STD-REPO-AUDIT-001-999
       source: named-family
       description: 'Repository-Audit-Familie: Verbindlicher Repository Health Check — 16 Pruefbereiche, Pruefmatrix, SOLL/IST, Gap Analysis, Findings, Health Score A-E (Owner-Entwurf 07.09., SCR-0020)'
-      standards_count: 2
+      standards_count: 3
       categories:
       - id: GENERAL
         name: Allgemein (Bestand, keine Unterteilung)
@@ -225,6 +225,19 @@ taxonomy:
         name: Allgemein (Bestand, keine Unterteilung)
         status: ACTIVE
         lifecycle: ACTIVE
+    - id: LIC
+      name: license
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-STD-LICENSE-001-999
+      source: named-family
+      description: ATC License System — Lizenz- & Nutzungsrechte-Governance (FAM-44, Owner-Direktive 08.09., SCR-0037)
+      standards_count: 9
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
   - id: SW
     name: Software Engineering
     status: ACTIVE
@@ -250,7 +263,7 @@ taxonomy:
       id_range: ATC-STD-200–299
       source: numeric-§7
       description: Repository & Git
-      standards_count: 4
+      standards_count: 22
       categories:
       - id: GENERAL
         name: Allgemein (Bestand, keine Unterteilung)
@@ -263,7 +276,7 @@ taxonomy:
       id_range: ATC-STD-300–399
       source: numeric-§7
       description: Development / Coding
-      standards_count: 1
+      standards_count: 56
       categories:
       - id: GENERAL
         name: Allgemein (Bestand, keine Unterteilung)
@@ -276,7 +289,7 @@ taxonomy:
       id_range: ATC-STD-800–899
       source: numeric-§7
       description: OS / Runtime
-      standards_count: 0
+      standards_count: 8
       categories:
       - id: GENERAL
         name: Allgemein (Bestand, keine Unterteilung)
@@ -289,7 +302,7 @@ taxonomy:
       id_range: ATC-STD-900–999
       source: numeric-§7
       description: Infrastructure
-      standards_count: 0
+      standards_count: 17
       categories:
       - id: GENERAL
         name: Allgemein (Bestand, keine Unterteilung)
@@ -302,7 +315,7 @@ taxonomy:
       id_range: ATC-STD-1000+
       source: numeric-§7
       description: Applications / Ecosystem
-      standards_count: 0
+      standards_count: 33
       categories:
       - id: GENERAL
         name: Allgemein (Bestand, keine Unterteilung)
@@ -328,7 +341,7 @@ taxonomy:
       id_range: ATC-STD-MD-001-999
       source: named-family
       description: ATC Markdown & Documentation Standard (Owner-Entwurf 07.09.)
-      standards_count: 1
+      standards_count: 9
       categories:
       - id: GENERAL
         name: Allgemein (Bestand, keine Unterteilung)
@@ -359,7 +372,7 @@ taxonomy:
       id_range: ATC-STD-600–699
       source: numeric-§7
       description: Blockchain
-      standards_count: 0
+      standards_count: 72
       categories:
       - id: GENERAL
         name: Allgemein (Bestand, keine Unterteilung)
@@ -399,7 +412,7 @@ taxonomy:
       source: named-family
       description: 'Protocol-Standards-Familie: Dachstandard oberhalb der Einzelprotokolle — Identitaet, Versionierung, Nachrichten, Sicherheit, Fehler, Kompatibilitaet, Governance, Auditing (Owner-Entwurf
         08.09., SCR-0023)'
-      standards_count: 1
+      standards_count: 3
       categories:
       - id: GENERAL
         name: Allgemein (Bestand, keine Unterteilung)
@@ -488,7 +501,7 @@ taxonomy:
       id_range: ATC-STD-400–499
       source: numeric-§7
       description: Security
-      standards_count: 0
+      standards_count: 24
       categories:
       - id: GENERAL
         name: Allgemein (Bestand, keine Unterteilung)

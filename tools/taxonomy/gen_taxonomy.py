@@ -17,8 +17,8 @@ DOMAIN_MAP = {
     "version": "GOV", "audit": "GOV", "ai-decision": "AI", "update": "GOV",
     "repo-audit": "GOV", "agent-operating": "AI", "master-audit": "GOV",
     "framework": "GOV", "milestone": "GOV", "compat": "GOV", "governance-core": "GOV",
-    # neu via SCR-0024
-    "taxonomy": "GOV",
+    # neu via SCR-0024/SCR-0037
+    "taxonomy": "GOV", "license": "GOV",
 }
 DOMAINS = {
     "GOV":   "Governance & Meta-Standards",
