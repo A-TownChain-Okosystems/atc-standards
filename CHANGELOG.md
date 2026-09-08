@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.4.47] - 2026-09-08
+
+### Changed
+
+- **Lizenz-Entscheidung F-046 (SCR-0036):** Apache-2.0 (SPDX) als einheitliche
+  Org-Lizenz — alle 26 Repos haben LICENSE ersetzt und gepusht; GitHub-Detektion
+  von NOASSERTION auf Apache-2.0 verifiziert. Begründung: Patent-Grant
+  (Blockchain/ZKP-relevant), Attributions-Pflicht erhält „Copyright (c) 2026
+  Michael Wroblewski" verbindlich, kommerzielle Später-Optionen offen
+  (Proprietär-Umstieg = MAJOR via COMPAT-001). F-046 RESOLVED.
+
+
 ## [1.4.46] - 2026-09-08
 
 ### Changed

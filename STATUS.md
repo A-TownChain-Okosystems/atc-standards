@@ -271,7 +271,11 @@ Themen-Wissensbasis ~50 Gebiete (tools/standards/finalize_standards.py). Normati
 Regelhülle je Slot damit komplett; Engineering-Bindung bei Slot-Aktivierung via
 SCR/MINOR (ehrlich dokumentiert).
 
-Stand: 08.09.2026, 03:15 (Europe/Berlin) — Registry FINAL: 387 Standards, 387 APPROVED (263× fertig ausgebaut v1.2.0), 0 offen; Katalog vollständig zugeordnet; 11 Register EXISTIERT · Self-Compliance: R3 100/100 GATE PASS ·
+LIZENZ-ENTScheidung (SCR-0036, 03:45 UTC+2): F-046 durch Owner-Delegation gelöst —
+Apache-2.0 (SPDX) für alle 26 Repos (26/26 LICENSE ersetzt + gepusht, GitHub-Detektion
+verifiziert). Copyright „Michael Wroblewski" via Attributions-Pflicht verbindlich.
+
+Stand: 08.09.2026, 03:45 (Europe/Berlin) — Registry FINAL: 387 Standards, 387 APPROVED (263× fertig ausgebaut v1.2.0), 0 offen; Katalog vollständig zugeordnet; 11 Register EXISTIERT · Self-Compliance: R3 100/100 GATE PASS ·
 Voll-Validierung 110/110 Standards: ALL COMPLIANT (S-18 prüft alle 10 Registry-Dateien; Mutationssuite 12/12)
 
 ## Standards-System

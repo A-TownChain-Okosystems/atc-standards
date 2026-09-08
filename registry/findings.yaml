@@ -382,9 +382,12 @@ findings:
   source: AUD-2026-0003 §6 / Fremd-Audit P0-002 verifiziert
   alias: null
   scr: null
-  status: OPEN
-  resolution: null
+  status: RESOLVED
+  resolution: 'SCR-0036 (08.09.2026): Entscheidung Owner-delegiert an Agent — Apache-2.0 (SPDX) für alle
+    26 Repos; LICENSE je Repo ersetzt + gepusht; GitHub-Detektion Apache-2.0 verifiziert. Copyright ''Michael
+    Wroblewski'' via Attributions-Pflicht verbindlich erhalten.'
   discovered: '2026-09-08'
+  resolved_date: '2026-09-08'
 - id: F-047
   title: 'STALE GOVERNANCE-STAND-Narrative (AD-034..039, Stand 07.09.: CANDIDATE/BLOCKED) in AGENT_MANIFEST.md
     von a-townchain-os und a-townchain-os-docs — Archiv-Markierung wie in atc-standards (SCR-0035) nachziehen'
