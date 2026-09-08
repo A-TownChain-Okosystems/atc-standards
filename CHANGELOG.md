@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.4.45] - 2026-09-08
+
+### Added
+
+- **ATC-ORG-AUDIT-001 / AUD-2026-0003 (SCR-0033):** Live-Organisations-Master-Audit
+  über 26/26 Repositories (GitHub-API + lokale Tiefeninspektion). Ø Health Score
+  74,6 → Org-Grade C; 0×P0. Maschinenlesbare Per-Repo-Matrix (20 Spalten) und
+  ORG-01..20-Dimensionenbewertung in docs/AUD-2026-0003_ORG_MASTER_AUDIT.md,
+  inkl. 9-Sektionen-Struktur-Mapping mit ehrlichen Lücken (CLI/Gateway fehlen,
+  Whitepaper existiert nicht — externe atc-whitepaper-Behauptung widerlegt,
+  Testnet nicht etabliert). Neue Findings F-042 (24/26 ohne Version-Tags),
+  F-043 (10 ohne Dependabot), F-044 (atc-contracts ohne Tests, P1),
+  F-045 (PR-Regel-Bypass, Schein-Governance). P1–P3-Verbesserungs-Roadmap
+  mit Owner-Aktionen (GH013) dokumentiert.
+
+
 ## [1.4.44] - 2026-09-08
 
 ### Changed

@@ -335,3 +335,42 @@ findings:
   resolution: 'SCR-0032 Backfill (08.09.2026): Metadaten-Hüllpflichten im Altbau nachgetragen (effective_date/review_date,
     license, H1-Status-Suffix); Validator ALL COMPLIANT.'
   resolved_date: '2026-09-08'
+- id: F-042
+  title: 24/26 Repos ohne Version-Tags (nur a-townchain + a-townchain-os mit verwaistem v2.0.0); VERSION-001-Baseline
+    offen (Issues 96/97)
+  severity: P2
+  source: AUD-2026-0003
+  alias: null
+  scr: null
+  status: OPEN
+  resolution: null
+  discovered: '2026-09-08'
+- id: F-043
+  title: 10 Repos ohne Dependabot-Konfiguration (atc-algorithm, atc-compute, atc-launchpad, atc-mining,
+    atc-node, atc-oracle, atc-storage, atc-vm, a-townchain-os, atc-standards)
+  severity: P2
+  source: AUD-2026-0003
+  alias: null
+  scr: null
+  status: OPEN
+  resolution: null
+  discovered: '2026-09-08'
+- id: F-044
+  title: atc-contracts ohne jegliche Test-Dateien (Contract-Layer) — DeFi/Release-relevant
+  severity: P1
+  source: AUD-2026-0003
+  alias: null
+  scr: null
+  status: OPEN
+  resolution: null
+  discovered: '2026-09-08'
+- id: F-045
+  title: 'Org-PR-Regel wird von Admin-Pushes gebypasst (Bypassed rule violations je Push) — Schein-Governance;
+    Owner-Entscheidung: durchsetzen oder entfernen'
+  severity: P2
+  source: AUD-2026-0003
+  alias: null
+  scr: null
+  status: OPEN
+  resolution: null
+  discovered: '2026-09-08'
