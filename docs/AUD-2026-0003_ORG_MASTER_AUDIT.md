@@ -488,4 +488,17 @@ org_audit_2026_0003:
 **P3 (Backlog):**
 6. CodeQL-Rollout (Issue 95) · 7. Testnet/Devnet-Struktur · 8. Monitoring/Observability-Repos · 9. Whitepaper/CLI/Gateway-Entscheidung des Owners
 
+## 6. Abgleich mit externem Fremd-Audit (08.09.2026, 03:30 UTC+2, SCR-0035)
+
+| Fremd-Befund | Verifikation (live) | Ergebnis |
+|---|---|---|
+| **P0-001:** ATC-STD-000-„Versionskonflikt" (v1.2.0/v1.1.0/v1.0.0 CANDIDATE/BLOCKED) | Registry+Datei+H1+Manifeste: ATC-STD-000 **v1.2.0 approved überall**; CANDIDATE/BLOCKED-Stände stehen nur in Archiv-Dokumenten (approval/-Records, CHANGELOG, SCRs, GOVERNANCE-STAND-Sektion Stand 07.09.) | **WIDERLEGT** als SSOT-Konflikt — berechtigter Kern: STALE GOVERNANCE-STAND-Narrative im AGENT_MANIFEST → GE FIXT (Archiv-Markierung + Ist-Zustand + SSOT-Klarstellung, SCR-0035) |
+| **P0-002:** Lizenz NOASSERTION | API: **26/26 Repos NOASSERTION** (LICENSE-Dateien vorhanden, kein SPDX-Format) | **VERIFIZIERT** → F-046 (P2, Owner-Entscheidung: SPDX-Lizenz oder Proprietär-Deklaration) |
+| **P0-003:** Mainnet-Gates fehlen | Existieren normativ: RR-G01..G08, CONF-BRONZE (PROTOCOL-002), MILESTONE-001-Gates, COMPAT-001, ATC-STD-999; atc-node ist NICHT als Skeleton ausgewiesen (nur atc-vm/atc-algorithm/atc-zkp) | **Abgedeckt** bzw. insoweit widerlegt |
+| P1: CI 23/26, CodeQL 0/26, Versions-Baseline, verwaister Tag, STD-202-Klassifizierung | = Issues 94–98, F-042..F-045 | Bestätigt (bereits registriert) |
+| P2-004 Doku-Duplizierung; KPI-Set; .atc/repository.yaml; Release-Validator; monatliche AUD-Kadenz | Plausibel/neu | **Backlog übernommen** (Owner-Priorisierung) |
+
+Fazit: „Governance dokumentiert > technisch erzwungen" trifft den Kern (Deckungsgleich
+mit Org-Grade C); P0-Blocker existieren nach Live-Verifikation nicht.
+
 *Erzeugt via SCR-0033 (Agent Aurora) · Health-Modell: AUDIT-SCAN-11 · Validator ALL COMPLIANT · {TS}*

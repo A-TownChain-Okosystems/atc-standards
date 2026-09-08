@@ -72,6 +72,19 @@
 > **Chain-ID:** 658467 (AD-004 RESOLVED). **Mainnet-Launch: per AD-023 offen.**
 
 ## GOVERNANCE-STAND (AD-034–AD-039, 07.09.2026)
+
+> **UPDATE 08.09.2026 (SCR-0035):** Die nachfolgenden AD-034–AD-039-Zeilen
+> beschreiben den HISTORISCHEN Stand vom 07.09.2026 und sind als Archiv zu
+> lesen. Aktueller Ist-Zustand: **ATC-STD-000 v1.2.0 APPROVED** (§9-freigegeben
+> 07.09. 23:48 UTC+2, SCR-0019), ATC-AAS-001..025 APPROVED, Registry 387/387
+> Standards APPROVED. **Einzige verbindliche Versions-/Status-Quelle ist
+> registry/standards.yaml (SSOT, Validator S-14/S-19-erzwungen)** — alle
+> Versionsangaben in Historie-/Narrativ-Abschnitten sind Archiv und nicht
+> normativ. Dies wurde durch einen externen Fremd-Audit-Fund (P0-001, als
+> SSOT-Konflikt fehlinterpretiert) veranlasst und ist im Abgleich in
+> docs/AUD-2026-0003_ORG_MASTER_AUDIT.md §6 dokumentiert.
+
+--- (Archiv 07.09.2026 —)
 - **ATC-STD-000 Verfassung** (36 Abschnitte, §7 Naming Convention 7.1-7.11):
   v1.0.0 **CANDIDATE** — Review-Chain 3/3 PASS (Technical/Security/
   Architecture), Approval **BLOCKED beim Owner** (APPROVE/REQUEST CHANGES/

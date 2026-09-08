@@ -374,3 +374,24 @@ findings:
   status: OPEN
   resolution: null
   discovered: '2026-09-08'
+- id: F-046
+  title: '26/26 Repos: GitHub-Lizenz-Detektion NOASSERTION — LICENSE-Dateien kein SPDX-erkennbares Format.
+    Owner-Entscheidung: SPDX-Lizenz (z. B. Apache-2.0/CC-BY-4.0) ODER Proprietär-Deklaration konsistent
+    org-weit'
+  severity: P2
+  source: AUD-2026-0003 §6 / Fremd-Audit P0-002 verifiziert
+  alias: null
+  scr: null
+  status: OPEN
+  resolution: null
+  discovered: '2026-09-08'
+- id: F-047
+  title: 'STALE GOVERNANCE-STAND-Narrative (AD-034..039, Stand 07.09.: CANDIDATE/BLOCKED) in AGENT_MANIFEST.md
+    von a-townchain-os und a-townchain-os-docs — Archiv-Markierung wie in atc-standards (SCR-0035) nachziehen'
+  severity: P3
+  source: AUD-2026-0003 §6 / Fremd-Audit P0-001
+  alias: null
+  scr: null
+  status: OPEN
+  resolution: null
+  discovered: '2026-09-08'
