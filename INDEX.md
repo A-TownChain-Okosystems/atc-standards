@@ -56,14 +56,14 @@ eines Standards liegt ausschließlich in seiner Standarddatei; die Registry
 | registry/teams.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
 | registry/versions.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
 
-Kernregister: **standards.yaml** (Bestand, 403 Standards) · **versions.yaml**
-(Versionierung je Standard) · **framework.yaml** (Katalog: 45 Familien,
-443 Slots) · **categories.yaml**
+Kernregister: **standards.yaml** (Bestand, 404 Standards) · **versions.yaml**
+(Versionierung je Standard) · **framework.yaml** (Katalog: 46 Familien,
+444 Slots) · **categories.yaml**
 (Kategorien) · **taxonomy.yaml** (Domain/Familie/Kategorie) · **protocol-registry.yaml**
 (26 Protokollfamilien, Status {'draft': 10, 'planned': 16}) ·
-**findings.yaml** (Findings: 17 OPEN / 31 RESOLVED von 48).
+**findings.yaml** (Findings: 16 OPEN / 32 RESOLVED von 48).
 
-## 3. Standardfamilien (Katalog, 45 Familien)
+## 3. Standardfamilien (Katalog, 46 Familien)
 
 | FAM | Familie | Slots | BELEGT | VERWEIST |
 |---|---|---|---|---|
@@ -112,12 +112,13 @@ Kernregister: **standards.yaml** (Bestand, 403 Standards) · **versions.yaml**
 | FAM-43 | Standards Governance Core | 4 | 4 | 0 |
 | FAM-44 | ATC License System | 9 | 9 | 0 |
 | FAM-45 | Vision-to-Software (V2S) | 1 | 1 | 0 |
+| FAM-46 | Repository Maintenance (REPO-MAINT) | 1 | 1 | 0 |
 
-Statusverteilung der 403 Registry-Standards: {'approved': 396, 'candidate': 7}.
-Alle 403 sind APPROVED und normativ (§30-eingefroren); Details je Standard
+Statusverteilung der 404 Registry-Standards: {'approved': 395, 'candidate': 9}.
+Alle 404 sind APPROVED und normativ (§30-eingefroren); Details je Standard
 in registry/standards.yaml und registry/versions.yaml.
 
-## 4. Master-Registry-Tabelle (403 Standards)
+## 4. Master-Registry-Tabelle (404 Standards)
 
 Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 
@@ -245,7 +246,7 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 | ATC-STD-197 | Genesis Standard | blockchain | 1.2.0 | approved | standards/blockchain/ATC-STD-197.md |
 | ATC-STD-200 | ATC Token Standard | blockchain | 1.2.0 | approved | standards/blockchain/ATC-STD-200.md |
 | ATC-STD-201 | Repository Structure Standard | repository | 1.0.1 | approved | standards/repository/ATC-STD-201.md |
-| ATC-STD-202 | Repository Naming & Classification Standard | repository | 1.1.0 | approved | standards/repository/ATC-STD-202.md |
+| ATC-STD-202 | Repository Naming & Classification Standard | repository | 1.2.0 | candidate | standards/repository/ATC-STD-202.md |
 | ATC-STD-203 | Repository Security & Release Standard | repository | 1.0.1 | approved | standards/repository/ATC-STD-203.md |
 | ATC-STD-204 | Dependency & Interface Standard | repository | 1.0.0 | approved | standards/repository/ATC-STD-204.md |
 | ATC-STD-205 | Minting Standard | blockchain | 1.2.0 | approved | standards/blockchain/ATC-STD-205.md |
@@ -491,6 +492,7 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 | ATC-STD-REPO-AUDIT-001 | ATC Repository Audit Standard — Verbindlicher, reproduzierbarer Repository Health Check: 16 Prüfbereiche, Prüfmatrix, SOLL/IST, Gap Analysis, Findings, Health Score A-E | repo-audit | 1.0.0 | approved | standards/repo-audit/ATC-STD-REPO-AUDIT-001.md |
 | ATC-STD-REPO-AUDIT-002 | ATC Repository Audit Checklisten- & Health-Score-Standard — Konkrete automatisierbare Checks (CHECK-001, CHECK-002, …) und standardisierter Repository Health Score | repo-audit | 1.0.0 | approved | standards/repo-audit/ATC-STD-REPO-AUDIT-002.md |
 | ATC-STD-REPO-AUDIT-003 | Automatisierter ATC Repository Auditor — verbindliche Spezifikation des KI-/Automatisierungsagenten für reproduzierbare Repository-Audits: Mandat, 17-Schritte-Pipeline, Read-Only-Pflicht, Gates, AUD-Report-Erzeugung | repo-audit | 1.0.0 | approved | standards/repo-audit/ATC-STD-REPO-AUDIT-003.md |
+| ATC-STD-REPO-MAINT-001 | Repository Maintenance & Lifecycle Standard | repo-maint | 1.0.0 | candidate | standards/repo-maint/ATC-STD-REPO-MAINT-001.md |
 | ATC-STD-SC-001 | Smart Contract General Standard | sc | 1.0.0 | approved | standards/sc/ATC-STD-SC-001.md |
 | ATC-STD-SC-002 | Smart Contract Identity Standard | sc | 1.0.0 | approved | standards/sc/ATC-STD-SC-002.md |
 | ATC-STD-SC-003 | Smart Contract Security Standard | sc | 1.0.0 | approved | standards/sc/ATC-STD-SC-003.md |
@@ -529,7 +531,7 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 
 ## 5. Statusmodell (Registry-Lifecycle)
 
-Registry-Statusverteilung (Ist): {'approved': 396, 'candidate': 7}. Lifecycle der Standards-Entwicklung
+Registry-Statusverteilung (Ist): {'approved': 395, 'candidate': 9}. Lifecycle der Standards-Entwicklung
 gemäß ATC-STD-STDDEV-001 / ATC-STD-TAXONOMY-001: Entwurf (Owner-Entwurf/SCR) →
 §9-Freigabe (Owner, Human-Gate) → APPROVED (normativ, §30-eingefroren) → ggf.
 DEPRECATED/RETIRED via Change-Control (ATC-STD-CHANGE-001). Protokolle folgen
@@ -543,7 +545,7 @@ Klassifikation (ATC-STD-REPO-AUDIT-001/002).
 
 ## 7. Offene Punkte (Auszug — Details: STATUS.md)
 
-- Findings OPEN: 17 (aktuelle Liste: registry/findings.yaml)
+- Findings OPEN: 16 (aktuelle Liste: registry/findings.yaml)
 - Org-Audit-Ableitungen: Issues #94–98 (a-townchain-os) — CI 23/26, CodeQL,
   Versions-Baseline, verwaister Tag, ATC-STD-202-Klassifizierung
 - ATC-LICENSE: 5 Lizenztypen PLANNED (SOURCE, COMMERCIAL, PROPRIETARY, DATA,
@@ -572,7 +574,7 @@ die Kennung dieses generierten Dokuments.
 
 atc-standards/ · INDEX.md (generiert) · README.md · CHANGELOG.md · STATUS.md ·
 LICENSE (Apache-2.0) · AGENT_MANIFEST.md · AGENTS.md · governance/ (ATC-STD-000) ·
-standards/<kategorie>/ (Fachstandards, 403-Bestand) · registry/ (22
+standards/<kategorie>/ (Fachstandards, 404-Bestand) · registry/ (22
 SSOT-Dateien) · licenses/ (ATC-LICENSE-System) · schemas/ · tools/ (Generatoren +
 atc-std-validator) · approval/ (§9-Freigabe-Archiv) · change-requests/ (SCR-0001…) ·
 docs/ (Audits & Analysen) · templates/ · .github/workflows (Governance-CI, 2) +

@@ -48,6 +48,7 @@
 | ATC-STD-NET-007 | Network Security Standard | approved | 1.0.0 | net |
 | ATC-STD-NET-008 | Network Recovery Standard | approved | 1.0.0 | net |
 | ATC-STD-100 | Language & Technology Stack Standard | approved | 1.0.0 | architecture |
+| ATC-STD-REPO-MAINT-001 | Repository Maintenance & Lifecycle Standard | candidate | 1.0.0 | repo-maint |
 | ATC-STD-V2S-000 | Vision-to-Software Lifecycle Master Standard | candidate | 1.0.0 | v2s |
 | ATC-STD-ZKP-001 | ZKP Architecture Standard | approved | 1.0.0 | zkp |
 | ATC-STD-ZKP-002 | Proof System Interface Standard | approved | 1.0.0 | zkp |

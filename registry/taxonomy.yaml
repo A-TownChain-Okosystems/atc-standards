@@ -147,6 +147,19 @@ taxonomy:
         name: Allgemein (Bestand, keine Unterteilung)
         status: ACTIVE
         lifecycle: ACTIVE
+    - id: RM
+      name: repo-maint
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-STD-REPO-MAINT-001-999
+      source: named-family
+      description: 'Repository-Maintenance-Familie: Verbindlicher Repository-Pflegezyklus — Code, Dependencies, Doku, Standards, CI/CD, Security, Versionen, Altlasten (Owner-Entwurf 08.09., SCR-0043)'
+      standards_count: 1
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
     - id: SGC
       name: governance-core
       status: ACTIVE

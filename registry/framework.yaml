@@ -2888,3 +2888,14 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-V2S-000
+  - id: FAM-46
+    name: Repository Maintenance (REPO-MAINT)
+    range: ATC-STD-REPO-MAINT-001..999
+    note: 'Repository-Pflegezyklus: Discovery bis Maintenance Complete, P0-P3, SemVer-Update-Regeln, Dependency-Policy, Build&Test-Gate, Version-Konsistenz (SCR-0043); referenziert 201-204, REPO-AUDIT-001/002, VERSION-001, UPDATE-001, V2S-000'
+    family_refs: null
+    slots:
+    - id: ATC-STD-REPO-MAINT-001
+      title: Repository Maintenance & Lifecycle Master
+      status: BELEGT
+      refs:
+      - ATC-STD-REPO-MAINT-001
