@@ -33,3 +33,17 @@ automatisch verbindlich (dynamische Bindung, Registry = SSOT).
 - CI MUSS grün sein: validate_all.py (81/81), Mutationssuite (12/12),
   Repo-Audit R3 (Gate PASS) — Ergebnisse sind Evidenz (AAS-010).
 - Findings nach BUG-001 mit Severity S0-S4 (BUG-002).
+
+## Commit-Format (ATC-STD-AI-DEV-007 §1, normativ)
+
+Agenten-Commits MUSSEN einen Trailer-Block tragen (maschinenlesbar):
+
+```
+Agent-ID: ATC-AI-ARCH-001
+Task-ID: ATC-TASK-NNNN
+AI-Role: software-development
+Validation: PASS|FAIL|PENDING
+```
+
+Conventional-Commit-Typen: feat|fix|docs|test|refactor|security|build|ci|chore|spec.
+Ohne Trailer gilt ein Commit als menschlicher Commit (Agentenarbeit wird zurueckgewiesen).

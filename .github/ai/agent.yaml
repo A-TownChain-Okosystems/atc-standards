@@ -1,5 +1,6 @@
 standard: ATC-AAS-025
 repository: atc-standards
+# Agenten-Flotte: Erweiterung via SCR (weitere Aurora-Instanzen registrieren)
 agents:
   allowed:
   - ATC-AI-ARCH-001
@@ -441,5 +442,3 @@ workflow:
   require_audit: true
   require_pr: true
   require_human_merge: true
-classification: SPEC
-canonical: true
