@@ -501,4 +501,4 @@ org_audit_2026_0003:
 Fazit: „Governance dokumentiert > technisch erzwungen" trifft den Kern (Deckungsgleich
 mit Org-Grade C); P0-Blocker existieren nach Live-Verifikation nicht.
 
-*Erzeugt via SCR-0033 (Agent Aurora) · Health-Modell: AUDIT-SCAN-11 · Validator ALL COMPLIANT · {TS}*
+*Erzeugt via SCR-0033 (Agent Aurora) · Health-Modell: AUDIT-SCAN-11 · Validator ALL COMPLIANT · 08.09.2026, 02:55 UTC+2*
