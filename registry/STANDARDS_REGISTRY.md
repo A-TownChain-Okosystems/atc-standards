@@ -8,15 +8,21 @@
 
 ---
 
-## Governance-Standards (registry/standards.yaml — SSOT, Stand 07.09.2026)
+## Governance-Standards (registry/standards.yaml — SSOT, Stand 08.09.2026 (regeneriert))
 
 | ID | Titel | Status | Version | Kategorie |
 |----|-------|--------|---------|-----------|
 | ATC-STD-000 | Standards Governance & Specification Standard | approved | 1.2.0 | governance |
+| ATC-STD-114 | Git Standard | candidate | 1.0.0 | repository |
 | ATC-STD-201 | Repository Structure Standard | approved | 1.0.1 | repository |
 | ATC-STD-202 | Repository Naming & Classification Standard | approved | 1.1.0 | repository |
 | ATC-STD-203 | Repository Security & Release Standard | approved | 1.0.1 | repository |
 | ATC-STD-204 | Dependency & Interface Standard | approved | 1.0.0 | repository |
+| ATC-STD-212 | Token Supply Standard | candidate | 1.0.0 | blockchain |
+| ATC-STD-213 | Emission Standard | candidate | 1.0.0 | blockchain |
+| ATC-STD-214 | Burning Standard | candidate | 1.0.0 | blockchain |
+| ATC-STD-215 | Tokenomics Standard | candidate | 1.0.0 | blockchain |
+| ATC-STD-314 | Cybersecurity Framework Standard | candidate | 1.0.0 | security |
 | ATC-STD-AI-DEV-001 | Software Development AI Agent Identity & Workflow Standard | approved | 1.0.0 | ai-dev |
 | ATC-STD-AI-DEV-004 | AI Task Management Standard | approved | 1.0.0 | ai-dev |
 | ATC-STD-AI-DEV-007 | AI Git Commit & Pull Request Standard | approved | 1.0.0 | ai-dev |
@@ -42,6 +48,7 @@
 | ATC-STD-NET-007 | Network Security Standard | approved | 1.0.0 | net |
 | ATC-STD-NET-008 | Network Recovery Standard | approved | 1.0.0 | net |
 | ATC-STD-100 | Language & Technology Stack Standard | approved | 1.0.0 | architecture |
+| ATC-STD-V2S-000 | Vision-to-Software Lifecycle Master Standard | candidate | 1.0.0 | v2s |
 | ATC-STD-ZKP-001 | ZKP Architecture Standard | approved | 1.0.0 | zkp |
 | ATC-STD-ZKP-002 | Proof System Interface Standard | approved | 1.0.0 | zkp |
 | ATC-STD-ZKP-003 | Circuit Standard | approved | 1.0.0 | zkp |
