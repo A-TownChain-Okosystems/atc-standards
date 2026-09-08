@@ -186,6 +186,20 @@ taxonomy:
         name: Allgemein (Bestand, keine Unterteilung)
         status: ACTIVE
         lifecycle: ACTIVE
+    - id: RD
+      name: repo-discovery
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-STD-REPO-DISCOVERY-001-999
+      source: named-family
+      description: 'Repository-Discovery-Familie: Content Discovery & Change Detection — kein neuer Repository-Inhalt unbewertet; Standard-Kandidaten, Duplikat-/Cross-Repo-Pruefung, Impact, maschinenlesbare
+        Reports (Owner-Entwurf 08.09., SCR-0046)'
+      standards_count: 10
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
     - id: SGC
       name: governance-core
       status: ACTIVE

@@ -57,14 +57,14 @@ eines Standards liegt ausschließlich in seiner Standarddatei; die Registry
 | registry/teams.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
 | registry/versions.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
 
-Kernregister: **standards.yaml** (Bestand, 421 Standards) · **versions.yaml**
-(Versionierung je Standard) · **framework.yaml** (Katalog: 48 Familien,
-461 Slots) · **categories.yaml**
+Kernregister: **standards.yaml** (Bestand, 431 Standards) · **versions.yaml**
+(Versionierung je Standard) · **framework.yaml** (Katalog: 49 Familien,
+471 Slots) · **categories.yaml**
 (Kategorien) · **taxonomy.yaml** (Domain/Familie/Kategorie) · **protocol-registry.yaml**
 (26 Protokollfamilien, Status {'draft': 10, 'planned': 16}) ·
 **findings.yaml** (Findings: 16 OPEN / 32 RESOLVED von 48).
 
-## 3. Standardfamilien (Katalog, 48 Familien)
+## 3. Standardfamilien (Katalog, 49 Familien)
 
 | FAM | Familie | Slots | BELEGT | VERWEIST |
 |---|---|---|---|---|
@@ -116,12 +116,13 @@ Kernregister: **standards.yaml** (Bestand, 421 Standards) · **versions.yaml**
 | FAM-46 | Repository Maintenance (REPO-MAINT) | 1 | 1 | 0 |
 | FAM-47 | Error Propagation & Prevention (ERR) | 16 | 16 | 0 |
 | FAM-48 | Implementation Tracking (IMPLEMENTATION) | 1 | 1 | 0 |
+| FAM-49 | Repository Content Discovery (REPO-DISCOVERY) | 10 | 10 | 0 |
 
-Statusverteilung der 421 Registry-Standards: {'approved': 395, 'candidate': 26}.
-Alle 421 sind APPROVED und normativ (§30-eingefroren); Details je Standard
+Statusverteilung der 431 Registry-Standards: {'approved': 395, 'candidate': 36}.
+Alle 431 sind APPROVED und normativ (§30-eingefroren); Details je Standard
 in registry/standards.yaml und registry/versions.yaml.
 
-## 4. Master-Registry-Tabelle (421 Standards)
+## 4. Master-Registry-Tabelle (431 Standards)
 
 Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 
@@ -512,6 +513,16 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 | ATC-STD-REPO-AUDIT-001 | ATC Repository Audit Standard — Verbindlicher, reproduzierbarer Repository Health Check: 16 Prüfbereiche, Prüfmatrix, SOLL/IST, Gap Analysis, Findings, Health Score A-E | repo-audit | 1.0.0 | approved | standards/repo-audit/ATC-STD-REPO-AUDIT-001.md |
 | ATC-STD-REPO-AUDIT-002 | ATC Repository Audit Checklisten- & Health-Score-Standard — Konkrete automatisierbare Checks (CHECK-001, CHECK-002, …) und standardisierter Repository Health Score | repo-audit | 1.0.0 | approved | standards/repo-audit/ATC-STD-REPO-AUDIT-002.md |
 | ATC-STD-REPO-AUDIT-003 | Automatisierter ATC Repository Auditor — verbindliche Spezifikation des KI-/Automatisierungsagenten für reproduzierbare Repository-Audits: Mandat, 17-Schritte-Pipeline, Read-Only-Pflicht, Gates, AUD-Report-Erzeugung | repo-audit | 1.0.0 | approved | standards/repo-audit/ATC-STD-REPO-AUDIT-003.md |
+| ATC-STD-REPO-DISCOVERY-001 | Content Discovery | repo-discovery | 1.0.0 | candidate | standards/repo-discovery/ATC-STD-REPO-DISCOVERY-001.md |
+| ATC-STD-REPO-DISCOVERY-002 | Change Detection | repo-discovery | 1.0.0 | candidate | standards/repo-discovery/ATC-STD-REPO-DISCOVERY-002.md |
+| ATC-STD-REPO-DISCOVERY-003 | Standard Candidate Detection | repo-discovery | 1.0.0 | candidate | standards/repo-discovery/ATC-STD-REPO-DISCOVERY-003.md |
+| ATC-STD-REPO-DISCOVERY-004 | Duplicate Detection | repo-discovery | 1.0.0 | candidate | standards/repo-discovery/ATC-STD-REPO-DISCOVERY-004.md |
+| ATC-STD-REPO-DISCOVERY-005 | Cross-Repository Discovery | repo-discovery | 1.0.0 | candidate | standards/repo-discovery/ATC-STD-REPO-DISCOVERY-005.md |
+| ATC-STD-REPO-DISCOVERY-006 | Impact Analysis | repo-discovery | 1.0.0 | candidate | standards/repo-discovery/ATC-STD-REPO-DISCOVERY-006.md |
+| ATC-STD-REPO-DISCOVERY-007 | Dependency Discovery | repo-discovery | 1.0.0 | candidate | standards/repo-discovery/ATC-STD-REPO-DISCOVERY-007.md |
+| ATC-STD-REPO-DISCOVERY-008 | Security-Relevant Content Detection | repo-discovery | 1.0.0 | candidate | standards/repo-discovery/ATC-STD-REPO-DISCOVERY-008.md |
+| ATC-STD-REPO-DISCOVERY-009 | Documentation Gap Detection | repo-discovery | 1.0.0 | candidate | standards/repo-discovery/ATC-STD-REPO-DISCOVERY-009.md |
+| ATC-STD-REPO-DISCOVERY-010 | Discovery Audit & Reporting | repo-discovery | 1.0.0 | candidate | standards/repo-discovery/ATC-STD-REPO-DISCOVERY-010.md |
 | ATC-STD-REPO-MAINT-001 | Repository Maintenance & Lifecycle Standard | repo-maint | 1.0.0 | candidate | standards/repo-maint/ATC-STD-REPO-MAINT-001.md |
 | ATC-STD-SC-001 | Smart Contract General Standard | sc | 1.0.0 | approved | standards/sc/ATC-STD-SC-001.md |
 | ATC-STD-SC-002 | Smart Contract Identity Standard | sc | 1.0.0 | approved | standards/sc/ATC-STD-SC-002.md |
@@ -551,7 +562,7 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 
 ## 5. Statusmodell (Registry-Lifecycle)
 
-Registry-Statusverteilung (Ist): {'approved': 395, 'candidate': 26}. Lifecycle der Standards-Entwicklung
+Registry-Statusverteilung (Ist): {'approved': 395, 'candidate': 36}. Lifecycle der Standards-Entwicklung
 gemäß ATC-STD-STDDEV-001 / ATC-STD-TAXONOMY-001: Entwurf (Owner-Entwurf/SCR) →
 §9-Freigabe (Owner, Human-Gate) → APPROVED (normativ, §30-eingefroren) → ggf.
 DEPRECATED/RETIRED via Change-Control (ATC-STD-CHANGE-001). Protokolle folgen
@@ -594,7 +605,7 @@ die Kennung dieses generierten Dokuments.
 
 atc-standards/ · INDEX.md (generiert) · README.md · CHANGELOG.md · STATUS.md ·
 LICENSE (Apache-2.0) · AGENT_MANIFEST.md · AGENTS.md · governance/ (ATC-STD-000) ·
-standards/<kategorie>/ (Fachstandards, 421-Bestand) · registry/ (23
+standards/<kategorie>/ (Fachstandards, 431-Bestand) · registry/ (23
 SSOT-Dateien) · licenses/ (ATC-LICENSE-System) · schemas/ · tools/ (Generatoren +
 atc-std-validator) · approval/ (§9-Freigabe-Archiv) · change-requests/ (SCR-0001…) ·
 docs/ (Audits & Analysen) · templates/ · .github/workflows (Governance-CI, 2) +

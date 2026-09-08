@@ -65,6 +65,16 @@
 | ATC-STD-NET-007 | Network Security Standard | approved | 1.0.0 | net |
 | ATC-STD-NET-008 | Network Recovery Standard | approved | 1.0.0 | net |
 | ATC-STD-100 | Language & Technology Stack Standard | approved | 1.0.0 | architecture |
+| ATC-STD-REPO-DISCOVERY-001 | Content Discovery | candidate | 1.0.0 | repo-discovery |
+| ATC-STD-REPO-DISCOVERY-002 | Change Detection | candidate | 1.0.0 | repo-discovery |
+| ATC-STD-REPO-DISCOVERY-003 | Standard Candidate Detection | candidate | 1.0.0 | repo-discovery |
+| ATC-STD-REPO-DISCOVERY-004 | Duplicate Detection | candidate | 1.0.0 | repo-discovery |
+| ATC-STD-REPO-DISCOVERY-005 | Cross-Repository Discovery | candidate | 1.0.0 | repo-discovery |
+| ATC-STD-REPO-DISCOVERY-006 | Impact Analysis | candidate | 1.0.0 | repo-discovery |
+| ATC-STD-REPO-DISCOVERY-007 | Dependency Discovery | candidate | 1.0.0 | repo-discovery |
+| ATC-STD-REPO-DISCOVERY-008 | Security-Relevant Content Detection | candidate | 1.0.0 | repo-discovery |
+| ATC-STD-REPO-DISCOVERY-009 | Documentation Gap Detection | candidate | 1.0.0 | repo-discovery |
+| ATC-STD-REPO-DISCOVERY-010 | Discovery Audit & Reporting | candidate | 1.0.0 | repo-discovery |
 | ATC-STD-REPO-MAINT-001 | Repository Maintenance & Lifecycle Standard | candidate | 1.0.0 | repo-maint |
 | ATC-STD-V2S-000 | Vision-to-Software Lifecycle Master Standard | candidate | 1.0.0 | v2s |
 | ATC-STD-ZKP-001 | ZKP Architecture Standard | approved | 1.0.0 | zkp |
