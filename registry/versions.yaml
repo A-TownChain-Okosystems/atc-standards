@@ -7097,3 +7097,57 @@ versions:
     date: '2026-09-08'
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
+  ATC-STD-LICENSE-001:
+  - version: 1.0.0
+    date: '2026-09-08'
+    change: 'Initial Release via SCR-0037 (§9-FREIGEGEBEN 08.09. 03:55 UTC+2, Owner-Direktive ''ATC-Lizenzsystem
+      etablieren''): ATC-LICENSE-System v1.0.0 — eigene Lizenz- und Nutzungsrechte-Governance (FAM-44),
+      getrennt von SPDX-Basisschicht (Apache-2.0, SCR-0036).'
+  ATC-STD-LICENSE-002:
+  - version: 1.0.0
+    date: '2026-09-08'
+    change: 'Initial Release via SCR-0037 (§9-FREIGEGEBEN 08.09. 03:55 UTC+2, Owner-Direktive ''ATC-Lizenzsystem
+      etablieren''): ATC-LICENSE-System v1.0.0 — eigene Lizenz- und Nutzungsrechte-Governance (FAM-44),
+      getrennt von SPDX-Basisschicht (Apache-2.0, SCR-0036).'
+  ATC-STD-LICENSE-003:
+  - version: 1.0.0
+    date: '2026-09-08'
+    change: 'Initial Release via SCR-0037 (§9-FREIGEGEBEN 08.09. 03:55 UTC+2, Owner-Direktive ''ATC-Lizenzsystem
+      etablieren''): ATC-LICENSE-System v1.0.0 — eigene Lizenz- und Nutzungsrechte-Governance (FAM-44),
+      getrennt von SPDX-Basisschicht (Apache-2.0, SCR-0036).'
+  ATC-STD-LICENSE-004:
+  - version: 1.0.0
+    date: '2026-09-08'
+    change: 'Initial Release via SCR-0037 (§9-FREIGEGEBEN 08.09. 03:55 UTC+2, Owner-Direktive ''ATC-Lizenzsystem
+      etablieren''): ATC-LICENSE-System v1.0.0 — eigene Lizenz- und Nutzungsrechte-Governance (FAM-44),
+      getrennt von SPDX-Basisschicht (Apache-2.0, SCR-0036).'
+  ATC-STD-LICENSE-005:
+  - version: 1.0.0
+    date: '2026-09-08'
+    change: 'Initial Release via SCR-0037 (§9-FREIGEGEBEN 08.09. 03:55 UTC+2, Owner-Direktive ''ATC-Lizenzsystem
+      etablieren''): ATC-LICENSE-System v1.0.0 — eigene Lizenz- und Nutzungsrechte-Governance (FAM-44),
+      getrennt von SPDX-Basisschicht (Apache-2.0, SCR-0036).'
+  ATC-STD-LICENSE-006:
+  - version: 1.0.0
+    date: '2026-09-08'
+    change: 'Initial Release via SCR-0037 (§9-FREIGEGEBEN 08.09. 03:55 UTC+2, Owner-Direktive ''ATC-Lizenzsystem
+      etablieren''): ATC-LICENSE-System v1.0.0 — eigene Lizenz- und Nutzungsrechte-Governance (FAM-44),
+      getrennt von SPDX-Basisschicht (Apache-2.0, SCR-0036).'
+  ATC-STD-LICENSE-007:
+  - version: 1.0.0
+    date: '2026-09-08'
+    change: 'Initial Release via SCR-0037 (§9-FREIGEGEBEN 08.09. 03:55 UTC+2, Owner-Direktive ''ATC-Lizenzsystem
+      etablieren''): ATC-LICENSE-System v1.0.0 — eigene Lizenz- und Nutzungsrechte-Governance (FAM-44),
+      getrennt von SPDX-Basisschicht (Apache-2.0, SCR-0036).'
+  ATC-STD-LICENSE-008:
+  - version: 1.0.0
+    date: '2026-09-08'
+    change: 'Initial Release via SCR-0037 (§9-FREIGEGEBEN 08.09. 03:55 UTC+2, Owner-Direktive ''ATC-Lizenzsystem
+      etablieren''): ATC-LICENSE-System v1.0.0 — eigene Lizenz- und Nutzungsrechte-Governance (FAM-44),
+      getrennt von SPDX-Basisschicht (Apache-2.0, SCR-0036).'
+  ATC-STD-LICENSE-009:
+  - version: 1.0.0
+    date: '2026-09-08'
+    change: 'Initial Release via SCR-0037 (§9-FREIGEGEBEN 08.09. 03:55 UTC+2, Owner-Direktive ''ATC-Lizenzsystem
+      etablieren''): ATC-LICENSE-System v1.0.0 — eigene Lizenz- und Nutzungsrechte-Governance (FAM-44),
+      getrennt von SPDX-Basisschicht (Apache-2.0, SCR-0036).'

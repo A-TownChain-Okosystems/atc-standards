@@ -275,7 +275,15 @@ LIZENZ-ENTScheidung (SCR-0036, 03:45 UTC+2): F-046 durch Owner-Delegation gelös
 Apache-2.0 (SPDX) für alle 26 Repos (26/26 LICENSE ersetzt + gepusht, GitHub-Detektion
 verifiziert). Copyright „Michael Wroblewski" via Attributions-Pflicht verbindlich.
 
-Stand: 08.09.2026, 03:45 (Europe/Berlin) — Registry FINAL: 387 Standards, 387 APPROVED (263× fertig ausgebaut v1.2.0), 0 offen; Katalog vollständig zugeordnet; 11 Register EXISTIERT · Self-Compliance: R3 100/100 GATE PASS ·
+ATC-LICENSE-SYSTEM (SCR-0037, 03:55 UTC+2): Neue Standardfamilie FAM-44 (ATC License
+System) — 9 Standards ATC-STD-LICENSE-001..009 APPROVED; License-Registry licenses/
+(SSOT) mit 10 Lizenztypen (ATC-LIC-CORE-000 + OSS-001..EXPERIMENTAL-009), Ebenen
+OPEN/RESTRICTED/PROPRIETARY, 5 voll spezifizierte Lizenztexte (CORE/OSS/PROTOCOL/ASSET/
+AI), MANIFEST.schema.json. Kein Pseudo-Open-Source (OSD-Pflicht für OPEN; Reviews
+ehrlich ausstehend). Klar getrennt von Apache-2.0-Basisschicht (SCR-0036). Backlog:
+ATC-LICENSE.yaml je Repo, License Scanner S-26, 5 PLANNED-Typen spezifizieren.
+
+Stand: 08.09.2026, 03:55 (Europe/Berlin) — Registry FINAL: 396 Standards, 396 APPROVED, 0 offen; Katalog 44 Familien, 442 Slots; 11 Register EXISTIERT · Self-Compliance: R3 100/100 GATE PASS ·
 Voll-Validierung 110/110 Standards: ALL COMPLIANT (S-18 prüft alle 10 Registry-Dateien; Mutationssuite 12/12)
 
 ## Standards-System

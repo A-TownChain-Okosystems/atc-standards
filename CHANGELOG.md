@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.4.48] - 2026-09-08
+
+### Added
+
+- **ATC-LICENSE-System v1.0.0 (SCR-0037, FAM-44):** Eigenes Lizenz- und
+  Nutzungsrechte-Governance-System als neue Standardfamilie — klar getrennt
+  von SPDX-Standardlizenzen (Repos behalten Apache-2.0 als Basisschicht).
+  9 Standards ATC-STD-LICENSE-001..009 (APPROVED, §30-eingefroren; REQ-LIC-001..028):
+  Governance, Specification, Registry, Manifest, Third-Party, Compliance,
+  Audit, Trademark Separation, Versioning. License-Registry licenses/ (SSOT)
+  mit 10 Typen (ATC-LIC-CORE-000 + OSS-001…EXPERIMENTAL-009), Ebenenmodell
+  OPEN/RESTRICTED/PROPRIETARY, 5 voll spezifizierte Lizenztexte (CORE, OSS,
+  PROTOCOL, ASSET, AI — jeweils LICENSE.md + SPEC.md + Metadaten), MANIFEST.
+  schema.json (ATC-LICENSE-MANIFEST-1.0). Kein Pseudo-Open-Source: ATC-OSS-1.0
+  nur bei OSD-Kompatibilität als OPEN; OSI-/Rechts-Review ehrlich ausstehend.
+  Trademark Separation: Code ≠ Marke ≠ Asset. Registry: 396 Standards,
+  396 APPROVED. Katalog: 44 Familien, 442 Slots.
+
+
 ## [1.4.47] - 2026-09-08
 
 ### Changed

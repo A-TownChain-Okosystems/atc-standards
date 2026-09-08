@@ -479,6 +479,17 @@ F("FAM-43", "Standards Governance Core", "ATC-STD-TAXONOMY-001 + STDDEV/REGISTRY
     sl("ATC-STD-REGISTRY-001", "Registry-Management-Standard (SSOT-Verwaltung aller ATC-Registries)", S_BELEGT, ["ATC-STD-REGISTRY-001"]),
     sl("ATC-STD-CHANGE-001", "Change-Control-Dachnorm (konsolidiert ATC-STD-000 §19-33 + UPDATE-001 + COMPAT-001)", S_BELEGT, ["ATC-STD-CHANGE-001"]),
 ], note="Standards Governance Core gem. Owner-Vorgabe 08.09.; TAXONOMY-001 via SCR-0024, STDDEV/REGISTRY/CHANGE via SCR-0025; Taxonomie-Registry S-24-geprueft"),
+F("FAM-44", "ATC License System", "ATC-STD-LICENSE-001..009 (Lizenz- & Nutzungsrechte-Governance)", [
+    sl("ATC-STD-LICENSE-001", "License Governance Standard (Dachnorm: Rechte/Pflichten/Einschraenkungen/Durchsetzung, Ebenen OPEN/RESTRICTED/PROPRIETARY)", S_BELEGT, ["ATC-STD-LICENSE-001"]),
+    sl("ATC-STD-LICENSE-002", "License Specification Standard (Spezifikationsformat je Lizenztyp: LICENSE.md + SPEC.md + Metadaten + Schema)", S_BELEGT, ["ATC-STD-LICENSE-002"]),
+    sl("ATC-STD-LICENSE-003", "License Registry Standard (licenses/LICENSE-REGISTRY.yaml als SSOT, 9 Typen ATC-LIC-*, Lifecycle)", S_BELEGT, ["ATC-STD-LICENSE-003"]),
+    sl("ATC-STD-LICENSE-004", "License Manifest Standard (ATC-LICENSE.yaml je Projekt, Schema ATC-LICENSE-MANIFEST-1.0, maschinenlesbar)", S_BELEGT, ["ATC-STD-LICENSE-004"]),
+    sl("ATC-STD-LICENSE-005", "Third-Party License Management Standard (Dritt-/Copyleft-Erfassung, SBOM-Kopplung, Kompatibilitaetspruefung)", S_BELEGT, ["ATC-STD-LICENSE-005"]),
+    sl("ATC-STD-LICENSE-006", "License Compliance Standard (Compliance Engine/Scanner, PASS/WARNING/P1/P2/BLOCK, AuditTrail-Kopplung)", S_BELEGT, ["ATC-STD-LICENSE-006"]),
+    sl("ATC-STD-LICENSE-007", "License Audit Standard (AUD-Records fuer Lizenzentscheidungen, Review-Kadenz, MAJOR-Rechte-Aenderungen)", S_BELEGT, ["ATC-STD-LICENSE-007"]),
+    sl("ATC-STD-LICENSE-008", "Trademark Separation Standard (Code != Marke != Asset, Markenliste, Trademark-Policy separat)", S_BELEGT, ["ATC-STD-LICENSE-008"]),
+    sl("ATC-STD-LICENSE-009", "License Versioning Standard (SemVer je Lizenz, Rechte-Aenderung = MAJOR + Owner-Gate, Deprecation/Migration)", S_BELEGT, ["ATC-STD-LICENSE-009"]),
+], note="ATC-LICENSE-System gem. Owner-Vorgabe 08.09. (SCR-0037); getrennt von SPDX-Standardlizenzen (Repos behalten Apache-2.0 als Basisschicht); License-Registry licenses/ (SSOT) mit 9 Typen ATC-LIC-*, 5 voll spezifiziert (CORE/OSS/PROTOCOL/ASSET/AI-1.0)"),
 ]
 
 # Validierung der Daten: globale Slot-IDs eindeutig, Statistiken
