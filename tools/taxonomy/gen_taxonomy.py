@@ -34,7 +34,7 @@ FAMILY_CODES = {
     "version": "VER", "audit": "AUD", "ai-decision": "AIDEC", "update": "UPD",
     "repo-audit": "RA", "protocol": "PROT", "agent-operating": "AOS",
     "master-audit": "MAUD", "framework": "FW", "milestone": "MIL", "compat": "CMP",
-    "taxonomy": "TAX", "governance-core": "SGC",
+    "taxonomy": "TAX", "governance-core": "SGC", "license": "LIC",
 }
 
 cats = yaml.safe_load(open("registry/categories.yaml", encoding="utf-8"))
