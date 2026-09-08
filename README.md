@@ -11,9 +11,10 @@
 | Standard-Dateien (`standards/`) | **430** |
 | Familien | **49** |
 | Registry SHA-256 | `ff2117a62088cb0d…` (vollständig: `registry/registry.lock`) |
-| Stand | 2026-09-08 17:14 UTC+2 |
+| Stand | 2026-09-08 17:18 UTC+2 |
 
 Implementierungs-Matrix: [`registry/standard-implementation.yaml`](registry/standard-implementation.yaml) (ATC-STD-IMPLEMENTATION-001).
+
 **Implementierungs-KPI:** 431 Standards normativ definiert — 62 enforced, 129 implemented, 240 specification-only (Zielsysteme im qualitätsgetriebenen Rebuild AD-023/AD-045). Die Aussage „431 Standards implementiert“ ist unzulässig (SCR-0048).
 
 **ATC COMPLIANCE: YES** — Repository-Audit R3 · Naming/Versioning/Ownership/Lizenz konform ([Audit-Details](#standards--compliance))

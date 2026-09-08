@@ -14,7 +14,6 @@ import os
 import re
 import sys
 
-import yaml
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))
@@ -27,12 +26,13 @@ AUDIT_DIR = os.path.join(ROOT, ".github", "ai", "audit")
 
 def main():
     fails = []
-    registry = yaml.safe_load(open(REGISTRY, encoding="utf-8"))["standards"]
-    ids = {s["id"] for s in registry}
+    # yaml-frei (SCR-0053): Laeuft auf jedem CI-Runner ohne PyYAML-Abhaengigkeit
+    reg_text = open(REGISTRY, encoding="utf-8").read()
+    ids = set(re.findall(r"id:\s*(ATC-[A-Z0-9-]+)", reg_text))
 
     # A1: Repo-Manifest referenziert ALLE Registry-Standards
-    repo_manifest = yaml.safe_load(open(MANIFEST, encoding="utf-8"))
-    required = set(repo_manifest.get("required_standards", []))
+    man_text = open(MANIFEST, encoding="utf-8").read()
+    required = set(re.findall(r"^-\s*(ATC-[A-Z0-9-]+)\s*$", man_text, re.M))
     fehlt = sorted(ids - required)
     zuviel = sorted(required - ids)
     if fehlt:

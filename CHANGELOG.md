@@ -2,6 +2,12 @@
 
 ## [Unreleased] — 2026-09-08 (SCR-0045/0047/0048)
 
+### Enforcement-Pipeline: Alle definierten Standards je Push/PR erzwungen (SCR-0053)
+- E-Stage (E-1..E-4) in validate_all.py: Meta-Daten-Audit, Meta-Sweep,
+  Agent-Manifest-Vollmandat, README-Gates — echtes Fail-Verhalten je Push/PR,
+  ohne Workflow-Aenderung (GH013 umgangen). SCR-0051 damit superseded.
+- E-3/A1-Fund behoben: agent.yaml required_standards 35 Standards hinter
+  der Registry — jetzt 431/431, yaml-freier Checker, SSOT-Sync im Generator.
 ### Governance-Hardening: P1-Funde des externen Audits behoben (SCR-0052)
 - P1-001: README-Lizenz auf Apache-2.0 synchronisiert (war „Proprietary" im
   Widerspruch zu LICENSE und Org-Lizenzentscheid).

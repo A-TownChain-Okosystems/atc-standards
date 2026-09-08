@@ -133,6 +133,19 @@ def main():
         c = c.replace(m.group(1), m.group(1) + "\n" + banner, 1)
     open(p, "w", encoding="utf-8").write(c)
 
+    # ---------- 4. .github/ai/agent.yaml (SCR-0053): required_standards SSOT-Sync ----------
+    p = os.path.join(ROOT, ".github", "ai", "agent.yaml")
+    if os.path.exists(p):
+        man = open(p, encoding="utf-8").read()
+        ids = re.findall(r"id:\s*(ATC-[A-Z0-9-]+)", open(os.path.join(ROOT, "registry", "standards.yaml"), encoding="utf-8").read())
+        m2 = re.search(r"(required_standards:\n)((?:- .+\n)+)", man)
+        if m2:
+            new_block = m2.group(1) + "".join(f"- {i}\n" for i in ids)
+            if man[m2.start():m2.end()] != new_block:
+                man = man[:m2.start()] + new_block + man[m2.end():]
+                open(p, "w", encoding="utf-8").write(man)
+                print(f"✓ agent.yaml required_standards regeneriert: {len(ids)} Standards (SSOT-Sync)")
+
     print(f"✓ Views generiert: {total} Standards ({approved} APPROVED/{candidate} CANDIDATE), "
           f"{fam_count} Familien, {std_files} Dateien, SHA {sha[:12]}…")
 

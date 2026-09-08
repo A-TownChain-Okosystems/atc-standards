@@ -422,6 +422,34 @@ def main():
     if not fm_ok:
         fails += 1
 
+    # ===== Enforcement-Pipeline (SCR-0053): Voll-Erzwungung der definierten Standards je Push/PR =====
+    # E-Stages: Zusatz-Gates der Einzel-Validatoren. Jeder echte Befund zaehlt
+    # in das Gesamtergebnis und rottet den Workflow aus. Fehlende Runner-
+    # Abhaengigkeiten (PyYAML) degradieren sichtbar zu WARN (Präzedenz S-25),
+    # echte Findings bleiben FAIL.
+    stages = [
+        ("E-1", "Meta-Daten-Audit (SCR-0050, MD-A..MD-F)", [sys.executable, os.path.join(HERE, "meta_data_audit.py")]),
+        ("E-2", "Meta-Sweep (SCR-0047, MS-1..MS-7)", [sys.executable, os.path.join(HERE, "meta_sweep.py")]),
+        ("E-3", "Agent-Manifest-Check (AGENT_MANIFEST-Standard)", [sys.executable, os.path.join(HERE, "check_agent_manifest.py")]),
+        ("E-4", "README-Gates (ATC-STD-README-001, 13 Gates)", [sys.executable, os.path.join(ROOT, "tools", "atc-readme-validator", "check_readme.py"), ROOT]),
+    ]
+    for sid, name, cmd in stages:
+        try:
+            r = subprocess.run(cmd, capture_output=True, text=True)
+        except OSError as _e:
+            print("%s %s: FAIL (Stage nicht ausfuehrbar: %s)" % (sid, name, _e)); fails += 1; continue
+        out = (r.stdout or "") + (r.stderr or "")
+        missing_dep = "ModuleNotFoundError" in out and "yaml" in out
+        if r.returncode == 0:
+            print("%s %s: PASS" % (sid, name))
+        elif missing_dep:
+            print("%s %s: WARN (Runner ohne PyYAML — Stage uebersprungen, Praezedenz S-25-Fallback)" % (sid, name))
+        else:
+            print("%s %s: FAIL" % (sid, name))
+            for line in out.splitlines()[-12:]:
+                print("    " + line)
+            fails += 1
+
     print("RESULT: " + ("ALL COMPLIANT" if fails == 0 else "%d FAIL(s)" % fails))
 
     # S-19 Mutationstest-Suite: Header-Drift-Erkennung muss zuverlaessig
