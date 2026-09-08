@@ -1,5 +1,34 @@
 # Changelog
 
+## [unreleased] - 2026-09-08
+
+### Added
+
+- **AUD-2026-0004 — Unabhängige Review-Stufe abgeschlossen (SCR-0055):** Zwei-Reviewer-
+  Modell mit kontextlosen Sub-Agenten (REQ-AUDIT-025, REQ-AIDEC-019/020). AuditGPT
+  bestätigt CONDITIONAL_PASS/Score C, korrigiert AUD-2026-0001-Klassifikation
+  (real 5 AUTOMATED statt 8 — README/MD/AAS-025-Validatoren nicht CI-verdrahtet,
+  F-049) und deckt systemischen MD-001-Verstoß in 4 Repos auf (F-054). SecurityGPT
+  deckt Fail-Open-Registry-Parsing auf (SG-01), fehlende Workflow-Permissions (SG-02)
+  und auditRunId-Klärungsbedarf (SG-03).
+- **Owner-Patch konsolidiert** (`docs/patches/OWNER_WORKFLOW_PATCH_2026-09-08.md`):
+  pip install + permissions + Verdrahtung von 4 Validatoren — GH013, nur via
+  GitHub-UI anwendbar. Löst E-5/T2 (Naming-Governance-CI rot), F-049, F-051.
+- **Findings F-049..F-054** registriert (3 RESOLVED, 3 OPEN/Owner).
+
+### Fixed
+
+- **SG-01 Fail-Closed-Härtung (F-050, S2):** S-18-Fallback prüft Pflichtfelder
+  voll (PyYAML-freier Fluss-Parser), S-20-Fallback FAIL statt WARN, Registry-Cross-
+  Check (S-18a) fail-closed statt stillem except:pass, unlesbare Dateien →
+  S-01 READ FAIL + Exit 1. Deckte 2 unlesbare legacy_series-Dateipfade auf
+  (Quotes im YAML-Wert) — Quote-Stripping in collect() nachgerüstet.
+- **Fiktive Referenz ATC-STD-021 in AUDIT-001 §11** (F-053): Beispiel auf echte
+  Kette REQ-STD-101 → ATC-STD-BUG-001 korrigiert (§30 mikro-inhaltlich via SCR-0055).
+- **Schema-Note auditRunId klargestellt** (F-052): YYYY=Jahr, NNNN=Sequenz.
+- **atclang CI-Failure behoben** (f941637): ATC COMPLIANCE-Badge im README —
+  V-14 GATE NO-GO → PASS, Score 94→100.
+
 ## [Unreleased] — 2026-09-08 (SCR-0045/0047/0048)
 
 ### Reproducible CI Dependencies: Issue #1 als P1-Change (SCR-0054)

@@ -28,7 +28,10 @@ def collect():
             for line in fh:
                 m = re.search(r"file:\s*([^},]+)", line)
                 if m:
-                    files.append(os.path.join(ROOT, m.group(1).strip()))
+                    _p = m.group(1).strip()
+                    if _p.startswith('"') and _p.endswith('"'):
+                        _p = _p[1:-1]  # SG-01/AUD-2026-0004: Quotes im YAML-Wert strippen
+                    files.append(os.path.join(ROOT, _p))
     except OSError:
         pass
     for d in CAND:
@@ -42,17 +45,26 @@ def collect():
     return sorted(files)
 
 
+READ_ERRORS = []  # SG-01 (AUD-2026-0004): Lesefehler duerfen nicht still verschwinden
+
+
 def file_id(path):
     try:
         head = open(path, encoding="utf-8").read(2500)
         m = re.search(r"^\s*id:\s*(ATC-STD-(?:BUG-|NET-|ZKP-|AI-DEV-|MD-|SC-|README-|DESC-|VERSION-|AUDIT-|AI-DECISION-|UPDATE-|COMPAT-|MILESTONE-|FRAMEWORK-|REPO-AUDIT-|AOS-|PROTOCOL-|TAXONOMY-|STDDEV-|REGISTRY-|CHANGE-)?[0-9]{3,}|ATC-AAS-[0-9]{3,}|ATC-ENT-[0-9]{3,})\s*$", head, re.M)
         return m.group(1) if m else None
-    except Exception:
+    except Exception as e:
+        READ_ERRORS.append((path, str(e)[:80]))
         return None
 
 
 def main():
     files = [f for f in collect() if file_id(f)]
+    # SG-01 (AUD-2026-0004): unlesbare Kandidatendateien = FAIL (fail-closed)
+    if READ_ERRORS:
+        for p, e in READ_ERRORS:
+            print("S-01 READ: FAIL — %s nicht lesbar: %s" % (p, e))
+        sys.exit(1)
     if not files:
         print("Keine Standard-Dateien gefunden")
         return 1
@@ -105,7 +117,21 @@ def main():
                         registry_ok = False
             print("S-18 Registry-Parse: %s (%d Eintraege, %d Registry-Dateien geprueft)" % ("PASS" if registry_ok else "FAIL", len(entries), len(_reg_files)))
     except ImportError:
-        # Fallback ohne PyYAML: Fluss-Mapping-Zeilen muessen Klammer-/Anfuehrungsbalanz haben
+        # Fallback ohne PyYAML (SG-01, AUD-2026-0004): fail-closed und aequivalent stark zum
+        # yaml-Pfad — Fluss-Mapping-Eintrage des standards:-Abschnitts voll parsen und
+        # Pflichtfelder pruefen. Ein strukturfehlerhaftes standards.yaml MUSS FAILen.
+        from atc_std_validator import _parse_flow_entry  # PyYAML-freier Fluss-Parser (SCR-0013)
+        reg_text = open(REGISTRY, encoding="utf-8").read()
+        sec = re.search(r"^standards:[ \t]*\n(.*?)(?=^[A-Za-z_][\w-]*:|\Z)", reg_text, re.S | re.M)
+        if not sec:
+            print("S-18 Registry-Parse: FAIL — kein 'standards:'-Abschnitt (Fallback)")
+            registry_ok = False
+            entries = []
+        else:
+            entries = [_parse_flow_entry(m.group(1)) for m in re.finditer(r"^\s+-\s+\{(.*)\}\s*$", sec.group(1), re.M)]
+        if not entries:
+            print("S-18 Registry-Parse: FAIL — standards.yaml enthaelt keine 'standards:'-Liste (Fallback)")
+            registry_ok = False
         for n, line in enumerate(open(REGISTRY, encoding="utf-8"), 1):
             s = line.strip()
             if s.startswith("- {") and not s.endswith("}"):
@@ -114,7 +140,12 @@ def main():
             if s.count("{") != s.count("}") or s.count('"') % 2:
                 print("S-18 Registry-Parse: FAIL — Zeile %d Klammer-/Quote-Balanz defekt" % n)
                 registry_ok = False
-        print("S-18 Registry-Parse: %s (Fallback-Modus, PyYAML fehlt)" % ("PASS" if registry_ok else "FAIL"))
+        for e in entries:
+            for req in ("id", "title", "version", "status", "owner", "file"):
+                if req not in e:
+                    print("S-18 Registry-Parse: FAIL — %s fehlt Pflichtfeld '%s' (Fallback)" % (e.get("id", "?"), req))
+                    registry_ok = False
+        print("S-18 Registry-Parse: %s (Fallback-Modus, PyYAML fehlt; %d Eintraege voll geprueft)" % ("PASS" if registry_ok else "FAIL", len(entries)))
     except Exception as e:
         print("S-18 Registry-Parse: FAIL — %s" % str(e)[:120])
         registry_ok = False
@@ -122,14 +153,19 @@ def main():
         fails += 1
 
     # Registry-Cross-Check: Registry-Eintraege muessen Dateien haben
+    # SG-01 (AUD-2026-0004): fail-closed — Registry unlesbar/inkonsistent = FAIL, nie still
     try:
         reg = open(REGISTRY, encoding="utf-8").read()
         reg_ids = set(re.findall(r"id:\s*(ATC-STD-[0-9]{3,})", reg))
         missing = reg_ids - set(ids)
         if missing:
-            print("WARN: Registry ohne Datei: " + ", ".join(sorted(missing)))
-    except Exception:
-        pass
+            print("S-18a Registry-Cross: FAIL — Registry ohne Datei: " + ", ".join(sorted(missing)))
+            fails += 1
+        else:
+            print("S-18a Registry-Cross: PASS (%d Registry-IDs alle mit Datei)" % len(reg_ids))
+    except Exception as e:
+        print("S-18a Registry-Cross: FAIL — Registry nicht lesbar: %s" % str(e)[:100])
+        fails += 1
 
     # S-20 Milestone-Registry-Check (ATC-STD-MILESTONE-001 §17)
     milestone_ok = True
@@ -187,9 +223,25 @@ def main():
                                 print("S-20 Milestones: FAIL — %s: ACCEPTED bei offener kritischer Dependency %s (%s) (§8)" % (mid, dep, stat.get(dep))); milestone_ok = False
                 print("S-20 Milestones: %s (%d Eintraege, IDs: %s)" % ("PASS" if milestone_ok else "FAIL", len(entries), ", ".join(sorted(ids))))
         except ImportError:
-            n_ok = sum(1 for l in open(MS_PATH, encoding="utf-8") if re.match(r"^\s*- id: ATC-M-(?:[A-Z]+-)?\d{3,}$", l))
-            bal = all(l.count("{") == l.count("}") or ":" in l for l in open(MS_PATH, encoding="utf-8"))
-            print("S-20 Milestones: %s (Fallback-Modus, PyYAML fehlt; %d ATC-M-Eintraege)" % ("PASS" if (n_ok and bal) else "WARN", n_ok))
+            # SG-01 (AUD-2026-0004): fail-closed — milestones.yaml muss auch ohne PyYAML
+            # strukturell geprueft werden; WARN ist ein Fail-Open-Zustand.
+            raw = open(MS_PATH, encoding="utf-8").read()
+            blocks = re.split(r"^\s*-\s+id:\s+", raw, flags=re.M)[1:]
+            if not blocks:
+                print("S-20 Milestones: FAIL — milestones.yaml ohne '- id:'-Eintraege (Fallback)")
+                milestone_ok = False
+            seen = set()
+            for b in blocks:
+                mid = b.splitlines()[0].strip()
+                if not re.match(r"^ATC-M-(?:[A-Z]+-)?[0-9]{3,}$", mid):
+                    print("S-20 Milestones: FAIL — %s: ID-Pattern verletzt (Fallback)" % mid); milestone_ok = False
+                if mid in seen:
+                    print("S-20 Milestones: FAIL — %s: doppelte ID (Fallback)" % mid); milestone_ok = False
+                seen.add(mid)
+                for req in ("name", "category", "status", "owner", "goal", "risk", "target_date", "audit_ref"):
+                    if not re.search(r"^\s*%s\s*:" % req, b, re.M):
+                        print("S-20 Milestones: FAIL — %s: Feld '%s' fehlt (Fallback)" % (mid, req)); milestone_ok = False
+            print("S-20 Milestones: %s (Fallback-Modus, PyYAML fehlt; %d Bloecke geprueft)" % ("PASS" if milestone_ok else "FAIL", len(blocks)))
         except Exception as e:
             print("S-20 Milestones: FAIL — %s" % str(e)[:120]); milestone_ok = False
     if not milestone_ok:

@@ -372,7 +372,7 @@
           "type": "string",
           "pattern": "^AUD-[0-9]{4}-[0-9]{4,}$",
           "example": "AUD-2026-0001",
-          "note": "Audit-Lauf-IDs: AUD-YYYY-NNNN, revisionsfähige Audit-Historie (SCR-0013; konsolidiert die Varianten AUD-NNNN/ATC-AUD-YYYY-NNNN aus dem Owner-Entwurf)"
+          "note": "Audit-Lauf-IDs: AUD-YYYY-NNNN, revisionsfähige Audit-Historie (SCR-0013; konsolidiert die Varianten AUD-NNNN/ATC-AUD-YYYY-NNNN aus dem Owner-Entwurf) SG-03-Klärung (AUD-2026-0004): Format AUD-YYYY-NNNN — YYYY = Jahr, NNNN = fortlaufende 4-stellige (oder längere) Sequenz je Jahr; AUD-2026-0001 = erster Audit-Lauf 2026, kanonisch konform."
         },
         "aiDecisionStandardId": {
           "type": "string",

@@ -342,7 +342,7 @@ Ein Audit ist erst abgeschlossen, wenn: Scope definiert, Anforderungen geprüft,
 ## 6. Traceability (Beispiel)
 
 ```
-REQ-STD-021 → ATC-STD-021 → ARCH-ATC-004 → src/wallet/...
+REQ-STD-101 → ATC-STD-BUG-001 → ARCH-ATC-004 → src/tools/...
 → TEST-WALLET-017 → AUD-2026-0042 → v1.4.0 → CHANGELOG.md
 ```
 
