@@ -1306,6 +1306,12 @@ versions:
     change: 'Initial Release DRAFT (124. Standard, SCR-0029): Katalog-Slot GEPLANT->BELEGT; siehe Mandat-Feld
       der Standards-Registry; §9-Freigabe ausstehend'
   ATC-STD-001:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1317,6 +1323,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-006:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1328,6 +1340,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-008:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1339,6 +1357,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-012:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1350,6 +1374,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-013:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1361,6 +1391,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-015:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1372,6 +1408,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-025:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1383,6 +1425,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-027:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1394,6 +1442,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-040:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1405,6 +1459,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-042:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1416,6 +1476,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-045:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1427,6 +1493,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-048:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1438,6 +1510,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-050:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1449,6 +1527,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-051:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1460,6 +1544,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-052:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1471,6 +1561,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-062:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1482,6 +1578,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-063:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1493,6 +1595,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-064:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1504,6 +1612,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-066:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1515,6 +1629,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-067:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1526,6 +1646,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-069:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1537,6 +1663,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-070:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1548,6 +1680,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-072:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1559,6 +1697,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-081:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1570,6 +1714,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-082:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1581,6 +1731,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-085:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1592,6 +1748,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-087:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1603,6 +1765,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-088:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1614,6 +1782,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-089:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1625,6 +1799,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-090:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1636,6 +1816,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-091:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1647,6 +1833,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-093:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1658,6 +1850,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-094:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1669,6 +1867,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-095:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1680,6 +1884,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-101:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1691,6 +1901,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-103:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1702,6 +1918,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-104:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1713,6 +1935,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-105:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1724,6 +1952,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-107:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1735,6 +1969,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-129:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1746,6 +1986,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-130:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1757,6 +2003,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-140:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1768,6 +2020,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-141:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1779,6 +2037,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-142:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1790,6 +2054,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-143:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1801,6 +2071,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-144:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1812,6 +2088,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-146:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1823,6 +2105,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-147:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1834,6 +2122,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-148:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1845,6 +2139,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-149:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1856,6 +2156,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-160:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1867,6 +2173,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-161:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1878,6 +2190,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-163:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1889,6 +2207,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-164:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1900,6 +2224,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-169:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1911,6 +2241,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-170:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1922,6 +2258,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-171:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1933,6 +2275,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-172:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1944,6 +2292,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-174:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1955,6 +2309,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-180:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1966,6 +2326,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-181:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1977,6 +2343,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-182:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1988,6 +2360,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-183:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -1999,6 +2377,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-184:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2010,6 +2394,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-185:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2021,6 +2411,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-186:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2032,6 +2428,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-187:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2043,6 +2445,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-188:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2054,6 +2462,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-189:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2065,6 +2479,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-190:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2076,6 +2496,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-191:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2087,6 +2513,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-192:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2098,6 +2530,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-193:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2109,6 +2547,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-194:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2120,6 +2564,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-195:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2131,6 +2581,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-196:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2142,6 +2598,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-197:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2153,6 +2615,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-200:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2164,6 +2632,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-205:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2175,6 +2649,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-206:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2186,6 +2666,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-207:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2197,6 +2683,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-208:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2208,6 +2700,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-209:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2219,6 +2717,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-210:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2230,6 +2734,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-240:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2241,6 +2751,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-241:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2252,6 +2768,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-242:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2263,6 +2785,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-243:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2274,6 +2802,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-244:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2285,6 +2819,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-245:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2296,6 +2836,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-246:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2307,6 +2853,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-247:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2318,6 +2870,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-248:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2329,6 +2887,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-249:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2340,6 +2904,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-270:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2351,6 +2921,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-271:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2362,6 +2938,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-272:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2373,6 +2955,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-273:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2384,6 +2972,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-274:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2395,6 +2989,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-275:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2406,6 +3006,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-276:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2417,6 +3023,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-280:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2428,6 +3040,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-282:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2439,6 +3057,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-283:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2450,6 +3074,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-284:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2461,6 +3091,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-285:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2472,6 +3108,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-286:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2483,6 +3125,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-301:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2494,6 +3142,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-302:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2505,6 +3159,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-303:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2516,6 +3176,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-304:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2527,6 +3193,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-306:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2538,6 +3210,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-307:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2549,6 +3227,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-308:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2560,6 +3244,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-309:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2571,6 +3261,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-311:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2582,6 +3278,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-312:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2593,6 +3295,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-340:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2604,6 +3312,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-341:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2615,6 +3329,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-342:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2626,6 +3346,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-343:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2637,6 +3363,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-344:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2648,6 +3380,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-345:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2659,6 +3397,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-346:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2670,6 +3414,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-347:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2681,6 +3431,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-348:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2692,6 +3448,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-349:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2703,6 +3465,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-350:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2714,6 +3482,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-360:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2725,6 +3499,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-361:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2736,6 +3516,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-362:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2747,6 +3533,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-363:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2758,6 +3550,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-364:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2769,6 +3567,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-365:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2780,6 +3584,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-366:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2791,6 +3601,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-367:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2802,6 +3618,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-368:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2813,6 +3635,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-380:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2824,6 +3652,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-381:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2835,6 +3669,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-382:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2846,6 +3686,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-383:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2857,6 +3703,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-384:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2868,6 +3720,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-385:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2879,6 +3737,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-386:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2890,6 +3754,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-387:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2901,6 +3771,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-388:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2912,6 +3788,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-389:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2923,6 +3805,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-400:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2934,6 +3822,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-401:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2945,6 +3839,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-402:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2956,6 +3856,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-403:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2967,6 +3873,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-404:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2978,6 +3890,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-405:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -2989,6 +3907,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-406:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3000,6 +3924,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-407:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3011,6 +3941,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-408:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3022,6 +3958,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-409:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3033,6 +3975,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-420:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3044,6 +3992,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-421:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3055,6 +4009,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-422:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3066,6 +4026,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-423:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3077,6 +4043,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-424:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3088,6 +4060,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-425:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3099,6 +4077,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-426:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3110,6 +4094,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-427:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3121,6 +4111,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-428:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3132,6 +4128,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-429:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3143,6 +4145,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-430:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3154,6 +4162,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-431:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3165,6 +4179,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-432:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3176,6 +4196,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-433:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3187,6 +4213,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-434:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3198,6 +4230,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-440:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3209,6 +4247,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-441:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3220,6 +4264,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-442:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3231,6 +4281,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-443:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3242,6 +4298,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-444:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3253,6 +4315,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-445:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3264,6 +4332,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-447:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3275,6 +4349,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-448:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3286,6 +4366,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-449:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3297,6 +4383,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-450:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3308,6 +4400,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-460:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3319,6 +4417,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-461:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3330,6 +4434,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-462:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3341,6 +4451,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-463:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3352,6 +4468,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-466:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3363,6 +4485,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-467:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3374,6 +4502,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-468:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3385,6 +4519,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-469:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3396,6 +4536,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-480:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3407,6 +4553,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-481:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3418,6 +4570,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-482:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3429,6 +4587,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-483:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3440,6 +4604,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-484:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3451,6 +4621,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-485:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3462,6 +4638,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-486:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3473,6 +4655,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-488:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3484,6 +4672,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-500:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3495,6 +4689,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-501:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3506,6 +4706,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-502:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3517,6 +4723,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-504:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3528,6 +4740,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-505:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3539,6 +4757,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-507:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3550,6 +4774,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-508:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3561,6 +4791,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-509:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3572,6 +4808,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-540:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3583,6 +4825,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-541:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3594,6 +4842,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-542:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3605,6 +4859,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-543:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3616,6 +4876,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-544:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3627,6 +4893,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-545:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3638,6 +4910,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-546:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3649,6 +4927,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-560:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3660,6 +4944,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-561:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3671,6 +4961,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-562:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3682,6 +4978,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-566:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3693,6 +4995,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-580:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3704,6 +5012,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-581:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3715,6 +5029,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-582:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3726,6 +5046,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-583:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3737,6 +5063,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-584:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3748,6 +5080,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-585:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3759,6 +5097,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-586:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3770,6 +5114,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-587:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3781,6 +5131,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-600:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3792,6 +5148,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-601:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3803,6 +5165,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-602:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3814,6 +5182,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-603:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3825,6 +5199,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-604:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3836,6 +5216,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-605:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3847,6 +5233,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-606:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3858,6 +5250,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-607:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3869,6 +5267,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-620:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3880,6 +5284,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-623:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3891,6 +5301,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-624:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3902,6 +5318,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-625:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3913,6 +5335,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-626:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3924,6 +5352,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-627:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3935,6 +5369,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-640:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3946,6 +5386,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-641:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3957,6 +5403,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-643:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3968,6 +5420,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-646:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3979,6 +5437,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-660:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -3990,6 +5454,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-662:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -4001,6 +5471,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-664:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -4012,6 +5488,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-665:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -4023,6 +5505,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-666:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -4034,6 +5522,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-667:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -4045,6 +5539,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-680:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -4056,6 +5556,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-681:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -4067,6 +5573,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-682:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -4078,6 +5590,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-683:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -4089,6 +5607,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-684:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -4100,6 +5624,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-685:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -4111,6 +5641,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-686:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -4122,6 +5658,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-700:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -4133,6 +5675,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-701:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -4144,6 +5692,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-702:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -4155,6 +5709,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-703:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -4166,6 +5726,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-704:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -4177,6 +5743,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-705:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,
@@ -4188,6 +5760,12 @@ versions:
     change: Initial Release DRAFT — Grundgerüst-Standard aus Katalog-Slot via SCR-0030; Elaborierung +
       §9-Freigabe ausstehend
   ATC-STD-706:
+  - version: 1.1.0
+    date: '2026-09-08'
+    change: 'MINOR via SCR-0031 (08.09. 02:30 UTC+2): Struktur-Elaboration — familien-spezifische Kernregeln
+      (KR-1..KR-6), Ökosystem-Verortung, Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3)
+      und Security-Bedrohungen additiv; REQ-STD-006..010 erweitert. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001
+      UPD-G03).'
   - version: 1.0.0-Approval
     date: '2026-09-08'
     change: 'Owner-§9-Freigabe (08.09. 02:15 UTC+2, SCR-0030-Batch): DRAFT -> APPROVED, normativ in Kraft,

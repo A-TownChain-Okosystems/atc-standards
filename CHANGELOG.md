@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.4.43] - 2026-09-08
+
+### Changed
+
+- **Struktur-Elaboration aller 263 Batch-Standards (SCR-0031, MINOR v1.1.0):**
+  Je Standard familien-spezifische Kernregeln (KR-1..KR-6 aus 34 Familien-
+  Wissensprofilen), Ökosystem-Verortung (echte L0-L7-Repos, Kernel-Sprints K0-K40,
+  Register, Chain-ID 658467, Katalog-Notizen wie „Kernel K16: DAG+PoH…"),
+  Schnittstellen & Kopplungen, Metriken/Akzeptanzkriterien (M-1..M-3, AUD-Record-
+  Nachweispflicht), REQ-STD-001..010 und familienspezifische Security-Bedrohungen.
+  Registry: 263× v1.1.0 (standards.yaml/versions.yaml synchron), Katalog-Notizen
+  aktualisiert + framework.yaml regeneriert. Generator-Tool dokumentiert:
+  tools/standards/elaborate_standards.py. P3-Engineering-Vertiefung je Slot
+  bleibt inkrementell via Einzel-SCR/MINOR.
+
+
 ## [1.4.42] - 2026-09-08
 
 ### Changed

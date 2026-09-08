@@ -2,7 +2,7 @@
 standard:
   id: ATC-STD-562
   title: "Non-Functional Requirements Standard"
-  version: "1.0.0"
+  version: "1.1.0"
   status: approved
   category: development
   authority: A-TownChain-Okosystems
@@ -22,21 +22,24 @@ standard:
   license: "Copyright (c) 2026 Michael Wroblewski"
 ----
 
-# ATC-STD-562 — Non-Functional Requirements (v1.0.0, APPROVED)
+# ATC-STD-562 — Non-Functional Requirements (v1.1.0, APPROVED)
 
-> **Status:** APPROVED (v1.0.0, §30-eingefroren) — Grundgerüst-Standard aus Katalog-Slot der Familie
-> Requirements Engineering (FAM-32); erstellt via SCR-0030. Inhaltliche Elaborierung (Volltext,
-> fachliche REQs) erfolgt via eigenem SCR; §9-FREIGEGEBEN 08.09.2026, 02:15 UTC+2 — APPROVED, normativ, §30-eingefroren; Elaborierung via SCR (MINOR-Updates).
+> **Status:** APPROVED (v1.1.0, §30-eingefroren) — Grundgerüst-Standard aus Katalog-Slot der Familie
+> Requirements Engineering (FAM-32); §9-FREIGEGEBEN 08.09.2026, 02:15 UTC+2 — APPROVED, normativ,
+> §30-eingefroren. Struktur-Elaboration v1.1.0 via SCR-0031 (08.09.2026, 02:30 UTC+2):
+> familien-spezifische Kernregeln, Ökosystem-Verortung, Schnittstellen, Metriken und
+> Security-Bedrohungen additiv ergänzt (MINOR, ATC-STD-UPDATE-001 UPD-G03).
 
 ## Abstract
 
-ATC-STD-562 (Non-Functional Requirements) ist der Grundgerüst-Standard für den gleichnamigen Katalog-Slot
-der Familie **Requirements Engineering** (FAM-32, Range ATC-STD-560..566) im ATC Enterprise Standards
-Framework. Er schafft die normative Hülle: Definition des Gegenstandes, Verortung
-im Katalog, Kernpflichten, Compliance- und Verifikationsregeln sowie die
-Change-Control-Bindung. Der Standard ist mit Owner-§9-Freigabe (08.09.2026, 02:15 UTC+2) APPROVED, normativ in
-Kraft und §30-eingefroren (ATC-STD-000). Die inhaltliche Elaborierung erfolgt
-inkrementell via eigener SCR-Kette (MINOR-Updates gemäß ATC-STD-UPDATE-001).
+ATC-STD-562 (Non-Functional Requirements) ist der Standard für den gleichnamigen Katalog-Slot der Familie
+**Requirements Engineering** (FAM-32, Range ATC-STD-560..566) im ATC Enterprise Standards Framework. Er
+definiert den Gegenstand, seine Verortung im Ökosystem, die verbindlichen
+Kernregeln, Compliance- und Verifikationspflichten sowie Security-Betrachtungen.
+Der Standard ist APPROVED, normativ in Kraft und §30-eingefroren (Owner-§9-Freigabe
+08.09.2026, 02:15 UTC+2, SCR-0030-Batch); die Struktur-Elaboration erfolgte via
+SCR-0031 als MINOR v1.1.0. Besondere Engineering-Vertiefung erfolgt inkrementell
+via eigener SCR/MINOR-Kette (ATC-STD-UPDATE-001).
 
 Schlüsselwörter: MUSS/MUSS NICHT, SOLLTE, DARF/KANN — RFC-2119 gemäß ATC-STD-000 §10.
 
@@ -47,26 +50,46 @@ Zuständigkeitsfeld der Familie Requirements Engineering. **Gilt nicht:** Bereic
 fachlich konkretere Standards derselben Familie verbindlich geregelt sind
 (Subsidiarität: der konkrete Standard geht vor).
 
-## §1 Gegenstand & Verortung
+## §1 Gegenstand & Ökosystem-Verortung
 
-Dieser Standard adressiert **Non-Functional Requirements**. Er ist dem Katalog-Slot ATC-STD-562 der
-Familie Requirements Engineering (FAM-32) zugeordnet; die Zuordnung folgt registry/framework.yaml
-(S-21) und darf nur via SCR geändert werden.
+Dieser Standard adressiert **Non-Functional Requirements** im Katalog-Slot ATC-STD-562 der Familie Requirements Engineering
+(FAM-32); die Zuordnung folgt registry/framework.yaml (S-21) und darf nur via SCR
+geändert werden.
 
-## §2 Kernpflichten (Grundgerüst)
+Requirements-Engineering: REQ-Registry (registry/requirements.yaml, SSOT), Traceability REQ→STD→AUDIT, Familien-/Kategorie-Anträge (ATC-FAM-REQ, ATC-CAT-REQ).
 
-1. Der Gegenstand MUSS eindeutig definiert und gegen benachbarte Standards
-   derselben Familie abgegrenzt sein.
-2. Fachliche Regeln MÜSSEN als REQ-IDs deklariert und maschinell prüfbar oder
-   dokumentiert nachweisbar sein (ATC-STD-000 §11).
-3. Compliance MUSS über die Validator-Gates bzw. dokumentierte Prüfung
-   nachweisbar sein (AUD-Record bei Abweichung).
-4. Jede Änderung folgt der Change-Control-Kette SCR → VERSION → UPDATE →
-   COMPAT → AUDIT (ATC-STD-CHANGE-001, ATC-STD-UPDATE-001).
-5. Sicherheitsrelevante Aspekte MÜSSEN in den Security Considerations
-   benannt werden (ATC-STD-000 §12).
+**Katalog-Referenz:** keine zusätzliche Katalog-Notiz; Verortung ausschließlich über Familie und Slot.
 
-## §3 Compliance & Verifikation
+## §2 Kernregeln (elaboriert)
+
+1. **KR-1:** Anforderungen MÜSSEN eindeutige REQ-IDs tragen und im REQ-Register geführt werden.
+2. **KR-2:** Traceability MUSS lückenlos sein (REQ→Standard→Implementierung→Nachweis).
+3. **KR-3:** Anforderungsänderungen MÜSSEN über die Change-Control-Kette laufen.
+4. **KR-4:** Anforderungen MÜSSEN testbar/verifizierbar formuliert sein (keine Wunsch-Formulierungen).
+5. **KR-5:** Kategorien-/Familienbildung folgt der Taxonomie (TAXONOMY-001).
+6. **KR-6:** Offene Anforderungen MÜSSEN sichtbar sein (keine stillen Backlog-Items).
+
+## §3 Schnittstellen & Kopplungen
+
+- **Registry-Kopplung:** standards.yaml/versions.yaml (Version/Status S-14/S-19),
+  Katalog-Slot in registry/framework.yaml.
+- **Governance-Kette:** SCR → VERSION → UPDATE (UPD-G03 MINOR) → COMPAT (bei MAJOR)
+  → AUDIT; Findings via registry/findings.yaml (F-NNN).
+- **Nachbarfamilien:** Familie Requirements Engineering — Subsidiarität: konkretere Standards gehen vor.
+- **Agenten-Bindung:** Vollmandat via .github/ai/agent.yaml; Umsetzungspflicht nach
+  AGENT_MANIFEST.
+
+## §4 Metriken & Akzeptanzkriterien
+
+- **M1:** Traceability-Abdeckung 100 %
+- **M2:** 0 untestbare REQs
+- **M3:** Backlog-Sichtbarkeit
+
+Akzeptanz gilt als nachgewiesen, wenn die genannten Kriterien in einem AUD-Record
+oder Validator-Lauf dokumentiert sind; fehlende Nachweise werden als Findings
+geführt und nach ATC-STD-BUG-005 (RCA) bearbeitet.
+
+## §5 Compliance & Verifikation
 
 Compliance wird über die Gesamt-Validierung (CI, S-01..S-25) je Registry-Eintrag
 geprüft: Metadaten-Vollständigkeit, Naming, Status-/Version-Konsistenz und
@@ -80,23 +103,34 @@ ATC-STD-BUG-005 (RCA) bearbeitet.
 - **REQ-STD-003** (§2): Compliance nachweisbar über Validator-Gates oder Prüfung.
 - **REQ-STD-004** (§2): Änderungen ausschließlich über die Change-Control-Kette.
 - **REQ-STD-005** (§2): Sicherheitsaspekte dokumentiert (Security Considerations).
+- **REQ-STD-006** (§2/§4): Gegenstand im Ökosystem verortet (§1-Verortung).
+- **REQ-STD-007** (§2/§4): Familien-Kernregeln deklariert und verifizierbar (§2).
+- **REQ-STD-008** (§2/§4): Schnittstellen zu Registry/Governance-Kette/Agenten gebunden (§3).
+- **REQ-STD-009** (§2/§4): Metriken/Akzeptanzkriterien definiert, Nachweis via AUD-Record (§4).
+- **REQ-STD-010** (§2/§4): Familienspezifische Security-Bedrohungen katalogisiert (§5).
 
 ## Security Considerations
 
-Bis zur Elaborierung gilt: Sicherheitsrelevante Auswirkungen des Gegenstandes
-(Non-Functional Requirements) sind bei der Elaborierung zwingend zu bewerten; bis dahin werden keine
-Sicherheitsaussagen getroffen (Ehrlichkeitsregel — kein erfundener Status).
+Phantom-Anforderungen ohne Verifikationspfad; Traceability-Brüche verhindern Impact-Analysen.
+
+Bis zur Engineering-Vertiefung gilt die Ehrlichkeitsregel: Sicherheitszustände
+MÜSSEN ehrlich benannt sein (ACTIVE/PARTIAL/PLANNED); erfundene Sicherheitszusagen
+sind verboten (vgl. ATC-STD-PROTOCOL-003).
 
 ## Changelog (Standard-intern)
 
+- **1.1.0** (2026-09-08): MINOR via SCR-0031 — Struktur-Elaboration: familien-spezifische
+  Kernregeln (§2), Ökosystem-Verortung (§1), Schnittstellen (§3), Metriken/
+  Akzeptanzkriterien (§4) und Security-Bedrohungen ergänzt; REQ-STD-006..010
+  additiv. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001 UPD-G03).
 - **1.0.0** (2026-09-08): Initial Release — Grundgerüst-Standard aus
-  Katalog-Slot ATC-STD-562 (Familie Requirements Engineering, FAM-32) via SCR-0030; §9-FREIGEGEBEN 08.09.2026, 02:15 UTC+2 — APPROVED, normativ,
-  §30-eingefroren. Elaborierung via SCR (MINOR).
+  Katalog-Slot ATC-STD-562 (Familie Requirements Engineering, FAM-32) via SCR-0030; §9-FREIGEGEBEN
+  08.09.2026, 02:15 UTC+2 — APPROVED, normativ, §30-eingefroren.
 
 ## References
 
-- ATC-STD-000 (Standards Governance & Specification)
-- ATC-STD-FRAMEWORK-001 (Katalog/Slots), ATC-STD-CHANGE-001/UPDATE-001 (Change-Control)
-- registry/framework.yaml (FAM-32), registry/standards.yaml (Eintrag via SCR-0030)
+- ATC-STD-000 (Standards Governance & Specification), ATC-STD-FRAMEWORK-001
+- ATC-STD-UPDATE-001/CHANGE-001 (Change-Control), ATC-STD-BUG-005 (RCA)
+- registry/framework.yaml (FAM-32), registry/standards.yaml + versions.yaml
 
-*ATC-STD-562 v1.0.0 · Grundgerüst via SCR-0030 · Aurora (Superagent) · 08.09.2026*
+*ATC-STD-562 v1.1.0 · Struktur-Elaboration via SCR-0031 · Aurora (Superagent) · 08.09.2026*

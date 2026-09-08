@@ -242,7 +242,14 @@ normativ, §30-eingefroren. Normativ verbindlich ist je Standard die Pflicht-Hü
 Security-Dokumentation); die fachliche Elaborierung erfolgt laufend via SCR/MINOR
 (ATC-STD-UPDATE-001). Registry FINAL: 387 Standards, 387 APPROVED, 0 offen.
 
-Stand: 08.09.2026, 02:15 (Europe/Berlin) — Registry FINAL: 387 Standards, 387 APPROVED, 0 offen; Katalog vollständig zugeordnet (nur RR-G06 als Gate NEU); 11 Register EXISTIERT · Self-Compliance: R3 100/100 GATE PASS ·
+STRUKTUR-ELABORATION (SCR-0031, 02:30 UTC+2): Alle 263 Batch-Standards v1.0.0 → v1.1.0
+(MINOR, additiv, UPD-G03). Je Standard: familien-spezifische Kernregeln (KR-1..KR-6),
+Ökosystem-Verortung (L0-L7-Repos, Kernel-Sprints, Register, Chain-ID), Schnittstellen,
+Metriken/Akzeptanzkriterien mit AUD-Nachweispflicht, REQ-STD-001..010 und
+Security-Bedrohungen. 34 Familien-Wissensprofile; Katalog-Notizen aktualisiert.
+P3-Engineering-Vertiefung je Slot bleibt inkrementell via Einzel-SCR.
+
+Stand: 08.09.2026, 02:30 (Europe/Berlin) — Registry FINAL: 387 Standards, 387 APPROVED (263 auf v1.1.0 elaboriert), 0 offen; Katalog vollständig zugeordnet; 11 Register EXISTIERT · Self-Compliance: R3 100/100 GATE PASS ·
 Voll-Validierung 110/110 Standards: ALL COMPLIANT (S-18 prüft alle 10 Registry-Dateien; Mutationssuite 12/12)
 
 ## Standards-System
