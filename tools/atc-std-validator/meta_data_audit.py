@@ -103,7 +103,8 @@ def main():
     print(f"\nFunde gesamt: {len(findings)}")
     for x in findings[:30]: print(" ", x)
     if len(findings) > 30: print(f"  ... +{len(findings)-30} weitere")
-    return 0
+    # CI-Gate: Funde schlagen den Workflow fehl (Governance-CI, SCR-0051)
+    return 1 if findings else 0
 
 if __name__ == "__main__":
     sys.exit(main())
