@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.4.46] - 2026-09-08
+
+### Changed
+
+- **Slot-Fertigbau aller 263 Batch-Standards (SCR-0034, MINOR v1.2.0):** Je
+  Standard §6 Slot-Spezifikation mit 5-8 verbindlichen, aus dem Slot-Gegenstand
+  abgeleiteten Prüfkriterien (Themen-Wissensbasis ~50 Gebiete: Governance, Policy,
+  Consensus, Encryption, ZKP, VM, Compiler, Wallet, DeFi, Supply-Chain …), je
+  Kriterium Nachweisangabe (Design-Dokument + AUD-Record bzw. Validator-/Testlauf),
+  eigene REQ-STD-011..0NN-Menge je Slot und M4-Abdeckungsmetrik. Familien-Elaboration
+  v1.1.0 bleibt erhalten. Ehrlich: Normative Regelhülle je Slot komplett;
+  Engineering-Bindung (Code/Tests) entsteht bei Slot-Aktivierung via SCR/MINOR.
+  Registry synchron (263× v1.2.0); Generator-Tool dokumentiert:
+  tools/standards/finalize_standards.py.
+
+
 ## [1.4.45] - 2026-09-08
 
 ### Added

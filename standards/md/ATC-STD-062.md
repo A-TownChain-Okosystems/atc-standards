@@ -2,7 +2,7 @@
 standard:
   id: ATC-STD-062
   title: "Wiki Standard"
-  version: "1.1.0"
+  version: "1.2.0"
   status: approved
   category: md
   authority: A-TownChain-Okosystems
@@ -22,24 +22,25 @@ standard:
   license: "Copyright (c) 2026 Michael Wroblewski"
 ----
 
-# ATC-STD-062 — Wiki Standard (v1.1.0, APPROVED)
+# ATC-STD-062 — Wiki Standard (v1.2.0, APPROVED)
 
-> **Status:** APPROVED (v1.1.0, §30-eingefroren) — Grundgerüst-Standard aus Katalog-Slot der Familie
+> **Status:** APPROVED (v1.2.0, §30-eingefroren) — Standard aus Katalog-Slot der Familie
 > Dokumentationsstandards (FAM-04); §9-FREIGEGEBEN 08.09.2026, 02:15 UTC+2 — APPROVED, normativ,
-> §30-eingefroren. Struktur-Elaboration v1.1.0 via SCR-0031 (08.09.2026, 02:30 UTC+2):
-> familien-spezifische Kernregeln, Ökosystem-Verortung, Schnittstellen, Metriken und
-> Security-Bedrohungen additiv ergänzt (MINOR, ATC-STD-UPDATE-001 UPD-G03).
+> §30-eingefroren. Struktur-Elaboration v1.1.0 via SCR-0031; Slot-Fertigbau v1.2.0 via
+> SCR-0034 (08.09.2026, 03:15 UTC+2): slot-spezifische Pruefkriterien (§6) mit eigener REQ-Menge
+> je Gegenstand. Engineering-Bindung (Code/Tests) entsteht bei Slot-Aktivierung
+> via SCR/MINOR (ehrlich dokumentiert).
 
 ## Abstract
 
 ATC-STD-062 (Wiki Standard) ist der Standard für den gleichnamigen Katalog-Slot der Familie
 **Dokumentationsstandards** (FAM-04, Range ATC-STD-060..075) im ATC Enterprise Standards Framework. Er
-definiert den Gegenstand, seine Verortung im Ökosystem, die verbindlichen
-Kernregeln, Compliance- und Verifikationspflichten sowie Security-Betrachtungen.
-Der Standard ist APPROVED, normativ in Kraft und §30-eingefroren (Owner-§9-Freigabe
-08.09.2026, 02:15 UTC+2, SCR-0030-Batch); die Struktur-Elaboration erfolgte via
-SCR-0031 als MINOR v1.1.0. Besondere Engineering-Vertiefung erfolgt inkrementell
-via eigener SCR/MINOR-Kette (ATC-STD-UPDATE-001).
+definiert den Gegenstand, seine Verortung im Ökosystem, die familienweiten
+Kernregeln, die slot-spezifischen Prüfkriterien (§6) mit je-Kriterium-Nachweis,
+Compliance- und Verifikationspflichten sowie Security-Betrachtungen. Der Standard
+ist APPROVED, normativ in Kraft und §30-eingefroren (Owner-§9-Freigabe 08.09.2026,
+02:15 UTC+2, SCR-0030-Batch); Elaboration SCR-0031 (v1.1.0) und Slot-Fertigbau
+SCR-0034 (v1.2.0) sind additive MINOR-Updates (ATC-STD-UPDATE-001 UPD-G03).
 
 Schlüsselwörter: MUSS/MUSS NICHT, SOLLTE, DARF/KANN — RFC-2119 gemäß ATC-STD-000 §10.
 
@@ -60,7 +61,7 @@ Dokumentationsschicht: REALITY_STATUS.md (a-townchain-os-docs) ist die einzige k
 
 **Katalog-Referenz:** Alte Wiki-Struktur archiviert; künftiges Wissens-Management
 
-## §2 Kernregeln (elaboriert)
+## §2 Kernregeln (familienweit, elaboriert)
 
 1. **KR-1:** Statusdokumentation MUSS angehängt werden (append-only), nie parallel neu aufgebaut werden.
 2. **KR-2:** Dokumentation MUSS den REALITY_STATUS widerspruchsfrei spiegeln; bei Widerspruch gewinnt REALITY_STATUS.
@@ -85,6 +86,9 @@ Dokumentationsschicht: REALITY_STATUS.md (a-townchain-os-docs) ist die einzige k
 - **M2:** 100 % datierte Dokumente
 - **M3:** Vault-Vollständigkeit
 
+- **M4:** Slot-Fertigbau: 6 verbindliche Prüfkriterien (§6) mit Nachweisangabe
+  deklariert; Abdeckung nachzuweisen via AUD-Record bei Slot-Aktivierung.
+
 Akzeptanz gilt als nachgewiesen, wenn die genannten Kriterien in einem AUD-Record
 oder Validator-Lauf dokumentiert sind; fehlende Nachweise werden als Findings
 geführt und nach ATC-STD-BUG-005 (RCA) bearbeitet.
@@ -96,6 +100,19 @@ geprüft: Metadaten-Vollständigkeit, Naming, Status-/Version-Konsistenz und
 Registry-Konsistenz. Abweichungen werden als Findings (F-NNN) geführt und nach
 ATC-STD-BUG-005 (RCA) bearbeitet.
 
+## §6 Slot-Spezifikation Wiki Standard — verbindliche Prüfkriterien
+
+Jedes Kriterium ist normativ (MUSS). Nachweis je Kriterium: Konzept-/Design-Dokument
+plus AUD-Record, oder Validator-/Testlauf — je nach Art des Kriteriums; bei
+Slot-Aktivierung wird der Nachweis je Kriterium einzeln erbracht.
+
+- **P1** (MUSS): Wissensgebiete und Aktualitaetspflicht — Nachweis: Design-/Konzeptdokument + AUD-Record
+- **P2** (MUSS): Quellen- und Referenzdisziplin — Nachweis: Validator-/Testlauf bzw. dokumentierte Prüfung
+- **P3** (MUSS): Archiv-/Vault-Disziplin fuer Altbestand — Nachweis: Design-/Konzeptdokument + AUD-Record
+- **P4** (MUSS): Zugriffskonvention (SSOT-Referenz statt Kopie) — Nachweis: Validator-/Testlauf bzw. dokumentierte Prüfung
+- **P5** (MUSS): Ehrlichkeitsregel bei Legacy-Aussagen — Nachweis: Design-/Konzeptdokument + AUD-Record
+- **P6** (MUSS): Familienkonformitaet: Dokumentationsstandards-Kernregeln KR-1..KR-6 eingehalten — Nachweis: Validator-/Testlauf bzw. dokumentierte Prüfung
+
 ## Requirements (normativ)
 
 - **REQ-STD-001** (§1): Gegenstand eindeutig definiert und im Katalog verortet.
@@ -103,26 +120,35 @@ ATC-STD-BUG-005 (RCA) bearbeitet.
 - **REQ-STD-003** (§2): Compliance nachweisbar über Validator-Gates oder Prüfung.
 - **REQ-STD-004** (§2): Änderungen ausschließlich über die Change-Control-Kette.
 - **REQ-STD-005** (§2): Sicherheitsaspekte dokumentiert (Security Considerations).
-- **REQ-STD-006** (§2/§4): Gegenstand im Ökosystem verortet (§1-Verortung).
-- **REQ-STD-007** (§2/§4): Familien-Kernregeln deklariert und verifizierbar (§2).
-- **REQ-STD-008** (§2/§4): Schnittstellen zu Registry/Governance-Kette/Agenten gebunden (§3).
-- **REQ-STD-009** (§2/§4): Metriken/Akzeptanzkriterien definiert, Nachweis via AUD-Record (§4).
-- **REQ-STD-010** (§2/§4): Familienspezifische Security-Bedrohungen katalogisiert (§5).
+- **REQ-STD-006**: Ökosystem-Verortung nachgewiesen (§1).
+- **REQ-STD-007**: Familien-Kernregeln KR-1..KR-6 eingehalten und verifizierbar (§2).
+- **REQ-STD-008**: Schnittstellen zu Registry/Governance-Kette/Agenten gebunden (§3).
+- **REQ-STD-009**: Metriken M-1..M-4 definiert, Nachweis via AUD-Record (§4).
+- **REQ-STD-010**: Familienspezifische Security-Bedrohungen katalogisiert (§5).
+- **REQ-STD-011** (§6/P1): Wissensgebiete und Aktualitaetspflicht
+- **REQ-STD-012** (§6/P2): Quellen- und Referenzdisziplin
+- **REQ-STD-013** (§6/P3): Archiv-/Vault-Disziplin fuer Altbestand
+- **REQ-STD-014** (§6/P4): Zugriffskonvention (SSOT-Referenz statt Kopie)
+- **REQ-STD-015** (§6/P5): Ehrlichkeitsregel bei Legacy-Aussagen
+- **REQ-STD-016** (§6/P6): Familienkonformitaet: Dokumentationsstandards-Kernregeln KR-1..KR-6 eingehalten
 
 ## Security Considerations
 
 Datenverlust durch Kollaps/Stummschaltung von Statusdateien (Vorfall 05.07.2026); still veraltende Kopien.
 
-Bis zur Engineering-Vertiefung gilt die Ehrlichkeitsregel: Sicherheitszustände
-MÜSSEN ehrlich benannt sein (ACTIVE/PARTIAL/PLANNED); erfundene Sicherheitszusagen
-sind verboten (vgl. ATC-STD-PROTOCOL-003).
+Ehrlichkeitsregel: Sicherheitszustände MÜSSEN ehrlich benannt sein
+(ACTIVE/PARTIAL/PLANNED); erfundene Sicherheitszusagen sind verboten (vgl.
+ATC-STD-PROTOCOL-003).
 
 ## Changelog (Standard-intern)
 
+- **1.2.0** (2026-09-08): MINOR via SCR-0034 — Slot-Fertigbau: slot-spezifische
+  Prüfkriterien (§6, 6 Kriterien mit je-Kriterium-Nachweis), REQ-STD-006..016
+  slot-spezifisch, M4-Abdeckungsmetrik ergänzt. Additiv, abwärtskompatibel
+  (ATC-STD-UPDATE-001 UPD-G03).
 - **1.1.0** (2026-09-08): MINOR via SCR-0031 — Struktur-Elaboration: familien-spezifische
-  Kernregeln (§2), Ökosystem-Verortung (§1), Schnittstellen (§3), Metriken/
-  Akzeptanzkriterien (§4) und Security-Bedrohungen ergänzt; REQ-STD-006..010
-  additiv. Additiv und abwärtskompatibel (ATC-STD-UPDATE-001 UPD-G03).
+  Kernregeln (§2), Ökosystem-Verortung (§1), Schnittstellen (§3), Metriken (§4)
+  und Security-Bedrohungen; REQ-STD-006..010 additiv.
 - **1.0.0** (2026-09-08): Initial Release — Grundgerüst-Standard aus
   Katalog-Slot ATC-STD-062 (Familie Dokumentationsstandards, FAM-04) via SCR-0030; §9-FREIGEGEBEN
   08.09.2026, 02:15 UTC+2 — APPROVED, normativ, §30-eingefroren.
@@ -133,4 +159,4 @@ sind verboten (vgl. ATC-STD-PROTOCOL-003).
 - ATC-STD-UPDATE-001/CHANGE-001 (Change-Control), ATC-STD-BUG-005 (RCA)
 - registry/framework.yaml (FAM-04), registry/standards.yaml + versions.yaml
 
-*ATC-STD-062 v1.1.0 · Struktur-Elaboration via SCR-0031 · Aurora (Superagent) · 08.09.2026*
+*ATC-STD-062 v1.2.0 · Slot-Fertigbau via SCR-0034 · Aurora (Superagent) · 08.09.2026*

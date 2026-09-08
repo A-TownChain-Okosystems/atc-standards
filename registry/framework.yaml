@@ -26,7 +26,7 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-001
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-002
       title: Organisationsstruktur Standard
       status: VERWEIST
@@ -70,7 +70,7 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-006
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-007
       title: Risk Management
       status: VERWEIST
@@ -82,7 +82,7 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-008
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-009
       title: Audit Standard
       status: VERWEIST
@@ -105,13 +105,13 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-012
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-013
       title: Escalation Standard
       status: BELEGT
       refs:
       - ATC-STD-013
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-014
       title: Evidence & Traceability
       status: VERWEIST
@@ -124,7 +124,7 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-015
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
   - id: FAM-02
     name: Standards-Governance
     range: ATC-STD-020..033
@@ -165,7 +165,7 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-025
-      note: Review-Kadenzen teils in UPDATE-001; eigenständig bei Bedarf; Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Review-Kadenzen teils in UPDATE-001; eigenständig bei Bedarf; Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-026
       title: Standards Approval
       status: VERWEIST
@@ -177,7 +177,7 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-027
-      note: Deprecation-Pfad in ATC-STD-000 §11; Ausprägung offen; Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Deprecation-Pfad in ATC-STD-000 §11; Ausprägung offen; Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-028
       title: Standards Compatibility
       status: VERWEIST
@@ -221,7 +221,7 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-040
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-041
       title: Repository Naming
       status: VERWEIST
@@ -232,7 +232,7 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-042
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-043
       title: Repository README
       status: VERWEIST
@@ -248,7 +248,7 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-045
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-046
       title: Repository Documentation
       status: VERWEIST
@@ -264,7 +264,7 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-048
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-049
       title: Repository Permissions
       status: VERWEIST
@@ -276,19 +276,19 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-050
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-051
       title: Repository Deprecation
       status: BELEGT
       refs:
       - ATC-STD-051
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-052
       title: Repository Health
       status: BELEGT
       refs:
       - ATC-STD-052
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-053
       title: Repository Dependency Management
       status: VERWEIST
@@ -321,19 +321,19 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-062
-      note: Alte Wiki-Struktur archiviert; künftiges Wissens-Management; Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Alte Wiki-Struktur archiviert; künftiges Wissens-Management; Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-063
       title: API Documentation
       status: BELEGT
       refs:
       - ATC-STD-063
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-064
       title: Architecture Documentation
       status: BELEGT
       refs:
       - ATC-STD-064
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-065
       title: Specification Standard
       status: VERWEIST
@@ -344,13 +344,13 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-066
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-067
       title: Technical Paper Standard
       status: BELEGT
       refs:
       - ATC-STD-067
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-068
       title: CHANGELOG Standard
       status: VERWEIST
@@ -362,13 +362,13 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-069
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-070
       title: TODO Standard
       status: BELEGT
       refs:
       - ATC-STD-070
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-071
       title: Roadmap Standard
       status: VERWEIST
@@ -380,7 +380,7 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-072
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-073
       title: Decision Log
       status: VERWEIST
@@ -416,13 +416,13 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-081
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-082
       title: Code Style
       status: BELEGT
       refs:
       - ATC-STD-082
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-083
       title: Naming Convention
       status: VERWEIST
@@ -440,7 +440,7 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-085
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-086
       title: Dependency Standard
       status: VERWEIST
@@ -451,31 +451,31 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-087
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-088
       title: Logging
       status: BELEGT
       refs:
       - ATC-STD-088
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-089
       title: Configuration Management
       status: BELEGT
       refs:
       - ATC-STD-089
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-090
       title: Environment Management
       status: BELEGT
       refs:
       - ATC-STD-090
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-091
       title: Testing
       status: BELEGT
       refs:
       - ATC-STD-091
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-092
       title: Code Review
       status: VERWEIST
@@ -487,19 +487,19 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-093
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-094
       title: Technical Debt
       status: BELEGT
       refs:
       - ATC-STD-094
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-095
       title: Build Standard
       status: BELEGT
       refs:
       - ATC-STD-095
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
   - id: FAM-06
     name: Git & Version Control
     range: ATC-STD-100..113
@@ -515,7 +515,7 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-101
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-102
       title: Commit Naming
       status: VERWEIST
@@ -527,19 +527,19 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-103
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-104
       title: Pull Request
       status: BELEGT
       refs:
       - ATC-STD-104
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-105
       title: Merge Policy
       status: BELEGT
       refs:
       - ATC-STD-105
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-106
       title: Branch Protection
       status: VERWEIST
@@ -551,7 +551,7 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-107
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-108
       title: Release Management
       status: VERWEIST
@@ -648,13 +648,13 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-129
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-130
       title: Post-Incident Review
       status: BELEGT
       refs:
       - ATC-STD-130
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-131
       title: Code/Wiki/Repository Consistency Check
       status: VERWEIST
@@ -672,31 +672,31 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-140
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-141
       title: Unit Testing
       status: BELEGT
       refs:
       - ATC-STD-141
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-142
       title: Integration Testing
       status: BELEGT
       refs:
       - ATC-STD-142
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-143
       title: System Testing
       status: BELEGT
       refs:
       - ATC-STD-143
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-144
       title: End-to-End Testing
       status: BELEGT
       refs:
       - ATC-STD-144
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-145
       title: Regression Testing
       status: VERWEIST
@@ -707,25 +707,25 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-146
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-147
       title: Load Testing
       status: BELEGT
       refs:
       - ATC-STD-147
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-148
       title: Stress Testing
       status: BELEGT
       refs:
       - ATC-STD-148
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-149
       title: Security Testing
       status: BELEGT
       refs:
       - ATC-STD-149
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-150
       title: Acceptance Testing
       status: VERWEIST
@@ -761,13 +761,13 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-160
-      note: governance-ci + validator-Workflows existieren als Bestandspraxis; Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: governance-ci + validator-Workflows existieren als Bestandspraxis; Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-161
       title: Automated Build
       status: BELEGT
       refs:
       - ATC-STD-161
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-162
       title: Automated Testing
       status: VERWEIST
@@ -779,13 +779,13 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-163
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-164
       title: Deployment
       status: BELEGT
       refs:
       - ATC-STD-164
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-165
       title: Environment Promotion
       status: VERWEIST
@@ -813,25 +813,25 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-169
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-170
       title: Container Standard
       status: BELEGT
       refs:
       - ATC-STD-170
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-171
       title: Kubernetes Standard
       status: BELEGT
       refs:
       - ATC-STD-171
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-172
       title: Terraform Standard
       status: BELEGT
       refs:
       - ATC-STD-172
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-173
       title: Secrets Management
       status: VERWEIST
@@ -843,7 +843,7 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-174
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
   - id: FAM-10
     name: Release Readiness (RR-Gates)
     range: RR-G01..RR-G08
@@ -901,109 +901,109 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-180
-      note: 'Referenz: a-townchain (L3), Kernel K14/K16; Grundgeruest v1.1.0 elaboriert via SCR-0030/0031'
+      note: 'Referenz: a-townchain (L3), Kernel K14/K16; Fertigbau v1.2.0 via SCR-0030/0031/0034'
     - id: ATC-STD-181
       title: Node Standard
       status: BELEGT
       refs:
       - ATC-STD-181
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-182
       title: Consensus
       status: BELEGT
       refs:
       - ATC-STD-182
-      note: 'Kernel K16: DAG+PoH+Validator+Voting+Finality; Grundgeruest v1.1.0 elaboriert via SCR-0030/0031'
+      note: 'Kernel K16: DAG+PoH+Validator+Voting+Finality; Fertigbau v1.2.0 via SCR-0030/0031/0034'
     - id: ATC-STD-183
       title: PoW
       status: BELEGT
       refs:
       - ATC-STD-183
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-184
       title: PoS
       status: BELEGT
       refs:
       - ATC-STD-184
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-185
       title: PoH
       status: BELEGT
       refs:
       - ATC-STD-185
-      note: Kernel K16 PoH; Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Kernel K16 PoH; Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-186
       title: Validator
       status: BELEGT
       refs:
       - ATC-STD-186
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-187
       title: Staking
       status: BELEGT
       refs:
       - ATC-STD-187
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-188
       title: Delegation
       status: BELEGT
       refs:
       - ATC-STD-188
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-189
       title: Slashing
       status: BELEGT
       refs:
       - ATC-STD-189
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-190
       title: Block
       status: BELEGT
       refs:
       - ATC-STD-190
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-191
       title: Transaction
       status: BELEGT
       refs:
       - ATC-STD-191
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-192
       title: Mempool
       status: BELEGT
       refs:
       - ATC-STD-192
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-193
       title: Fee Market
       status: BELEGT
       refs:
       - ATC-STD-193
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-194
       title: MEV Mitigation
       status: BELEGT
       refs:
       - ATC-STD-194
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-195
       title: Fork Handling
       status: BELEGT
       refs:
       - ATC-STD-195
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-196
       title: Chain Recovery
       status: BELEGT
       refs:
       - ATC-STD-196
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-197
       title: Genesis
       status: BELEGT
       refs:
       - ATC-STD-197
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-198
       title: Network Upgrade
       status: VERWEIST
@@ -1021,7 +1021,7 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-200
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-201
       title: Tokenomics
       status: KONFLIKT
@@ -1043,37 +1043,37 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-205
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-206
       title: Staking Rewards
       status: BELEGT
       refs:
       - ATC-STD-206
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-207
       title: Treasury
       status: BELEGT
       refs:
       - ATC-STD-207
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-208
       title: Governance Token
       status: BELEGT
       refs:
       - ATC-STD-208
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-209
       title: Token Allocation
       status: BELEGT
       refs:
       - ATC-STD-209
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-210
       title: Vesting
       status: BELEGT
       refs:
       - ATC-STD-210
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-211
       title: Token Migration
       status: VERWEIST
@@ -1162,61 +1162,61 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-240
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-241
       title: Bridge
       status: BELEGT
       refs:
       - ATC-STD-241
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-242
       title: Bridge Security
       status: BELEGT
       refs:
       - ATC-STD-242
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-243
       title: Cross-Chain Messaging
       status: BELEGT
       refs:
       - ATC-STD-243
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-244
       title: IBC
       status: BELEGT
       refs:
       - ATC-STD-244
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-245
       title: EVM Compatibility
       status: BELEGT
       refs:
       - ATC-STD-245
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-246
       title: Ethereum Integration
       status: BELEGT
       refs:
       - ATC-STD-246
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-247
       title: Solana Integration
       status: BELEGT
       refs:
       - ATC-STD-247
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-248
       title: Polygon Integration
       status: BELEGT
       refs:
       - ATC-STD-248
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-249
       title: BSC Integration
       status: BELEGT
       refs:
       - ATC-STD-249
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-250
       title: Bridge Recovery
       status: VERWEIST
@@ -1281,43 +1281,43 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-270
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-271
       title: External Data
       status: BELEGT
       refs:
       - ATC-STD-271
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-272
       title: Data Verification
       status: BELEGT
       refs:
       - ATC-STD-272
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-273
       title: Oracle Consensus
       status: BELEGT
       refs:
       - ATC-STD-273
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-274
       title: Price Feeds
       status: BELEGT
       refs:
       - ATC-STD-274
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-275
       title: Oracle Failure
       status: BELEGT
       refs:
       - ATC-STD-275
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-276
       title: External API Binding
       status: BELEGT
       refs:
       - ATC-STD-276
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
   - id: FAM-17
     name: Identity & Reputation
     range: ATC-STD-280..286
@@ -1329,7 +1329,7 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-280
-      note: Kernel K6 DID als Referenzimplementierung; Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Kernel K6 DID als Referenzimplementierung; Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-281
       title: Decentralised Identity
       status: VERWEIST
@@ -1341,31 +1341,31 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-282
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-283
       title: Reputation
       status: BELEGT
       refs:
       - ATC-STD-283
-      note: Kernel K15 Reputation als Referenz; Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Kernel K15 Reputation als Referenz; Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-284
       title: Sybil Resistance
       status: BELEGT
       refs:
       - ATC-STD-284
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-285
       title: Identity Recovery
       status: BELEGT
       refs:
       - ATC-STD-285
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-286
       title: Credential Verification
       status: BELEGT
       refs:
       - ATC-STD-286
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
   - id: FAM-18
     name: Cybersecurity
     range: ATC-STD-300..313
@@ -1381,25 +1381,25 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-301
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-302
       title: Authentication
       status: BELEGT
       refs:
       - ATC-STD-302
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-303
       title: Authorisation
       status: BELEGT
       refs:
       - ATC-STD-303
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-304
       title: Key Management
       status: BELEGT
       refs:
       - ATC-STD-304
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-305
       title: Secrets
       status: VERWEIST
@@ -1411,25 +1411,25 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-306
-      note: Kernel K6b Ed25519 als Referenz; Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Kernel K6b Ed25519 als Referenz; Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-307
       title: Network Security
       status: BELEGT
       refs:
       - ATC-STD-307
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-308
       title: Endpoint Security
       status: BELEGT
       refs:
       - ATC-STD-308
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-309
       title: Supply Chain Security
       status: BELEGT
       refs:
       - ATC-STD-309
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-310
       title: Dependency Security
       status: VERWEIST
@@ -1441,13 +1441,13 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-311
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-312
       title: Penetration Testing
       status: BELEGT
       refs:
       - ATC-STD-312
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-313
       title: Security Incident Response
       status: VERWEIST
@@ -1578,67 +1578,67 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-340
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-341
       title: Miner
       status: BELEGT
       refs:
       - ATC-STD-341
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-342
       title: Mining Manager
       status: BELEGT
       refs:
       - ATC-STD-342
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-343
       title: CPU Mining
       status: BELEGT
       refs:
       - ATC-STD-343
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-344
       title: GPU Mining
       status: BELEGT
       refs:
       - ATC-STD-344
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-345
       title: Mobile Mining
       status: BELEGT
       refs:
       - ATC-STD-345
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-346
       title: Mining Algorithms
       status: BELEGT
       refs:
       - ATC-STD-346
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-347
       title: Miner Plugins
       status: BELEGT
       refs:
       - ATC-STD-347
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-348
       title: Mining Rewards
       status: BELEGT
       refs:
       - ATC-STD-348
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-349
       title: Mining Security
       status: BELEGT
       refs:
       - ATC-STD-349
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-350
       title: Miner Monitoring
       status: BELEGT
       refs:
       - ATC-STD-350
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
   - id: FAM-22
     name: Wallet Standards
     range: ATC-STD-360..368
@@ -1650,55 +1650,55 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-360
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-361
       title: Address
       status: BELEGT
       refs:
       - ATC-STD-361
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-362
       title: Key Management
       status: BELEGT
       refs:
       - ATC-STD-362
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-363
       title: Transaction Signing
       status: BELEGT
       refs:
       - ATC-STD-363
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-364
       title: Wallet Recovery
       status: BELEGT
       refs:
       - ATC-STD-364
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-365
       title: Hardware Wallet
       status: BELEGT
       refs:
       - ATC-STD-365
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-366
       title: Wallet Security
       status: BELEGT
       refs:
       - ATC-STD-366
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-367
       title: Wallet UI
       status: BELEGT
       refs:
       - ATC-STD-367
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-368
       title: Burning Wallet
       status: BELEGT
       refs:
       - ATC-STD-368
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
   - id: FAM-23
     name: DeFi Standards
     range: ATC-STD-380..389
@@ -1710,61 +1710,61 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-380
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-381
       title: DEX
       status: BELEGT
       refs:
       - ATC-STD-381
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-382
       title: Liquidity
       status: BELEGT
       refs:
       - ATC-STD-382
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-383
       title: Liquidity Pools
       status: BELEGT
       refs:
       - ATC-STD-383
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-384
       title: Staking
       status: BELEGT
       refs:
       - ATC-STD-384
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-385
       title: Lending
       status: BELEGT
       refs:
       - ATC-STD-385
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-386
       title: Yield
       status: BELEGT
       refs:
       - ATC-STD-386
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-387
       title: Oracle
       status: BELEGT
       refs:
       - ATC-STD-387
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-388
       title: DeFi Risk
       status: BELEGT
       refs:
       - ATC-STD-388
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-389
       title: DeFi Security
       status: BELEGT
       refs:
       - ATC-STD-389
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
   - id: FAM-24
     name: NFT / Marketplace
     range: ATC-STD-400..409
@@ -1776,61 +1776,61 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-400
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-401
       title: NFT Metadata
       status: BELEGT
       refs:
       - ATC-STD-401
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-402
       title: NFT Minting
       status: BELEGT
       refs:
       - ATC-STD-402
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-403
       title: NFT Ownership
       status: BELEGT
       refs:
       - ATC-STD-403
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-404
       title: NFT Transfer
       status: BELEGT
       refs:
       - ATC-STD-404
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-405
       title: NFT Marketplace
       status: BELEGT
       refs:
       - ATC-STD-405
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-406
       title: NFT Royalties
       status: BELEGT
       refs:
       - ATC-STD-406
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-407
       title: NFT Storage
       status: BELEGT
       refs:
       - ATC-STD-407
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-408
       title: NFT Verification
       status: BELEGT
       refs:
       - ATC-STD-408
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-409
       title: NFT Security
       status: BELEGT
       refs:
       - ATC-STD-409
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
   - id: FAM-25
     name: GameFi / Shivamon
     range: ATC-STD-420..434
@@ -1842,91 +1842,91 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-420
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-421
       title: Shivamon
       status: BELEGT
       refs:
       - ATC-STD-421
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-422
       title: Game Economy
       status: BELEGT
       refs:
       - ATC-STD-422
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-423
       title: PvE
       status: BELEGT
       refs:
       - ATC-STD-423
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-424
       title: PvP
       status: BELEGT
       refs:
       - ATC-STD-424
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-425
       title: Guild
       status: BELEGT
       refs:
       - ATC-STD-425
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-426
       title: Alliance
       status: BELEGT
       refs:
       - ATC-STD-426
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-427
       title: Territory
       status: BELEGT
       refs:
       - ATC-STD-427
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-428
       title: Crafting
       status: BELEGT
       refs:
       - ATC-STD-428
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-429
       title: Mods
       status: BELEGT
       refs:
       - ATC-STD-429
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-430
       title: DNA
       status: BELEGT
       refs:
       - ATC-STD-430
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-431
       title: Evolution
       status: BELEGT
       refs:
       - ATC-STD-431
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-432
       title: Genesis
       status: BELEGT
       refs:
       - ATC-STD-432
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-433
       title: Game Assets
       status: BELEGT
       refs:
       - ATC-STD-433
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-434
       title: Game Blockchain Integration
       status: BELEGT
       refs:
       - ATC-STD-434
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
   - id: FAM-26
     name: API Standards
     range: ATC-STD-440..450
@@ -1938,37 +1938,37 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-440
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-441
       title: REST API
       status: BELEGT
       refs:
       - ATC-STD-441
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-442
       title: GraphQL
       status: BELEGT
       refs:
       - ATC-STD-442
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-443
       title: RPC
       status: BELEGT
       refs:
       - ATC-STD-443
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-444
       title: WebSocket
       status: BELEGT
       refs:
       - ATC-STD-444
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-445
       title: Authentication
       status: BELEGT
       refs:
       - ATC-STD-445
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-446
       title: API Versioning
       status: VERWEIST
@@ -1979,25 +1979,25 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-447
-      note: Kernel K15 Rate-Limit als Referenz; Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Kernel K15 Rate-Limit als Referenz; Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-448
       title: API Errors
       status: BELEGT
       refs:
       - ATC-STD-448
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-449
       title: API Security
       status: BELEGT
       refs:
       - ATC-STD-449
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-450
       title: API Documentation
       status: BELEGT
       refs:
       - ATC-STD-450
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
   - id: FAM-27
     name: Datenstandards
     range: ATC-STD-460..469
@@ -2009,25 +2009,25 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-460
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-461
       title: Data Model
       status: BELEGT
       refs:
       - ATC-STD-461
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-462
       title: Data Validation
       status: BELEGT
       refs:
       - ATC-STD-462
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-463
       title: Data Integrity
       status: BELEGT
       refs:
       - ATC-STD-463
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-464
       title: Data Versioning
       status: VERWEIST
@@ -2043,25 +2043,25 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-466
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-467
       title: Firestore
       status: BELEGT
       refs:
       - ATC-STD-467
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-468
       title: Backup
       status: BELEGT
       refs:
       - ATC-STD-468
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-469
       title: Data Recovery
       status: BELEGT
       refs:
       - ATC-STD-469
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
   - id: FAM-28
     name: Observability
     range: ATC-STD-480..488
@@ -2073,43 +2073,43 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-480
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-481
       title: Logging
       status: BELEGT
       refs:
       - ATC-STD-481
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-482
       title: Metrics
       status: BELEGT
       refs:
       - ATC-STD-482
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-483
       title: Tracing
       status: BELEGT
       refs:
       - ATC-STD-483
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-484
       title: Monitoring
       status: BELEGT
       refs:
       - ATC-STD-484
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-485
       title: Alerting
       status: BELEGT
       refs:
       - ATC-STD-485
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-486
       title: Health Checks
       status: BELEGT
       refs:
       - ATC-STD-486
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-487
       title: Audit Logs
       status: VERWEIST
@@ -2120,7 +2120,7 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-488
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
   - id: FAM-29
     name: Incident & Recovery
     range: ATC-STD-500..509
@@ -2132,19 +2132,19 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-500
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-501
       title: Incident Classification
       status: BELEGT
       refs:
       - ATC-STD-501
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-502
       title: Incident Response
       status: BELEGT
       refs:
       - ATC-STD-502
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-503
       title: Emergency Response
       status: VERWEIST
@@ -2156,13 +2156,13 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-504
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-505
       title: Fault Recovery
       status: BELEGT
       refs:
       - ATC-STD-505
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-506
       title: Rollback
       status: VERWEIST
@@ -2173,19 +2173,19 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-507
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-508
       title: Backup Recovery
       status: BELEGT
       refs:
       - ATC-STD-508
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-509
       title: Business/System Continuity
       status: BELEGT
       refs:
       - ATC-STD-509
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
   - id: FAM-30
     name: Release & Update Standards
     range: ATC-STD-520..529
@@ -2258,43 +2258,43 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-540
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-541
       title: Epic
       status: BELEGT
       refs:
       - ATC-STD-541
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-542
       title: Feature
       status: BELEGT
       refs:
       - ATC-STD-542
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-543
       title: Requirement
       status: BELEGT
       refs:
       - ATC-STD-543
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-544
       title: Task
       status: BELEGT
       refs:
       - ATC-STD-544
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-545
       title: TODO
       status: BELEGT
       refs:
       - ATC-STD-545
-      note: KaiOsTodo-Entity als Bestandspraxis; Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: KaiOsTodo-Entity als Bestandspraxis; Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-546
       title: Sprint
       status: BELEGT
       refs:
       - ATC-STD-546
-      note: Sprint ≠ Meilenstein (MILESTONE-001 §9); Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Sprint ≠ Meilenstein (MILESTONE-001 §9); Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-547
       title: Milestone
       status: VERWEIST
@@ -2323,19 +2323,19 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-560
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-561
       title: Functional Requirements
       status: BELEGT
       refs:
       - ATC-STD-561
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-562
       title: Non-Functional Requirements
       status: BELEGT
       refs:
       - ATC-STD-562
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-563
       title: Acceptance Criteria
       status: VERWEIST
@@ -2356,7 +2356,7 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-566
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
   - id: FAM-33
     name: UI/UX
     range: ATC-STD-580..587
@@ -2368,49 +2368,49 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-580
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-581
       title: Design System
       status: BELEGT
       refs:
       - ATC-STD-581
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-582
       title: Component Standard
       status: BELEGT
       refs:
       - ATC-STD-582
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-583
       title: Accessibility
       status: BELEGT
       refs:
       - ATC-STD-583
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-584
       title: Responsive Design
       status: BELEGT
       refs:
       - ATC-STD-584
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-585
       title: UX Consistency
       status: BELEGT
       refs:
       - ATC-STD-585
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-586
       title: Error UI
       status: BELEGT
       refs:
       - ATC-STD-586
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-587
       title: Admin UI
       status: BELEGT
       refs:
       - ATC-STD-587
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
   - id: FAM-34
     name: Mobile / Desktop / OS
     range: ATC-STD-600..607
@@ -2422,49 +2422,49 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-600
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-601
       title: Mobile
       status: BELEGT
       refs:
       - ATC-STD-601
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-602
       title: Desktop
       status: BELEGT
       refs:
       - ATC-STD-602
-      note: atc-windows-edition/atc-linux-edition, egui; Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: atc-windows-edition/atc-linux-edition, egui; Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-603
       title: Globus OS
       status: BELEGT
       refs:
       - ATC-STD-603
-      note: globus-os (L4), AD-026; Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: globus-os (L4), AD-026; Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-604
       title: Shiva OS
       status: BELEGT
       refs:
       - ATC-STD-604
-      note: 'atc-shivacore Kernel (L1) — OS-Standard: Rust no_std; Grundgeruest v1.1.0 elaboriert via SCR-0030/0031'
+      note: 'atc-shivacore Kernel (L1) — OS-Standard: Rust no_std; Fertigbau v1.2.0 via SCR-0030/0031/0034'
     - id: ATC-STD-605
       title: Aurora OS
       status: BELEGT
       refs:
       - ATC-STD-605
-      note: aurora-ai (L2); Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: aurora-ai (L2); Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-606
       title: Device Integration
       status: BELEGT
       refs:
       - ATC-STD-606
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-607
       title: Offline Mode
       status: BELEGT
       refs:
       - ATC-STD-607
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
   - id: FAM-35
     name: ATCLang
     range: ATC-STD-620..629
@@ -2476,7 +2476,7 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-620
-      note: atclang (L0), AD-022 Gates G1-G6; Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: atclang (L0), AD-022 Gates G1-G6; Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-621
       title: ATCLang Syntax
       status: VERWEIST
@@ -2494,31 +2494,31 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-623
-      note: compile_source-Referenzpipeline; Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: compile_source-Referenzpipeline; Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-624
       title: VM
       status: BELEGT
       refs:
       - ATC-STD-624
-      note: ATVM (atc-vm, L0); Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: ATVM (atc-vm, L0); Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-625
       title: REPL
       status: BELEGT
       refs:
       - ATC-STD-625
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-626
       title: Package System
       status: BELEGT
       refs:
       - ATC-STD-626
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-627
       title: Standard Library
       status: BELEGT
       refs:
       - ATC-STD-627
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-628
       title: Compatibility
       status: VERWEIST
@@ -2540,13 +2540,13 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-640
-      note: Kernel K15 security_audit als Referenz; Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Kernel K15 security_audit als Referenz; Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-641
       title: LogChain
       status: BELEGT
       refs:
       - ATC-STD-641
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-642
       title: Immutable Audit Log
       status: VERWEIST
@@ -2557,7 +2557,7 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-643
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-644
       title: Evidence
       status: VERWEIST
@@ -2573,7 +2573,7 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-646
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
   - id: FAM-37
     name: Supply Chain & Dependencies
     range: ATC-STD-660..667
@@ -2585,7 +2585,7 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-660
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-661
       title: Dependency Management
       status: VERWEIST
@@ -2596,7 +2596,7 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-662
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-663
       title: Vulnerability Scanning
       status: VERWEIST
@@ -2608,25 +2608,25 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-664
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-665
       title: Third-Party Software
       status: BELEGT
       refs:
       - ATC-STD-665
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-666
       title: License Compliance
       status: BELEGT
       refs:
       - ATC-STD-666
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-667
       title: Artifact Integrity
       status: BELEGT
       refs:
       - ATC-STD-667
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
   - id: FAM-38
     name: Open Source & Lizenzierung
     range: ATC-STD-680..686
@@ -2638,43 +2638,43 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-680
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-681
       title: License
       status: BELEGT
       refs:
       - ATC-STD-681
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-682
       title: Contributor
       status: BELEGT
       refs:
       - ATC-STD-682
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-683
       title: CLA
       status: BELEGT
       refs:
       - ATC-STD-683
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-684
       title: Code of Conduct
       status: BELEGT
       refs:
       - ATC-STD-684
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-685
       title: Security Disclosure
       status: BELEGT
       refs:
       - ATC-STD-685
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-686
       title: Vulnerability Disclosure
       status: BELEGT
       refs:
       - ATC-STD-686
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
   - id: FAM-39
     name: Business / Economics
     range: ATC-STD-700..706
@@ -2686,43 +2686,43 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-700
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-701
       title: Treasury
       status: BELEGT
       refs:
       - ATC-STD-701
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-702
       title: Revenue
       status: BELEGT
       refs:
       - ATC-STD-702
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-703
       title: Cost Management
       status: BELEGT
       refs:
       - ATC-STD-703
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-704
       title: Incentive Alignment
       status: BELEGT
       refs:
       - ATC-STD-704
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-705
       title: Economic Security
       status: BELEGT
       refs:
       - ATC-STD-705
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
     - id: ATC-STD-706
       title: Sustainability
       status: BELEGT
       refs:
       - ATC-STD-706
-      note: Grundgeruest v1.1.0 elaboriert via SCR-0030/0031
+      note: Fertigbau v1.2.0 via SCR-0030/0031/0034
   - id: FAM-40
     name: Master-Audit
     range: ATC-STD-999 (reserviert)
