@@ -51,7 +51,7 @@ READ_ERRORS = []  # SG-01 (AUD-2026-0004): Lesefehler duerfen nicht still versch
 def file_id(path):
     try:
         head = open(path, encoding="utf-8").read(2500)
-        m = re.search(r"^\s*id:\s*(ATC-STD-(?:BUG-|NET-|ZKP-|AI-DEV-|MD-|SC-|README-|DESC-|VERSION-|AUDIT-|AI-DECISION-|UPDATE-|COMPAT-|MILESTONE-|FRAMEWORK-|REPO-AUDIT-|AOS-|PROTOCOL-|TAXONOMY-|STDDEV-|REGISTRY-|CHANGE-)?[0-9]{3,}|ATC-AAS-[0-9]{3,}|ATC-ENT-[0-9]{3,})\s*$", head, re.M)
+        m = re.search(r"^\s*id:\s*(ATC-STD-(?:BUG-|NET-|ZKP-|AI-DEV-|MD-|SC-|README-|DESC-|VERSION-|AUDIT-|AI-DECISION-|UPDATE-|IMPROVEMENT-|COMPAT-|MILESTONE-|FRAMEWORK-|REPO-AUDIT-|AOS-|PROTOCOL-|TAXONOMY-|STDDEV-|REGISTRY-|CHANGE-)?[0-9]{3,}|ATC-AAS-[0-9]{3,}|ATC-ENT-[0-9]{3,})\s*$", head, re.M)
         return m.group(1) if m else None
     except Exception as e:
         READ_ERRORS.append((path, str(e)[:80]))

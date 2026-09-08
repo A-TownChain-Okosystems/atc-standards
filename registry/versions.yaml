@@ -7151,3 +7151,5 @@ versions:
     change: 'Initial Release via SCR-0037 (§9-FREIGEGEBEN 08.09. 03:55 UTC+2, Owner-Direktive ''ATC-Lizenzsystem
       etablieren''): ATC-LICENSE-System v1.0.0 — eigene Lizenz- und Nutzungsrechte-Governance (FAM-44),
       getrennt von SPDX-Basisschicht (Apache-2.0, SCR-0036).'
+  ATC-STD-IMPROVEMENT-001:
+    - {version: "1.0.0", date: "2026-09-08", change: "Initial Release DRAFT: Owner-Entwurf Michael Wroblewski (08.09. 18:14) — Continuous Improvement Management System: 13-stufiger Zyklus, 14 Quellen, 10 Klassen, P0-P3+Impact, ATC-IMP-Records, Root-Cause-Pflicht, Regression Prevention, Verbesserungsregel, Standards-Selbstverbesserung, Automatisierungsleiter, KI-Agenten-Regel, DoD, zentrales Board (registry/improvements.yaml), org-weite Anwendung; SCR-0056; §9-Freigabe ausstehend"}

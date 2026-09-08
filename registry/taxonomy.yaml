@@ -317,6 +317,20 @@ taxonomy:
         name: Allgemein (Bestand, keine Unterteilung)
         status: ACTIVE
         lifecycle: ACTIVE
+    - id: IMP
+      name: improvement
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-STD-IMPROVEMENT-001-999
+      source: named-family
+      description: 'Improvement-Familie: Continuous Improvement Management System — Zyklus, Quellen, Klassen, Priorisierung, ATC-IMP-Records/Board, Root-Cause, Regression Prevention, Standards-Selbstverbesserung,
+        Automatisierungsleiter, DoD (Owner-Entwurf 08.09., SCR-0056)'
+      standards_count: 1
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
   - id: SW
     name: Software Engineering
     status: ACTIVE

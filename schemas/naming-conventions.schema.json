@@ -567,6 +567,36 @@
         "chRequirementId": {
           "pattern": "^REQ-CH-[0-9]{3,}$",
           "description": "Change-Control-Anforderungs-ID (REQ-CH-NNN)"
+        },
+        "improvementStandardId": {
+          "type": "string",
+          "pattern": "^ATC-STD-IMPROVEMENT-[0-9]{3,}$",
+          "example": "ATC-STD-IMPROVEMENT-001",
+          "note": "Improvement-Familie: Continuous Improvement Management System (Owner-Entwurf 08.09., SCR-0056)"
+        },
+        "improvementRequirementId": {
+          "type": "string",
+          "pattern": "^REQ-IMP-[0-9]{3,}$",
+          "example": "REQ-IMP-001",
+          "note": "Requirements der IMPROVEMENT-Familie (SCR-0056)"
+        },
+        "improvementId": {
+          "type": "string",
+          "pattern": "^ATC-IMP-[0-9]{6,}$",
+          "example": "ATC-IMP-000001",
+          "note": "Improvement Records: ATC-IMP-NNNNNN, zentrales Improvement Board registry/improvements.yaml (SCR-0056); abgegrenzt zu F-NNNN Findings (BUG-001) — ein Finding kann IMP-Record auslösen (Quelle: finding_ref)"
+        },
+        "improvementClassId": {
+          "type": "string",
+          "pattern": "^IMPROVEMENT-(FUNCTIONAL|QUALITY|SECURITY|PERFORMANCE|ARCHITECTURE|DOCUMENTATION|STANDARD|AUTOMATION|PROCESS|UX)$",
+          "example": "IMPROVEMENT-AUTOMATION",
+          "note": "Verbesserungsklassen gemäß ATC-STD-IMPROVEMENT-001 Abschnitt 4 (SCR-0056)"
+        },
+        "improvementStateId": {
+          "type": "string",
+          "pattern": "^(DISCOVERED|ANALYZING|PLANNED|IMPLEMENTING|TESTING|VERIFYING|STANDARDIZING|AUTOMATED|CLOSED|REJECTED)$",
+          "example": "VERIFYING",
+          "note": "Improvement-Board-Zustände gemäß ATC-STD-IMPROVEMENT-001 Abschnitt 16 (SCR-0056)"
         }
       }
     },
@@ -764,6 +794,11 @@
         "changeStandardDoc": {
           "pattern": "^ATC-STD-CHANGE-[0-9]{3,}[.]md$",
           "description": "Change-Control-Dokument"
+        },
+        "improvementStandardDoc": {
+          "type": "string",
+          "pattern": "^ATC-STD-IMPROVEMENT-[0-9]{3,}[.]md$",
+          "example": "ATC-STD-IMPROVEMENT-001.md"
         }
       }
     },

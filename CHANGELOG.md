@@ -4,6 +4,28 @@
 
 ### Added
 
+- **ATC-STD-IMPROVEMENT-001 v1.0.0 (DRAFT, SCR-0056):** ATC Improvement Standard —
+  Systemverbesserungsstandard / Continuous Improvement Management System.
+  ATC Improvement Principle als Grundsatz; 13-stufiger Verbesserungszyklus
+  (Abchluss erst nach Verifikation); 14 Verbesserungsquellen; 10
+  Verbesserungsklassen (improvementClassId); P0–P3 + 9 Impact-Dimensionen;
+  ATC-IMP-NNNNNN-Pflichtdatensatz (improvementId); Root-Cause-Pflicht (7-Fragen,
+  BUG-005-Kopplung); Regression Prevention („Kann derselbe Fehler woanders
+  auftreten?", 9 Prüflinge); Verbesserungsregel lokal→systemweit→Standard→
+  automatisierter Check (REPO-DISCOVERY-005/006); Standards-Selbstverbesserung
+  (9 Prüfpunkte, REQ-UPD-017-Kopplung); Automatisierungsleiter (Manuell→…→
+  Continuous Compliance); KI-Agenten-13-Schritte-Regel (AI-DECISION-001/UPD-012);
+  8 Regressions-Dimensionen; DoD mit 11 Nachweispunkten; zentrales
+  **Improvement Board registry/improvements.yaml** (9 Zustände, improvementStateId)
+  mit Seed aus AUD-2026-0004 (IMP-000001..000003) + Standards-Audit-Pflicht
+  (IMP-000004); org-weite Anwendung über Registry-SSOT + E-Stage (26 Repos).
+  Familien-Roadmap IMPROVEMENT-002..012 dokumentiert. Schema: 5 ID-Patterns
+  allockiert. 17 REQ-IMP, 5 COM-IMP. §9-Freigabe ausstehend.
+
+## [unreleased] - 2026-09-08
+
+### Added
+
 - **AUD-2026-0004 — Unabhängige Review-Stufe abgeschlossen (SCR-0055):** Zwei-Reviewer-
   Modell mit kontextlosen Sub-Agenten (REQ-AUDIT-025, REQ-AIDEC-019/020). AuditGPT
   bestätigt CONDITIONAL_PASS/Score C, korrigiert AUD-2026-0001-Klassifikation
