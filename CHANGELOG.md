@@ -2,6 +2,18 @@
 
 ## [Unreleased] — 2026-09-08 (SCR-0045/0047/0048)
 
+### Reproducible CI Dependencies: Issue #1 als P1-Change (SCR-0054)
+- Neuer Standard ATC-STD-CI-001 v1.0.0 CANDIDATE (FAM-50, REQ-CI-001..010):
+  CI-Dependency-Governance — Deklaration, Installation, Reproduzierbarkeit,
+  Fresh-Runner, Klassifikation, Regression, Propagation.
+- S-25-Fallback entfernt: fehlende PyYAML = FAIL (DEPENDENCY_MISSING) —
+  kein CI-Erfolg durch zufaellig guenstigen Runner-Zustand mehr (CI-010, P0).
+- E-Stage strikt; E-5: neuer Regressionstest je Push/PR (stdlib-only, CI-006).
+- requirements.txt versionseingeschraenkt (pyyaml>=6.0,<7.0, CI-004).
+- Org-Propagation-Scan (ERR-005/CI-008): 25 weitere Repos mit identischem
+  Fehlermuster — kanonischer Patch bereit (GH013-Owner-Aktion).
+- SCR-0051 obsolet: E-1 erzwingt Meta-Daten-Audit bereits je Push/PR.
+
 ### Enforcement-Pipeline: Alle definierten Standards je Push/PR erzwungen (SCR-0053)
 - E-Stage (E-1..E-4) in validate_all.py: Meta-Daten-Audit, Meta-Sweep,
   Agent-Manifest-Vollmandat, README-Gates — echtes Fail-Verhalten je Push/PR,

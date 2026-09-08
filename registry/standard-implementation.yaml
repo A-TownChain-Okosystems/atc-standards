@@ -11,7 +11,7 @@ generated_from: registry/standards.yaml
 updated: "2026-09-08"
 coverage_kpi:
   registry_total: 431
-  matrix_entries: 431
+  matrix_entries: 432
   matrix_coverage: "100%"
   enforced_target: "je Wartungszyklus steigend (REQ-IMP-007)"
   hinweis: "Wertigkeit der 21 SCR-0045-Detail-Eintraege bleibt; Familien-Evidence konsolidiert"
@@ -3581,4 +3581,12 @@ standards:
     implementation:
       status: enforced
       evidence: "Apache-2.0-Lizensierung 26/26 abgeschlossen (Org-Audit 08.09., FAM-44)"
+    independence: L1
+
+  - standard: ATC-STD-CI-001
+    version: "1.0.0"
+    applicability: REFERENCE
+    implementation:
+      status: reference
+      evidence: "Legacy-Serie (atc/): durch ATC-STD-000ff superseded; historische Referenz konserviert"
     independence: L1

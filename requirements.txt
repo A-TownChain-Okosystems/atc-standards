@@ -1,3 +1,4 @@
 # Laufzeit-Abhaengigkeiten der ATC-Standards-Validator-Suite (AUD-2026-0003 / F-035)
-# Vor Validierung installieren: python3 -m pip install -r requirements.txt
-pyyaml>=6.0
+# CI-Install vor Validierung: python3 -m pip install -r requirements.txt (ATC-STD-CI-001 CI-003)
+# Versionsschranken sind Pflicht (ATC-STD-CI-001 CI-004) — keine offenen Versionen.
+pyyaml>=6.0,<7.0

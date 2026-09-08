@@ -435,6 +435,7 @@ required_standards:
 - ATC-STD-LICENSE-007
 - ATC-STD-LICENSE-008
 - ATC-STD-LICENSE-009
+- ATC-STD-CI-001
 workflow:
   require_tests: true
   require_audit: true

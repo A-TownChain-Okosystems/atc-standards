@@ -418,7 +418,11 @@ def main():
             _n += 1
         print("S-25 Frontmatter-YAML: %s (%d Dateien strict geparst)" % ("PASS" if fm_ok else "FAIL", _n))
     except ImportError:
-        print("S-25 Frontmatter-YAML: WARN (Fallback-Modus, PyYAML fehlt)")
+        # CI-007/CI-010 (ATC-STD-CI-001): fehlende Dependency = FAIL,
+        # klassifiziert — kein gepruefter Fallback mehr (Issue #1, P1).
+        print("S-25 Frontmatter-YAML: FAIL (DEPENDENCY_MISSING — PyYAML fehlt;"
+              " ATC-STD-CI-001 CI-001/CI-002, Issue #1)")
+        fm_ok = False
     if not fm_ok:
         fails += 1
 
@@ -432,6 +436,7 @@ def main():
         ("E-2", "Meta-Sweep (SCR-0047, MS-1..MS-7)", [sys.executable, os.path.join(HERE, "meta_sweep.py")]),
         ("E-3", "Agent-Manifest-Check (AGENT_MANIFEST-Standard)", [sys.executable, os.path.join(HERE, "check_agent_manifest.py")]),
         ("E-4", "README-Gates (ATC-STD-README-001, 13 Gates)", [sys.executable, os.path.join(ROOT, "tools", "atc-readme-validator", "check_readme.py"), ROOT]),
+        ("E-5", "CI-Dependency-Governance (ATC-STD-CI-001, Regressionstest Issue #1)", [sys.executable, os.path.join(HERE, "tests", "test_ci_dependency_governance.py")]),
     ]
     for sid, name, cmd in stages:
         try:
@@ -443,7 +448,12 @@ def main():
         if r.returncode == 0:
             print("%s %s: PASS" % (sid, name))
         elif missing_dep:
-            print("%s %s: WARN (Runner ohne PyYAML — Stage uebersprungen, Praezedenz S-25-Fallback)" % (sid, name))
+            # CI-007/CI-010 (ATC-STD-CI-001): Dependency-Fehler werden
+            # klassifiziert und FAILen — kein Silent-Fallback mehr.
+            print("%s %s: FAIL (DEPENDENCY_MISSING — Runner-Dependency fehlt,"
+                  " ATC-STD-CI-001 CI-002/CI-006; kein Erfolg durch"
+                  " guenstigen Runner-Zustand, CI-010)" % (sid, name))
+            fails += 1
         else:
             print("%s %s: FAIL" % (sid, name))
             for line in out.splitlines()[-12:]:

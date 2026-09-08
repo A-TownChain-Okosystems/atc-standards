@@ -344,3 +344,4 @@ ATC-01…99 (Registry Tier 1-10) sind die ausdifferenzierte Nachfolger-Registry.
 | ATC-ENT-013 | KPI & Performance Standard | approved | 1.0.0 | enterprise (P2) |
 | ATC-ENT-014 | Audit & Nachvollziehbarkeit Standard | approved | 1.0.0 | enterprise (P1) |
 | ATC-ENT-015 | Qualitätsmanagement & Definition of Done Standard | approved | 1.0.0 | enterprise (P2) |
+| ATC-STD-CI-001 | Reproducible CI Dependencies | candidate | 1.0.0 | cicd |

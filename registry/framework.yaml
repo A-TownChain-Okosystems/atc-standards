@@ -3055,3 +3055,15 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-REPO-DISCOVERY-010
+
+  - id: FAM-50
+    name: CI/CD-Standards (CICD)
+    range: ATC-STD-CI-001..999
+    note: 'Reproduzierbare CI-Dependencies und Workflow-Governance — Dependency Governance -> Workflow Governance -> Validation -> Regression -> Failure Propagation -> Audit -> Release Gate (Issue #1 P1-Change, SCR-0054); verdrahtet mit ERR-000/004/005/008/009 und REPO-MAINT-001'
+    family_refs:
+    - ATC-STD-ERR-000
+    - ATC-STD-REPO-MAINT-001
+    slots:
+    - id: ATC-STD-CI-001
+      title: Reproducible CI Dependencies
+      status: BELEGT

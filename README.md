@@ -5,17 +5,17 @@
 
 | Kennzahl | Wert |
 |---|---|
-| Registry Standards | **431** |
+| Registry Standards | **432** |
 | Registry APPROVED | **395** |
-| Registry CANDIDATE (§33) | **36** |
-| Standard-Dateien (`standards/`) | **430** |
-| Familien | **49** |
-| Registry SHA-256 | `ff2117a62088cb0d…` (vollständig: `registry/registry.lock`) |
-| Stand | 2026-09-08 17:18 UTC+2 |
+| Registry CANDIDATE (§33) | **37** |
+| Standard-Dateien (`standards/`) | **431** |
+| Familien | **50** |
+| Registry SHA-256 | `3f8efb252a8c6351…` (vollständig: `registry/registry.lock`) |
+| Stand | 2026-09-08 17:32 UTC+2 |
 
 Implementierungs-Matrix: [`registry/standard-implementation.yaml`](registry/standard-implementation.yaml) (ATC-STD-IMPLEMENTATION-001).
 
-**Implementierungs-KPI:** 431 Standards normativ definiert — 62 enforced, 129 implemented, 240 specification-only (Zielsysteme im qualitätsgetriebenen Rebuild AD-023/AD-045). Die Aussage „431 Standards implementiert“ ist unzulässig (SCR-0048).
+**Implementierungs-KPI:** 432 Standards normativ definiert — 62 enforced, 129 implemented, 240 specification-only (Zielsysteme im qualitätsgetriebenen Rebuild AD-023/AD-045). Die Aussage „432 Standards implementiert“ ist unzulässig (SCR-0048).
 
 **ATC COMPLIANCE: YES** — Repository-Audit R3 · Naming/Versioning/Ownership/Lizenz konform ([Audit-Details](#standards--compliance))
 
@@ -61,7 +61,7 @@ deren CI-Gates; Nachweis via Implementierungs-Matrix).
 
 ### Core Components
 - `registry/` — SSOT (standards.yaml, versions.yaml, dependencies.yaml, findings.yaml)
-- `standards/` — 430 Standard-Dateien in 49 Familien
+- `standards/` — 431 Standard-Dateien in 50 Familien
 - `schemas/` — naming-conventions.schema.json, milestone.schema.json, etc.
 - `tools/` — Validators, Auditors, Generators
 - `governance/`, `approval/`, `change-requests/` — Verfassung, Freigaben, SCR-System
@@ -173,7 +173,7 @@ Implementierungs-Pivot (kein Standard ohne Implementierungsstatus).
 ├── references/      # Normative Referenzen
 ├── registry/        # SSOT: standards.yaml, Matrix, Lock, Schemata-Reg
 ├── schemas/         # JSON/YAML-Schemata (standard.schema.yaml)
-├── standards/       # 430 Standard-Dateien in 49 Familien
+├── standards/       # 431 Standard-Dateien in 50 Familien
 ├── templates/       # Dokumentvorlagen
 └── tools/           # Validatoren, Generatoren, Audits (Python)
 ```
