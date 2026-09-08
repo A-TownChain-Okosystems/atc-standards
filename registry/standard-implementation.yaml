@@ -109,7 +109,7 @@ standards:
       files: ["Issue-Labels/Severity-Modell S0-S4 in Nutzung"]
       tests: []
       ci_gate: []
-      evidence: ["Issue-Triage a-townchain-os (#80..#99)"]
+      evidence: ["Issue-Triage a-townchain-os #80-#99"]
       independence: L1
 
   - standard: ATC-STD-BUG-002
@@ -217,7 +217,7 @@ standards:
       files: [tests/]
       tests: ["61/61 GRUEN; vor Fix rot/nach Fix gruen bewiesen"]
       ci_gate: []
-      evidence: ["ATC-ERR-0001 regression_test-Block", Issue #99]
+      evidence: ["ATC-ERR-0001 regression_test-Block", "Issue #99"]
       independence: L1
 
   - standard: ATC-STD-ERR-009
