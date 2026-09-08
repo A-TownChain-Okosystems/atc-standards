@@ -2876,3 +2876,15 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-LICENSE-009
+
+  - id: FAM-45
+    name: Vision-to-Software (V2S)
+    range: ATC-STD-V2S-000..026
+    note: 'End-to-End-Lifecycle VISION->EOL — Master + 26 Phasen-Standards (SCR-0042); Phasen-Slots 001-026 im Bau'
+    family_refs: null
+    slots:
+    - id: ATC-STD-V2S-000
+      title: V2S Lifecycle Master
+      status: BELEGT
+      refs:
+      - ATC-STD-V2S-000

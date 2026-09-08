@@ -120,6 +120,16 @@
           "pattern": "^ATC-STD-BUG-[0-9]{3,}$",
           "example": "ATC-STD-BUG-001"
         },
+        "v2sStandardId": {
+          "type": "string",
+          "pattern": "^ATC-STD-V2S-[0-9]{3,}$",
+          "example": "ATC-STD-V2S-000"
+        },
+        "v2sRequirementId": {
+          "type": "string",
+          "pattern": "^REQ-V2S-[0-9]{3,}$",
+          "example": "REQ-V2S-001"
+        },
         "testId": {
           "type": "string",
           "pattern": "^TEST-[0-9]{3,}$",
@@ -640,6 +650,11 @@
           "type": "string",
           "pattern": "^ATC-STD-BUG-[0-9]{3,}[.]md$",
           "example": "ATC-STD-BUG-001.md"
+        },
+        "v2sStandardDoc": {
+          "type": "string",
+          "pattern": "^ATC-STD-V2S-[0-9]{3,}[.]md$",
+          "example": "ATC-STD-V2S-000.md"
         },
         "netStandardDoc": {
           "type": "string",

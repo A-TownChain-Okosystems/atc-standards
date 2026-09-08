@@ -12,7 +12,7 @@ DOMAIN_MAP = {
     "security": "TRUST", "protocol": "CHAIN", "blockchain": "CHAIN", "ai": "AI",
     "os": "SW", "infrastructure": "SW", "applications": "SW",
     # benannte Familien
-    "bug": "GOV", "zkp": "TRUST", "ai-dev": "AI", "aas": "AI", "enterprise": "GOV",
+    "bug": "GOV", "zkp": "TRUST", "ai-dev": "AI", "aas": "AI", "enterprise": "GOV", "v2s": "GOV",
     "readme": "SW", "md": "SW", "sc": "CHAIN", "net": "CHAIN", "desc": "GOV",
     "version": "GOV", "audit": "GOV", "ai-decision": "AI", "update": "GOV",
     "repo-audit": "GOV", "agent-operating": "AI", "master-audit": "GOV",

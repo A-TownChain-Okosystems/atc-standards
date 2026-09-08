@@ -56,14 +56,14 @@ eines Standards liegt ausschließlich in seiner Standarddatei; die Registry
 | registry/teams.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
 | registry/versions.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
 
-Kernregister: **standards.yaml** (Bestand, 402 Standards) · **versions.yaml**
-(Versionierung je Standard) · **framework.yaml** (Katalog: 44 Familien,
-442 Slots) · **categories.yaml**
+Kernregister: **standards.yaml** (Bestand, 403 Standards) · **versions.yaml**
+(Versionierung je Standard) · **framework.yaml** (Katalog: 45 Familien,
+443 Slots) · **categories.yaml**
 (Kategorien) · **taxonomy.yaml** (Domain/Familie/Kategorie) · **protocol-registry.yaml**
 (26 Protokollfamilien, Status {'draft': 10, 'planned': 16}) ·
 **findings.yaml** (Findings: 17 OPEN / 31 RESOLVED von 48).
 
-## 3. Standardfamilien (Katalog, 44 Familien)
+## 3. Standardfamilien (Katalog, 45 Familien)
 
 | FAM | Familie | Slots | BELEGT | VERWEIST |
 |---|---|---|---|---|
@@ -111,12 +111,13 @@ Kernregister: **standards.yaml** (Bestand, 402 Standards) · **versions.yaml**
 | FAM-42 | Protocol Standards | 3 | 3 | 0 |
 | FAM-43 | Standards Governance Core | 4 | 4 | 0 |
 | FAM-44 | ATC License System | 9 | 9 | 0 |
+| FAM-45 | Vision-to-Software (V2S) | 1 | 1 | 0 |
 
-Statusverteilung der 402 Registry-Standards: {'approved': 396, 'candidate': 6}.
-Alle 402 sind APPROVED und normativ (§30-eingefroren); Details je Standard
+Statusverteilung der 403 Registry-Standards: {'approved': 396, 'candidate': 7}.
+Alle 403 sind APPROVED und normativ (§30-eingefroren); Details je Standard
 in registry/standards.yaml und registry/versions.yaml.
 
-## 4. Master-Registry-Tabelle (402 Standards)
+## 4. Master-Registry-Tabelle (403 Standards)
 
 Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 
@@ -513,6 +514,7 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 | ATC-STD-STDDEV-001 | ATC Standards Development Standard — Verbindlicher Lebenszyklus für Standards: Erstellung im Hausformat, Review, §9-Freigabe, §30-Einfrierung, Wartung (MINOR/MAJOR), Review-Zyklen, Deprecation und Retirement | governance-core | 1.0.0 | approved | standards/governance-core/ATC-STD-STDDEV-001.md |
 | ATC-STD-TAXONOMY-001 | ATC Standards Taxonomy & Family Creation Standard — Meta-Governance: vierstufige Taxonomie (Domain→Familie→Kategorie→Standard), kontrollierte Familien-/Kategorie-Erstellung, Lifecycle, automatische ID-Vergabe, TAX-CHECK-001..018 | taxonomy | 1.0.0 | approved | standards/taxonomy/ATC-STD-TAXONOMY-001.md |
 | ATC-STD-UPDATE-001 | ATC Update Standard — Change Control für Artefakt-Updates: Kategorien, Lifecycle, Impact/Dependency, Gates UPD-G01..G09, Rollback, Emergency, Manifeste, Review-Kadenzen | update | 1.0.0 | approved | standards/update/ATC-STD-UPDATE-001.md |
+| ATC-STD-V2S-000 | Vision-to-Software Lifecycle Master Standard | v2s | 1.0.0 | candidate | standards/v2s/ATC-STD-V2S-000.md |
 | ATC-STD-VERSION-001 | ATC Versioning Standard — einheitliche Versionierung von Software, Standards, APIs, Smart Contracts, Protokollen und Releases | version | 1.0.0 | approved | standards/version/ATC-STD-VERSION-001.md |
 | ATC-STD-ZKP-001 | ZKP Architecture Standard | zkp | 1.0.0 | approved | standards/zkp/ATC-STD-ZKP-001.md |
 | ATC-STD-ZKP-002 | Proof System Interface Standard | zkp | 1.0.0 | approved | standards/zkp/ATC-STD-ZKP-002.md |
@@ -527,7 +529,7 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 
 ## 5. Statusmodell (Registry-Lifecycle)
 
-Registry-Statusverteilung (Ist): {'approved': 396, 'candidate': 6}. Lifecycle der Standards-Entwicklung
+Registry-Statusverteilung (Ist): {'approved': 396, 'candidate': 7}. Lifecycle der Standards-Entwicklung
 gemäß ATC-STD-STDDEV-001 / ATC-STD-TAXONOMY-001: Entwurf (Owner-Entwurf/SCR) →
 §9-Freigabe (Owner, Human-Gate) → APPROVED (normativ, §30-eingefroren) → ggf.
 DEPRECATED/RETIRED via Change-Control (ATC-STD-CHANGE-001). Protokolle folgen
@@ -570,7 +572,7 @@ die Kennung dieses generierten Dokuments.
 
 atc-standards/ · INDEX.md (generiert) · README.md · CHANGELOG.md · STATUS.md ·
 LICENSE (Apache-2.0) · AGENT_MANIFEST.md · AGENTS.md · governance/ (ATC-STD-000) ·
-standards/<kategorie>/ (Fachstandards, 402-Bestand) · registry/ (22
+standards/<kategorie>/ (Fachstandards, 403-Bestand) · registry/ (22
 SSOT-Dateien) · licenses/ (ATC-LICENSE-System) · schemas/ · tools/ (Generatoren +
 atc-std-validator) · approval/ (§9-Freigabe-Archiv) · change-requests/ (SCR-0001…) ·
 docs/ (Audits & Analysen) · templates/ · .github/workflows (Governance-CI, 2) +

@@ -143,7 +143,7 @@ def validate(path, registry_path):
 
     # S-02 ID-Format (7.10/7.11: Muster aus naming-conventions.schema.json)
     sid = meta.get("id", "")
-    _ok02 = re.match(r"^ATC-STD-(?:BUG-|NET-|ZKP-|AI-DEV-|README-|MD-|SC-|DESC-|VERSION-|AUDIT-|AI-DECISION-|UPDATE-|COMPAT-|MILESTONE-|FRAMEWORK-|REPO-AUDIT-|AOS-|PROTOCOL-|TAXONOMY-|STDDEV-|REGISTRY-|CHANGE-)?[0-9]{3,}$", sid) or re.match(r"^ATC-(?:AAS|ENT)-[0-9]{3,}$", sid)
+    _ok02 = re.match(r"^ATC-STD-(?:BUG-|NET-|ZKP-|AI-DEV-|README-|MD-|SC-|DESC-|VERSION-|AUDIT-|AI-DECISION-|UPDATE-|COMPAT-|MILESTONE-|FRAMEWORK-|REPO-AUDIT-|AOS-|PROTOCOL-|TAXONOMY-|STDDEV-|REGISTRY-|CHANGE-|LICENSE-|V2S-)?[0-9]{3,}$", sid) or re.match(r"^ATC-(?:AAS|ENT)-[0-9]{3,}$", sid)
     v.add("S-02", "PASS" if _ok02 else "FAIL",
           "ID-Format: %s" % (sid if _ok02 else (sid or "FEHLT") + " (Schema: alle *StandardId-Muster)"))
 
@@ -159,7 +159,13 @@ def validate(path, registry_path):
 
     # S-05 Kategorie
     kat = meta.get("category", "").lower()
-    v.add("S-05", "PASS" if kat in CATS else "FAIL",
+    _cats = set(CATS)
+    if registry_path:
+        _cp = os.path.join(os.path.dirname(registry_path), "categories.yaml")
+        if os.path.exists(_cp):
+            _t = read(_cp)
+            _cats |= set(re.findall(r'name:\s*([\w-]+)', _t)) | set(re.findall(r'^\s*([\w-]+):\s*\{', _t, re.M))
+    v.add("S-05", "PASS" if kat in _cats else "FAIL",
           "Kategorie: %s" % (kat if kat in CATS else kat + " (nicht in categories.yaml)"))
 
     # S-06 Abstract
