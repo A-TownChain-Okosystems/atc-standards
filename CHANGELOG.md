@@ -2,6 +2,15 @@
 
 ## [Unreleased] — 2026-09-08 (SCR-0045/0047/0048)
 
+### Governance-Hardening: P1-Funde des externen Audits behoben (SCR-0052)
+- P1-001: README-Lizenz auf Apache-2.0 synchronisiert (war „Proprietary" im
+  Widerspruch zu LICENSE und Org-Lizenzentscheid).
+- P1-003: SECURITY.md auf Private Disclosure umgestellt (GitHub Private
+  Vulnerability Reporting, kein oeffentliches Issue-Reporting mehr).
+- P1-004: Implementierungs-KPI auditfest + SSOT-generiert in README
+  (431 definiert; 62 enforced / 129 implemented / 240 specification-only).
+- P1-002: ci.yml-Registry-driven-Fix als Owner-Patch bereit (GH013).
+
 ### Metadaten-Vollstaendigkeit aller Standards (SCR-0050)
 - Neuer Meta-Daten-Audit (meta_data_audit.py) gegen standard.schema.yaml
   (§8): alle 430 Standards besitzen alle 10 Pflichtfelder + 6 erweiterte

@@ -11,9 +11,11 @@
 | Standard-Dateien (`standards/`) | **430** |
 | Familien | **49** |
 | Registry SHA-256 | `ff2117a62088cb0d…` (vollständig: `registry/registry.lock`) |
-| Stand | 2026-09-08 16:20 UTC+2 |
+| Stand | 2026-09-08 16:36 UTC+2 |
 
 Implementierungs-Matrix: [`registry/standard-implementation.yaml`](registry/standard-implementation.yaml) (ATC-STD-IMPLEMENTATION-001).
+
+**Implementierungs-KPI:** 431 Standards normativ definiert — 62 enforced, 129 implemented, 240 specification-only (Zielsysteme im qualitätsgetriebenen Rebuild AD-023/AD-045). Die Aussage „431 Standards implementiert“ ist unzulässig (SCR-0048).
 
 > Die normative Governance-Schicht der A-TownChain-Organisation — Registry,
 > Standards, Schemata, Validatoren und Governance-Entscheidungen.
@@ -24,7 +26,7 @@ Implementierungs-Matrix: [`registry/standard-implementation.yaml`](registry/stan
 **Organization:** A-TownChain-Okosystems
 **Status:** `release-candidate`
 **Version:** `1.2.0`
-**License:** `Proprietary — A-TownChain-Okosystems (Governance-Dokument)`
+**License:** `Apache-2.0 — siehe LICENSE`
 
 <!-- atc metadata block (ATC-STD-README-001 §14) -->
 <!--
@@ -268,8 +270,10 @@ Registry-First. Details: `CONTRIBUTING.md`, ATC-STD-000 §22.
 
 ## License
 
-Proprietary — A-TownChain-Okosystems. Governance-Dokument; Weitergabe und
-Ableitung nur mit Owner-Freigabe (siehe LICENSE).
+Apache-2.0 (siehe LICENSE) — einheitliche Organisationslizenz (08.09.2026,
+CHANGELOG/ATC-LICENSE-Familie). Zusätzliche ATC-Nutzungsbedingungen regeln
+die Trennung: Code (Apache-2.0) ≠ Marke ≠ Assets ≠ Governance-Dokumente.
+Kein Proprietary-Anspruch im Widerspruch zur LICENSE-Datei.
 
 ## Maintainers
 

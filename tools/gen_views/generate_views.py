@@ -82,6 +82,25 @@ def main():
         c = c.replace(m.group(1), m.group(1) + "\n" + kb, 1)
     elif "GENERATED-BY generate_views.py" not in c:
         c = kb + "\n" + c
+    # Implementierungs-KPI (SCR-0052/P1-004): SSOT-generiert aus standard-implementation.yaml
+    try:
+        import yaml as _y
+        _impl = _y.safe_load(open(os.path.join(ROOT, "registry", "standard-implementation.yaml"), encoding="utf-8"))
+        _cnt = {}
+        for _s in _impl.get("standards", []):
+            _st = _s.get("implementation", {}).get("status", "specification_only")
+            _cnt[_st] = _cnt.get(_st, 0) + 1
+        _kpi = (f"**Implementierungs-KPI:** {total} Standards normativ definiert — "
+                f"{_cnt.get('enforced', 0)} enforced, {_cnt.get('implemented', 0)} implemented, "
+                f"{_cnt.get('specification_only', 0)} specification-only (Zielsysteme im qualitätsgetriebenen Rebuild AD-023/AD-045). "
+                f"Die Aussage „{total} Standards implementiert“ ist unzulässig (SCR-0048).")
+        if "**Implementierungs-KPI:**" in c:
+            c = re.sub(r"\*\*Implementierungs-KPI:\*\*.*?unzulässig \(SCR-0048\)\.", _kpi, c)
+        else:
+            c = c.replace("[`registry/standard-implementation.yaml`](registry/standard-implementation.yaml) (ATC-STD-IMPLEMENTATION-001).",
+                          "[`registry/standard-implementation.yaml`](registry/standard-implementation.yaml) (ATC-STD-IMPLEMENTATION-001)." + chr(10) + _kpi, 1)
+    except Exception as _e:
+        print(f"  Hinweis: Implementierungs-KPI nicht gepatcht ({_e})")
     c = re.sub(r"\n{3,}", "\n\n", c)  # Generator-Hygiene: idempotent, keine Leerzeilen-Akkumulation
     open(p, "w", encoding="utf-8").write(c)
 
