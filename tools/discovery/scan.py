@@ -91,8 +91,9 @@ def main():
     # Echte Diffs: Baseline speichert nur Zaehler — daher Diff gegen baseline_commit via git
     try:
         base_rev = baseline["baseline_commit"]
-        base_files = set(subprocess.check_output(
-            ["git", "ls-tree", "-r", "--name-only", base_rev], cwd=ROOT, text=True).splitlines())
+        base_files = {l for l in subprocess.check_output(
+            ["git", "ls-tree", "-r", "--name-only", base_rev], cwd=ROOT, text=True).splitlines()
+            if l.strip() and not l.startswith(".git")}
     except Exception:
         base_files = current
 
@@ -127,7 +128,14 @@ def main():
     }
     complete = all(checks.values())
 
-    scan_id = f"DISC-{today}-{int(now[14:16]) % 60:02d}"
+    prev = 0
+    prev_path = os.path.join(DISC, "latest-scan.json")
+    if os.path.exists(prev_path):
+        try:
+            prev = int(json.load(open(prev_path))["scan_id"].split("-")[-1])
+        except Exception:
+            prev = 0
+    scan_id = f"DISC-{today}-{prev + 1:03d}"
     report = {
         "scan_id": scan_id, "repository": "atc-standards",
         "baseline_commit": baseline["baseline_commit"], "current_commit": git_sha(),

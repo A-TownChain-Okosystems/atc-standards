@@ -1,0 +1,151 @@
+{
+  "scan_id": "DISC-2026-09-08-001",
+  "repository": "atc-standards",
+  "baseline_commit": "9f4bc2114cd0eefa756a3f2e5592dd94cdf6f07c",
+  "current_commit": "80a83474db7b1fbfb84f3daa4e861fedebf9fe78",
+  "scanned_at": "2026-09-08 13:01",
+  "standard": "ATC-STD-REPO-DISCOVERY-001..010 (SCR-0046)",
+  "totals": {
+    "files": 739,
+    "by_class": {
+      "automation": 17,
+      "configuration": 6,
+      "data": 14,
+      "documentation": 192,
+      "documentation/priority": 26,
+      "governance-registry": 26,
+      "other": 3,
+      "smart-contract": 8,
+      "standards": 430,
+      "template": 17
+    }
+  },
+  "new_content": 13,
+  "modified_content": 11,
+  "deleted_content": 0,
+  "changes": {
+    "NEW": [
+      ".atc/discovery/baseline.json",
+      "change-requests/SCR-0046.md",
+      "standards/repo-discovery/ATC-STD-REPO-DISCOVERY-001.md",
+      "standards/repo-discovery/ATC-STD-REPO-DISCOVERY-002.md",
+      "standards/repo-discovery/ATC-STD-REPO-DISCOVERY-003.md",
+      "standards/repo-discovery/ATC-STD-REPO-DISCOVERY-004.md",
+      "standards/repo-discovery/ATC-STD-REPO-DISCOVERY-005.md",
+      "standards/repo-discovery/ATC-STD-REPO-DISCOVERY-006.md",
+      "standards/repo-discovery/ATC-STD-REPO-DISCOVERY-007.md",
+      "standards/repo-discovery/ATC-STD-REPO-DISCOVERY-008.md",
+      "standards/repo-discovery/ATC-STD-REPO-DISCOVERY-009.md",
+      "standards/repo-discovery/ATC-STD-REPO-DISCOVERY-010.md",
+      "tools/discovery/scan.py"
+    ],
+    "MODIFIED": [
+      "AGENT_MANIFEST.md",
+      "INDEX.md",
+      "README.md",
+      "STATUS.md",
+      "registry/STANDARDS_REGISTRY.md",
+      "registry/categories.yaml",
+      "registry/framework.yaml",
+      "registry/registry.lock",
+      "registry/standards.yaml",
+      "registry/taxonomy.yaml",
+      "tools/taxonomy/gen_taxonomy.py"
+    ],
+    "DELETED": []
+  },
+  "standard_candidates": [
+    {
+      "file": "standards/repo-discovery/ATC-STD-REPO-DISCOVERY-001.md",
+      "signals": 1,
+      "status": "DISCOVERED"
+    },
+    {
+      "file": "standards/repo-discovery/ATC-STD-REPO-DISCOVERY-002.md",
+      "signals": 1,
+      "status": "DISCOVERED"
+    },
+    {
+      "file": "standards/repo-discovery/ATC-STD-REPO-DISCOVERY-003.md",
+      "signals": 4,
+      "status": "DISCOVERED"
+    },
+    {
+      "file": "standards/repo-discovery/ATC-STD-REPO-DISCOVERY-004.md",
+      "signals": 1,
+      "status": "DISCOVERED"
+    },
+    {
+      "file": "standards/repo-discovery/ATC-STD-REPO-DISCOVERY-005.md",
+      "signals": 2,
+      "status": "DISCOVERED"
+    },
+    {
+      "file": "standards/repo-discovery/ATC-STD-REPO-DISCOVERY-006.md",
+      "signals": 1,
+      "status": "DISCOVERED"
+    },
+    {
+      "file": "standards/repo-discovery/ATC-STD-REPO-DISCOVERY-007.md",
+      "signals": 1,
+      "status": "DISCOVERED"
+    },
+    {
+      "file": "standards/repo-discovery/ATC-STD-REPO-DISCOVERY-008.md",
+      "signals": 1,
+      "status": "DISCOVERED"
+    },
+    {
+      "file": "standards/repo-discovery/ATC-STD-REPO-DISCOVERY-009.md",
+      "signals": 2,
+      "status": "DISCOVERED"
+    },
+    {
+      "file": "standards/repo-discovery/ATC-STD-REPO-DISCOVERY-010.md",
+      "signals": 3,
+      "status": "DISCOVERED"
+    },
+    {
+      "file": "AGENT_MANIFEST.md",
+      "signals": 2,
+      "status": "DISCOVERED"
+    },
+    {
+      "file": "INDEX.md",
+      "signals": 1,
+      "status": "DISCOVERED"
+    },
+    {
+      "file": "STATUS.md",
+      "signals": 4,
+      "status": "DISCOVERED"
+    }
+  ],
+  "security_review_required": false,
+  "documentation_required": true,
+  "cross_repository_review": true,
+  "invariants": {
+    "INV-001_erkannt": true,
+    "INV-002_klassifiziert": true,
+    "INV-003_kandidaten_geprueft": true,
+    "INV-004_duplikat_geprueft": "deferred (RD-004-Ausbaustufe)",
+    "INV-005_cross_repo_geprueft": "deferred (RD-005-Ausbaustufe)",
+    "INV-006_doku_geprueft": "deferred (RD-009-Ausbaustufe)",
+    "INV-007_test_geprueft": "deferred",
+    "INV-008_security_review": "klassifiziert, Review deferred",
+    "INV-009_revisionssicher": true,
+    "INV-010_vollstaendigkeit": false
+  },
+  "checks": {
+    "S1_bestand": true,
+    "S2_git_diff": true,
+    "S3_neue_inhalte": true,
+    "S4_klassifikation": true,
+    "S6_standardsrelevanz": true,
+    "S7_risiko": false,
+    "S8_doku_bedarf": false,
+    "S9_cross_repo": false,
+    "S10_massnahmen": false
+  },
+  "scan_result": "PARTIAL — INV-010: Pruefung unvollstaendig (Ausbaustufen offen)"
+}
