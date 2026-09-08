@@ -60,6 +60,10 @@ Code, Schemas, Interfaces. Aus „Finde denselben Fehler" wird
 ## Implementierungsstatus
 SPECIFIED — Umsetzung: Scan-Block im BUG-002-Record; Validator prueft Scan-Nachweis.
 
+## Security Considerations
+
+Propagation-Scans laufen nur mit read-only Zugriff; Scan-Logs maskieren Zugangsdaten ($ENV-Platzhalter, Regel ATC-STD-203).
+
 ## Changelog
 | 1.0.0 | 2026-09-08 | Initiale Fassung (SCR-0044) |
 

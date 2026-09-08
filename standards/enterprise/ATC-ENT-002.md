@@ -71,3 +71,10 @@ AI-DEV-001..012 + AAS-001..025 unverändert).
 - Eine Person/ein Agent kann mehrere Rollen tragen — Ausübung je Rolle
   getrennt dokumentieren; Approver-Rolle nie durch Agenten (§14.1).
 - Rollen-Reviews im review_cycle (ENT-001 §3): annual.
+
+## Implementierungsstatus
+
+| Zustand | Wert |
+|---|---|
+| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
+| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |

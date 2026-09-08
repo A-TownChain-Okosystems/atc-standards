@@ -51,3 +51,10 @@ Widerspruch → Konfliktverfahren (ATC-AAS-013).
 Jede Agenten-Aussage trägt implizit die Klassifikation aus ATC-AAS-012
 (FACT/EVIDENCE/INFERENCE/ASSUMPTION/UNKNOWN); `context.yaml` benennt die
 für die aktuelle Task maßgeblichen Quellen je Hierarchie-Ebene.
+
+## Implementierungsstatus
+
+| Zustand | Wert |
+|---|---|
+| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
+| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |

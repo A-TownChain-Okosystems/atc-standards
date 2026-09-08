@@ -59,3 +59,10 @@ Implizite "weiter sehen wir dann" ist unzulässig.
 Autonome Code-Änderungen ohne dokumentierte Entscheidung+reason sind
 Governance-Verstoß. Bei Unsicherheit: ASSUMPTION-Register + ggf. Eskalation
 an Owner (AI-DEV-011 §2).
+
+## Implementierungsstatus
+
+| Zustand | Wert |
+|---|---|
+| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
+| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |

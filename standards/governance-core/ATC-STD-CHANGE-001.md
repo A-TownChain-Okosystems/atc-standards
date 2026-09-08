@@ -164,6 +164,13 @@ Notfall, 13-Fragen-Raster mit Finding-Folge, unabhängige Audit-Instanz (REPO-AU
 MAUD), Human-Gate-Finalität beim Owner. Commit-Trailer-Manipulation wäre Fälschung
 des Nachweises — Git-Historie + AUD-Records decken Widersprüche auf.
 
+## Implementierungsstatus
+
+| Zustand | Wert |
+|---|---|
+| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
+| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |
+
 ## Changelog (Standard-intern)
 
 - **1.0.0** (2026-09-08): Initial Release — Konsolidierung der Change-Control-

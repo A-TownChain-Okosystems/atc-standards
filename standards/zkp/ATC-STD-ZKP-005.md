@@ -49,6 +49,13 @@ Geprueft durch: (1) atc-std-validator (Registry-Sync S-14, Kopf-Sync S-19), (2) 
 
 ZKP-Komponenten sind S4-kritisch (Kryptografie-Bindung, ATC-STD-100): Implementierung MUSS in Rust erfolgen; Trusted-Setup-Kriterien und Fuzzing-Pflichten gelten nach ATC-STD-ZKP-010. Der G18 Security-Audit (AD-023) ist Voraussetzung fuer jeden Freeze.
 
+## Implementierungsstatus
+
+| Zustand | Wert |
+|---|---|
+| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
+| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |
+
 ## Changelog
 
 - 1.0.0 (2026-09-07): Initiale Fassung aus dem Owner-Entwurf ZKP-Layer (AD-045). Status: CANDIDATE — wartet auf APPROVED gemaess ATC-STD-000 §9.

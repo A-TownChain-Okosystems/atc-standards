@@ -54,3 +54,10 @@ an den Owner (kadenz: monatlich, automatisierbar über Workflow).
 
 False-Claim-Rate > 0 oder Security-Findings S0 → Capability-Review
 (AAS-002 §1) und ggf. Deaktivierung (AAS-022 §3 Retirement).
+
+## Implementierungsstatus
+
+| Zustand | Wert |
+|---|---|
+| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
+| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |

@@ -449,6 +449,13 @@ Ausnahmen MÜSSEN gemäß ATC-STD-DESC-001 Abschnitt 11 (EXC-Verfahren) dokument
 - Governance-CI (S-01..S-19) — Teilimplementierung der Domänen AUD-C02, AUD-C12, AUD-C19
 - Geplante Folge-Standards: ATC-STD-REG-001 (Regression Testing), ATC-STD-INC-001 (Incident Management) — je eigene SCR + ID-Allokation; Cross-System Integrity Engine (REQ-AUDIT-029) als Werkzeug
 
+## Implementierungsstatus
+
+| Zustand | Wert |
+|---|---|
+| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
+| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |
+
 ## Changelog
 
 ### 1.0.0 — 2026-09-07

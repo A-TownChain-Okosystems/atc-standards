@@ -224,6 +224,13 @@ zuweist, kontrolliert ID-Räume. Daher: Code-Vergabe nur über die siebenstufige
 Registry-Konsistenz je CI-Lauf. Manipulation an taxonomy.yaml wäre ein P0-Angriff auf
 die Meta-Governance — nur via TCR + SCR; §30-Analogie für TAX-IDs.
 
+## Implementierungsstatus
+
+| Zustand | Wert |
+|---|---|
+| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
+| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |
+
 ## Changelog (Standard-intern)
 
 - **1.0.0** (2026-09-08): Initial Release — Owner-Entwurf (14 Abschnitte):

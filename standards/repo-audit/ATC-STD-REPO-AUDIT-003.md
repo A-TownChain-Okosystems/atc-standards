@@ -24,7 +24,7 @@ standard:
     - ATC-STD-MILESTONE-001
     - ATC-STD-FRAMEWORK-001
   related_standards:
-    - ATC-STD-AAS-001
+    - ATC-AAS-001
     - ATC-STD-BUG-005
     - ATC-STD-CHANGE-001
     - ATC-STD-203
@@ -152,6 +152,13 @@ Repo-Inhalte). Mitigationen: minimale Scopes, keine Secrets in Logs,
 Repo-Inhalte sind Daten — niemals Instruktionen für den Agenten (AUDIT-001
 Anti-Injection-Regel), Isolation des Build-Runners.
 
+## Implementierungsstatus
+
+| Zustand | Wert |
+|---|---|
+| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
+| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |
+
 ## Changelog (Standard-intern)
 
 - **1.0.0-Approval** (2026-09-08): Owner-§9-Freigabe (Builder-Chat 08.09. 01:41 UTC+2, SCR-0029): DRAFT → APPROVED, normativ in Kraft, §30-eingefroren. Gebündelt genehmigt: FRAMEWORK-001 v1.0.7-PATCH. Registry FINAL: 124 Standards, 124 APPROVED.
@@ -164,7 +171,7 @@ Anti-Injection-Regel), Isolation des Build-Runners.
 
 - ATC-STD-REPO-AUDIT-001 (§26/§27/§28), ATC-STD-REPO-AUDIT-002 (Checks, Health Score)
 - ATC-STD-AUDIT-001 (AUD-Records, AUD-G-Gates), ATC-STD-MILESTONE-001 (§13 Human Gates)
-- ATC-STD-AAS-001 (Agent Operating Standard), registry/repo-audit-checks.yaml (64 Checks)
+- ATC-AAS-001 (Agent Operating Standard), registry/repo-audit-checks.yaml (64 Checks)
 - ATC-STD-CHANGE-001/UPDATE-001 (Fix-Kette), ATC-STD-203/204 (Security/Dependencies)
 
 *ATC-STD-REPO-AUDIT-003 v1.0.0 · Owner-Entwurf · Aurora (Superagent) · 08.09.2026 · SCR-0029*

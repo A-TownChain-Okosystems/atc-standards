@@ -68,3 +68,10 @@ audit_event:
   Findings (BUG-001) mit Risiko-Referenz (ENT-011 §3).
 - Defensives Design: Audit-Records sind Evidenz (AAS-010 §3);
   fehlende Records = fehlender Nachweis = Governance-Verstoß (S2).
+
+## Implementierungsstatus
+
+| Zustand | Wert |
+|---|---|
+| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
+| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |

@@ -90,6 +90,13 @@ niedrig-mittel (Debug erlaubt), Testnet mittel-hoch (Security-/Chaos-Tests
 Pflicht), Mainnet maximal (keine Debug-Endpunkte, keine ungeprueften
 Vertraege, ATVM-Verifier + License Gate als Trust Boundary).
 
+## Implementierungsstatus
+
+| Zustand | Wert |
+|---|---|
+| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
+| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |
+
 ## Changelog
 
 | Version | Datum | Aenderung |

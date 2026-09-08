@@ -67,3 +67,10 @@ PROPOSED → UNDER_REVIEW → APPROVED | REJECTED → SUPERSEDED → ARCHIVED.
 - SCR-XXXX (Standard-Änderungen): formale Änderungsspur bleibt SCR;
   DEC deckt Organisations-/Produkt-/Architektur-Entscheidungen ab.
 - Priorisierungskonflikte zwischen Entscheidungen → AAS-013.
+
+## Implementierungsstatus
+
+| Zustand | Wert |
+|---|---|
+| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
+| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |

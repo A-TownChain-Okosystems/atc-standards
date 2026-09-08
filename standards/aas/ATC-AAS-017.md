@@ -43,3 +43,10 @@ Unverändert AI-DEV-011: `human_review: {required, requested}` je Task und
 PR; Genehmigungsformen Mandat/Freigabe-Vermerk/SCR; Agenten sind niemals
 Approver (ATC-STD-000 §14.1). Die Pflichtliste §2 ist mit AI-DEV-011 §2
 Eskalationsstufen a-d verzahnt: jede Liste-Aktion löst Eskalation aus.
+
+## Implementierungsstatus
+
+| Zustand | Wert |
+|---|---|
+| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
+| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |

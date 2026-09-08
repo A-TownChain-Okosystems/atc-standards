@@ -267,3 +267,10 @@ ATC-STD-203 und repositories.yaml (ATC-ENT-009).
 - **INFORMATIVE:** RFC 2119, README-Compliance-Validator
   (tools/atc-readme-validator/check_readme.py), Dokumentationshierarchie
   (§11), ATC Development Management (kanonische Roadmap)
+
+## Implementierungsstatus
+
+| Zustand | Wert |
+|---|---|
+| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
+| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |

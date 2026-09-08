@@ -364,6 +364,13 @@ Human Gate ungültig (§13, AI-DECISION-001). Evidence Packs sind manipulations-
 geschützt zu führen (Hashes/Git-Referenzen); nachträgliche Änderungen am Evidence
 eines CLOSED-Meilensteins sind nur über AUDIT-001-Records dokumentierbar.
 
+## Implementierungsstatus
+
+| Zustand | Wert |
+|---|---|
+| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
+| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |
+
 ## Changelog (Standard-intern)
 
 - **1.0.0** (2026-09-07): Initial Release — Owner-Entwurf Michael Wroblewski

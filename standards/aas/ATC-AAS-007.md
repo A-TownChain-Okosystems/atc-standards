@@ -56,3 +56,10 @@ status: <AI-DEV-004 §2 Lifecycle>
   (AAS-004) und allowed_files; forbidden_files hat Vorrang.
 - COMPLETED nur bei erfüllten acceptance_criteria UND grüner Validierung
   UND Audit-Record (AI-DEV-009).
+
+## Implementierungsstatus
+
+| Zustand | Wert |
+|---|---|
+| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
+| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |

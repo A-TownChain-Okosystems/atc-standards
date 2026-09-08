@@ -54,6 +54,10 @@ PARTIAL — Evidence: Governance-CI 26/26, Standards Validator, Branch-Protectio
 (atc-standards), Build/Test-CI in atc-contracts vorbereitet (Owner-Aktion ci.yml,
 Issue #99); Version-Gate ueber Issue #96 geplant.
 
+## Security Considerations
+
+Prevention-Gates duerfen keine Zugangsdaten in Gate-Konfigurationen enthalten; Security-Gates folgen ATC-STD-203 (Secret-Scanning, Push-Protection).
+
 ## Changelog
 | 1.0.0 | 2026-09-08 | Initiale Fassung (SCR-0044) |
 

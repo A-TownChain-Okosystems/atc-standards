@@ -45,6 +45,10 @@ die 18 Fehlerklassen und das Schwere-Modell kommen normativ aus BUG-001/BUG-005.
 ## Implementierungsstatus
 SPECIFIED — Umsetzung: Klassifikationsfelder im BUG-002-Record.
 
+## Security Considerations
+
+Klassifikation darf keine sensiblen Daten offenlegen (Kategorie security nur verweisend, ohne Payload-Daten).
+
 ## Changelog
 | 1.0.0 | 2026-09-08 | Initiale Fassung (SCR-0044) |
 

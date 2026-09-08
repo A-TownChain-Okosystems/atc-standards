@@ -47,6 +47,10 @@ Re-Spezifikation).
 ## Implementierungsstatus
 SPECIFIED — Umsetzung: error_id-Serie im Docs-Hub (docs/error-records/INDEX.md).
 
+## Security Considerations
+
+Discovery-Records enthalten keine Zugangsdaten; Schwere-Angaben folgen BUG-001 (S0-S4). Fundstellen in Logs/Reports nur mit $ENV-Platzhaltern.
+
 ## Changelog
 | 1.0.0 | 2026-09-08 | Initiale Fassung (SCR-0044) |
 

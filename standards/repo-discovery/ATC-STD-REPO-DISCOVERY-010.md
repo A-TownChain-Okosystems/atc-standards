@@ -64,6 +64,10 @@ P2: Inkonsistenzen, fehlende Doku, kleinere Luecken · P3: Optimierungen.
 IMPLEMENTED (erster Zyklus) — Evidence: scan.py erzeugt baseline.json +
 latest-scan.json + changes.json; candidates/impact folgen mit Ausbaustufe.
 
+## Security Considerations
+
+Discovery-Reports in .atc/discovery/ sind git-getrackt und muessen frei von Zugangsdaten sein; INV-010 verhindert Schein-Sicherheit bei unvollstaendigen Scans.
+
 ## Changelog
 | 1.0.0 | 2026-09-08 | Initiale Fassung (SCR-0046) |
 

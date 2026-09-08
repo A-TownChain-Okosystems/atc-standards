@@ -58,3 +58,10 @@ sind beide Sets per AI-DEV-007 v1.0.1 vereinheitlicht (SCR-0006 ACCEPTED, 07.09.
 
 Jeder Commit trägt Task- oder Requirement-Bezug (Trailer); Commits ohne
 Bezug sind nur für rein menschliche Änderungen zulässig.
+
+## Implementierungsstatus
+
+| Zustand | Wert |
+|---|---|
+| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
+| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |

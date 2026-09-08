@@ -464,3 +464,10 @@ REQ-STD-302/-018/-019 (Wiki-Wahrheit) erfolgt durch Realitaets-Audits.
 - AD-026 — Bauhierarchie L0-L7
 - AD-040/AD-041 — Bug- & Netz-Standard-Serien (Prozess-Praezedenz)
 - AGENT_MANIFEST.md v3.1.1 — Agenten-Onboarding (Root aller Repos)
+
+## Implementierungsstatus
+
+| Zustand | Wert |
+|---|---|
+| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
+| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |

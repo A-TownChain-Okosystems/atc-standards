@@ -291,6 +291,13 @@ Ausnahmen MÜSSEN gemäß ATC-STD-DESC-001 Abschnitt 11 (EXC-Verfahren) dokument
 - Geplante Folge-Standards: ATC-STD-CHANGELOG-001 (CHANGELOG-Format), ATC-STD-RELEASE-001 (Release-Process), ATC-STD-INC-001 (Incident Management), ATC-STD-REG-001 (Regression Testing) — je eigene SCR + ID-Allokation
 - ISO/IEC-Praxis: systematische Reviews für International Standards (max. 5 Jahre) — informativ; ATC-Kadenzen eigenständig
 
+## Implementierungsstatus
+
+| Zustand | Wert |
+|---|---|
+| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
+| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |
+
 ## Changelog
 
 ### 1.0.0 — 2026-09-07

@@ -46,6 +46,10 @@ nicht reproduzierbare Fehler bekommen einen dokumentierten Begründungs-Eintrag.
 PARTIAL — Evidence existiert: atc-contracts-Suite fand GovernanceContract-Bug
 (59/59 gruen, Issue #99); GovernanceContract.name()-Fix mit Test abgedeckt.
 
+## Security Considerations
+
+Regressionstests fuer Security-Fehler sind selbst Security-relevant: Testdaten nie mit echten Zugangsdaten; Fixture-Prinzip.
+
 ## Changelog
 | 1.0.0 | 2026-09-08 | Initiale Fassung (SCR-0044) |
 

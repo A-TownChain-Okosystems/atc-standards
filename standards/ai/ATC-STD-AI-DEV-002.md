@@ -58,3 +58,10 @@ Owner-Ausnahme gemäß SCR-0003 Option B mit Commit-Nachweis).
 Handeln außerhalb der Matrix = Governance-Verstoß; sofortiges Anhalten,
 Dokumentation als Finding (F-NNN) und BLOCKED-Status des Tasks. Keine
 Rückwirkungsbereinigung ohne Audit-Record (AI-DEV-009 §3).
+
+## Implementierungsstatus
+
+| Zustand | Wert |
+|---|---|
+| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
+| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |

@@ -137,3 +137,10 @@ Ein AI-PR ist mergefähig nur wenn:
 - Force-Push auf `main` oder Review-Zweige durch Agenten.
 - PR-Body als Freitext ohne Pflichtstruktur.
 - Secrets/Token in Commits, Branches oder PR-Bodies (`no_secret_access`).
+
+## Implementierungsstatus
+
+| Zustand | Wert |
+|---|---|
+| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
+| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |

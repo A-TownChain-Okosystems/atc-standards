@@ -125,3 +125,10 @@ ersetzt Discovery NICHT, verkürzt sie aber auf das Wesentliche.
 COMPLETED nur nach den Gates aus AI-DEV-001 §12 und Anlage des Audit-Records
 (AI-DEV-009). Der Task-Record wird mit `completed:`-Zeitstempel geschlossen
 und bleibt dauerhaft abgelegt (keine Löschung).
+
+## Implementierungsstatus
+
+| Zustand | Wert |
+|---|---|
+| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
+| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |

@@ -1,16 +1,16 @@
 {
-  "scan_id": "DISC-2026-09-08-001",
+  "scan_id": "DISC-2026-09-08-002",
   "repository": "atc-standards",
   "baseline_commit": "9f4bc2114cd0eefa756a3f2e5592dd94cdf6f07c",
-  "current_commit": "80a83474db7b1fbfb84f3daa4e861fedebf9fe78",
-  "scanned_at": "2026-09-08 13:01",
+  "current_commit": "817dcc36a7d5926fa523ed2c1505c57ba66f0207",
+  "scanned_at": "2026-09-08 13:11",
   "standard": "ATC-STD-REPO-DISCOVERY-001..010 (SCR-0046)",
   "totals": {
-    "files": 739,
+    "files": 740,
     "by_class": {
       "automation": 17,
       "configuration": 6,
-      "data": 14,
+      "data": 15,
       "documentation": 192,
       "documentation/priority": 26,
       "governance-registry": 26,
@@ -20,12 +20,13 @@
       "template": 17
     }
   },
-  "new_content": 13,
+  "new_content": 14,
   "modified_content": 11,
   "deleted_content": 0,
   "changes": {
     "NEW": [
       ".atc/discovery/baseline.json",
+      ".atc/discovery/latest-scan.json",
       "change-requests/SCR-0046.md",
       "standards/repo-discovery/ATC-STD-REPO-DISCOVERY-001.md",
       "standards/repo-discovery/ATC-STD-REPO-DISCOVERY-002.md",

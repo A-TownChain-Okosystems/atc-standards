@@ -44,6 +44,10 @@ CHANGELOG? Je Pruefung ein Urteil REQUIRED/NOT_REQUIRED mit Begruendung.
 SPECIFIED — Format im scan.py-Report (impact-report.json) vorgesehen;
 Ausbaustufe: heuristische Ableitung der 6 Bereiche aus Change Type + Pfad.
 
+## Security Considerations
+
+Impact-Analysen markieren Security-Relevanz automatisch (RD-008-Kopplung); keine sensiblen Daten in impact-report.json.
+
 ## Changelog
 | 1.0.0 | 2026-09-08 | Initiale Fassung (SCR-0046) |
 

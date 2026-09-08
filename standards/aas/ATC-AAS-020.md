@@ -58,3 +58,10 @@ protokolliert; nach `max_attempts` ist Autonomie für diese Task beendet.
 Sofortige Eskalation (S1), Ausführung des dokumentierten Rollbacks
 (AAS-009 §1 ROLLBACK) nach Owner- oder Rollback-Standard-Freigabe,
 Finding mit Ursachenanalyse (AI-DEV-006: observation/decision/reason).
+
+## Implementierungsstatus
+
+| Zustand | Wert |
+|---|---|
+| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
+| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |

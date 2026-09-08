@@ -60,7 +60,7 @@ def main():
     # MD-02 UPPER_SNAKE_CASE
     for p in iter_md(repo):
         name = os.path.basename(p)
-        if name not in ("AGENTS.md",) and not re.match(r"^[A-Z0-9_]+\.md$", name) and name != "AGENT_MANIFEST.md":
+        if name not in ("AGENTS.md",) and not re.match(r"^[A-Z0-9_-]+\.md$", name) and name != "AGENT_MANIFEST.md":
             fails.append("MD-02: kein UPPER_SNAKE_CASE: " + name)
 
     # MD-03/04/05 Überschriften, Fences, Frontmatter-Status

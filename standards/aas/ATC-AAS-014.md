@@ -57,3 +57,10 @@ bis Bereinigung. Rotation ist Owner-Aktion.
 Benötigt eine Agentenarbeit ein Secret (z.B. Deploy), erfolgt der Zugriff
 ausschließlich über vom Owner verwaltete Secret-Stores — der Agent
 referenziert nur den Namen.
+
+## Implementierungsstatus
+
+| Zustand | Wert |
+|---|---|
+| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
+| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |

@@ -569,6 +569,13 @@ Ausnahmen von diesem Standard MÜSSEN gemäß ATC-STD-DESC-001 Abschnitt 11 (EXC
 - CHANGE_CONTROL.md — SCR-Verfahren (ATC-STD-000 §20)
 - Geplante Folge-Standards: ATC-STD-CHANGELOG-001, ATC-STD-RELEASE-001, ATC-STD-GIT-001, ATC-STD-AUDIT-001 (noch nicht allockiert — bedürfen jeweils eigener SCRs)
 
+## Implementierungsstatus
+
+| Zustand | Wert |
+|---|---|
+| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
+| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |
+
 ## Changelog
 
 ### 1.0.0 — 2026-09-07

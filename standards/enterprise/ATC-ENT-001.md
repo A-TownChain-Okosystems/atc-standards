@@ -87,3 +87,10 @@ Dokumente ohne gültige Identität haben keinen normativen Status.
 ATC-ENT bindet alle Organisationseinheiten (ENT-008), Rollen (ENT-002),
 Entscheidungen (ENT-003), Repositories (ENT-009) — menschliche wie
 KI-Agenten-Mitglieder gleichermaßen (§7 Einbindung über AAS/AI-DEV).
+
+## Implementierungsstatus
+
+| Zustand | Wert |
+|---|---|
+| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
+| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |

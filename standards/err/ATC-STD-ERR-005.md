@@ -55,6 +55,10 @@ Der Scan dokumentiert `repositories_checked` und je Repository das Ergebnis
 SPECIFIED — Umsetzung: Cross-Repo-Scan-Bericht im Knowledge Record; Kopplung an
 kai_os_sync-Repo-Liste (26 Repos).
 
+## Security Considerations
+
+Cross-Repo-Scans verwenden nur Repository-Zugriff mit read-only Rechten; Ergebnisse enthalten keine Secrets.
+
 ## Changelog
 | 1.0.0 | 2026-09-08 | Initiale Fassung (SCR-0044) |
 

@@ -260,6 +260,13 @@ S-23 erzwingt Integrität je CI-Lauf. `active`-Status ohne verifizierte
 Implementierung wäre ein Sicherheitsversprechen ohne Basis — daher Status-
 Ehrlichkeitsregel (REQ-PROTO-021).
 
+## Implementierungsstatus
+
+| Zustand | Wert |
+|---|---|
+| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
+| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |
+
 ## Changelog (Standard-intern)
 
 - **1.0.0** (2026-09-08): Initial Release — Owner-Entwurf Michael Wroblewski

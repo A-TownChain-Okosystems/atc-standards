@@ -47,6 +47,10 @@ Follow-up und blockiert den Abschluss (ERR-000 REQ-ER-008).
 SPECIFIED — Umsetzung: Impact-Tabelle im Knowledge Record; Dependency-Graph aus
 ATC-STD-202 (Repository-Rollen/-Domaenen).
 
+## Security Considerations
+
+Impact-Status UNKNOWN blockiert Abschluss; Security-Komponenten im Impact erhalten automatisch Security-Review-Pflicht (ERR-008).
+
 ## Changelog
 | 1.0.0 | 2026-09-08 | Initiale Fassung (SCR-0044) |
 

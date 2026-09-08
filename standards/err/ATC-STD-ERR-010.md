@@ -53,6 +53,10 @@ Gleiche FehlerKLASSE automatisch erkennen: ATC fuehrt eine Error Pattern Library
 ## Implementierungsstatus
 SPECIFIED — Umsetzung: Library als YAML im Docs-Hub (docs/error-records/PATTERNS.yaml).
 
+## Security Considerations
+
+Pattern-Library enthaelt Fehlermuster, niemals Exploit-Daten, Klartext-Zugangsdaten oder Angriffsbeschreibungen.
+
 ## Changelog
 | 1.0.0 | 2026-09-08 | Initiale Fassung (SCR-0044) |
 

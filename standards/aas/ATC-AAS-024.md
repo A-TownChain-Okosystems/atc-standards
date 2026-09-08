@@ -58,3 +58,10 @@ priority: P0|P1|P2
 - Antwortpflicht: BLOCKER- und REQUEST-Nachrichten beantwortet der
   Empfänger mit RESULT oder BLOCKED — niemals Schweigen (Timeout = Eskalation
   an Owner, AI-DEV-011 §2).
+
+## Implementierungsstatus
+
+| Zustand | Wert |
+|---|---|
+| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
+| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |

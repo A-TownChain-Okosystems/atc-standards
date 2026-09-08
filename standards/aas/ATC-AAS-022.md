@@ -50,3 +50,10 @@ ATC-STD-000 §37).
 ACTIVE → DEPRECATED (keine neuen Tasks) → RETIRED (nur Lesen der Historie).
 MAJOR-Wechsel erfordert neue Capability-Prüfung (AAS-002); Retirement wird
 im AGENT_MANIFEST dokumentiert und KPI-Historie bleibt erhalten.
+
+## Implementierungsstatus
+
+| Zustand | Wert |
+|---|---|
+| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
+| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |

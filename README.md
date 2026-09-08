@@ -11,9 +11,11 @@
 | Standard-Dateien (`standards/`) | **430** |
 | Familien | **49** |
 | Registry SHA-256 | `ff2117a62088cb0d…` (vollständig: `registry/registry.lock`) |
-| Stand | 2026-09-08 14:59 UTC+2 |
+| Stand | 2026-09-08 15:11 UTC+2 |
 
 Implementierungs-Matrix: [`registry/standard-implementation.yaml`](registry/standard-implementation.yaml) (ATC-STD-IMPLEMENTATION-001).
+
+
 
 
 
@@ -130,6 +132,9 @@ CI-Validierung (Registry-Validierung + Gates) → APPROVED → normativ in Kraft
 ├── atc/                 # Legacy ATC-01..99
 ├── ats/                 # ATS System Standards
 ├── change-requests/    # SCR-0001..0007
+├── audits/             # Audit-Evidence (AUD-2026-NNNN)
+├── protocols/          # Protocol-Standards (ATC-PROTO-*)
+├── licenses/           # Lizenz-Texte
 ├── docs/                # Audits & Berichte
 ├── governance/          # Verfassung ATC-STD-000
 ├── licensing/           # System-/Hardware-Lizenzen

@@ -56,3 +56,10 @@ files_changed · result · risk_level · human_approval
 - Anschluss an LogChain/AuditTrail/DefenderGPT-Konzepte erfolgt über die
   Produkt-Repositories (atc-indexer, aurora-ai); dieser Standard definiert
   nur das Protokollformat.
+
+## Implementierungsstatus
+
+| Zustand | Wert |
+|---|---|
+| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
+| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |

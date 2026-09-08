@@ -49,6 +49,10 @@ abgeleitet werden.
 ## Implementierungsstatus
 SPECIFIED — Umsetzung: error_pattern-Feld im BUG-005-Analyse-Template.
 
+## Security Considerations
+
+Root-Cause-Analysen duerfen keine Klartext-Zugangsdaten enthalten; Sicherheitsrelevante Ursachen (BUG-005-Klasse 18) erfordern Security-Scan im Post-Fix-Audit (ERR-012).
+
 ## Changelog
 | 1.0.0 | 2026-09-08 | Initiale Fassung (SCR-0044) |
 

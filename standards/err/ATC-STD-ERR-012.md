@@ -45,6 +45,10 @@ Nach dem Fix wird ERNEUT global gesucht und eine Abschlusspruefung durchgefuehrt
 ## Implementierungsstatus
 SPECIFIED — Umsetzung: post_fix_scan-Block im Knowledge Record (ERR-013).
 
+## Security Considerations
+
+Post-Fix-Audit fuer Security-Fehlerklasse schliesst Security-Scan ein; Abschluss-Audit maskiert Zugangsdaten in allen Artefakten.
+
 ## Changelog
 | 1.0.0 | 2026-09-08 | Initiale Fassung (SCR-0044) |
 

@@ -63,3 +63,10 @@ status: ACTIVE|RETIRED
 AAS-001 konkretisiert die abstrakte Manifest-Pflicht aus AI-DEV-001 §2 um
 die Felder `environment` und `status`; kein Widerspruch — AI-DEV-001 bleibt
 Dach-Norm der Identität.
+
+## Implementierungsstatus
+
+| Zustand | Wert |
+|---|---|
+| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
+| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |

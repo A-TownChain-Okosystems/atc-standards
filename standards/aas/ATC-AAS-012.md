@@ -56,3 +56,10 @@ evidence: {repository: atclang, file: Cargo.toml}
 - Aussagen in Findings, Audit-Records und PR-Bodies tragen ihre
   Klassifikation implizit über die Fundstellen-Pflicht (AI-DEV-005 §2).
 - Verwechslung von INFERENCE mit FACT ist ein Governance-Verstoß (S2).
+
+## Implementierungsstatus
+
+| Zustand | Wert |
+|---|---|
+| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
+| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |

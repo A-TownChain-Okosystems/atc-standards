@@ -297,6 +297,13 @@ nicht still vergeben werden; jede Slot-Vergabe braucht SCR + §9. Der Master-Aud
 deckt AUDIT-001 die Audit-Kette ab. Agenten-Operationen ohne Mandatsbeantwortung
 (§8) sind governance-widrig (AI-DECISION-001 Human Gates bleiben übergeordnet).
 
+## Implementierungsstatus
+
+| Zustand | Wert |
+|---|---|
+| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
+| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |
+
 ## Changelog (Standard-intern)
 
 - **1.0.7** (2026-09-08): PATCH (SCR-0029) — Register-Architektur vollständig:

@@ -44,6 +44,10 @@ Regeln unkontrolliert in Einzelrepositories entwickeln.
 SPECIFIED — Cross-Repo-Mechanik existiert (ERR-005, kai_os_sync-Repo-Liste 26
 Repos); Kandidaten-Anbindung folgt mit Scan-Integration.
 
+## Security Considerations
+
+Cross-Repo-Discovery nutzt nur autorisierte Repository-Zugriffe der Sync-Agents; Ergebnisse ohne Zugangsdaten.
+
 ## Changelog
 | 1.0.0 | 2026-09-08 | Initiale Fassung (SCR-0046) |
 

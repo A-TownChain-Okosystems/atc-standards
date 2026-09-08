@@ -47,6 +47,10 @@ Ein Softwarefehler kann gleichzeitig ein Dokumentationsfehler sein — und umgek
 ## Implementierungsstatus
 SPECIFIED — Umsetzung: Doku-Check als Maintenance-Report-Feld (REPO-MAINT §16).
 
+## Security Considerations
+
+Doku-Checks pruefen auch auf versehentlich dokumentierte Zugangsdaten (Security-Doku-Regel ATC-STD-203).
+
 ## Changelog
 | 1.0.0 | 2026-09-08 | Initiale Fassung (SCR-0044) |
 

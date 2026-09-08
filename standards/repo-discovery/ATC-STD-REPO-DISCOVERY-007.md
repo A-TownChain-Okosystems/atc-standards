@@ -43,6 +43,10 @@ Dependabot-Alerts; Dependency-Changed ist zulaessiger Change Type (RD-002).
 SPECIFIED — Dependabot-Alerts existieren org-weit; Manifest-Diff-Hook im
 scan.py vorgesehen (requirements.txt, Cargo.toml, package.json, go.mod).
 
+## Security Considerations
+
+Dependency-Reviews pruefen Lizenz + bekannte CVEs; neue Dependencies werden nie ohne Review uebernommen (ATC-STD-204).
+
 ## Changelog
 | 1.0.0 | 2026-09-08 | Initiale Fassung (SCR-0046) |
 

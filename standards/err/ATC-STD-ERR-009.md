@@ -57,6 +57,10 @@ die Praevention Pflicht (ERR-000 §3); Ausnahmen nur mit Begruendung im Record.
 SPECIFIED — Evidence-Anker: Version Check (Issue #96), Standards Validator
 (S-01..S-25), Dependabot-Rollout — jeweils schon im Aufbau.
 
+## Security Considerations
+
+Praeventionsmassnahmen fuer Security-Fehlerklassen erfordern Security Regression Tests (Massnahmen-Matrix); Validator-Erweiterungen laufen unter CI ohne erweiterte Rechte.
+
 ## Changelog
 | 1.0.0 | 2026-09-08 | Initiale Fassung (SCR-0044) |
 

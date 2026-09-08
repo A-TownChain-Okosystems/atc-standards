@@ -49,6 +49,10 @@ entsteht NUR via ATC-STD-000 §9/§37 Registry-First.
 IMPLEMENTED (erster Zyklus) — Evidence: scan.py-Regel-Signal-Scan;
 candidates.json im ersten Scan-Report.
 
+## Security Considerations
+
+Kandidaten-Extrakte enthalten Regel-Signale, keine sensiblen Konfigurationswerte; REVIEW-Prozess verhindert versehentliche Standardisierung von Zugangsdaten.
+
 ## Changelog
 | 1.0.0 | 2026-09-08 | Initiale Fassung (SCR-0046) |
 

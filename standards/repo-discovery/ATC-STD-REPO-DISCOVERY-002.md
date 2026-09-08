@@ -54,6 +54,10 @@ MERGE → DISCOVERY SCAN → NEW CONTENT?
 ## Implementierungsstatus
 IMPLEMENTED (erster Zyklus) — Evidence: scan.py-Diff (NEW/MODIFIED/DELETED).
 
+## Security Considerations
+
+Change-Reports enthalten Pfade und Typen, niemals Dateiinhalte mit potenziellen Zugangsdaten.
+
 ## Changelog
 | 1.0.0 | 2026-09-08 | Initiale Fassung (SCR-0046) |
 

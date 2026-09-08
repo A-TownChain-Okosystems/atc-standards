@@ -43,6 +43,10 @@ kein wartender Scan-Zyklus.
 SPECIFIED — Secret-Scanning aktiv (203); P0-Sofortmeldungs-Hook an
 Governance-CI/Signatur-Check folgt mit Scan-Integration.
 
+## Security Considerations
+
+P0-Sofortfund (Secret, Bypass, Konsens-Bruch) meldeklar an BUG-001; .gitignore/Secret-Scanning pruefen bei jedem Scan.
+
 ## Changelog
 | 1.0.0 | 2026-09-08 | Initiale Fassung (SCR-0046) |
 

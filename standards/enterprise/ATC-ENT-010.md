@@ -61,3 +61,10 @@ Risiken (ENT-011), Abhängigkeiten, Migrations-/Rollback-Plan
 Wie Verfassung §32: nachgelagerte Dokumentation binnen 72h, volle
 Pipeline rückwirkend; Owner-Benachrichtigung sofort. Kein Stillstand
 kritischer Systeme erzwingbar.
+
+## Implementierungsstatus
+
+| Zustand | Wert |
+|---|---|
+| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
+| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |

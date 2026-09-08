@@ -58,3 +58,10 @@ Bei parallelen Änderungen am gleichen Ziel (Verstoß gegen §1): Owner-
 Eskalation (AI-DEV-011 §2), Findings S1, Auflösung durch den zuständigen
 Agenten mit Sync-Record (BUG-004). Merge-Konflikte durch Regelverstoß
 sind keine technischen Zufälle, sondern Governance-Verstöße.
+
+## Implementierungsstatus
+
+| Zustand | Wert |
+|---|---|
+| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
+| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |

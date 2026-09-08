@@ -47,6 +47,10 @@ Governance-Finding (Praevention versagt oder wurde nicht gebaut).
 ## Implementierungsstatus
 SPECIFIED — Umsetzung: Feld im Knowledge Record + Maintenance-Report-Metrik.
 
+## Security Considerations
+
+Recurrence-Monitoring ueberwacht Praeventionsversagen; Security-Recurrence = sofortiges P0 (BUG-001).
+
 ## Changelog
 | 1.0.0 | 2026-09-08 | Initiale Fassung (SCR-0044) |
 

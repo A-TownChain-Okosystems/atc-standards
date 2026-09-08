@@ -68,6 +68,10 @@ status: CLOSED
 SPECIFIED — Umsetzung: Verzeichnis docs/error-records/ im Docs-Hub anlegen;
 error_id-Serie fortlaufend.
 
+## Security Considerations
+
+Knowledge-Records unterliegen der Sicherheitsregel: keine Klartext-Zugangsdaten, nur $ENV-Platzhalter; Ablage revisionssicher (git-getrackt).
+
 ## Changelog
 | 1.0.0 | 2026-09-08 | Initiale Fassung (SCR-0044) |
 

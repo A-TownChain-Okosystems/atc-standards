@@ -170,6 +170,13 @@ beantwortet sein; „kein Impact" ist eine Aussage, die belegt werden muss. Mani
 von MAUD-Records wäre ein P0-Angriff auf die Governance selbst — Änderungen nur als
 gekennzeichnete Korrekturen mit Human Gate.
 
+## Implementierungsstatus
+
+| Zustand | Wert |
+|---|---|
+| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
+| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |
+
 ## Changelog (Standard-intern)
 
 - **1.0.0** (2026-09-08): Initial Release — Ausarbeitung der FRAMEWORK-001 §9-

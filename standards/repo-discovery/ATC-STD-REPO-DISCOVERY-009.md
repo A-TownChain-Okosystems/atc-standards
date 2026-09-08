@@ -44,6 +44,10 @@ nach REPO-MAINT-001 §12).
 SPECIFIED — Regelwerk in scan.py-Pruefliste vorgesehen (README/ARCHITECTURE/
 CHANGELOG-Beruehrung je Change Type).
 
+## Security Considerations
+
+Doku-Gap-Checks verhindern, dass Sicherheitsmechanismen undichtig oder unzureichend dokumentiert werden; keine Zugangsdaten in TODOs.
+
 ## Changelog
 | 1.0.0 | 2026-09-08 | Initiale Fassung (SCR-0046) |
 

@@ -108,6 +108,13 @@ Die Einhaltung wird geprueft durch: (1) atc-std-validator (Registry-Sync S-14, H
 
 Sprachwahl ist sicherheitsrelevant: Kryptografie-, Konsens- und VM-Komponenten (S4) MUESSEN in Rust (Memory-Safety) erfolgen; unsicherer Fremdcode in diesen Pfadketten ist unzulaessig. Der Language-Policy-Check ist Teil des G18-Security-Audits (AD-023).
 
+## Implementierungsstatus
+
+| Zustand | Wert |
+|---|---|
+| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
+| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |
+
 ## Changelog
 
 - 1.0.0 (2026-09-07): Initiale Fassung. Layer-Modell L1–L5, Sprachbindungen, Ausnahme-Regelung fuer Referenz-Implementierungen, Technology Profile Audit als SHOULD-Regel. Status: CANDIDATE (wartet auf APPROVED gemaess ATC-STD-000 §9).

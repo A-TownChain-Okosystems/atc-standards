@@ -71,3 +71,10 @@ das Ergebnis im Task-Record (Discovery-Record, AI-DEV-003 §2).
 Nach APPROVED: Ablage in allen R2+-Repos binnen der 30-Tage-Frist
 (07.10.2026, identisch zur Agent-Manifest-Auflage aus AI-DEV-001 §16;
 Task #111 deckt beide ab).
+
+## Implementierungsstatus
+
+| Zustand | Wert |
+|---|---|
+| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
+| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |

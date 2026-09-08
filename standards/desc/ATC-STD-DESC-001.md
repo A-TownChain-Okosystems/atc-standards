@@ -416,6 +416,13 @@ Damit KÖNNEN KI-Agenten, CI/CD, Validatoren und Audit-Systeme Standards automat
 - CHANGE_CONTROL.md — SCR-Verfahren (operationalisiert ATC-STD-000 §20)
 - SemVer 2.0.0 — https://semver.org/
 
+## Implementierungsstatus
+
+| Zustand | Wert |
+|---|---|
+| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
+| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |
+
 ## Changelog
 
 ### 1.0.0 — 2026-09-07

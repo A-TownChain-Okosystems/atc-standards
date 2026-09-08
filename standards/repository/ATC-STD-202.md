@@ -216,6 +216,13 @@ NORMATIVE: ATC-STD-000 (Governance), ATC-STD-202, ATC-STD-203 ·
 INFORMATIVE: AD-025/026/028/029/031 (DECISIONS_REGISTER, Hub) ·
 IMPLEMENTATION: tools/atc-repo-audit, schemas/repository.schema.yaml.
 
+## Implementierungsstatus
+
+| Zustand | Wert |
+|---|---|
+| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
+| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |
+
 ## Changelog
 
 - 1.1.0 (2026-09-07): SCR-0005 Option A (Owner-Freigabe) — Abschnitt 3a Rollenfestlegung Chain-Komponenten (a-townchain = Chain-Protokoll/Bibliothek, atc-node = Full-Node-Binary/Runtime, S4); REQ-STD-211/212.

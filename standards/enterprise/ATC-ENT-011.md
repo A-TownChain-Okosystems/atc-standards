@@ -62,3 +62,10 @@ risk:
 F-NNN (Findings, BUG-001) ↔ RISK-NNNN: ein Finding ab Severity S1 kann
 ein Risiko eröffnen (`risk_ref`); Findings schließen nicht Risiken.
 Doppeltellungen vermeiden (Registry-First, §37).
+
+## Implementierungsstatus
+
+| Zustand | Wert |
+|---|---|
+| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
+| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |

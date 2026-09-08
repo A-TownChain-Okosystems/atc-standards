@@ -59,3 +59,10 @@ vermerkt sie als `task_reference.standard`.
 "User sagt X → KI schreibt Code" ohne Discovery ist ein Governance-Verstoß.
 Direktive des Owners befreit nicht von der Discovery-Pflicht — sie definiert
 nur den Auftrag.
+
+## Implementierungsstatus
+
+| Zustand | Wert |
+|---|---|
+| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
+| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |

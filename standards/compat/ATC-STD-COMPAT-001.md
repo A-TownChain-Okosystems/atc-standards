@@ -398,3 +398,10 @@ Dieser Standard ist als Pflicht-Gate im übergeordneten ATC-STD-UPDATE-001 veran
 
 ---
 *ATC-STD-COMPAT-001 v1.0.0 · Owner-Entwurf Michael Wroblewski · Aurora (Superagent) · 07.09.2026 · §9-APPROVED 23:02 UTC+2 — normativ, §30-eingefroren*
+
+## Implementierungsstatus
+
+| Zustand | Wert |
+|---|---|
+| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
+| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |

@@ -260,6 +260,13 @@ V2S-G7 (Security) ist hartes Release-Gate; Sicherheitsprüfungen MÜSSEN vor
 jedem Release Candidate abgeschlossen sein. Notfalländerungen folgen
 ATC-STD-UPDATE-001 (Emergency) und MÜSSEN nachträglich durch die Chain.
 
+## Implementierungsstatus
+
+| Zustand | Wert |
+|---|---|
+| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
+| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |
+
 ## Changelog
 
 | Version | Datum | Änderung |

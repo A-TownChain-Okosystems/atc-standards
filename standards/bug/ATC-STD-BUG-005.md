@@ -452,6 +452,13 @@ Ausnahmen von diesem Standard MÜSSEN gemäß ATC-STD-DESC-001 Abschnitt 11 (EXC
 - schemas/naming-conventions.schema.json — errErrorClassId, errRootCauseCategoryId
 - Geplante Folge-Standards: ATC-STD-REG-001 (Regression Testing), ATC-STD-INC-001 (Incident Management), ATC-STD-AUDIT-001 (Completeness & Audit) — je eigene SCR + ID-Allokation erforderlich
 
+## Implementierungsstatus
+
+| Zustand | Wert |
+|---|---|
+| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
+| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |
+
 ## Changelog
 
 ### 1.0.0 — 2026-09-07

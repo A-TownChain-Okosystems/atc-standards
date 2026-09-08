@@ -43,6 +43,10 @@ Standards, veraltete Regeln und mehrere Standards fuer dasselbe Problem.
 SPECIFIED — Mechanik etabliert (S-17 Duplicate Detection der Validator-Suite +
 Registry-First §37); Kopplung an Kandidaten-Pipeline folgt mit Scan-Integration.
 
+## Security Considerations
+
+Duplikat-Suche laeuft gegen die Registry (read-only); keine Dateisystem-Inhalte an Dritte.
+
 ## Changelog
 | 1.0.0 | 2026-09-08 | Initiale Fassung (SCR-0046) |
 

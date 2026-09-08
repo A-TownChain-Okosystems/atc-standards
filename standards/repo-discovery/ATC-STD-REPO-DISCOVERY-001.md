@@ -74,6 +74,10 @@ DIFF → NEW CONTENT → CLASSIFICATION.
 IMPLEMENTED (erster Zyklus) — Evidence: tools/discovery/scan.py (Baseline +
 Diff + Klassifizierung), erster Scan auf atc-standards in .atc/discovery/.
 
+## Security Considerations
+
+Discovery-Baselines sind Inhaltsverzeichnisse ohne Dateiinhalte; keine Zugangsdaten erfassbar. Scans mit read-only Git-Zugriff.
+
 ## Changelog
 | 1.0.0 | 2026-09-08 | Initiale Fassung (SCR-0046) |
 
