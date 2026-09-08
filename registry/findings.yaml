@@ -398,3 +398,21 @@ findings:
   status: OPEN
   resolution: null
   discovered: '2026-09-08'
+- id: F-048
+  title: 'Governance-CI V-16 False-NO-GO durch Shallow-Clone (actions/checkout default
+    fetch-depth 1): Conventional-Commits-Bewertung degeneriert auf den HEAD-Commit
+    (0% wenn nicht konventionell). 15 Repos rot nach License-Batch SCR-0036/F-046;
+    7 weitere latent betroffen'
+  severity: P2
+  source: 'CI-Log Run #28 atc-shivacore (02824b8, 00:35 UTC) + Shallow-Clone-Reproduktion (BUG-001 OBSERVE→VERIFY)'
+  alias: null
+  scr: SCR-0039
+  status: RESOLVED
+  resolution: 'SCR-0039 (08.09.2026): Zweiebenen-Fix — (1) alle 22 governance-ci.yml per
+    API-Batch-Patch: fetch-depth 0 am Repo-Checkout + workflow_dispatch-Trigger;
+    (2) atc-repo-audit V-16 Shallow-Guard (<= 2 Commits = WARN, nie MUST-FAIL).
+    Regressionstest: alle 22 CI-Neulaeufe verifiziert GRUEN/GATE PASS (AUD-2026-0004).
+    Kein Daten- oder Produktionsverlust — reine CI-Konfiguration, SYNC-OK (keine
+    normativen Artefakte betroffen).'
+  discovered: '2026-09-08'
+  resolved_date: '2026-09-08'

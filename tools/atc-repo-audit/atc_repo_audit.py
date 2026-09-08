@@ -205,17 +205,23 @@ def audit_repo(repo, level, registry_path=None):
         a.add("V-15", "PASS" if reg_ok else "FAIL", "Documentation",
               "Registry-Eintrag %s" % ("ok" if reg_ok else "fehlt fuer %s" % name))
 
-    # V-16 Conventional Commits
+    # V-16 Conventional Commits (F-048/SCR-0039: Shallow-Clone-Guard —
+    # flache Historie <= 2 Commits ist fuer die 20-Commit-Bewertung unzureichend
+    # und darf kein MUST-FAIL erzeugen, nur WARN mit Reparaturhinweis.)
     if lvl_ge("R2", level):
         log = subprocess.run(["git", "log", "--oneline", "-20"], cwd=repo,
                              capture_output=True, text=True).stdout.splitlines()
         subs = [l.split(" ", 1)[-1].strip() for l in log if l.strip()]
-        frac = sum(1 for s in subs if CC_RE.match(s)) / max(1, len(subs)) if subs else 0
-        if frac >= 0.8:
-            a.add("V-16", "PASS", "CI/CD", "Conventional Commits: %d%% der letzten %d" % (frac * 100, len(subs)))
+        if len(subs) <= 2:
+            a.add("V-16", "WARN", "CI/CD",
+                  "Historie zu flach (%d Commit(s)) — fetch-depth: 0 im Workflow verwenden (F-048/SCR-0039)" % len(subs))
         else:
-            a.add("V-16", "WARN" if frac >= 0.5 else "FAIL", "CI/CD",
-                  "Conventional Commits nur %d%% (<80%%)" % (frac * 100))
+            frac = sum(1 for s in subs if CC_RE.match(s)) / max(1, len(subs)) if subs else 0
+            if frac >= 0.8:
+                a.add("V-16", "PASS", "CI/CD", "Conventional Commits: %d%% der letzten %d" % (frac * 100, len(subs)))
+            else:
+                a.add("V-16", "WARN" if frac >= 0.5 else "FAIL", "CI/CD",
+                      "Conventional Commits nur %d%% (<80%%)" % (frac * 100))
     else:
         a.add("V-16", "SKIP", "CI/CD", "nicht anwendbar < R2")
 
