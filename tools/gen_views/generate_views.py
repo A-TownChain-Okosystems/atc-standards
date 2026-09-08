@@ -82,6 +82,7 @@ def main():
         c = c.replace(m.group(1), m.group(1) + "\n" + kb, 1)
     elif "GENERATED-BY generate_views.py" not in c:
         c = kb + "\n" + c
+    c = re.sub(r"\n{3,}", "\n\n", c)  # Generator-Hygiene: idempotent, keine Leerzeilen-Akkumulation
     open(p, "w", encoding="utf-8").write(c)
 
     # ---------- 2. AGENT_MANIFEST ----------
