@@ -10,8 +10,8 @@ generated_from: registry/standards.yaml
 updated: "2026-09-08"
 coverage_kpi:
   registry_total: 420
-  matrix_entries: 22
-  matrix_coverage: "5.2%"
+  matrix_entries: 21
+  matrix_coverage: "5.0%"
   target: "je Wartungszyklus monoton steigend (REQ-IMP-007)"
 
 standards:
