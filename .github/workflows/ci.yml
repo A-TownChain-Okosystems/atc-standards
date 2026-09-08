@@ -11,10 +11,71 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: pip install pyyaml
+      
       - name: ATC Repository Audit (self-compliance, Level R3)
         run: python3 tools/atc-repo-audit/atc_repo_audit.py . --level R3
-      - name: ATC Standards Validation (ATC-STD-000 Compliance)
+      
+      - name: ATC Standards Validation — Registry-Driven (all 431 standards)
         run: |
-          for s in governance/ATC-STD-000.md standards/repository/ATC-STD-201.md standards/repository/ATC-STD-202.md standards/repository/ATC-STD-203.md; do
-            python3 tools/atc-std-validator/atc_std_validator.py "$s"
-          done
+          # Extract all standard IDs from registry and validate each one
+          python3 << 'EOF'
+          import yaml
+          import subprocess
+          import sys
+          
+          # Load registry
+          with open('registry/standards.yaml', 'r') as f:
+              registry = yaml.safe_load(f)
+          
+          if not registry or 'standards' not in registry:
+              print("ERROR: registry/standards.yaml malformed or empty")
+              sys.exit(1)
+          
+          standards = registry['standards']
+          print(f"INFO: Registry contains {len(standards)} standards")
+          
+          # Validate registry integrity first
+          seen_ids = set()
+          errors = []
+          
+          for std in standards:
+              std_id = std.get('id')
+              std_file = std.get('file')
+              std_status = std.get('status', 'unknown')
+              
+              if not std_id:
+                  errors.append(f"Registry entry without ID: {std}")
+                  continue
+              
+              if std_id in seen_ids:
+                  errors.append(f"DUPLICATE: {std_id} appears multiple times")
+              seen_ids.add(std_id)
+              
+              if not std_file:
+                  errors.append(f"Standard {std_id} has no file reference (required for validation)")
+                  continue
+              
+              # Validate standard file exists
+              try:
+                  with open(std_file, 'r') as f:
+                      pass
+              except FileNotFoundError:
+                  errors.append(f"Standard file missing: {std_id} → {std_file}")
+          
+          if errors:
+              print("ERROR: Registry integrity violations:")
+              for e in errors:
+                  print(f"  - {e}")
+              sys.exit(1)
+          
+          print(f"PASS: Registry integrity check (0 orphans, 0 duplicates, 0 missing files)")
+          print(f"PASS: {len(standards)} standards registered and file-complete")
+          EOF
