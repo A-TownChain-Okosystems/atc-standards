@@ -1,6 +1,14 @@
 # Changelog
 
-## [Unreleased] — 2026-09-08 (SCR-0045, Owner-Re-Audit-Response)
+## [Unreleased] — 2026-09-08 (SCR-0045/0047/0048)
+
+### Voll-Klassifikation der Implementierungs-Matrix (SCR-0048)
+- `registry/standard-implementation.yaml` jetzt 431/431 Eintraege (Coverage-KPI
+  100 %): 62 enforced, 129 implemented, 240 specification_only (Zielsystem im
+  Rebuild — ehrlich statt Fake-IMPLEMENTED).
+- NEU: tools/gen_views/gen_implementation_matrix.py (regelbasierte
+  Familien-Klassifikation mit Evidence; Owner-Weisung „implementieren, wenn sie
+  in das aktuelle System passen").
 
 ### Owner-Re-Audit AMBER 84/100 — Umsetzung der drei Prioritätsschritte
 - **NEU: ATC-STD-IMPLEMENTATION-001 v1.0.0 CANDIDATE** (FAM-48, Kategorie
