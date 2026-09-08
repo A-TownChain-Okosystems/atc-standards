@@ -1,290 +1,139 @@
 # ATC Standards
 
 <!-- GENERATED-BY generate_views.py — NICHT MANUELL BEARBEITEN -->
-## Registry-Kennzahlen (GENERIERT — Quelle: `registry/standards.yaml`)
+## Current State (GENERIERT — Quelle: `registry/standards.yaml`)
 
 | Kennzahl | Wert |
 |---|---|
 | Registry Standards | **431** |
-| Registry APPROVED | **395** |
-| Registry CANDIDATE (§33) | **36** |
-| Standard-Dateien (`standards/`) | **430** |
+| APPROVED / CANDIDATE | **395 / 36** |
 | Familien | **49** |
-| Registry SHA-256 | `ff2117a62088cb0d…` (vollständig: `registry/registry.lock`) |
+| Registry SHA-256 | `ff2117a62088cb0d…` ([Vollständig](registry/registry.lock)) |
 | Stand | 2026-09-08 16:36 UTC+2 |
 
-Implementierungs-Matrix: [`registry/standard-implementation.yaml`](registry/standard-implementation.yaml) (ATC-STD-IMPLEMENTATION-001).
+**Implementierungs-KPI:** 431 Standards normativ definiert — 62 enforced, 129 implemented, 240 specification-only. Details: [`standard-implementation.yaml`](registry/standard-implementation.yaml) (ATC-STD-IMPLEMENTATION-001).
 
-**Implementierungs-KPI:** 431 Standards normativ definiert — 62 enforced, 129 implemented, 240 specification-only (Zielsysteme im qualitätsgetriebenen Rebuild AD-023/AD-045). Die Aussage „431 Standards implementiert“ ist unzulässig (SCR-0048).
-
-> Die normative Governance-Schicht der A-TownChain-Organisation — Registry,
-> Standards, Schemata, Validatoren und Governance-Entscheidungen.
-
-> **ATC COMPLIANCE: R3 · Standard ATC-STD-201 v1.0.0 · GATE: AUDITED (07.09.2026) · README: ATC-STD-README-001 CONFORM (13/13)**
-
-**Project:** atc-standards
-**Organization:** A-TownChain-Okosystems
-**Status:** `release-candidate`
-**Version:** `1.2.0`
-**License:** `Apache-2.0 — siehe LICENSE`
-
-<!-- atc metadata block (ATC-STD-README-001 §14) -->
-<!--
-atc:
-  standard: ATC-STD-README-001
-  version: 1.0.0
-repository:
-  id: ATC-REPO-GOV-001
-  name: atc-standards
-  type: governance
-  status: release-candidate
-ownership:
-  organization: A-TownChain-Okosystems
-technology:
-  primary_language: YAML/Markdown/Python (Validator)
-governance:
-  security_class: S3 — Governance-Dokument
-  criticality: CRITICAL (Registry = SSOT)
--->
-
-## Overview
-
-atc-standards ist das Governance-Repository der A-TownChain-Okosystems: die
-kanonische Ablage (SSOT) aller 431 registrierten Standards inklusive Verfassung,
-Validator-Suite, Naming-Schema, Change-Requests (SCR) und Findings-Registry.
-Jedes Repository der Organisation richtet sich nach den hier definierten Regeln.
+---
 
 ## Purpose
 
-ATC Standards provides the canonical normative governance layer of the
-A-TownChain ecosystem. It is responsible for:
+ATC Standards is the canonical normative governance layer of the A-TownChain ecosystem. It maintains:
 
-- Verfassung **ATC-STD-000** v1.2.0 (ID-System, Lifecycle, SCR, §30 Immutabilität)
-- Standard-Registry (**380 Standards**: 355 APPROVED, 25 CANDIDATE) mit
-  Versionierung, Dependencies (DAG) und Findings (BUG-001..004)
-- Maschinelle Qualitätssicherung: `atc-std-validator` (431/431 COMPLIANT),
-  Mutationssuite (12/12), `atc-repo-audit` (R3, 100/100 GATE PASS),
-  Agent-Manifest-Gate (`check_agent_manifest.py`)
-- Naming-SSOT (`naming-conventions.schema.json`), Change-Requests (SCR-0001..0007)
-- Governance-Ableitungen: Enterprise-Layer (ATC-ENT-001..015), Agenten-Standards
-  (ATC-AAS-001..025), AI-Development-Familie (AI-DEV-001..012)
+- **Registry:** SSOT für alle 431 Standards mit Versionierung, Dependencies (DAG) und Findings
+- **Verfassung:** ATC-STD-000 v1.2.0 (ID-System, Lifecycle, Change Control, Immutabilität)
+- **Validator-Suite:** atc-std-validator, atc-repo-audit (R3), atc-readme-validator
+- **Governance Framework:** 49 Familien, Enterprise-Ebenen (ATC-ENT-001..015), AI-Standards (ATC-AAS-001..025)
 
-Davon hängen ab: **alle 26 aktiven Repositories** der Organisation (Registry-First:
-kein Standard ohne Eintrag; kein Repository ohne Standards-Bezug).
+All 26 organizational repositories follow these standards (Registry-First principle).
 
-## Status
-
-**Status:** `release-candidate` — Governance-Freeze abgeschlossen
-(07./08.09.2026): 355 Standards APPROVED und normativ in Kraft, 25 CANDIDATE (§33) — Standards
-Governance Core (STDDEV-001, REGISTRY-001, CHANGE-001) §9-freigegeben 00:36;
-TAXONOMY-001 §9-freigegeben 00:27; AOS-001, ATC-STD-999 und PROTOCOL-001
-§9-freigegeben 00:18 (README-001 20:36,
-SC-Framework 001..020 21:00, MD-001 21:05). Übergangsfristen
-(Commit-Trailer, Repo-Manifeste, Interface-Test-Suiten) laufen bis 07.10.2026.
+---
 
 ## Architecture
 
-### Components
+### Core Components
+- `registry/` — SSOT (standards.yaml, versions.yaml, dependencies.yaml, findings.yaml)
+- `standards/` — 430 Standard-Dateien in 49 Familien
+- `schemas/` — naming-conventions.schema.json, milestone.schema.json, etc.
+- `tools/` — Validators, Auditors, Generators
+- `governance/`, `approval/`, `change-requests/` — Verfassung, Freigaben, SCR-System
 
-- `registry/` — SSOT: standards.yaml, versions.yaml, dependencies.yaml,
-  findings.yaml, categories.yaml
-- `standards/` — 430 Standard-Dateien in 49 Familien (000, 100, 201–204, 300,
-  bug, net, zkp, ai, aas, enterprise, readme)
-- `schemas/` — naming-conventions.schema.json (ID-/Dateinamen-/REQ-Muster)
-- `tools/` — atc-std-validator, atc-repo-audit, atc-readme-validator,
-  Mutationstests
-- `governance/` + `approval/` + `change-requests/` — Verfassung, Freigaben, SCR
-- `.github/ai/` — Agent-Manifest (AAS-025), AGENTS.md, AUD-Records (AI-DEV-009)
+### Governance Flow
+Change Request → SCR (§19–33) → Owner-Freigabe (§9) → Registry-Eintrag → CI-Validierung → APPROVED → normativ in Kraft (§30 Immutabilität).
 
-### Data Flow
+---
 
-Änderungsantrag → SCR (§19–33) → Owner-Freigabe (§9) → Registry-Eintrag →
-CI-Validierung (Registry-Validierung + Gates) → APPROVED → normativ in Kraft (§30 Immutabilität).
+## Quick Start
 
-### Dependencies
-
-| Component | Purpose | Required |
-|---|---|---|
-| registry/standards.yaml | SSOT aller Standards | Yes |
-| schemas/naming-conventions.schema.json | ID-/Namens-Muster (§7.11) | Yes |
-| tools/atc-std-validator | Struktur-Validierung (S-01..S-19) | Yes |
-| tools/atc-repo-audit | Repository-Audit R1–R3 | Yes |
-| tools/atc-readme-validator | README-Gates (ATC-STD-README-001) | Yes |
-
-## Features
-
-- 431 Standards in 49 Familien, vollständige REQ-ID-Struktur (BUG/NET/ZKP/README)
-- Voll-Compliance-Mandat für Agenten (AGENT_MANIFEST.md, AAS-003/004)
-- CI-Gates: Standards-Validierung, Mutationssuite, Repo-Audit R3,
-  Agent-Manifest-Enforcement
-- Findings-Lifecycle (F-001..F-018) mit Severity S0–S4
-- **Smart Contract Standards Framework** ATC-STD-SC-001..020 (Gates SC-G0..G13) mit Contract Registry (contracts/)
-
-## Repository Structure
-
-```text
-/
-├── approval/            # Owner-Freigaben (§9)
-├── atc/                 # Legacy ATC-01..99
-├── ats/                 # ATS System Standards
-├── change-requests/    # SCR-0001..0007
-├── audits/             # Audit-Evidence (AUD-2026-NNNN)
-├── protocols/          # Protocol-Standards (ATC-PROTO-*)
-├── licenses/           # Lizenz-Texte
-├── docs/                # Audits & Berichte
-├── governance/          # Verfassung ATC-STD-000
-├── licensing/           # System-/Hardware-Lizenzen
-├── references/          # Referenzen
-├── registry/            # SSOT (standards, versions, dependencies, findings, categories)
-├── schemas/             # Naming-/Metadaten-Schemata
-├── standards/           # 431 Standards in 49 Verzeichnissen
-├── templates/           # Standard-Templates
-├── contracts/           # Contract Registry (SC-019) + Kategorie-Specs (SC-Framework)
-├── tools/               # Validator, Audit, README/MD/SC-Gates, Tests
-├── .github/ai/          # Agent-Manifest, AGENTS.md, AUD-Records
-├── AGENT_MANIFEST.md    # Agenten-Identität + Voll-Compliance-Mandat
-├── AGENTS.md            # Repo-Agenten-Regeln
-├── CHANGELOG.md
-├── ROADMAP.md
-├── STATUS.md
-├── SECURITY.md
-└── LICENSE
-```text
-
-## Requirements
-
-- Python >= 3.11 (PyYAML, py_compile) für Validatoren
-- Git >= 2.30
-- Keine Runtime-Abhängigkeiten — reines Governance-Dokumenten-Repository
-
-## Installation
-
-### Setup
-
+### Installation
 ```bash
 git clone https://github.com/A-TownChain-Okosystems/atc-standards.git
 cd atc-standards
 python3 -m pip install pyyaml
 ```
 
-## Configuration
-
-Keine Konfiguration nötig — Validatoren laufen stand-alone gegen die Registry.
-
-## Usage
-
-Standards validieren (alle 82):
-
+### Validation
 ```bash
-python3 tools/atc-std-validator/validate_all.py
-# Expected: RESULT: ALL COMPLIANT
-```text
-
-Repository-Audit R3:
-
-```bash
-python3 tools/atc-repo-audit/atc_repo_audit.py . --level R3
-# Expected: GATE: PASS
+python3 tools/atc-std-validator/validate_all.py          # Alle Standards
+python3 tools/atc-repo-audit/atc_repo_audit.py . --level R3   # Repository-Audit
+python3 tools/atc-readme-validator/check_readme.py .     # README-Compliance
 ```
 
-README-Compliance eines Repos prüfen (ATC-STD-README-001):
+### Key Files
+| Datei | Zweck |
+|---|---|
+| `registry/standards.yaml` | SSOT — Alle Standards |
+| `governance/ATC-STD-000.md` | Verfassung |
+| `CHANGELOG.md` | Änderungshistorie |
+| `STATUS.md` | Audit-Trail & Snapshot |
 
-```bash
-python3 tools/atc-readme-validator/check_readme.py /pfad/zum/repo
-# Expected: RESULT: CONFORM — alle 13 Gates bestanden
-```text
-
-## Development
-
-Änderungen an APPROVED-Standards ausschließlich via SCR (ATC-STD-000 §19–33,
-§30 Immutabilität). Neue Standards: Registry-First (Eintrag + Validierung +
-§9-Freigabe). Agenten folgen dem Voll-Compliance-Mandat (AGENT_MANIFEST.md)
-und dem AAS-008-Workflow; Commits nach AI-DEV-007 v1.0.1.
-
-## Testing
-
-Run the complete test suite:
-
-```bash
-python3 tools/atc-std-validator/validate_all.py        # 431/431 COMPLIANT
-python3 tools/atc-std-validator/tests/test_s19_mutation.py  # 12/12 OK
-python3 tools/atc-repo-audit/atc_repo_audit.py . --level R3    # GATE PASS
-python3 tools/atc-std-validator/check_agent_manifest.py       # GATE PASS
-python3 tools/atc-readme-validator/check_readme.py .           # CONFORM
-```
-
-Expected result: PASS (alle Gates grün — siehe STATUS.md)
-
-## Security
-
-Security issues must not be disclosed publicly through GitHub Issues.
-
-Report security vulnerabilities through the official ATC security reporting
-process (ATC-STD-203, SECURITY.md). Governance-Dokumente sind S3-classifiziert;
-die Registry enthält keine Secrets, Tokens oder Zugangsdaten.
-
-## Documentation
-
-Vollständige Dokumentation liegt außerhalb dieses README:
-
-- `docs/` — Audit- und Self-Compliance-Berichte
-- `governance/` — Verfassung ATC-STD-000 v1.2.0
-- `STATUS.md` / `ROADMAP.md` — kanonischer Stand
-- Wiki: A-TownChain-Okosystems/a-townchain-os-docs
-- Standards Registry: `registry/standards.yaml` (SSOT)
+---
 
 ## Governance
 
-This repository is governed according to the A-TownChain Enterprise Governance
-Framework (ATC-STD-000 v1.2.0, ATC-ENT-001..015). Changes affecting
-architecture, APIs, standards, security or consensus-critical functionality
-require the applicable review and approval process (§9-Owner-Freigabe, SCR).
-Agenten: Voll-Compliance-Mandat, CI-Enforcement, AUD-Records (AI-DEV-009).
+This repository is governed according to ATC-STD-000 v1.2.0 (A-TownChain Enterprise Governance Framework):
+
+- **Changes to APPROVED Standards:** via SCR only (§30 Immutabilität)
+- **New Standards:** Registry-First (Eintrag → Validierung → §9-Owner-Freigabe)
+- **AI Agents:** Voll-Compliance-Mandat, CI-Enforcement, AUD-Records (AI-DEV-009)
+- **CI Gates:** Standards-Validierung, Mutationssuite, Repo-Audit R3, Agent-Manifest-Enforcement
+
+See `CONTRIBUTING.md` and `governance/ATC-STD-000.md` for details.
+
+---
 
 ## Standards & Compliance
 
-This repository follows applicable A-TownChain standards:
+| Standard | Version | Status |
+|---|---|---|
+| ATC-STD-000 | 1.2.0 | ✅ APPROVED |
+| ATC-STD-201 | 1.0.0 | ✅ APPROVED |
+| ATC-STD-202 | 1.1.0 | ✅ APPROVED |
+| ATC-STD-203 | 1.0.0 | ✅ APPROVED |
+| ATC-STD-204 | 1.0.0 | ✅ APPROVED |
+| ATC-STD-README-001 | 1.0.0 | ✅ APPROVED |
 
-| Standard | Version | Compliance |
-|---|---:|---|
-| ATC-STD-000 | 1.2.0 | ✅ |
-| ATC-STD-201 | 1.0.0 | ✅ |
-| ATC-STD-202 | 1.1.0 | ✅ |
-| ATC-STD-203 | 1.0.0 | ✅ |
-| ATC-STD-204 | 1.0.0 | ✅ |
-| ATC-STD-README-001 | 1.0.0 | ✅ APPROVED (konforme Referenzimplementierung) |
+See [`registry/standards.yaml`](registry/standards.yaml) for the complete registry.
 
-## Roadmap
+---
 
-See the canonical roadmap:
+## Documentation
 
-- `ROADMAP.md` (Repo-wurzel)
-- ATC Development Management (Notion Master Roadmap)
-- GitHub Issues / Projects
+Full documentation:
+- **Governance:** `governance/`, `STATUS.md`, `ROADMAP.md`
+- **Audits:** `docs/audits/`
+- **Change History:** `change-requests/`, `CHANGELOG.md`
+- **Wiki:** [A-TownChain-Okosystems/a-townchain-os-docs](https://github.com/A-TownChain-Okosystems/a-townchain-os-docs)
 
-## Contributing
+---
 
-Beiträge ausschließlich über den Governance-Prozess: SCR für Standard-
-Änderungen (§19–33), Findings nach ATC-STD-BUG-001, neue Standards via
-Registry-First. Details: `CONTRIBUTING.md`, ATC-STD-000 §22.
+## Security
+
+Security issues **must NOT** be disclosed via GitHub Issues. Report vulnerabilities through:
+- **GitHub Private Vulnerability Reporting** (Security tab → "Report a vulnerability")
+- **Direct contact:** Owner (ATC-STD-203, SECURITY.md)
+
+See [`SECURITY.md`](SECURITY.md) for the full disclosure policy.
+
+---
 
 ## License
 
-Apache-2.0 (siehe LICENSE) — einheitliche Organisationslizenz (08.09.2026,
-CHANGELOG/ATC-LICENSE-Familie). Zusätzliche ATC-Nutzungsbedingungen regeln
-die Trennung: Code (Apache-2.0) ≠ Marke ≠ Assets ≠ Governance-Dokumente.
-Kein Proprietary-Anspruch im Widerspruch zur LICENSE-Datei.
+**Apache-2.0** (see [`LICENSE`](LICENSE)) — unified organizational license as of 08.09.2026.
 
-## Maintainers
+Additional ATC usage terms (separate from Apache-2.0) are governed by the ATC-LICENSE-Familie (ATC-STD-LICENSE-001..009). Governance documents, trademarks, and organizational assets follow separate policies.
 
-**Organization:** A-TownChain-Okosystems
+**No proprietary claims** conflict with the LICENSE file.
 
-Repository ownership and authorized maintainers are defined through the
-repository governance configuration: Owner Michael (§9-Freigaben),
-ATC-AI-ARCH-001 (Aurora #1, operative Pflege, AUD-pflichtig).
+---
 
-## Repository Metadata
+## Metadata
 
-Maschinenlesbar: siehe HTML-Metadaten-Block im Header (ATC-STD-README-001 §14).
-Zielzustand: Generierung aus `repositories.yaml` (ATC-ENT-009-Rollout) statt
-manueller Pflege. Registry-ID: ATC-REPO-GOV-001.
+- **Project:** atc-standards
+- **Organization:** A-TownChain-Okosystems
+- **Status:** `release-candidate`
+- **Version:** 1.2.0
+- **Registry ID:** ATC-REPO-GOV-001
+- **Owner:** Michael Wroblewski (§9-Freigaben)
+- **Maintainer:** Aurora #1 (operative Pflege, AUD-pflichtig)
+
+Machine-readable metadata: see HTML comment block at top (ATC-STD-README-001 §14).
