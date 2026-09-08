@@ -2899,3 +2899,90 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-REPO-MAINT-001
+
+  - id: FAM-47
+    name: Error Propagation & Prevention (ERR)
+    range: ATC-STD-ERR-000..999
+    note: 'No Local Fix Without System Verification — Master + 15 Kernstandards (SCR-0044): Propagation-Scan, Cross-Repo-Scan, Dependency-Impact, Regression, Prevention-Gate, Pattern-Library; referenziert BUG-001..005'
+    family_refs: null
+    slots:
+    - id: ATC-STD-ERR-000
+      title: ERR-000
+      status: BELEGT
+      refs:
+      - ATC-STD-ERR-000
+    - id: ATC-STD-ERR-001
+      title: ERR-001
+      status: BELEGT
+      refs:
+      - ATC-STD-ERR-001
+    - id: ATC-STD-ERR-002
+      title: ERR-002
+      status: BELEGT
+      refs:
+      - ATC-STD-ERR-002
+    - id: ATC-STD-ERR-003
+      title: ERR-003
+      status: BELEGT
+      refs:
+      - ATC-STD-ERR-003
+    - id: ATC-STD-ERR-004
+      title: ERR-004
+      status: BELEGT
+      refs:
+      - ATC-STD-ERR-004
+    - id: ATC-STD-ERR-005
+      title: ERR-005
+      status: BELEGT
+      refs:
+      - ATC-STD-ERR-005
+    - id: ATC-STD-ERR-006
+      title: ERR-006
+      status: BELEGT
+      refs:
+      - ATC-STD-ERR-006
+    - id: ATC-STD-ERR-007
+      title: ERR-007
+      status: BELEGT
+      refs:
+      - ATC-STD-ERR-007
+    - id: ATC-STD-ERR-008
+      title: ERR-008
+      status: BELEGT
+      refs:
+      - ATC-STD-ERR-008
+    - id: ATC-STD-ERR-009
+      title: ERR-009
+      status: BELEGT
+      refs:
+      - ATC-STD-ERR-009
+    - id: ATC-STD-ERR-010
+      title: ERR-010
+      status: BELEGT
+      refs:
+      - ATC-STD-ERR-010
+    - id: ATC-STD-ERR-011
+      title: ERR-011
+      status: BELEGT
+      refs:
+      - ATC-STD-ERR-011
+    - id: ATC-STD-ERR-012
+      title: ERR-012
+      status: BELEGT
+      refs:
+      - ATC-STD-ERR-012
+    - id: ATC-STD-ERR-013
+      title: ERR-013
+      status: BELEGT
+      refs:
+      - ATC-STD-ERR-013
+    - id: ATC-STD-ERR-014
+      title: ERR-014
+      status: BELEGT
+      refs:
+      - ATC-STD-ERR-014
+    - id: ATC-STD-ERR-015
+      title: ERR-015
+      status: BELEGT
+      refs:
+      - ATC-STD-ERR-015

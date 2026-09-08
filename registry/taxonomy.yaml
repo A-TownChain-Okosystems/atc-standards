@@ -160,6 +160,19 @@ taxonomy:
         name: Allgemein (Bestand, keine Unterteilung)
         status: ACTIVE
         lifecycle: ACTIVE
+    - id: ER
+      name: err
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-STD-ERR-000-999
+      source: named-family
+      description: 'Error-Propagation-Familie: Error Detection, Propagation, Regression & Prevention — No Local Fix Without System Verification (Owner-Entwurf 08.09., SCR-0044)'
+      standards_count: 16
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
     - id: SGC
       name: governance-core
       status: ACTIVE

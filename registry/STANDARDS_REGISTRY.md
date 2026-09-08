@@ -39,6 +39,22 @@
 | ATC-STD-BUG-002 | Bug Documentation Standard | approved | 1.0.0 | bug |
 | ATC-STD-BUG-003 | Bug Fix Lifecycle Standard | approved | 1.0.0 | bug |
 | ATC-STD-BUG-004 | Repository Synchronization & Merge Gate | approved | 1.0.0 | bug |
+| ATC-STD-ERR-000 | No Local Fix Without System Verification (Error Master) | candidate | 1.0.0 | err |
+| ATC-STD-ERR-001 | Error Discovery | candidate | 1.0.0 | err |
+| ATC-STD-ERR-002 | Error Classification | candidate | 1.0.0 | err |
+| ATC-STD-ERR-003 | Root Cause Analysis & Pattern Extraction | candidate | 1.0.0 | err |
+| ATC-STD-ERR-004 | Error Propagation Scan | candidate | 1.0.0 | err |
+| ATC-STD-ERR-005 | Cross-Repository Error Scan | candidate | 1.0.0 | err |
+| ATC-STD-ERR-006 | Documentation Consistency Check | candidate | 1.0.0 | err |
+| ATC-STD-ERR-007 | Dependency Impact Analysis | candidate | 1.0.0 | err |
+| ATC-STD-ERR-008 | Regression Test Requirement | candidate | 1.0.0 | err |
+| ATC-STD-ERR-009 | Preventive Control | candidate | 1.0.0 | err |
+| ATC-STD-ERR-010 | Error Pattern Detection | candidate | 1.0.0 | err |
+| ATC-STD-ERR-011 | Fix Verification | candidate | 1.0.0 | err |
+| ATC-STD-ERR-012 | Post-Fix Audit | candidate | 1.0.0 | err |
+| ATC-STD-ERR-013 | Knowledge Capture | candidate | 1.0.0 | err |
+| ATC-STD-ERR-014 | Recurrence Monitoring | candidate | 1.0.0 | err |
+| ATC-STD-ERR-015 | Error Prevention Gate | candidate | 1.0.0 | err |
 | ATC-STD-NET-001 | Devnet Standard | approved | 1.0.0 | net |
 | ATC-STD-NET-002 | Testnet Standard | approved | 1.0.0 | net |
 | ATC-STD-NET-003 | Mainnet Standard | approved | 1.0.0 | net |

@@ -56,14 +56,14 @@ eines Standards liegt ausschließlich in seiner Standarddatei; die Registry
 | registry/teams.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
 | registry/versions.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
 
-Kernregister: **standards.yaml** (Bestand, 404 Standards) · **versions.yaml**
-(Versionierung je Standard) · **framework.yaml** (Katalog: 46 Familien,
-444 Slots) · **categories.yaml**
+Kernregister: **standards.yaml** (Bestand, 420 Standards) · **versions.yaml**
+(Versionierung je Standard) · **framework.yaml** (Katalog: 47 Familien,
+460 Slots) · **categories.yaml**
 (Kategorien) · **taxonomy.yaml** (Domain/Familie/Kategorie) · **protocol-registry.yaml**
 (26 Protokollfamilien, Status {'draft': 10, 'planned': 16}) ·
 **findings.yaml** (Findings: 16 OPEN / 32 RESOLVED von 48).
 
-## 3. Standardfamilien (Katalog, 46 Familien)
+## 3. Standardfamilien (Katalog, 47 Familien)
 
 | FAM | Familie | Slots | BELEGT | VERWEIST |
 |---|---|---|---|---|
@@ -113,12 +113,13 @@ Kernregister: **standards.yaml** (Bestand, 404 Standards) · **versions.yaml**
 | FAM-44 | ATC License System | 9 | 9 | 0 |
 | FAM-45 | Vision-to-Software (V2S) | 1 | 1 | 0 |
 | FAM-46 | Repository Maintenance (REPO-MAINT) | 1 | 1 | 0 |
+| FAM-47 | Error Propagation & Prevention (ERR) | 16 | 16 | 0 |
 
-Statusverteilung der 404 Registry-Standards: {'approved': 395, 'candidate': 9}.
-Alle 404 sind APPROVED und normativ (§30-eingefroren); Details je Standard
+Statusverteilung der 420 Registry-Standards: {'approved': 395, 'candidate': 25}.
+Alle 420 sind APPROVED und normativ (§30-eingefroren); Details je Standard
 in registry/standards.yaml und registry/versions.yaml.
 
-## 4. Master-Registry-Tabelle (404 Standards)
+## 4. Master-Registry-Tabelle (420 Standards)
 
 Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 
@@ -464,6 +465,22 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 | ATC-STD-CHANGE-001 | ATC Change Control Dachnorm — Eine Änderung, ein Kanal, eine Gate-Landkarte: konsolidierte Zuordnung von ATC-STD-000 §19–33 (SCR), VERSION-001, UPDATE-001 und COMPAT-001 zur verbindlichen Entscheidungsmatrix mit RACI, Notfallpfad und den 13 Change-Nachweis-Fragen als Prüfraster | governance-core | 1.0.1 | approved | standards/governance-core/ATC-STD-CHANGE-001.md |
 | ATC-STD-COMPAT-001 | ATC Major Version Compatibility & Recovery Standard — Verbindliche Kompatibilitätsprüfung, -Wiederherstellung und -Migration nach MAJOR-Updates | compat | 1.0.0 | approved | standards/compat/ATC-STD-COMPAT-001.md |
 | ATC-STD-DESC-001 | Standard Description Standard — Standard zur Beschreibung von Standards | desc | 1.0.0 | approved | standards/desc/ATC-STD-DESC-001.md |
+| ATC-STD-ERR-000 | No Local Fix Without System Verification (Error Master) | err | 1.0.0 | candidate | standards/err/ATC-STD-ERR-000.md |
+| ATC-STD-ERR-001 | Error Discovery | err | 1.0.0 | candidate | standards/err/ATC-STD-ERR-001.md |
+| ATC-STD-ERR-002 | Error Classification | err | 1.0.0 | candidate | standards/err/ATC-STD-ERR-002.md |
+| ATC-STD-ERR-003 | Root Cause Analysis & Pattern Extraction | err | 1.0.0 | candidate | standards/err/ATC-STD-ERR-003.md |
+| ATC-STD-ERR-004 | Error Propagation Scan | err | 1.0.0 | candidate | standards/err/ATC-STD-ERR-004.md |
+| ATC-STD-ERR-005 | Cross-Repository Error Scan | err | 1.0.0 | candidate | standards/err/ATC-STD-ERR-005.md |
+| ATC-STD-ERR-006 | Documentation Consistency Check | err | 1.0.0 | candidate | standards/err/ATC-STD-ERR-006.md |
+| ATC-STD-ERR-007 | Dependency Impact Analysis | err | 1.0.0 | candidate | standards/err/ATC-STD-ERR-007.md |
+| ATC-STD-ERR-008 | Regression Test Requirement | err | 1.0.0 | candidate | standards/err/ATC-STD-ERR-008.md |
+| ATC-STD-ERR-009 | Preventive Control | err | 1.0.0 | candidate | standards/err/ATC-STD-ERR-009.md |
+| ATC-STD-ERR-010 | Error Pattern Detection | err | 1.0.0 | candidate | standards/err/ATC-STD-ERR-010.md |
+| ATC-STD-ERR-011 | Fix Verification | err | 1.0.0 | candidate | standards/err/ATC-STD-ERR-011.md |
+| ATC-STD-ERR-012 | Post-Fix Audit | err | 1.0.0 | candidate | standards/err/ATC-STD-ERR-012.md |
+| ATC-STD-ERR-013 | Knowledge Capture | err | 1.0.0 | candidate | standards/err/ATC-STD-ERR-013.md |
+| ATC-STD-ERR-014 | Recurrence Monitoring | err | 1.0.0 | candidate | standards/err/ATC-STD-ERR-014.md |
+| ATC-STD-ERR-015 | Error Prevention Gate | err | 1.0.0 | candidate | standards/err/ATC-STD-ERR-015.md |
 | ATC-STD-FRAMEWORK-001 | ATC Enterprise Standards Framework — Master-Dokument (ATC-STANDARDS-MASTER): Zusammenführung aller Standards, Katalog, Kollisionsauflösung, einheitliche Status-/Change-/Traceability-Modelle, Register-Architektur | framework | 1.0.7 | approved | standards/framework/ATC-STD-FRAMEWORK-001.md |
 | ATC-STD-LICENSE-001 | License Governance Standard | license | 1.0.0 | approved | standards/license/ATC-STD-LICENSE-001.md |
 | ATC-STD-LICENSE-002 | License Specification Standard | license | 1.0.0 | approved | standards/license/ATC-STD-LICENSE-002.md |
@@ -531,7 +548,7 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 
 ## 5. Statusmodell (Registry-Lifecycle)
 
-Registry-Statusverteilung (Ist): {'approved': 395, 'candidate': 9}. Lifecycle der Standards-Entwicklung
+Registry-Statusverteilung (Ist): {'approved': 395, 'candidate': 25}. Lifecycle der Standards-Entwicklung
 gemäß ATC-STD-STDDEV-001 / ATC-STD-TAXONOMY-001: Entwurf (Owner-Entwurf/SCR) →
 §9-Freigabe (Owner, Human-Gate) → APPROVED (normativ, §30-eingefroren) → ggf.
 DEPRECATED/RETIRED via Change-Control (ATC-STD-CHANGE-001). Protokolle folgen
@@ -574,7 +591,7 @@ die Kennung dieses generierten Dokuments.
 
 atc-standards/ · INDEX.md (generiert) · README.md · CHANGELOG.md · STATUS.md ·
 LICENSE (Apache-2.0) · AGENT_MANIFEST.md · AGENTS.md · governance/ (ATC-STD-000) ·
-standards/<kategorie>/ (Fachstandards, 404-Bestand) · registry/ (22
+standards/<kategorie>/ (Fachstandards, 420-Bestand) · registry/ (22
 SSOT-Dateien) · licenses/ (ATC-LICENSE-System) · schemas/ · tools/ (Generatoren +
 atc-std-validator) · approval/ (§9-Freigabe-Archiv) · change-requests/ (SCR-0001…) ·
 docs/ (Audits & Analysen) · templates/ · .github/workflows (Governance-CI, 2) +
