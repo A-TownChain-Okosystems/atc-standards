@@ -2,6 +2,11 @@
 
 ## [Unreleased] — 2026-09-08 (SCR-0045/0047/0048)
 
+### Meta-Konformitaet aller Standards (SCR-0049)
+- 63 Standard-Dateien erhielten fehlende Meta-Sektionen (Security/
+  Changelog/References) mit familienbezogenem Inhalt; Meta-Sweep-Funde
+  169 -> 0, Security-KPI 430/430.
+
 ### Voll-Klassifikation der Implementierungs-Matrix (SCR-0048)
 - `registry/standard-implementation.yaml` jetzt 431/431 Eintraege (Coverage-KPI
   100 %): 62 enforced, 129 implemented, 240 specification_only (Zielsystem im

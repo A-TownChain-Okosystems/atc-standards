@@ -298,6 +298,10 @@ Ausnahmen MÜSSEN gemäß ATC-STD-DESC-001 Abschnitt 11 (EXC-Verfahren) dokument
 | Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
 | Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |
 
+## Security Considerations
+
+Keine Zugangsdaten in Artefakten; Security-Review-Pflicht bei sicherheitsrelevanten Aenderungen (ATC-STD-203).
+
 ## Changelog
 
 ### 1.0.0 — 2026-09-07
@@ -306,3 +310,7 @@ Ausnahmen MÜSSEN gemäß ATC-STD-DESC-001 Abschnitt 11 (EXC-Verfahren) dokument
 - Update-Kategorien, 13-stufiger Lifecycle, UPD-NNN-Requests, UPD-G01..G09-Gates, Statusmodell (Normal-/Fehler-/Notfallpfad), Rollback (5 Blockchain-Typen), Emergency-Prozess, Update Manifest, CHANGELOG-Pflicht, Update Audit (15 Fragen), Integrity Manifest, Review-Kadenzen, Control Matrix
 - SCR-0015: UPD↔SCR-Kopplung (keine Doppelspur), Hierarchie auf echten Bestand korrigiert, Gates UPD-G vs AUD-G abgegrenzt
 - Status APPROVED — §9-Freigabe Michael Wroblewski 07.09.2026, 23:28 UTC+2, normativ, §30-eingefroren
+
+## References
+
+NORMATIV: ATC-STD-000, ATC-STD-201..203 · INFORMATIVE: Registry-SSOT standards.yaml

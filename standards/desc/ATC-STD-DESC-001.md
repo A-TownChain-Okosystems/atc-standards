@@ -423,6 +423,10 @@ Damit KÖNNEN KI-Agenten, CI/CD, Validatoren und Audit-Systeme Standards automat
 | Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
 | Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |
 
+## Security Considerations
+
+Keine Zugangsdaten in Artefakten; Security-Review-Pflicht bei sicherheitsrelevanten Aenderungen (ATC-STD-203).
+
 ## Changelog
 
 ### 1.0.0 — 2026-09-07
@@ -431,3 +435,7 @@ Damit KÖNNEN KI-Agenten, CI/CD, Validatoren und Audit-Systeme Standards automat
 - 14 normative Anforderungen (REQ-DESC-001..014), 5 Compliance-Gates (COM-DESC-001..005)
 - 7-Status-Dokumentationsmodell auf Registry-Lifecycle abgebildet
 - Quality-Gate-Checkliste (17 Kriterien) definiert
+
+## References
+
+NORMATIV: ATC-STD-000, ATC-STD-201..203 · INFORMATIVE: Registry-SSOT standards.yaml

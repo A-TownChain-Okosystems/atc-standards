@@ -405,3 +405,15 @@ Dieser Standard ist als Pflicht-Gate im übergeordneten ATC-STD-UPDATE-001 veran
 |---|---|
 | Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
 | Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |
+
+## Security Considerations
+
+Kompatibilitaets-Pruefungen duerfen keine Sicherheitsluecken alter Versionen reintroduzieren; veraltete Krypto-/API-Versionen werden abgelehnt, nicht geduldet; Rollback-Pfade auf als unsicher bekannte Stando sind gesperrt.
+
+## Changelog
+
+| 1.0.0 | 2026-09-07 | Initiale Fassung; Meta-Sektionen retro-aktiv ergaenzt (SCR-0049) |
+
+## References
+
+NORMATIV: ATC-STD-000, ATC-STD-204, ATC-STD-VERSION-001 · INFORMATIVE: Registry-Kategorie compat

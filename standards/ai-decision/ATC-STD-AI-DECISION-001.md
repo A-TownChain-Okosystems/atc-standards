@@ -357,6 +357,10 @@ Ausnahmen MÜSSEN gemäß ATC-STD-DESC-001 Abschnitt 11 (EXC-Verfahren) dokument
 | Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
 | Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |
 
+## Security Considerations
+
+Keine Zugangsdaten in Artefakten; Security-Review-Pflicht bei sicherheitsrelevanten Aenderungen (ATC-STD-203).
+
 ## Changelog
 
 ### 1.0.0 — 2026-09-07
@@ -365,3 +369,7 @@ Ausnahmen MÜSSEN gemäß ATC-STD-DESC-001 Abschnitt 11 (EXC-Verfahren) dokument
 - Entscheidungstypen D0–D5, Autonomie-Level L0–L5, Risiko RK0–RK5 (RK statt R: Abgrenzung zu Reproduzierbarkeit R0–R3 in BUG-005), Evidence-Zustände, Confidence/Eligibility-Modell, Decision Records DEC-NNNNNN
 - SCR-0014: DEC-Regeln → REQ-AIDEC-Mapping; §24-Familie auf bestehende AAS/AI-DEV-Standards gemappt (12/15 abgedeckt); Kill-Switch als dokumentierte Lücke
 - APPROVED per Owner-Sammelfreigabe 07.09.2026, 22:25 UTC+2
+
+## References
+
+NORMATIV: ATC-STD-000, ATC-STD-201..203 · INFORMATIVE: Registry-SSOT standards.yaml

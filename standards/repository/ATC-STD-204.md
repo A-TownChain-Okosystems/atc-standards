@@ -173,3 +173,15 @@ Kanten: 30 Tage.
 |---|---|
 | Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
 | Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |
+
+## Security Considerations
+
+Abhaengigkeits-Governance: Supply-Chain-Schutz — keine Zugangsdaten in Manifesten/Lock-Dateien; CVE-Blocker vor Merge; Lizenz-Review je neuer Dependency; Lockfile-Pinning verpflichtend.
+
+## Changelog
+
+| 1.0.0 | 2026-09-07 | Initiale Fassung; Meta-Sektionen retro-aktiv ergaenzt (SCR-0049) |
+
+## References
+
+NORMATIV: ATC-STD-000, ATC-STD-201..203, ATC-STD-UPDATE-001 · INFORMATIVE: Dependabot-Rollout AUD-2026-0002

@@ -576,6 +576,10 @@ Ausnahmen von diesem Standard MÜSSEN gemäß ATC-STD-DESC-001 Abschnitt 11 (EXC
 | Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
 | Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |
 
+## Security Considerations
+
+Keine Zugangsdaten in Artefakten; Security-Review-Pflicht bei sicherheitsrelevanten Aenderungen (ATC-STD-203).
+
 ## Changelog
 
 ### 1.0.0 — 2026-09-07
@@ -584,3 +588,7 @@ Ausnahmen von diesem Standard MÜSSEN gemäß ATC-STD-DESC-001 Abschnitt 11 (EXC
 - Release-ID-Dualformat (versionsbasiert + datumsbasiert) ins Schema übernommen; buildId-Pattern allockiert
 - Verbotene Praktiken und Golden Rule verbindlich definiert
 - Owner-§9-Freigabe: APPROVED (21:57 UTC+2, Sammelfreigabe) — normativ ab sofort
+
+## References
+
+NORMATIV: ATC-STD-000, ATC-STD-201..203 · INFORMATIVE: Registry-SSOT standards.yaml
