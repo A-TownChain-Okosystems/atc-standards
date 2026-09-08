@@ -238,6 +238,19 @@ taxonomy:
         name: Allgemein (Bestand, keine Unterteilung)
         status: ACTIVE
         lifecycle: ACTIVE
+    - id: V2S
+      name: v2s
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-STD-V2S-000-999
+      source: named-family
+      description: 'Vision-to-Software Lifecycle-Familie: End-to-End VISION bis EOL (Owner-Entwurf 08.09., SCR-0042)'
+      standards_count: 1
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
   - id: SW
     name: Software Engineering
     status: ACTIVE

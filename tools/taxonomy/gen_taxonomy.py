@@ -29,7 +29,7 @@ DOMAINS = {
 }
 # Familien-Codes (global eindeutig, TAX-CHECK-003)
 FAMILY_CODES = {
-    "bug": "BUG", "zkp": "ZKP", "ai-dev": "AID", "aas": "AAS", "enterprise": "ENT",
+    "bug": "BUG", "v2s": "V2S", "zkp": "ZKP", "ai-dev": "AID", "aas": "AAS", "enterprise": "ENT",
     "readme": "RDM", "md": "MD", "sc": "SC", "net": "NET", "desc": "DESC",
     "version": "VER", "audit": "AUD", "ai-decision": "AIDEC", "update": "UPD",
     "repo-audit": "RA", "protocol": "PROT", "agent-operating": "AOS",
