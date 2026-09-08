@@ -56,12 +56,12 @@ eines Standards liegt ausschließlich in seiner Standarddatei; die Registry
 | registry/teams.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
 | registry/versions.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
 
-Kernregister: **standards.yaml** (Bestand, 396 Standards) · **versions.yaml**
+Kernregister: **standards.yaml** (Bestand, 402 Standards) · **versions.yaml**
 (Versionierung je Standard) · **framework.yaml** (Katalog: 44 Familien,
 442 Slots) · **categories.yaml**
 (Kategorien) · **taxonomy.yaml** (Domain/Familie/Kategorie) · **protocol-registry.yaml**
 (26 Protokollfamilien, Status {'draft': 10, 'planned': 16}) ·
-**findings.yaml** (Findings: 17 OPEN / 30 RESOLVED von 47).
+**findings.yaml** (Findings: 17 OPEN / 31 RESOLVED von 48).
 
 ## 3. Standardfamilien (Katalog, 44 Familien)
 
@@ -72,19 +72,19 @@ Kernregister: **standards.yaml** (Bestand, 396 Standards) · **versions.yaml**
 | FAM-03 | Repository Standards | 15 | 7 | 8 |
 | FAM-04 | Dokumentationsstandards | 16 | 8 | 8 |
 | FAM-05 | Software Development | 16 | 12 | 4 |
-| FAM-06 | Git & Version Control | 14 | 5 | 8 |
+| FAM-06 | Git & Version Control | 14 | 6 | 8 |
 | FAM-07 | Bug & Fehler-Management | 12 | 2 | 10 |
 | FAM-08 | Testing & Quality Assurance | 14 | 9 | 5 |
 | FAM-09 | CI/CD & DevOps | 15 | 9 | 6 |
-| FAM-10 | Release Readiness (RR-Gates) | 8 | 0 | 7 |
+| FAM-10 | Release Readiness (RR-Gates) | 8 | 0 | 8 |
 | FAM-11 | Blockchain Standards | 19 | 18 | 1 |
-| FAM-12 | Token Standards | 12 | 7 | 1 |
+| FAM-12 | Token Standards | 12 | 11 | 1 |
 | FAM-13 | Smart Contracts | 11 | 0 | 11 |
 | FAM-14 | Interoperability | 11 | 10 | 1 |
 | FAM-15 | ZKP / Privacy | 8 | 0 | 8 |
 | FAM-16 | Oracle & External Data | 7 | 7 | 0 |
 | FAM-17 | Identity & Reputation | 7 | 6 | 1 |
-| FAM-18 | Cybersecurity | 14 | 10 | 3 |
+| FAM-18 | Cybersecurity | 14 | 11 | 3 |
 | FAM-19 | AI-Agent Standards | 16 | 0 | 16 |
 | FAM-20 | Agent Operating (KI-Softwareentwicklungsagent) | 1 | 1 | 0 |
 | FAM-21 | Mining Standards | 11 | 11 | 0 |
@@ -112,11 +112,11 @@ Kernregister: **standards.yaml** (Bestand, 396 Standards) · **versions.yaml**
 | FAM-43 | Standards Governance Core | 4 | 4 | 0 |
 | FAM-44 | ATC License System | 9 | 9 | 0 |
 
-Statusverteilung der 396 Registry-Standards: {'approved': 396}.
-Alle 396 sind APPROVED und normativ (§30-eingefroren); Details je Standard
+Statusverteilung der 402 Registry-Standards: {'approved': 396, 'candidate': 6}.
+Alle 402 sind APPROVED und normativ (§30-eingefroren); Details je Standard
 in registry/standards.yaml und registry/versions.yaml.
 
-## 4. Master-Registry-Tabelle (396 Standards)
+## 4. Master-Registry-Tabelle (402 Standards)
 
 Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 
@@ -203,6 +203,7 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 | ATC-STD-104 | Pull Request Standard | repository | 1.2.0 | approved | standards/repository/ATC-STD-104.md |
 | ATC-STD-105 | Merge Policy Standard | repository | 1.2.0 | approved | standards/repository/ATC-STD-105.md |
 | ATC-STD-107 | Tagging Standard | repository | 1.2.0 | approved | standards/repository/ATC-STD-107.md |
+| ATC-STD-114 | Git Standard | repository | 1.0.0 | candidate | standards/repository/ATC-STD-114.md |
 | ATC-STD-129 | Incident Correlation Standard | bug | 1.2.0 | approved | standards/bug/ATC-STD-129.md |
 | ATC-STD-130 | Post-Incident Review Standard | bug | 1.2.0 | approved | standards/bug/ATC-STD-130.md |
 | ATC-STD-140 | QA Framework Standard | development | 1.2.0 | approved | standards/development/ATC-STD-140.md |
@@ -252,6 +253,10 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 | ATC-STD-208 | Governance Token Standard | blockchain | 1.2.0 | approved | standards/blockchain/ATC-STD-208.md |
 | ATC-STD-209 | Token Allocation Standard | blockchain | 1.2.0 | approved | standards/blockchain/ATC-STD-209.md |
 | ATC-STD-210 | Vesting Standard | blockchain | 1.2.0 | approved | standards/blockchain/ATC-STD-210.md |
+| ATC-STD-212 | Token Supply Standard | blockchain | 1.0.0 | candidate | standards/blockchain/ATC-STD-212.md |
+| ATC-STD-213 | Emission Standard | blockchain | 1.0.0 | candidate | standards/blockchain/ATC-STD-213.md |
+| ATC-STD-214 | Burning Standard | blockchain | 1.0.0 | candidate | standards/blockchain/ATC-STD-214.md |
+| ATC-STD-215 | Tokenomics Standard | blockchain | 1.0.0 | candidate | standards/blockchain/ATC-STD-215.md |
 | ATC-STD-240 | Interoperability Standard | blockchain | 1.2.0 | approved | standards/blockchain/ATC-STD-240.md |
 | ATC-STD-241 | Bridge Standard | blockchain | 1.2.0 | approved | standards/blockchain/ATC-STD-241.md |
 | ATC-STD-242 | Bridge Security Standard | blockchain | 1.2.0 | approved | standards/blockchain/ATC-STD-242.md |
@@ -286,6 +291,7 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 | ATC-STD-309 | Supply Chain Security Standard | security | 1.2.0 | approved | standards/security/ATC-STD-309.md |
 | ATC-STD-311 | Vulnerability Management Standard | security | 1.2.0 | approved | standards/security/ATC-STD-311.md |
 | ATC-STD-312 | Penetration Testing Standard | security | 1.2.0 | approved | standards/security/ATC-STD-312.md |
+| ATC-STD-314 | Cybersecurity Framework Standard | security | 1.0.0 | candidate | standards/security/ATC-STD-314.md |
 | ATC-STD-340 | Mining Architecture Standard | blockchain | 1.2.0 | approved | standards/blockchain/ATC-STD-340.md |
 | ATC-STD-341 | Miner Standard | blockchain | 1.2.0 | approved | standards/blockchain/ATC-STD-341.md |
 | ATC-STD-342 | Mining Manager Standard | blockchain | 1.2.0 | approved | standards/blockchain/ATC-STD-342.md |
@@ -521,7 +527,7 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 
 ## 5. Statusmodell (Registry-Lifecycle)
 
-Registry-Statusverteilung (Ist): {'approved': 396}. Lifecycle der Standards-Entwicklung
+Registry-Statusverteilung (Ist): {'approved': 396, 'candidate': 6}. Lifecycle der Standards-Entwicklung
 gemäß ATC-STD-STDDEV-001 / ATC-STD-TAXONOMY-001: Entwurf (Owner-Entwurf/SCR) →
 §9-Freigabe (Owner, Human-Gate) → APPROVED (normativ, §30-eingefroren) → ggf.
 DEPRECATED/RETIRED via Change-Control (ATC-STD-CHANGE-001). Protokolle folgen
@@ -564,7 +570,7 @@ die Kennung dieses generierten Dokuments.
 
 atc-standards/ · INDEX.md (generiert) · README.md · CHANGELOG.md · STATUS.md ·
 LICENSE (Apache-2.0) · AGENT_MANIFEST.md · AGENTS.md · governance/ (ATC-STD-000) ·
-standards/<kategorie>/ (Fachstandards, 396-Bestand) · registry/ (22
+standards/<kategorie>/ (Fachstandards, 402-Bestand) · registry/ (22
 SSOT-Dateien) · licenses/ (ATC-LICENSE-System) · schemas/ · tools/ (Generatoren +
 atc-std-validator) · approval/ (§9-Freigabe-Archiv) · change-requests/ (SCR-0001…) ·
 docs/ (Audits & Analysen) · templates/ · .github/workflows (Governance-CI, 2) +

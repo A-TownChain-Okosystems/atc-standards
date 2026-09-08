@@ -502,14 +502,16 @@ framework:
       note: Fertigbau v1.2.0 via SCR-0030/0031/0034
   - id: FAM-06
     name: Git & Version Control
-    range: ATC-STD-100..113
+    range: ATC-STD-100..119
     note: null
     family_refs: null
     slots:
-    - id: ATC-STD-100
+    - id: ATC-STD-114
       title: Git Standard
-      status: KONFLIKT
-      note: 'Slot belegt durch ATC-STD-100 (Architecture Standard, §30-eingefroren). Auflösung via SCR: Git-Familie auf freie Slots/Namensraum legen (Empfehlung SCR-0019 §6.2)'
+      status: BELEGT
+      note: 'KONFLIKT-Aufloesung SCR-0040 (08.09.2026): Slot von ATC-STD-100 nach ATC-STD-114 umallokiert — Range in herrenlose Luecke geweitet (ID-Immutabilitaet §36, S-21-geprueft)'
+      refs:
+      - ATC-STD-114
     - id: ATC-STD-101
       title: Branch Naming
       status: BELEGT
@@ -878,7 +880,11 @@ framework:
       - ATC-STD-AUDIT-001
     - id: RR-G06
       title: Performance
-      status: NEU
+      status: VERWEIST
+      note: 'KONFLIKT-Aufloesung SCR-0040: Abdeckung via Performance Testing/Monitoring'
+      refs:
+      - ATC-STD-146
+      - ATC-STD-488
     - id: RR-G07
       title: Deployment
       status: VERWEIST
@@ -1012,7 +1018,7 @@ framework:
       note: Network-Upgrades laufen als UPD
   - id: FAM-12
     name: Token Standards
-    range: ATC-STD-200..211
+    range: ATC-STD-200..215
     note: 'Kollisionsblock 201-204: Repository-Familie bleibt unantastbar; Token-Slots rücken via SCR auf Ersatzslots'
     family_refs: null
     slots:
@@ -1022,22 +1028,30 @@ framework:
       refs:
       - ATC-STD-200
       note: Fertigbau v1.2.0 via SCR-0030/0031/0034
-    - id: ATC-STD-201
+    - id: ATC-STD-215
       title: Tokenomics
-      status: KONFLIKT
-      note: Slot belegt durch ATC-STD-201 (Repository Structure, §30-eingefroren). Auflösung via SCR
-    - id: ATC-STD-202
+      status: BELEGT
+      note: 'KONFLIKT-Aufloesung SCR-0040 (08.09.2026): Slot von ATC-STD-201 nach ATC-STD-211 umallokiert (ID-Immutabilitaet §36)'
+      refs:
+      - ATC-STD-215
+    - id: ATC-STD-212
       title: Token Supply
-      status: KONFLIKT
-      note: Slot belegt durch ATC-STD-202 (Repository Naming & Classification, §30-eingefroren). Auflösung via SCR
-    - id: ATC-STD-203
+      status: BELEGT
+      note: 'KONFLIKT-Aufloesung SCR-0040 (08.09.2026): Slot von ATC-STD-202 nach ATC-STD-212 umallokiert (ID-Immutabilitaet §36)'
+      refs:
+      - ATC-STD-212
+    - id: ATC-STD-213
       title: Emission
-      status: KONFLIKT
-      note: Slot belegt durch ATC-STD-203 (Repository Security & Release, §30-eingefroren). Auflösung via SCR
-    - id: ATC-STD-204
+      status: BELEGT
+      note: 'KONFLIKT-Aufloesung SCR-0040 (08.09.2026): Slot von ATC-STD-203 nach ATC-STD-213 umallokiert (ID-Immutabilitaet §36)'
+      refs:
+      - ATC-STD-213
+    - id: ATC-STD-214
       title: Burning
-      status: KONFLIKT
-      note: Slot belegt durch ATC-STD-204 (Dependency & Interface, §30-eingefroren). Auflösung via SCR
+      status: BELEGT
+      note: 'KONFLIKT-Aufloesung SCR-0040 (08.09.2026): Slot von ATC-STD-204 nach ATC-STD-214 umallokiert (ID-Immutabilitaet §36)'
+      refs:
+      - ATC-STD-214
     - id: ATC-STD-205
       title: Minting
       status: BELEGT
@@ -1368,14 +1382,16 @@ framework:
       note: Fertigbau v1.2.0 via SCR-0030/0031/0034
   - id: FAM-18
     name: Cybersecurity
-    range: ATC-STD-300..313
+    range: ATC-STD-300..319
     note: null
     family_refs: null
     slots:
-    - id: ATC-STD-300
+    - id: ATC-STD-314
       title: Cybersecurity Framework
-      status: KONFLIKT
-      note: 'Slot belegt durch ATC-STD-300 (Development Standard, §30-eingefroren). Auflösung via SCR: Cybersecurity-Familie auf 301+ bzw. eigenen Namensraum'
+      status: BELEGT
+      note: 'KONFLIKT-Aufloesung SCR-0040 (08.09.2026): Slot von ATC-STD-300 nach ATC-STD-314 umallokiert — Range in herrenlose Luecke geweitet (ID-Immutabilitaet §36, S-21-geprueft)'
+      refs:
+      - ATC-STD-314
     - id: ATC-STD-301
       title: Secure Development
       status: BELEGT
