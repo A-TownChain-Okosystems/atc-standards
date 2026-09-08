@@ -1,19 +1,30 @@
 # ATC Standards
 
 <!-- GENERATED-BY generate_views.py — NICHT MANUELL BEARBEITEN -->
-## Current State (GENERIERT — Quelle: `registry/standards.yaml`)
+## Registry-Kennzahlen (GENERIERT — Quelle: `registry/standards.yaml`)
 
 | Kennzahl | Wert |
 |---|---|
 | Registry Standards | **431** |
-| APPROVED / CANDIDATE | **395 / 36** |
+| Registry APPROVED | **395** |
+| Registry CANDIDATE (§33) | **36** |
+| Standard-Dateien (`standards/`) | **430** |
 | Familien | **49** |
-| Registry SHA-256 | `ff2117a62088cb0d…` ([Vollständig](registry/registry.lock)) |
-| Stand | 2026-09-08 16:36 UTC+2 |
+| Registry SHA-256 | `ff2117a62088cb0d…` (vollständig: `registry/registry.lock`) |
+| Stand | 2026-09-08 17:14 UTC+2 |
 
-**Implementierungs-KPI:** 431 Standards normativ definiert — 62 enforced, 129 implemented, 240 specification-only. Details: [`standard-implementation.yaml`](registry/standard-implementation.yaml) (ATC-STD-IMPLEMENTATION-001).
+Implementierungs-Matrix: [`registry/standard-implementation.yaml`](registry/standard-implementation.yaml) (ATC-STD-IMPLEMENTATION-001).
+**Implementierungs-KPI:** 431 Standards normativ definiert — 62 enforced, 129 implemented, 240 specification-only (Zielsysteme im qualitätsgetriebenen Rebuild AD-023/AD-045). Die Aussage „431 Standards implementiert“ ist unzulässig (SCR-0048).
+
+**ATC COMPLIANCE: YES** — Repository-Audit R3 · Naming/Versioning/Ownership/Lizenz konform ([Audit-Details](#standards--compliance))
 
 ---
+
+## Status
+
+**Status:** `release-candidate` — Governance technisch weit fortgeschritten
+(externes Audit 08.09.: B/AMBER, SCR-0052). 431 Standards normativ definiert;
+191 nachweisbar umgesetzt/enforced; 240 specification-only.
 
 ## Purpose
 
@@ -28,6 +39,23 @@ All 26 organizational repositories follow these standards (Registry-First princi
 
 ---
 
+## Scope
+
+Governance-Root der A-TownChain-Organisation: Registry, Standards,
+Schemata, Validatoren, Audits und Change-Requests. In Scope: normative
+Standards (430 Dateien, 49 Familien) und ihre Metadaten/Validierung.
+Out of Scope: Implementierung der Standards (liegt in den 26 Repos und
+deren CI-Gates; Nachweis via Implementierungs-Matrix).
+
+## Features
+
+- Registry-SSOT (`standards.yaml`, SHA-Lock) mit 431 Standards und
+  schema-validierten Metadaten (SCR-0050)
+- Validatoren: S-01..S-17, Meta-Sweep, Meta-Daten-Audit, README-Validator
+- Implementierungs-Matrix (SCR-0048) — kein Status ohne Evidence
+- Repository-Audit R1-R3 (ATC-STD-201ff) und Governance-CI
+- Discovery-Familie (REPO-DISCOVERY-001..010) fuer neue Inhalte
+
 ## Architecture
 
 ### Core Components
@@ -37,7 +65,16 @@ All 26 organizational repositories follow these standards (Registry-First princi
 - `tools/` — Validators, Auditors, Generators
 - `governance/`, `approval/`, `change-requests/` — Verfassung, Freigaben, SCR-System
 
-### Governance Flow
+### Usage
+
+```bash
+python3 tools/atc-std-validator/validate_all.py
+# Expected: RESULT: ALL COMPLIANT
+python3 tools/atc-repo-audit/atc_repo_audit.py . --level R3
+# Expected: GATE: PASS
+```
+
+## Governance Flow
 Change Request → SCR (§19–33) → Owner-Freigabe (§9) → Registry-Eintrag → CI-Validierung → APPROVED → normativ in Kraft (§30 Immutabilität).
 
 ---
@@ -96,6 +133,50 @@ See [`registry/standards.yaml`](registry/standards.yaml) for the complete regist
 
 ---
 
+## Development
+
+Aenderungen laufen ueber SCR (`change-requests/SCR-*.md`); Registry-Aenderungen
+nur via kontrolliertem Change-Request. Views (README/AGENT_MANIFEST/STATUS) sind
+GENERIERT — regeneration: `python3 tools/gen_views/generate_views.py`.
+Commits: Conventional Commits + Agent-Signatur.
+
+## Testing
+
+Lokal vor Push: `python3 tools/atc-std-validator/validate_all.py` (alle
+Standards, S-Gates) · `python3 tools/atc-repo-audit/atc_repo_audit.py . --level R3`
+· `python3 tools/atc-readme-validator/check_readme.py .` (13 Gates).
+CI: beide Workflows muessen gruen sein (Push = Gate).
+Erwartete Ergebnisse: `RESULT: ALL COMPLIANT`, `GATE: PASS`, README-Validator CONFORM.
+
+## Roadmap
+
+Governance-Hardening (SCR-0052-P2): Registry-Integritaets-Gate, Discovery->Audit->
+SCR-Kopplung, Evidence-L3 fuer kritische Standards, CI-Evidence-Kopplung der
+Implementierungs-Matrix. V2S-Phasen-Standards V2S-001..026 (FAM-45) folgen dem
+Implementierungs-Pivot (kein Standard ohne Implementierungsstatus).
+
+## Repository Structure
+
+```text
+├── approval/        # §9-Freigabe-Protokolle (Owner-Signaturen)
+├── atc/             # ATC-Governance-Kernartefakte
+├── ats/             # ATC-Test-Spezifikationen
+├── audits/          # Audit-Berichte (META-SWEEP, Audits AUD-*)
+├── change-requests/ # SCR-*.md (Change-Requests)
+├── contracts/       # Smart-Contract-Framework (Referenz)
+├── docs/            # Patches, ADR, REPOSITORY_STANDARD, Audits
+├── governance/      # ATC-STD-000 Verfassung + Governance-Doku
+├── licenses/        # Lizenz-Texte
+├── licensing/       # ATC-LICENSE-Standards (Code/Marke/Assets/Doku)
+├── protocols/       # Prozessprotokolle
+├── references/      # Normative Referenzen
+├── registry/        # SSOT: standards.yaml, Matrix, Lock, Schemata-Reg
+├── schemas/         # JSON/YAML-Schemata (standard.schema.yaml)
+├── standards/       # 430 Standard-Dateien in 49 Familien
+├── templates/       # Dokumentvorlagen
+└── tools/           # Validatoren, Generatoren, Audits (Python)
+```
+
 ## Documentation
 
 Full documentation:
@@ -115,6 +196,11 @@ Security issues **must NOT** be disclosed via GitHub Issues. Report vulnerabilit
 See [`SECURITY.md`](SECURITY.md) for the full disclosure policy.
 
 ---
+
+## Maintainers
+
+**Organization:** A-TownChain-Okosystems · **Owner:** Michael Wroblewski
+(GitHub: ShivaCoreDev) · Agent: Aurora (Base44 Superagent)
 
 ## License
 
