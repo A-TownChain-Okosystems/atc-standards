@@ -12,9 +12,12 @@ standard:
   normative: true
   supersedes: ["ATC-STD-REPO-002@1.0.x"]
   superseded_by: null
+  effective_date: "2026-09-07"
+  review_date: "2027-09-08"
+  license: "Copyright (c) 2026 Michael Wroblewski"
 ---
 
-# ATC-STD-202 — Repository Naming & Classification Standard
+# ATC-STD-202 — Repository Naming & Classification Standard (v1.1.0, APPROVED)
 > **Status:** APPROVED (Owner-Sammelfreigabe 07.09.2026, ATC-STD-000 §9) — normativ in Kraft| **Datum:** 07.09.2026 | **Autor:** Michael Wroblewski (Owner), Aurora (Superagent)
 > **Standard-ID:** ATC-STD-202 | **Scope:** GitHub-Organisation A-TownChain-Okosystems
 > **Referenzen:** AD-025 (Genesis Chronicles Umbenennung), AD-026 (Bauhierarchie L0-L7), AD-029 (Governance-Mandat), ATC-STD-201/-003

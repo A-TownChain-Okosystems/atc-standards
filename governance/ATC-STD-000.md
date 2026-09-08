@@ -12,9 +12,12 @@ standard:
   normative: true
   supersedes: []
   superseded_by: null
+  effective_date: "2026-09-07"
+  review_date: "2027-09-08"
+  license: "Copyright (c) 2026 Michael Wroblewski"
 ---
 
-# ATC-STD-000 — Standards Governance & Specification Standard
+# ATC-STD-000 — Standards Governance & Specification Standard (v1.2.0, APPROVED)
 
 > ATC-STD-000 ist der Meta-Standard fuer alle ATC Standards: Er definiert das
 > uebergeordnete Governance- und Spezifikationsmodell des gesamten

@@ -12,6 +12,9 @@ standard:
   normative: true
   supersedes: []
   superseded_by: null
+  effective_date: "2026-09-07"
+  review_date: "2027-09-08"
+  license: "Copyright (c) 2026 Michael Wroblewski"
 ---
 
 # ATC-ENT-006 — Interessenkonflikte Standard (v1.0.0, APPROVED)

@@ -44,6 +44,7 @@ standard:
     - REQ-COMPAT-012
     - REQ-COMPAT-013
     - REQ-COMPAT-014
+  license: "Copyright (c) 2026 Michael Wroblewski"
 ---
 
 # ATC-STD-COMPAT-001 — ATC Major Version Compatibility & Recovery Standard (v1.0.0, APPROVED)

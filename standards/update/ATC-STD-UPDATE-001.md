@@ -52,6 +52,7 @@ standard:
     - REQ-UPD-017
     - REQ-UPD-018
     - REQ-UPD-019
+  license: "Copyright (c) 2026 Michael Wroblewski"
 ---
 
 # ATC-STD-UPDATE-001 — ATC Update Standard (v1.0.0, APPROVED)

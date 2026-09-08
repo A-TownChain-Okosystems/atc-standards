@@ -1,5 +1,25 @@
 # Changelog
 
+## [1.4.44] - 2026-09-08
+
+### Changed
+
+- **Tiefenanalyse & Korrekturen (SCR-0032):** Registry 387/387 mit autoritativem
+  Parser verifiziert — 0 Drift/Orphans/tote Refs/Duplikate. Backfill: F-034
+  (103× effective_date + review_date), F-040 (109× license Wroblewski), F-041
+  (16 Altbau-H1-Status-Suffixe), versions.yaml-Lücke FRAMEWORK-001 v1.0.7
+  geschlossen; alle drei Findings RESOLVED. Metadaten-Hülle damit 387/387 = 100 %.
+
+### Added
+
+- **Umsetzungs-Prüfung (docs/DEEP-ANALYSE-2026-09-08.md):** Ehrliche Drei-Ebenen-
+  Antwort mit 43-Familien-Matrix (E3 Code / E2 Tooling-Prozess / E1 Elaborat):
+  Governance-Ebene 387/387 umgesetzt (CI-erzwungen); Kern-Standards überwiegend
+  E2, teils E3 (ShivaCore K0-K40, atclang G1-G2); Elaborate-Batch fachlich 0 %
+  by design. Offene Umsetzungspunkte ehrlich benannt (Ed25519-HAL, CodeQL,
+  ATC-M-003, Protokoll-Spezifikationen, SBOM/Runbooks).
+
+
 ## [1.4.43] - 2026-09-08
 
 ### Changed

@@ -12,6 +12,8 @@ standard:
   normative: true
   supersedes: ["ATC-STD-REPO-001@1.0.x"]
   superseded_by: null
+  effective_date: "2026-09-07"
+  review_date: "2027-09-08"
 ---
 
 # ATC-STD-201 — Repository Structure Standard (v1.0.1, APPROVED)

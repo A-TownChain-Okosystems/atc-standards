@@ -12,6 +12,9 @@ standard:
   normative: true
   applies_to: "Alle öffentlichen und internen ATC-Repositories"
   supersedes: []
+  effective_date: "2026-09-07"
+  review_date: "2027-09-08"
+  license: "Copyright (c) 2026 Michael Wroblewski"
 ---
 
 # ATC-STD-README-001 — README Standard (v1.0.0, APPROVED)

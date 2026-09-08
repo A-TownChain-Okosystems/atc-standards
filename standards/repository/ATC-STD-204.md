@@ -12,9 +12,12 @@ standard:
   normative: true
   supersedes: []
   superseded_by: null
+  effective_date: "2026-09-07"
+  review_date: "2027-09-08"
+  license: "Copyright (c) 2026 Michael Wroblewski"
 ---
 
-# ATC-STD-204 — Dependency & Interface Standard
+# ATC-STD-204 — Dependency & Interface Standard (v1.0.0, APPROVED)
 > **Status:** APPROVED (v1.0.0) — Owner-Freigabe 07.09.2026 (ATC-STD-000 §9); normativ in Kraft, Übergangsfrist für Nachregistrierung: 30 Tage (§9) | **Datum:** 07.09.2026 | **Autor:** Michael Wroblewski (Owner), Aurora (Superagent)
 > **Standard-ID:** ATC-STD-204 | **Scope:** Alle 26 Repositories der Organisation
 > **Referenzen:** AD-026 (Dependency Graphs), AD-030/031 (Registry), ATC-STD-000, ATC-STD-201/-202/-203, Externe Bewertung 07.09.2026 (F-001 Dependency Governance P0, F-002 Interface Governance P0, F-005 Versioning P1)

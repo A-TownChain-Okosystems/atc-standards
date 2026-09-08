@@ -61,6 +61,7 @@ standard:
     - REQ-AIDEC-021
     - REQ-AIDEC-022
     - REQ-AIDEC-023
+  license: "Copyright (c) 2026 Michael Wroblewski"
 ---
 
 # ATC-STD-AI-DECISION-001 — ATC Agent Decision-Making Standard (v1.0.0, APPROVED)

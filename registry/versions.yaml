@@ -1172,6 +1172,12 @@ versions:
       23 Abschlusskriterien, Auditor-Automatisierung als Ziel (002/003 GEPLANT); SCR-0020; §9-Freigabe
       ausstehend'
   ATC-STD-FRAMEWORK-001:
+  - version: 1.0.7
+    date: '2026-09-08'
+    change: 'PATCH (SCR-0029, Register-Bibliothek): §2 Register-Architektur vervollständigt — 7 neue SSOT-Register
+      (requirements, architecture, agents, security, releases, protocol-conformance, protocol-security);
+      REQ-FW-011 erfüllt. Genehmigung gebündelt mit §9-Freigaben REPO-AUDIT-003/PROTOCOL-002/003 (08.09.
+      01:41 UTC+2). Versions-Lücke via SCR-0032 nachgetragen.'
   - version: 1.0.7-PATCH
     date: '2026-09-08'
     change: 'Katalog-Erweiterung SCR-0029: FAM-41/42-Flanken geschlossen (REPO-AUDIT-003, PROTOCOL-002,

@@ -13,9 +13,12 @@ standard:
   supersedes: null
   superseded_by: null
 
+  effective_date: "2026-09-07"
+  review_date: "2027-09-08"
+  license: "Copyright (c) 2026 Michael Wroblewski"
 ---
 
-# ATC-STD-ZKP-010 — ZKP Security & Audit Standard
+# ATC-STD-ZKP-010 — ZKP Security & Audit Standard (v1.0.0, APPROVED)
 
 > **Version:** 1.0.0 (FORMAL)
 > **Status:** APPROVED (Owner-Sammelfreigabe 07.09.2026, ATC-STD-000 §9) — normativ in Kraft

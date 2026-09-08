@@ -36,6 +36,7 @@ standard:
     - REQ-DESC-012
     - REQ-DESC-013
     - REQ-DESC-014
+  license: "Copyright (c) 2026 Michael Wroblewski"
 ---
 
 # ATC-STD-DESC-001 — Standard zur Beschreibung von Standards (v1.0.0, APPROVED)

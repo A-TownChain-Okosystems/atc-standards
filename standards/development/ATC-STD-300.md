@@ -13,9 +13,12 @@ standard:
   mandate: "Owner-Entwurf 07.09.2026 (Michael Wroblewski) — DRAFT->Review per Owner-Vorgabe; ID korrigiert 204->300 (300er-Block, Owner-Rueckfrage)"
   supersedes: null
   superseded_by: null
+  effective_date: "2026-09-07"
+  review_date: "2027-09-08"
+  license: "Copyright (c) 2026 Michael Wroblewski"
 ---
 
-# ATC-STD-300 — Development & Project Management Standard
+# ATC-STD-300 — Development & Project Management Standard (v1.0.0, APPROVED)
 > **Status:** APPROVED (Owner-Sammelfreigabe 07.09.2026, ATC-STD-000 §9) — normativ in Kraft| **Datum:** 07.09.2026 | **Autor:** Michael Wroblewski (Owner), Aurora (Superagent)
 > **Standard-ID:** ATC-STD-300 | **Scope:** Alle A-TownChain-Repositories und Entwicklungsprojekte
 > **Referenzen:** ATC-STD-000 (Governance), ATC-STD-201/-202/-203 (Repository-Serie), AD-023 (Quality-Driven), AD-026 (Bauhierarchie)

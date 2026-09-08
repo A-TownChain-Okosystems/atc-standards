@@ -6,7 +6,8 @@ findings:
   alias: T-F01
   scr: SCR-0001
   status: RESOLVED
-  resolution: SCR-0001 ACCEPTED; §37 ID-Allokationsprozess in ATC-STD-000 v1.2.0 APPROVED (07.09.2026, Owner-Freigabe)
+  resolution: SCR-0001 ACCEPTED; §37 ID-Allokationsprozess in ATC-STD-000 v1.2.0 APPROVED (07.09.2026,
+    Owner-Freigabe)
 - id: F-002
   title: §34-Integritaetsumsetzung physisch offen (Zweig-Absicherung, Signed Tags)
   severity: MEDIUM
@@ -29,52 +30,64 @@ findings:
   source: Security Review
   alias: S-F03
   status: RESOLVED
-  resolution: §38 Security Considerations (REQ-STD-003) in ATC-STD-000 v1.2.0 APPROVED (07.09.2026, Owner-Freigabe) — normativ in Kraft
+  resolution: §38 Security Considerations (REQ-STD-003) in ATC-STD-000 v1.2.0 APPROVED (07.09.2026, Owner-Freigabe)
+    — normativ in Kraft
 - id: F-005
   title: Registry-Naming-Dualitaet (STANDARDS_REGISTRY.md vs standards.yaml)
   severity: MINOR
   source: Architecture Review
   alias: A-F01
   status: RESOLVED
-  resolution: 'Naming-Dualitaet aufgeloest: registry/standards.yaml ist SSOT (Registry+Repository-Regel); registry/STANDARDS_REGISTRY.md ist explizit als abgeleitete Dokumentations-Sicht markiert und aus
+  resolution: 'Naming-Dualitaet aufgeloest: registry/standards.yaml ist SSOT (Registry+Repository-Regel);
+    registry/STANDARDS_REGISTRY.md ist explizit als abgeleitete Dokumentations-Sicht markiert und aus
     der YAML regeneriert'
 - id: F-006
-  title: 'registry/standards.yaml Zeile 4 korrupt (Merge-Artefakt: zwei ATC-STD-000-Eintraege ineinandergespleisst, YAML unparbar)'
+  title: 'registry/standards.yaml Zeile 4 korrupt (Merge-Artefakt: zwei ATC-STD-000-Eintraege ineinandergespleisst,
+    YAML unparbar)'
   severity: S1
   source: Governance-Audit AUD-001 (07.09., Agent Aurora ...105b5)
   status: RESOLVED
-  resolution: 'Eintrag dedupliziert auf status: candidate (lebenszyklus-korrekt, Owner-Freigabe PENDING), Commit folgt'
+  resolution: 'Eintrag dedupliziert auf status: candidate (lebenszyklus-korrekt, Owner-Freigabe PENDING),
+    Commit folgt'
 - id: F-007
-  title: 'Validator-Luecke: validate_all.py pruefte Registry nur per Regex, nicht strukturell — korrupte standards.yaml lief COMPLIANT'
+  title: 'Validator-Luecke: validate_all.py pruefte Registry nur per Regex, nicht strukturell — korrupte
+    standards.yaml lief COMPLIANT'
   severity: S2
   source: Governance-Audit AUD-001 (07.09.)
   status: RESOLVED
-  resolution: S-18 Registry-Parse-Check ergaenzt (yaml.safe_load + Pflichtfeld-Pruefung, Fallback ohne PyYAML), validiert PASS
+  resolution: S-18 Registry-Parse-Check ergaenzt (yaml.safe_load + Pflichtfeld-Pruefung, Fallback ohne
+    PyYAML), validiert PASS
 - id: F-008
-  title: 'versions.yaml unvollstaendig: 12 Standards (BUG-001..004, NET-001..008) ohne Versionshistorie trotz §13-Pflicht'
+  title: 'versions.yaml unvollstaendig: 12 Standards (BUG-001..004, NET-001..008) ohne Versionshistorie
+    trotz §13-Pflicht'
   severity: S3
   source: Governance-Audit AUD-001 (07.09.)
   status: RESOLVED
   resolution: 12 initiale v1.0.0-Eintraege mit AD-040/AD-041-Mandatsverweis ergaenzt
 - id: F-009
-  title: 'CI-V-16 unzuverlaessig: Shallow-Checkout (fetch-depth fehlt in naming-governance.yml) liest nur Head-Commit — CC-Quote zufallsabhaengig'
+  title: 'CI-V-16 unzuverlaessig: Shallow-Checkout (fetch-depth fehlt in naming-governance.yml) liest
+    nur Head-Commit — CC-Quote zufallsabhaengig'
   severity: S3
   source: 'Reality-Check 07.09. (CI-Run 34132214931: FALSE-FAIL auf d6722fa)'
   status: PARTIAL
-  resolution: 'CC_RE-Typen erweitert (Commit gepusht); fetch-depth: 0 benoetigt Owner-Aktion — OAuth-Push von Workflow-Dateien ohne workflow-Scope abgelehnt (GH013)'
+  resolution: 'CC_RE-Typen erweitert (Commit gepusht); fetch-depth: 0 benoetigt Owner-Aktion — OAuth-Push
+    von Workflow-Dateien ohne workflow-Scope abgelehnt (GH013)'
 - id: F-010
-  title: 'Agent-OAuth-Token ohne workflow-Scope: Workflow-Aenderungen in Governance Root nur durch Owner moeglich'
+  title: 'Agent-OAuth-Token ohne workflow-Scope: Workflow-Aenderungen in Governance Root nur durch Owner
+    moeglich'
   severity: S3
   source: Reality-Check 07.09. (GH013-Push-Ablehnung)
   status: OPEN
-  resolution: 'Owner: PAT mit workflow-Scope oder manuelle Workflow-Pflege; bis dahin Workflow-Aenderungen als Owner-Aktion dokumentiert'
+  resolution: 'Owner: PAT mit workflow-Scope oder manuelle Workflow-Pflege; bis dahin Workflow-Aenderungen
+    als Owner-Aktion dokumentiert'
 - id: F-011
   title: Rollen-Dualitaet a-townchain vs. atc-node (Chain/Node-Zielrolle ueberlappt)
   severity: MEDIUM
   source: Technology Profile Audit 07.09.2026
   scr: SCR-0005
   status: RESOLVED
-  resolution: 'SCR-0005 Option A (Owner-Freigabe 07.09.): Rollen-Trennung a-townchain (Chain-Protokoll/Bibliothek) vs. atc-node (Full-Node-Binary/Runtime, S4) — ATC-STD-202 v1.1.0 §3a'
+  resolution: 'SCR-0005 Option A (Owner-Freigabe 07.09.): Rollen-Trennung a-townchain (Chain-Protokoll/Bibliothek)
+    vs. atc-node (Full-Node-Binary/Runtime, S4) — ATC-STD-202 v1.1.0 §3a'
 - id: F-012
   title: 'CI-Abdeckung: validate_all pruefte nur 19/81 Standards (file_id-Regex ohne ZKP/AI-DEV/AAS/ENT)'
   severity: S2
@@ -88,94 +101,113 @@ findings:
   status: RESOLVED
   resolution: S-09-Regex um MUSS/SOLLTE/DARF erweitert; RFC-2119-Deklaration je Standard verbindlich
 - id: F-014
-  title: S-19-Mutationssuite nutzte Live-Dateien als Fixtures — nach Freigaben wurden Mutationen zu No-Ops (3 false-negative Tests)
+  title: S-19-Mutationssuite nutzte Live-Dateien als Fixtures — nach Freigaben wurden Mutationen zu No-Ops
+    (3 false-negative Tests)
   severity: S3
   source: Self-Compliance-Audit 07.09.2026
   status: RESOLVED
-  resolution: Suite auf synthetische Fixtures umgestellt (12/12 bestanden); zusaetzlich hsv-Regex-Fix (v zwingend, kein False Positive auf (30 Tage)) und WARN-Semantik bei fehlender Kopf-Statuszeile
+  resolution: Suite auf synthetische Fixtures umgestellt (12/12 bestanden); zusaetzlich hsv-Regex-Fix
+    (v zwingend, kein False Positive auf (30 Tage)) und WARN-Semantik bei fehlender Kopf-Statuszeile
 - id: F-015
-  title: Paragraph 9-Pflichtstruktur fehlte in 62 Standards (Abstract/Scope) — 40+8 Abstract, 38+11 Scope nachgeruestet
+  title: Paragraph 9-Pflichtstruktur fehlte in 62 Standards (Abstract/Scope) — 40+8 Abstract, 38+11 Scope
+    nachgeruestet
   severity: S2
   source: Self-Compliance-Audit 07.09.2026
   status: RESOLVED
-  resolution: Abstract (mit RFC-2119-Deklaration) und Scope (Gilt/Nicht-Gilt) in AI-DEV/ZKP/AAS/ENT nachgeruestet; categories.yaml um ai-dev/aas/enterprise ergänzt; Schema um zkp/aas/ent Dateinamen-Muster
-    + REQ-ZKP-Muster erweitert
+  resolution: Abstract (mit RFC-2119-Deklaration) und Scope (Gilt/Nicht-Gilt) in AI-DEV/ZKP/AAS/ENT nachgeruestet;
+    categories.yaml um ai-dev/aas/enterprise ergänzt; Schema um zkp/aas/ent Dateinamen-Muster + REQ-ZKP-Muster
+    erweitert
 - id: F-016
   title: 'atc-standards selbst: .github/ai/ fehlte (AAS-025 Repo-Manifest, AI-DEV-001 §6, AI-DEV-009 Audit-Ablage)'
   severity: S2
   source: Self-Compliance-Audit 07.09.2026
   status: RESOLVED
-  resolution: 'Repo-Manifest .github/ai/agent.yaml + AGENTS.md + audit/-Records (AUD-001..005, rueckwirkend dokumentiert) angelegt — Vorreiter-Rollout von Task #111'
+  resolution: 'Repo-Manifest .github/ai/agent.yaml + AGENTS.md + audit/-Records (AUD-001..005, rueckwirkend
+    dokumentiert) angelegt — Vorreiter-Rollout von Task #111'
 - id: F-017
-  title: REQ-ID-Traceability (ATC-STD-000 §10/§11) fehlt in 52 neueren Standards (AI-DEV/AAS/ENT) — Pflichtstruktur Requirements/Security/Changelog/References teils nur als WARN
+  title: REQ-ID-Traceability (ATC-STD-000 §10/§11) fehlt in 52 neueren Standards (AI-DEV/AAS/ENT) — Pflichtstruktur
+    Requirements/Security/Changelog/References teils nur als WARN
   severity: S2
   source: Self-Compliance-Audit 07.09.2026
   status: OPEN
-  resolution: 'SCR-0007 vorgelegt: Domain-qualifizierte REQ-Präfixe (REQ-AIDEV/REQ-AAS/REQ-ENT) + §9-Reststruktur-Rollout bis 07.10.2026; Owner-Entscheidung ausstehend'
+  resolution: 'SCR-0007 vorgelegt: Domain-qualifizierte REQ-Präfixe (REQ-AIDEV/REQ-AAS/REQ-ENT) + §9-Reststruktur-Rollout
+    bis 07.10.2026; Owner-Entscheidung ausstehend'
 - id: F-018
-  title: 'Agent-Manifest band Agent nur an Teilmenge der Standards (required_standards: 6 statt 81; kein explizites Umsetzungs-Mandat)'
+  title: 'Agent-Manifest band Agent nur an Teilmenge der Standards (required_standards: 6 statt 81; kein
+    explizites Umsetzungs-Mandat)'
   severity: S2
   source: Owner-Auftrag 07.09.2026
   status: RESOLVED
-  resolution: Voll-Compliance-Mandat in AGENT_MANIFEST.md + agent.yaml required_standards = ALLE 81 Registry-Standards (dynamische Bindung, Registry=SSOT) + CI-Gate check_agent_manifest.py (A1-A4)
+  resolution: Voll-Compliance-Mandat in AGENT_MANIFEST.md + agent.yaml required_standards = ALLE 81 Registry-Standards
+    (dynamische Bindung, Registry=SSOT) + CI-Gate check_agent_manifest.py (A1-A4)
 - id: F-019
   title: 82/108 Standards ohne Durchsetzungs-Mechanismus (75% DOCUMENTED-only; nur 8 automatisiert erzwungen)
   severity: S2
   source: AUD-2026-0001 (ATC-STD-AUDIT-001)
   audit: AUD-2026-0001
   status: OPEN
-  resolution: 'Enforcement-Roadmap empfohlen: SC-Gates (18) → AAS-Operational (24) → Voll-Gates DESC/VERSION/BUG/AUDIT/DECISION; je eigene SCR + Werkzeug'
+  resolution: 'Enforcement-Roadmap empfohlen: SC-Gates (18) → AAS-Operational (24) → Voll-Gates DESC/VERSION/BUG/AUDIT/DECISION;
+    je eigene SCR + Werkzeug'
 - id: F-020
-  title: 'AI-DECISION-001: DEC-NNNNNN-Records-Infrastruktur nicht implementiert (Speicherung, AAS-018-Anbindung, decision_hash)'
+  title: 'AI-DECISION-001: DEC-NNNNNN-Records-Infrastruktur nicht implementiert (Speicherung, AAS-018-Anbindung,
+    decision_hash)'
   severity: S2
   source: AUD-2026-0001 (REQ-AUDIT-004 COM-AIDEC-005)
   audit: AUD-2026-0001
   status: OPEN
   resolution: Records-Infra als Brücke ATC-STD-AI-DECISION-001 Abschnitt 16 ↔ ATC-AAS-018; eigene SCR
 - id: F-021
-  title: 'AUDIT-001: Engine-Automatisierung ausstehend — Cross-System-Scanner (REQ-AUDIT-029) nicht gebaut; Teilimplementierung: repo-audit R1-R3 + validate_all'
+  title: 'AUDIT-001: Engine-Automatisierung ausstehend — Cross-System-Scanner (REQ-AUDIT-029) nicht gebaut;
+    Teilimplementierung: repo-audit R1-R3 + validate_all'
   severity: S3
   source: AUD-2026-0001 (REQ-AUDIT-023)
   audit: AUD-2026-0001
   status: OPEN
   resolution: Cross-System Integrity Engine als eigenständiges Werkzeug (Scanner-Suite, AUD-Report-Format)
 - id: F-022
-  title: 'BUG-005: Analyse-Felder (4-Ebenen-RCA, RC-Kategorie, Timeline T0-T9, Metrics) nicht in Finding-Workflow/findings-Schema integriert'
+  title: 'BUG-005: Analyse-Felder (4-Ebenen-RCA, RC-Kategorie, Timeline T0-T9, Metrics) nicht in Finding-Workflow/findings-Schema
+    integriert'
   severity: S3
   source: AUD-2026-0001 (REQ-STD-147ff)
   audit: AUD-2026-0001
   status: OPEN
   resolution: findings.yaml-Schema um BUG-005-Pflichtfelder erweitern (optional-für-Bestand, Pflicht-für-neue)
 - id: F-023
-  title: 'Cross-System-Stichprobe atc-shivacore: STATUS.md, ROADMAP.md, ARCHITECTURE.md fehlen (MD-001 REQ-MD-001: MUSS bei Software/aktiver Entwicklung)'
+  title: 'Cross-System-Stichprobe atc-shivacore: STATUS.md, ROADMAP.md, ARCHITECTURE.md fehlen (MD-001
+    REQ-MD-001: MUSS bei Software/aktiver Entwicklung)'
   severity: S2
   source: AUD-2026-0001 (AUD-C20, GitHub-API-Stichprobe 07.09.)
   audit: AUD-2026-0001
   status: OPEN
-  resolution: Nachrzug atc-shivacore + Voll-Scan aller 26 Repos per Cross-System-Engine (F-021); MD-Gate je Repo-CI empfohlen
+  resolution: Nachrzug atc-shivacore + Voll-Scan aller 26 Repos per Cross-System-Engine (F-021); MD-Gate
+    je Repo-CI empfohlen
 - id: F-024
   title: 'Org-Level-Settings unsicher: Default-Repo-Permission admin, 2FA-Enforcement aus, keine Org-Beschreibung'
   severity: S2
   source: AUD-2026-0002 Organization Audit (Bereich 01, GitHub-API)
   audit: AUD-2026-0002
   status: SKIP
-  resolution: 'Owner-Entscheidung 07.09.2026 23:13 (Builder-Chat): Org-Settings-Prüfung/Aktion übersprungen — dokumentiert, kein Agent-Mandat; bei Bedarf Owner-Aktion in GitHub-Org-Settings (Settings →
-    Member privileges → Base permission; Authentication security → 2FA)'
+  resolution: 'Owner-Entscheidung 07.09.2026 23:13 (Builder-Chat): Org-Settings-Prüfung/Aktion übersprungen
+    — dokumentiert, kein Agent-Mandat; bei Bedarf Owner-Aktion in GitHub-Org-Settings (Settings → Member
+    privileges → Base permission; Authentication security → 2FA)'
 - id: F-025
   title: 'Security-Automatisierung: Dependabot 0/26, CodeQL 0/26 vor Audit'
   severity: S2
   source: AUD-2026-0002 (Bereich 11)
   audit: AUD-2026-0002
   status: PARTIAL
-  resolution: 'Dependabot.yml in 16 Manifest-Repos eingerichtet (npm/cargo/pip, weekly, Commits 07.09.); 6 Repos ohne Manifeste + 4 spec-only ohne Bedarf; CodeQL-Rollout offen → Issue #95 (Code-Repos: atc-shivacore,
+  resolution: 'Dependabot.yml in 16 Manifest-Repos eingerichtet (npm/cargo/pip, weekly, Commits 07.09.);
+    6 Repos ohne Manifeste + 4 spec-only ohne Bedarf; CodeQL-Rollout offen → Issue #95 (Code-Repos: atc-shivacore,
     atclang, aurora-ai, a-townchain, atc-contracts, atc-zkp, globus-os, genesis-chronicles)'
 - id: F-026
-  title: Manifest-Versionen inkonsistent (5x 0.1.0, atc-contracts 1.0.0, Rest unversioniert); Releases nur 2/26; keine Tag-Disziplin
+  title: Manifest-Versionen inkonsistent (5x 0.1.0, atc-contracts 1.0.0, Rest unversioniert); Releases
+    nur 2/26; keine Tag-Disziplin
   severity: S3
   source: AUD-2026-0002 (Bereich 13)
   audit: AUD-2026-0002
   status: OPEN
-  resolution: 'VERSION-001-Baseline festlegen (einheitliche Startversion je Repo-Typ) + Release/Tag-Disziplin für Meilenstein-Repos → Issue #96'
+  resolution: 'VERSION-001-Baseline festlegen (einheitliche Startversion je Repo-Typ) + Release/Tag-Disziplin
+    für Meilenstein-Repos → Issue #96'
 - id: F-027
   title: 'a-townchain-os: verwaister Git-Tag v2.0.0 neben Release v1.0.0 (Versionswiderspruch)'
   severity: S3
@@ -184,29 +216,34 @@ findings:
   status: OPEN
   resolution: 'Tag v2.0.0 entferen ODER Release v2.0.0 nachziehen → Issue #97 (Owner-Entscheidung)'
 - id: F-028
-  title: ATC-STD-202 v1.1.0 klassifiziert 22 statt 26 aktiver Repos (atc-vm/atc-algorithm/atc-zkp fehlen in Klassifizierungstabelle)
+  title: ATC-STD-202 v1.1.0 klassifiziert 22 statt 26 aktiver Repos (atc-vm/atc-algorithm/atc-zkp fehlen
+    in Klassifizierungstabelle)
   severity: S3
   source: AUD-2026-0002 (Bereich 15)
   audit: AUD-2026-0002
   status: OPEN
-  resolution: 'Minor-Update v1.2.0 per SCR-0017: Klassifizierungstabelle auf 26 Repos erweitern (R1/experimental für die 3 neuen, Registry-Kopplung) → Issue #98'
+  resolution: 'Minor-Update v1.2.0 per SCR-0017: Klassifizierungstabelle auf 26 Repos erweitern (R1/experimental
+    für die 3 neuen, Registry-Kopplung) → Issue #98'
 - id: F-029
   title: governance-ci.yml fehlt in atc-vm, atc-algorithm, atc-zkp (CI-Abdeckung 23/26)
   severity: S3
   source: AUD-2026-0002 (Bereich 10)
   audit: AUD-2026-0002
   status: PARTIAL
-  resolution: 'Agent-Push der Workflow-Datei abgelehnt (GH013, kein workflow-Scope — kongruent F-010, in diesem Lauf bestätigt); Lösung: Owner-Edit via GitHub UI oder PAT mit workflow-Scope → Issue #94
+  resolution: 'Agent-Push der Workflow-Datei abgelehnt (GH013, kein workflow-Scope — kongruent F-010,
+    in diesem Lauf bestätigt); Lösung: Owner-Edit via GitHub UI oder PAT mit workflow-Scope → Issue #94
     mit fertiger YAML'
 - id: F-030
-  title: Externe Referenz atc-whitepaper (ChatGPT-Pruefung 07.09.) existiert nicht (Org-API 404, GitHub-Suche 0 Treffer)
+  title: Externe Referenz atc-whitepaper (ChatGPT-Pruefung 07.09.) existiert nicht (Org-API 404, GitHub-Suche
+    0 Treffer)
   severity: S4
   source: AUD-2026-0002 (Bereich 02)
   audit: AUD-2026-0002
   status: RESOLVED
   resolution: Als veraltet/halluziniert dokumentiert — kein Handlungsbedarf
 - id: F-031
-  title: 'POSITIV-Befund: Governance-Hygiene 26/26 (README/CHANGELOG/LICENSE/SECURITY/CODEOWNERS/AGENT_MANIFEST/.atc), Secret-Scan 0 Funde in ~7200 Dateien, 0 Duplikate, Chain-ID 658467 + Copyright konsistent'
+  title: 'POSITIV-Befund: Governance-Hygiene 26/26 (README/CHANGELOG/LICENSE/SECURITY/CODEOWNERS/AGENT_MANIFEST/.atc),
+    Secret-Scan 0 Funde in ~7200 Dateien, 0 Duplikate, Chain-ID 658467 + Copyright konsistent'
   severity: S4
   source: AUD-2026-0002 (Bereiche 02-07, 11, 12, 15, 16)
   audit: AUD-2026-0002
@@ -218,68 +255,83 @@ findings:
   source: AUD-2026-0003 Selbst-Audit (CHECK-058-Abweichung)
   scr: SCR-0026
   status: RESOLVED
-  resolution: 'PATCH v1.0.1 (SCR-0026): Quote auf U+201C normalisiert; haette ab sofort von S-25 erkannt werden'
+  resolution: 'PATCH v1.0.1 (SCR-0026): Quote auf U+201C normalisiert; haette ab sofort von S-25 erkannt
+    werden'
 - id: F-033
-  title: 'Validator validate_all.py S-20-Fallback: TypeError (Format-String, 2 Platzhalter/1 Argument) bei fehlendem PyYAML'
+  title: 'Validator validate_all.py S-20-Fallback: TypeError (Format-String, 2 Platzhalter/1 Argument)
+    bei fehlendem PyYAML'
   severity: P2
   source: AUD-2026-0003 (CI-Log-Analyse, CI-rot seit 22:19)
   scr: SCR-0026
   status: RESOLVED
   resolution: Fallback-Format-String repariert (n_ok als zweites Argument)
 - id: F-034
-  title: 'STDDEV-001-Frontmatter-Pflicht im Altbau: 107/119 APPROVED ohne review_date, 107 ohne approved_by, 102 ohne effective_date (REQ-SD-012/§6; Standard in Kraft seit 08.09. 00:36)'
+  title: 'STDDEV-001-Frontmatter-Pflicht im Altbau: 107/119 APPROVED ohne review_date, 107 ohne approved_by,
+    102 ohne effective_date (REQ-SD-012/§6; Standard in Kraft seit 08.09. 00:36)'
   severity: P2
   source: AUD-2026-0003 (CHECK-010/058-Abweichung)
   scr: null
-  status: OPEN
-  resolution: 'Backfill-SCR vorgeschlagen (P2): review_date=Freigabe+365 tagesgenau je SCR-Historie; Owner-Entscheidung noetig (Massen-PATCH von 107 §30-eingefrorenen Dateien)'
+  status: RESOLVED
+  resolution: 'SCR-0032 Backfill (08.09.2026): Metadaten-Hüllpflichten im Altbau nachgetragen (effective_date/review_date,
+    license, H1-Status-Suffix); Validator ALL COMPLIANT.'
+  resolved_date: '2026-09-08'
 - id: F-035
-  title: PyYAML-Laufzeitabhaengigkeit undeklariert (kein requirements.txt) — Wurzelursache des CI-Failures naming-governance
+  title: PyYAML-Laufzeitabhaengigkeit undeklariert (kein requirements.txt) — Wurzelursache des CI-Failures
+    naming-governance
   severity: P2
   source: AUD-2026-0003 (CHECK-037-Abweichung)
   scr: SCR-0026
   status: RESOLVED
-  resolution: requirements.txt (pyyaml>=6.0) deklariert; Workflow-Haertung (pip install) via GH013-Issue als Owner-Aktion (Agent-Token ohne workflow-Scope, analog Org-Audit-#94-Klasse)
+  resolution: requirements.txt (pyyaml>=6.0) deklariert; Workflow-Haertung (pip install) via GH013-Issue
+    als Owner-Aktion (Agent-Token ohne workflow-Scope, analog Org-Audit-#94-Klasse)
 - id: F-036
   title: Verwaister GitHub-Release/Tag v1.1.0 (07.09.) widerspricht CHANGELOG v1.4.x (CHECK-049/051, VERSION-001)
   severity: P2
   source: AUD-2026-0003 (GitHub-API-Evidenz)
   scr: null
   status: OPEN
-  resolution: 'Owner-Entscheidung: Release auf CHANGELOG-Stand v1.4.x anheben ODER verwaisten v1.1.0-Release/Tag entfernen (extern sichtbares Artefakt)'
+  resolution: 'Owner-Entscheidung: Release auf CHANGELOG-Stand v1.4.x anheben ODER verwaisten v1.1.0-Release/Tag
+    entfernen (extern sichtbares Artefakt)'
 - id: F-037
   title: 'CI rot auf main: naming-governance 4+ konsekutive Failure-Runs seit 22:19 (CHECK-054 verletzt)'
   severity: P2
   source: 'AUD-2026-0003 (GitHub-API: Runs 24e8e5c..10f3c1b alle failure)'
   scr: SCR-0026
   status: RESOLVED
-  resolution: Validator-Fallback-Fix (F-033) behebt die Failure-Ursache; CI laeuft im Fallback-Modus gruen (lokal verifiziert, Exit 0); CI-Gruen via API nach Push verifiziert; Workflow-Haertung folgt via
-    Owner-Issue
+  resolution: Validator-Fallback-Fix (F-033) behebt die Failure-Ursache; CI laeuft im Fallback-Modus gruen
+    (lokal verifiziert, Exit 0); CI-Gruen via API nach Push verifiziert; Workflow-Haertung folgt via Owner-Issue
 - id: F-038
-  title: 'Validator-Gap: kein Strict-Frontmatter-YAML-Gate — F-032 wurde vom Regex-basierten S-16 nicht erkannt'
+  title: 'Validator-Gap: kein Strict-Frontmatter-YAML-Gate — F-032 wurde vom Regex-basierten S-16 nicht
+    erkannt'
   severity: P3
   source: AUD-2026-0003 (Root-Cause-Analyse)
   scr: SCR-0026
   status: RESOLVED
   resolution: NEU S-25 (Frontmatter-Strict-YAML je CI-Lauf ueber alle Standard-Dateien)
 - id: F-039
-  title: 12/121 APPROVED-Standards ohne §9-Approval-Eintrag in versions.yaml (Altbau vor STDDEV-001-00:36-Freigabe; REQ-SD-009 nicht rueckwirkend bindend — Grandfathering)
+  title: 12/121 APPROVED-Standards ohne §9-Approval-Eintrag in versions.yaml (Altbau vor STDDEV-001-00:36-Freigabe;
+    REQ-SD-009 nicht rueckwirkend bindend — Grandfathering)
   severity: P3
   source: AUD-2026-0003 (CHECK-058-Abweichung)
   scr: null
   status: OPEN
   resolution: Backfill empfohlen (P3) im Rahmen des F-034-Backfill-SCR
 - id: F-040
-  title: 109 Standard-Dateien ohne Wroblewski-License-Feld im Frontmatter (MD/DESC-Feld-Harmonisierung Altbau)
+  title: 109 Standard-Dateien ohne Wroblewski-License-Feld im Frontmatter (MD/DESC-Feld-Harmonisierung
+    Altbau)
   severity: P3
   source: AUD-2026-0003 (CHECK-010-Abweichung)
   scr: null
-  status: OPEN
-  resolution: Backfill im F-034-Backfill-SCR bündeln
+  status: RESOLVED
+  resolution: 'SCR-0032 Backfill (08.09.2026): Metadaten-Hüllpflichten im Altbau nachgetragen (effective_date/review_date,
+    license, H1-Status-Suffix); Validator ALL COMPLIANT.'
+  resolved_date: '2026-09-08'
 - id: F-041
   title: 16 Altbau-Standards ohne Status-/Versions-Suffix im H1-Header (Kopf-Konvention FRAMEWORK-001)
   severity: P3
   source: Tiefenpruefung 08.09.2026 (Builder-Chat, SCR-Ketten-Audit)
   scr: null
-  status: OPEN
-  resolution: H1-Suffix "(vX.X.X, APPROVED)" bei ATC-STD-000/100/202/203/204/300 und ZKP-001..010 ergaenzen — im F-034-Backfill-SCR buendeln (kosmetisch, praesentational, keine normative Aenderung)
+  status: RESOLVED
+  resolution: 'SCR-0032 Backfill (08.09.2026): Metadaten-Hüllpflichten im Altbau nachgetragen (effective_date/review_date,
+    license, H1-Status-Suffix); Validator ALL COMPLIANT.'
+  resolved_date: '2026-09-08'
