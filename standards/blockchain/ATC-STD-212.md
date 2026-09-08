@@ -25,6 +25,7 @@ standard:
     - ATC-STD-214
     - ATC-STD-215
   license: "Copyright (c) 2026 Michael Wroblewski"
+  applies_to: "Alle ATC-Repositories"
 ----
 
 # ATC-STD-212 — Token Supply Standard (v1.0.0, CANDIDATE)

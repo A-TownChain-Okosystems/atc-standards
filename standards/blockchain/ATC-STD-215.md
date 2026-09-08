@@ -26,6 +26,7 @@ standard:
     - ATC-STD-212
     - ATC-STD-NET-003
   license: "Copyright (c) 2026 Michael Wroblewski"
+  applies_to: "Alle ATC-Repositories"
 ----
 
 # ATC-STD-215 — Tokenomics Standard (v1.0.0, CANDIDATE)

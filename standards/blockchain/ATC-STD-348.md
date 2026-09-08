@@ -20,6 +20,7 @@ standard:
     - ATC-STD-000
   related_standards: []
   license: "Copyright (c) 2026 Michael Wroblewski"
+  applies_to: "Alle ATC-Repositories"
 ----
 
 # ATC-STD-348 — Mining Rewards (v1.2.0, APPROVED)

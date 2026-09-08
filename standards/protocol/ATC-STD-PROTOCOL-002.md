@@ -28,6 +28,7 @@ standard:
     - ATC-STD-COMPAT-001
     - ATC-STD-BUG-005
   license: "Copyright (c) 2026 Michael Wroblewski"
+  applies_to: "Alle ATC-Repositories"
 ----
 
 # ATC-STD-PROTOCOL-002 — Conformance- & Interoperabilitäts-Tests (v1.0.0, APPROVED)

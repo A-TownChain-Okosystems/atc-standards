@@ -29,6 +29,7 @@ standard:
     - ATC-STD-MD-001
     - ATC-STD-AI-DECISION-001
   license: "Copyright (c) 2026 Michael Wroblewski"
+  applies_to: "Alle ATC-Repositories"
 ----
 
 # ATC-STD-STDDEV-001 — ATC Standards Development Standard (v1.0.0, APPROVED)

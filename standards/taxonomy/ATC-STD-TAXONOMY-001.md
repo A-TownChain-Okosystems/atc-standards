@@ -29,6 +29,7 @@ standard:
     - ATC-STD-AOS-001
     - ATC-STD-PROTOCOL-001
   license: "Copyright (c) 2026 Michael Wroblewski"
+  applies_to: "Alle ATC-Repositories"
 ----
 
 # ATC-STD-TAXONOMY-001 — Standards Taxonomy & Family Creation (v1.0.0, APPROVED)

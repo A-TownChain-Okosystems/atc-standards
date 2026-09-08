@@ -30,6 +30,7 @@ standard:
     - ATC-STD-203
     - ATC-STD-204
   license: "Copyright (c) 2026 Michael Wroblewski"
+  applies_to: "Alle ATC-Repositories"
 ----
 
 # ATC-STD-REPO-AUDIT-003 — Automatisierter ATC Repository Auditor (v1.0.0, APPROVED)

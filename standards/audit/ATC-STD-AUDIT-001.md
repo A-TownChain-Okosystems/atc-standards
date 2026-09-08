@@ -60,6 +60,7 @@ standard:
     - REQ-AUDIT-029
     - REQ-AUDIT-030
   license: "Copyright (c) 2026 Michael Wroblewski"
+  applies_to: "Alle ATC-Repositories"
 ---
 
 # ATC-STD-AUDIT-001 — ATC Completeness & Audit Standard (v1.0.0, APPROVED)

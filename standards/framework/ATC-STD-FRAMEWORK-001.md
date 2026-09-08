@@ -32,6 +32,7 @@ standard:
     - ATC-STD-202
     - ATC-STD-204
   license: "Copyright (c) 2026 Michael Wroblewski"
+  applies_to: "Alle ATC-Repositories"
 ----
 
 # ATC-STD-FRAMEWORK-001 — ATC Enterprise Standards Framework (v1.0.7, APPROVED)

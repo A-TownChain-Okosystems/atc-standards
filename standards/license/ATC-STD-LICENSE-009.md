@@ -20,6 +20,7 @@ standard:
     - ATC-STD-000
   related_standards: []
   license: "Copyright (c) 2026 Michael Wroblewski"
+  applies_to: "Alle ATC-Repositories"
 ----
 
 # ATC-STD-LICENSE-009 — License Versioning Standard (v1.0.0, APPROVED)

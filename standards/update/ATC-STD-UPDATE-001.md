@@ -53,6 +53,7 @@ standard:
     - REQ-UPD-018
     - REQ-UPD-019
   license: "Copyright (c) 2026 Michael Wroblewski"
+  applies_to: "Alle ATC-Repositories"
 ---
 
 # ATC-STD-UPDATE-001 — ATC Update Standard (v1.0.0, APPROVED)

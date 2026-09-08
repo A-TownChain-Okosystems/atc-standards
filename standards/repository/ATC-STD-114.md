@@ -26,6 +26,7 @@ standard:
     - ATC-STD-107
     - ATC-STD-203
   license: "Copyright (c) 2026 Michael Wroblewski"
+  applies_to: "Alle ATC-Repositories"
 ----
 
 # ATC-STD-114 — Git Standard (v1.0.0, CANDIDATE)

@@ -32,6 +32,7 @@ standard:
     - ATC-STD-REPO-AUDIT-001
     - ATC-STD-AOS-001
   license: "Copyright (c) 2026 Michael Wroblewski"
+  applies_to: "Alle ATC-Repositories"
 ----
 
 # ATC-STD-PROTOCOL-001 — ATC Protocol Standards (v1.0.0, APPROVED)

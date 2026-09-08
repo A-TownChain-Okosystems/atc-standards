@@ -29,6 +29,7 @@ standard:
     - ATC-STD-COMPAT-001
     - ATC-STD-ZKP-010
   license: "Copyright (c) 2026 Michael Wroblewski"
+  applies_to: "Alle ATC-Repositories"
 ----
 
 # ATC-STD-PROTOCOL-003 — Protocol Threat-Model & Security-Audit (v1.0.0, APPROVED)

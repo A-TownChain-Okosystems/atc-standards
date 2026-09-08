@@ -24,6 +24,7 @@ standard:
     - ATC-STD-368
     - ATC-STD-200
   license: "Copyright (c) 2026 Michael Wroblewski"
+  applies_to: "Alle ATC-Repositories"
 ----
 
 # ATC-STD-214 — Burning Standard (v1.0.0, CANDIDATE)

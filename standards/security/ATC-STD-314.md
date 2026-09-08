@@ -27,6 +27,7 @@ standard:
     - ATC-STD-NET-007
     - ATC-STD-449
   license: "Copyright (c) 2026 Michael Wroblewski"
+  applies_to: "Alle ATC-Repositories"
 ----
 
 # ATC-STD-314 — Cybersecurity Framework Standard (v1.0.0, CANDIDATE)

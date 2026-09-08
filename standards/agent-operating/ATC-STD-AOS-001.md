@@ -28,6 +28,7 @@ standard:
     - ATC-STD-REPO-AUDIT-001
     - ATC-STD-UPDATE-001
   license: "Copyright (c) 2026 Michael Wroblewski"
+  applies_to: "Alle ATC-Repositories"
 ----
 
 # ATC-STD-AOS-001 — ATC Agent Operating Standard (v1.0.0, APPROVED)

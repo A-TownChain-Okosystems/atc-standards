@@ -29,6 +29,7 @@ standard:
     - ATC-STD-MILESTONE-001
     - ATC-STD-999
   license: "Copyright (c) 2026 Michael Wroblewski"
+  applies_to: "Alle ATC-Repositories"
 ----
 
 # ATC-STD-CHANGE-001 — ATC Change Control Dachnorm (v1.0.1, APPROVED)

@@ -46,6 +46,7 @@ standard:
     - REQ-VERSION-021
     - REQ-VERSION-022
   license: "Copyright (c) 2026 Michael Wroblewski"
+  applies_to: "Alle ATC-Repositories"
 ---
 
 # ATC-STD-VERSION-001 — ATC Versioning Standard (v1.0.0, APPROVED)

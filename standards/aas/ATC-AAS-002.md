@@ -15,6 +15,7 @@ standard:
   effective_date: "2026-09-07"
   review_date: "2027-09-08"
   license: "Copyright (c) 2026 Michael Wroblewski"
+  applies_to: "Alle ATC-Repositories"
 ---
 
 # ATC-AAS-002 — Agent Capability Standard (v1.0.0, APPROVED)

@@ -11,9 +11,10 @@
 | Standard-Dateien (`standards/`) | **430** |
 | Familien | **49** |
 | Registry SHA-256 | `ff2117a62088cb0d…` (vollständig: `registry/registry.lock`) |
-| Stand | 2026-09-08 16:13 UTC+2 |
+| Stand | 2026-09-08 16:18 UTC+2 |
 
 Implementierungs-Matrix: [`registry/standard-implementation.yaml`](registry/standard-implementation.yaml) (ATC-STD-IMPLEMENTATION-001).
+
 
 
 

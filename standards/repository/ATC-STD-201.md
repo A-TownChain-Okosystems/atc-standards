@@ -14,6 +14,8 @@ standard:
   superseded_by: null
   effective_date: "2026-09-07"
   review_date: "2027-09-08"
+  applies_to: "Alle ATC-Repositories"
+  license: "Copyright (c) 2026 Michael Wroblewski"
 ---
 
 # ATC-STD-201 — Repository Structure Standard (v1.0.1, APPROVED)

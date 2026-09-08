@@ -30,6 +30,7 @@ standard:
     - ATC-STD-202
     - ATC-STD-MD-001
   license: "Copyright (c) 2026 Michael Wroblewski"
+  applies_to: "Alle ATC-Repositories"
 ----
 
 # ATC-STD-MILESTONE-001 — ATC Milestone Standard (v1.0.0, APPROVED)

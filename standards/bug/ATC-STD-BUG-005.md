@@ -51,6 +51,7 @@ standard:
     - REQ-STD-163
     - REQ-STD-164
   license: "Copyright (c) 2026 Michael Wroblewski"
+  applies_to: "Alle ATC-Repositories"
 ---
 
 # ATC-STD-BUG-005 — Fehleranalyse- und Root-Cause-Analysis-Standard (v1.0.0, APPROVED)

@@ -15,6 +15,7 @@ standard:
   effective_date: "2026-09-07"
   review_date: "2027-09-08"
   license: "Copyright (c) 2026 Michael Wroblewski"
+  superseded_by: null
 ---
 
 # ATC-STD-SC-016 — Oracle Contract Standard (v1.0.0, APPROVED)

@@ -31,6 +31,7 @@ standard:
     - ATC-STD-AOS-001
     - ATC-STD-VERSION-001
   license: "Copyright (c) 2026 Michael Wroblewski"
+  applies_to: "Alle ATC-Repositories"
 ----
 
 # ATC-STD-999 — Enterprise Completeness & Consistency Audit (v1.0.0, APPROVED)

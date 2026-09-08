@@ -2,6 +2,12 @@
 
 ## [Unreleased] — 2026-09-08 (SCR-0045/0047/0048)
 
+### Metadaten-Vollstaendigkeit aller Standards (SCR-0050)
+- Neuer Meta-Daten-Audit (meta_data_audit.py) gegen standard.schema.yaml
+  (§8): alle 430 Standards besitzen alle 10 Pflichtfelder + 6 erweiterte
+  Felder (430/430); Schema auf Praefix-Familien + categories.yaml-SSOT
+  angehoben; Frontmatter-Fence-Konvention (-{3,}) im Acceptor normalisiert.
+
 ### Meta-Konformitaet aller Standards (SCR-0049)
 - 63 Standard-Dateien erhielten fehlende Meta-Sektionen (Security/
   Changelog/References) mit familienbezogenem Inhalt; Meta-Sweep-Funde
