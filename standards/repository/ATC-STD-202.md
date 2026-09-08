@@ -2,8 +2,8 @@
 standard:
   id: ATC-STD-202
   title: "ATC-STD-202 — Repository Naming & Classification Standard"
-  version: "1.1.0"
-  status: approved
+  version: "1.2.0"
+  status: candidate
   category: repository
   authority: A-TownChain Ecosystems
   owner: ShivaCoreDev
@@ -17,11 +17,11 @@ standard:
   license: "Copyright (c) 2026 Michael Wroblewski"
 ---
 
-# ATC-STD-202 — Repository Naming & Classification Standard (v1.1.0, APPROVED)
-> **Status:** APPROVED (Owner-Sammelfreigabe 07.09.2026, ATC-STD-000 §9) — normativ in Kraft| **Datum:** 07.09.2026 | **Autor:** Michael Wroblewski (Owner), Aurora (Superagent)
+# ATC-STD-202 — Repository Naming & Classification Standard (v1.2.0, CANDIDATE)
+> **Status:** CANDIDATE (v1.2.0) — Erweiterung der Klassifizierungstabelle auf 26 Repos (AUD-2026-0002/F-028, Issue #98); wartet auf §9-Freigabe. Bis dahin gilt v1.1.0 APPROVED| **Datum:** 07.09.2026 | **Autor:** Michael Wroblewski (Owner), Aurora (Superagent)
 > **Standard-ID:** ATC-STD-202 | **Scope:** GitHub-Organisation A-TownChain-Okosystems
 > **Referenzen:** AD-025 (Genesis Chronicles Umbenennung), AD-026 (Bauhierarchie L0-L7), AD-029 (Governance-Mandat), ATC-STD-201/-003
-> **Anwendungsregel:** VERBINDLICH — die Klassifizierungstabelle ist die normative Einordnung aller 22 aktiven Repos.
+> **Anwendungsregel:** VERBINDLICH — die Klassifizierungstabelle ist die normative Einordnung aller 26 aktiven Repos.
 
 ---
 
@@ -96,6 +96,9 @@ Technology Profile Audit 07.09., Finding F-011):
 | Repo | Rolle (normativ) |
 |---|---|
 | **a-townchain** | Chain-Protokoll & Bibliothek: State-Modell, Tx-Struktur, Chain-Orchestrierung, Konsens-Anbindung (atc-algorithm), atcnet-Propagation. Python-Bestand = Migrations-Kandidat (ATC-STD-100 REQ-STD-103, Rust-first). |
+| **atc-vm** | Virtual Machine / Contract-Ausführung: ATCLang-VM-Runtime als eigenes CORE-Repo (AD-043). Führt Contract-Bytecode aus; Ziel: `cargo build`-fähige VM, auf der atc-node und a-townchain aufbauen. R1/S4/experimental (Registry). |
+| **atc-algorithm** | Konsens-Algorithmik: Proof-of-History, Fork-Resolution, Konsens-Anbindung als eigenes CORE-Repo (AD-043). Liefert dem atc-node die Konsens-Bausteine; implementiert keine eigene Chain-Semantik. R1/S4/experimental. |
+| **atc-zkp** | ZKP-Layer (AD-045): kryptografische Verifikationsschicht INNERHALB der Chain (pluggable Proof Systems Groth16/PLONK/Halo2/STARK, 7 Rust-Crates) — kein eigenes Netzwerk/Konsens/State. R1/S4/experimental (Standards ATC-STD-ZKP-001..010). |
 | **atc-node** | Full-Node-Binary & Runtime: Distribution-Ziel (`git clone && cargo build` -> lauffaehiger Node) mit Bootstrap, Discovery, Validator-Betrieb. BAUT AUF a-townchain (Bibliothek), atc-algorithm (Konsens) und atc-vm (Ausfuehrung) auf — implementiert selbst KEINE Chain-Semantik. |
 
 Abhaengigkeitsrichtung (verbindlich, keine Zyklen, §6):
@@ -222,3 +225,5 @@ IMPLEMENTATION: tools/atc-repo-audit, schemas/repository.schema.yaml.
   ergaenzt.
 - 1.0.0 (07.09.2026): Formale Spezifikation (AD-031): RFC-2119,
   Compliance-Matrix M-01…M-16, Validator-Regeln V-01…V-16.
+
+| 1.2.0 | 2026-09-08 | Klassifizierungstabelle auf 26 Repos erweitert: atc-vm, atc-algorithm (AD-043), atc-zkp (AD-045) — schließt AUD-2026-0002/F-028 (Issue #98). |

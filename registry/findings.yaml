@@ -69,17 +69,21 @@ findings:
     nur Head-Commit — CC-Quote zufallsabhaengig'
   severity: S3
   source: 'Reality-Check 07.09. (CI-Run 34132214931: FALSE-FAIL auf d6722fa)'
-  status: PARTIAL
-  resolution: 'CC_RE-Typen erweitert (Commit gepusht); fetch-depth: 0 benoetigt Owner-Aktion — OAuth-Push
-    von Workflow-Dateien ohne workflow-Scope abgelehnt (GH013)'
+  status: RESOLVED
+  resolution: 'RESOLVED 08.09.: Owner-Push (michael.worob, 10:45) — fetch-depth: 0 +
+    workflow_dispatch in governance-ci.yml auf 23 Repos; atc-vm/atc-algorithm/atc-zkp nachgeruestet
+    (10:56, Issue #94); 22 CI-Neulaeufe GRUEN, GATE PASS; V-16-Shallow-Clone-Guard ergaenzt
+    (F-048, SCR-0039). Verifiziert im Re-Audit ATC-ORG-AUDIT-002 (08.09.).'
 - id: F-010
   title: 'Agent-OAuth-Token ohne workflow-Scope: Workflow-Aenderungen in Governance Root nur durch Owner
     moeglich'
   severity: S3
   source: Reality-Check 07.09. (GH013-Push-Ablehnung)
-  status: OPEN
-  resolution: 'Owner: PAT mit workflow-Scope oder manuelle Workflow-Pflege; bis dahin Workflow-Aenderungen
-    als Owner-Aktion dokumentiert'
+  status: RESOLVED
+  resolution: 'RESOLVED 08.09.: Loesungspfad 2 (manuelle Workflow-Pflege durch Owner) etabliert und
+    gelebt — Owner-Push vom 08.09. 10:45/10:56 hat saemtlliche Workflow-Fixes umgesetzt.
+    Zukuenftige Workflow-Aenderungen im Governance Root bleiben per Definition Owner-Aktion
+    (Agent-Pfad GH013-beschraenkt, kein PAT mit workflow-Scope noetig).'
 - id: F-011
   title: Rollen-Dualitaet a-townchain vs. atc-node (Chain/Node-Zielrolle ueberlappt)
   severity: MEDIUM
