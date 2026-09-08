@@ -173,6 +173,19 @@ taxonomy:
         name: Allgemein (Bestand, keine Unterteilung)
         status: ACTIVE
         lifecycle: ACTIVE
+    - id: IM
+      name: implementation
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-STD-IMPLEMENTATION-000-999
+      source: named-family
+      description: Standard Implementation Matrix — Applicability, Implementierung, Test, CI-Gate, Evidence, Coverage-KPIs (Owner-Re-Audit 08.09., SCR-0045)
+      standards_count: 1
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
     - id: SGC
       name: governance-core
       status: ACTIVE

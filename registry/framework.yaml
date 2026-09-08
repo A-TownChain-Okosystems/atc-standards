@@ -2986,3 +2986,15 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-ERR-015
+
+  - id: FAM-48
+    name: Implementation Tracking (IMPLEMENTATION)
+    range: ATC-STD-IMPLEMENTATION-000..999
+    note: 'Standard → Applicability → Implementation → Test → CI-Gate → Evidence → Verified (SCR-0045); Implementierungs-Matrix registry/standard-implementation.yaml'
+    family_refs: null
+    slots:
+    - id: ATC-STD-IMPLEMENTATION-001
+      title: IMPLEMENTATION-001
+      status: BELEGT
+      refs:
+      - ATC-STD-IMPLEMENTATION-001

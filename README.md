@@ -1,5 +1,21 @@
 # ATC Standards
 
+<!-- GENERATED-BY generate_views.py — NICHT MANUELL BEARBEITEN -->
+## Registry-Kennzahlen (GENERIERT — Quelle: `registry/standards.yaml`)
+
+| Kennzahl | Wert |
+|---|---|
+| Registry Standards | **421** |
+| Registry APPROVED | **395** |
+| Registry CANDIDATE (§33) | **26** |
+| Standard-Dateien (`standards/`) | **420** |
+| Familien | **48** |
+| Registry SHA-256 | `71818f0bac21ae74…` (vollständig: `registry/registry.lock`) |
+| Stand | 2026-09-08 14:50 UTC+2 |
+
+Implementierungs-Matrix: [`registry/standard-implementation.yaml`](registry/standard-implementation.yaml) (ATC-STD-IMPLEMENTATION-001).
+
+
 > Die normative Governance-Schicht der A-TownChain-Organisation — Registry,
 > Standards, Schemata, Validatoren und Governance-Entscheidungen.
 
@@ -33,7 +49,7 @@ governance:
 ## Overview
 
 atc-standards ist das Governance-Repository der A-TownChain-Okosystems: die
-kanonische Ablage (SSOT) aller 82 registrierten Standards inklusive Verfassung,
+kanonische Ablage (SSOT) aller 421 registrierten Standards inklusive Verfassung,
 Validator-Suite, Naming-Schema, Change-Requests (SCR) und Findings-Registry.
 Jedes Repository der Organisation richtet sich nach den hier definierten Regeln.
 
@@ -43,9 +59,9 @@ ATC Standards provides the canonical normative governance layer of the
 A-TownChain ecosystem. It is responsible for:
 
 - Verfassung **ATC-STD-000** v1.2.0 (ID-System, Lifecycle, SCR, §30 Immutabilität)
-- Standard-Registry (**121 Standards**: 121 APPROVED, 0 offen) mit
+- Standard-Registry (**380 Standards**: 355 APPROVED, 25 CANDIDATE) mit
   Versionierung, Dependencies (DAG) und Findings (BUG-001..004)
-- Maschinelle Qualitätssicherung: `atc-std-validator` (121/121 COMPLIANT),
+- Maschinelle Qualitätssicherung: `atc-std-validator` (421/421 COMPLIANT),
   Mutationssuite (12/12), `atc-repo-audit` (R3, 100/100 GATE PASS),
   Agent-Manifest-Gate (`check_agent_manifest.py`)
 - Naming-SSOT (`naming-conventions.schema.json`), Change-Requests (SCR-0001..0007)
@@ -58,7 +74,7 @@ kein Standard ohne Eintrag; kein Repository ohne Standards-Bezug).
 ## Status
 
 **Status:** `release-candidate` — Governance-Freeze abgeschlossen
-(07./08.09.2026): alle 121 Standards APPROVED und normativ in Kraft — Standards
+(07./08.09.2026): 355 Standards APPROVED und normativ in Kraft, 25 CANDIDATE (§33) — Standards
 Governance Core (STDDEV-001, REGISTRY-001, CHANGE-001) §9-freigegeben 00:36;
 TAXONOMY-001 §9-freigegeben 00:27; AOS-001, ATC-STD-999 und PROTOCOL-001
 §9-freigegeben 00:18 (README-001 20:36,
@@ -71,7 +87,7 @@ SC-Framework 001..020 21:00, MD-001 21:05). Übergangsfristen
 
 - `registry/` — SSOT: standards.yaml, versions.yaml, dependencies.yaml,
   findings.yaml, categories.yaml
-- `standards/` — 82 Standard-Dateien in 10 Familien (000, 100, 201–204, 300,
+- `standards/` — 420 Standard-Dateien in 48 Familien (000, 100, 201–204, 300,
   bug, net, zkp, ai, aas, enterprise, readme)
 - `schemas/` — naming-conventions.schema.json (ID-/Dateinamen-/REQ-Muster)
 - `tools/` — atc-std-validator, atc-repo-audit, atc-readme-validator,
@@ -82,7 +98,7 @@ SC-Framework 001..020 21:00, MD-001 21:05). Übergangsfristen
 ### Data Flow
 
 Änderungsantrag → SCR (§19–33) → Owner-Freigabe (§9) → Registry-Eintrag →
-CI-Validierung (121/121 + Gates) → APPROVED → normativ in Kraft (§30 Immutabilität).
+CI-Validierung (Registry-Validierung + Gates) → APPROVED → normativ in Kraft (§30 Immutabilität).
 
 ### Dependencies
 
@@ -96,7 +112,7 @@ CI-Validierung (121/121 + Gates) → APPROVED → normativ in Kraft (§30 Immuta
 
 ## Features
 
-- 82 Standards in 11 Familien, vollständige REQ-ID-Struktur (BUG/NET/ZKP/README)
+- 421 Standards in 48 Familien, vollständige REQ-ID-Struktur (BUG/NET/ZKP/README)
 - Voll-Compliance-Mandat für Agenten (AGENT_MANIFEST.md, AAS-003/004)
 - CI-Gates: Standards-Validierung, Mutationssuite, Repo-Audit R3,
   Agent-Manifest-Enforcement
@@ -117,7 +133,7 @@ CI-Validierung (121/121 + Gates) → APPROVED → normativ in Kraft (§30 Immuta
 ├── references/          # Referenzen
 ├── registry/            # SSOT (standards, versions, dependencies, findings, categories)
 ├── schemas/             # Naming-/Metadaten-Schemata
-├── standards/           # 82 Standards in 10 Verzeichnissen
+├── standards/           # 421 Standards in 48 Verzeichnissen
 ├── templates/           # Standard-Templates
 ├── contracts/           # Contract Registry (SC-019) + Kategorie-Specs (SC-Framework)
 ├── tools/               # Validator, Audit, README/MD/SC-Gates, Tests
@@ -186,7 +202,7 @@ und dem AAS-008-Workflow; Commits nach AI-DEV-007 v1.0.1.
 Run the complete test suite:
 
 ```bash
-python3 tools/atc-std-validator/validate_all.py        # 121/121 COMPLIANT
+python3 tools/atc-std-validator/validate_all.py        # 421/421 COMPLIANT
 python3 tools/atc-std-validator/tests/test_s19_mutation.py  # 12/12 OK
 python3 tools/atc-repo-audit/atc_repo_audit.py . --level R3    # GATE PASS
 python3 tools/atc-std-validator/check_agent_manifest.py       # GATE PASS

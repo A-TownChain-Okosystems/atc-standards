@@ -1,4 +1,5 @@
 # AGENT_MANIFEST.md
+> **Registry-Stand (GENERIERT aus `registry/standards.yaml`):** 421 Standards — 395 APPROVED · 26 CANDIDATE · 48 Familien · Stand 2026-09-08 14:50 UTC+2 · SHA-256 `71818f0bac21…`
 > Letzte Aktualisierung: 2026-09-07 18:55 UTC | Aurora Master Sync v3.1.7 | 26-Repo-Stand (AD-016–AD-046) | Rollout auf alle 26 Repos
 
 ## ⚖️ Standard-Compliance-Mandat (verbindlich — ATC-AAS-003/AAS-004, AI-DEV-001 §6)
@@ -6,7 +7,7 @@
 > **Der zuständige Agent MUSS sämtliche Standards dieser Registry einhalten
 > und umsetzen.** Keine Ausnahmen, keine Teilannahme.
 
-1. **Vollmandat:** ALLE Registry-Standards sind für den Agenten verbindlich —
+1. **Vollmandat mit Anwendbarkeit:** Registry-Standards sind für den Agenten verbindlich, gestuft nach Anwendbarkeit (ATC-STD-IMPLEMENTATION-001 §1): MANDATORY (immer), CONDITIONAL (wenn Bedingung eintritt, z.B. Domain/Sprache/Classification), REFERENCE (orientierend), NOT_APPLICABLE (mit Begründung). MANDATORY-Standards ohne Ausnahme einhalten —
    im vollen Umfang, nicht nur im Auszug. Aktuell 103: Verfassung ATC-STD-000
    v1.2.0, AI-DEV-001..012, ATC-AAS-001..025, ATC-ENT-001..015,
    ATC-STD-100/201-204/300, BUG-001..004, NET-001..008, ZKP-001..010,

@@ -55,6 +55,7 @@
 | ATC-STD-ERR-013 | Knowledge Capture | candidate | 1.0.0 | err |
 | ATC-STD-ERR-014 | Recurrence Monitoring | candidate | 1.0.0 | err |
 | ATC-STD-ERR-015 | Error Prevention Gate | candidate | 1.0.0 | err |
+| ATC-STD-IMPLEMENTATION-001 | Standard Implementation Matrix | candidate | 1.0.0 | implementation |
 | ATC-STD-NET-001 | Devnet Standard | approved | 1.0.0 | net |
 | ATC-STD-NET-002 | Testnet Standard | approved | 1.0.0 | net |
 | ATC-STD-NET-003 | Mainnet Standard | approved | 1.0.0 | net |

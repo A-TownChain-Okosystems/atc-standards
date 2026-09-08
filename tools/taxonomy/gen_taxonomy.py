@@ -15,7 +15,7 @@ DOMAIN_MAP = {
     "bug": "GOV", "zkp": "TRUST", "ai-dev": "AI", "aas": "AI", "enterprise": "GOV", "v2s": "GOV",
     "readme": "SW", "md": "SW", "sc": "CHAIN", "net": "CHAIN", "desc": "GOV",
     "version": "GOV", "audit": "GOV", "ai-decision": "AI", "update": "GOV",
-    "repo-audit": "GOV", "repo-maint": "GOV", "err": "GOV", "agent-operating": "AI", "master-audit": "GOV",
+    "repo-audit": "GOV", "repo-maint": "GOV", "err": "GOV", "implementation": "GOV", "agent-operating": "AI", "master-audit": "GOV",
     "framework": "GOV", "milestone": "GOV", "compat": "GOV", "governance-core": "GOV",
     # neu via SCR-0024/SCR-0037
     "taxonomy": "GOV", "license": "GOV",
@@ -32,7 +32,7 @@ FAMILY_CODES = {
     "bug": "BUG", "v2s": "V2S", "zkp": "ZKP", "ai-dev": "AID", "aas": "AAS", "enterprise": "ENT",
     "readme": "RDM", "md": "MD", "sc": "SC", "net": "NET", "desc": "DESC",
     "version": "VER", "audit": "AUD", "ai-decision": "AIDEC", "update": "UPD",
-    "repo-audit": "RA", "repo-maint": "RM", "err": "ER", "protocol": "PROT", "agent-operating": "AOS",
+    "repo-audit": "RA", "repo-maint": "RM", "err": "ER", "implementation": "IM", "protocol": "PROT", "agent-operating": "AOS",
     "master-audit": "MAUD", "framework": "FW", "milestone": "MIL", "compat": "CMP",
     "taxonomy": "TAX", "governance-core": "SGC", "license": "LIC",
 }

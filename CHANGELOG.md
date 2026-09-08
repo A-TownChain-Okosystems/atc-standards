@@ -1,5 +1,23 @@
 # Changelog
 
+## [Unreleased] — 2026-09-08 (SCR-0045, Owner-Re-Audit-Response)
+
+### Owner-Re-Audit AMBER 84/100 — Umsetzung der drei Prioritätsschritte
+- **NEU: ATC-STD-IMPLEMENTATION-001 v1.0.0 CANDIDATE** (FAM-48, Kategorie
+  implementation, REQ-IMP-001..009): Applicability-Modell
+  (MANDATORY/CONDITIONAL/REFERENCE/NOT_APPLICABLE), Implementierungs-Taxonomie
+  (enforced/implemented/specification_only/reference), Verifikationskette
+  Standard→Applicability→Implementation→Test→CI-Gate→Evidence→Verified,
+  Audit-Unabhängigkeitslevel L1/L2/L3 je Evidence, Coverage-KPIs.
+- **NEU: registry/standard-implementation.yaml** — zweite SSOT: 22 Einträge mit
+  realem Evidence (AUD-2026-0002, RUN-001, ATC-ERR-0001, Issue #99).
+- **NEU: tools/gen_views/generate_views.py** — generierte Views (REQ-IMP-006):
+  Registry-Kennzahlen-Block im README, Registry-Stand-Zeile im AGENT_MANIFEST,
+  STATUS-Snapshot-Banner mit Interpretationsregel, registry/registry.lock
+  (SHA-256). **P1-Zählerkonflikt (82/103/121/403) beseitigt** — manuelle
+  Zähler entfernt; STATUS-Historie als Audit-Trail markiert.
+- AGENT_MANIFEST: Vollmandat-Formulierung um Anwendbarkeit gestuft (Finding #6).
+
 ## [1.4.49] - 2026-09-08
 
 ### Added
