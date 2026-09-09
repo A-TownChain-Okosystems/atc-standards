@@ -4,6 +4,25 @@
 
 ### Added
 
+- **Organization Governance Control Plane (SCR-0063, Owner-Audit 09.09.):**
+  P0-Enforcement-Grenze definiert (ai/control-plane.yaml: Hub = Org-SSOT,
+  Vererbung + lokale-Bindungs-Regel "STANDARD DEFINES IT ≠ FILE IMPLEMENTS
+  IT") · ai/permissions.yaml (DENY-Default, GitHub-Operationen je Agent,
+  GH013/destruktive = Owner-Gates) · ai/workflow.yaml (12 Stufen mit
+  Gates) · Phase 2 DONE: CHECK-001..020 alle als maschinenlesbare Objekte
+  (Generator tools/gen_check_objects.py) · Phase 6 STARTED:
+  tools/org_governance_scan.py — zentraler Cross-Repo-Validator (10
+  Artefakte je Repo via GitHub-API, Status-Berechnung, JSON-Report).
+  **Erstlauf-Befund:** 10 agent-gebundene Repos ohne lokale
+  capabilities/policies (NON-COMPLIANT) → 20 Bindungsdateien committet →
+  Re-Scan 0 NON-COMPLIANT. a-townchain-os, atc-indexer, atc-interop,
+  atc-mining, atc-oracle, atc-standards, atc-vm, atc-zkp, atclang,
+  genesis-engine versorgt.
+
+## [unreleased] - 2026-09-09
+
+### Added
+
 - **ATC-AI-GOV v1.0 Produktionsarchitektur-Freeze (SCR-0062):** Umbrella
   ATC-AI-GOV-001 — Governance-Kette (18 Stufen), 4 Kontrollprinzipien
   (Fail Closed: unknown→FAIL nie PASS · Evidence First · Persistent
