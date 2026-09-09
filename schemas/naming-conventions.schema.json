@@ -633,6 +633,24 @@
           "pattern": "^ATC-FINDING-[0-9]{4}-[0-9]{6,}$",
           "example": "ATC-FINDING-2026-000001",
           "note": "Persistente Governance-Findings des ATC Governance Auditor (ATC-AI-GOV-FINDING-001, SCR-0062): YYYY=Jahr, NNNNNN=org-weite Sequenz; Schema finding-schema.yaml; verknüpft via registry_ref mit F-NNNN-Kurz-IDs der Registry (BUG-001) — ATC-FINDING ist kanonisch/persistent, F-NNNN ist Registry-Shorthand"
+        },
+        "atcAgentCheckObjectId": {
+          "type": "string",
+          "pattern": "^ATC-CHECK-AGENT-[0-9]{3,}$",
+          "example": "ATC-CHECK-AGENT-010",
+          "note": "Agent-Governance-Checks (SCR-0064, Owner-Gap-Liste GOV-008/009): ai/checks/AGENT-001..015.yaml im .github-Hub; zweite Pruefebene neben ATC-CHECK-001..064 (Repository Health, REPO-AUDIT-002) und ATC-CHECK-001..020 (Governance-Sicht)"
+        },
+        "atcExceptionId": {
+          "type": "string",
+          "pattern": "^ATC-EXC-[0-9]{3,}$",
+          "example": "ATC-EXC-001",
+          "note": "Policy-Ausnahmen (GOV-025, SCR-0064): exceptions.yaml im .github-Hub; expires PFLICHT (keine dauerhaften Ausnahmen), approved_by OWNER zwingend, abgelaufen = inaktiv (Fail Closed)"
+        },
+        "atcHandoffId": {
+          "type": "string",
+          "pattern": "^ATC-HANDOFF-[0-9]{4}-[0-9]{3,}$",
+          "example": "ATC-HANDOFF-2026-001",
+          "note": "Maschinenlesbare Agent-Handoffs (HANDOFF-001, Schema handoff.schema.yaml, SCR-0064)"
         }
       }
     },

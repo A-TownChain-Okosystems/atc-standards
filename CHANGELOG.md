@@ -4,6 +4,24 @@
 
 ### Added
 
+- **Enforcement-Schicht komplett (SCR-0064, Owner-Gap-Liste 28 GOV-Items):**
+  Agent Authorization Engine `tools/authorize.py` (GOV-008/009 — entscheidet
+  VOR der Aktion: Identity→Status→Role→Capability→Permission→Scope→Policy →
+  ALLOW/DENY, Fail-Closed, Self-Test: push_code=ALLOW /
+  push_workflow_file=DENY-GH013) · Schemas capability/permission/handoff
+  (GOV-005/006) · Agent-Governance-Checks ATC-CHECK-AGENT-001..015 (Manifest/
+  ID/Status/Scope/Capabilities/Permissions/Policies/Konflikte/Scope-Verstoß/
+  Unauthorized Capability/Workflow/Destructive/Evidence/Handoff/Version) ·
+  formale Compliance State Machine (GOV-020: DISCOVERED→AUDITING→…→VERIFIED,
+  FAIL-Recheck=Rückfall) · exceptions.yaml (GOV-025: Ablaufdatum-Pflicht,
+  keine Selbst-Ausnahmen) · Governance-Version 1.0.0 im Control Plane
+  (GOV-019, Drift-Detection-Basis). Verbleibend P2: Finding→Issue→Recheck-
+  Automation, Dashboard, Lifecycle-/Bootstrap-Automation (Phase 5-7).
+
+## [unreleased] - 2026-09-09
+
+### Added
+
 - **Organization Governance Control Plane (SCR-0063, Owner-Audit 09.09.):**
   P0-Enforcement-Grenze definiert (ai/control-plane.yaml: Hub = Org-SSOT,
   Vererbung + lokale-Bindungs-Regel "STANDARD DEFINES IT ≠ FILE IMPLEMENTS
