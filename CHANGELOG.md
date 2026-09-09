@@ -4,6 +4,14 @@
 
 ### Added
 
+- **ATC Org-weites Agent-Governance-System (SCR-0057):** Zentraler, vererbbarer
+  Organisationsstandard im `.github`-Hub — AGENTS.md-Master (12-Schritte-Sequenz,
+  Hierarchie-Kaskade), agent-instructions/00-11, ai/policies.yaml (AP-001..016
+  normativ), ai/capabilities.yaml (8 Rollen ATC-AI-*-001), ai/agent.yaml (43
+  Kernstandards verpflichtend). 26/26 Produkt-Repos per Pflicht-Verweisblock
+  angebunden (Remote-API verifiziert). Nummerierungs-Vorfall (SCR-0039-Kollision
+  durch veralteten Lokalstand) bereinigt + RCA dokumentiert. F-055 neu:
+  14 Dependabot-Schwachstellen in a-townchain-os (4 high).
 - **ATC-STD-IMPROVEMENT-001 v1.0.0 (DRAFT, SCR-0056):** ATC Improvement Standard —
   Systemverbesserungsstandard / Continuous Improvement Management System.
   ATC Improvement Principle als Grundsatz; 13-stufiger Verbesserungszyklus

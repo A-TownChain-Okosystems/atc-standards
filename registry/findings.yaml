@@ -70,20 +70,20 @@ findings:
   severity: S3
   source: 'Reality-Check 07.09. (CI-Run 34132214931: FALSE-FAIL auf d6722fa)'
   status: RESOLVED
-  resolution: 'RESOLVED 08.09.: Owner-Push (michael.worob, 10:45) — fetch-depth: 0 +
-    workflow_dispatch in governance-ci.yml auf 23 Repos; atc-vm/atc-algorithm/atc-zkp nachgeruestet
-    (10:56, Issue #94); 22 CI-Neulaeufe GRUEN, GATE PASS; V-16-Shallow-Clone-Guard ergaenzt
-    (F-048, SCR-0039). Verifiziert im Re-Audit ATC-ORG-AUDIT-002 (08.09.).'
+  resolution: 'RESOLVED 08.09.: Owner-Push (michael.worob, 10:45) — fetch-depth: 0 + workflow_dispatch
+    in governance-ci.yml auf 23 Repos; atc-vm/atc-algorithm/atc-zkp nachgeruestet (10:56, Issue #94);
+    22 CI-Neulaeufe GRUEN, GATE PASS; V-16-Shallow-Clone-Guard ergaenzt (F-048, SCR-0039). Verifiziert
+    im Re-Audit ATC-ORG-AUDIT-002 (08.09.).'
 - id: F-010
   title: 'Agent-OAuth-Token ohne workflow-Scope: Workflow-Aenderungen in Governance Root nur durch Owner
     moeglich'
   severity: S3
   source: Reality-Check 07.09. (GH013-Push-Ablehnung)
   status: RESOLVED
-  resolution: 'RESOLVED 08.09.: Loesungspfad 2 (manuelle Workflow-Pflege durch Owner) etabliert und
-    gelebt — Owner-Push vom 08.09. 10:45/10:56 hat saemtlliche Workflow-Fixes umgesetzt.
-    Zukuenftige Workflow-Aenderungen im Governance Root bleiben per Definition Owner-Aktion
-    (Agent-Pfad GH013-beschraenkt, kein PAT mit workflow-Scope noetig).'
+  resolution: 'RESOLVED 08.09.: Loesungspfad 2 (manuelle Workflow-Pflege durch Owner) etabliert und gelebt
+    — Owner-Push vom 08.09. 10:45/10:56 hat saemtlliche Workflow-Fixes umgesetzt. Zukuenftige Workflow-Aenderungen
+    im Governance Root bleiben per Definition Owner-Aktion (Agent-Pfad GH013-beschraenkt, kein PAT mit
+    workflow-Scope noetig).'
 - id: F-011
   title: Rollen-Dualitaet a-townchain vs. atc-node (Chain/Node-Zielrolle ueberlappt)
   severity: MEDIUM
@@ -403,47 +403,45 @@ findings:
   resolution: null
   discovered: '2026-09-08'
 - id: F-048
-  title: 'Governance-CI V-16 False-NO-GO durch Shallow-Clone (actions/checkout default
-    fetch-depth 1): Conventional-Commits-Bewertung degeneriert auf den HEAD-Commit
-    (0% wenn nicht konventionell). 15 Repos rot nach License-Batch SCR-0036/F-046;
-    7 weitere latent betroffen'
+  title: 'Governance-CI V-16 False-NO-GO durch Shallow-Clone (actions/checkout default fetch-depth 1):
+    Conventional-Commits-Bewertung degeneriert auf den HEAD-Commit (0% wenn nicht konventionell). 15 Repos
+    rot nach License-Batch SCR-0036/F-046; 7 weitere latent betroffen'
   severity: P2
   source: 'CI-Log Run #28 atc-shivacore (02824b8, 00:35 UTC) + Shallow-Clone-Reproduktion (BUG-001 OBSERVE→VERIFY)'
   alias: null
   scr: SCR-0039
   status: RESOLVED
-  resolution: 'SCR-0039 (08.09.2026): Zweiebenen-Fix — (1) alle 22 governance-ci.yml per
-    API-Batch-Patch: fetch-depth 0 am Repo-Checkout + workflow_dispatch-Trigger;
-    (2) atc-repo-audit V-16 Shallow-Guard (<= 2 Commits = WARN, nie MUST-FAIL).
-    Regressionstest: alle 22 CI-Neulaeufe verifiziert GRUEN/GATE PASS (AUD-2026-0004).
-    Kein Daten- oder Produktionsverlust — reine CI-Konfiguration, SYNC-OK (keine
+  resolution: 'SCR-0039 (08.09.2026): Zweiebenen-Fix — (1) alle 22 governance-ci.yml per API-Batch-Patch:
+    fetch-depth 0 am Repo-Checkout + workflow_dispatch-Trigger; (2) atc-repo-audit V-16 Shallow-Guard
+    (<= 2 Commits = WARN, nie MUST-FAIL). Regressionstest: alle 22 CI-Neulaeufe verifiziert GRUEN/GATE
+    PASS (AUD-2026-0004). Kein Daten- oder Produktionsverlust — reine CI-Konfiguration, SYNC-OK (keine
     normativen Artefakte betroffen).'
   discovered: '2026-09-08'
   resolved_date: '2026-09-08'
 - id: F-049
-  title: 'CI-Nicht-Verdrahtung: README/MD/AAS-025/SC-Validatoren existieren, laufen in keinem
-    Workflow (AuditGPT D-01/D-02: real nur 5 Standards CI-erzwungen, nicht 8)'
+  title: 'CI-Nicht-Verdrahtung: README/MD/AAS-025/SC-Validatoren existieren, laufen in keinem Workflow
+    (AuditGPT D-01/D-02: real nur 5 Standards CI-erzwungen, nicht 8)'
   severity: S2
   source: AUD-2026-0004 (AuditGPT, unabhaengig)
   audit: AUD-2026-0004
   status: OPEN
-  resolution: 'Owner-Patch docs/patches/OWNER_WORKFLOW_PATCH_2026-09-08.md verdrahtet 4 zusaetzliche
-    Gates (danach 9 AUTOMATED)'
+  resolution: Owner-Patch docs/patches/OWNER_WORKFLOW_PATCH_2026-09-08.md verdrahtet 4 zusaetzliche Gates
+    (danach 9 AUTOMATED)
   discovered: '2026-09-08'
 - id: F-050
-  title: 'SG-01 Fail-Open-Registry-Parsing: S-18/S-20-Fallback maximal WARN, Registry-Cross-Check
-    except:pass, Lesefehler still; deckte 2 unlesbare legacy_series-Dateipfade (Quotes im Wert) auf'
+  title: 'SG-01 Fail-Open-Registry-Parsing: S-18/S-20-Fallback maximal WARN, Registry-Cross-Check except:pass,
+    Lesefehler still; deckte 2 unlesbare legacy_series-Dateipfade (Quotes im Wert) auf'
   severity: S2
   source: AUD-2026-0004 (SecurityGPT, unabhaengig)
   audit: AUD-2026-0004
   status: RESOLVED
   scr: SCR-0055
-  resolution: 'S-18-Fallback mit voller Pflichtfeldpruefung (Fluss-Parser), S-20 FAIL statt WARN,
-    S-18a fail-closed, S-01 READ FAIL + Exit 1, Quote-Stripping in collect()'
+  resolution: S-18-Fallback mit voller Pflichtfeldpruefung (Fluss-Parser), S-20 FAIL statt WARN, S-18a
+    fail-closed, S-01 READ FAIL + Exit 1, Quote-Stripping in collect()
   discovered: '2026-09-08'
   resolved_date: '2026-09-08'
 - id: F-051
-  title: 'SG-02 Workflow-Permissions fehlen (naming-governance.yml ohne permissions-Block; Fork-PR-Risiko)'
+  title: SG-02 Workflow-Permissions fehlen (naming-governance.yml ohne permissions-Block; Fork-PR-Risiko)
   severity: S2
   source: AUD-2026-0004 (SecurityGPT, unabhaengig)
   audit: AUD-2026-0004
@@ -457,25 +455,38 @@ findings:
   audit: AUD-2026-0004
   status: RESOLVED
   scr: SCR-0055
-  resolution: 'Schema-Note klargestellt: YYYY=Jahr, NNNN=fortlaufende Sequenz; AUD-2026-0001 kanonisch konform'
+  resolution: 'Schema-Note klargestellt: YYYY=Jahr, NNNN=fortlaufende Sequenz; AUD-2026-0001 kanonisch
+    konform'
   discovered: '2026-09-08'
   resolved_date: '2026-09-08'
 - id: F-053
-  title: 'Fiktive Standard-Referenz ATC-STD-021 in AUDIT-001 Par.11-Beispiel (existiert nicht in Registry)'
+  title: Fiktive Standard-Referenz ATC-STD-021 in AUDIT-001 Par.11-Beispiel (existiert nicht in Registry)
   severity: S4
   source: AUD-2026-0004 (AuditGPT D-03, unabhaengig)
   audit: AUD-2026-0004
   status: RESOLVED
   scr: SCR-0055
-  resolution: 'Beispiel auf echte Kette REQ-STD-101 → ATC-STD-BUG-001 korrigiert (§30 mikro-inhaltlich via SCR)'
+  resolution: Beispiel auf echte Kette REQ-STD-101 → ATC-STD-BUG-001 korrigiert (§30 mikro-inhaltlich
+    via SCR)
   discovered: '2026-09-08'
   resolved_date: '2026-09-08'
 - id: F-054
-  title: 'Systemischer MD-001-Pflichtdokumenten-Verstoss org-weit: atc-shivacore, atc-node,
-    globus-os, aurora-ai je 4/8 (STATUS/ROADMAP/ARCHITECTURE/CONTRIBUTING fehlen); atc-sdk 7/8'
+  title: 'Systemischer MD-001-Pflichtdokumenten-Verstoss org-weit: atc-shivacore, atc-node, globus-os,
+    aurora-ai je 4/8 (STATUS/ROADMAP/ARCHITECTURE/CONTRIBUTING fehlen); atc-sdk 7/8'
   severity: S2
   source: AUD-2026-0004 (AuditGPT Cross-System-Scan, GitHub API)
   audit: AUD-2026-0004
   status: OPEN
-  resolution: 'Vorlagen-Rollout STATUS/ROADMAP/ARCHITECTURE/CONTRIBUTING auf die 26 Repos; erweitert F-023 (Stichprobe)'
+  resolution: Vorlagen-Rollout STATUS/ROADMAP/ARCHITECTURE/CONTRIBUTING auf die 26 Repos; erweitert F-023
+    (Stichprobe)
   discovered: '2026-09-08'
+- id: F-055
+  title: 'a-townchain-os: 14 Dependabot-Schwachstellen auf main (4 high, 7 moderate, 3 low) — Behebung/Sichtung
+    via https://github.com/A-TownChain-Okosystems/a-townchain-os/security/dependabot erforderlich'
+  severity: P1
+  source: SCR-0057-Rollout (GitHub Push-Notice)
+  alias: null
+  scr: null
+  status: OPEN
+  resolution: null
+  discovered: '2026-09-09'

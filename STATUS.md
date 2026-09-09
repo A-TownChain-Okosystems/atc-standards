@@ -339,3 +339,10 @@ Voll-Validierung 110/110 Standards: ALL COMPLIANT (S-18 prüft alle 10 Registry-
 | #112 | Commit-Trailer-Rollout | Agenten, Frist 07.10.2026 |
 | IFC-0001..0010 | Interface-Test-Suiten (P0) | Agenten, Frist 07.10.2026 |
 
+## Org-Agent-Governance (SCR-0057, 09.09. 09:25 UTC+2)
+
+.github-Hub (AGENTS.md-Master, 12 Module, ai/policies.yaml AP-001..016,
+ai/capabilities.yaml 8 Rollen, ai/agent.yaml) live; 26/26 Repos angebunden
+(Remote-API verifiziert). SCR-0039-Kollision (veralteter Lokalstand) bereinigt
+→ SCR-0057 + RCA. F-055 offen: 14 Dependabot-Schwachstellen in a-townchain-os
+(4 high) — P1-Behebung ausstehend.
