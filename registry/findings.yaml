@@ -480,13 +480,33 @@ findings:
   resolution: Vorlagen-Rollout STATUS/ROADMAP/ARCHITECTURE/CONTRIBUTING auf die 26 Repos; erweitert F-023
     (Stichprobe)
   discovered: '2026-09-08'
-- id: F-055
-  title: 'a-townchain-os: 14 Dependabot-Schwachstellen auf main (4 high, 7 moderate, 3 low) — Behebung/Sichtung
-    via https://github.com/A-TownChain-Okosystems/a-townchain-os/security/dependabot erforderlich'
+- alias: null
+  discovered: '2026-09-09'
+  id: F-055
+  resolution: null
+  scr: SCR-0057
   severity: P1
   source: SCR-0057-Rollout (GitHub Push-Notice)
-  alias: null
-  scr: null
   status: OPEN
-  resolution: null
+  title: 'a-townchain-os: 14 Dependabot-Schwachstellen auf main (4 high, 7 moderate, 3 low) — Behebung/Sichtung
+    via https://github.com/A-TownChain-Okosystems/a-townchain-os/security/dependabot erforderlich'
+- alias: null
   discovered: '2026-09-09'
+  id: F-056
+  resolution: null
+  scr: SCR-0059
+  severity: P1
+  source: SCR-0059 Binding-Checker Erstlauf (tools/check_binding.py im .github-Hub, docs/BINDING-2026-09-09.md)
+  status: OPEN
+  title: 'atc-standards: agent.yaml bindet ATC-STD-IMPROVEMENT-001 (DRAFT, §9-Freigabe ausstehend) — Bindung
+    auf nicht freigegebenen Standard verstoesst Lifecycle (STDDEV-001)'
+- alias: null
+  discovered: '2026-09-09'
+  id: F-057
+  resolution: null
+  scr: SCR-0059
+  severity: P2
+  source: SCR-0059 Binding-Checker Erstlauf
+  status: OPEN
+  title: 16 Repos ohne .github/ai/agent.yaml-Standards-Bindung (a-townchain, a-townchain-os-docs, atc-shivacore,
+    atc-node u.a.); ausserdem 37 CANDIDATE-Bindungen in gebundenen Repos (Design SCR-0056)

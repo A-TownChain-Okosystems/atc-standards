@@ -4,6 +4,21 @@
 
 ### Added
 
+- **AGOV prüfbare Governance (SCR-0058):** MANIFEST-001 v1.1.0 (Identity/Status/
+  Capability/Scope/Handoff/Mapping), ai/policies.yaml mit maschinenprüfbaren
+  ATC-POL-001..010 + MUST/SHOULD/MAY-Verdict-Map, ai/checks.yaml (AGOV-CHECK-
+  001..020 v1.0.0), ausführbarer Org-Checker tools/agov_check.py (Erstlauf:
+  27 Repos, 26/27 blockiert — AGOV-CHECK-009 Workflow-Permissions als Owner-
+  Aktion mit Bundle; 14 Repos Block-Platzierung gefixt; Hub selbst-konform,
+  tests 14/14).
+- **AGOV-Härtung (SCR-0059):** Registry-Snapshot & dynamische Bindung (erster
+  echter Snapshot-Record mit Registry-Commit/SHA-256), MERGE-GATE (10 Gates,
+  FAIL/PENDING ⇒ NO MERGE), EXCEPTION RULE (6 Schritte; ohne Ausnahme
+  Validation=FAIL/Merge=BLOCKED), STANDARD CONFLICT RULE (5-Stufen-Hierarchie),
+  Tool-/CI-Fähigkeits-Regel — normativ maschinenlesbar in ai/governance-rules.yaml.
+  Binding-Checker tools/check_binding.py: P0: 0, P1: 1 (F-056: DRAFT-Bindung
+  IMPROVEMENT-001), P2: 26 (F-057).
+
 - **ATC Org-weites Agent-Governance-System (SCR-0057):** Zentraler, vererbbarer
   Organisationsstandard im `.github`-Hub — AGENTS.md-Master (12-Schritte-Sequenz,
   Hierarchie-Kaskade), agent-instructions/00-11, ai/policies.yaml (AP-001..016

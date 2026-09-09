@@ -346,3 +346,13 @@ ai/capabilities.yaml 8 Rollen, ai/agent.yaml) live; 26/26 Repos angebunden
 (Remote-API verifiziert). SCR-0039-Kollision (veralteter Lokalstand) bereinigt
 → SCR-0057 + RCA. F-055 offen: 14 Dependabot-Schwachstellen in a-townchain-os
 (4 high) — P1-Behebung ausstehend.
+
+## AGOV-Prüfsystem + Härtung (SCR-0058/0059, 09.09. 09:20–10:05 UTC+2)
+
+Hub v1.2.0: ausführbarer AGOV-Checker (27 Repos, AGOV-CHECK-001..020; 26/27
+blockiert v.a. durch Workflow-Permissions — Owner-Bundle vorbereitet) +
+Governance-Härtung normativ maschinenlesbar (Snapshot/Dynamic Binding mit
+erstem Evidenz-Record, 10-Gate-MERGE-GATE, 6-Schritt-EXCEPTION-RULE, 5-Stufen-
+Konflikt-Hierarchie). Binding-Checker Erstlauf: P0: 0 · P1: 1 (F-056: atc-
+standards bindet DRAFT IMPROVEMENT-001 — Owner-Entscheidung) · P2: 26 (F-057).
+Offen: Owner-Aktionen Issue #1 (Naming-CI pip) + Workflow-Permissions-Bundle.
