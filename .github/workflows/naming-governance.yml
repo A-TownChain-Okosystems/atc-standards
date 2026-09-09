@@ -12,6 +12,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+      - name: Dependencies (ATC-STD-CI-001, Issue #1 — parallel zu ci.yml)
+        run: pip install pyyaml
       - name: Standards-Validierung (S-01...S-16 je Standard, S-17 Duplicate Detection)
         run: python3 tools/atc-std-validator/validate_all.py
       - name: Repository-Audit (ATC-STD-201ff, Level R3)
