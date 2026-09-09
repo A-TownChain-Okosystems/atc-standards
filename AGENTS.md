@@ -1,3 +1,5 @@
+# AGENTS.md — atc-standards (AI-DEV-001 §6 / AAS-005)
+
 ## Org-Regeln (vererbt — Pflicht für jeden Agenten in diesem Repo)
 
 Dieses Repository unterliegt dem **ATC Org-weiten Agent-Governance-System** (SCR-0057):
@@ -9,8 +11,6 @@ ATC-AI-ARCH/AUDIT/SEC/CI/DOC/TEST/RELEASE/GOV-001), ai/agent.yaml.
 Repo-spezifische Regeln ERGÄNZEN die Org-Regeln; keine höhere Security-,
 Compliance- oder Governance-Regel darf stillschweigend ausgehebelt werden.
 Kaskade: Org-Policy → AGENT_MANIFEST → Org-AGENTS.md → dieses Dokument → Task.
-
-# AGENTS.md — atc-standards (AI-DEV-001 §6 / AAS-005)
 
 ## Identität
 
