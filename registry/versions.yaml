@@ -7153,3 +7153,19 @@ versions:
       getrennt von SPDX-Basisschicht (Apache-2.0, SCR-0036).'
   ATC-STD-IMPROVEMENT-001:
     - {version: "1.0.0", date: "2026-09-08", change: "Initial Release DRAFT: Owner-Entwurf Michael Wroblewski (08.09. 18:14) — Continuous Improvement Management System: 13-stufiger Zyklus, 14 Quellen, 10 Klassen, P0-P3+Impact, ATC-IMP-Records, Root-Cause-Pflicht, Regression Prevention, Verbesserungsregel, Standards-Selbstverbesserung, Automatisierungsleiter, KI-Agenten-Regel, DoD, zentrales Board (registry/improvements.yaml), org-weite Anwendung; SCR-0056; §9-Freigabe ausstehend"}
+  ATC-AI-GOV-AGENTS-001:
+    - {version: "1.0.0", date: "2026-09-09", change: "Initial Release DRAFT: Owner-Entwurf 09.09. (Zielbild pruefbares Governance-System) — SCR-0061; §9-Freigabe ausstehend"}
+  ATC-AI-GOV-MANIFEST-001:
+    - {version: "1.0.0", date: "2026-09-09", change: "Initial Release DRAFT: Owner-Entwurf 09.09. (Zielbild pruefbares Governance-System) — SCR-0061; §9-Freigabe ausstehend"}
+  ATC-AI-GOV-POLICY-001:
+    - {version: "1.0.0", date: "2026-09-09", change: "Initial Release DRAFT: Owner-Entwurf 09.09. (Zielbild pruefbares Governance-System) — SCR-0061; §9-Freigabe ausstehend"}
+  ATC-AI-GOV-CHECK-001:
+    - {version: "1.0.0", date: "2026-09-09", change: "Initial Release DRAFT: Owner-Entwurf 09.09. (Zielbild pruefbares Governance-System) — SCR-0061; §9-Freigabe ausstehend"}
+  ATC-AI-GOV-AUDIT-001:
+    - {version: "1.0.0", date: "2026-09-09", change: "Initial Release DRAFT: Owner-Entwurf 09.09. (Zielbild pruefbares Governance-System) — SCR-0061; §9-Freigabe ausstehend"}
+  ATC-AI-GOV-HANDOFF-001:
+    - {version: "1.0.0", date: "2026-09-09", change: "Initial Release DRAFT: Owner-Entwurf 09.09. (Zielbild pruefbares Governance-System) — SCR-0061; §9-Freigabe ausstehend"}
+  ATC-AI-GOV-INCIDENT-001:
+    - {version: "1.0.0", date: "2026-09-09", change: "Initial Release DRAFT: Owner-Entwurf 09.09. (Zielbild pruefbares Governance-System) — SCR-0061; §9-Freigabe ausstehend"}
+  ATC-AI-GOV-CHANGE-001:
+    - {version: "1.0.0", date: "2026-09-09", change: "Initial Release DRAFT: Owner-Entwurf 09.09. (Zielbild pruefbares Governance-System) — SCR-0061; §9-Freigabe ausstehend"}

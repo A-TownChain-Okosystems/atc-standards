@@ -21,6 +21,7 @@ DOMAIN_MAP = {
     "taxonomy": "GOV", "license": "GOV",
     # neu via SCR-0056
     "improvement": "GOV",
+    "ai-gov": "AI",
 }
 DOMAINS = {
     "GOV":   "Governance & Meta-Standards",
@@ -36,7 +37,7 @@ FAMILY_CODES = {
     "version": "VER", "audit": "AUD", "ai-decision": "AIDEC", "update": "UPD",
     "repo-audit": "RA", "repo-maint": "RM", "err": "ER", "cicd": "CI", "implementation": "IM", "repo-discovery": "RD", "protocol": "PROT", "agent-operating": "AOS",
     "master-audit": "MAUD", "framework": "FW", "milestone": "MIL", "compat": "CMP",
-    "taxonomy": "TAX", "governance-core": "SGC", "license": "LIC", "improvement": "IMP",
+    "taxonomy": "TAX", "governance-core": "SGC", "license": "LIC", "improvement": "IMP", "ai-gov": "AIG",
 }
 
 cats = yaml.safe_load(open("registry/categories.yaml", encoding="utf-8"))

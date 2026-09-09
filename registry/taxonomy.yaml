@@ -582,6 +582,20 @@ taxonomy:
         name: Allgemein (Bestand, keine Unterteilung)
         status: ACTIVE
         lifecycle: ACTIVE
+    - id: AIG
+      name: ai-gov
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-AI-GOV-AGENTS/MANIFEST/POLICY/CHECK/AUDIT/HANDOFF/INCIDENT/CHANGE-001-999
+      source: named-family
+      description: 'ATC Agent Governance Framework: Organisationsweite Arbeitsregeln, Agent Identity & Scope, maschinenlesbare Policies (ATC-POL), versionierter CHECK-Katalog (AGOV-CHECK, MUST/SHOULD/MAY
+        + PASS/FAIL/WARN/N/A), Auditverfahren, Handoff, Incident, Governance Change Management (Owner-Entwurf 09.09., SCR-0061)'
+      standards_count: 8
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
   - id: TRUST
     name: Security & Trust
     status: ACTIVE

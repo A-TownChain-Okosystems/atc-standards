@@ -1,5 +1,34 @@
 # Changelog
 
+## [unreleased] - 2026-09-09
+
+### Added
+
+- **ATC-AI-GOV-Familie (8 Standards, SCR-0061):** ATC Agent Governance
+  Framework — „prüfbares Governance-System" (Owner-Entwurf 09.09.).
+  ATC-AI-GOV-AGENTS-001 (Arbeitsregeln/Binding/Readiness) ·
+  MANIFEST-001 (Identity & Scope, Status-Modell, Capabilities) ·
+  POLICY-001 (ATC-POL-001..010, MUST/SHOULD/MAY) · CHECK-001
+  (AGOV-CHECK-001..020 versioniert, PASS/FAIL/WARN/N/A) · AUDIT-001
+  (AGOV-FULL/DELTA/GATE, Snapshot, Post-Change) · HANDOFF-001 (10
+  Pflichtfelder Agent-zu-Agent) · INCIDENT-001 (6 Klassen, Lifecycle,
+  RCA-Pflicht, Postmortem) · CHANGE-001 (Governance-Change-Management,
+  SCR-Pflicht, SemVer, Rollback). Operativer SSOT: .github-Hub
+  (AGENT_MANIFEST v1.2.0 + 4 neue Protokoll-Dateien). Registry 433→441,
+  Taxonomie 43 Familien. Alle 8 DRAFT — §9-Freigabe ausstehend.
+- **Hub-Protokolle (SCR-0061):** ai/handoff.yaml, ai/incident.yaml,
+  ai/change.yaml, ai/audit.yaml im .github-Hub — Zielbild 8/8 Familien-
+  mitglieder operational.
+
+### Fixed
+
+- **F-049 CI-Verdrahtung (RESOLVED):** 4 Gates (README/MD/AAS-025/SC)
+  in naming-governance.yml verdrahtet — real 9 AUTOMATED (vorher 5);
+  AUD-2026-0004-Klassifikationskorrektur technisch eingelöst.
+- **Improvement Board nachgepflegt:** ATC-IMP-000001 + IMP-000002 CLOSED
+  mit Evidence (Commits ec4ee261/a72f49e7 + SCR-0061-Verdrahtung);
+  ATC-IMP-000003 (MD-001-Rollout) bleibt offen.
+
 ## [unreleased] - 2026-09-08
 
 ### Added

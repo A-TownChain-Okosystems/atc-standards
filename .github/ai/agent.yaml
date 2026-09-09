@@ -443,3 +443,11 @@ workflow:
   require_audit: true
   require_pr: true
   require_human_merge: true
+- ATC-AI-GOV-AGENTS-001
+- ATC-AI-GOV-MANIFEST-001
+- ATC-AI-GOV-POLICY-001
+- ATC-AI-GOV-CHECK-001
+- ATC-AI-GOV-AUDIT-001
+- ATC-AI-GOV-HANDOFF-001
+- ATC-AI-GOV-INCIDENT-001
+- ATC-AI-GOV-CHANGE-001

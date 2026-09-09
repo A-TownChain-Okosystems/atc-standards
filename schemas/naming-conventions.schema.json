@@ -597,6 +597,30 @@
           "pattern": "^(DISCOVERED|ANALYZING|PLANNED|IMPLEMENTING|TESTING|VERIFYING|STANDARDIZING|AUTOMATED|CLOSED|REJECTED)$",
           "example": "VERIFYING",
           "note": "Improvement-Board-Zustände gemäß ATC-STD-IMPROVEMENT-001 Abschnitt 16 (SCR-0056)"
+        },
+        "aiGovStandardId": {
+          "type": "string",
+          "pattern": "^ATC-AI-GOV-(?:AGENTS|MANIFEST|POLICY|CHECK|AUDIT|HANDOFF|INCIDENT|CHANGE)-[0-9]{3,}$",
+          "example": "ATC-AI-GOV-HANDOFF-001",
+          "note": "ATC Agent Governance Framework (Zielbild Owner-Entwurf 09.09.): AGENTS/ MANIFEST/ POLICY/ CHECK/ AUDIT/ HANDOFF/ INCIDENT/ CHANGE; operativer SSOT im .github-Hub-Repository; SCR-0061"
+        },
+        "aiGovRequirementId": {
+          "type": "string",
+          "pattern": "^REQ-AGOV(?:-[A-Z]{2,4})?-[0-9]{3,}$",
+          "example": "REQ-AGOV-HOF-001",
+          "note": "Requirements der ATC-AI-GOV-Familie; je Sub-Standard eigener Suffix (MAN/POL/CHK/AUD/HOF/INC/CHG), SCR-0061"
+        },
+        "agovCheckId": {
+          "type": "string",
+          "pattern": "^AGOV-CHECK-[0-9]{3,}$",
+          "example": "AGOV-CHECK-009",
+          "note": "Versionierter CHECK-Katalog der Agent-Governance (checks.yaml im .github-Hub, 20 Checks, SCR-0058); je Check MUST/SHOULD/MAY + Severity P0-P3; Detail-Reposicht: registry/repo-audit-checks.yaml CHECK-001..064"
+        },
+        "atcPolicyId": {
+          "type": "string",
+          "pattern": "^ATC-POL-[0-9]{3,}$",
+          "example": "ATC-POL-008",
+          "note": "Maschinenpruefbare Agent-Policies (policies.yaml, SCR-0057/0058): MUST/SHOULD/MAY-Modell, truthful-reporting u.a.; Grundsätze AP-001..016 menschenlesbar"
         }
       }
     },
@@ -799,6 +823,11 @@
           "type": "string",
           "pattern": "^ATC-STD-IMPROVEMENT-[0-9]{3,}[.]md$",
           "example": "ATC-STD-IMPROVEMENT-001.md"
+        },
+        "aiGovStandardDoc": {
+          "type": "string",
+          "pattern": "^ATC-AI-GOV-(?:AGENTS|MANIFEST|POLICY|CHECK|AUDIT|HANDOFF|INCIDENT|CHANGE)-[0-9]{3,}[.]md$",
+          "example": "ATC-AI-GOV-CHECK-001.md"
         }
       }
     },
