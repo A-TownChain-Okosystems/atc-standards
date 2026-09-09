@@ -4,6 +4,15 @@
 
 ### Added
 
+- **Integration & Readiness Control Plane (SCR-0060):** ausführbares
+  tools/readiness_check.py im .github-Hub — Phase-4→5-Pivot: keine neuen
+  Standards, sondern Umsetzungsevidenz aus SSOTs. IMPLEMENTATION MATRIX
+  (432 erfasst: enforced 62 / implemented 129 / specification_only 240 —
+  44.2 % code-backed), INTEGRATION MATRIX (10 IFC-Verträge, alle seed),
+  SYSTEM READINESS (0 offene P0, 3 offene P1, 3 Repos rote CI; DEVNET/
+  TESTNET/MAINNET ehrlich NO-GO mit Blocker-Liste), MAINTENANCE QUEUE
+  (Dependabot, getrennt ausgewiesen). Report: Hub docs/READINESS-2026-09-09.md.
+
 - **AGOV prüfbare Governance (SCR-0058):** MANIFEST-001 v1.1.0 (Identity/Status/
   Capability/Scope/Handoff/Mapping), ai/policies.yaml mit maschinenprüfbaren
   ATC-POL-001..010 + MUST/SHOULD/MAY-Verdict-Map, ai/checks.yaml (AGOV-CHECK-

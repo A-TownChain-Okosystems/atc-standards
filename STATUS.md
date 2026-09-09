@@ -356,3 +356,12 @@ erstem Evidenz-Record, 10-Gate-MERGE-GATE, 6-Schritt-EXCEPTION-RULE, 5-Stufen-
 Konflikt-Hierarchie). Binding-Checker Erstlauf: P0: 0 · P1: 1 (F-056: atc-
 standards bindet DRAFT IMPROVEMENT-001 — Owner-Entscheidung) · P2: 26 (F-057).
 Offen: Owner-Aktionen Issue #1 (Naming-CI pip) + Workflow-Permissions-Bundle.
+
+## Integration & Readiness Control Plane (SCR-0060, 09.09. 10:15 UTC+2)
+
+Phase-4→5-Pivot: tools/readiness_check.py (Hub) misst je Lauf aus SSOTs+API —
+Implementation Matrix (191/432 enforced/implemented, 240 specification_only),
+Integration Matrix (10 IFC seed; IFC-0009/0010 ohne Consumer), System
+Readiness (M-001/002 ACCEPTED; 0 P0 offen; P1: F-044/F-055/F-056; 3 Repos
+rote CI; alle Netz-Tiers NO-GO), Maintenance Queue (Dependabot getrennt).
+KPI-Vektor für REQ-IMP-007 damit erstmals maschinell messbar.
