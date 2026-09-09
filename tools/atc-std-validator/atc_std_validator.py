@@ -143,7 +143,7 @@ def validate(path, registry_path):
 
     # S-02 ID-Format (7.10/7.11: Muster aus naming-conventions.schema.json)
     sid = meta.get("id", "")
-    _ok02 = re.match(r"^ATC-STD-(?:BUG-|NET-|ZKP-|AI-DEV-|README-|MD-|SC-|DESC-|VERSION-|AUDIT-|AI-DECISION-|UPDATE-|IMPROVEMENT-|COMPAT-|MILESTONE-|FRAMEWORK-|REPO-AUDIT-|AOS-|PROTOCOL-|TAXONOMY-|STDDEV-|REGISTRY-|CHANGE-|LICENSE-|V2S-)?[0-9]{3,}$", sid) or re.match(r"^ATC-(?:AAS|ENT)-[0-9]{3,}$", sid) or re.match(r"^ATC-AI-GOV-(?:AGENTS|MANIFEST|POLICY|CHECK|AUDIT|HANDOFF|INCIDENT|CHANGE)-[0-9]{3,}$", sid)
+    _ok02 = re.match(r"^ATC-STD-(?:BUG-|NET-|ZKP-|AI-DEV-|README-|MD-|SC-|DESC-|VERSION-|AUDIT-|AI-DECISION-|UPDATE-|IMPROVEMENT-|COMPAT-|MILESTONE-|FRAMEWORK-|REPO-AUDIT-|AOS-|PROTOCOL-|TAXONOMY-|STDDEV-|REGISTRY-|CHANGE-|LICENSE-|V2S-)?[0-9]{3,}$", sid) or re.match(r"^ATC-(?:AAS|ENT)-[0-9]{3,}$", sid) or re.match(r"^ATC-AI-GOV-(?:[A-Z]+-)?[0-9]{3,}$", sid)
     v.add("S-02", "PASS" if _ok02 else "FAIL",
           "ID-Format: %s" % (sid if _ok02 else (sid or "FEHLT") + " (Schema: alle *StandardId-Muster)"))
 

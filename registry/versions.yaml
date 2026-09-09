@@ -7169,3 +7169,9 @@ versions:
     - {version: "1.0.0", date: "2026-09-09", change: "Initial Release DRAFT: Owner-Entwurf 09.09. (Zielbild pruefbares Governance-System) — SCR-0061; §9-Freigabe ausstehend"}
   ATC-AI-GOV-CHANGE-001:
     - {version: "1.0.0", date: "2026-09-09", change: "Initial Release DRAFT: Owner-Entwurf 09.09. (Zielbild pruefbares Governance-System) — SCR-0061; §9-Freigabe ausstehend"}
+  ATC-AI-GOV-001:
+    - {version: "1.0.0", date: "2026-09-09", change: "Initial Release DRAFT: Owner-Architektur-Freeze v1.0 (SCR-0062) — Governance-Kette, 4 Kontrollprinzipien, Severity/Status-Modell, Zuständigkeiten, 7 Phasen; §9-Freigabe empfohlen als Sammelfreigabe"}
+  ATC-AI-GOV-CAPABILITY-001:
+    - {version: "1.0.0", date: "2026-09-09", change: "Initial Release DRAFT: Owner-Entwurf 09.09. (SCR-0062) — explizites Berechtigungsmodell; §9-Freigabe ausstehend"}
+  ATC-AI-GOV-FINDING-001:
+    - {version: "1.0.0", date: "2026-09-09", change: "Initial Release DRAFT: Owner-Entwurf 09.09. (SCR-0062) — persistente Findings ATC-FINDING-YYYY-NNNNNN; §9-Freigabe ausstehend"}

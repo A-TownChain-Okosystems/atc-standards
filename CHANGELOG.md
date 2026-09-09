@@ -4,6 +4,28 @@
 
 ### Added
 
+- **ATC-AI-GOV v1.0 Produktionsarchitektur-Freeze (SCR-0062):** Umbrella
+  ATC-AI-GOV-001 — Governance-Kette (18 Stufen), 4 Kontrollprinzipien
+  (Fail Closed: unknown→FAIL nie PASS · Evidence First · Persistent
+  Findings · No Self-Certification: „Agentenanweisungen behaupten
+  Compliance nicht — die Checks beweisen sie"), formalisiertes
+  Severity-Modell (P0=BLOCK, P1=MUST FIX, P2=FIX REQUIRED, P3=TRACK)
+  mit deterministischer Repository-Status-Berechnung (BLOCKED /
+  NON-COMPLIANT / COMPLIANT-WITH-FINDINGS / COMPLIANT / VERIFIED),
+  Zuständigkeits-Trennung der Artefakte, 7-Phasen-Roadmap.
+- **Familie 8 → 11 Standards:** ATC-AI-GOV-CAPABILITY-001 (explizites
+  Berechtigungsmodell, Owner-Gates für P0-Capabilities) ·
+  ATC-AI-GOV-FINDING-001 (persistente Findings ATC-FINDING-YYYY-NNNNNN,
+  Lifecycle bis VERIFIED, Registry-Kopplung via registry_ref).
+- **Phase 1 DONE (Hub, 4111336):** agent/policy/check.schema.yaml ·
+  ai/audit/audit-policy.yaml + finding-schema.yaml · Phase-2-Pilot-
+  Objekte CHECK-001/010.yaml (fail_closed, evidence.required) ·
+  ai/phases.yaml. Registry 441→444.
+
+## [unreleased] - 2026-09-09
+
+### Added
+
 - **ATC-AI-GOV-Familie (8 Standards, SCR-0061):** ATC Agent Governance
   Framework — „prüfbares Governance-System" (Owner-Entwurf 09.09.).
   ATC-AI-GOV-AGENTS-001 (Arbeitsregeln/Binding/Readiness) ·

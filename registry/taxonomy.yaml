@@ -590,7 +590,7 @@ taxonomy:
       source: named-family
       description: 'ATC Agent Governance Framework: Organisationsweite Arbeitsregeln, Agent Identity & Scope, maschinenlesbare Policies (ATC-POL), versionierter CHECK-Katalog (AGOV-CHECK, MUST/SHOULD/MAY
         + PASS/FAIL/WARN/N/A), Auditverfahren, Handoff, Incident, Governance Change Management (Owner-Entwurf 09.09., SCR-0061)'
-      standards_count: 8
+      standards_count: 11
       categories:
       - id: GENERAL
         name: Allgemein (Bestand, keine Unterteilung)

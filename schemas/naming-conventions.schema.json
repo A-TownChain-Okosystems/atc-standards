@@ -600,15 +600,15 @@
         },
         "aiGovStandardId": {
           "type": "string",
-          "pattern": "^ATC-AI-GOV-(?:AGENTS|MANIFEST|POLICY|CHECK|AUDIT|HANDOFF|INCIDENT|CHANGE)-[0-9]{3,}$",
-          "example": "ATC-AI-GOV-HANDOFF-001",
-          "note": "ATC Agent Governance Framework (Zielbild Owner-Entwurf 09.09.): AGENTS/ MANIFEST/ POLICY/ CHECK/ AUDIT/ HANDOFF/ INCIDENT/ CHANGE; operativer SSOT im .github-Hub-Repository; SCR-0061"
+          "pattern": "^ATC-AI-GOV-(?:[A-Z]+-)?[0-9]{3,}$",
+          "example": "ATC-AI-GOV-001",
+          "note": "ATC Agent Governance Framework v1.0 (Owner-Architektur-Freeze 09.09., SCR-0062): Umbrella ATC-AI-GOV-001 + Sub-Standards ATC-AI-GOV-<DOMAIN>-NNN (AGENTS/MANIFEST/CAPABILITY/POLICY/CHECK/AUDIT/FINDING/HANDOFF/INCIDENT/CHANGE); operativer SSOT .github-Hub"
         },
         "aiGovRequirementId": {
           "type": "string",
-          "pattern": "^REQ-AGOV(?:-[A-Z]{2,4})?-[0-9]{3,}$",
-          "example": "REQ-AGOV-HOF-001",
-          "note": "Requirements der ATC-AI-GOV-Familie; je Sub-Standard eigener Suffix (MAN/POL/CHK/AUD/HOF/INC/CHG), SCR-0061"
+          "pattern": "^REQ-(?:AIGOV|AGOV(?:-[A-Z]{2,4})?)-[0-9]{3,}$",
+          "example": "REQ-AIGOV-001",
+          "note": "Anforderungen der ATC-AI-GOV-Familie: Umbrella = REQ-AIGOV-NNN; Sub-Standards = REQ-AGOV-<SUFFIX>-NNN; SCR-0061/0062"
         },
         "agovCheckId": {
           "type": "string",
@@ -621,6 +621,18 @@
           "pattern": "^ATC-POL-[0-9]{3,}$",
           "example": "ATC-POL-008",
           "note": "Maschinenpruefbare Agent-Policies (policies.yaml, SCR-0057/0058): MUST/SHOULD/MAY-Modell, truthful-reporting u.a.; Grundsätze AP-001..016 menschenlesbar"
+        },
+        "atcCheckObjectId": {
+          "type": "string",
+          "pattern": "^ATC-CHECK-[0-9]{3,}$",
+          "example": "ATC-CHECK-010",
+          "note": "Maschinenlesbare Check-Objekte (ai/checks/CHECK-NNN.yaml, Schema check.schema.yaml, SCR-0062); 1:1-Alias auf Katalog-IDs AGOV-CHECK-NNN (checks.yaml, SCR-0058) — ATC-CHECK-NNN ist kanonisch, AGOV-CHECK-NNN Legacy-Katalog-ID"
+        },
+        "atcFindingId": {
+          "type": "string",
+          "pattern": "^ATC-FINDING-[0-9]{4}-[0-9]{6,}$",
+          "example": "ATC-FINDING-2026-000001",
+          "note": "Persistente Governance-Findings des ATC Governance Auditor (ATC-AI-GOV-FINDING-001, SCR-0062): YYYY=Jahr, NNNNNN=org-weite Sequenz; Schema finding-schema.yaml; verknüpft via registry_ref mit F-NNNN-Kurz-IDs der Registry (BUG-001) — ATC-FINDING ist kanonisch/persistent, F-NNNN ist Registry-Shorthand"
         }
       }
     },
@@ -826,7 +838,7 @@
         },
         "aiGovStandardDoc": {
           "type": "string",
-          "pattern": "^ATC-AI-GOV-(?:AGENTS|MANIFEST|POLICY|CHECK|AUDIT|HANDOFF|INCIDENT|CHANGE)-[0-9]{3,}[.]md$",
+          "pattern": "^ATC-AI-GOV-(?:[A-Z]+-)?[0-9]{3,}[.]md$",
           "example": "ATC-AI-GOV-CHECK-001.md"
         }
       }
