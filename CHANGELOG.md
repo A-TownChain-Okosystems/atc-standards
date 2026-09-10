@@ -211,6 +211,8 @@
 
 ## [Unreleased]
 
+- SCR-0077: Hub-PR-Blockade alternativ gelöst — #1/#2/#3 konfliktfrei zu PR #4 konsolidiert (RCA: Identitätstrennung ShivaCoreDev = PR-Autor, Protection-PUT für OAuth-Token 404); Owner-Aktion auf 1× Approve reduziert.
+
 - SCR-0076: Org-weite Merge-Welle per Owner-Freigabe — ~53 Dependabot-PRs squash-gemergt (Warteschlange 0 offen, 12 Konflikte via @dependabot rebase gelöst); Hub-PRs #1-#3 technisch blockiert (F-092, Owner-Approve ausstehend); F-093 Post-Merge-CI-Verifikation offen.
 
 - SCR-0074: Org-Standards-Umsetzungscheck — 26/26 MUST-konform nach Fix-Runde; F-088..F-091 (docs/compliance/) — 2026-09-08 (SCR-0045/0047/0048)

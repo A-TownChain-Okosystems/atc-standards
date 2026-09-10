@@ -835,10 +835,10 @@ findings:
   resolution: 'SCR-0074: Scan-JSON + Report archiviert; Tool-Verankerung als nächster SCR empfohlen'
 - id: F-092
   priority: P1
-  status: OPEN
+  status: PARTIALLY_RESOLVED
   repo: .github
-  title: 'Hub-PRs #1-#3 durch Review-Pflicht blockiert — Owner-Approve im UI oder Zweit-Reviewer noetig'
-  resolution: 'SCR-0076: Self-Approval gesperrt (422), Protection-Aenderung 404; nach Owner-Approve sofort mergbar'
+  title: 'Hub-PRs durch Review-Pflicht blockiert — konsolidiert zu PR #4 (SCR-0077), 1 Owner-Approve noetig'
+  resolution: 'SCR-0077: #1-#3 in PR #4 vereinigt (Merge-Commit), alte PRs geschlossen; nach 1x Approve mergt der Agent per API'
 - id: F-093
   priority: P1
   status: OPEN
