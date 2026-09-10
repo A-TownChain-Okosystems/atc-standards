@@ -3,6 +3,15 @@
 ## [unreleased] - 2026-09-09
 
 ### Added
+- **Spezifikations-Backlog geschlossen (SCR-0071):** 91 SPEC-DRAFT-Dateien in
+  23 Repositories (normative MUST-Anforderungen mit REQ-IDs, Invarianten,
+  Conformance-Testkategorien, Status-Gates; ehrlich 0.1.0-DRAFT — kein
+  Implementierungs-Claim). Kernentscheidungen als Draft festgelegt: secp256k1
+  als kanonischer TX-Signaturalgorithmus (WAL-SIGN-001, klärt F-062),
+  Consensus-Familie ATC-CONSENSUS-301..307 + Determinismus + Encoding
+  (F-067), ATC-CRYPTO-001 mit Domain-Separation-Registry, Milestone-Evidence-
+  Pakete (ATC-EVIDENCE-001), 12 SPEC-OVERVIEW-Inventuren.
+
 - **Audit-Welle 2 (SCR-0070):** a-townchain Layer-Terminologie L1→L3 (F-068
   RESOLVED); atc-algorithm ehrlicher STATUS (F-073 RESOLVED, unbelegte PASS-Claims
   entfernt); F-067/069/070/071/072 registriert (Konsens-Spec, Mainnet-Termin,

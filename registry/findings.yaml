@@ -555,7 +555,9 @@ findings:
 - alias: null
   discovered: '2026-09-10'
   id: F-062
-  resolution: null
+  resolution: 'Algorithmische Klärung als SPEC-DRAFT WAL-SIGN-001: kanonisch = secp256k1/RFC-6979/Low-S
+    für TX-Signaturen (Ed25519 ausschließlich P2P/DID-Layer); Umsetzung (Cargo.toml-Bereinigung, Trust-Boundary-Code)
+    folgt nach Spec-Freeze — OPEN'
   scr: SCR-0069
   severity: P1
   source: Owner-Audit 10.09. (P1-2)
@@ -607,7 +609,9 @@ findings:
 - alias: null
   discovered: '2026-09-10'
   id: F-067
-  resolution: null
+  resolution: 'Spezifikationshälfte geschlossen (SCR-0071: ATC-CONSENSUS-301..307+DET+ENC als SPEC-DRAFT,
+    09 Requirement-Kataloge); Implementierung weiterhin offen — Finding bleibt OPEN bis Consensus-Spec-Freeze
+    + Rust-Implementierung'
   scr: SCR-0070
   severity: P0
   source: Owner-Audit 10.09. (P0-01..04)
@@ -648,7 +652,8 @@ findings:
 - alias: null
   discovered: '2026-09-10'
   id: F-071
-  resolution: null
+  resolution: Compute-Protokoll als SPEC-DRAFT ATC-COMP-500..509 spezifiziert (inkl. Deterministic/AI/Engine-Trennung);
+    Implementierung offen — OPEN
   scr: SCR-0070
   severity: P1
   source: Owner-Audit 10.09. (P1 Compute Protocol, Determinismus)
@@ -658,7 +663,8 @@ findings:
 - alias: null
   discovered: '2026-09-10'
   id: F-072
-  resolution: null
+  resolution: Genesis-Specs als SPEC-DRAFT GEN-TICK/ECS/DET/AI/WORLD-001; Runtime-Evidence folgt mit Implementierung
+    — OPEN
   scr: SCR-0070
   severity: P2
   source: Owner-Audit 10.09. (P1-001)

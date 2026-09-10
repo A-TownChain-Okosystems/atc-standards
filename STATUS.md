@@ -380,3 +380,13 @@ Org-weiter Lizenz-Batch-Fix (F-065 RESOLVED, 26 Repos) + ehrliche STATUS-Claims
 (F-066 RESOLVED); F-061..F-064 als offene P1/P2 registriert. Implementation-Pivot
 bestätigt: atc-storage/atc-launchpad haben weiterhin keine Implementierung —
 nächste Schritte sind Cargo-Workspace + echte Tests, nicht weitere Doku.
+
+## Spezifikations-Backlog geschlossen (SCR-0071, 10.09. 11:00–11:20 UTC+2)
+
+91 SPEC-DRAFTs in 23 Repos (Audit-Backlog F-061..F-072): Konsens-Familie,
+Compute, Wallet (secp256k1 kanonisch), Storage, Marketplace, Launchpad,
+Genesis, ATCLang-Pipeline (IR/BC/VM/ABI/Stdlib), Chain (Crypto/Network-ID/
+State/Evidence), Aurora (CAP/MEM/TB/S2), Shivacore (Test-Evidence/Dep-Policy).
+Alle 0.1.0-DRAFT mit ehrlichen Status-Gates: Spec-Freeze (Owner §9) →
+Implementierung → Evidence. Implementation-Pivot geht damit in Phase
+„Spec-Freeze-Reviews je Paket".
