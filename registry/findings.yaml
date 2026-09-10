@@ -510,3 +510,35 @@ findings:
   status: OPEN
   title: 16 Repos ohne .github/ai/agent.yaml-Standards-Bindung (a-townchain, a-townchain-os-docs, atc-shivacore,
     atc-node u.a.); ausserdem 37 CANDIDATE-Bindungen in gebundenen Repos (Design SCR-0056)
+- alias: null
+  discovered: '2026-09-10'
+  id: F-058
+  resolution: README auf Apache-2.0 korrigiert (Org-Einheitslizenz F-046/SCR-0036); Copyright Michael
+    Wroblewski unverändert; 0 Proprietary-Vorkommen verifiziert
+  scr: SCR-0068
+  severity: P0
+  source: Owner-Externaudit via ChatGPT; GitHub-Lizenz-Detektion Apache-2.0
+  status: RESOLVED
+  title: 'aurora-ai: Lizenz-Widerspruch — README ''Proprietary / All Rights Reserved'' vs. LICENSE Apache-2.0
+    (Owner-Externaudit 10.09.)'
+- alias: null
+  discovered: '2026-09-10'
+  id: F-059
+  resolution: null
+  scr: SCR-0068
+  severity: P2
+  source: SCR-0068 org-scope.yaml Erstlauf (DRIFT_COUNT=1); Owner-Externaudit P0 'sind wirklich alle Repos
+    angebunden?'
+  status: OPEN
+  title: 'demo-repository: ungoverned (kein AGENTS.md, atc--Namensregel-Verstoß, GitHub-Demo-Template,
+    11:21 09.09. von ShivaCoreDev) — Org-Scope-Drift'
+- alias: null
+  discovered: '2026-09-10'
+  id: F-060
+  resolution: null
+  scr: SCR-0068
+  severity: P1
+  source: Owner-Externaudit 10.09. (Evidence-Gate-Forderung)
+  status: OPEN
+  title: 'aurora-ai: Compliance-Claims (ATC-STD-000/201/202/203, ''R3 COMPLIANT'') ohne maschinenprüfbare
+    Evidence (compliance/-Verzeichnis, CI-Run-IDs, Commit-SHAs fehlen)'
