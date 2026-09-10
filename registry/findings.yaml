@@ -765,3 +765,40 @@ findings:
   repo: a-townchain-os
   title: Test-Claims 731/674 ohne maschinenlesbare Evidence-Records
   resolution: 'SCR-0072: ATC-AOS-001 Standard definiert .evidence/'
+
+  - id: F-080
+    title: "Lizenz-Stufe-2: package.json UNLICENSED + All-Rights-Reserved-MD-Header org-weit"
+    severity: P0
+    status: RESOLVED
+    resolution: "SCR-0073: 12 package.json auf Apache-2.0, ~375 MD-Header ersetzt (16 Repos)"
+  - id: F-081
+    title: "Unbelegte Meilenstein-Claims (globus-os M5, genesis-chronicles M7, atc-sdk/atc-explorer M6)"
+    severity: P0
+    status: RESOLVED
+    resolution: "SCR-0073: CLAIMED/GEPLANT-Kennzeichnung mit Evidence-Hinweis"
+  - id: F-082
+    title: "atc-node Security-Klassifikation S3 vs S4 inkonsistent"
+    severity: P1
+    status: RESOLVED
+    resolution: "SCR-0073: S4 (Audit-Empfehlung, netzwerkexponierte Infrastruktur)"
+  - id: F-083
+    title: "atc-contracts Truth-Inkonsistenz (.atc primary rust vs Python-Referenzmodell)"
+    severity: P1
+    status: RESOLVED
+    resolution: "SCR-0073: primary python, Referenzmodell ehrlich deklariert"
+  - id: F-084
+    title: "ATC-CONTRACT-EXEC-001: .atc->Bytecode->ATC-VM->Receipt ohne Evidence"
+    severity: P1
+    status: OPEN
+  - id: F-085
+    title: "a-townchain-os-docs: Snapshot-Modell REALITY_STATUS + Documentation-Release-Gate + ARCHITECTURE.md"
+    severity: P1
+    status: OPEN
+  - id: F-086
+    title: "AGENT_MANIFEST-Scope-Reduktion (Org-Datenbank aus Repo-Manifesten heraus)"
+    severity: P2
+    status: OPEN
+  - id: F-087
+    title: "globus-os M5-Evidence-Gates + genesis-chronicles M7-Evidence-Paket"
+    severity: P2
+    status: OPEN

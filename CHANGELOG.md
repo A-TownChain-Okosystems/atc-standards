@@ -3,6 +3,14 @@
 ## [unreleased] - 2026-09-09
 
 ### Added
+- **Audit-Welle 4 umgesetzt (SCR-0073):** Lizenz-Stufe 2 — 12 package.json
+  UNLICENSED→Apache-2.0, ~375 All-Rights-Reserved-MD-Header ersetzt (F-080
+  RESOLVED); unbelegte M-Claims ehrlich gekennzeichnet: globus-os M5,
+  genesis-chronicles M7, atc-sdk/atc-explorer M6 (F-081 RESOLVED);
+  atc-node S4 vereinheitlicht (F-082), atc-contracts Sprach-Wahrheit
+  Python (F-083); offen: F-084 CONTRACT-EXEC-Gate, F-085 Docs-Hub-Reifegrad,
+  F-086 Manifest-Scope, F-087 M5/M7-Evidence.
+
 - **Spezifikations-Backlog geschlossen (SCR-0071):** 91 SPEC-DRAFT-Dateien in
   23 Repositories (normative MUST-Anforderungen mit REQ-IDs, Invarianten,
   Conformance-Testkategorien, Status-Gates; ehrlich 0.1.0-DRAFT — kein
