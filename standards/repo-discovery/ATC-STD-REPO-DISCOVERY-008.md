@@ -3,7 +3,7 @@ standard:
   id: ATC-STD-REPO-DISCOVERY-008
   title: "Security-Relevant Content Detection"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: repo-discovery
   authority: A-TownChain Ecosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"

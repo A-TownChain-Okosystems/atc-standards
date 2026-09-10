@@ -3,7 +3,7 @@ standard:
   id: ATC-STD-ERR-011
   title: "Fix Verification"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: err
   authority: A-TownChain Ecosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"

@@ -3,7 +3,7 @@ standard:
   id: ATC-STD-ERR-012
   title: "Post-Fix Audit"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: err
   authority: A-TownChain Ecosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"

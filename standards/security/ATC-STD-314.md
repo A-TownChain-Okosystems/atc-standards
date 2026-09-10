@@ -3,7 +3,7 @@ standard:
   id: ATC-STD-314
   title: "Cybersecurity Framework Standard"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: security
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Auftrag) / Standards Governance"
@@ -30,9 +30,9 @@ standard:
   applies_to: "Alle ATC-Repositories"
 ----
 
-# ATC-STD-314 — Cybersecurity Framework Standard (v1.0.0, CANDIDATE)
+# ATC-STD-314 — Cybersecurity Framework Standard (v1.0.0, APPROVED)
 
-> **Status:** CANDIDATE (v1.0.0) — KONFLIKT-Aufloesung SCR-0040 (08.09.2026, Owner-Auftrag
+> **Status:** APPROVED (v1.0.0) — KONFLIKT-Aufloesung SCR-0040 (08.09.2026, Owner-Auftrag [§9-Sammelfreigabe 11.09.2026, approval/APPROVAL-DECISION-2026-09-11.md]
 > "Konflikte beheben"): Katalog-Slot von kollidierender ID auf freien Slot im richtigen
 > Namensraum umallokiert (ATC-STD-000 §36 ID-Immutabilitaet — belegte IDs bleiben unangetastet).
 > Normativ per Owner-Auftrag; Engineering-Bindung entsteht bei Slot-Aktivierung via SCR/MINOR.

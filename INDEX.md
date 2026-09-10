@@ -59,7 +59,7 @@ eines Standards liegt ausschließlich in seiner Standarddatei; die Registry
 | registry/technology-registry.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
 | registry/versions.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
 
-Kernregister: **standards.yaml** (Bestand, 449 Standards) · **versions.yaml**
+Kernregister: **standards.yaml** (Bestand, 450 Standards) · **versions.yaml**
 (Versionierung je Standard) · **framework.yaml** (Katalog: 51 Familien,
 477 Slots) · **categories.yaml**
 (Kategorien) · **taxonomy.yaml** (Domain/Familie/Kategorie) · **protocol-registry.yaml**
@@ -122,11 +122,11 @@ Kernregister: **standards.yaml** (Bestand, 449 Standards) · **versions.yaml**
 | FAM-50 | CI/CD-Standards (CICD) | 1 | 1 | 0 |
 | FAM-51 | Technology Uniqueness & Differentiation (TUD) | 1 | 1 | 0 |
 
-Statusverteilung der 449 Registry-Standards: {'approved': 400, 'candidate': 37, 'draft': 12}.
-Alle 449 sind APPROVED und normativ (§30-eingefroren); Details je Standard
+Statusverteilung der 450 Registry-Standards: {'approved': 438, 'draft': 12}.
+Alle 450 sind APPROVED und normativ (§30-eingefroren); Details je Standard
 in registry/standards.yaml und registry/versions.yaml.
 
-## 4. Master-Registry-Tabelle (449 Standards)
+## 4. Master-Registry-Tabelle (450 Standards)
 
 Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 
@@ -229,7 +229,7 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 | ATC-STD-104 | Pull Request Standard | repository | 1.2.0 | approved | standards/repository/ATC-STD-104.md |
 | ATC-STD-105 | Merge Policy Standard | repository | 1.2.0 | approved | standards/repository/ATC-STD-105.md |
 | ATC-STD-107 | Tagging Standard | repository | 1.2.0 | approved | standards/repository/ATC-STD-107.md |
-| ATC-STD-114 | Git Standard | repository | 1.0.0 | candidate | standards/repository/ATC-STD-114.md |
+| ATC-STD-114 | Git Standard | repository | 1.0.0 | approved | standards/repository/ATC-STD-114.md |
 | ATC-STD-129 | Incident Correlation Standard | bug | 1.2.0 | approved | standards/bug/ATC-STD-129.md |
 | ATC-STD-130 | Post-Incident Review Standard | bug | 1.2.0 | approved | standards/bug/ATC-STD-130.md |
 | ATC-STD-140 | QA Framework Standard | development | 1.2.0 | approved | standards/development/ATC-STD-140.md |
@@ -270,7 +270,7 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 | ATC-STD-197 | Genesis Standard | blockchain | 1.2.0 | approved | standards/blockchain/ATC-STD-197.md |
 | ATC-STD-200 | ATC Token Standard | blockchain | 1.2.0 | approved | standards/blockchain/ATC-STD-200.md |
 | ATC-STD-201 | Repository Structure Standard | repository | 1.0.1 | approved | standards/repository/ATC-STD-201.md |
-| ATC-STD-202 | Repository Naming & Classification Standard | repository | 1.2.0 | candidate | standards/repository/ATC-STD-202.md |
+| ATC-STD-202 | Repository Naming & Classification Standard | repository | 1.2.0 | approved | standards/repository/ATC-STD-202.md |
 | ATC-STD-203 | Repository Security & Release Standard | repository | 1.0.1 | approved | standards/repository/ATC-STD-203.md |
 | ATC-STD-204 | Dependency & Interface Standard | repository | 1.0.0 | approved | standards/repository/ATC-STD-204.md |
 | ATC-STD-205 | Minting Standard | blockchain | 1.2.0 | approved | standards/blockchain/ATC-STD-205.md |
@@ -279,10 +279,10 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 | ATC-STD-208 | Governance Token Standard | blockchain | 1.2.0 | approved | standards/blockchain/ATC-STD-208.md |
 | ATC-STD-209 | Token Allocation Standard | blockchain | 1.2.0 | approved | standards/blockchain/ATC-STD-209.md |
 | ATC-STD-210 | Vesting Standard | blockchain | 1.2.0 | approved | standards/blockchain/ATC-STD-210.md |
-| ATC-STD-212 | Token Supply Standard | blockchain | 1.0.0 | candidate | standards/blockchain/ATC-STD-212.md |
-| ATC-STD-213 | Emission Standard | blockchain | 1.0.0 | candidate | standards/blockchain/ATC-STD-213.md |
-| ATC-STD-214 | Burning Standard | blockchain | 1.0.0 | candidate | standards/blockchain/ATC-STD-214.md |
-| ATC-STD-215 | Tokenomics Standard | blockchain | 1.0.0 | candidate | standards/blockchain/ATC-STD-215.md |
+| ATC-STD-212 | Token Supply Standard | blockchain | 1.0.0 | approved | standards/blockchain/ATC-STD-212.md |
+| ATC-STD-213 | Emission Standard | blockchain | 1.0.0 | approved | standards/blockchain/ATC-STD-213.md |
+| ATC-STD-214 | Burning Standard | blockchain | 1.0.0 | approved | standards/blockchain/ATC-STD-214.md |
+| ATC-STD-215 | Tokenomics Standard | blockchain | 1.0.0 | approved | standards/blockchain/ATC-STD-215.md |
 | ATC-STD-240 | Interoperability Standard | blockchain | 1.2.0 | approved | standards/blockchain/ATC-STD-240.md |
 | ATC-STD-241 | Bridge Standard | blockchain | 1.2.0 | approved | standards/blockchain/ATC-STD-241.md |
 | ATC-STD-242 | Bridge Security Standard | blockchain | 1.2.0 | approved | standards/blockchain/ATC-STD-242.md |
@@ -317,7 +317,7 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 | ATC-STD-309 | Supply Chain Security Standard | security | 1.2.0 | approved | standards/security/ATC-STD-309.md |
 | ATC-STD-311 | Vulnerability Management Standard | security | 1.2.0 | approved | standards/security/ATC-STD-311.md |
 | ATC-STD-312 | Penetration Testing Standard | security | 1.2.0 | approved | standards/security/ATC-STD-312.md |
-| ATC-STD-314 | Cybersecurity Framework Standard | security | 1.0.0 | candidate | standards/security/ATC-STD-314.md |
+| ATC-STD-314 | Cybersecurity Framework Standard | security | 1.0.0 | approved | standards/security/ATC-STD-314.md |
 | ATC-STD-340 | Mining Architecture Standard | blockchain | 1.2.0 | approved | standards/blockchain/ATC-STD-340.md |
 | ATC-STD-341 | Miner Standard | blockchain | 1.2.0 | approved | standards/blockchain/ATC-STD-341.md |
 | ATC-STD-342 | Mining Manager Standard | blockchain | 1.2.0 | approved | standards/blockchain/ATC-STD-342.md |
@@ -486,27 +486,27 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 | ATC-STD-BUG-004 | Repository Synchronization & Merge Gate | bug | 1.0.0 | approved | standards/bug/ATC-STD-BUG-004.md |
 | ATC-STD-BUG-005 | Fehleranalyse- und Root-Cause-Analysis-Standard — Analyse- und QMS-Schicht der Bug-Familie: 4-Ebenen-RCA, Fault Tree, Evidence, Timeline, Impact, Metrics, Closure Gate, Corrective/Preventive | bug | 1.0.0 | approved | standards/bug/ATC-STD-BUG-005.md |
 | ATC-STD-CHANGE-001 | ATC Change Control Dachnorm — Eine Änderung, ein Kanal, eine Gate-Landkarte: konsolidierte Zuordnung von ATC-STD-000 §19–33 (SCR), VERSION-001, UPDATE-001 und COMPAT-001 zur verbindlichen Entscheidungsmatrix mit RACI, Notfallpfad und den 13 Change-Nachweis-Fragen als Prüfraster | governance-core | 1.0.1 | approved | standards/governance-core/ATC-STD-CHANGE-001.md |
-| ATC-STD-CI-001 | Reproducible CI Dependencies — Deklaration, Installation, Reproduzierbarkeit, Fresh-Runner-Faehigkeit und Fehlerklassifikation von CI-Dependencies | cicd | 1.0.0 | candidate | standards/cicd/ATC-STD-CI-001.md |
+| ATC-STD-CI-001 | Reproducible CI Dependencies — Deklaration, Installation, Reproduzierbarkeit, Fresh-Runner-Faehigkeit und Fehlerklassifikation von CI-Dependencies | cicd | 1.0.0 | approved | standards/cicd/ATC-STD-CI-001.md |
 | ATC-STD-COMPAT-001 | ATC Major Version Compatibility & Recovery Standard — Verbindliche Kompatibilitätsprüfung, -Wiederherstellung und -Migration nach MAJOR-Updates | compat | 1.0.0 | approved | standards/compat/ATC-STD-COMPAT-001.md |
 | ATC-STD-DESC-001 | Standard Description Standard — Standard zur Beschreibung von Standards | desc | 1.0.0 | approved | standards/desc/ATC-STD-DESC-001.md |
-| ATC-STD-ERR-000 | No Local Fix Without System Verification (Error Master) | err | 1.0.0 | candidate | standards/err/ATC-STD-ERR-000.md |
-| ATC-STD-ERR-001 | Error Discovery | err | 1.0.0 | candidate | standards/err/ATC-STD-ERR-001.md |
-| ATC-STD-ERR-002 | Error Classification | err | 1.0.0 | candidate | standards/err/ATC-STD-ERR-002.md |
-| ATC-STD-ERR-003 | Root Cause Analysis & Pattern Extraction | err | 1.0.0 | candidate | standards/err/ATC-STD-ERR-003.md |
-| ATC-STD-ERR-004 | Error Propagation Scan | err | 1.0.0 | candidate | standards/err/ATC-STD-ERR-004.md |
-| ATC-STD-ERR-005 | Cross-Repository Error Scan | err | 1.0.0 | candidate | standards/err/ATC-STD-ERR-005.md |
-| ATC-STD-ERR-006 | Documentation Consistency Check | err | 1.0.0 | candidate | standards/err/ATC-STD-ERR-006.md |
-| ATC-STD-ERR-007 | Dependency Impact Analysis | err | 1.0.0 | candidate | standards/err/ATC-STD-ERR-007.md |
-| ATC-STD-ERR-008 | Regression Test Requirement | err | 1.0.0 | candidate | standards/err/ATC-STD-ERR-008.md |
-| ATC-STD-ERR-009 | Preventive Control | err | 1.0.0 | candidate | standards/err/ATC-STD-ERR-009.md |
-| ATC-STD-ERR-010 | Error Pattern Detection | err | 1.0.0 | candidate | standards/err/ATC-STD-ERR-010.md |
-| ATC-STD-ERR-011 | Fix Verification | err | 1.0.0 | candidate | standards/err/ATC-STD-ERR-011.md |
-| ATC-STD-ERR-012 | Post-Fix Audit | err | 1.0.0 | candidate | standards/err/ATC-STD-ERR-012.md |
-| ATC-STD-ERR-013 | Knowledge Capture | err | 1.0.0 | candidate | standards/err/ATC-STD-ERR-013.md |
-| ATC-STD-ERR-014 | Recurrence Monitoring | err | 1.0.0 | candidate | standards/err/ATC-STD-ERR-014.md |
-| ATC-STD-ERR-015 | Error Prevention Gate | err | 1.0.0 | candidate | standards/err/ATC-STD-ERR-015.md |
+| ATC-STD-ERR-000 | No Local Fix Without System Verification (Error Master) | err | 1.0.0 | approved | standards/err/ATC-STD-ERR-000.md |
+| ATC-STD-ERR-001 | Error Discovery | err | 1.0.0 | approved | standards/err/ATC-STD-ERR-001.md |
+| ATC-STD-ERR-002 | Error Classification | err | 1.0.0 | approved | standards/err/ATC-STD-ERR-002.md |
+| ATC-STD-ERR-003 | Root Cause Analysis & Pattern Extraction | err | 1.0.0 | approved | standards/err/ATC-STD-ERR-003.md |
+| ATC-STD-ERR-004 | Error Propagation Scan | err | 1.0.0 | approved | standards/err/ATC-STD-ERR-004.md |
+| ATC-STD-ERR-005 | Cross-Repository Error Scan | err | 1.0.0 | approved | standards/err/ATC-STD-ERR-005.md |
+| ATC-STD-ERR-006 | Documentation Consistency Check | err | 1.0.0 | approved | standards/err/ATC-STD-ERR-006.md |
+| ATC-STD-ERR-007 | Dependency Impact Analysis | err | 1.0.0 | approved | standards/err/ATC-STD-ERR-007.md |
+| ATC-STD-ERR-008 | Regression Test Requirement | err | 1.0.0 | approved | standards/err/ATC-STD-ERR-008.md |
+| ATC-STD-ERR-009 | Preventive Control | err | 1.0.0 | approved | standards/err/ATC-STD-ERR-009.md |
+| ATC-STD-ERR-010 | Error Pattern Detection | err | 1.0.0 | approved | standards/err/ATC-STD-ERR-010.md |
+| ATC-STD-ERR-011 | Fix Verification | err | 1.0.0 | approved | standards/err/ATC-STD-ERR-011.md |
+| ATC-STD-ERR-012 | Post-Fix Audit | err | 1.0.0 | approved | standards/err/ATC-STD-ERR-012.md |
+| ATC-STD-ERR-013 | Knowledge Capture | err | 1.0.0 | approved | standards/err/ATC-STD-ERR-013.md |
+| ATC-STD-ERR-014 | Recurrence Monitoring | err | 1.0.0 | approved | standards/err/ATC-STD-ERR-014.md |
+| ATC-STD-ERR-015 | Error Prevention Gate | err | 1.0.0 | approved | standards/err/ATC-STD-ERR-015.md |
 | ATC-STD-FRAMEWORK-001 | ATC Enterprise Standards Framework — Master-Dokument (ATC-STANDARDS-MASTER): Zusammenführung aller Standards, Katalog, Kollisionsauflösung, einheitliche Status-/Change-/Traceability-Modelle, Register-Architektur | framework | 1.0.7 | approved | standards/framework/ATC-STD-FRAMEWORK-001.md |
-| ATC-STD-IMPLEMENTATION-001 | Standard Implementation Matrix | implementation | 1.0.0 | candidate | standards/implementation/ATC-STD-IMPLEMENTATION-001.md |
+| ATC-STD-IMPLEMENTATION-001 | Standard Implementation Matrix | implementation | 1.0.0 | approved | standards/implementation/ATC-STD-IMPLEMENTATION-001.md |
 | ATC-STD-IMPROVEMENT-001 | ATC Improvement Standard — Systemverbesserungsstandard: Continuous Improvement Management System (Zyklus, 14 Quellen, 10 Klassen, ATC-IMP-Board, Root-Cause, Regression Prevention, Automatisierungsleiter, DoD, org-weite Anwendung) | improvement | 1.0.0 | draft | standards/improvement/ATC-STD-IMPROVEMENT-001.md |
 | ATC-STD-LICENSE-001 | License Governance Standard | license | 1.0.0 | approved | standards/license/ATC-STD-LICENSE-001.md |
 | ATC-STD-LICENSE-002 | License Specification Standard | license | 1.0.0 | approved | standards/license/ATC-STD-LICENSE-002.md |
@@ -535,17 +535,17 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 | ATC-STD-REPO-AUDIT-001 | ATC Repository Audit Standard — Verbindlicher, reproduzierbarer Repository Health Check: 16 Prüfbereiche, Prüfmatrix, SOLL/IST, Gap Analysis, Findings, Health Score A-E | repo-audit | 1.0.0 | approved | standards/repo-audit/ATC-STD-REPO-AUDIT-001.md |
 | ATC-STD-REPO-AUDIT-002 | ATC Repository Audit Checklisten- & Health-Score-Standard — Konkrete automatisierbare Checks (CHECK-001, CHECK-002, …) und standardisierter Repository Health Score | repo-audit | 1.0.0 | approved | standards/repo-audit/ATC-STD-REPO-AUDIT-002.md |
 | ATC-STD-REPO-AUDIT-003 | Automatisierter ATC Repository Auditor — verbindliche Spezifikation des KI-/Automatisierungsagenten für reproduzierbare Repository-Audits: Mandat, 17-Schritte-Pipeline, Read-Only-Pflicht, Gates, AUD-Report-Erzeugung | repo-audit | 1.0.0 | approved | standards/repo-audit/ATC-STD-REPO-AUDIT-003.md |
-| ATC-STD-REPO-DISCOVERY-001 | Content Discovery | repo-discovery | 1.0.0 | candidate | standards/repo-discovery/ATC-STD-REPO-DISCOVERY-001.md |
-| ATC-STD-REPO-DISCOVERY-002 | Change Detection | repo-discovery | 1.0.0 | candidate | standards/repo-discovery/ATC-STD-REPO-DISCOVERY-002.md |
-| ATC-STD-REPO-DISCOVERY-003 | Standard Candidate Detection | repo-discovery | 1.0.0 | candidate | standards/repo-discovery/ATC-STD-REPO-DISCOVERY-003.md |
-| ATC-STD-REPO-DISCOVERY-004 | Duplicate Detection | repo-discovery | 1.0.0 | candidate | standards/repo-discovery/ATC-STD-REPO-DISCOVERY-004.md |
-| ATC-STD-REPO-DISCOVERY-005 | Cross-Repository Discovery | repo-discovery | 1.0.0 | candidate | standards/repo-discovery/ATC-STD-REPO-DISCOVERY-005.md |
-| ATC-STD-REPO-DISCOVERY-006 | Impact Analysis | repo-discovery | 1.0.0 | candidate | standards/repo-discovery/ATC-STD-REPO-DISCOVERY-006.md |
-| ATC-STD-REPO-DISCOVERY-007 | Dependency Discovery | repo-discovery | 1.0.0 | candidate | standards/repo-discovery/ATC-STD-REPO-DISCOVERY-007.md |
-| ATC-STD-REPO-DISCOVERY-008 | Security-Relevant Content Detection | repo-discovery | 1.0.0 | candidate | standards/repo-discovery/ATC-STD-REPO-DISCOVERY-008.md |
-| ATC-STD-REPO-DISCOVERY-009 | Documentation Gap Detection | repo-discovery | 1.0.0 | candidate | standards/repo-discovery/ATC-STD-REPO-DISCOVERY-009.md |
-| ATC-STD-REPO-DISCOVERY-010 | Discovery Audit & Reporting | repo-discovery | 1.0.0 | candidate | standards/repo-discovery/ATC-STD-REPO-DISCOVERY-010.md |
-| ATC-STD-REPO-MAINT-001 | Repository Maintenance & Lifecycle Standard | repo-maint | 1.0.0 | candidate | standards/repo-maint/ATC-STD-REPO-MAINT-001.md |
+| ATC-STD-REPO-DISCOVERY-001 | Content Discovery | repo-discovery | 1.0.0 | approved | standards/repo-discovery/ATC-STD-REPO-DISCOVERY-001.md |
+| ATC-STD-REPO-DISCOVERY-002 | Change Detection | repo-discovery | 1.0.0 | approved | standards/repo-discovery/ATC-STD-REPO-DISCOVERY-002.md |
+| ATC-STD-REPO-DISCOVERY-003 | Standard Candidate Detection | repo-discovery | 1.0.0 | approved | standards/repo-discovery/ATC-STD-REPO-DISCOVERY-003.md |
+| ATC-STD-REPO-DISCOVERY-004 | Duplicate Detection | repo-discovery | 1.0.0 | approved | standards/repo-discovery/ATC-STD-REPO-DISCOVERY-004.md |
+| ATC-STD-REPO-DISCOVERY-005 | Cross-Repository Discovery | repo-discovery | 1.0.0 | approved | standards/repo-discovery/ATC-STD-REPO-DISCOVERY-005.md |
+| ATC-STD-REPO-DISCOVERY-006 | Impact Analysis | repo-discovery | 1.0.0 | approved | standards/repo-discovery/ATC-STD-REPO-DISCOVERY-006.md |
+| ATC-STD-REPO-DISCOVERY-007 | Dependency Discovery | repo-discovery | 1.0.0 | approved | standards/repo-discovery/ATC-STD-REPO-DISCOVERY-007.md |
+| ATC-STD-REPO-DISCOVERY-008 | Security-Relevant Content Detection | repo-discovery | 1.0.0 | approved | standards/repo-discovery/ATC-STD-REPO-DISCOVERY-008.md |
+| ATC-STD-REPO-DISCOVERY-009 | Documentation Gap Detection | repo-discovery | 1.0.0 | approved | standards/repo-discovery/ATC-STD-REPO-DISCOVERY-009.md |
+| ATC-STD-REPO-DISCOVERY-010 | Discovery Audit & Reporting | repo-discovery | 1.0.0 | approved | standards/repo-discovery/ATC-STD-REPO-DISCOVERY-010.md |
+| ATC-STD-REPO-MAINT-001 | Repository Maintenance & Lifecycle Standard | repo-maint | 1.0.0 | approved | standards/repo-maint/ATC-STD-REPO-MAINT-001.md |
 | ATC-STD-SC-001 | Smart Contract General Standard | sc | 1.0.0 | approved | standards/sc/ATC-STD-SC-001.md |
 | ATC-STD-SC-002 | Smart Contract Identity Standard | sc | 1.0.0 | approved | standards/sc/ATC-STD-SC-002.md |
 | ATC-STD-SC-003 | Smart Contract Security Standard | sc | 1.0.0 | approved | standards/sc/ATC-STD-SC-003.md |
@@ -568,8 +568,9 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 | ATC-STD-SC-020 | AI-Assisted Smart Contract Development Standard | sc | 1.0.0 | approved | standards/sc/ATC-STD-SC-020.md |
 | ATC-STD-STDDEV-001 | ATC Standards Development Standard — Verbindlicher Lebenszyklus für Standards: Erstellung im Hausformat, Review, §9-Freigabe, §30-Einfrierung, Wartung (MINOR/MAJOR), Review-Zyklen, Deprecation und Retirement | governance-core | 1.0.0 | approved | standards/governance-core/ATC-STD-STDDEV-001.md |
 | ATC-STD-TAXONOMY-001 | ATC Standards Taxonomy & Family Creation Standard — Meta-Governance: vierstufige Taxonomie (Domain→Familie→Kategorie→Standard), kontrollierte Familien-/Kategorie-Erstellung, Lifecycle, automatische ID-Vergabe, TAX-CHECK-001..018 | taxonomy | 1.0.0 | approved | standards/taxonomy/ATC-STD-TAXONOMY-001.md |
+| ATC-STD-TUD-001 | Technology Uniqueness & Differentiation Standard | governance | 1.0.0 | approved | standards/technology-uniqueness/ATC-STD-TUD-001.md |
 | ATC-STD-UPDATE-001 | ATC Update Standard — Change Control für Artefakt-Updates: Kategorien, Lifecycle, Impact/Dependency, Gates UPD-G01..G09, Rollback, Emergency, Manifeste, Review-Kadenzen | update | 1.0.0 | approved | standards/update/ATC-STD-UPDATE-001.md |
-| ATC-STD-V2S-000 | Vision-to-Software Lifecycle Master Standard | v2s | 1.0.0 | candidate | standards/v2s/ATC-STD-V2S-000.md |
+| ATC-STD-V2S-000 | Vision-to-Software Lifecycle Master Standard | v2s | 1.0.0 | approved | standards/v2s/ATC-STD-V2S-000.md |
 | ATC-STD-VERSION-001 | ATC Versioning Standard — einheitliche Versionierung von Software, Standards, APIs, Smart Contracts, Protokollen und Releases | version | 1.0.0 | approved | standards/version/ATC-STD-VERSION-001.md |
 | ATC-STD-ZKP-001 | ZKP Architecture Standard | zkp | 1.0.0 | approved | standards/zkp/ATC-STD-ZKP-001.md |
 | ATC-STD-ZKP-002 | Proof System Interface Standard | zkp | 1.0.0 | approved | standards/zkp/ATC-STD-ZKP-002.md |
@@ -584,7 +585,7 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 
 ## 5. Statusmodell (Registry-Lifecycle)
 
-Registry-Statusverteilung (Ist): {'approved': 400, 'candidate': 37, 'draft': 12}. Lifecycle der Standards-Entwicklung
+Registry-Statusverteilung (Ist): {'approved': 438, 'draft': 12}. Lifecycle der Standards-Entwicklung
 gemäß ATC-STD-STDDEV-001 / ATC-STD-TAXONOMY-001: Entwurf (Owner-Entwurf/SCR) →
 §9-Freigabe (Owner, Human-Gate) → APPROVED (normativ, §30-eingefroren) → ggf.
 DEPRECATED/RETIRED via Change-Control (ATC-STD-CHANGE-001). Protokolle folgen
@@ -627,7 +628,7 @@ die Kennung dieses generierten Dokuments.
 
 atc-standards/ · INDEX.md (generiert) · README.md · CHANGELOG.md · STATUS.md ·
 LICENSE (Apache-2.0) · AGENT_MANIFEST.md · AGENTS.md · governance/ (ATC-STD-000) ·
-standards/<kategorie>/ (Fachstandards, 449-Bestand) · registry/ (25
+standards/<kategorie>/ (Fachstandards, 450-Bestand) · registry/ (25
 SSOT-Dateien) · licenses/ (ATC-LICENSE-System) · schemas/ · tools/ (Generatoren +
 atc-std-validator) · approval/ (§9-Freigabe-Archiv) · change-requests/ (SCR-0001…) ·
 docs/ (Audits & Analysen) · templates/ · .github/workflows (Governance-CI, 2) +

@@ -40,6 +40,9 @@ versions:
     change: 'Owner-Sammelfreigabe 07.09.2026 20:05 UTC+2 (alle restlichen offenen Punkte): -> APPROVED,
       normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-ALL-REMAINING.md'
   ATC-STD-202:
+  - version: 1.2.0-Approval
+    date: '2026-09-11'
+    change: 'Owner-Sammelfreigabe 11.09.2026 (Chat-Freigabe): CANDIDATE -> APPROVED; dokumentiert in approval/APPROVAL-DECISION-2026-09-11.md'
   - version: 1.0.0
     date: '2026-09-07'
     change: Naming & Classification (AD-029/031)
@@ -7185,3 +7188,151 @@ versions:
     - {version: "1.0.0", date: "2026-09-10", change: "Initial Release APPROVED: Owner-Direktive 10.09. (SCR-0088) — Dependency & Supply Chain Security; §9-Freigabe via Owner-Direktive"}
   ATC-STD-020:
     - {version: "1.0.0", date: "2026-09-10", change: "Initial Release APPROVED: Owner-Direktive 10.09. (SCR-0088) — Security Incident & Vulnerability Response; §9-Freigabe via Owner-Direktive"}
+  ATC-STD-114:
+  - version: 1.0.0-Approval
+    date: '2026-09-11'
+    change: 'Owner-Sammelfreigabe 11.09.2026 (Chat-Freigabe): CANDIDATE -> APPROVED; dokumentiert in approval/APPROVAL-DECISION-2026-09-11.md'
+  ATC-STD-215:
+  - version: 1.0.0-Approval
+    date: '2026-09-11'
+    change: 'Owner-Sammelfreigabe 11.09.2026 (Chat-Freigabe): CANDIDATE -> APPROVED; dokumentiert in approval/APPROVAL-DECISION-2026-09-11.md'
+  ATC-STD-212:
+  - version: 1.0.0-Approval
+    date: '2026-09-11'
+    change: 'Owner-Sammelfreigabe 11.09.2026 (Chat-Freigabe): CANDIDATE -> APPROVED; dokumentiert in approval/APPROVAL-DECISION-2026-09-11.md'
+  ATC-STD-213:
+  - version: 1.0.0-Approval
+    date: '2026-09-11'
+    change: 'Owner-Sammelfreigabe 11.09.2026 (Chat-Freigabe): CANDIDATE -> APPROVED; dokumentiert in approval/APPROVAL-DECISION-2026-09-11.md'
+  ATC-STD-214:
+  - version: 1.0.0-Approval
+    date: '2026-09-11'
+    change: 'Owner-Sammelfreigabe 11.09.2026 (Chat-Freigabe): CANDIDATE -> APPROVED; dokumentiert in approval/APPROVAL-DECISION-2026-09-11.md'
+  ATC-STD-314:
+  - version: 1.0.0-Approval
+    date: '2026-09-11'
+    change: 'Owner-Sammelfreigabe 11.09.2026 (Chat-Freigabe): CANDIDATE -> APPROVED; dokumentiert in approval/APPROVAL-DECISION-2026-09-11.md'
+  ATC-STD-V2S-000:
+  - version: 1.0.0-Approval
+    date: '2026-09-11'
+    change: 'Owner-Sammelfreigabe 11.09.2026 (Chat-Freigabe): CANDIDATE -> APPROVED; dokumentiert in approval/APPROVAL-DECISION-2026-09-11.md'
+  ATC-STD-REPO-MAINT-001:
+  - version: 1.0.0-Approval
+    date: '2026-09-11'
+    change: 'Owner-Sammelfreigabe 11.09.2026 (Chat-Freigabe): CANDIDATE -> APPROVED; dokumentiert in approval/APPROVAL-DECISION-2026-09-11.md'
+  ATC-STD-IMPLEMENTATION-001:
+  - version: 1.0.0-Approval
+    date: '2026-09-11'
+    change: 'Owner-Sammelfreigabe 11.09.2026 (Chat-Freigabe): CANDIDATE -> APPROVED; dokumentiert in approval/APPROVAL-DECISION-2026-09-11.md'
+  ATC-STD-CI-001:
+  - version: 1.0.0-Approval
+    date: '2026-09-11'
+    change: 'Owner-Sammelfreigabe 11.09.2026 (Chat-Freigabe): CANDIDATE -> APPROVED; dokumentiert in approval/APPROVAL-DECISION-2026-09-11.md'
+  ATC-STD-TUD-001:
+  - version: 1.0.0-Approval
+    date: '2026-09-11'
+    change: 'Owner-Sammelfreigabe 11.09.2026 (Chat-Freigabe): CANDIDATE -> APPROVED; dokumentiert in approval/APPROVAL-DECISION-2026-09-11.md'
+  ATC-STD-ERR-000:
+  - version: 1.0.0-Approval
+    date: '2026-09-11'
+    change: 'Owner-Sammelfreigabe 11.09.2026 (Chat-Freigabe): CANDIDATE -> APPROVED; dokumentiert in approval/APPROVAL-DECISION-2026-09-11.md'
+  ATC-STD-ERR-001:
+  - version: 1.0.0-Approval
+    date: '2026-09-11'
+    change: 'Owner-Sammelfreigabe 11.09.2026 (Chat-Freigabe): CANDIDATE -> APPROVED; dokumentiert in approval/APPROVAL-DECISION-2026-09-11.md'
+  ATC-STD-ERR-002:
+  - version: 1.0.0-Approval
+    date: '2026-09-11'
+    change: 'Owner-Sammelfreigabe 11.09.2026 (Chat-Freigabe): CANDIDATE -> APPROVED; dokumentiert in approval/APPROVAL-DECISION-2026-09-11.md'
+  ATC-STD-ERR-003:
+  - version: 1.0.0-Approval
+    date: '2026-09-11'
+    change: 'Owner-Sammelfreigabe 11.09.2026 (Chat-Freigabe): CANDIDATE -> APPROVED; dokumentiert in approval/APPROVAL-DECISION-2026-09-11.md'
+  ATC-STD-ERR-004:
+  - version: 1.0.0-Approval
+    date: '2026-09-11'
+    change: 'Owner-Sammelfreigabe 11.09.2026 (Chat-Freigabe): CANDIDATE -> APPROVED; dokumentiert in approval/APPROVAL-DECISION-2026-09-11.md'
+  ATC-STD-ERR-005:
+  - version: 1.0.0-Approval
+    date: '2026-09-11'
+    change: 'Owner-Sammelfreigabe 11.09.2026 (Chat-Freigabe): CANDIDATE -> APPROVED; dokumentiert in approval/APPROVAL-DECISION-2026-09-11.md'
+  ATC-STD-ERR-006:
+  - version: 1.0.0-Approval
+    date: '2026-09-11'
+    change: 'Owner-Sammelfreigabe 11.09.2026 (Chat-Freigabe): CANDIDATE -> APPROVED; dokumentiert in approval/APPROVAL-DECISION-2026-09-11.md'
+  ATC-STD-ERR-007:
+  - version: 1.0.0-Approval
+    date: '2026-09-11'
+    change: 'Owner-Sammelfreigabe 11.09.2026 (Chat-Freigabe): CANDIDATE -> APPROVED; dokumentiert in approval/APPROVAL-DECISION-2026-09-11.md'
+  ATC-STD-ERR-008:
+  - version: 1.0.0-Approval
+    date: '2026-09-11'
+    change: 'Owner-Sammelfreigabe 11.09.2026 (Chat-Freigabe): CANDIDATE -> APPROVED; dokumentiert in approval/APPROVAL-DECISION-2026-09-11.md'
+  ATC-STD-ERR-009:
+  - version: 1.0.0-Approval
+    date: '2026-09-11'
+    change: 'Owner-Sammelfreigabe 11.09.2026 (Chat-Freigabe): CANDIDATE -> APPROVED; dokumentiert in approval/APPROVAL-DECISION-2026-09-11.md'
+  ATC-STD-ERR-010:
+  - version: 1.0.0-Approval
+    date: '2026-09-11'
+    change: 'Owner-Sammelfreigabe 11.09.2026 (Chat-Freigabe): CANDIDATE -> APPROVED; dokumentiert in approval/APPROVAL-DECISION-2026-09-11.md'
+  ATC-STD-ERR-011:
+  - version: 1.0.0-Approval
+    date: '2026-09-11'
+    change: 'Owner-Sammelfreigabe 11.09.2026 (Chat-Freigabe): CANDIDATE -> APPROVED; dokumentiert in approval/APPROVAL-DECISION-2026-09-11.md'
+  ATC-STD-ERR-012:
+  - version: 1.0.0-Approval
+    date: '2026-09-11'
+    change: 'Owner-Sammelfreigabe 11.09.2026 (Chat-Freigabe): CANDIDATE -> APPROVED; dokumentiert in approval/APPROVAL-DECISION-2026-09-11.md'
+  ATC-STD-ERR-013:
+  - version: 1.0.0-Approval
+    date: '2026-09-11'
+    change: 'Owner-Sammelfreigabe 11.09.2026 (Chat-Freigabe): CANDIDATE -> APPROVED; dokumentiert in approval/APPROVAL-DECISION-2026-09-11.md'
+  ATC-STD-ERR-014:
+  - version: 1.0.0-Approval
+    date: '2026-09-11'
+    change: 'Owner-Sammelfreigabe 11.09.2026 (Chat-Freigabe): CANDIDATE -> APPROVED; dokumentiert in approval/APPROVAL-DECISION-2026-09-11.md'
+  ATC-STD-ERR-015:
+  - version: 1.0.0-Approval
+    date: '2026-09-11'
+    change: 'Owner-Sammelfreigabe 11.09.2026 (Chat-Freigabe): CANDIDATE -> APPROVED; dokumentiert in approval/APPROVAL-DECISION-2026-09-11.md'
+  ATC-STD-REPO-DISCOVERY-001:
+  - version: 1.0.0-Approval
+    date: '2026-09-11'
+    change: 'Owner-Sammelfreigabe 11.09.2026 (Chat-Freigabe): CANDIDATE -> APPROVED; dokumentiert in approval/APPROVAL-DECISION-2026-09-11.md'
+  ATC-STD-REPO-DISCOVERY-002:
+  - version: 1.0.0-Approval
+    date: '2026-09-11'
+    change: 'Owner-Sammelfreigabe 11.09.2026 (Chat-Freigabe): CANDIDATE -> APPROVED; dokumentiert in approval/APPROVAL-DECISION-2026-09-11.md'
+  ATC-STD-REPO-DISCOVERY-003:
+  - version: 1.0.0-Approval
+    date: '2026-09-11'
+    change: 'Owner-Sammelfreigabe 11.09.2026 (Chat-Freigabe): CANDIDATE -> APPROVED; dokumentiert in approval/APPROVAL-DECISION-2026-09-11.md'
+  ATC-STD-REPO-DISCOVERY-004:
+  - version: 1.0.0-Approval
+    date: '2026-09-11'
+    change: 'Owner-Sammelfreigabe 11.09.2026 (Chat-Freigabe): CANDIDATE -> APPROVED; dokumentiert in approval/APPROVAL-DECISION-2026-09-11.md'
+  ATC-STD-REPO-DISCOVERY-005:
+  - version: 1.0.0-Approval
+    date: '2026-09-11'
+    change: 'Owner-Sammelfreigabe 11.09.2026 (Chat-Freigabe): CANDIDATE -> APPROVED; dokumentiert in approval/APPROVAL-DECISION-2026-09-11.md'
+  ATC-STD-REPO-DISCOVERY-006:
+  - version: 1.0.0-Approval
+    date: '2026-09-11'
+    change: 'Owner-Sammelfreigabe 11.09.2026 (Chat-Freigabe): CANDIDATE -> APPROVED; dokumentiert in approval/APPROVAL-DECISION-2026-09-11.md'
+  ATC-STD-REPO-DISCOVERY-007:
+  - version: 1.0.0-Approval
+    date: '2026-09-11'
+    change: 'Owner-Sammelfreigabe 11.09.2026 (Chat-Freigabe): CANDIDATE -> APPROVED; dokumentiert in approval/APPROVAL-DECISION-2026-09-11.md'
+  ATC-STD-REPO-DISCOVERY-008:
+  - version: 1.0.0-Approval
+    date: '2026-09-11'
+    change: 'Owner-Sammelfreigabe 11.09.2026 (Chat-Freigabe): CANDIDATE -> APPROVED; dokumentiert in approval/APPROVAL-DECISION-2026-09-11.md'
+  ATC-STD-REPO-DISCOVERY-009:
+  - version: 1.0.0-Approval
+    date: '2026-09-11'
+    change: 'Owner-Sammelfreigabe 11.09.2026 (Chat-Freigabe): CANDIDATE -> APPROVED; dokumentiert in approval/APPROVAL-DECISION-2026-09-11.md'
+  ATC-STD-REPO-DISCOVERY-010:
+  - version: 1.0.0-Approval
+    date: '2026-09-11'
+    change: 'Owner-Sammelfreigabe 11.09.2026 (Chat-Freigabe): CANDIDATE -> APPROVED; dokumentiert in approval/APPROVAL-DECISION-2026-09-11.md'

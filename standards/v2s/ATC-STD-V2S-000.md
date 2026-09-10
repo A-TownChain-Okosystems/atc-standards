@@ -3,7 +3,7 @@ standard:
   id: ATC-STD-V2S-000
   title: "Vision-to-Software Lifecycle Master Standard"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: v2s
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"

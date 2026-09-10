@@ -3,7 +3,7 @@ standard:
   id: ATC-STD-202
   title: "ATC-STD-202 — Repository Naming & Classification Standard"
   version: "1.2.0"
-  status: candidate
+  status: approved
   category: repository
   authority: A-TownChain Ecosystems
   owner: ShivaCoreDev
@@ -18,8 +18,8 @@ standard:
   applies_to: "Alle ATC-Repositories"
 ---
 
-# ATC-STD-202 — Repository Naming & Classification Standard (v1.2.0, CANDIDATE)
-> **Status:** CANDIDATE (v1.2.0) — Erweiterung der Klassifizierungstabelle auf 26 Repos (AUD-2026-0002/F-028, Issue #98); wartet auf §9-Freigabe. Bis dahin gilt v1.1.0 APPROVED| **Datum:** 07.09.2026 | **Autor:** Michael Wroblewski (Owner), Aurora (Superagent)
+# ATC-STD-202 — Repository Naming & Classification Standard (v1.2.0, APPROVED)
+> **Status:** APPROVED (v1.2.0) — §9-Sammelfreigabe 11.09.2026 (Owner-Chat), approval/APPROVAL-DECISION-2026-09-11.md | **Datum:** 07.09.2026 | **Autor:** Michael Wroblewski (Owner), Aurora (Superagent)
 > **Standard-ID:** ATC-STD-202 | **Scope:** GitHub-Organisation A-TownChain-Okosystems
 > **Referenzen:** AD-025 (Genesis Chronicles Umbenennung), AD-026 (Bauhierarchie L0-L7), AD-029 (Governance-Mandat), ATC-STD-201/-003
 > **Anwendungsregel:** VERBINDLICH — die Klassifizierungstabelle ist die normative Einordnung aller 26 aktiven Repos.

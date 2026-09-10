@@ -3,7 +3,7 @@ standard:
   id: ATC-STD-ERR-000
   title: "No Local Fix Without System Verification (Error Master)"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: err
   authority: A-TownChain Ecosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"

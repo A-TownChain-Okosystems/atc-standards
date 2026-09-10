@@ -3,7 +3,7 @@ standard:
   id: ATC-STD-IMPLEMENTATION-001
   title: "Standard Implementation Matrix"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: implementation
   authority: A-TownChain Ecosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"

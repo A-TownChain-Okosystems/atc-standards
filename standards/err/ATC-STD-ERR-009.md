@@ -3,7 +3,7 @@ standard:
   id: ATC-STD-ERR-009
   title: "Preventive Control"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: err
   authority: A-TownChain Ecosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"

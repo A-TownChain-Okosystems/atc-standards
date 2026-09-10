@@ -3,7 +3,7 @@ standard:
   id: ATC-STD-REPO-DISCOVERY-007
   title: "Dependency Discovery"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: repo-discovery
   authority: A-TownChain Ecosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"

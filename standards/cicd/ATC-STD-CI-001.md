@@ -3,7 +3,7 @@ standard:
   id: ATC-STD-CI-001
   title: "Reproducible CI Dependencies"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: cicd
   authority: A-TownChain Ecosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"

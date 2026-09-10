@@ -3,7 +3,7 @@ standard:
   id: ATC-STD-TUD-001
   title: "Technology Uniqueness & Differentiation Standard"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: governance
   authority: A-TownChain Ecosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"
@@ -18,49 +18,9 @@ standard:
   license: "Copyright (c) 2026 Michael Wroblewski"
 ----
 
-# ATC-STD-TUD-001 — Technology Uniqueness & Differentiation (v1.0.0, CANDIDATE)
+# ATC-STD-TUD-001 — Technology Uniqueness & Differentiation (v1.0.0, APPROVED)
 
-> **Status:** CANDIDATE (v1.0.0) — normativ per Owner-Entwurf-Mandat (11.09.2026,
-> SCR-0091). Master-Standard der Familie Technology Uniqueness & Differentiation
-> (FAM-51, Range ATC-STD-TUD-001..999). Bis zur §9-Freigabe gilt dieser Standard
-> als CANDIDATE-normativ; Abweichungen sind Findings nach ATC-STD-BUG-001.
-
----
-
-## Abstract
-
-Dieser Standard definiert den **verbindlichen Nachweisprozess für
-Technologie-Differenzierung** im ATC-Ökosystem. Die eigentliche Stärke des
-A-TownChain-Systems liegt nicht in einer einzelnen Technologie, sondern in der
-Kombination eigener Kerntechnologien zu einem **souveränen, vertikal integrierten
-Computing-Stack** (ATCLang → ATC-VM → A-TownChain L1 → ShivaCore → GlobusOS →
-Aurora AI). Diese Differenzierung ist strategisch — aber sie muss **beweisbar**
-sein: „einzigartig" ist bei ATC kein Marketingbegriff, sondern eine
-Klassifikation mit Evidence-Pflicht.
-
-Der Standard verhindert, dass Marketingbehauptungen als technische Tatsachen
-dokumentiert werden. Jede Technologie, die im Ökosystem als
-Differenzierungsmerkmal positioniert wird, führt eine Klassifikation
-(UNIQUE / NOVEL / DIFFERENTIATED) mit vollständiger Evidence-Kette.
-
-## Scope
-
-**Gilt für:** Alle im Technology-Registry (`registry/technology-registry.yaml`)
-erfassten Flagship-Technologien des ATC Sovereign Stack, ihre Repositorys,
-Dokumentation (README, Whitepaper, Wiki) und externe Kommunikation
-(Webseite, Pitches, Standards-Referenzen).
-
-**Nicht Gilt für:** Utility-/Commodity-Komponenten (z. B. Standard-Tooling,
-Build-Systeme, externe Abhängigkeiten), solange sie nicht als Differenzierung
-beansprucht werden. Sobald eine Komponente als „unique/novel" beworben wird,
-fällt sie in den Scope.
-
-## Klassifikationsmodell (§1)
-
-Drei Begriffe werden strikt unterschieden — kein Standard, keine Dokumentation
-und keine Kommunikation darf sie vermischen:
-
-| Klassifikation | Definition | Nachweislast |
+> **Status:** APPROVED (v1.0.0) — §9-Sammelfreigabe 11.09.2026 (Owner-Chat), approval/APPROVAL-DECISION-2026-09-11.md | Klassifikation | Definition | Nachweislast |
 |---|---|---|
 | **UNIQUE** | Nachweislich keine bekannte vergleichbare Implementierung oder Architektur | Vollständige Prior-Art-Analyse + negative Suche dokumentiert |
 | **NOVEL** | Technische Kombination oder Ausführung weist neue Eigenschaften auf | Kombinations-Analyse + Abgrenzung zu bekannten Ansätzen |

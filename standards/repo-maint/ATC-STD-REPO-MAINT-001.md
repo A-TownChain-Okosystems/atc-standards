@@ -3,7 +3,7 @@ standard:
   id: ATC-STD-REPO-MAINT-001
   title: "Repository Maintenance & Lifecycle Standard"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: repo-maint
   authority: A-TownChain Ecosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"

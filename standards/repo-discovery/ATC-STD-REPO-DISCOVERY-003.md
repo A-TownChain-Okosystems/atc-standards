@@ -3,7 +3,7 @@ standard:
   id: ATC-STD-REPO-DISCOVERY-003
   title: "Standard Candidate Detection"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: repo-discovery
   authority: A-TownChain Ecosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"
