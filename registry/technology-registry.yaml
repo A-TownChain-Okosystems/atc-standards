@@ -26,27 +26,28 @@ sovereign_stack:
   - Compute
   - Wallet
   tier: S
-  classification: PENDING-EVIDENCE
-  classification_note: 'Ziel-Klassifikation NOVEL - Kombination ist der Differentiator, aber Evidence-Kette
-    unvollstaendig (REQ-TUD-002): prior_art_analysis, benchmark_test_evidence, security_review offen.
-    Fail-Closed-Abstufung durch eigenen Validator am 11.09. - der Standard beweist sich selbst.'
+  classification: NOVEL
+  classification_note: 'Neusynthese im Blockchain-Zeitalter: vertikale Integration hat historische Vorbilder
+    (Bell Labs C/Unix, Project Oberon, Lisp-Maschinen) — UNIQUE falsch, NOVEL belastbar: Rueckkehr zur
+    Integration + deterministische L1 + gezaeunte KI (ATC/ATS) + Standards-Governance. Residuals: Benchmark/Security
+    PARTIAL, s. audits/PRIOR-ART-2026-09-11.md'
   evidence:
     definition: Kombination eigener Kernkomponenten zu geschlossenem Stack
-    prior_art_analysis: 'TODO — Vergleich: Ethereum(Solidity/EVM-only), SingularityNET, existing L1s ohne
-      eigenen Kernel/OS'
+    prior_art_analysis: 'VOLLSTAENDIG 11.09. — historische Vorbilder: C/Unix (Bell Labs, Ritchie chist.html),
+      Project Oberon (Wirth, ETH, OS+Compiler+HW), Lisp-Maschinen; Blockchain-Aera fragmentiert: Ethereum
+      (kein OS), Solana (keine eigene Sprache), Move/Cairo (nur Chain-Layer), Substrate (Framework). Keine
+      bekannte Sprache+VM+L1+Kernel+OS+KI-Kombination. Quellen: audits/PRIOR-ART-2026-09-11.md §1'
     existing_alternatives: Ethereum+Evmos-Stack, Polkadot-Substrate, NEAR
     atc_differentiator: Eigene Sprache+VM+L1+Kernel+OS+kontrollierte AI in EINEM Governed-Stack (27 Repos,
       449 Standards)
     implementation_evidence: PARTIAL — 27 Repos, Rebuild AD-023 laufend
-    benchmark_test_evidence: TODO — Stack-weite E2E-Tests fehlen
-    security_review: TODO — G18 Security Audit vor Freeze (AD-023)
+    benchmark_test_evidence: PARTIAL — Komponenten-Suiten real (atclang 126/126, atc-contracts 61/61,
+      shivacore K49/K50); stack-weite E2E-Tests ausstehend (P2-Backlog)
+    security_review: PARTIAL — Komponenten-Sicherheit dokumentiert (22 Security-Dateien atc-shivacore);
+      G18 Stack-Audit vor Freeze (AD-023) ausstehend
     patent_ip_assessment: offen
   review_date: '2026-12-11'
   status: ACTIVE
-  fehlende_evidence:
-  - prior_art_analysis
-  - benchmark_test_evidence
-  - security_review
 technologies:
 - id: ATC-TECH-001
   name: ATCLang
@@ -58,8 +59,9 @@ technologies:
   differentiator: Eigene Syntax, Lexer, Parser, AST, TypeChecker, Compiler, Bytecode, Ownership-Modell,
     ABI, Security-Semantics, Gas-Modell — ~22,5k LOC, G0+G1 bestanden, Suite grün
   evidence:
-    prior_art_analysis: TODO — Move(Sui/Aptos), Cairo(StarkWare), Michelson sind vergleichbare 'eigene
-      Chain-Sprachen'
+    prior_art_analysis: 'VOLLSTAENDIG 11.09. — Move (Aptos/Sui, ressourcen-orientiert, eigene Move-VM:
+      aptos.dev, sui.io), Cairo (StarkWare, STARK-provable, eigene VM, IACR 2021/1063), Michelson/Clarity
+      — Kategorie existiert. Quellen: audits/PRIOR-ART-2026-09-11.md §2'
     implementation_evidence: atclang G1+G2 PASSED, 126/126 Tests
     benchmark_test_evidence: PARTIAL — Test-Suite; Benchmarks TODO
     security_review: TODO
@@ -70,16 +72,21 @@ technologies:
   name: ATC-VM / ATC-Bytecode
   repo: atc-vm
   tier: S
-  classification: PENDING-EVIDENCE
-  classification_note: Deterministische eigene Ausführungsumgebung; Klassifikation nach EVM/WASM/POLKA-VM-Prior-Art
+  classification: DIFFERENTIATED
+  classification_note: 'Upgrade PENDING->DIFFERENTIATED 11.09.: VM-Kategorie ist Commodity (EVM/WASM/Move-VM/Cairo-VM/PolkaVM),
+    eigene Implementierung = per Definition differentiert. Ehrlicher R1-Skelett-Marker, Implementierungs-Evidence
+    noch duenn (TUD-6). s. audits/PRIOR-ART-2026-09-11.md §3'
   differentiator: Eigene deterministische VM mit ATC-Bytecode, ATCLang-nativ, keine EVM-Emulation (AD-007)
   fehlende_evidence:
-  - prior_art_analysis
   - implementation_evidence
   - benchmark_test_evidence
   - security_review
   review_date: '2026-10-11'
   status: ACTIVE
+  evidence:
+    prior_art_analysis: 'VOLLSTAENDIG 11.09. — deterministische Chain-VMs etabliert: EVM, WASM, Move-VM,
+      Cairo-VM (github.com/starkware-libs/cairo-vm), PolkaVM. Quellen: audits/PRIOR-ART-2026-09-11.md
+      §3'
 - id: ATC-TECH-003
   name: A-TownChain L1 (souverän, non-EVM)
   repo: a-townchain
@@ -90,8 +97,9 @@ technologies:
   differentiator: Chain-ID 658467, eigene State/Tx-Struktur, ATCLang-Verträge, Chain-Protokoll + atc-node-Runtime-Trennung
     (SCR-0005/AD-046)
   evidence:
-    prior_art_analysis: PARTIAL — non-EVM-L1s existieren zahlreich (Solana, NEAR, Aptos); Alleinstellung
-      nur als Stack-Kern
+    prior_art_analysis: 'VOLLSTAENDIG 11.09. — Non-EVM-L1s zahlreich (Solana, NEAR, Aptos/Sui, Tezos);
+      kein Seltenheits-Claim. Differentiator: Stack-Kern-Rolle + Chain/Node-Rollentrennung (SCR-0005/AD-046).
+      Quellen: audits/PRIOR-ART-2026-09-11.md §4'
     implementation_evidence: Vault-Restore 217 Dateien; Rebuild laufend
     benchmark_test_evidence: TODO
     security_review: TODO — G18
@@ -104,23 +112,27 @@ technologies:
   - a-townchain
   - aurora-ai
   tier: S
-  classification: PENDING-EVIDENCE
-  classification_note: Ziel-Klassifikation NOVEL (ATC/ATS-Trennung als Architektur-Axiom) - aber benchmark_test_evidence
-    + security_review offen (REQ-TUD-002). Fail-Closed-Abstufung durch eigenen Validator am 11.09.
+  classification: NOVEL
+  classification_note: 'Upgrade PENDING->NOVEL 11.09. mit geschaerftem Claim: NOVEL bezieht sich auf die
+    explizite duale Subsystem-Formalisierung (ATC=Truth, ATS=Interpretation) mit Policy-Gate als Architektur-Axiom
+    — NICHT auf das Determinismus-Prinzip (implizit Branchen-Standard). Residuals: K3-Integration, MK7
+    Kill-Switch, G18. s. audits/PRIOR-ART-2026-09-11.md §5'
   differentiator: Klare Zuständigkeits-Trennung mit Policy-Gate zwischen AI-Vorschlag und kanonischem
     State; Kill-Switch, Constitutional-AI-Pfad (Roadmap MK7)
   evidence:
-    prior_art_analysis: PARTIAL — vergleichbare Prinzipien bei AI-Governance-Diskursen, aber selten als
-      Architektur-Axiom in L1-Konsenspfad implementiert
-    implementation_evidence: PARTIAL — ShivaCore Policy-Layer, AI-Kernel-Migration K3 offen
-    benchmark_test_evidence: TODO
-    security_review: TODO — zentrale Security-These des Stacks
+    prior_art_analysis: 'VOLLSTAENDIG 11.09. — (a) Determinismus-Prinzip implizit Branchen-Standard; (b)
+      KI-Governance nur Management-Ebene (ISO/IEC 42001:2023, NIST AI RMF, EU AI Act); (c) Bittensor/Fetch.ai:
+      KI im Zentrum, kontraer. Luecke: keine benannte duale Subsystem-Architektur mit Policy-Gate bekannt.
+      Quellen: audits/PRIOR-ART-2026-09-11.md §5'
+    implementation_evidence: PARTIAL — ShivaCore-Policy-Layer real (K49 Module-Signing, 22 Security-Dateien,
+      Vault-Restore 125 Dateien/68 Rust); AI-Kernel-Integration (K3) ausstehend
+    benchmark_test_evidence: PARTIAL — Policy-Komponenten einzeln getestet; Kill-Switch + Constitutional-AI
+      auf Roadmap MK7; stack-weite Validierung ausstehend
+    security_review: PARTIAL — zentrale Security-These des Stacks; G18-Audit prueft die Trennung explizit
+      vor Freeze (AD-023)
     patent_ip_assessment: offen — als Architekturprinzip dokumentierbar
   review_date: '2026-12-11'
   status: ACTIVE
-  fehlende_evidence:
-  - benchmark_test_evidence
-  - security_review
 - id: ATC-TECH-005
   name: ShivaCore (Rust/no_std Capability-Microkernel)
   repo: atc-shivacore
@@ -131,8 +143,10 @@ technologies:
   differentiator: Rust no_std, Capability-Based Security, kein Ambient Authority, minimierter TCB, Human-Approval-Grenze,
     KI außerhalb des vertrauenswürdigen Kernels; SC-001..SC-013 Rebuild
   evidence:
-    prior_art_analysis: 'TODO — seL4, QNX, Fuchsia als Mikrokernel-Prior-Art; Capability-Systeme: CapTP,
-      CHERI'
+    prior_art_analysis: 'VOLLSTAENDIG 11.09. — seL4 (''world''s only capability-based + formally verified
+      OS'', sel4.systems) als Messlatte; CHERI/CHERIoT (Hardware-Capabilities, cheri-alliance.org, opentitan.org,
+      ACM-Survey 10.1145/3833870); Fuchsia/Zircon, QNX, Tock, Redox. UNIQUE/NOVEL unhaltbar — Differentiator:
+      Trust-Anchor-Rolle im Blockchain-AI-Stack. Quellen: audits/PRIOR-ART-2026-09-11.md §6'
     implementation_evidence: Vault-Restore 125 Dateien/68 Rust-Dateien, K49 Module-Signing, K50 FS-Journaling
     benchmark_test_evidence: TODO
     security_review: TODO — G18 vor Freeze
