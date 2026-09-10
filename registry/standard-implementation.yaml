@@ -11,7 +11,7 @@ generated_from: registry/standards.yaml
 updated: "2026-09-08"
 coverage_kpi:
   registry_total: 431
-  matrix_entries: 432
+  matrix_entries: 449
   matrix_coverage: "100%"
   enforced_target: "je Wartungszyklus steigend (REQ-IMP-007)"
   hinweis: "Wertigkeit der 21 SCR-0045-Detail-Eintraege bleibt; Familien-Evidence konsolidiert"
@@ -3589,4 +3589,140 @@ standards:
     implementation:
       status: reference
       evidence: "Legacy-Serie (atc/): durch ATC-STD-000ff superseded; historische Referenz konserviert"
+    independence: L1
+
+  - standard: ATC-STD-IMPROVEMENT-001
+    version: "1.0.0"
+    applicability: REFERENCE
+    implementation:
+      status: reference
+      evidence: "Legacy-Serie (atc/): durch ATC-STD-000ff superseded; historische Referenz konserviert"
+    independence: L1
+
+  - standard: ATC-AI-GOV-AGENTS-001
+    version: "1.0.0"
+    applicability: REFERENCE
+    implementation:
+      status: reference
+      evidence: "Legacy-Serie (atc/): durch ATC-STD-000ff superseded; historische Referenz konserviert"
+    independence: L1
+
+  - standard: ATC-AI-GOV-MANIFEST-001
+    version: "1.0.0"
+    applicability: REFERENCE
+    implementation:
+      status: reference
+      evidence: "Legacy-Serie (atc/): durch ATC-STD-000ff superseded; historische Referenz konserviert"
+    independence: L1
+
+  - standard: ATC-AI-GOV-POLICY-001
+    version: "1.0.0"
+    applicability: REFERENCE
+    implementation:
+      status: reference
+      evidence: "Legacy-Serie (atc/): durch ATC-STD-000ff superseded; historische Referenz konserviert"
+    independence: L1
+
+  - standard: ATC-AI-GOV-CHECK-001
+    version: "1.0.0"
+    applicability: REFERENCE
+    implementation:
+      status: reference
+      evidence: "Legacy-Serie (atc/): durch ATC-STD-000ff superseded; historische Referenz konserviert"
+    independence: L1
+
+  - standard: ATC-AI-GOV-AUDIT-001
+    version: "1.0.0"
+    applicability: REFERENCE
+    implementation:
+      status: reference
+      evidence: "Legacy-Serie (atc/): durch ATC-STD-000ff superseded; historische Referenz konserviert"
+    independence: L1
+
+  - standard: ATC-AI-GOV-HANDOFF-001
+    version: "1.0.0"
+    applicability: REFERENCE
+    implementation:
+      status: reference
+      evidence: "Legacy-Serie (atc/): durch ATC-STD-000ff superseded; historische Referenz konserviert"
+    independence: L1
+
+  - standard: ATC-AI-GOV-INCIDENT-001
+    version: "1.0.0"
+    applicability: REFERENCE
+    implementation:
+      status: reference
+      evidence: "Legacy-Serie (atc/): durch ATC-STD-000ff superseded; historische Referenz konserviert"
+    independence: L1
+
+  - standard: ATC-AI-GOV-CHANGE-001
+    version: "1.0.0"
+    applicability: REFERENCE
+    implementation:
+      status: reference
+      evidence: "Legacy-Serie (atc/): durch ATC-STD-000ff superseded; historische Referenz konserviert"
+    independence: L1
+
+  - standard: ATC-AI-GOV-001
+    version: "1.0.0"
+    applicability: REFERENCE
+    implementation:
+      status: reference
+      evidence: "Legacy-Serie (atc/): durch ATC-STD-000ff superseded; historische Referenz konserviert"
+    independence: L1
+
+  - standard: ATC-AI-GOV-CAPABILITY-001
+    version: "1.0.0"
+    applicability: REFERENCE
+    implementation:
+      status: reference
+      evidence: "Legacy-Serie (atc/): durch ATC-STD-000ff superseded; historische Referenz konserviert"
+    independence: L1
+
+  - standard: ATC-AI-GOV-FINDING-001
+    version: "1.0.0"
+    applicability: REFERENCE
+    implementation:
+      status: reference
+      evidence: "Legacy-Serie (atc/): durch ATC-STD-000ff superseded; historische Referenz konserviert"
+    independence: L1
+
+  - standard: ATC-STD-016
+    version: "1.0.0"
+    applicability: CONDITIONAL
+    implementation:
+      status: specification_only
+      evidence: "Enterprise-Module ohne aktive Ziel-Repos im 26er-Stand; AD-047-Disposition fuer verwaiste Module gilt"
+    independence: L1
+
+  - standard: ATC-STD-017
+    version: "1.0.0"
+    applicability: CONDITIONAL
+    implementation:
+      status: specification_only
+      evidence: "Enterprise-Module ohne aktive Ziel-Repos im 26er-Stand; AD-047-Disposition fuer verwaiste Module gilt"
+    independence: L1
+
+  - standard: ATC-STD-018
+    version: "1.0.0"
+    applicability: CONDITIONAL
+    implementation:
+      status: specification_only
+      evidence: "Enterprise-Module ohne aktive Ziel-Repos im 26er-Stand; AD-047-Disposition fuer verwaiste Module gilt"
+    independence: L1
+
+  - standard: ATC-STD-019
+    version: "1.0.0"
+    applicability: CONDITIONAL
+    implementation:
+      status: specification_only
+      evidence: "Enterprise-Module ohne aktive Ziel-Repos im 26er-Stand; AD-047-Disposition fuer verwaiste Module gilt"
+    independence: L1
+
+  - standard: ATC-STD-020
+    version: "1.0.0"
+    applicability: CONDITIONAL
+    implementation:
+      status: specification_only
+      evidence: "Enterprise-Module ohne aktive Ziel-Repos im 26er-Stand; AD-047-Disposition fuer verwaiste Module gilt"
     independence: L1

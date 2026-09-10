@@ -11,7 +11,7 @@
 | Standard-Dateien (`standards/`) | **448** |
 | Familien | **50** |
 | Registry SHA-256 | `9b25d16136fe3fbc…` (vollständig: `registry/registry.lock`) |
-| Stand | 2026-09-10 15:54 UTC+2 |
+| Stand | 2026-09-10 22:43 UTC+2 |
 
 Implementierungs-Matrix: [`registry/standard-implementation.yaml`](registry/standard-implementation.yaml) (ATC-STD-IMPLEMENTATION-001).
 
@@ -24,14 +24,14 @@ Implementierungs-Matrix: [`registry/standard-implementation.yaml`](registry/stan
 ## Status
 
 **Status:** `release-candidate` — Governance technisch weit fortgeschritten
-(externes Audit 08.09.: B/AMBER, SCR-0052). 444 Standards normativ definiert;
+(externes Audit 08.09.: B/AMBER, SCR-0052). 449 Standards normativ definiert;
 191 nachweisbar umgesetzt/enforced; 240 specification-only.
 
 ## Purpose
 
 ATC Standards is the canonical normative governance layer of the A-TownChain ecosystem. It maintains:
 
-- **Registry:** SSOT für alle 444 Standards mit Versionierung, Dependencies (DAG) und Findings
+- **Registry:** SSOT für alle 449 Standards mit Versionierung, Dependencies (DAG) und Findings
 - **Verfassung:** ATC-STD-000 v1.2.0 (ID-System, Lifecycle, Change Control, Immutabilität)
 - **Validator-Suite:** atc-std-validator, atc-repo-audit (R3), atc-readme-validator
 - **Governance Framework:** 50 Familien, Enterprise-Ebenen (ATC-ENT-001..015), AI-Standards (ATC-AAS-001..025)
@@ -44,8 +44,8 @@ All 26 organizational repositories follow these standards (Registry-First princi
 
 Governance-Root der A-TownChain-Organisation: Registry, Standards,
 Schemata, Validatoren, Audits und Change-Requests. In Scope: normative
-Standards (443 Dateien, 50 Familien) und ihre Metadaten/Validierung.
-Out of Scope: Implementierung der Standards (liegt in den 26 Repos und
+Standards (448 Dateien, 50 Familien) und ihre Metadaten/Validierung.
+Out of Scope: Implementierung der Standards (liegt in den 27 governed Repos und
 deren CI-Gates; Nachweis via Implementierungs-Matrix).
 
 ## Features
