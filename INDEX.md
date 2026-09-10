@@ -6,7 +6,7 @@ document:
   status: GENERATED
   normative: false
   owner: "A-TownChain Okosystems (Michael Wroblewski)"
-  generated: "2026-09-08"
+  generated: "2026-09-10"
   generator: "tools/index/gen_index.py (SCR-0038)"
   sources: "registry/standards.yaml + registry/framework.yaml + registry/categories.yaml + registry/taxonomy.yaml + registry/versions.yaml + registry/protocol-registry.yaml + registry/findings.yaml"
   license: "Copyright (c) 2026 Michael Wroblewski"
@@ -16,7 +16,7 @@ document:
 
 > **Nicht-normativ · generiert.** Diese Datei ist der zentrale Einstiegspunkt in
 > das ATC-Standards-System — sie enthält KEINE eigenen Fachwahrheiten. Sie wird
-> vollständig aus den SSOT-Registern generiert (2026-09-08, SCR-0038); manuelle
+> vollständig aus den SSOT-Registern generiert (2026-09-10, SCR-0038); manuelle
 > Änderungen sind verboten (Regeneration: `python3 tools/index/gen_index.py`).
 > **SSOT-Kaskade bei Konflikten:** Governance (ATC-STD-000) → Standard →
 > Registry → INDEX → Implementierung.
@@ -39,6 +39,7 @@ eines Standards liegt ausschließlich in seiner Standarddatei; die Registry
 | registry/dependencies.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
 | registry/findings.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
 | registry/framework.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
+| registry/improvements.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
 | registry/interfaces.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
 | registry/lifecycle.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
 | registry/milestones.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
@@ -57,18 +58,18 @@ eines Standards liegt ausschließlich in seiner Standarddatei; die Registry
 | registry/teams.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
 | registry/versions.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
 
-Kernregister: **standards.yaml** (Bestand, 431 Standards) · **versions.yaml**
-(Versionierung je Standard) · **framework.yaml** (Katalog: 49 Familien,
-471 Slots) · **categories.yaml**
+Kernregister: **standards.yaml** (Bestand, 446 Standards) · **versions.yaml**
+(Versionierung je Standard) · **framework.yaml** (Katalog: 50 Familien,
+474 Slots) · **categories.yaml**
 (Kategorien) · **taxonomy.yaml** (Domain/Familie/Kategorie) · **protocol-registry.yaml**
 (26 Protokollfamilien, Status {'draft': 10, 'planned': 16}) ·
-**findings.yaml** (Findings: 16 OPEN / 32 RESOLVED von 48).
+**findings.yaml** (Findings: 52 OPEN / 64 RESOLVED von 116).
 
-## 3. Standardfamilien (Katalog, 49 Familien)
+## 3. Standardfamilien (Katalog, 50 Familien)
 
 | FAM | Familie | Slots | BELEGT | VERWEIST |
 |---|---|---|---|---|
-| FAM-01 | Enterprise & Governance | 15 | 6 | 9 |
+| FAM-01 | Enterprise & Governance | 17 | 8 | 9 |
 | FAM-02 | Standards-Governance | 14 | 2 | 12 |
 | FAM-03 | Repository Standards | 15 | 7 | 8 |
 | FAM-04 | Dokumentationsstandards | 16 | 8 | 8 |
@@ -117,12 +118,13 @@ Kernregister: **standards.yaml** (Bestand, 431 Standards) · **versions.yaml**
 | FAM-47 | Error Propagation & Prevention (ERR) | 16 | 16 | 0 |
 | FAM-48 | Implementation Tracking (IMPLEMENTATION) | 1 | 1 | 0 |
 | FAM-49 | Repository Content Discovery (REPO-DISCOVERY) | 10 | 10 | 0 |
+| FAM-50 | CI/CD-Standards (CICD) | 1 | 1 | 0 |
 
-Statusverteilung der 431 Registry-Standards: {'approved': 395, 'candidate': 36}.
-Alle 431 sind APPROVED und normativ (§30-eingefroren); Details je Standard
+Statusverteilung der 446 Registry-Standards: {'approved': 397, 'candidate': 37, 'draft': 12}.
+Alle 446 sind APPROVED und normativ (§30-eingefroren); Details je Standard
 in registry/standards.yaml und registry/versions.yaml.
 
-## 4. Master-Registry-Tabelle (431 Standards)
+## 4. Master-Registry-Tabelle (446 Standards)
 
 Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 
@@ -153,6 +155,17 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 | ATC-AAS-023 | Agent Role Standard (P2) | aas | 1.0.0 | approved | standards/aas/ATC-AAS-023.md |
 | ATC-AAS-024 | Agent-to-Agent Protocol Standard (P1) | aas | 1.0.0 | approved | standards/aas/ATC-AAS-024.md |
 | ATC-AAS-025 | Agent Repository Manifest Standard (P1) | aas | 1.0.0 | approved | standards/aas/ATC-AAS-025.md |
+| ATC-AI-GOV-001 | ATC Agent Governance Framework v1.0 — Produktionsarchitektur (18-stufige Governance-Kette, 4 Kontrollprinzipien: Fail Closed / Evidence First / Persistent Findings / No Self-Certification, Severity-Modell mit Repository-Status-Berechnung, Zuständigkeits-Trennung, 7-Phasen-Roadmap) | ai-gov | 1.0.0 | draft | standards/ai-gov/ATC-AI-GOV-001.md |
+| ATC-AI-GOV-AGENTS-001 | ATC Agent Governance — Organisationsweite Arbeitsregeln (Discovery, Hierarchie, Registry-Binding, Session-Mandat, Readiness) | ai-gov | 1.0.0 | draft | standards/ai-gov/ATC-AI-GOV-AGENTS-001.md |
+| ATC-AI-GOV-AUDIT-001 | ATC Agent Governance — Auditverfahren (AGOV-FULL/DELTA/GATE, Snapshot, Readiness, Post-Change-Audit) | ai-gov | 1.0.0 | draft | standards/ai-gov/ATC-AI-GOV-AUDIT-001.md |
+| ATC-AI-GOV-CAPABILITY-001 | ATC Agent Governance — Capability & Authorization Model (explizite Berechtigungen, Autorisierungskette, Owner-Gates fuer P0-Capabilities, Entzug/Suspendierung) | ai-gov | 1.0.0 | draft | standards/ai-gov/ATC-AI-GOV-CAPABILITY-001.md |
+| ATC-AI-GOV-CHANGE-001 | ATC Agent Governance — Governance Change Management (SCR-Pflicht, SemVer, Vorher/Nachher, Rollback) | ai-gov | 1.0.0 | draft | standards/ai-gov/ATC-AI-GOV-CHANGE-001.md |
+| ATC-AI-GOV-CHECK-001 | ATC Agent Governance — Automatisierte Compliance Checks (AGOV-CHECK-001..020 versioniert, PASS/FAIL/WARN/N/A) | ai-gov | 1.0.0 | draft | standards/ai-gov/ATC-AI-GOV-CHECK-001.md |
+| ATC-AI-GOV-FINDING-001 | ATC Agent Governance — Persistent Findings (ATC-FINDING-YYYY-NNNNNN, Lifecycle bis VERIFIED, Verifikations-Wahrheit, deterministische Repository-Status-Aggregation, Registry-Kopplung registry_ref) | ai-gov | 1.0.0 | draft | standards/ai-gov/ATC-AI-GOV-FINDING-001.md |
+| ATC-AI-GOV-HANDOFF-001 | ATC Agent Governance — Agent-to-Agent Übergabe (10 Pflichtfelder, Kontinuität, Auditierbarkeit) | ai-gov | 1.0.0 | draft | standards/ai-gov/ATC-AI-GOV-HANDOFF-001.md |
+| ATC-AI-GOV-INCIDENT-001 | ATC Agent Governance — Incident & Fehlerbehandlung (6 Klassen, Lifecycle, RCA-Pflicht, Postmortem) | ai-gov | 1.0.0 | draft | standards/ai-gov/ATC-AI-GOV-INCIDENT-001.md |
+| ATC-AI-GOV-MANIFEST-001 | ATC Agent Governance — Agent Identity & Scope (Manifest, Registry, Capabilities, Status-Modell) | ai-gov | 1.0.0 | draft | standards/ai-gov/ATC-AI-GOV-MANIFEST-001.md |
+| ATC-AI-GOV-POLICY-001 | ATC Agent Governance — Maschinenlesbare Policies (ATC-POL-001..010, MUST/SHOULD/MAY, Verdikt-Modell) | ai-gov | 1.0.0 | draft | standards/ai-gov/ATC-AI-GOV-POLICY-001.md |
 | ATC-ENT-001 | Enterprise Governance Standard (P0) | enterprise | 1.0.0 | approved | standards/enterprise/ATC-ENT-001.md |
 | ATC-ENT-002 | Rollen & Verantwortlichkeiten Standard (P0) | enterprise | 1.0.0 | approved | standards/enterprise/ATC-ENT-002.md |
 | ATC-ENT-003 | Entscheidungsmanagement Standard (P0) | enterprise | 1.0.0 | approved | standards/enterprise/ATC-ENT-003.md |
@@ -175,6 +188,8 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 | ATC-STD-012 | Incident Governance Standard | enterprise | 1.2.0 | approved | standards/enterprise/ATC-STD-012.md |
 | ATC-STD-013 | Escalation Standard | enterprise | 1.2.0 | approved | standards/enterprise/ATC-STD-013.md |
 | ATC-STD-015 | Records Management Standard | enterprise | 1.2.0 | approved | standards/enterprise/ATC-STD-015.md |
+| ATC-STD-016 | Repository Artifact & File Inventory Standard (generiertes Inventar-SSOT, Manifest-Schema, Generator-Pflicht, Drift-Check) | enterprise | 1.0.0 | approved | standards/enterprise/ATC-STD-016.md |
+| ATC-STD-017 | Obsolete & Orphaned Artifact Management Standard (9 Klassen, Entscheidungslogik, Mindestzuordnung, duale Verwaist-Bestimmung, 6-Kriterien-Loeschschutz, CI-Gate 2 Stufen, Audit-Signal-Nicht-Loeschkriterium) | enterprise | 1.0.0 | approved | standards/enterprise/ATC-STD-017.md |
 | ATC-STD-025 | Standards Review Standard | governance | 1.2.0 | approved | standards/governance/ATC-STD-025.md |
 | ATC-STD-027 | Standards Deprecation Standard | governance | 1.2.0 | approved | standards/governance/ATC-STD-027.md |
 | ATC-STD-040 | Repository Architecture Standard | repository | 1.2.0 | approved | standards/repository/ATC-STD-040.md |
@@ -466,6 +481,7 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 | ATC-STD-BUG-004 | Repository Synchronization & Merge Gate | bug | 1.0.0 | approved | standards/bug/ATC-STD-BUG-004.md |
 | ATC-STD-BUG-005 | Fehleranalyse- und Root-Cause-Analysis-Standard — Analyse- und QMS-Schicht der Bug-Familie: 4-Ebenen-RCA, Fault Tree, Evidence, Timeline, Impact, Metrics, Closure Gate, Corrective/Preventive | bug | 1.0.0 | approved | standards/bug/ATC-STD-BUG-005.md |
 | ATC-STD-CHANGE-001 | ATC Change Control Dachnorm — Eine Änderung, ein Kanal, eine Gate-Landkarte: konsolidierte Zuordnung von ATC-STD-000 §19–33 (SCR), VERSION-001, UPDATE-001 und COMPAT-001 zur verbindlichen Entscheidungsmatrix mit RACI, Notfallpfad und den 13 Change-Nachweis-Fragen als Prüfraster | governance-core | 1.0.1 | approved | standards/governance-core/ATC-STD-CHANGE-001.md |
+| ATC-STD-CI-001 | Reproducible CI Dependencies — Deklaration, Installation, Reproduzierbarkeit, Fresh-Runner-Faehigkeit und Fehlerklassifikation von CI-Dependencies | cicd | 1.0.0 | candidate | standards/cicd/ATC-STD-CI-001.md |
 | ATC-STD-COMPAT-001 | ATC Major Version Compatibility & Recovery Standard — Verbindliche Kompatibilitätsprüfung, -Wiederherstellung und -Migration nach MAJOR-Updates | compat | 1.0.0 | approved | standards/compat/ATC-STD-COMPAT-001.md |
 | ATC-STD-DESC-001 | Standard Description Standard — Standard zur Beschreibung von Standards | desc | 1.0.0 | approved | standards/desc/ATC-STD-DESC-001.md |
 | ATC-STD-ERR-000 | No Local Fix Without System Verification (Error Master) | err | 1.0.0 | candidate | standards/err/ATC-STD-ERR-000.md |
@@ -486,6 +502,7 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 | ATC-STD-ERR-015 | Error Prevention Gate | err | 1.0.0 | candidate | standards/err/ATC-STD-ERR-015.md |
 | ATC-STD-FRAMEWORK-001 | ATC Enterprise Standards Framework — Master-Dokument (ATC-STANDARDS-MASTER): Zusammenführung aller Standards, Katalog, Kollisionsauflösung, einheitliche Status-/Change-/Traceability-Modelle, Register-Architektur | framework | 1.0.7 | approved | standards/framework/ATC-STD-FRAMEWORK-001.md |
 | ATC-STD-IMPLEMENTATION-001 | Standard Implementation Matrix | implementation | 1.0.0 | candidate | standards/implementation/ATC-STD-IMPLEMENTATION-001.md |
+| ATC-STD-IMPROVEMENT-001 | ATC Improvement Standard — Systemverbesserungsstandard: Continuous Improvement Management System (Zyklus, 14 Quellen, 10 Klassen, ATC-IMP-Board, Root-Cause, Regression Prevention, Automatisierungsleiter, DoD, org-weite Anwendung) | improvement | 1.0.0 | draft | standards/improvement/ATC-STD-IMPROVEMENT-001.md |
 | ATC-STD-LICENSE-001 | License Governance Standard | license | 1.0.0 | approved | standards/license/ATC-STD-LICENSE-001.md |
 | ATC-STD-LICENSE-002 | License Specification Standard | license | 1.0.0 | approved | standards/license/ATC-STD-LICENSE-002.md |
 | ATC-STD-LICENSE-003 | License Registry Standard | license | 1.0.0 | approved | standards/license/ATC-STD-LICENSE-003.md |
@@ -562,7 +579,7 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 
 ## 5. Statusmodell (Registry-Lifecycle)
 
-Registry-Statusverteilung (Ist): {'approved': 395, 'candidate': 36}. Lifecycle der Standards-Entwicklung
+Registry-Statusverteilung (Ist): {'approved': 397, 'candidate': 37, 'draft': 12}. Lifecycle der Standards-Entwicklung
 gemäß ATC-STD-STDDEV-001 / ATC-STD-TAXONOMY-001: Entwurf (Owner-Entwurf/SCR) →
 §9-Freigabe (Owner, Human-Gate) → APPROVED (normativ, §30-eingefroren) → ggf.
 DEPRECATED/RETIRED via Change-Control (ATC-STD-CHANGE-001). Protokolle folgen
@@ -576,7 +593,7 @@ Klassifikation (ATC-STD-REPO-AUDIT-001/002).
 
 ## 7. Offene Punkte (Auszug — Details: STATUS.md)
 
-- Findings OPEN: 16 (aktuelle Liste: registry/findings.yaml)
+- Findings OPEN: 52 (aktuelle Liste: registry/findings.yaml)
 - Org-Audit-Ableitungen: Issues #94–98 (a-townchain-os) — CI 23/26, CodeQL,
   Versions-Baseline, verwaister Tag, ATC-STD-202-Klassifizierung
 - ATC-LICENSE: 5 Lizenztypen PLANNED (SOURCE, COMMERCIAL, PROPRIETARY, DATA,
@@ -605,10 +622,10 @@ die Kennung dieses generierten Dokuments.
 
 atc-standards/ · INDEX.md (generiert) · README.md · CHANGELOG.md · STATUS.md ·
 LICENSE (Apache-2.0) · AGENT_MANIFEST.md · AGENTS.md · governance/ (ATC-STD-000) ·
-standards/<kategorie>/ (Fachstandards, 431-Bestand) · registry/ (23
+standards/<kategorie>/ (Fachstandards, 446-Bestand) · registry/ (24
 SSOT-Dateien) · licenses/ (ATC-LICENSE-System) · schemas/ · tools/ (Generatoren +
 atc-std-validator) · approval/ (§9-Freigabe-Archiv) · change-requests/ (SCR-0001…) ·
 docs/ (Audits & Analysen) · templates/ · .github/workflows (Governance-CI, 2) +
 ai/agent.yaml (Agenten-Bindung).
 
-*ATC-STD-INDEX-001 v1.0.0 · generiert 2026-09-08 · tools/index/gen_index.py · SCR-0038 · Aurora (Superagent)*
+*ATC-STD-INDEX-001 v1.0.0 · generiert 2026-09-10 · tools/index/gen_index.py · SCR-0038 · Aurora (Superagent)*

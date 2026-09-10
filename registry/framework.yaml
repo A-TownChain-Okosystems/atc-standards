@@ -17,7 +17,7 @@ framework:
   families:
   - id: FAM-01
     name: Enterprise & Governance
-    range: ATC-STD-001..015
+    range: ATC-STD-001..017
     note: null
     family_refs: null
     slots:
@@ -125,6 +125,18 @@ framework:
       refs:
       - ATC-STD-015
       note: Fertigbau v1.2.0 via SCR-0030/0031/0034
+    - id: ATC-STD-016
+      title: Repository Artifact & File Inventory Standard
+      status: BELEGT
+      refs:
+      - ATC-STD-016
+      note: Owner-Direktive 10.09. via SCR-0087 — Range-Erweiterung FAM-01
+    - id: ATC-STD-017
+      title: Obsolete & Orphaned Artifact Management Standard
+      status: BELEGT
+      refs:
+      - ATC-STD-017
+      note: Owner-Direktive 10.09. via SCR-0087 — P1, Kerngrundsatz Audit-Signal
   - id: FAM-02
     name: Standards-Governance
     range: ATC-STD-020..033

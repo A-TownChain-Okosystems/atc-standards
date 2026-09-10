@@ -7175,3 +7175,7 @@ versions:
     - {version: "1.0.0", date: "2026-09-09", change: "Initial Release DRAFT: Owner-Entwurf 09.09. (SCR-0062) — explizites Berechtigungsmodell; §9-Freigabe ausstehend"}
   ATC-AI-GOV-FINDING-001:
     - {version: "1.0.0", date: "2026-09-09", change: "Initial Release DRAFT: Owner-Entwurf 09.09. (SCR-0062) — persistente Findings ATC-FINDING-YYYY-NNNNNN; §9-Freigabe ausstehend"}
+  ATC-STD-016:
+    - {version: "1.0.0", date: "2026-09-10", change: "Initial Release APPROVED: Owner-Direktive 10.09. (SCR-0087) — Inventur-Standard als Partner von ATC-STD-017; §9-Freigabe via Owner-Direktive"}
+  ATC-STD-017:
+    - {version: "1.0.0", date: "2026-09-10", change: "Initial Release APPROVED: Owner-Direktive 10.09. (SCR-0087) — Lifecycle-Standard fuer obsolete/verwaiste Artefakte, P1, §30-eingefroren; §9-Freigabe via Owner-Direktive"}

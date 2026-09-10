@@ -449,6 +449,8 @@ required_standards:
 - ATC-AI-GOV-001
 - ATC-AI-GOV-CAPABILITY-001
 - ATC-AI-GOV-FINDING-001
+- ATC-STD-016
+- ATC-STD-017
 workflow:
   require_tests: true
   require_audit: true
