@@ -860,7 +860,7 @@ findings:
   resolution: 'SCR-0079: Evidence-Standard-DRAFT (test-report.json je Repo, CI-generiert) im Master-Backlog'
 - id: F-096
   priority: P0
-  status: OPEN
+  status: PARTIALLY_RESOLVED
   repo: (org-weit)
   title: 'Layer-Taxonomie fehlt — L0-L7 ohne normativen Standard (System- vs. Blockchain-Protocol-Layer ungetrennt)'
   resolution: 'SCR-0079: ATC-LAYER-001-DRAFT vorgeschlagen (Owner §9-Freigabe ausstehend)'
@@ -872,7 +872,7 @@ findings:
   resolution: 'SCR-0079: Rollen eindeutig zu definieren (Canonical=Rust, Reference=Python, Release-Authority=Rust)'
 - id: F-098
   priority: P0
-  status: OPEN
+  status: PARTIALLY_RESOLVED
   repo: (org-weit)
   title: 'Status-Claims (PASS/M4/M5/AUDITED) ohne maschinenlesbare Evidence-Bindung'
   resolution: 'SCR-0079: Statusmodell 9 Lifecycle-Phasen x 6 Dimensionen als DRAFT vorgeschlagen'
@@ -884,10 +884,10 @@ findings:
   resolution: 'SCR-0079: Default-Setup-Rollout = Owner-API-Aktion (Issue #95)'
 - id: F-100
   priority: P1
-  status: OPEN
+  status: PARTIALLY_RESOLVED
   repo: (org-weit)
   title: '.evidence/-Verzeichnis existiert in 0/27 Repos (F-079 org-weit bestätigt)'
-  resolution: 'SCR-0079: Evidence-Verzeichnisse je PRODUCT-Repo mit F-095 bündeln'
+  resolution: 'SCR-0080: .atc/evidence/evidence.yaml in 26/27 Repos (SSOT-Statusleiter); Hub via PR #4 nachziehen; F-095-Standardisierung separat'
 - id: F-101
   priority: P1
   status: OPEN
@@ -912,3 +912,22 @@ findings:
   repo: atc-interop, atc-standards
   title: 'Testbare Code-Bestände ohne Test-Workflow (16 bzw. 26 Dateien)'
   resolution: 'SCR-0079: test-suite.yml nach SCR-0078-Muster ergänzen'
+
+- id: F-105
+  priority: P0
+  status: OPEN
+  repo: atc-algorithm, a-townchain
+  title: 'Konsens-Dualimplementierungs-Risiko — atc-algorithm ist KANONISCH, a-townchain orchestriert nur'
+  resolution: 'SCR-0080: Regel in registry/repositories.yaml verankert; CI-Enforcement-Stufe (Code-Gate) folgt'
+- id: F-106
+  priority: P1
+  status: RESOLVED
+  repo: atc-contracts
+  title: 'M6-Status-Semantik-Mismatch (M6-Claim "Dienste laufen" bei SPEC/Rebuild-Stand)'
+  resolution: 'SCR-0080: M6 = CLAIMED-Klarstellung im README (ATC-STD-MILESTONE-001); kanonisch .atc/evidence/evidence.yaml'
+- id: F-107
+  priority: P1
+  status: OPEN
+  repo: (org-weit)
+  title: 'Registry-Check + Evidence-bound_commit-Update nur in atc-standards-CI verankert — Ausrollen auf alle Governance-CIs'
+  resolution: 'SCR-0080: Muster etabliert; Ausrollung + Test-Suite-Evidence-Hook folgt'

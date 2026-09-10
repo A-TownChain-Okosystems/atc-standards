@@ -25,6 +25,10 @@ jobs:
         run: python3 tools/atc-repo-audit/atc_repo_audit.py . --level R3
       
       - name: ATC Standards Validation — Registry-Driven (all 431 standards)
+      - name: Repository Registry Check (SCR-0080)
+        run: |
+          pip install pyyaml -q
+          python3 tools/repo_registry_check.py
         run: |
           # Extract all standard IDs from registry and validate each one
           python3 << 'EOF'

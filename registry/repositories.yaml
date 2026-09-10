@@ -1,29 +1,374 @@
-# ATC Repository Registry — zentrale, maschinenlesbare Registry (AD-030/031)
-# Gefuehrt kanonisch im atc-standards-Repository. Neue Repos MUSSSEN hier registriert werden.
+# ATC Repository Registry (SSOT) — SCR-0080 (Owner-P0-02 Canonical Ownership + P1 Repository Inventory)
+# 27 GitHub-Repos == 27 Registry-Einträge == 27 Evidence-Dateien (CI-geprüft via tools/repo_registry_check.py)
+# Layer-Taxonomie: DRAFT bis ATC-STD-LAYER-001 (F-096) — System-Layer, NICHT Blockchain-Protocol-Layer.
+schema_version: "1.0.0"
+generated: "2026-09-10"
+organization: A-TownChain-Okosystems
+count: 27
+
+layer_taxonomy_draft:   # F-096 — §9-Freigabe ATC-STD-LAYER-001 ausstehend
+  L0: language
+  L1: kernel
+  L2: ai
+  L3: blockchain
+  L4: operating_system
+  L5: services
+  L6: applications
+  L7: integration
+  note: 'a-townchain: blockchain_protocol.network_layer=L3, protocol_role=sovereign_chain (System-Layer != Layer-3-Protokoll)'
+
+capabilities:   # P0-02: je Funktion EXAKT EIN kanonisches Repository (CI-enforced)
+  standards:
+    canonical_repo: atc-standards
+    role: canonical
+  architecture_docs:
+    canonical_repo: a-townchain-os-docs
+    role: canonical
+  kernel:
+    canonical_repo: atc-shivacore
+    role: canonical
+  language:
+    canonical_repo: atclang
+    role: canonical
+  ai:
+    canonical_repo: aurora-ai
+    role: canonical
+  blockchain_orchestration:
+    canonical_repo: UNBESETZT
+    role: AMBIGUOUS(0)
+    note: 'Konsens-Implementierung liegt KANONISCH bei atc-algorithm (capability: consensus). a-townchain orchestriert nur — keine zweite Konsens-Implementierung (F-105).'
+  integration:
+    canonical_repo: a-townchain-os
+    role: canonical
+  vm_runtime:
+    canonical_repo: atc-vm
+    role: canonical
+  node_runtime:
+    canonical_repo: atc-node
+    role: canonical
+  contracts:
+    canonical_repo: atc-contracts
+    role: canonical
+  consensus:
+    canonical_repo: atc-algorithm
+    role: canonical
+  zkp:
+    canonical_repo: atc-zkp
+    role: canonical
+  wallet:
+    canonical_repo: atc-wallet
+    role: canonical
+  sdk:
+    canonical_repo: atc-sdk
+    role: canonical
+  indexer:
+    canonical_repo: atc-indexer
+    role: canonical
+  explorer:
+    canonical_repo: atc-explorer
+    role: canonical
+  interoperability:
+    canonical_repo: atc-interop
+    role: canonical
+  oracle:
+    canonical_repo: atc-oracle
+    role: canonical
+  mining_execution:
+    canonical_repo: atc-mining
+    role: canonical
+  storage:
+    canonical_repo: atc-storage
+    role: canonical
+  compute:
+    canonical_repo: atc-compute
+    role: canonical
+  marketplace:
+    canonical_repo: atc-marketplace
+    role: canonical
+  launchpad:
+    canonical_repo: atc-launchpad
+    role: canonical
+  os:
+    canonical_repo: globus-os
+    role: canonical
+  game_engine:
+    canonical_repo: genesis-engine
+    role: canonical
+  game:
+    canonical_repo: genesis-chronicles
+    role: canonical
+  agent_governance:
+    canonical_repo: .github
+    role: canonical
+
 repositories:
-  - {name: atc-standards,    classification: SPEC,        maturity: R3, security: S3, status: beta,        layer: parallel,   domain: governance}
-  - {name: atc-shivacore,   classification: CORE,        maturity: R4, security: S4, status: production,   layer: L1,         domain: kernel}
-  - {name: atc-vm,          classification: CORE,        maturity: R1, security: S4, status: experimental,  layer: L0,         domain: vm}
-  - {name: atclang,         classification: CORE,        maturity: R4, security: S4, status: development,   layer: L0,         domain: language}
-  - {name: atc-zkp,         classification: CORE,        maturity: R1, security: S4, status: experimental,  layer: L1,         domain: zkp}
-  - {name: atc-algorithm,   classification: CORE,        maturity: R1, security: S4, status: experimental,  layer: L3,         domain: consensus}
-  - {name: a-townchain,     classification: CORE,        maturity: R4, security: S4, status: development,   layer: L3,         domain: blockchain}
-  - {name: globus-os,       classification: OS,          maturity: R3, security: S4, status: development,   layer: L4,         domain: os}
-  - {name: aurora-ai,       classification: AI,          maturity: R3, security: S2, status: development,   layer: L2,         domain: ai}
-  - {name: a-townchain-os,  classification: INFRA,       maturity: R3, security: S3, status: development,   layer: L7,         domain: integration}
-  - {name: a-townchain-os-docs, classification: SPEC,    maturity: R3, security: S3, status: production,   layer: parallel,   domain: documentation}
-  - {name: atc-contracts,   classification: SPEC,        maturity: R3, security: S3, status: development,   layer: L5,         domain: contracts}
-  - {name: atc-sdk,         classification: SDK,         maturity: R2, security: S2, status: development,   layer: L5,         domain: sdk}
-  - {name: atc-wallet,      classification: APPLICATION, maturity: R2, security: S2, status: development,   layer: L5,         domain: wallet}
-  - {name: atc-explorer,    classification: APPLICATION, maturity: R2, security: S1, status: development,   layer: L5,         domain: explorer}
-  - {name: atc-marketplace, classification: APPLICATION, maturity: R2, security: S1, status: development,   layer: L5,         domain: marketplace}
-  - {name: atc-indexer,     classification: CORE,        maturity: R2, security: S2, status: development,   layer: L5,         domain: analytics}
-  - {name: atc-interop,     classification: CORE,        maturity: R2, security: S2, status: development,   layer: L5,         domain: bridge}
-  - {name: genesis-engine,  classification: GAME,        maturity: R2, security: S1, status: development,   layer: L6,         domain: game-engine}
-  - {name: genesis-chronicles, classification: GAME,     maturity: R2, security: S1, status: development,   layer: L6,         domain: game}
-  - {name: atc-node,        classification: CORE,        maturity: R1, security: S4, status: experimental,  layer: L5,         domain: node}
-  - {name: atc-storage,     classification: CORE,        maturity: R1, security: S2, status: experimental,  layer: L5,         domain: storage}
-  - {name: atc-compute,     classification: CORE,        maturity: R1, security: S2, status: experimental,  layer: L5,         domain: compute}
-  - {name: atc-oracle,      classification: CORE,        maturity: R1, security: S2, status: experimental,  layer: L5,         domain: oracle}
-  - {name: atc-mining,      classification: CORE,        maturity: R1, security: S2, status: experimental,  layer: L5,         domain: mining}
-  - {name: atc-launchpad,   classification: APPLICATION, maturity: R1, security: S1, status: experimental,  layer: L5,         domain: launchpad}
+  - id: ATC-REPO-GOV-001
+    name: atc-standards
+    domain: governance
+    layer: L7
+    criticality: C1
+    security_class: S3
+    maturity_class: A
+    canonical: true
+    evidence: .atc/evidence/evidence.yaml
+    exempt: false   # Hub: eigene PR-Pflicht-Regime
+  - id: ATC-REPO-ARCH-001
+    name: a-townchain-os-docs
+    domain: architecture_docs
+    layer: L7
+    criticality: C1
+    security_class: S3
+    maturity_class: A
+    canonical: true
+    evidence: .atc/evidence/evidence.yaml
+    exempt: false   # Hub: eigene PR-Pflicht-Regime
+  - id: ATC-REPO-KERN-001
+    name: atc-shivacore
+    domain: kernel
+    layer: L1
+    criticality: C1
+    security_class: S4
+    maturity_class: A
+    canonical: true
+    evidence: .atc/evidence/evidence.yaml
+    exempt: false   # Hub: eigene PR-Pflicht-Regime
+  - id: ATC-REPO-LANG-001
+    name: atclang
+    domain: language
+    layer: L0
+    criticality: C1
+    security_class: S4
+    maturity_class: A
+    canonical: true
+    evidence: .atc/evidence/evidence.yaml
+    exempt: false   # Hub: eigene PR-Pflicht-Regime
+  - id: ATC-REPO-AI-001
+    name: aurora-ai
+    domain: ai_platform
+    layer: L2
+    criticality: C1
+    security_class: S3
+    maturity_class: A
+    canonical: true
+    evidence: .atc/evidence/evidence.yaml
+    exempt: false   # Hub: eigene PR-Pflicht-Regime
+  - id: ATC-REPO-CHAIN-001
+    name: a-townchain
+    domain: blockchain
+    layer: L3
+    criticality: C1
+    security_class: S4
+    maturity_class: A
+    canonical: false
+    evidence: .atc/evidence/evidence.yaml
+    exempt: false   # Hub: eigene PR-Pflicht-Regime
+  - id: ATC-REPO-INT-001
+    name: a-townchain-os
+    domain: integration
+    layer: L7
+    criticality: C1
+    security_class: S3
+    maturity_class: A
+    canonical: true
+    evidence: .atc/evidence/evidence.yaml
+    exempt: false   # Hub: eigene PR-Pflicht-Regime
+  - id: ATC-REPO-VM-001
+    name: atc-vm
+    domain: runtime
+    layer: L5
+    criticality: C1
+    security_class: S4
+    maturity_class: B
+    canonical: true
+    evidence: .atc/evidence/evidence.yaml
+    exempt: false   # Hub: eigene PR-Pflicht-Regime
+  - id: ATC-REPO-NODE-001
+    name: atc-node
+    domain: node_runtime
+    layer: L3
+    criticality: C1
+    security_class: S4
+    maturity_class: B
+    canonical: true
+    evidence: .atc/evidence/evidence.yaml
+    exempt: false   # Hub: eigene PR-Pflicht-Regime
+  - id: ATC-REPO-CONTR-001
+    name: atc-contracts
+    domain: contracts
+    layer: L5
+    criticality: C1
+    security_class: S4
+    maturity_class: B
+    canonical: true
+    evidence: .atc/evidence/evidence.yaml
+    exempt: false   # Hub: eigene PR-Pflicht-Regime
+  - id: ATC-REPO-CONS-001
+    name: atc-algorithm
+    domain: consensus
+    layer: L3
+    criticality: C1
+    security_class: S4
+    maturity_class: B
+    canonical: true
+    evidence: .atc/evidence/evidence.yaml
+    exempt: false   # Hub: eigene PR-Pflicht-Regime
+  - id: ATC-REPO-ZKP-001
+    name: atc-zkp
+    domain: zkp
+    layer: L3
+    criticality: C1
+    security_class: S4
+    maturity_class: B
+    canonical: true
+    evidence: .atc/evidence/evidence.yaml
+    exempt: false   # Hub: eigene PR-Pflicht-Regime
+  - id: ATC-REPO-WALL-001
+    name: atc-wallet
+    domain: wallet
+    layer: L5
+    criticality: C1
+    security_class: S4
+    maturity_class: B
+    canonical: true
+    evidence: .atc/evidence/evidence.yaml
+    exempt: false   # Hub: eigene PR-Pflicht-Regime
+  - id: ATC-REPO-SDK-001
+    name: atc-sdk
+    domain: sdk
+    layer: L5
+    criticality: C2
+    security_class: S3
+    maturity_class: B
+    canonical: true
+    evidence: .atc/evidence/evidence.yaml
+    exempt: false   # Hub: eigene PR-Pflicht-Regime
+  - id: ATC-REPO-IDX-001
+    name: atc-indexer
+    domain: indexing
+    layer: L5
+    criticality: C2
+    security_class: S3
+    maturity_class: B
+    canonical: true
+    evidence: .atc/evidence/evidence.yaml
+    exempt: false   # Hub: eigene PR-Pflicht-Regime
+  - id: ATC-REPO-EXPL-001
+    name: atc-explorer
+    domain: explorer
+    layer: L5
+    criticality: C3
+    security_class: S2
+    maturity_class: B
+    canonical: true
+    evidence: .atc/evidence/evidence.yaml
+    exempt: false   # Hub: eigene PR-Pflicht-Regime
+  - id: ATC-REPO-INTOP-001
+    name: atc-interop
+    domain: interoperability
+    layer: L3
+    criticality: C1
+    security_class: S4
+    maturity_class: B
+    canonical: true
+    evidence: .atc/evidence/evidence.yaml
+    exempt: false   # Hub: eigene PR-Pflicht-Regime
+  - id: ATC-REPO-ORAC-001
+    name: atc-oracle
+    domain: oracle
+    layer: L3
+    criticality: C1
+    security_class: S4
+    maturity_class: B
+    canonical: true
+    evidence: .atc/evidence/evidence.yaml
+    exempt: false   # Hub: eigene PR-Pflicht-Regime
+  - id: ATC-REPO-MINE-001
+    name: atc-mining
+    domain: mining
+    layer: L3
+    criticality: C2
+    security_class: S4
+    maturity_class: B
+    canonical: true
+    evidence: .atc/evidence/evidence.yaml
+    exempt: false   # Hub: eigene PR-Pflicht-Regime
+  - id: ATC-REPO-STOR-001
+    name: atc-storage
+    domain: storage
+    layer: L5
+    criticality: C2
+    security_class: S4
+    maturity_class: B
+    canonical: true
+    evidence: .atc/evidence/evidence.yaml
+    exempt: false   # Hub: eigene PR-Pflicht-Regime
+  - id: ATC-REPO-COMP-001
+    name: atc-compute
+    domain: compute
+    layer: L5
+    criticality: C2
+    security_class: S3
+    maturity_class: B
+    canonical: true
+    evidence: .atc/evidence/evidence.yaml
+    exempt: false   # Hub: eigene PR-Pflicht-Regime
+  - id: ATC-REPO-MKT-001
+    name: atc-marketplace
+    domain: marketplace
+    layer: L6
+    criticality: C2
+    security_class: S3
+    maturity_class: B
+    canonical: true
+    evidence: .atc/evidence/evidence.yaml
+    exempt: false   # Hub: eigene PR-Pflicht-Regime
+  - id: ATC-REPO-LP-001
+    name: atc-launchpad
+    domain: launchpad
+    layer: L6
+    criticality: C2
+    security_class: S3
+    maturity_class: B
+    canonical: true
+    evidence: .atc/evidence/evidence.yaml
+    exempt: false   # Hub: eigene PR-Pflicht-Regime
+  - id: ATC-REPO-OS-001
+    name: globus-os
+    domain: operating_system
+    layer: L4
+    criticality: C1
+    security_class: S4
+    maturity_class: C
+    canonical: true
+    evidence: .atc/evidence/evidence.yaml
+    exempt: false   # Hub: eigene PR-Pflicht-Regime
+  - id: ATC-REPO-GEN-001
+    name: genesis-engine
+    domain: game_engine
+    layer: L6
+    criticality: C3
+    security_class: S2
+    maturity_class: C
+    canonical: true
+    evidence: .atc/evidence/evidence.yaml
+    exempt: false   # Hub: eigene PR-Pflicht-Regime
+  - id: ATC-REPO-GAME-001
+    name: genesis-chronicles
+    domain: game
+    layer: L6
+    criticality: C3
+    security_class: S2
+    maturity_class: C
+    canonical: true
+    evidence: .atc/evidence/evidence.yaml
+    exempt: false   # Hub: eigene PR-Pflicht-Regime
+  - id: ATC-REPO-HUB-001
+    name: .github
+    domain: governance_hub
+    layer: L7
+    criticality: C1
+    security_class: S3
+    maturity_class: A
+    canonical: true
+    evidence: .atc/evidence/evidence.yaml
+    exempt: true   # Hub: eigene PR-Pflicht-Regime
