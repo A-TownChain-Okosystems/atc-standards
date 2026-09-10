@@ -934,10 +934,10 @@ findings:
 
 - id: F-108
   priority: P0
-  status: OPEN
+  status: RESOLVED
   repo: atclang
   title: 'Rust-Canonical-Core NICHT implementiert — 0 Rust-Dateien auf main (Rollen-READMEfiktion)'
-  resolution: 'SCR-0083: Lexer-MVP in crates/atc-core live (cargo-Job in Suite); Parser + Differential-Tests (Canonical<->Referenz) ausstehend'
+  resolution: 'SCR-0084: Lexer+Parser+Differential live in crates/atc-core (8/8 Corpus bytgleich mit Python-Referenz, CI-verifiziert); volle Compiler-Paritaet via F-111'
 - id: F-109
   priority: P1
   status: OPEN
@@ -958,3 +958,10 @@ findings:
   repo: (org-weit)
   title: 'MVP-Kerne zu Produkttiefe ausbauen (Gas-Modell VM, SHA-256-PoH nach Spec-Freeze, atc-lang Parser, Netzwerk-Stacks)'
   resolution: 'SCR-0083: Start-Kerne gelegt; Ausbau entlang der 91 SPEC-DRAFTs (SCR-0071) via Sprints'
+
+- id: F-112
+  priority: P2
+  status: OPEN
+  repo: atclang
+  title: 'Canonical-Core Stage 3: fn-Definitionen, Kontrollfluss, Structs + Corpus-Erweiterung (Differential-Flaeche waechst mit)'
+  resolution: 'SCR-0084 gelegt das Muster; Stage 3 nach Owner-Priorisierung (F-111-Paket oder separat)'
