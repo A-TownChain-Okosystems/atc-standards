@@ -3,6 +3,14 @@
 ## [unreleased] - 2026-09-09
 
 ### Added
+- **Audit-P0-Umsetzung (SCR-0068):** aurora-ai Lizenz-Widerspruch behoben
+  (README Proprietary → Apache-2.0 gem. F-046; F-058 RESOLVED);
+  ai/org-scope.yaml v1.1.0 API-generiert (Merge SCR-0065+0068, Generator
+  tools/gen_org_scope.py im .github-Hub via PR #2 unter F-045-Regime;
+  Erstlauf 28 Repos / 27 governed / 1 ungoverned → demo-repository als
+  Drift, F-059 OPEN); aurora-ai Evidence-Lücke als F-060 (P1, OPEN)
+  registriert — Compliance-Claims benötigen maschinenprüfbare Evidence.
+
 
 - **Enforcement-Schicht komplett (SCR-0064, Owner-Gap-Liste 28 GOV-Items):**
   Agent Authorization Engine `tools/authorize.py` (GOV-008/009 — entscheidet

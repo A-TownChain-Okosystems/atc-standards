@@ -365,3 +365,11 @@ Integration Matrix (10 IFC seed; IFC-0009/0010 ohne Consumer), System
 Readiness (M-001/002 ACCEPTED; 0 P0 offen; P1: F-044/F-055/F-056; 3 Repos
 rote CI; alle Netz-Tiers NO-GO), Maintenance Queue (Dependabot getrennt).
 KPI-Vektor für REQ-IMP-007 damit erstmals maschinell messbar.
+
+## Audit-P0-Umsetzung (SCR-0068, 10.09. 09:45–10:10 UTC+2)
+
+F-058 (aurora-ai Lizenz-Widerspruch, P0) RESOLVED; Org-Scope-SSOT
+API-generiert (org-scope.yaml v1.1.0 via PR #2 im Hub — F-045-Regime
+blockiert Direktpushs, Enforcement greift); demo-repository als ungoverned
+Drift (F-059, Owner-Entscheidung offen); F-060 (aurora-ai Claims ohne
+Evidence, P1) registriert. Repo-Anzahl verbindlich: 27 governed.
