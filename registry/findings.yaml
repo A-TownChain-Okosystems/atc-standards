@@ -542,3 +542,65 @@ findings:
   status: OPEN
   title: 'aurora-ai: Compliance-Claims (ATC-STD-000/201/202/203, ''R3 COMPLIANT'') ohne maschinenprüfbare
     Evidence (compliance/-Verzeichnis, CI-Run-IDs, Commit-SHAs fehlen)'
+- alias: null
+  discovered: '2026-09-10'
+  id: F-061
+  resolution: null
+  scr: SCR-0069
+  severity: P1
+  source: Owner-Audit 10.09. (P1-001)
+  status: OPEN
+  title: 'atc-shivacore: Test-Evidence-Inkonsistenz (423/674/703) — kanonisches test-report.json (Commit,
+    Toolchain, Counts) fehlt; README/STATUS/ROADMAP pflegen Handzahlen'
+- alias: null
+  discovered: '2026-09-10'
+  id: F-062
+  resolution: null
+  scr: SCR-0069
+  severity: P1
+  source: Owner-Audit 10.09. (P1-2)
+  status: OPEN
+  title: 'atc-wallet: Signaturalgorithmus-Red-Flag — Cargo.toml ed25519-dalek vs. README/Architektur secp256k1;
+    kanonischer ATC-Algorithmus + Rust-Trusted-Core/Python-Boundary fehlen'
+- alias: null
+  discovered: '2026-09-10'
+  id: F-063
+  resolution: null
+  scr: SCR-0069
+  severity: P1
+  source: Owner-Audit 10.09. (MKT-P1-002/003)
+  status: OPEN
+  title: 'atc-marketplace: Security-Criticality S1/low für DEX+NFT/Asset-Marketplace überprüfen; AMM/Order/Oracle/Settlement-Invarianten
+    und Conformance-Gates fehlen'
+- alias: null
+  discovered: '2026-09-10'
+  id: F-064
+  resolution: null
+  scr: SCR-0069
+  severity: P2
+  source: Owner-Audit 10.09. (P2-1)
+  status: OPEN
+  title: 'Documentation Drift in mehreren Repos: READMEs listen nicht existierende Dateien (atc-wallet:
+    GOVERNANCE.md/scripts; Repo-Zählungen 26/27 handgepflegt)'
+- alias: null
+  discovered: '2026-09-10'
+  id: F-065
+  resolution: 'Batch-Fix 26/26 Repos auf Apache-2.0 (AD-F-046): .atc/repository.yaml, Cargo.toml license-Felder,
+    README-Lizenzzeilen synchron; Copyright Michael Wroblewski unverändert; docs/archive/ bewusst unangetastet'
+  scr: SCR-0069
+  severity: P0
+  source: Owner-Audit-Welle 10.09.; Org-Sweep (SCR-0069)
+  status: RESOLVED
+  title: 'Org-weiter Lizenz-Widerspruch: 26 Repos ''proprietary''/''ALL RIGHTS RESERVED'' in .atc/Cargo.toml/README
+    gegen Apache-2.0-LICENSE'
+- alias: null
+  discovered: '2026-09-10'
+  id: F-066
+  resolution: STATUS auf NOT APPLICABLE / NOT RUN korrigiert (No status without evidence); Implementierungs-Lücke
+    als Backlog dokumentiert (Implementation-Pivot vor weiterer Doku)
+  scr: SCR-0069
+  severity: P0
+  source: Owner-Audit 10.09. (P0 STATUS.md)
+  status: RESOLVED
+  title: 'atc-storage + atc-launchpad: STATUS wies ''Build passing/Tests PASS'' ohne jede Implementierung
+    aus (0 .rs/.py/Cargo.toml)'

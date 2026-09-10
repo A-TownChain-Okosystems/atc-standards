@@ -3,6 +3,13 @@
 ## [unreleased] - 2026-09-09
 
 ### Added
+- **Audit-Welle SCR-0069:** Org-weite Lizenz-Konsistenz (F-065, P0 RESOLVED —
+  26 Repos auf Apache-2.0 synchronisiert gem. AD-F-046); ehrliche STATUS-Claims
+  (F-066, P0 RESOLVED — atc-storage/atc-launchpad: unbelegte PASS-Behauptungen
+  durch NOT APPLICABLE/NOT RUN ersetzt); F-061..F-064 registriert (shivacore
+  Test-Evidence, wallet Signaturalgorithmus/Boundary, marketplace Security-
+  Criticality, Documentation Drift).
+
 - **Audit-P0-Umsetzung (SCR-0068):** aurora-ai Lizenz-Widerspruch behoben
   (README Proprietary → Apache-2.0 gem. F-046; F-058 RESOLVED);
   ai/org-scope.yaml v1.1.0 API-generiert (Merge SCR-0065+0068, Generator

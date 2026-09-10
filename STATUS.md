@@ -373,3 +373,10 @@ API-generiert (org-scope.yaml v1.1.0 via PR #2 im Hub — F-045-Regime
 blockiert Direktpushs, Enforcement greift); demo-repository als ungoverned
 Drift (F-059, Owner-Entscheidung offen); F-060 (aurora-ai Claims ohne
 Evidence, P1) registriert. Repo-Anzahl verbindlich: 27 governed.
+
+## Audit-Welle umgesetzt (SCR-0069, 10.09. 10:15–10:35 UTC+2)
+
+Org-weiter Lizenz-Batch-Fix (F-065 RESOLVED, 26 Repos) + ehrliche STATUS-Claims
+(F-066 RESOLVED); F-061..F-064 als offene P1/P2 registriert. Implementation-Pivot
+bestätigt: atc-storage/atc-launchpad haben weiterhin keine Implementierung —
+nächste Schritte sind Cargo-Workspace + echte Tests, nicht weitere Doku.
