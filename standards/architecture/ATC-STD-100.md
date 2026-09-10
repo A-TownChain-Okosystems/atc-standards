@@ -1,133 +1,217 @@
 ---
 standard:
   id: ATC-STD-100
-  title: "ATC-STD-100 — Language & Technology Stack Standard"
-  version: "1.0.0"
-  status: approved
+  title: "Language & Technology Stack Standard"
+  version: "2.0.0"
+  status: candidate
   category: architecture
-  authority: A-TownChain Ecosystems
-  owner: ShivaCoreDev
+  authority: "A-TownChain Ecosystems"
+  owner: "Michael Wroblewski (Owner-Entwurf) / Standards Governance"
   created: "2026-09-07"
-  updated: "2026-09-07"
+  updated: "2026-09-11"
   normative: true
-  supersedes: null
-  superseded_by: null
-
-  effective_date: "2026-09-07"
-  review_date: "2027-09-08"
-  license: "Copyright (c) 2026 Michael Wroblewski"
   applies_to: "Alle ATC-Repositories"
----
+  mandate: "Owner-Entwurf 11.09.2026 (Language Architecture, SCR-0093)"
+----
 
-# ATC-STD-100 — Language & Technology Stack Standard (v1.0.0, APPROVED)
+# ATC-STD-100 — Language & Technology Stack Standard (v2.0.0, CANDIDATE)
 
-> **Version:** 1.0.0 (FORMAL)
-> **Status:** APPROVED (Owner-Sammelfreigabe 07.09.2026, ATC-STD-000 §9) — normativ in Kraft
-> **Reihe:** ATC-STD-100–199 (Architektur-Block, categories.yaml) · **Autoren:** Michael Wroblewski (Owner), Aurora (Superagent)
-> **Kernprinzip:** Eine Sprache je Ebene — Rust ist das System of Record der ATC-Kerntechnologie.
-> **Scope:** Alle Repositories der Organisation A-TownChain-Okosystems (25 aktive Repos, AD-044-Stand).
-> **Verweise:** ATC-STD-000 (§7 IDs, §24 Registry), ATC-STD-201/202/203, ATC-STD-300, AD-021 (Rust-first), AD-001 (SHA-256)
-
----
+> **Status:** CANDIDATE (v2.0.0) — Owner-Entwurf Language Architecture 11.09.2026
+> (SCR-0093): Hierarchische Language Architecture L0-L8 mit Entscheidungskaskade
+> und Repo-Matrix; ersetzt das 5-Layer-Modell von v1.0.0 (Mapping §7). Bis zur
+> §9-Freigabe gilt v1.0.0 APPROVED. **Scope:** ATC-STD-100 · Sprache- und
+> Technologieauswahl aller Repositories · **Governance:** ATC-STD-000
 
 ## Abstract
 
-Dieser Standard schreibt die verbindliche Programmiersprachen- und Stack-Strategie der A-TownChain-Plattform fest. Die Plattform ist mehrschichtig (Protocol/Core, Application, AI, OS, Governance); jede Ebene erhlt genau eine kanonische Implementierungssprache. **Rust ist das System of Record fuer die ATC-Kerntechnologie** (Blockchain, Konsens, VM, Kryptografie, Storage, OS/Kernel), **Python** ist die Sprache der AI/ML-Forschung und des Model-Layers, **TypeScript** traegt die Application-/UI-Schicht, und **Markdown/YAML/JSON** bilden den Spezifikations- und Governance-Layer.
+ATC-STD-100 definiert die verbindliche Language Architecture des
+A-TownChain-Ökosystems: keine zufällige Polyglot-Architektur, sondern eine
+hierarchisch definierte Sprach- und Technologieauswahl je Layer und Repository.
+Kern: Rust als Systemsprache (Security-/Consensus-/Execution-TCB), ATCLang als
+native Anwendungssprache der Plattform (ATC-99), TypeScript als UI-/Application-
+Sprache, Python als AI-/Research-Sprache (mit TCB-Verbot), C/Assembly als
+Hardware-Grenzsprachen, WASM als portables Execution Target, SQL als Query-/
+Persistence-Layer (nicht Consensus Truth).
 
-## 1. Layer-Modell (REQ-STD-101: MUST)
+Schlüsselwörter: MUSS/MUSS NICHT, SOLLTE, DARF/KANN — RFC 2119 gemäß ATC-STD-000 §10.
 
-Die Plattform gliedert sich in fuenf technische Ebenen. Jedes Repository MUSS genau einer Ebene zugeordnet sein (registry/repositories.yaml: domain-Feld).
+## 1. Language Architecture L0-L8 (REQ-STD-105: MUST)
 
-| Layer | Repositories | Kanonische Sprache |
+Die Ökosystem-Architektur MUSS dem folgenden Layer-Modell folgen; jede
+Komponente MUSS ihrem Layer zugeordnet sein:
+
+| Layer | Bereich | Sprachen |
 |---|---|---|
-| **L1 — Protocol / Core** | atc-node, atc-shivacore, atc-vm, atc-algorithm, atc-contracts, atc-compute, atc-storage, atc-oracle, atc-interop, atc-indexer, a-townchain | Rust |
-| **L2 — Application** | atc-explorer, atc-marketplace, atc-launchpad | TypeScript (+ React) |
-| **L3 — AI** | aurora-ai (Core: Rust / AI-ML-Layer: Python) | Rust + Python (getrennt) |
-| **L4 — OS** | a-townchain-os, globus-os | Rust |
-| **L5 — Specification / Governance** | atc-standards, a-townchain-os-docs, genesis-chronicles (Lore/World) | Markdown, YAML, JSON |
+| L0 — Hardware | Firmware, Boot, CPU-Schnittstellen | Assembly + C |
+| L1 — Kernel | ShivaCore-Kernel, Memory, Capabilities | Rust |
+| L2 — Runtime | ATC Runtime, ATC-VM, Deterministic Execution | Rust |
+| L3 — Blockchain | Node, Consensus, Networking, Kryptografie, ZKP, Storage | Rust |
+| L4 — Native ATC Programming | Smart Contracts, On-chain Logic, ATC-Programme | ATCLang |
+| L5 — AI | Modelle, Research, Agents | Python + Rust |
+| L6 — SDK | Client-Libraries, Bindings | Rust + TypeScript (+ Python SDK) |
+| L7 — Applications | Wallet, Explorer, Marketplace, OS-UI | TypeScript + ATCLang |
+| L8 — Data | Indexer, Analytics, Off-chain State | SQL + Rust/Python |
 
-## 2. Sprachbindungen (REQ-STD-102: MUST)
+Kette: ShivaCore → Rust → ATC Runtime → ATC-VM → A-TownChain Node → Consensus.
 
-Die folgende Tabelle ist normativ. Neue Implementierungen in den genannten Kategorien MUESSEN in der kanonischen Sprache erfolgen; bestehende Nicht-Kanon-Implementierungen sind Migrations-Kandidaten (Technology Profile Audit, §4).
+## 2. Sprachbindungen (REQ-STD-106: MUST)
 
-| Kategorie | Verbindliche Sprache |
-|---|---|
-| Blockchain Core | Rust |
-| Node | Rust |
-| Konsens (ATC-Algorithmus) | Rust |
-| VM (ATVM) | Rust |
-| Smart Contracts | ATCLang (AD-006/99); ABI-Definition: Rust |
-| Kryptografie | Rust |
-| Storage | Rust |
-| Networking | Rust |
-| OS / Kernel / Treiber | Rust |
-| Mining Core | Rust |
-| SDK Core | Rust |
-| AI Runtime | Rust |
-| AI/ML Research & Model Layer | Python |
-| Web Frontend | TypeScript |
-| Explorer / Marketplace / Launchpad | TypeScript |
-| Web Backend/API | Rust (L1-Kontext) oder TypeScript (L2-Kontext) — je nach Layer-Zuordnung |
-| Dokumentation | Markdown |
-| Konfiguration | YAML / TOML / JSON |
-| CI/CD | YAML + Shell |
+- **Rust** MUSS die zentrale Systemsprache sein: Kernel, Security, Consensus,
+  VM, Kryptografie, ZKP, Storage, Node. Alles innerhalb des Security-/
+  Consensus-/Execution-Trusted-Computing-Bereichs MUSS standardmäßig Rust sein
+  (Memory Safety, kein GC, no_std, deterministische Systeme).
+- **ATCLang** MUSS die native Anwendungssprache der Plattform sein (ATC-99
+  ATCLang First). Trennung: Rust = Implementierung der Plattform, ATCLang =
+  Programmierung für die Plattform (Application → ATCLang → ATC Compiler →
+  ATC Bytecode → ATC-VM → Rust → A-TownChain). ATCLang MUSS NICHT Rust
+  ersetzen; der ATCLang-Compiler/Toolchain selbst SOLLTE Rust-first sein (AD-021).
+- **C** DARF nur an Hardwaregrenzen eingesetzt werden: Firmware, Bootloader-
+  Komponenten, Hardware Interfaces, Vendor SDKs, C-ABI/FFI. Begründung MUSS
+  technisch sein ("die Hardware-/ABI-Schnittstelle erfordert C"), NICHT "C ist
+  schnell".
+- **Assembly** DARF nur für die letzten 1 % verwendet werden: Boot Entry,
+  CPU-Initialization, Interrupt/Trap Entry, Context Switching, Register-
+  operationen, Architektur-Optimierungen (x86_64, AArch64). Assembly MUSS
+  NICHT in normale Business Logic einfließen.
+- **C++** DARF nur bei zwingend benötigten existierenden High-Performance-/
+  GPU-/Krypto-/ZKP-Libraries und externen Engines eingesetzt werden; für neue
+  ATC-Kernkomponenten MUSS Rust gewählt werden.
+- **Python** MUSS für AI/ML, Research, Prototyping, Testautomation, Tooling,
+  Build-Skripte, Repository-Audits, CI-Utilities eingesetzt werden. Python
+  MUSS NICHT Konsens oder Kernel-Sicherheit kontrollieren: Python darf AI
+  entwickeln und orchestrieren, aber nicht automatisch den TCB (L1-L3).
+- **TypeScript** MUSS die Standard-Frontend-/UI-Sprache sein: Wallet, Explorer,
+  Marketplace, Launchpad, GlobusOS-UI, Admin-Interfaces, Developer Portals.
+  Kette: React → TypeScript → ATC SDK → Rust/WASM → ATC Node.
+- **JavaScript** SOLLTE vermieden werden (nur Legacy-/Runtime-Zwang).
+- **WASM** IST Deployment-/Execution Target (keine Primärsprache): Browser,
+  portable Tools, Plugins, Sandbox, SDK-Komponenten. ATC Bytecode und WASM
+  MÜSSEN NICHT ungeprüft gleichgesetzt werden — das ATC-Execution-Modell
+  behält seine eigenen Semantics.
+- **SQL** DARF für Query-/Index-/Persistence-Layer eingesetzt werden (Indexer,
+  Explorer, Analytics); der kanonische Blockchain-State MUSS NICHT mit SQL
+  gleichgesetzt werden — SQL ist nicht Consensus Truth.
+- **Go** DARF nur bei konkret nachgewiesenem Vorteil für Infrastruktur-
+  Services/Networking eingesetzt werden; eine zusätzliche Sprache ohne
+  technischen Grund MUSS NICHT eingeführt werden.
 
-**Kurzregel:** Rust = System of Record der ATC-Kerntechnologie. Python = AI/ML-Experimentation. TypeScript = Application/UI. Markdown/YAML/JSON = Specification & Governance.
+## 3. Auswahl-Entscheidungskaskade (REQ-STD-107: MUST)
 
-## 3. Ausnahmen & Referenz-Implementierungen (REQ-STD-103)
+Jede neue Komponente MUSS der Kaskade folgen (erste JA-Antwort gewinnt):
 
-- Python-Referenz-Implementierungen (z.B. ATCLang-Interpreter, PoH-Referenz in a-townchain) DÜRFEN bis zur Rust-Canonical-Umsetzung (AD-021) weitergefuehrt werden; sie SOLLEN als `reference/`-Verzeichnis klar gekennzeichnet sein und KEINE produktiven Pfade ersetzen.
-- ATCLang (AD-006, ATC-99) ist als eigenstaendige Sprache von dieser Policy nicht erfasst; sein Tooling folgt AD-021 (Rust-first Compiler, Python als Referenz).
-- Eine Ausnahme von der kanonischen Sprache erfordert einen Architecture Decision (AD) mit Owner-Freigabe.
+1. Security/Kernel/Consensus/Runtime? → JA → **Rust**
+2. Hardware/CPU/ABI-Boundary? → JA → **C / Assembly**
+3. On-chain Application? → JA → **ATCLang**
+4. AI/ML/Research? → JA → **Python**
+5. Web/UI? → JA → **TypeScript**
+6. Database-Query? → JA → **SQL**
+7. Kein Treffer → Entscheidung via SCR + ATC-STD-TUD-001 (Technology-Registry)
 
-## 4. Technology Profile Audit (REQ-STD-104: SHOULD)
+Abweichungen von der Kaskade MÜssen als Finding (ATC-STD-BUG-001) oder
+Exception (ATC-STD-EXC-Familie) dokumentiert sein.
 
-Je Repository SOLL ein Technology Profile gepflegt werden (Wiki: REPOSITORY_MAP.md): tatsaechliche Dateien, tatsaechliche Sprachverteilung, Frameworks, Build-System, Abhaengigkeiten, Zweck, Ueberschneidungen und Empfehlung (behalten / zusammenlegen / umbenennen / verschieben). Vorgesehene Sprache (registry) und tatsaechlicher Codebestand MUESSEN unterschieden werden. Skelett-Repositories (R1 ohne Implementierung) werden als solche gekennzeichnet.
+## 4. Repository-Matrix (REQ-STD-108: MUST)
 
-## 5. Verweise
+| Repository | Primär | Sekundär |
+|---|---|---|
+| atc-shivacore | Rust | Assembly, C (Boot/HAL) |
+| atclang | Rust (Compiler/Toolchain) | ATCLang (Zielsprache) |
+| atc-vm | Rust | Python (nur Referenz, nie TCB) |
+| a-townchain | Rust | Rust/Python (Tests/Tooling) |
+| atc-node | Rust | — |
+| atc-zkp | Rust | Python (Research) |
+| atc-algorithm | Rust | Python (Benchmark/Research) |
+| atc-storage | Rust | SQL (Query) |
+| atc-compute | Rust | Python (Workloads/Research) |
+| atc-oracle | Rust | Adapter je externem System |
+| atc-interop | Rust | Adapter je Protokoll |
+| atc-wallet | Rust (Core) | TypeScript (UI), WASM (Browser) |
+| atc-indexer | Rust (Core) | SQL (Database) |
+| atc-explorer | TypeScript (Frontend) | Rust oder TypeScript (Backend) |
+| atc-marketplace | TypeScript (Frontend) | ATCLang (On-chain Logic) |
+| atc-launchpad | TypeScript + ATCLang | Rust/TypeScript (Backend) |
+| atc-contracts | ATCLang | — |
+| aurora-ai | Python (Research/AI) | Rust (Production Runtime), TypeScript (UI) |
+| globus-os | Rust (System) | TypeScript (UI); Kernel: ShivaCore; AI: Aurora |
+| genesis-engine | Rust/C++ je Engine-Entscheidung | ATCLang (Game Logic, langfristig), TypeScript (Tools/UI) |
 
-- AD-021: ATCLang Rust-first, Python = Referenz — Modell fuer alle Migrationspfade.
-- AD-001: SHA-256 als einziger Hash-Algorithmus (Kryptografie-Bindung).
-- ATC-STD-202: Naming & Classification (`atc-<domain>-<component>`).
-- registry/repositories.yaml: maschinenlesbare Repo-/Layer-/Domain-Zuordnung.
+Repository-Rollen (Scope/Write) regelt ATC-STD-202; die Matrix hier ist
+sprachseitig verbindlich.
+
+## 5. Governance-Kopplungen (REQ-STD-109: MUST)
+
+- Neue Technologie-Entscheidungen MÜSSEN durch ATC-STD-TUD-001
+  (Technology Uniqueness & Differentiation) laufen: keine Sprache/Framework
+  ohne Technology-Registry-Eintrag und Klassifikation.
+- Sprach-Policy-Drift (Repo weicht von Matrix ab) MUSS vom Repository-Audit
+  (ATC-STD-REPO-AUDIT-003) als Finding gemeldet werden; CI-Sprach-Gate als
+  Validator-Erweiterung SOLLTE folgen.
+- v1.0.0-Regeln bleiben wirksam, soweit nicht durch §1-§4 ersetzt (§7).
+
+## 6. Migration v1 → v2 (Mapping, REQ-STD-110)
+
+v1.0.0-Layer → v2.0.0-Layer: L1 Protocol/Core Rust → L1-L3; L2 Application
+TypeScript → L7; L3 AI Rust+Python → L5; L4 OS Rust → L0-L1; L5 Spec/Governance
+Markdown → ATC-STD-000 (nicht mehr Sprach-Layer, sondern Dokumentationsform).
+Neu in v2.0.0: L0 Hardware (Assembly/C), L4 ATCLang als eigene Stufe, L6 SDK,
+L8 Data. Das Ökosystem-Layer-Modell (AD-026, L0-L12) bleibt davon unberührt —
+Sprach-Layer ≠ Ökosystem-Layer.
 
 ## REQ-Matrix (normative Anforderungen)
 
-| ID | Anforderung | Verweis |
-|----|-------------|---------|
-| id: REQ-STD-101 | Jedes Repository MUSS genau einem Layer (L1–L5) zugeordnet sein. | §1 |
-| id: REQ-STD-102 | Neue Implementierungen MUESSEN der kanonischen Sprache ihrer Kategorie folgen. | §2 |
-| id: REQ-STD-103 | Nicht-kanonische Bestands-Implementierungen MUESSEN als Migrations-Kandidaten gefuehrt werden; Ausnahmen erfordern AD mit Owner-Freigabe. | §3 |
-| id: REQ-STD-104 | Je Repository SOLLEN tatsaechlicher Stack und vorgesehener Stack getrennt dokumentiert sein (Technology Profile). | §4 |
-| id: REQ-STD-105 | Die Registry (repositories.yaml) MUSS die Layer-/Domain-Zuordnung maschinenlesbar fuehren. | §5 |
+- id: REQ-STD-105 — Language Architecture L0-L8: Layer-Zuordnung jeder Komponente MUSS vollständig sein.
+- id: REQ-STD-106 — Sprachbindungen: MUST/VERBOT-Regeln je Sprache inkl. TCB-Regel (Rust), ATCLang-Trennung (ATC-99), Python-TCB-Verbot, JS-Vermeidung, WASM-Semantik-Trennung, SQL-nicht-Consensus-Truth.
+- id: REQ-STD-107 — Entscheidungskaskade: Auswahl MUSS der Kaskade folgen; Abweichungen MÜSSEN dokumentiert sein.
+- id: REQ-STD-108 — Repository-Matrix: Sprachzuordnung je Repository MUSS der Matrix entsprechen; Drift MUSS als Finding gemeldet werden.
+- id: REQ-STD-109 — Governance-Kopplung: Neue Sprachen/Technologien MÜSSEN via TUD-001 laufen; REPO-AUDIT-003 meldet Drift.
+- id: REQ-STD-110 — Migration: v1-Layer-Mapping MUSS dokumentiert bleiben; Ökosystem-Layer (AD-026) MUSS NICHT umbenannt werden.
 
 ## Compliance
 
-Die Einhaltung wird geprueft durch: (1) atc-std-validator (Registry-Sync S-14, Head-Sync S-19), (2) Technology Profile Audit je Repository ( Soll-/Ist-Vergleich), (3) Repo-Audit R3 (ATC-STD-201ff). Abweichungen werden als Findings (ATC-STD-BUG-001) und ggf. Change Requests (SCR) gefuehrt.
+Prüfung im Governance-Validator: S-06/S-07 (Struktur), MD-Gates (Frontmatter),
+REQ-IDs deklariert und eindeutig. Repository-Audit (ATC-STD-REPO-AUDIT-003)
+prüft Repository-Sprachprofil gegen die Matrix (REQ-STD-108) und meldet
+Abweichungen als Finding.
 
 ## Security Considerations
 
-Sprachwahl ist sicherheitsrelevant: Kryptografie-, Konsens- und VM-Komponenten (S4) MUESSEN in Rust (Memory-Safety) erfolgen; unsicherer Fremdcode in diesen Pfadketten ist unzulaessig. Der Language-Policy-Check ist Teil des G18-Security-Audits (AD-023).
+- TCB-Schutz: Nur Rust in L1-L3 (Memory Safety, no_std, deterministische
+  Ausführung); Python/AI MUSS NICHT Konsens oder Kernel kontrollieren —
+  KI-Governance per ATC/ATS-Trennung (ATC-STD-TUD-001 §ATC-TECH-004).
+- Supply Chain: Neue Sprachen/Frameworks = neue Angriffsfläche → TUD-001-
+  Klassifikation + ATC-STD-019 (Supply Chain Security) vor Einführung.
+- WASM-Sandbox: WASM-Komponenten gelten als untrusted code; ATC Bytecode
+  behält eigene Semantics (keine ungeprüfte Gleichsetzung).
+- FFI/C-Grenze: Jede C-ABI/FFI-Stelle MUSS technisch begründet und im
+  Repository-Audit sichtbar sein.
 
 ## Implementierungsstatus
 
-| Zustand | Wert |
-|---|---|
-| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
-| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |
+**Status: SPECIFIED** — Normativ spezifiziert, Wartet auf §9-Freigabe;
+Implementierungs-Evidence entsteht über Technology Profile Audits je Repository
+(S. ATC-STD-REPO-AUDIT-003): aktuelle R1-Skelette sind Soll-Zustand; bekannte
+Policy-Drifts (atclang nur Python, a-townchain ohne Rust-Chain-Code) sind
+als Findings zu führen und über SCR zu beheben. Kein Status ohne Evidence
+(ATC-STD-000 §14). SSOT für Implementierungsstand: registry/standard-
+implementation.yaml.
 
 ## Changelog
 
-- 1.0.0 (2026-09-07): Initiale Fassung. Layer-Modell L1–L5, Sprachbindungen, Ausnahme-Regelung fuer Referenz-Implementierungen, Technology Profile Audit als SHOULD-Regel. Status: CANDIDATE (wartet auf APPROVED gemaess ATC-STD-000 §9).
+- v2.0.0 (2026-09-11): Owner-Entwurf Language Architecture — L0-L8-Layer-
+  Modell, Entscheidungskaskade, Repository-Matrix, Governance-Kopplung an
+  TUD-001/REPO-AUDIT-003, Migration von v1.0.0 (5-Layer) dokumentiert.
+  Status CANDIDATE (SCR-0093).
+- v1.0.0 (2026-09-07): 5-Layer-Modell (L1 Rust Core, L2 TypeScript App,
+  L3 AI, L4 OS Rust, L5 Markdown), Sprachbindungen, Ausnahmen, Technology
+  Profile Audit. Status APPROVED.
 
 ## References
 
-**NORMATIVE**
-- ATC-STD-000 — Standards Governance & Specification Standard (Verfassung; v1.1.0, APPROVED)
-- registry/categories.yaml — ID-Raeume (100er-Block: Architektur)
-- registry/repositories.yaml — maschinenlesbare Layer-/Domain-Zuordnung
-
-**INFORMATIVE**
-- AD-021/AD-022 — Rust-first ATCLang, 21-Crate-Layout, Gates G0–G19
-- AD-043/AD-044 — atc-vm, atc-algorithm (Beispiel-Repos fuer S-14-Kernkomponenten)
-- REPOSITORY_MAP.md (a-townchain-os-docs) — Technology Profile je Repository
+- ATC-STD-000 — Governance Root (§9 Lifecycle, §10 RFC 2119, §14 Evidence)
+- ATC-99 / ATCLang First Policy — native Programmierung
+- ATC-STD-202 — Repository Naming & Classification (Rollen/Scope)
+- ATC-STD-TUD-001 — Technology Uniqueness & Differentiation (Technologieauswahl)
+- ATC-STD-REPO-AUDIT-003 — Repository-Audit (Sprachprofil-Drift)
+- AD-021/AD-022 — ATCLang Rust-first, 21-Crate-Layout
+- AD-026 — Ökosystem-Layer-Modell (unberührt, Mapping §6)
+- audits/PRIOR-ART-2026-09-11.md — Technologie-Klassifikationen des Stacks

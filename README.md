@@ -6,12 +6,12 @@
 | Kennzahl | Wert |
 |---|---|
 | Registry Standards | **450** |
-| Registry APPROVED | **438** |
-| Registry CANDIDATE (§33) | **0** |
+| Registry APPROVED | **437** |
+| Registry CANDIDATE (§33) | **1** |
 | Standard-Dateien (`standards/`) | **449** |
 | Familien | **51** |
-| Registry SHA-256 | `74e75c2cccab4f34…` (vollständig: `registry/registry.lock`) |
-| Stand | 2026-09-11 01:44 UTC+2 |
+| Registry SHA-256 | `28b71eeed794a869…` (vollständig: `registry/registry.lock`) |
+| Stand | 2026-09-11 01:53 UTC+2 |
 
 Implementierungs-Matrix: [`registry/standard-implementation.yaml`](registry/standard-implementation.yaml) (ATC-STD-IMPLEMENTATION-001).
 

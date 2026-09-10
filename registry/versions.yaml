@@ -223,6 +223,9 @@ versions:
     change: 'Owner-Sammelfreigabe 07.09.2026 20:05 UTC+2 (alle restlichen offenen Punkte): -> APPROVED,
       normativ in Kraft; dokumentiert in approval/APPROVAL-DECISION-2026-09-07-ALL-REMAINING.md'
   ATC-STD-100:
+  - version: 2.0.0
+    date: '2026-09-11'
+    change: 'Owner-Entwurf Language Architecture (SCR-0093): L0-L8-Layer-Modell, Entscheidungskaskade, Repository-Matrix, TUD-001-Kopplung, Migration v1->v2; Status CANDIDATE — bis §9-Freigabe gilt v1.0.0 APPROVED'
   - version: 1.0.0
     date: '2026-09-07'
     change: 'Initialer Registry-Eintrag: Language & Technology Stack Standard v1.0.0 (Owner-Entwurf 07.09.2026)'

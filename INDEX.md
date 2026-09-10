@@ -122,7 +122,7 @@ Kernregister: **standards.yaml** (Bestand, 450 Standards) · **versions.yaml**
 | FAM-50 | CI/CD-Standards (CICD) | 1 | 1 | 0 |
 | FAM-51 | Technology Uniqueness & Differentiation (TUD) | 1 | 1 | 0 |
 
-Statusverteilung der 450 Registry-Standards: {'approved': 438, 'draft': 12}.
+Statusverteilung der 450 Registry-Standards: {'approved': 437, 'candidate': 1, 'draft': 12}.
 Alle 450 sind APPROVED und normativ (§30-eingefroren); Details je Standard
 in registry/standards.yaml und registry/versions.yaml.
 
@@ -223,7 +223,7 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 | ATC-STD-093 | Refactoring Standard | development | 1.2.0 | approved | standards/development/ATC-STD-093.md |
 | ATC-STD-094 | Technical Debt Standard | development | 1.2.0 | approved | standards/development/ATC-STD-094.md |
 | ATC-STD-095 | Build Standard | development | 1.2.0 | approved | standards/development/ATC-STD-095.md |
-| ATC-STD-100 | Language & Technology Stack Standard | architecture | 1.0.0 | approved | standards/architecture/ATC-STD-100.md |
+| ATC-STD-100 | Language & Technology Stack Standard | architecture | 2.0.0 | candidate | standards/architecture/ATC-STD-100.md |
 | ATC-STD-101 | Branch Naming Standard | repository | 1.2.0 | approved | standards/repository/ATC-STD-101.md |
 | ATC-STD-103 | Commit Message Standard | repository | 1.2.0 | approved | standards/repository/ATC-STD-103.md |
 | ATC-STD-104 | Pull Request Standard | repository | 1.2.0 | approved | standards/repository/ATC-STD-104.md |
@@ -585,7 +585,7 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 
 ## 5. Statusmodell (Registry-Lifecycle)
 
-Registry-Statusverteilung (Ist): {'approved': 438, 'draft': 12}. Lifecycle der Standards-Entwicklung
+Registry-Statusverteilung (Ist): {'approved': 437, 'candidate': 1, 'draft': 12}. Lifecycle der Standards-Entwicklung
 gemäß ATC-STD-STDDEV-001 / ATC-STD-TAXONOMY-001: Entwurf (Owner-Entwurf/SCR) →
 §9-Freigabe (Owner, Human-Gate) → APPROVED (normativ, §30-eingefroren) → ggf.
 DEPRECATED/RETIRED via Change-Control (ATC-STD-CHANGE-001). Protokolle folgen
