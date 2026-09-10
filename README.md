@@ -224,3 +224,10 @@ Additional ATC usage terms (separate from Apache-2.0) are governed by the ATC-LI
 - **Maintainer:** Aurora #1 (operative Pflege, AUD-pflichtig)
 
 Machine-readable metadata: see HTML comment block at top (ATC-STD-README-001 §14).
+
+## Registry-vs-Dateien-Relation (SCR-0086, Deep-Dive P1-03)
+
+444 Registry-Einträge vs. 443 Standard-Dateien ist EXPLIZIT: `ATC-STD-000` (Master-Dokument)
+liegt als Master-Beschreibung außerhalb von `standards/` und ist als Meta-Eintrag EXEMPT.
+Regel: Jeder Registry-Eintrag besitzt eine Datei in `standards/` ODER eine dokumentierte
+EXEMPT-Begruendung. (Historischer Stand 08.09.2026 — aktuelle Zahlen ausschließlich in der generierten Kopfsektion, SCR-0086)
