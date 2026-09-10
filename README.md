@@ -24,17 +24,17 @@ Implementierungs-Matrix: [`registry/standard-implementation.yaml`](registry/stan
 ## Status
 
 **Status:** `release-candidate` — Governance technisch weit fortgeschritten
-(externes Audit 08.09.: B/AMBER, SCR-0052). 431 Standards normativ definiert;
+(externes Audit 08.09.: B/AMBER, SCR-0052). 444 Standards normativ definiert;
 191 nachweisbar umgesetzt/enforced; 240 specification-only.
 
 ## Purpose
 
 ATC Standards is the canonical normative governance layer of the A-TownChain ecosystem. It maintains:
 
-- **Registry:** SSOT für alle 431 Standards mit Versionierung, Dependencies (DAG) und Findings
+- **Registry:** SSOT für alle 444 Standards mit Versionierung, Dependencies (DAG) und Findings
 - **Verfassung:** ATC-STD-000 v1.2.0 (ID-System, Lifecycle, Change Control, Immutabilität)
 - **Validator-Suite:** atc-std-validator, atc-repo-audit (R3), atc-readme-validator
-- **Governance Framework:** 49 Familien, Enterprise-Ebenen (ATC-ENT-001..015), AI-Standards (ATC-AAS-001..025)
+- **Governance Framework:** 50 Familien, Enterprise-Ebenen (ATC-ENT-001..015), AI-Standards (ATC-AAS-001..025)
 
 All 26 organizational repositories follow these standards (Registry-First principle).
 
@@ -44,13 +44,13 @@ All 26 organizational repositories follow these standards (Registry-First princi
 
 Governance-Root der A-TownChain-Organisation: Registry, Standards,
 Schemata, Validatoren, Audits und Change-Requests. In Scope: normative
-Standards (430 Dateien, 49 Familien) und ihre Metadaten/Validierung.
+Standards (443 Dateien, 50 Familien) und ihre Metadaten/Validierung.
 Out of Scope: Implementierung der Standards (liegt in den 26 Repos und
 deren CI-Gates; Nachweis via Implementierungs-Matrix).
 
 ## Features
 
-- Registry-SSOT (`standards.yaml`, SHA-Lock) mit 431 Standards und
+- Registry-SSOT (`standards.yaml`, SHA-Lock) mit 444 Standards und
   schema-validierten Metadaten (SCR-0050)
 - Validatoren: S-01..S-17, Meta-Sweep, Meta-Daten-Audit, README-Validator
 - Implementierungs-Matrix (SCR-0048) — kein Status ohne Evidence
