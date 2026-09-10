@@ -23,7 +23,7 @@ jobs:
           import yaml
           w = yaml.safe_load(open("registry/standards.yaml", encoding="utf-8"))
           n = len(w.get("standards", []))
-          assert n == 444, f"Registry-Anzahl {n} != 444 (gen_views-SSOT)"
+          assert n >= 446, f"Registry-Anzahl {n} unerwartet geschrumpft (< 446, Kollaps-Schutz SCR-0087); Wachstum deckt der Views-Drift-Gate ab (kein statischer Pin mehr)"
           print(f"Registry OK: {n} Standards")
           PY
       - name: Evidence-Bindung (SCR-0086 idempotentes test_run-Update je Lauf + hartes Push-Gate)
