@@ -84,3 +84,22 @@ jobs:
         run: |
           pip install pyyaml -q
           python3 tools/repo_registry_check.py
+      - name: Views-Drift-Check (gen_views, REQ-IMP-006, SCR-0081)
+        run: |
+          pip install pyyaml -q
+          python3 tools/gen_views/generate_views.py
+          python3 - <<'PY'
+          import subprocess, re
+          diff = subprocess.run(["git", "diff", "-U0", "--", "README.md", "AGENT_MANIFEST.md", "STATUS.md", "registry/registry.lock"], capture_output=True, text=True).stdout
+          ts = re.compile(r"\d{4}-\d{2}-\d{2} \d{2}:\d{2}(?::\d{2})? UTC\+?2?")
+          sha = re.compile(r"[0-9a-f]{40}")
+          lines = [l for l in diff.splitlines() if l.startswith(("+", "-")) and not l.startswith(("+++", "---"))]
+          norm = lambda s: sha.sub("SHA", ts.sub("TS", s))
+          plus = sorted(norm(l[1:]) for l in lines if l.startswith("+"))
+          minus = sorted(norm(l[1:]) for l in lines if l.startswith("-"))
+          if plus != minus:
+              print("VIEWS-DRIFT FAIL: Registry geaendert ohne Views-Regeneration (REQ-IMP-006: keine Handzahlen)")
+              print(diff[:1500])
+              raise SystemExit(1)
+          print("Views-Drift-Check OK (nur Zeitstempel-Delta)")
+          PY
