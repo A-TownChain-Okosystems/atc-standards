@@ -7179,3 +7179,9 @@ versions:
     - {version: "1.0.0", date: "2026-09-10", change: "Initial Release APPROVED: Owner-Direktive 10.09. (SCR-0087) — Inventur-Standard als Partner von ATC-STD-017; §9-Freigabe via Owner-Direktive"}
   ATC-STD-017:
     - {version: "1.0.0", date: "2026-09-10", change: "Initial Release APPROVED: Owner-Direktive 10.09. (SCR-0087) — Lifecycle-Standard fuer obsolete/verwaiste Artefakte, P1, §30-eingefroren; §9-Freigabe via Owner-Direktive"}
+  ATC-STD-018:
+    - {version: "1.0.0", date: "2026-09-10", change: "Initial Release APPROVED: Owner-Direktive 10.09. (SCR-0088) — Technology Currency, Vulnerability & Security Assurance; §9-Freigabe via Owner-Direktive"}
+  ATC-STD-019:
+    - {version: "1.0.0", date: "2026-09-10", change: "Initial Release APPROVED: Owner-Direktive 10.09. (SCR-0088) — Dependency & Supply Chain Security; §9-Freigabe via Owner-Direktive"}
+  ATC-STD-020:
+    - {version: "1.0.0", date: "2026-09-10", change: "Initial Release APPROVED: Owner-Direktive 10.09. (SCR-0088) — Security Incident & Vulnerability Response; §9-Freigabe via Owner-Direktive"}

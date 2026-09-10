@@ -17,7 +17,7 @@ framework:
   families:
   - id: FAM-01
     name: Enterprise & Governance
-    range: ATC-STD-001..017
+    range: ATC-STD-001..020
     note: null
     family_refs: null
     slots:
@@ -137,18 +137,30 @@ framework:
       refs:
       - ATC-STD-017
       note: Owner-Direktive 10.09. via SCR-0087 — P1, Kerngrundsatz Audit-Signal
+    - id: ATC-STD-018
+      title: Technology Currency, Vulnerability & Security Assurance
+      status: BELEGT
+      refs:
+      - ATC-STD-018
+      note: Owner-Direktive 10.09. via SCR-0088 — Security & Technology Assurance
+    - id: ATC-STD-019
+      title: Dependency & Supply Chain Security
+      status: BELEGT
+      refs:
+      - ATC-STD-019
+      note: Owner-Direktive 10.09. via SCR-0088 — bewusst getrennt von 018
+    - id: ATC-STD-020
+      title: Security Incident & Vulnerability Response
+      status: BELEGT
+      refs:
+      - ATC-STD-020
+      note: Owner-Direktive 10.09. via SCR-0088 — Range-Verschiebung FAM-02 auf 021..033 dokumentiert
   - id: FAM-02
     name: Standards-Governance
-    range: ATC-STD-020..033
+    range: ATC-STD-021..033
     note: null
     family_refs: null
     slots:
-    - id: ATC-STD-020
-      title: Standards Lifecycle
-      status: VERWEIST
-      refs:
-      - ATC-STD-000
-      note: §11/§13
     - id: ATC-STD-021
       title: Standards Registry
       status: VERWEIST

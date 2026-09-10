@@ -5,17 +5,17 @@
 
 | Kennzahl | Wert |
 |---|---|
-| Registry Standards | **446** |
-| Registry APPROVED | **397** |
+| Registry Standards | **449** |
+| Registry APPROVED | **400** |
 | Registry CANDIDATE (§33) | **37** |
-| Standard-Dateien (`standards/`) | **445** |
+| Standard-Dateien (`standards/`) | **448** |
 | Familien | **50** |
-| Registry SHA-256 | `9522e7b99760c499…` (vollständig: `registry/registry.lock`) |
-| Stand | 2026-09-10 15:20 UTC+2 |
+| Registry SHA-256 | `9b25d16136fe3fbc…` (vollständig: `registry/registry.lock`) |
+| Stand | 2026-09-10 15:54 UTC+2 |
 
 Implementierungs-Matrix: [`registry/standard-implementation.yaml`](registry/standard-implementation.yaml) (ATC-STD-IMPLEMENTATION-001).
 
-**Implementierungs-KPI:** 446 Standards normativ definiert — 62 enforced, 129 implemented, 240 specification-only (Zielsysteme im qualitätsgetriebenen Rebuild AD-023/AD-045). Die Aussage „446 Standards implementiert“ ist unzulässig (SCR-0048).
+**Implementierungs-KPI:** 449 Standards normativ definiert — 62 enforced, 129 implemented, 240 specification-only (Zielsysteme im qualitätsgetriebenen Rebuild AD-023/AD-045). Die Aussage „449 Standards implementiert“ ist unzulässig (SCR-0048).
 
 **ATC COMPLIANCE: YES** — Repository-Audit R3 · Naming/Versioning/Ownership/Lizenz konform ([Audit-Details](#standards--compliance))
 
@@ -61,7 +61,7 @@ deren CI-Gates; Nachweis via Implementierungs-Matrix).
 
 ### Core Components
 - `registry/` — SSOT (standards.yaml, versions.yaml, dependencies.yaml, findings.yaml)
-- `standards/` — 445 Standard-Dateien in 50 Familien
+- `standards/` — 448 Standard-Dateien in 50 Familien
 - `schemas/` — naming-conventions.schema.json, milestone.schema.json, etc.
 - `tools/` — Validators, Auditors, Generators
 - `governance/`, `approval/`, `change-requests/` — Verfassung, Freigaben, SCR-System
@@ -173,7 +173,7 @@ Implementierungs-Pivot (kein Standard ohne Implementierungsstatus).
 ├── references/      # Normative Referenzen
 ├── registry/        # SSOT: standards.yaml, Matrix, Lock, Schemata-Reg
 ├── schemas/         # JSON/YAML-Schemata (standard.schema.yaml)
-├── standards/       # 445 Standard-Dateien in 50 Familien
+├── standards/       # 448 Standard-Dateien in 50 Familien
 ├── templates/       # Dokumentvorlagen
 └── tools/           # Validatoren, Generatoren, Audits (Python)
 ```

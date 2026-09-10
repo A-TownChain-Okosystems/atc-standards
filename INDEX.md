@@ -58,9 +58,9 @@ eines Standards liegt ausschließlich in seiner Standarddatei; die Registry
 | registry/teams.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
 | registry/versions.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
 
-Kernregister: **standards.yaml** (Bestand, 446 Standards) · **versions.yaml**
+Kernregister: **standards.yaml** (Bestand, 449 Standards) · **versions.yaml**
 (Versionierung je Standard) · **framework.yaml** (Katalog: 50 Familien,
-474 Slots) · **categories.yaml**
+476 Slots) · **categories.yaml**
 (Kategorien) · **taxonomy.yaml** (Domain/Familie/Kategorie) · **protocol-registry.yaml**
 (26 Protokollfamilien, Status {'draft': 10, 'planned': 16}) ·
 **findings.yaml** (Findings: 52 OPEN / 64 RESOLVED von 116).
@@ -69,8 +69,8 @@ Kernregister: **standards.yaml** (Bestand, 446 Standards) · **versions.yaml**
 
 | FAM | Familie | Slots | BELEGT | VERWEIST |
 |---|---|---|---|---|
-| FAM-01 | Enterprise & Governance | 17 | 8 | 9 |
-| FAM-02 | Standards-Governance | 14 | 2 | 12 |
+| FAM-01 | Enterprise & Governance | 20 | 11 | 9 |
+| FAM-02 | Standards-Governance | 13 | 2 | 11 |
 | FAM-03 | Repository Standards | 15 | 7 | 8 |
 | FAM-04 | Dokumentationsstandards | 16 | 8 | 8 |
 | FAM-05 | Software Development | 16 | 12 | 4 |
@@ -120,11 +120,11 @@ Kernregister: **standards.yaml** (Bestand, 446 Standards) · **versions.yaml**
 | FAM-49 | Repository Content Discovery (REPO-DISCOVERY) | 10 | 10 | 0 |
 | FAM-50 | CI/CD-Standards (CICD) | 1 | 1 | 0 |
 
-Statusverteilung der 446 Registry-Standards: {'approved': 397, 'candidate': 37, 'draft': 12}.
-Alle 446 sind APPROVED und normativ (§30-eingefroren); Details je Standard
+Statusverteilung der 449 Registry-Standards: {'approved': 400, 'candidate': 37, 'draft': 12}.
+Alle 449 sind APPROVED und normativ (§30-eingefroren); Details je Standard
 in registry/standards.yaml und registry/versions.yaml.
 
-## 4. Master-Registry-Tabelle (446 Standards)
+## 4. Master-Registry-Tabelle (449 Standards)
 
 Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 
@@ -190,6 +190,9 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 | ATC-STD-015 | Records Management Standard | enterprise | 1.2.0 | approved | standards/enterprise/ATC-STD-015.md |
 | ATC-STD-016 | Repository Artifact & File Inventory Standard (generiertes Inventar-SSOT, Manifest-Schema, Generator-Pflicht, Drift-Check) | enterprise | 1.0.0 | approved | standards/enterprise/ATC-STD-016.md |
 | ATC-STD-017 | Obsolete & Orphaned Artifact Management Standard (9 Klassen, Entscheidungslogik, Mindestzuordnung, duale Verwaist-Bestimmung, 6-Kriterien-Loeschschutz, CI-Gate 2 Stufen, Audit-Signal-Nicht-Loeschkriterium) | enterprise | 1.0.0 | approved | standards/enterprise/ATC-STD-017.md |
+| ATC-STD-018 | Technology Currency, Vulnerability & Security Assurance Standard (Technologie-Inventar, EOL-Verbot+ADR-Ausnahme, CVE/GHSA/OSV-SLAs, Attack-Klassen inkl. Blockchain, Security Baseline, CI-Security-Gate mit Merge-Block, Technology Review, TCS-Score, No-Evidence-No-Claim, Lifecycle, Statusfelder, Org-Assurance-Gate) | enterprise | 1.0.0 | approved | standards/enterprise/ATC-STD-018.md |
+| ATC-STD-019 | Dependency & Supply Chain Security Standard (Lockfiles, SBOM, Pinning, Signing/Provenance, Reproducible Builds, Registry-Sicherheit, Build-Sicherheit, Supply-Chain-Gate) | enterprise | 1.0.0 | approved | standards/enterprise/ATC-STD-019.md |
+| ATC-STD-020 | Security Incident & Vulnerability Response Standard (Erkennung->Eskalation->Containment->Patch->Verifikation->Disclosure->PIR, SEV-1..4 mit SLA, Human-Gate SEV-1/2+Disclosure) | enterprise | 1.0.0 | approved | standards/enterprise/ATC-STD-020.md |
 | ATC-STD-025 | Standards Review Standard | governance | 1.2.0 | approved | standards/governance/ATC-STD-025.md |
 | ATC-STD-027 | Standards Deprecation Standard | governance | 1.2.0 | approved | standards/governance/ATC-STD-027.md |
 | ATC-STD-040 | Repository Architecture Standard | repository | 1.2.0 | approved | standards/repository/ATC-STD-040.md |
@@ -579,7 +582,7 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 
 ## 5. Statusmodell (Registry-Lifecycle)
 
-Registry-Statusverteilung (Ist): {'approved': 397, 'candidate': 37, 'draft': 12}. Lifecycle der Standards-Entwicklung
+Registry-Statusverteilung (Ist): {'approved': 400, 'candidate': 37, 'draft': 12}. Lifecycle der Standards-Entwicklung
 gemäß ATC-STD-STDDEV-001 / ATC-STD-TAXONOMY-001: Entwurf (Owner-Entwurf/SCR) →
 §9-Freigabe (Owner, Human-Gate) → APPROVED (normativ, §30-eingefroren) → ggf.
 DEPRECATED/RETIRED via Change-Control (ATC-STD-CHANGE-001). Protokolle folgen
@@ -622,7 +625,7 @@ die Kennung dieses generierten Dokuments.
 
 atc-standards/ · INDEX.md (generiert) · README.md · CHANGELOG.md · STATUS.md ·
 LICENSE (Apache-2.0) · AGENT_MANIFEST.md · AGENTS.md · governance/ (ATC-STD-000) ·
-standards/<kategorie>/ (Fachstandards, 446-Bestand) · registry/ (24
+standards/<kategorie>/ (Fachstandards, 449-Bestand) · registry/ (24
 SSOT-Dateien) · licenses/ (ATC-LICENSE-System) · schemas/ · tools/ (Generatoren +
 atc-std-validator) · approval/ (§9-Freigabe-Archiv) · change-requests/ (SCR-0001…) ·
 docs/ (Audits & Analysen) · templates/ · .github/workflows (Governance-CI, 2) +
