@@ -965,3 +965,27 @@ findings:
   repo: atclang
   title: 'Canonical-Core Stage 3: fn-Definitionen, Kontrollfluss, Structs + Corpus-Erweiterung (Differential-Flaeche waechst mit)'
   resolution: 'SCR-0084 gelegt das Muster; Stage 3 nach Owner-Priorisierung (F-111-Paket oder separat)'
+- id: F-113
+  priority: P1
+  status: OPEN
+  repo: (org-weit)
+  title: 'test_run-Schema um total/passed/failed/skipped/artifacts erweitern (Deep-Dive P1-01)'
+  resolution: 'SCR-0086 gelegt die idempotente Basis; Zaehlparser je Sprache folgt'
+- id: F-114
+  priority: P1
+  status: OPEN
+  repo: (org-weit)
+  title: 'Evidence-Promotion auf PR-/Artifact-Modell umstellen statt Bot-Write auf main (Deep-Dive P1-09)'
+  resolution: 'Design-Vorschlag in SCR-0086; Umstellung nach P0-Stabilisierung'
+- id: F-115
+  priority: P1
+  status: OPEN
+  repo: (org-weit)
+  title: 'E2E-Conformance-Kette ATCLang->VM->Contract->Node->Consensus->Deterministic State als Release-Freeze-Gate (Deep-Dive P0-05)'
+  resolution: 'Programm-Item: verlangt durchgaengige Pipeline; Bestandteile teils vorhanden (Differential atclang, VM-MVP, Consensus-MVP)'
+- id: F-116
+  priority: P1
+  status: OPEN
+  repo: (org-weit)
+  title: 'Unabhaengiges Security-Audit der Kernkomponenten vor Release (Deep-Dive P0-06; security: not_audited bleibt ehrlich bis dahin)'
+  resolution: 'Audit-Vorbereitung laeuft ueber Evidence-Basis; Beauftragung = Owner-Entscheidung'
