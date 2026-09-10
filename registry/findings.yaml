@@ -604,3 +604,74 @@ findings:
   status: RESOLVED
   title: 'atc-storage + atc-launchpad: STATUS wies ''Build passing/Tests PASS'' ohne jede Implementierung
     aus (0 .rs/.py/Cargo.toml)'
+- alias: null
+  discovered: '2026-09-10'
+  id: F-067
+  resolution: null
+  scr: SCR-0070
+  severity: P0
+  source: Owner-Audit 10.09. (P0-01..04)
+  status: OPEN
+  title: 'atc-algorithm: Konsens-Kern unimplementiert (src/tests nur .gitkeep, kein Cargo.toml) und unspezifiziert
+    — PoH/PoS/PoW/Hybrid/Fork-Choice/Finality/Determinismus/Encoding fehlen formal (S4-Kern)'
+- alias: null
+  discovered: '2026-09-10'
+  id: F-068
+  resolution: 'README Zeile 5 auf L3 korrigiert; kanonische Org-Schichten: L0 atclang, L1 atc-shivacore,
+    L3 a-townchain'
+  scr: SCR-0070
+  severity: P1
+  source: Owner-Audit 10.09. (P1 Layer-Bezeichnung)
+  status: RESOLVED
+  title: 'a-townchain: Layer-Terminologie-Widerspruch — README ''Blockchain L1'' vs. ''kanonische Layer-3-Blockchain''
+    (3 Stellen korrekt L3)'
+- alias: null
+  discovered: '2026-09-10'
+  id: F-069
+  resolution: null
+  scr: SCR-0070
+  severity: P0
+  source: Owner-Audit 10.09. (P0-Liste, 5 Tage bis Termin); Readiness Control Plane SCR-0060
+  status: OPEN
+  title: 'a-townchain: Mainnet-Termin 15.09.2026 vs. Readiness-NO-GO — Konsens-Spec, ATVM-Determinismus/Conformance,
+    Krypto-Spec, Reproducible Build, M4-Evidence fehlen (Owner-Entscheidung Termin)'
+- alias: null
+  discovered: '2026-09-10'
+  id: F-070
+  resolution: null
+  scr: SCR-0070
+  severity: P1
+  source: Owner-Audit 10.09. (P0-1, P0-3)
+  status: OPEN
+  title: 'atclang: Versionierungs-Inkonsistenz README 1.0.0 vs. GitHub-Beschreibung v0.1.0-alpha; ''Rust-Canonical-Core''-Behauptung
+    ohne Beleg (Rust als ''optional Phase 2'') — kanonische Implementierung + Version festlegen'
+- alias: null
+  discovered: '2026-09-10'
+  id: F-071
+  resolution: null
+  scr: SCR-0070
+  severity: P1
+  source: Owner-Audit 10.09. (P1 Compute Protocol, Determinismus)
+  status: OPEN
+  title: 'atc-compute: Compute-Protokoll unspezifiziert (Job/Scheduler/Worker/Attestation/Verification/Determinismus;
+    ATC-STD-500..509-Backlog); Deterministic-/AI-/Engine-Compute trennen'
+- alias: null
+  discovered: '2026-09-10'
+  id: F-072
+  resolution: null
+  scr: SCR-0070
+  severity: P2
+  source: Owner-Audit 10.09. (P1-001)
+  status: OPEN
+  title: 'genesis-engine: Runtime-Evidence-Gap — Engine-Boot/ECS-Tick/World/Creature/Determinismus ohne
+    maschinenlesbare Evidenz (GENESIS-M7-EVIDENCE-GATE-001)'
+- alias: null
+  discovered: '2026-09-10'
+  id: F-073
+  resolution: STATUS auf NOT APPLICABLE / NOT RUN / NOT AUDITED korrigiert (No status without evidence)
+  scr: SCR-0070
+  severity: P0
+  source: Owner-Audit 10.09. (P1 Status vs. Artefakte)
+  status: RESOLVED
+  title: 'atc-algorithm: STATUS ''Build passing/Tests passing/Security clear'' ohne jede Implementierung
+    (src/tests nur .gitkeep)'

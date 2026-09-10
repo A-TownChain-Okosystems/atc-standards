@@ -3,6 +3,12 @@
 ## [unreleased] - 2026-09-09
 
 ### Added
+- **Audit-Welle 2 (SCR-0070):** a-townchain Layer-Terminologie L1→L3 (F-068
+  RESOLVED); atc-algorithm ehrlicher STATUS (F-073 RESOLVED, unbelegte PASS-Claims
+  entfernt); F-067/069/070/071/072 registriert (Konsens-Spec, Mainnet-Termin,
+  atclang Versionierung/Canonical-Core, Compute-Protokoll, Genesis-Evidence).
+  Lizenz-Befunde der Welle-2-Audits waren bereits durch SCR-0069/F-065 erledigt.
+
 - **Audit-Welle SCR-0069:** Org-weite Lizenz-Konsistenz (F-065, P0 RESOLVED —
   26 Repos auf Apache-2.0 synchronisiert gem. AD-F-046); ehrliche STATUS-Claims
   (F-066, P0 RESOLVED — atc-storage/atc-launchpad: unbelegte PASS-Behauptungen
