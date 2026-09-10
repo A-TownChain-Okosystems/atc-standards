@@ -209,7 +209,7 @@ See [`SECURITY.md`](SECURITY.md) for the full disclosure policy.
 
 Additional ATC usage terms (separate from Apache-2.0) are governed by the ATC-LICENSE-Familie (ATC-STD-LICENSE-001..009). Governance documents, trademarks, and organizational assets follow separate policies.
 
-**No proprietary claims** conflict with the LICENSE file.
+**No Apache-2.0 claims** conflict with the LICENSE file.
 
 ---
 
