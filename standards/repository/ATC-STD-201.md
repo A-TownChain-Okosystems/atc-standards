@@ -115,7 +115,7 @@ Blockchain-Core / ATCLang / Wallet-Referenzmuster wie in v1.0.0-PROPOSED.
 - README.md MUSS existieren (alle Level); ab R2 MUSS es die 12 Pflichtabschnitte
   enthalten (Purpose, Scope, Architecture, Features, Repository Structure,
   Installation, Development, Testing, Security, Roadmap, Versioning, License).
-- LICENSE MUSS existieren (proprietaer, All Rights Reserved).
+- LICENSE MUSS existieren (proprietaer, Apache-2.0 lizenziert — siehe LICENSE).
 - SECURITY.md MUSS ab R2, CHANGELOG.md MUSS ab R2 existieren.
 - docs/REPOSITORY_STANDARD.md MUSS ab R1 existieren (Klassifizierung + Mapping).
 - docs/decisions/ (ADRs) MUSS ab R2 gefuehrt werden — ODER das Repository
