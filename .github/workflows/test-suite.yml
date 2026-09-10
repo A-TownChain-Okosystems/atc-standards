@@ -60,7 +60,7 @@ jobs:
           if git diff --cached --quiet; then echo "keine Evidence-Aenderung"; exit 0; fi
           git commit -m "chore(evidence): bound_commit + test_run aktualisiert (SCR-0086, PR-Promotion) [skip ci]"
           git push origin "$BR"
-          curl -sf -X POST -H "Authorization: token ${GITHUB_TOKEN}" -H "Accept: application/vnd.github+json" \\
-            "https://api.github.com/repos/A-TownChain-Okosystems/atc-standards/pulls" \\
+          curl -sf -X POST -H "Authorization: token ${GITHUB_TOKEN}" -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/A-TownChain-Okosystems/atc-standards/pulls" \
             -d "{\"head\":\"${BR}\",\"base\":\"main\",\"title\":\"chore(evidence): test_run-Bindung Lauf ${GITHUB_RUN_ID}\",\"body\":\"Automatische Evidence-Promotion (SCR-0087, F-114-Pilot) — Main-PR-Schutz verlangt PR-Weg statt Direktpush. Hartes Gate: Push+PR-Erstellung muessen erfolgreich sein. Merge via Governance.\"}"
           echo "Evidence-PR erstellt: ${BR}"
