@@ -1634,3 +1634,6 @@
 - .atc-Referenzimplementierungen (registry.atc + 4 Standards-Vertraege,
   aus atc-contracts modules/atc-standards-refs)
 - Repo ist SPEC-Typ R3 gemaess eigener Klassifizierung (self-compliant)
+
+## [Unreleased] — SCR-0075 (2026-09-10)
+- Org-Compliance-Scan als dauerhaftes Tool `org_compliance_scan.py` im .github-Hub verankert (F-091 RESOLVED); Erstlauf 25/25 COMPLIANT nach 12 sofort gefixten Findings; wöchentlicher GitHub-Action-Lauf; Hub-Merge via PR #3.

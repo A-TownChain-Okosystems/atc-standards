@@ -390,3 +390,5 @@ State/Evidence), Aurora (CAP/MEM/TB/S2), Shivacore (Test-Evidence/Dep-Policy).
 Alle 0.1.0-DRAFT mit ehrlichen Status-Gates: Spec-Freeze (Owner §9) →
 Implementierung → Evidence. Implementation-Pivot geht damit in Phase
 „Spec-Freeze-Reviews je Paket".
+
+- **SCR-0075 (2026-09-10):** F-091 RESOLVED — org_compliance_scan.py live im .github-Hub (PR #3, Owner-Review offen); Erstlauf 25/25 COMPLIANT.
