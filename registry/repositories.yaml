@@ -1,5 +1,5 @@
 # ATC Repository Registry (SSOT) — SCR-0080 (Owner-P0-02 Canonical Ownership + P1 Repository Inventory)
-# 27 GitHub-Repos == 27 Registry-Einträge == 27 Evidence-Dateien (CI-geprüft via tools/repo_registry_check.py)
+# Ehrlicher Stand (SCR-0081): 27 Registry-Einträge · 26 Evidence-Dateien auf main · 27. (.github) via PR #4
 # Layer-Taxonomie: DRAFT bis ATC-STD-LAYER-001 (F-096) — System-Layer, NICHT Blockchain-Protocol-Layer.
 schema_version: "1.0.0"
 generated: "2026-09-10"
@@ -34,8 +34,8 @@ capabilities:   # P0-02: je Funktion EXAKT EIN kanonisches Repository (CI-enforc
     canonical_repo: aurora-ai
     role: canonical
   blockchain_orchestration:
-    canonical_repo: UNBESETZT
-    role: AMBIGUOUS(0)
+    canonical_repo: a-townchain
+    role: canonical
     note: 'Konsens-Implementierung liegt KANONISCH bei atc-algorithm (capability: consensus). a-townchain orchestriert nur — keine zweite Konsens-Implementierung (F-105).'
   integration:
     canonical_repo: a-townchain-os
@@ -101,30 +101,30 @@ capabilities:   # P0-02: je Funktion EXAKT EIN kanonisches Repository (CI-enforc
     canonical_repo: .github
     role: canonical
 repositories:
-  - {name: atc-standards, id: ATC-REPO-GOV-001, domain: governance, layer: L7, criticality: C1, security_class: S3, maturity_class: A, canonical: True, evidence: .atc/evidence/evidence.yaml, exempt: false}
-  - {name: a-townchain-os-docs, id: ATC-REPO-ARCH-001, domain: architecture_docs, layer: L7, criticality: C1, security_class: S3, maturity_class: A, canonical: True, evidence: .atc/evidence/evidence.yaml, exempt: false}
-  - {name: atc-shivacore, id: ATC-REPO-KERN-001, domain: kernel, layer: L1, criticality: C1, security_class: S4, maturity_class: A, canonical: True, evidence: .atc/evidence/evidence.yaml, exempt: false}
-  - {name: atclang, id: ATC-REPO-LANG-001, domain: language, layer: L0, criticality: C1, security_class: S4, maturity_class: A, canonical: True, evidence: .atc/evidence/evidence.yaml, exempt: false}
-  - {name: aurora-ai, id: ATC-REPO-AI-001, domain: ai_platform, layer: L2, criticality: C1, security_class: S3, maturity_class: A, canonical: True, evidence: .atc/evidence/evidence.yaml, exempt: false}
-  - {name: a-townchain, id: ATC-REPO-CHAIN-001, domain: blockchain, layer: L3, criticality: C1, security_class: S4, maturity_class: A, canonical: False, evidence: .atc/evidence/evidence.yaml, exempt: false}
-  - {name: a-townchain-os, id: ATC-REPO-INT-001, domain: integration, layer: L7, criticality: C1, security_class: S3, maturity_class: A, canonical: True, evidence: .atc/evidence/evidence.yaml, exempt: false}
-  - {name: atc-vm, id: ATC-REPO-VM-001, domain: runtime, layer: L5, criticality: C1, security_class: S4, maturity_class: B, canonical: True, evidence: .atc/evidence/evidence.yaml, exempt: false}
-  - {name: atc-node, id: ATC-REPO-NODE-001, domain: node_runtime, layer: L3, criticality: C1, security_class: S4, maturity_class: B, canonical: True, evidence: .atc/evidence/evidence.yaml, exempt: false}
-  - {name: atc-contracts, id: ATC-REPO-CONTR-001, domain: contracts, layer: L5, criticality: C1, security_class: S4, maturity_class: B, canonical: True, evidence: .atc/evidence/evidence.yaml, exempt: false}
-  - {name: atc-algorithm, id: ATC-REPO-CONS-001, domain: consensus, layer: L3, criticality: C1, security_class: S4, maturity_class: B, canonical: True, evidence: .atc/evidence/evidence.yaml, exempt: false}
-  - {name: atc-zkp, id: ATC-REPO-ZKP-001, domain: zkp, layer: L3, criticality: C1, security_class: S4, maturity_class: B, canonical: True, evidence: .atc/evidence/evidence.yaml, exempt: false}
-  - {name: atc-wallet, id: ATC-REPO-WALL-001, domain: wallet, layer: L5, criticality: C1, security_class: S4, maturity_class: B, canonical: True, evidence: .atc/evidence/evidence.yaml, exempt: false}
-  - {name: atc-sdk, id: ATC-REPO-SDK-001, domain: sdk, layer: L5, criticality: C2, security_class: S3, maturity_class: B, canonical: True, evidence: .atc/evidence/evidence.yaml, exempt: false}
-  - {name: atc-indexer, id: ATC-REPO-IDX-001, domain: indexing, layer: L5, criticality: C2, security_class: S3, maturity_class: B, canonical: True, evidence: .atc/evidence/evidence.yaml, exempt: false}
-  - {name: atc-explorer, id: ATC-REPO-EXPL-001, domain: explorer, layer: L5, criticality: C3, security_class: S2, maturity_class: B, canonical: True, evidence: .atc/evidence/evidence.yaml, exempt: false}
-  - {name: atc-interop, id: ATC-REPO-INTOP-001, domain: interoperability, layer: L3, criticality: C1, security_class: S4, maturity_class: B, canonical: True, evidence: .atc/evidence/evidence.yaml, exempt: false}
-  - {name: atc-oracle, id: ATC-REPO-ORAC-001, domain: oracle, layer: L3, criticality: C1, security_class: S4, maturity_class: B, canonical: True, evidence: .atc/evidence/evidence.yaml, exempt: false}
-  - {name: atc-mining, id: ATC-REPO-MINE-001, domain: mining, layer: L3, criticality: C2, security_class: S4, maturity_class: B, canonical: True, evidence: .atc/evidence/evidence.yaml, exempt: false}
-  - {name: atc-storage, id: ATC-REPO-STOR-001, domain: storage, layer: L5, criticality: C2, security_class: S4, maturity_class: B, canonical: True, evidence: .atc/evidence/evidence.yaml, exempt: false}
-  - {name: atc-compute, id: ATC-REPO-COMP-001, domain: compute, layer: L5, criticality: C2, security_class: S3, maturity_class: B, canonical: True, evidence: .atc/evidence/evidence.yaml, exempt: false}
-  - {name: atc-marketplace, id: ATC-REPO-MKT-001, domain: marketplace, layer: L6, criticality: C2, security_class: S3, maturity_class: B, canonical: True, evidence: .atc/evidence/evidence.yaml, exempt: false}
-  - {name: atc-launchpad, id: ATC-REPO-LP-001, domain: launchpad, layer: L6, criticality: C2, security_class: S3, maturity_class: B, canonical: True, evidence: .atc/evidence/evidence.yaml, exempt: false}
-  - {name: globus-os, id: ATC-REPO-OS-001, domain: operating_system, layer: L4, criticality: C1, security_class: S4, maturity_class: C, canonical: True, evidence: .atc/evidence/evidence.yaml, exempt: false}
-  - {name: genesis-engine, id: ATC-REPO-GEN-001, domain: game_engine, layer: L6, criticality: C3, security_class: S2, maturity_class: C, canonical: True, evidence: .atc/evidence/evidence.yaml, exempt: false}
-  - {name: genesis-chronicles, id: ATC-REPO-GAME-001, domain: game, layer: L6, criticality: C3, security_class: S2, maturity_class: C, canonical: True, evidence: .atc/evidence/evidence.yaml, exempt: false}
-  - {name: .github, id: ATC-REPO-HUB-001, domain: governance_hub, layer: L7, criticality: C1, security_class: S3, maturity_class: A, canonical: True, evidence: .atc/evidence/evidence.yaml, exempt: true}   # Hub: PR-Pflicht-Regime
+  - {name: atc-standards, id: ATC-REPO-GOV-001, domain: governance, layer: L7, criticality: C1, security_class: S3, maturity_class: A, canonical: true, evidence: .atc/evidence/evidence.yaml, exempt: false}
+  - {name: a-townchain-os-docs, id: ATC-REPO-ARCH-001, domain: architecture_docs, layer: L7, criticality: C1, security_class: S3, maturity_class: A, canonical: true, evidence: .atc/evidence/evidence.yaml, exempt: false}
+  - {name: atc-shivacore, id: ATC-REPO-KERN-001, domain: kernel, layer: L1, criticality: C1, security_class: S4, maturity_class: A, canonical: true, evidence: .atc/evidence/evidence.yaml, exempt: false}
+  - {name: atclang, id: ATC-REPO-LANG-001, domain: language, layer: L0, criticality: C1, security_class: S4, maturity_class: A, canonical: true, evidence: .atc/evidence/evidence.yaml, exempt: false}
+  - {name: aurora-ai, id: ATC-REPO-AI-001, domain: ai_platform, layer: L2, criticality: C1, security_class: S3, maturity_class: A, canonical: true, evidence: .atc/evidence/evidence.yaml, exempt: false}
+  - {name: a-townchain, id: ATC-REPO-CHAIN-001, domain: blockchain, layer: L3, criticality: C1, security_class: S4, maturity_class: A, canonical: true, evidence: .atc/evidence/evidence.yaml, exempt: false}
+  - {name: a-townchain-os, id: ATC-REPO-INT-001, domain: integration, layer: L7, criticality: C1, security_class: S3, maturity_class: A, canonical: true, evidence: .atc/evidence/evidence.yaml, exempt: false}
+  - {name: atc-vm, id: ATC-REPO-VM-001, domain: runtime, layer: L5, criticality: C1, security_class: S4, maturity_class: B, canonical: true, evidence: .atc/evidence/evidence.yaml, exempt: false}
+  - {name: atc-node, id: ATC-REPO-NODE-001, domain: node_runtime, layer: L3, criticality: C1, security_class: S4, maturity_class: B, canonical: true, evidence: .atc/evidence/evidence.yaml, exempt: false}
+  - {name: atc-contracts, id: ATC-REPO-CONTR-001, domain: contracts, layer: L5, criticality: C1, security_class: S4, maturity_class: B, canonical: true, evidence: .atc/evidence/evidence.yaml, exempt: false}
+  - {name: atc-algorithm, id: ATC-REPO-CONS-001, domain: consensus, layer: L3, criticality: C1, security_class: S4, maturity_class: B, canonical: true, evidence: .atc/evidence/evidence.yaml, exempt: false}
+  - {name: atc-zkp, id: ATC-REPO-ZKP-001, domain: zkp, layer: L3, criticality: C1, security_class: S4, maturity_class: B, canonical: true, evidence: .atc/evidence/evidence.yaml, exempt: false}
+  - {name: atc-wallet, id: ATC-REPO-WALL-001, domain: wallet, layer: L5, criticality: C1, security_class: S4, maturity_class: B, canonical: true, evidence: .atc/evidence/evidence.yaml, exempt: false}
+  - {name: atc-sdk, id: ATC-REPO-SDK-001, domain: sdk, layer: L5, criticality: C2, security_class: S3, maturity_class: B, canonical: true, evidence: .atc/evidence/evidence.yaml, exempt: false}
+  - {name: atc-indexer, id: ATC-REPO-IDX-001, domain: indexing, layer: L5, criticality: C2, security_class: S3, maturity_class: B, canonical: true, evidence: .atc/evidence/evidence.yaml, exempt: false}
+  - {name: atc-explorer, id: ATC-REPO-EXPL-001, domain: explorer, layer: L5, criticality: C3, security_class: S2, maturity_class: B, canonical: true, evidence: .atc/evidence/evidence.yaml, exempt: false}
+  - {name: atc-interop, id: ATC-REPO-INTOP-001, domain: interoperability, layer: L3, criticality: C1, security_class: S4, maturity_class: B, canonical: true, evidence: .atc/evidence/evidence.yaml, exempt: false}
+  - {name: atc-oracle, id: ATC-REPO-ORAC-001, domain: oracle, layer: L3, criticality: C1, security_class: S4, maturity_class: B, canonical: true, evidence: .atc/evidence/evidence.yaml, exempt: false}
+  - {name: atc-mining, id: ATC-REPO-MINE-001, domain: mining, layer: L3, criticality: C2, security_class: S4, maturity_class: B, canonical: true, evidence: .atc/evidence/evidence.yaml, exempt: false}
+  - {name: atc-storage, id: ATC-REPO-STOR-001, domain: storage, layer: L5, criticality: C2, security_class: S4, maturity_class: B, canonical: true, evidence: .atc/evidence/evidence.yaml, exempt: false}
+  - {name: atc-compute, id: ATC-REPO-COMP-001, domain: compute, layer: L5, criticality: C2, security_class: S3, maturity_class: B, canonical: true, evidence: .atc/evidence/evidence.yaml, exempt: false}
+  - {name: atc-marketplace, id: ATC-REPO-MKT-001, domain: marketplace, layer: L6, criticality: C2, security_class: S3, maturity_class: B, canonical: true, evidence: .atc/evidence/evidence.yaml, exempt: false}
+  - {name: atc-launchpad, id: ATC-REPO-LP-001, domain: launchpad, layer: L6, criticality: C2, security_class: S3, maturity_class: B, canonical: true, evidence: .atc/evidence/evidence.yaml, exempt: false}
+  - {name: globus-os, id: ATC-REPO-OS-001, domain: operating_system, layer: L4, criticality: C1, security_class: S4, maturity_class: C, canonical: true, evidence: .atc/evidence/evidence.yaml, exempt: false}
+  - {name: genesis-engine, id: ATC-REPO-GEN-001, domain: game_engine, layer: L6, criticality: C3, security_class: S2, maturity_class: C, canonical: true, evidence: .atc/evidence/evidence.yaml, exempt: false}
+  - {name: genesis-chronicles, id: ATC-REPO-GAME-001, domain: game, layer: L6, criticality: C3, security_class: S2, maturity_class: C, canonical: true, evidence: .atc/evidence/evidence.yaml, exempt: false}
+  - {name: .github, id: ATC-REPO-HUB-001, domain: governance_hub, layer: L7, criticality: C1, security_class: S3, maturity_class: A, canonical: true, evidence: .atc/evidence/evidence.yaml, exempt: true}   # Hub: PR-Pflicht-Regime

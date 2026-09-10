@@ -43,13 +43,20 @@ def main():
     unknown = used_layers - set(lay.keys())
     if unknown: errs.append(f"Unbekannte Layer benutzt: {unknown}")
     if args.github:
-        import requests, os
+        import os
+        import urllib.request
         tok = os.environ.get("GITHUB_TOKEN") or os.environ.get("GITHUB_ACCESS_TOKEN")
-        hh = {"Authorization": f"Bearer {tok}"} if tok else {}
         for r in repos:
-            resp = requests.get(f"https://api.github.com/repos/A-TownChain-Okosystems/{r['name']}", headers=hh)
-            if resp.status_code != 200:
-                errs.append(f"GitHub: {r['name']} nicht erreichbar ({resp.status_code})")
+            req = urllib.request.Request(f"https://api.github.com/repos/A-TownChain-Okosystems/{r['name']}")
+            if tok: req.add_header("Authorization", f"Bearer {tok}")
+            try:
+                resp = urllib.request.urlopen(req); status = resp.status
+            except urllib.error.HTTPError as e:
+                status = e.code
+            except Exception:
+                status = 0
+            if status != 200:
+                errs.append(f"GitHub: {r['name']} nicht erreichbar ({status})")
     if errs:
         print("REPO-REGISTRY-CHECK FAIL:")
         for e in errs: print(" -", e)

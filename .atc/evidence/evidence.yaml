@@ -11,7 +11,7 @@ maturity_class: A          # A=substanziell B=Rebuild/Produkt C=Plattform/Anwend
 r_level: null
 implementation:
   status: substantial        # substantial|partial|skeleton|docs_only
-  summary: "Normative SSOT: 447 Registry-Eintraege, Validator, Tools, Compliance-Reports"
+  summary: "Normative SSOT; Kennzahlen GENERIERT via tools/gen_views (SCR-0081: 444 Standards, 395 APPROVED, 37 CANDIDATE — registry.lock gebunden)"
 tests:
   status: not_run       # pass_with_evidence|not_run|not_applicable
   evidence: "Validator-Runs + Governance-CI gruen (e690483); Test-Suite fuer Tools offen (F-104)"
