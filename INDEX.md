@@ -56,16 +56,17 @@ eines Standards liegt ausschließlich in seiner Standarddatei; die Registry
 | registry/standards.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
 | registry/taxonomy.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
 | registry/teams.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
+| registry/technology-registry.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
 | registry/versions.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
 
 Kernregister: **standards.yaml** (Bestand, 449 Standards) · **versions.yaml**
-(Versionierung je Standard) · **framework.yaml** (Katalog: 50 Familien,
-476 Slots) · **categories.yaml**
+(Versionierung je Standard) · **framework.yaml** (Katalog: 51 Familien,
+477 Slots) · **categories.yaml**
 (Kategorien) · **taxonomy.yaml** (Domain/Familie/Kategorie) · **protocol-registry.yaml**
 (26 Protokollfamilien, Status {'draft': 10, 'planned': 16}) ·
 **findings.yaml** (Findings: 52 OPEN / 64 RESOLVED von 116).
 
-## 3. Standardfamilien (Katalog, 50 Familien)
+## 3. Standardfamilien (Katalog, 51 Familien)
 
 | FAM | Familie | Slots | BELEGT | VERWEIST |
 |---|---|---|---|---|
@@ -119,6 +120,7 @@ Kernregister: **standards.yaml** (Bestand, 449 Standards) · **versions.yaml**
 | FAM-48 | Implementation Tracking (IMPLEMENTATION) | 1 | 1 | 0 |
 | FAM-49 | Repository Content Discovery (REPO-DISCOVERY) | 10 | 10 | 0 |
 | FAM-50 | CI/CD-Standards (CICD) | 1 | 1 | 0 |
+| FAM-51 | Technology Uniqueness & Differentiation (TUD) | 1 | 1 | 0 |
 
 Statusverteilung der 449 Registry-Standards: {'approved': 400, 'candidate': 37, 'draft': 12}.
 Alle 449 sind APPROVED und normativ (§30-eingefroren); Details je Standard
@@ -625,7 +627,7 @@ die Kennung dieses generierten Dokuments.
 
 atc-standards/ · INDEX.md (generiert) · README.md · CHANGELOG.md · STATUS.md ·
 LICENSE (Apache-2.0) · AGENT_MANIFEST.md · AGENTS.md · governance/ (ATC-STD-000) ·
-standards/<kategorie>/ (Fachstandards, 449-Bestand) · registry/ (24
+standards/<kategorie>/ (Fachstandards, 449-Bestand) · registry/ (25
 SSOT-Dateien) · licenses/ (ATC-LICENSE-System) · schemas/ · tools/ (Generatoren +
 atc-std-validator) · approval/ (§9-Freigabe-Archiv) · change-requests/ (SCR-0001…) ·
 docs/ (Audits & Analysen) · templates/ · .github/workflows (Governance-CI, 2) +

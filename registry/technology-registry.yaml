@@ -1,0 +1,316 @@
+# ATC Technology Registry — SSOT (ATC-STD-TUD-001, SCR-0091)
+# Klassifikationen: UNIQUE / NOVEL / DIFFERENTIATED / PENDING-EVIDENCE
+# Fail-Closed: abgelaufene review_date -> PENDING-EVIDENCE (REQ-TUD-004)
+# Schema: id, name, repo, tier, classification, differentiator, evidence,
+#         fehlende_evidence (bei PENDING), review_date, status
+schema_version: '1.0'
+generated: '2026-09-11'
+standard: ATC-STD-TUD-001
+sovereign_stack:
+  id: ATC-TECH-000
+  name: ATC Sovereign Stack (vertikale Integration)
+  these: 'Eigene vertikal integrierte Computing-Infrastruktur: Sprache, Runtime, Blockchain, OS, Kernel,
+    AI, Kryptografie, Storage, Compute, Interop unter eigenen Standards'
+  stack:
+  - ATCLang
+  - ATC-VM
+  - A-TownChain
+  - ShivaCore
+  - GlobusOS
+  - Aurora AI
+  - ZKP
+  - Algorithm
+  - Interop
+  - Oracle
+  - Storage
+  - Compute
+  - Wallet
+  tier: S
+  classification: PENDING-EVIDENCE
+  classification_note: 'Ziel-Klassifikation NOVEL - Kombination ist der Differentiator, aber Evidence-Kette
+    unvollstaendig (REQ-TUD-002): prior_art_analysis, benchmark_test_evidence, security_review offen.
+    Fail-Closed-Abstufung durch eigenen Validator am 11.09. - der Standard beweist sich selbst.'
+  evidence:
+    definition: Kombination eigener Kernkomponenten zu geschlossenem Stack
+    prior_art_analysis: 'TODO — Vergleich: Ethereum(Solidity/EVM-only), SingularityNET, existing L1s ohne
+      eigenen Kernel/OS'
+    existing_alternatives: Ethereum+Evmos-Stack, Polkadot-Substrate, NEAR
+    atc_differentiator: Eigene Sprache+VM+L1+Kernel+OS+kontrollierte AI in EINEM Governed-Stack (27 Repos,
+      449 Standards)
+    implementation_evidence: PARTIAL — 27 Repos, Rebuild AD-023 laufend
+    benchmark_test_evidence: TODO — Stack-weite E2E-Tests fehlen
+    security_review: TODO — G18 Security Audit vor Freeze (AD-023)
+    patent_ip_assessment: offen
+  review_date: '2026-12-11'
+  status: ACTIVE
+  fehlende_evidence:
+  - prior_art_analysis
+  - benchmark_test_evidence
+  - security_review
+technologies:
+- id: ATC-TECH-001
+  name: ATCLang
+  repo: atclang
+  tier: S
+  classification: DIFFERENTIATED
+  classification_note: Eigene universelle Sprache für das ATC-Computing-Modell (nicht nur 'Blockchain-Sprache');
+    Alleinstellung entsteht durch ATCLang-First-Policy (ATC-99) + native VM-Bindung
+  differentiator: Eigene Syntax, Lexer, Parser, AST, TypeChecker, Compiler, Bytecode, Ownership-Modell,
+    ABI, Security-Semantics, Gas-Modell — ~22,5k LOC, G0+G1 bestanden, Suite grün
+  evidence:
+    prior_art_analysis: TODO — Move(Sui/Aptos), Cairo(StarkWare), Michelson sind vergleichbare 'eigene
+      Chain-Sprachen'
+    implementation_evidence: atclang G1+G2 PASSED, 126/126 Tests
+    benchmark_test_evidence: PARTIAL — Test-Suite; Benchmarks TODO
+    security_review: TODO
+    patent_ip_assessment: offen
+  review_date: '2026-12-11'
+  status: ACTIVE
+- id: ATC-TECH-002
+  name: ATC-VM / ATC-Bytecode
+  repo: atc-vm
+  tier: S
+  classification: PENDING-EVIDENCE
+  classification_note: Deterministische eigene Ausführungsumgebung; Klassifikation nach EVM/WASM/POLKA-VM-Prior-Art
+  differentiator: Eigene deterministische VM mit ATC-Bytecode, ATCLang-nativ, keine EVM-Emulation (AD-007)
+  fehlende_evidence:
+  - prior_art_analysis
+  - implementation_evidence
+  - benchmark_test_evidence
+  - security_review
+  review_date: '2026-10-11'
+  status: ACTIVE
+- id: ATC-TECH-003
+  name: A-TownChain L1 (souverän, non-EVM)
+  repo: a-townchain
+  tier: S
+  classification: DIFFERENTIATED
+  classification_note: Eigene Chain-Architektur statt EVM-Fork; non-EVM ist eine bewusste Architekturentscheidung
+    (AD-007), keine Seltenheit per se — Differentiator ist die Stack-Integration
+  differentiator: Chain-ID 658467, eigene State/Tx-Struktur, ATCLang-Verträge, Chain-Protokoll + atc-node-Runtime-Trennung
+    (SCR-0005/AD-046)
+  evidence:
+    prior_art_analysis: PARTIAL — non-EVM-L1s existieren zahlreich (Solana, NEAR, Aptos); Alleinstellung
+      nur als Stack-Kern
+    implementation_evidence: Vault-Restore 217 Dateien; Rebuild laufend
+    benchmark_test_evidence: TODO
+    security_review: TODO — G18
+    patent_ip_assessment: offen
+  review_date: '2026-12-11'
+  status: ACTIVE
+- id: ATC-TECH-004
+  name: ATC/ATS-Trennung (Truth vs. Interpretation)
+  repo:
+  - a-townchain
+  - aurora-ai
+  tier: S
+  classification: PENDING-EVIDENCE
+  classification_note: Ziel-Klassifikation NOVEL (ATC/ATS-Trennung als Architektur-Axiom) - aber benchmark_test_evidence
+    + security_review offen (REQ-TUD-002). Fail-Closed-Abstufung durch eigenen Validator am 11.09.
+  differentiator: Klare Zuständigkeits-Trennung mit Policy-Gate zwischen AI-Vorschlag und kanonischem
+    State; Kill-Switch, Constitutional-AI-Pfad (Roadmap MK7)
+  evidence:
+    prior_art_analysis: PARTIAL — vergleichbare Prinzipien bei AI-Governance-Diskursen, aber selten als
+      Architektur-Axiom in L1-Konsenspfad implementiert
+    implementation_evidence: PARTIAL — ShivaCore Policy-Layer, AI-Kernel-Migration K3 offen
+    benchmark_test_evidence: TODO
+    security_review: TODO — zentrale Security-These des Stacks
+    patent_ip_assessment: offen — als Architekturprinzip dokumentierbar
+  review_date: '2026-12-11'
+  status: ACTIVE
+  fehlende_evidence:
+  - benchmark_test_evidence
+  - security_review
+- id: ATC-TECH-005
+  name: ShivaCore (Rust/no_std Capability-Microkernel)
+  repo: atc-shivacore
+  tier: S
+  classification: DIFFERENTIATED
+  classification_note: Capability-Microkernel als Trust Anchor; Microkernel existieren, no_std+Capability+AI-Trust-Boundary-Kombination
+    ist die Eigenheit — 'KI erkennt – Policy entscheidet – System führt aus'
+  differentiator: Rust no_std, Capability-Based Security, kein Ambient Authority, minimierter TCB, Human-Approval-Grenze,
+    KI außerhalb des vertrauenswürdigen Kernels; SC-001..SC-013 Rebuild
+  evidence:
+    prior_art_analysis: 'TODO — seL4, QNX, Fuchsia als Mikrokernel-Prior-Art; Capability-Systeme: CapTP,
+      CHERI'
+    implementation_evidence: Vault-Restore 125 Dateien/68 Rust-Dateien, K49 Module-Signing, K50 FS-Journaling
+    benchmark_test_evidence: TODO
+    security_review: TODO — G18 vor Freeze
+    patent_ip_assessment: offen
+  review_date: '2026-12-11'
+  status: ACTIVE
+- id: ATC-TECH-006
+  name: GlobusOS (KI-native OS-Schicht)
+  repo: globus-os
+  tier: A
+  classification: PENDING-EVIDENCE
+  classification_note: OS-/Plattformkonzept mit KI als kontrollierter Systemkomponente — Rolle zwischen
+    Aurora(Intelligence), GlobusOS(System/UX), ShivaCore(Security/Execution)
+  differentiator: Strikte Ebenen-Trennung Intelligence/UX/Security/Execution; KI als Systemkomponente
+    mit definierten Grenzen, nicht als Root
+  fehlende_evidence:
+  - prior_art_analysis
+  - implementation_evidence
+  - benchmark_test_evidence
+  - security_review
+  review_date: '2026-10-11'
+  status: ACTIVE
+- id: ATC-TECH-007
+  name: Aurora AI (lokale/offline AI-Plattform)
+  repo: aurora-ai
+  tier: A
+  classification: DIFFERENTIATED
+  classification_note: Lokale/offline AI-Plattform mit eigener Systemintegration (ShivaCore/GlobusOS-Bindung);
+    Offline-AI-Plattformen existieren — Differentiator ist die OS-Integration
+  differentiator: AI in den Kernel-Policy-Kontext eingebettet, ATS-Schnittstelle, Kill-Switch, Model-Registry
+    (Roadmap MK7)
+  evidence:
+    prior_art_analysis: TODO — Ollama, LM Studio, lokale AI-OS-Ansätze (AI-pin, Rabbit) als Vergleich
+    implementation_evidence: PARTIAL — aurora-ai Rust-Bestand real
+    benchmark_test_evidence: TODO
+    security_review: TODO
+    patent_ip_assessment: offen
+  review_date: '2026-12-11'
+  status: ACTIVE
+- id: ATC-TECH-008
+  name: ATC-ZKP-Layer
+  repo: atc-zkp
+  tier: A
+  classification: DIFFERENTIATED
+  classification_note: 'Eigene ZKP-Infrastruktur INNERHALB der Chain (kein eigenes ZK-Netzwerk); pluggable
+    Proof-Systems (AD-045) — ZK-Frameworks existieren, Differentiator: Integration in ATC-Stack'
+  differentiator: 7 Rust-Crates, pluggable (Groth16/PLONK/Halo2/STARK), Private Tx/Balances, ZK-Identity,
+    zkRollup/zkVM-Pfad
+  evidence:
+    prior_art_analysis: TODO — aztec, aleo, zokrates als Prior Art
+    implementation_evidence: atc-zkp R1-Skelett, 7 Crates (AD-045)
+    benchmark_test_evidence: TODO
+    security_review: TODO — ZKP-001..007 vor Rollup (AD-045)
+    patent_ip_assessment: offen — keine eigenen Primitiven (REQ-TUD-012)
+  review_date: '2026-12-11'
+  status: ACTIVE
+- id: ATC-TECH-009
+  name: ATC Algorithm Agility (PQC-ready)
+  repo: atc-algorithm
+  tier: A
+  classification: DIFFERENTIATED
+  classification_note: Austauschbare Krypto-Primitive statt Festverdrahtung; Algorithm-Agility-Ansätze
+    existieren (PQC-Migration), als Chain-Kern-Design selterner
+  differentiator: 'ATC-Crypto-Interface: PQC(ML-DSA/SLH-DSA)/klassisch(EdDSA)/ Zukunft — kontrollierter
+    Primitive-Tausch ohne Architektur-Rebuild'
+  evidence:
+    prior_art_analysis: TODO — PQC-Migration-Guides, liboqs-Integrationen
+    implementation_evidence: PARTIAL — atc-algorithm Repo aktiv
+    benchmark_test_evidence: TODO
+    security_review: TODO — PQC-Parameter müssen NIST-Finals folgen
+    patent_ip_assessment: offen
+  review_date: '2026-12-11'
+  status: ACTIVE
+- id: ATC-TECH-010
+  name: ATC Interop
+  repo: atc-interop
+  tier: A
+  classification: DIFFERENTIATED
+  classification_note: 'Kontrollierte Interoperabilität mit externen Chains (Roadmap MK11) — Bridges/Interop-Lösungen
+    sind Commodity; Differentiator: ATC-Stack-kontrollierte Gateways'
+  differentiator: Eigenes Interop-Gateway-Layer, ATC-seitig policy-kontrolliert, Bridge-Standards-Konsolidierung
+    (AD-009 offen)
+  evidence:
+    prior_art_analysis: TODO — IBC, LayerZero, CCIP als Referenz
+    implementation_evidence: PARTIAL — atc-interop Vault-Restore
+    benchmark_test_evidence: TODO
+    security_review: TODO — Bridge-Hacks sind Top-Risiko
+    patent_ip_assessment: offen
+  review_date: '2026-12-11'
+  status: ACTIVE
+- id: ATC-TECH-011
+  name: ATC Oracle
+  repo: atc-oracle
+  tier: A
+  classification: DIFFERENTIATED
+  classification_note: Eigene Daten-/Oracle-Infrastruktur (R1-Skelett)
+  differentiator: ATC-native Oracle-Schicht statt externer Oracle-Dienste
+  fehlende_evidence:
+  - prior_art_analysis
+  - implementation_evidence
+  review_date: '2026-11-11'
+  status: ACTIVE
+- id: ATC-TECH-012
+  name: ATC Storage
+  repo: atc-storage
+  tier: A
+  classification: DIFFERENTIATED
+  classification_note: Eigene Storage-Schicht (R1-Skelett)
+  differentiator: ATC-native Storage-Abstraktion im Stack
+  fehlende_evidence:
+  - prior_art_analysis
+  - implementation_evidence
+  review_date: '2026-11-11'
+  status: ACTIVE
+- id: ATC-TECH-013
+  name: ATC Compute
+  repo: atc-compute
+  tier: A
+  classification: DIFFERENTIATED
+  classification_note: Eigenes Compute-Modell (R1-Skelett)
+  differentiator: ATC-native Compute-Ressourcen-Schicht
+  fehlende_evidence:
+  - prior_art_analysis
+  - implementation_evidence
+  review_date: '2026-11-11'
+  status: ACTIVE
+- id: ATC-TECH-014
+  name: ATC Wallet (Identity/Signing)
+  repo: atc-wallet
+  tier: A
+  classification: DIFFERENTIATED
+  classification_note: Native Wallet-/Identity-/Signing-Schicht, BIP44 Coin-Type 658467
+  differentiator: Stack-native Identity mit Signing-Pfad im ShivaCore-Kontext
+  fehlende_evidence:
+  - prior_art_analysis
+  - implementation_evidence
+  - benchmark_test_evidence
+  review_date: '2026-11-11'
+  status: ACTIVE
+- id: ATC-TECH-015
+  name: ATC Mining / Consensus-Infrastruktur
+  repo: atc-mining
+  tier: A
+  classification: PENDING-EVIDENCE
+  classification_note: Eigene Mining-/Consensus-Infrastruktur — Klassifikation nach Konsens-Design-Freeze
+  differentiator: ATC-eigener Konsens-Mechanismus (Design offen, s. AD-002)
+  fehlende_evidence:
+  - prior_art_analysis
+  - implementation_evidence
+  review_date: '2026-10-11'
+  status: ACTIVE
+- id: ATC-TECH-016
+  name: ATC Explorer / Indexer
+  repo:
+  - atc-explorer
+  - atc-indexer
+  tier: A
+  classification: DIFFERENTIATED
+  classification_note: Native Infrastruktur statt externe Blockchain-Tools (Vault-Restore vorhanden)
+  differentiator: ATC-native Indexierung auf ATC-VM-Strukturen
+  fehlende_evidence:
+  - prior_art_analysis
+  - implementation_evidence
+  review_date: '2026-11-11'
+  status: ACTIVE
+- id: ATC-TECH-017
+  name: ATC Contracts & SDK (ATCLang-nativ)
+  repo:
+  - atc-contracts
+  - atc-sdk
+  tier: A
+  classification: DIFFERENTIATED
+  classification_note: ATCLang-native Contract-/SDK-Schicht; 61/61 Tests grün (SCR-P1-001), ATC-ERR-0001
+    Knowledge-Record
+  differentiator: Verträge in ATCLang (nicht Solidity), SDK an ATC-VM gebunden
+  fehlende_evidence:
+  - prior_art_analysis
+  - benchmark_test_evidence
+  - security_review
+  review_date: '2026-11-11'
+  status: ACTIVE

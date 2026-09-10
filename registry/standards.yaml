@@ -458,3 +458,4 @@ legacy_series:
   - {id: "ATC-01..99",  title: "ATC Ecosystem Standards (Tier 1-10, 99 Standards)", registry: "registry/STANDARDS_REGISTRY.md", location: "atc/", governance: ATC-STD-000}
   - {id: "ATC-0001..0008", title: "ATC Core Standards",                           file: "atc/ATC_STANDARDS.md",          governance: ATC-STD-000}
   - {id: "ATS-1000..1007", title: "ATS System Standards (ShivaOS)",              file: "ats/ATS_STANDARDS.md",          governance: ATC-STD-000}
+  - {id: ATC-STD-TUD-001, title: "Technology Uniqueness & Differentiation Standard", version: "1.0.0", status: candidate, category: governance, authority: "A-TownChain Ecosystems", owner: ShivaCoreDev, normative: true, file: standards/technology-uniqueness/ATC-STD-TUD-001.md, mandate: "Owner-Entwurf 11.09. (SCR-0091)"}

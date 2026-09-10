@@ -10,8 +10,8 @@ version: "1.1.0"
 generated_from: registry/standards.yaml
 updated: "2026-09-08"
 coverage_kpi:
-  registry_total: 431
-  matrix_entries: 449
+  registry_total: 450
+  matrix_entries: 450
   matrix_coverage: "100%"
   enforced_target: "je Wartungszyklus steigend (REQ-IMP-007)"
   hinweis: "Wertigkeit der 21 SCR-0045-Detail-Eintraege bleibt; Familien-Evidence konsolidiert"
@@ -3725,4 +3725,11 @@ standards:
     implementation:
       status: specification_only
       evidence: "Enterprise-Module ohne aktive Ziel-Repos im 26er-Stand; AD-047-Disposition fuer verwaiste Module gilt"
+    independence: L1
+  - standard: ATC-STD-TUD-001
+    version: "1.0.0"
+    applicability: MANDATORY
+    implementation:
+      status: specified
+      evidence: "SCR-0091: Standard + registry/technology-registry.yaml (18 Eintraege) + Validator TUD-1..TUD-6 PASS (11.09.)"
     independence: L1
