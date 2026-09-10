@@ -157,18 +157,27 @@ technologies:
   name: GlobusOS (KI-native OS-Schicht)
   repo: globus-os
   tier: A
-  classification: PENDING-EVIDENCE
-  classification_note: OS-/Plattformkonzept mit KI als kontrollierter Systemkomponente — Rolle zwischen
-    Aurora(Intelligence), GlobusOS(System/UX), ShivaCore(Security/Execution)
+  classification: DIFFERENTIATED
+  classification_note: 'Upgrade PENDING->DIFFERENTIATED 11.09.: AI-OS-Kategorie ist besetzt und in Bewegung
+    (Humane CosmOS/HP-Uebernahme, Microsoft Copilot+ PCs mit NPU, Apple Intelligence) — UNIQUE/NOVEL unhaltbar.
+    Differentiator: Kernel-unterbaute Security-Schichtung Aurora->GlobusOS->ShivaCore->Hardware mit Policy-Durchgriff,
+    KI ausserhalb TCB — Assistenten-Schichten (Copilot) und KI-Zentrierung ohne Kernel-Architektur (CosmOS)
+    bieten das nicht. R1-Skelett-Marker ehrlich erhalten (TUD-6); NOVEL-Pruefung erst nach Implementierung
+    der Ebenen-Trennung. s. audits/PRIOR-ART-2026-09-11.md §7'
   differentiator: Strikte Ebenen-Trennung Intelligence/UX/Security/Execution; KI als Systemkomponente
     mit definierten Grenzen, nicht als Root
   fehlende_evidence:
-  - prior_art_analysis
   - implementation_evidence
   - benchmark_test_evidence
   - security_review
   review_date: '2026-10-11'
   status: ACTIVE
+  evidence:
+    prior_art_analysis: 'VOLLSTAENDIG 11.09. — Humane CosmOS (''AI operating system for a universe of
+      connected devices'', theverge.com, HP-Uebernahme: crn.com), Microsoft Copilot+ PCs (NPU-Klasse,
+      microsoft.com; ''agent-like functions built into the operating system'', Ignite 2025), Apple Intelligence
+      (OS-integrierte KI), HP IQ. Kein bekannter Ansatz mit Microkernel-Schichtung + Policy-Durchgriff.
+      Quellen: audits/PRIOR-ART-2026-09-11.md §7'
 - id: ATC-TECH-007
   name: Aurora AI (lokale/offline AI-Plattform)
   repo: aurora-ai
@@ -290,14 +299,24 @@ technologies:
   name: ATC Mining / Consensus-Infrastruktur
   repo: atc-mining
   tier: A
-  classification: PENDING-EVIDENCE
-  classification_note: Eigene Mining-/Consensus-Infrastruktur — Klassifikation nach Konsens-Design-Freeze
+  classification: DIFFERENTIATED
+  classification_note: 'Upgrade PENDING->DIFFERENTIATED (provisorisch, Kategorie-Ebene) 11.09.: Consensus-Infrastruktur
+    ist die definierende Commodity-Kategorie jeder L1 (Bitcoin PoW, Ethereum PoS-Merge 09/2022, Solana
+    PoH+Tower BFT, AptosBFT) — per Definition DIFFERENTIATED. FINALE Klassifikation (DIFFERENTIATED vs.
+    NOVEL) erst nach AD-002-Entscheidung und Konsens-Design-Freeze; NOVEL nur bei genuin neuem Konsens-Design
+    belastbar. s. audits/PRIOR-ART-2026-09-11.md §8'
   differentiator: ATC-eigener Konsens-Mechanismus (Design offen, s. AD-002)
   fehlende_evidence:
-  - prior_art_analysis
   - implementation_evidence
+  - benchmark_test_evidence
+  - security_review
   review_date: '2026-10-11'
   status: ACTIVE
+  evidence:
+    prior_art_analysis: 'VOLLSTAENDIG 11.09. — Bitcoin PoW (SHA-256, kanonisch, Nakamoto-Whitepaper),
+      Ethereum Merge auf PoS (09/2022, ethereum.org), Solana Proof of History (''verifying order and passage
+      of time'', solana.com/solana-whitepaper.pdf), PoS/DAG/Hybrid-Varianten (helius.dev-Uebersicht).
+      Designvielfalt gross, Kategorie Commodity. Quellen: audits/PRIOR-ART-2026-09-11.md §8'
 - id: ATC-TECH-016
   name: ATC Explorer / Indexer
   repo:
