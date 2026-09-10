@@ -515,11 +515,11 @@ findings:
 - alias: null
   discovered: '2026-09-09'
   id: F-055
-  resolution: null
-  scr: SCR-0057
+  resolution: 'SCR-0078/0079: Alle 14 Alerts verwaist — Manifest aistudio/temp_repo/requirements-kai.txt existiert nicht (404), 0 Commits in Historie (History-Reset 03.07.2026); 14/14 dokumentiert dismissed (inaccurate); org-weit 0 offene Alerts'
+  scr: SCR-0078
   severity: P1
   source: SCR-0057-Rollout (GitHub Push-Notice)
-  status: OPEN
+  status: RESOLVED
   title: 'a-townchain-os: 14 Dependabot-Schwachstellen auf main (4 high, 7 moderate,
     3 low) — Behebung/Sichtung via https://github.com/A-TownChain-Okosystems/a-townchain-os/security/dependabot
     erforderlich'
@@ -841,7 +841,74 @@ findings:
   resolution: 'SCR-0077: #1-#3 in PR #4 vereinigt (Merge-Commit), alte PRs geschlossen; nach 1x Approve mergt der Agent per API'
 - id: F-093
   priority: P1
-  status: OPEN
+  status: RESOLVED
   repo: (org-weit)
   title: 'Post-Merge-CI-Verifikation der ~53 squash-gemergten Dependabot-Bumps (MAJOR-Prioritaet)'
-  resolution: 'SCR-0076: rote Pipelines = Rollback-Kandidaten (git revert des Squash-Commits)'
+  resolution: 'SCR-0078: Test-Suite-Workflows in 13 Repos etabliert, alle realen Folgefehler behoben (Peer-Konflikte, ts-jest-Relikte, tsc-lose-Builds, lucide-API, eframe-API, fehlende Views/Engine); 13/13 gruen, 0 Rollbacks'
+
+- id: F-094
+  priority: P0
+  status: OPEN
+  repo: atc-standards, .github
+  title: 'Registry-Count-Integrity: 4 Quellen 4 Zahlen (Registry 447 / README 431+432 / Hub 433 / Dateien 443)'
+  resolution: 'SCR-0079: SSOT-Vererbung via gen_views gefordert — keine Handzahlen (Backlog P0)'
+- id: F-095
+  priority: P0
+  status: OPEN
+  repo: (org-weit)
+  title: 'Test-Evidence-Integrity: 423/280/674/731-Zahlen divergieren, kein maschinenlesbares Evidence-Schema'
+  resolution: 'SCR-0079: Evidence-Standard-DRAFT (test-report.json je Repo, CI-generiert) im Master-Backlog'
+- id: F-096
+  priority: P0
+  status: OPEN
+  repo: (org-weit)
+  title: 'Layer-Taxonomie fehlt — L0-L7 ohne normativen Standard (System- vs. Blockchain-Protocol-Layer ungetrennt)'
+  resolution: 'SCR-0079: ATC-LAYER-001-DRAFT vorgeschlagen (Owner §9-Freigabe ausstehend)'
+- id: F-097
+  priority: P0
+  status: OPEN
+  repo: atclang
+  title: 'ATCLang-Rollen widerspruechlich: Rust-Canonical-Core vs. Rust-Toolchain-optional'
+  resolution: 'SCR-0079: Rollen eindeutig zu definieren (Canonical=Rust, Reference=Python, Release-Authority=Rust)'
+- id: F-098
+  priority: P0
+  status: OPEN
+  repo: (org-weit)
+  title: 'Status-Claims (PASS/M4/M5/AUDITED) ohne maschinenlesbare Evidence-Bindung'
+  resolution: 'SCR-0079: Statusmodell 9 Lifecycle-Phasen x 6 Dimensionen als DRAFT vorgeschlagen'
+- id: F-099
+  priority: P1
+  status: OPEN
+  repo: (org-weit)
+  title: 'CodeQL org-weit inaktiv — code-scanning-API 404 auf allen Repos (Permissions existieren, Scanner nie aktiviert)'
+  resolution: 'SCR-0079: Default-Setup-Rollout = Owner-API-Aktion (Issue #95)'
+- id: F-100
+  priority: P1
+  status: OPEN
+  repo: (org-weit)
+  title: '.evidence/-Verzeichnis existiert in 0/27 Repos (F-079 org-weit bestätigt)'
+  resolution: 'SCR-0079: Evidence-Verzeichnisse je PRODUCT-Repo mit F-095 bündeln'
+- id: F-101
+  priority: P1
+  status: OPEN
+  repo: a-townchain-os
+  title: 'Cargo-Workspace ohne Test-Suite-Workflow'
+  resolution: 'SCR-0079: test-suite.yml nach SCR-0078-Muster ergänzen'
+- id: F-102
+  priority: P1
+  status: OPEN
+  repo: atc-vm, atc-node, atc-storage, atc-oracle, atc-mining, atc-algorithm, atc-compute, atc-launchpad
+  title: '8 Repos mit exakt 0 Code-Dateien — Portfolio-Entscheidung offen'
+  resolution: 'SCR-0079: Owner-Entscheidung implementieren vs. SPEC-ONLY-Deklaration'
+- id: F-103
+  priority: P2
+  status: OPEN
+  repo: a-townchain, atc-compute, atc-marketplace, atc-node, globus-os
+  title: 'Roadmap-Referenz fehlt im README'
+  resolution: 'SCR-0079: zentrale Roadmap-Referenz ergänzen'
+- id: F-104
+  priority: P2
+  status: OPEN
+  repo: atc-interop, atc-standards
+  title: 'Testbare Code-Bestände ohne Test-Workflow (16 bzw. 26 Dateien)'
+  resolution: 'SCR-0079: test-suite.yml nach SCR-0078-Muster ergänzen'
