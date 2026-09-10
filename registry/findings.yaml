@@ -896,10 +896,10 @@ findings:
   resolution: 'SCR-0079: test-suite.yml nach SCR-0078-Muster ergänzen'
 - id: F-102
   priority: P1
-  status: OPEN
+  status: RESOLVED
   repo: atc-vm, atc-node, atc-storage, atc-oracle, atc-mining, atc-algorithm, atc-compute, atc-launchpad
   title: '8 Repos mit exakt 0 Code-Dateien — Portfolio-Entscheidung offen'
-  resolution: 'SCR-0079: Owner-Entscheidung implementieren vs. SPEC-ONLY-Deklaration'
+  resolution: 'SCR-0083: Alle 8 Code-losen Repos haben kompilierende MVP-Kerne + grue Unit-Test-Suiten (PORTFOLIO-ENTSCHEIDUNG: implementieren statt reduzieren); Produktiefe inkrementell'
 - id: F-103
   priority: P2
   status: RESOLVED
@@ -937,7 +937,7 @@ findings:
   status: OPEN
   repo: atclang
   title: 'Rust-Canonical-Core NICHT implementiert — 0 Rust-Dateien auf main (Rollen-READMEfiktion)'
-  resolution: 'SCR-0081: Evidence ehrlich korrigiert (partial, Python-Referenz substanziell); Rust-Umsetzung + cargo-CI + Differential-Tests (Canonical<->Referenz) ausstehend'
+  resolution: 'SCR-0083: Lexer-MVP in crates/atc-core live (cargo-Job in Suite); Parser + Differential-Tests (Canonical<->Referenz) ausstehend'
 - id: F-109
   priority: P1
   status: OPEN
@@ -951,3 +951,10 @@ findings:
   repo: (org-weit)
   title: 'CodeQL-Erstläufe verifizieren (14 Workflows aktiviert, erste Analysen ausstehend)'
   resolution: 'SCR-0082: CodeQL aktiviert; SARIF-Ergebnisse in den code-scanning-APIs prüfen'
+
+- id: F-111
+  priority: P1
+  status: OPEN
+  repo: (org-weit)
+  title: 'MVP-Kerne zu Produkttiefe ausbauen (Gas-Modell VM, SHA-256-PoH nach Spec-Freeze, atc-lang Parser, Netzwerk-Stacks)'
+  resolution: 'SCR-0083: Start-Kerne gelegt; Ausbau entlang der 91 SPEC-DRAFTs (SCR-0071) via Sprints'
