@@ -878,7 +878,7 @@ findings:
   resolution: 'SCR-0079: Statusmodell 9 Lifecycle-Phasen x 6 Dimensionen als DRAFT vorgeschlagen'
 - id: F-099
   priority: P1
-  status: OPEN
+  status: RESOLVED
   repo: (org-weit)
   title: 'CodeQL org-weit inaktiv — code-scanning-API 404 auf allen Repos (Permissions existieren, Scanner nie aktiviert)'
   resolution: 'SCR-0079: Default-Setup-Rollout = Owner-API-Aktion (Issue #95)'
@@ -890,7 +890,7 @@ findings:
   resolution: 'SCR-0080: 26/27 main + SCR-0081: 27. Evidence-Datei auf PR-#4-Branch bereit (merge = Owner-Approve); ehrliche Zähler in Registry verankert'
 - id: F-101
   priority: P1
-  status: OPEN
+  status: RESOLVED
   repo: a-townchain-os
   title: 'Cargo-Workspace ohne Test-Suite-Workflow'
   resolution: 'SCR-0079: test-suite.yml nach SCR-0078-Muster ergänzen'
@@ -902,13 +902,13 @@ findings:
   resolution: 'SCR-0079: Owner-Entscheidung implementieren vs. SPEC-ONLY-Deklaration'
 - id: F-103
   priority: P2
-  status: OPEN
+  status: RESOLVED
   repo: a-townchain, atc-compute, atc-marketplace, atc-node, globus-os
   title: 'Roadmap-Referenz fehlt im README'
   resolution: 'SCR-0079: zentrale Roadmap-Referenz ergänzen'
 - id: F-104
   priority: P2
-  status: OPEN
+  status: RESOLVED
   repo: atc-interop, atc-standards
   title: 'Testbare Code-Bestände ohne Test-Workflow (16 bzw. 26 Dateien)'
   resolution: 'SCR-0079: test-suite.yml nach SCR-0078-Muster ergänzen'
@@ -944,3 +944,10 @@ findings:
   repo: (org-weit)
   title: 'test_run-Schema minimal — Erweiterung um total/passed/failed/skipped + artifacts{path,sha256} je Testlauf'
   resolution: 'SCR-0081: initiale Bindung (workflow/run_id/commit/timestamp/result/runner) in 13 Workflows; Schema-Erweiterung folgt mit F-095-Standardisierung'
+
+- id: F-110
+  priority: P1
+  status: OPEN
+  repo: (org-weit)
+  title: 'CodeQL-Erstläufe verifizieren (14 Workflows aktiviert, erste Analysen ausstehend)'
+  resolution: 'SCR-0082: CodeQL aktiviert; SARIF-Ergebnisse in den code-scanning-APIs prüfen'
