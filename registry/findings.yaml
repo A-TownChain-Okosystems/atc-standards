@@ -809,3 +809,27 @@ findings:
   status: OPEN
   repo: globus-os
   title: 'M5-Evidence-Gates G2-G12 + genesis-chronicles M7-Evidence-Paket'
+- id: F-088
+  priority: P0
+  status: RESOLVED
+  repo: a-townchain-os, atc-vm
+  title: 'Letzte unbelegte PASS-Claims: AOS 731/731 ohne Evidence-Records; atc-vm Build/Tests passing ohne Implementierungsbaum'
+  resolution: 'SCR-0074: NOT VERIFIED / NOT IMPLEMENTED; AOS wartet auf .evidence/-Records (ATC-AOS-001)'
+- id: F-089
+  priority: P0
+  status: RESOLVED
+  repo: a-townchain-os-docs, aurora-ai
+  title: 'Lizenz-Reststufe 3: 3 versteckte package.json (aistudio-Subtrees) mit UNLICENSED gegen Apache-2.0'
+  resolution: 'SCR-0074: auf Apache-2.0 synchronisiert (AD-F-046)'
+- id: F-090
+  priority: P1
+  status: RESOLVED
+  repo: atc-compute, atc-marketplace, atc-node, globus-os
+  title: 'Pflichtartefakt STATUS.md fehlte in 4 Repos'
+  resolution: 'SCR-0074: ehrliche STATUS.md nachgezogen (NOT APPLICABLE / NOT RUN / NOT AUDITED)'
+- id: F-091
+  priority: P2
+  status: OPEN
+  repo: A-TownChain-Okosystems
+  title: 'Org-Compliance-Scan nur ad hoc — als wiederverwendbares Tool im .github-Hub verankern'
+  resolution: 'SCR-0074: Scan-JSON + Report archiviert; Tool-Verankerung als nächster SCR empfohlen'

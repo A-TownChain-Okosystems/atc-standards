@@ -209,7 +209,9 @@
 - **atclang CI-Failure behoben** (f941637): ATC COMPLIANCE-Badge im README —
   V-14 GATE NO-GO → PASS, Score 94→100.
 
-## [Unreleased] — 2026-09-08 (SCR-0045/0047/0048)
+## [Unreleased]
+
+- SCR-0074: Org-Standards-Umsetzungscheck — 26/26 MUST-konform nach Fix-Runde; F-088..F-091 (docs/compliance/) — 2026-09-08 (SCR-0045/0047/0048)
 
 ### Reproducible CI Dependencies: Issue #1 als P1-Change (SCR-0054)
 - Neuer Standard ATC-STD-CI-001 v1.0.0 CANDIDATE (FAM-50, REQ-CI-001..010):
