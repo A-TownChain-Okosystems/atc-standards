@@ -1,14 +1,14 @@
 <!-- GENERATED-BY generate_views.py — NICHT MANUELL BEARBEITEN -->
 # ATC Standards
 
-[![ATC Compliance](https://img.shields.io/badge/ATC-COMPLIANCE-green) ](README.md) <!-- formal: PASS, R12-enforced (SCR-0096; Scan-Konvention ATC-COMPLIANCE) -->
+[![ATC COMPLIANCE](https://img.shields.io/badge/ATC-COMPLIANCE-green) ](README.md) <!-- formal: PASS, R12-enforced (SCR-0096; Scan-Konvention ATC-COMPLIANCE) -->
 
 ## State (GENERIERT — Quelle: `registry/standards.yaml`, SCR-0090/ATC-STD-003)
 
 ```yaml
 state:
   id: ATC-STATE-20260911-d21129f7
-  generated_at: "2026-09-11 15:35 UTC+2"
+  generated_at: "2026-09-11 15:41 UTC+2"
   registry_version: "1.0.0"
   registry_sha256: "d21129f78eebb10c6a1752bba0e7fb364c614f3772b538b01245c037678b95dc"
   standards_total: 474

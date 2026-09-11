@@ -1,7 +1,7 @@
 @@STAMP@@
 # ATC Standards
 
-[![ATC Compliance](https://img.shields.io/badge/ATC-COMPLIANCE-green) ](README.md) <!-- formal: PASS, R12-enforced (SCR-0096; Scan-Konvention ATC-COMPLIANCE) -->
+[![ATC COMPLIANCE](https://img.shields.io/badge/ATC-COMPLIANCE-green) ](README.md) <!-- formal: PASS, R12-enforced (SCR-0096; Scan-Konvention ATC-COMPLIANCE) -->
 
 ## State (GENERIERT — Quelle: `registry/standards.yaml`, SCR-0090/@@STD@@)
 
