@@ -785,10 +785,10 @@ findings:
   resolution: 'SCR-0081: initiale Bindung (workflow/run_id/commit/timestamp/result/runner) in 13 Workflows; Schema-Erweiterung folgt mit F-095-Standardisierung'
 - id: F-110
   priority: P1
-  status: OPEN
+  status: RESOLVED
   repo: (org-weit)
   title: CodeQL-Erstläufe verifizieren (14 Workflows aktiviert, erste Analysen ausstehend)
-  resolution: 'SCR-0082: CodeQL aktiviert; SARIF-Ergebnisse in den code-scanning-APIs prüfen'
+  resolution: 'SCR-0105-Verifikation: CodeQL org-weit live und gruen — Parallel-Session rollte codeql.yml (rust, autobuild bzw. Multi-Manifest-Build) auf die 9 fehlenden T1-Repos aus (atclang, atc-shivacore, atc-zkp, atc-wallet, atc-algorithm, atc-node, atc-interop, atc-oracle, globus-os); API-Vollpruefung 11.09. 18:2x: alle vorhandenen CodeQL-Workflows gruen; a-townchain-os legitim EXEMPT (docs-only, F-133)'
 - id: F-111
   priority: P1
   status: OPEN
