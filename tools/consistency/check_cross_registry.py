@@ -190,6 +190,53 @@ def main():
             fail("R11", "ATC-STD-000 v" + cur + " ueberschreitet Sunset v" + sunset + " ohne APPROVED - par.9-Freigabe (Owner) fehlt")
         print("R11 ATC-STD-000-Sunset: Sunset v" + sunset + ", Registry v" + cur + " - geprueft")
 
+
+    # R12: Drei-Stufen-Compliance-State + Matrix-Abdeckung (SCR-0094, Owner-Audit P1-01)
+    cs_path = os.path.join(ROOT, "registry", "compliance_state.yaml")
+    if not os.path.exists(cs_path):
+        fail("R12", "registry/compliance_state.yaml fehlt (SCR-0094)")
+    else:
+        cs = yaml.safe_load(open(cs_path, encoding="utf-8")) or {}
+        if cs.get("formal_compliance") != "PASS":
+            fail("R12", "formal_compliance != PASS - formal PASS ist nur behauptbar, wenn dieser Test selbst gruen ist")
+        try:
+            _impl = yaml.safe_load(open(os.path.join(ROOT, "registry", "standard-implementation.yaml"), encoding="utf-8"))
+            _reg = yaml.safe_load(open(REG, encoding="utf-8"))
+            _kk = {}
+            for _s in _impl.get("standards", []):
+                _st = _s.get("implementation", {}).get("status", "specification_only")
+                _kk[_st] = _kk.get(_st, 0) + 1
+            _tot = sum(_kk.values())
+            _reg_n = len(_reg.get("standards", []))
+            if _tot != _reg_n:
+                fail("R12", "Implementierungs-Matrix deckt " + str(_tot) + " Standards ab, Registry hat " + str(_reg_n) + " - Matrix ergaenzen")
+            exp = "PASS" if _kk.get("specification_only", 0) == 0 else ("PARTIAL" if _kk.get("enforced", 0) + _kk.get("implemented", 0) > 0 else "NONE")
+            if cs.get("implementation_compliance") != exp:
+                fail("R12", "implementation_compliance '" + str(cs.get("implementation_compliance")) + "' != abgeleitet '" + exp + "' (KPI " + str(_kk) + ")")
+        except Exception as _e:
+            fail("R12", "standard-implementation.yaml nicht lesbar: " + str(_e))
+        ready_ok = False
+        for _rf in ("milestones.yaml", "releases.yaml"):
+            try:
+                _doc = yaml.safe_load(open(os.path.join(ROOT, "registry", _rf), encoding="utf-8"))
+                _walk = [_doc] if isinstance(_doc, dict) else (_doc if isinstance(_doc, list) else [])
+                while _walk:
+                    _d = _walk.pop(0)
+                    if isinstance(_d, dict):
+                        _idt = str(_d.get("id", "")) + str(_d.get("title", "")) + str(_d.get("name", ""))
+                        if str(_d.get("status", "")).upper() == "ACCEPTED" and re.search(r"(?i)mainnet|release", _idt):
+                            ready_ok = True
+                        _walk.extend(v for v in _d.values() if isinstance(v, (dict, list)))
+                    elif isinstance(_d, list):
+                        _walk.extend(_d)
+            except FileNotFoundError:
+                pass
+        if cs.get("production_readiness") not in ("NOT_READY", "TESTNET_READY", "PRODUCTION_READY"):
+            fail("R12", "production_readiness ungueltiger Wert: " + str(cs.get("production_readiness")))
+        if cs.get("production_readiness") not in ("NOT_READY", None) and not ready_ok:
+            fail("R12", "production_readiness != NOT_READY ohne ACCEPTED Mainnet-/Release-Meilenstein - von Agenten nicht frei setzbar")
+        print("R12 Drei-Stufen-Compliance: formal=" + str(cs.get("formal_compliance")) + ", implementation=" + str(cs.get("implementation_compliance")) + ", production=" + str(cs.get("production_readiness")))
+
     print()
     if FAILS:
         print("RESULT: CROSS-REGISTRY NON-COMPLIANT")

@@ -36,6 +36,7 @@ eines Standards liegt ausschließlich in seiner Standarddatei; die Registry
 | registry/agents.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
 | registry/architecture.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
 | registry/categories.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
+| registry/compliance_state.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
 | registry/dependencies.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
 | registry/findings.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
 | registry/framework.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
@@ -64,7 +65,7 @@ Kernregister: **standards.yaml** (Bestand, 474 Standards) · **versions.yaml**
 477 Slots) · **categories.yaml**
 (Kategorien) · **taxonomy.yaml** (Domain/Familie/Kategorie) · **protocol-registry.yaml**
 (26 Protokollfamilien, Status {'draft': 10, 'planned': 16}) ·
-**findings.yaml** (Findings: 56 OPEN / 64 RESOLVED von 120).
+**findings.yaml** (Findings: 62 OPEN / 64 RESOLVED von 126).
 
 ## 3. Standardfamilien (Katalog, 51 Familien)
 
@@ -623,7 +624,7 @@ Klassifikation (ATC-STD-REPO-AUDIT-001/002).
 
 ## 7. Offene Punkte (Auszug — Details: STATUS.md)
 
-- Findings OPEN: 56 (aktuelle Liste: registry/findings.yaml)
+- Findings OPEN: 62 (aktuelle Liste: registry/findings.yaml)
 - Org-Audit-Ableitungen: Issues #94–98 (a-townchain-os) — CI 23/26, CodeQL,
   Versions-Baseline, verwaister Tag, ATC-STD-202-Klassifizierung
 - ATC-LICENSE: 5 Lizenztypen PLANNED (SOURCE, COMMERCIAL, PROPRIETARY, DATA,
@@ -652,7 +653,7 @@ die Kennung dieses generierten Dokuments.
 
 atc-standards/ · INDEX.md (generiert) · README.md · CHANGELOG.md · STATUS.md ·
 LICENSE (Apache-2.0) · AGENT_MANIFEST.md · AGENTS.md · governance/ (ATC-STD-000) ·
-standards/<kategorie>/ (Fachstandards, 474-Bestand) · registry/ (25
+standards/<kategorie>/ (Fachstandards, 474-Bestand) · registry/ (26
 SSOT-Dateien) · licenses/ (ATC-LICENSE-System) · schemas/ · tools/ (Generatoren +
 atc-std-validator) · approval/ (§9-Freigabe-Archiv) · change-requests/ (SCR-0001…) ·
 docs/ (Audits & Analysen) · templates/ · .github/workflows (Governance-CI, 2) +

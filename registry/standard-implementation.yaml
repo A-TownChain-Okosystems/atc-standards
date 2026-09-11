@@ -3918,3 +3918,7 @@ standards:
       status: enforced
       evidence: "Governance-CI 26/26 (fetch-depth:0, AUD-2026-0002 F-048); AGENT_MANIFEST v3.1.7 Rollout 26/26; Branch-Protection SCR-0003"
     independence: L1
+  - id: ATC-STD-003
+    implementation:
+      status: enforced
+      evidence: CI-Job cross-registry (tools/consistency/check_cross_registry.py R1-R12, SCR-0091/0094)

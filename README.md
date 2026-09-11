@@ -6,7 +6,7 @@
 ```yaml
 state:
   id: ATC-STATE-20260911-77988037
-  generated_at: "2026-09-11 13:27 UTC+2"
+  generated_at: "2026-09-11 14:07 UTC+2"
   registry_version: "1.0.0"
   registry_sha256: "7798803757d741a8c5ef99ec80e355c26be672085572f2549973897b5014afc2"
   standards_total: 474
@@ -20,9 +20,9 @@ state:
 **Diese Zahlen sind die EINZIG maschinenverbindliche Auskunft** (ATC-STD-003 §2 Ein-Zahl-Regel).
 Historische Zahlenstände: ausschließlich `STATUS.md` / `CHANGELOG.md` / `audits/`.
 
-**Implementierungs-KPI:** 474 Standards normativ definiert — 64 enforced, 129 implemented, 265 specification-only (Zielsysteme im qualitätsgetriebenen Rebuild AD-023/AD-045). Die Aussage „474 Standards implementiert“ ist unzulässig (SCR-0048, ATC-STD-003 §8: APPROVED ≠ IMPLEMENTED).
+**Implementierungs-KPI:** 474 Standards normativ definiert — 65 enforced, 129 implemented, 265 specification-only (Zielsysteme im qualitätsgetriebenen Rebuild AD-023/AD-045). Die Aussage „474 Standards implementiert“ ist unzulässig (SCR-0048, ATC-STD-003 §8: APPROVED ≠ IMPLEMENTED).
 
-**ATC COMPLIANCE: YES** — Repository-Audit R3 · Naming/Versioning/Ownership/Lizenz konform ([Audit-Details](#standards--compliance))
+**FORMALE COMPLIANCE: PASS** (Repository-Audit R3: Naming/Versioning/Ownership/Lizenz + Cross-Registry-Test R1-R12) · **IMPLEMENTATION: PARTIAL** (41 % code-backed: 65 enforced + 129 implemented von 474 Matrix-Eintraegen erfassten (Registry-Gesamt: 474)) · **PRODUCTION READINESS: NOT_READY** (Release-/Mainnet-Gates, registry/milestones.yaml) — ein Zustand behauptet nie den anderen ([Audit-Details](#standards--compliance))
 
 ---
 

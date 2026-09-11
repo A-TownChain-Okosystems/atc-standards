@@ -87,6 +87,12 @@ def main():
             kpi[_st] = kpi.get(_st, 0) + 1
     except Exception as _e:
         print(f"  Hinweis: KPI-Daten nicht verfuegbar ({_e})")
+    try:
+        import yaml as _yc
+        _cs = _yc.safe_load(open(os.path.join(ROOT, "registry", "compliance_state.yaml"), encoding="utf-8")) or {}
+    except Exception:
+        _cs = {}
+    _tot = sum(kpi.values())
     def _st(i):
         s = sidx.get(i)
         if not s:
@@ -111,6 +117,8 @@ def main():
         "@@APPROVED@@": str(approved), "@@CANDIDATE@@": str(candidate), "@@OTHER@@": str(other),
         "@@FILES@@": str(std_files), "@@FAMS@@": str(fam_count),
         "@@ENF@@": str(kpi.get("enforced", 0)), "@@IMPL@@": str(kpi.get("implemented", 0)),
+        "@@TOTIMPL@@": str(_tot), "@@IMPLPCT@@": str(round(100 * (kpi.get("enforced", 0) + kpi.get("implemented", 0)) / max(_tot, 1))),
+        "@@FCOMP@@": str(_cs.get("formal_compliance", "?")), "@@ICOMP@@": str(_cs.get("implementation_compliance", "?")), "@@PRD@@": str(_cs.get("production_readiness", "?")),
         "@@SPEC@@": str(kpi.get("specification_only", 0)),
         "@@VER000@@": v000.get("version", "n/a"),
         "@@ST000@@": v000.get("status", "NICHT IN REGISTRY").upper(),

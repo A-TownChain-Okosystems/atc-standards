@@ -22,7 +22,7 @@ Historische Zahlenstände: ausschließlich `STATUS.md` / `CHANGELOG.md` / `audit
 
 **Implementierungs-KPI:** @@TOTAL@@ Standards normativ definiert — @@ENF@@ enforced, @@IMPL@@ implemented, @@SPEC@@ specification-only (Zielsysteme im qualitätsgetriebenen Rebuild AD-023/AD-045). Die Aussage „@@TOTAL@@ Standards implementiert“ ist unzulässig (SCR-0048, @@STD@@ §8: APPROVED ≠ IMPLEMENTED).
 
-**ATC COMPLIANCE: YES** — Repository-Audit R3 · Naming/Versioning/Ownership/Lizenz konform ([Audit-Details](#standards--compliance))
+**FORMALE COMPLIANCE: @@FCOMP@@** (Repository-Audit R3: Naming/Versioning/Ownership/Lizenz + Cross-Registry-Test R1-R12) · **IMPLEMENTATION: @@ICOMP@@** (@@IMPLPCT@@ % code-backed: @@ENF@@ enforced + @@IMPL@@ implemented von @@TOTIMPL@@ Matrix-Eintraegen erfassten (Registry-Gesamt: @@TOTAL@@)) · **PRODUCTION READINESS: @@PRD@@** (Release-/Mainnet-Gates, registry/milestones.yaml) — ein Zustand behauptet nie den anderen ([Audit-Details](#standards--compliance))
 
 ---
 
