@@ -989,3 +989,27 @@ findings:
   repo: (org-weit)
   title: 'Unabhaengiges Security-Audit der Kernkomponenten vor Release (Deep-Dive P0-06; security: not_audited bleibt ehrlich bis dahin)'
   resolution: 'Audit-Vorbereitung laeuft ueber Evidence-Basis; Beauftragung = Owner-Entscheidung'
+- id: F-117
+  priority: P1
+  status: OPEN
+  repo: (org-weit)
+  title: 'Layer-Zustaendigkeiten formalisieren: a-townchain (Protocol/canonical chain) vs atc-node (executable node) vs atc-vm (execution engine) vs atclang (language/compiler) — Execution-Chain ATCLang->Compiler->VM->Node->Network (Owner-Audit P1-8, SCR-0090)'
+  resolution: 'Capability-Grenzen je Repo in repositories.yaml verbindlich + Code-Gate-Check; offen'
+- id: F-118
+  priority: P1
+  status: OPEN
+  repo: (org-weit)
+  title: 'Layer-Modell L0 ShivaCore / L1 GlobusOS / L2 Aurora / L3 A-TO-OS-Integration / L4 Services / L5 Network festschreiben; a-townchain-os = Integration/Orchestration, nicht OS-Kern (Owner-Audit P1-9, SCR-0090)'
+  resolution: 'ATC-STD-LAYER-001 finalisieren (§9-Owner-Freigabe ausstehend) + Layer-Zuordnung validieren; offen'
+- id: F-119
+  priority: P1
+  status: OPEN
+  repo: (org-weit)
+  title: 'Repository-Taxonomie: jede Repo genau EINE Primaer-Kategorie (Core/Runtime/Protocol/Infrastructure/Application/Platform/Documentation/Governance/Experimental/Archived) (Owner-Audit P1-14, SCR-0090)'
+  resolution: 'Kategorie-Feld in repositories.yaml normativ setzen + Validator-Gate; offen'
+- id: F-120
+  priority: P2
+  status: OPEN
+  repo: (org-weit)
+  title: 'Cross-Repo Dependency-DAG + maschinell generierter Architekturgraph + org-weite State-Snapshot-Datei je Lauf (Owner-Audit P2-18/19/20, SCR-0090)'
+  resolution: 'dependencies.yaml-DAG ausbauen, Graph-Generator, Snapshot-Tool; offen'
