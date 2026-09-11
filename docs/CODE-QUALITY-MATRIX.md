@@ -1,11 +1,11 @@
-# ATC Code Quality Matrix — Ist-Erhebung (2026-09-11 19:15)
+# ATC Code Quality Matrix — Ist-Erhebung (2026-09-11 19:18)
 
 Standard: ATC-STD-ENG-001 (REQ-ENG-011) · SSOT: registry/code-quality-matrix.yaml · Exit: 1
 
 | Repository | Layer | Det.-Klasse | Ist-Sprache | Lang | CI-Gates (Soll) | Fehlt | Verdict |
 |---|---|---|---|---|---|---|---|
 | atclang | L0 | D-CRITICAL | Python | ✅ | format, lint, build, unit, integration, security, dependency-audit, determinism | determinism | FINDING |
-| atc-vm | L0 | D-CRITICAL | Rust | ✅ | format, lint, build, unit, integration, security, dependency-audit, determinism | determinism | FINDING |
+| atc-vm | L0 | D-CRITICAL | Rust | ✅ | format, lint, build, unit, integration, security, dependency-audit, determinism | — | PASS |
 | atc-shivacore | L1 | D-CRITICAL | Rust | ✅ | format, lint, build, unit, integration, security, dependency-audit, determinism | determinism | FINDING |
 | atc-zkp | L1 | D-CRITICAL | Rust | ✅ | format, lint, build, unit, security, dependency-audit, determinism | determinism | FINDING |
 | aurora-ai | L2 | D-STANDARD | TypeScript | ✅ | format, lint, build, unit, integration, security, dependency-audit | — | PASS |
@@ -31,4 +31,4 @@ Standard: ATC-STD-ENG-001 (REQ-ENG-011) · SSOT: registry/code-quality-matrix.ya
 | a-townchain-os-docs | L7 | D-STANDARD | TypeScript | ✅ | format, build, docs | docs | FINDING |
 | atc-standards | L7 | D-STANDARD | Python | ✅ | format, lint, build, unit, cross-registry, security, dependency-audit | — | PASS |
 
-**Ergebnis: 11/26 PASS, 15 FINDING(s)** (Fail Closed; Findings → ATC-STD-BUG-001)
+**Ergebnis: 12/26 PASS, 14 FINDING(s)** (Fail Closed; Findings → ATC-STD-BUG-001)

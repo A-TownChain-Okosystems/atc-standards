@@ -18,11 +18,15 @@ H = {"Authorization": f"token {TOKEN}", "Accept": "application/vnd.github.v3+jso
 BASE = os.path.join(os.path.dirname(__file__), "..")
 EXCLUDED = {"demo-repository"}  # Owner-Entscheidung 11.09.2026
 
-def api(url):
-    try:
-        return json.loads(urllib.request.urlopen(urllib.request.Request(url, headers=H)).read())
-    except Exception:
-        return None
+def api(url, retries=3):
+    import time
+    for i in range(retries):
+        try:
+            return json.loads(urllib.request.urlopen(urllib.request.Request(url, headers=H)).read())
+        except Exception:
+            if i < retries - 1:
+                time.sleep(2 * (i + 1))
+    return None
 
 def repo_ist(name):
     """Ist-Daten: Primärsprache + Workflow-Dateien."""
@@ -35,7 +39,7 @@ def repo_ist(name):
 def wf_covers(wfs, gate):
     """Heuristik: Gate als Workflow-Name oder Job-Stichwort abgedeckt."""
     g = gate.lower()
-    keys = {"determinism": ["determin", "consensus"], "security": ["security", "codeql", "dependency-review"],
+    keys = {"determinism": ["determin", "consensus", "contract-exec", "receipt", "exec-chain"], "security": ["security", "codeql", "dependency-review"],
             "dependency-audit": ["dependency", "dependabot", "audit"], "unit": ["test", "ci", "governance"],
             "integration": ["test", "integration"], "format": ["format", "lint", "ci"], "lint": ["lint", "ci"],
             "build": ["build", "ci"], "docs": ["docs", "md"], "conformance": ["conformance", "test"],
@@ -49,7 +53,10 @@ def main():
     for name, m in matrix["repositories"].items():
         if name in EXCLUDED or (only and name != only):
             continue
+        import time; time.sleep(0.7)  # Secondary-Rate-Limit-Daempfung
         ist = repo_ist(name)
+        if not ist["workflows"]:
+            print(f"  WARN: {name} — Tree-Fetch fehlgeschlagen (Fail Closed → FINDING)")
         lang_ok = ist["language"] in [l.capitalize() if l == "atclang" else l.capitalize() for l in m["language"]] or ist["language"].lower() in m["language"]
         gates_missing = [g for g in m["ci_gates"] if not wf_covers(ist["workflows"], g)]
         verdict = "PASS" if (lang_ok and not gates_missing) else "FINDING"
