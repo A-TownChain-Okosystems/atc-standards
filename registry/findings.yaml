@@ -559,8 +559,8 @@ findings:
 - alias: null
   discovered: '2026-09-10'
   id: F-059
-  resolution: null
-  scr: SCR-0068
+  resolution: "Owner-Entscheidung 11.09.: LOESCHEN; API-Delete an Token-Grenze gescheitert (403, kein delete_repo-Scope) — Ausfuehrung als Owner-UI-Aktion (Settings/Danger Zone), danach RESOLVED und Org 27/27 governed"
+  scr: SCR-0097
   severity: P2
   source: SCR-0068 org-scope.yaml Erstlauf (DRIFT_COUNT=1); Owner-Externaudit P0 'sind
     wirklich alle Repos angebunden?'
