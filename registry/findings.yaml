@@ -959,10 +959,10 @@ findings:
   resolution: Owner-Portfolio-Entscheidung, dann SCR
 - id: F-139
   priority: P1
-  status: OPEN
+  status: PARTIALLY_RESOLVED
   repo: (org-weit)
   title: 'Devnet/Testnet-Infrastruktur fehlt komplett: kein Bootstrapping-Repro, keine Node-Aufstellung, Chain-ID 658467 existiert nur als Konstante — Mainnet-Termin (F-069) hat keine erprobte Vorstufe; Devnet-MVP = 2 Nodes + Boot-Genesis + RPC-Erreichbarkeit waere erster Gate'
-  resolution: Devnet-SCR (bootstrap-genesis, docker-compose/2-Node, Smoke-Test) vor jede Testnet-Planung
+  resolution: 'SCR-0106 Stufe 1: Devnet-Bootstrap live und CI-verifiziert (atc-node Test Suite GRUEN ec675e89) — Genesis (config/devnet/genesis.json + src/bootstrap.rs, Chain-ID 658467) mit Validierung, deterministischem FNV-1a-Boot-Hash (dokumentierter MVP-Platzhalter), devnet_boot mit PeerJoin/Verifizierung, 6 Unit-Tests inkl. Zwei-Nodes-gleiche-Genesis-gleicher-Hash. Restoffen Stufe 2: echtes Netzwerk-Socket, Genesis-File-Bindung via serde, RPC (F-140), Blockproduktion'
 - id: F-140
   priority: P1
   status: OPEN
