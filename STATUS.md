@@ -1,7 +1,7 @@
 # STATUS — atc-standards
 
 <!-- GENERATED-BY generate_views.py — NICHT MANUELL BEARBEITEN -->
-> **GENERIERTER SNAPSHOT (2026-09-11 02:12 UTC+2):** 470 Standards (436 APPROVED, 22 CANDIDATE), 51 Familien, Registry SHA-256 `389e01698c92…` — Quelle: `registry/standards.yaml`.
+> **GENERIERTER SNAPSHOT (2026-09-11 02:17 UTC+2):** 471 Standards (435 APPROVED, 24 CANDIDATE), 51 Familien, Registry SHA-256 `3b3158e24866…` — Quelle: `registry/standards.yaml`.
 > **Interpretationsregel:** Dieser Snapshot = aktueller Zustand. Alles darunter ist AUDIT-TRAIL (historische Zustaende, z.B. „105/105“, „110/110“, „121/121“ zum jeweiligen Zeitpunkt) und darf NICHT als aktueller Stand gelesen werden. Historie: CHANGELOG.md; Change-History: change-requests/SCR-*.md; Audit-Evidence: docs/audits/.
 
 

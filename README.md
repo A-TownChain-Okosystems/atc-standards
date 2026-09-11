@@ -5,17 +5,17 @@
 
 | Kennzahl | Wert |
 |---|---|
-| Registry Standards | **470** |
-| Registry APPROVED | **436** |
-| Registry CANDIDATE (§33) | **22** |
+| Registry Standards | **471** |
+| Registry APPROVED | **435** |
+| Registry CANDIDATE (§33) | **24** |
 | Standard-Dateien (`standards/`) | **469** |
 | Familien | **51** |
-| Registry SHA-256 | `389e01698c927489…` (vollständig: `registry/registry.lock`) |
-| Stand | 2026-09-11 02:12 UTC+2 |
+| Registry SHA-256 | `3b3158e248667e86…` (vollständig: `registry/registry.lock`) |
+| Stand | 2026-09-11 02:17 UTC+2 |
 
 Implementierungs-Matrix: [`registry/standard-implementation.yaml`](registry/standard-implementation.yaml) (ATC-STD-IMPLEMENTATION-001).
 
-**Implementierungs-KPI:** 470 Standards normativ definiert — 62 enforced, 129 implemented, 264 specification-only (Zielsysteme im qualitätsgetriebenen Rebuild AD-023/AD-045). Die Aussage „470 Standards implementiert“ ist unzulässig (SCR-0048).
+**Implementierungs-KPI:** 471 Standards normativ definiert — 63 enforced, 129 implemented, 265 specification-only (Zielsysteme im qualitätsgetriebenen Rebuild AD-023/AD-045). Die Aussage „471 Standards implementiert“ ist unzulässig (SCR-0048).
 
 **ATC COMPLIANCE: YES** — Repository-Audit R3 · Naming/Versioning/Ownership/Lizenz konform ([Audit-Details](#standards--compliance))
 

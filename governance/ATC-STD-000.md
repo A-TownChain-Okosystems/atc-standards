@@ -2,8 +2,8 @@
 standard:
   id: ATC-STD-000
   title: "Standards Governance & Specification Standard"
-  version: "1.2.0"
-  status: approved
+  version: "1.3.0"
+  status: candidate
   category: governance
   authority: A-TownChain Ecosystems
   owner: ShivaCoreDev
@@ -17,7 +17,7 @@ standard:
   license: "Copyright (c) 2026 Michael Wroblewski"
 ---
 
-# ATC-STD-000 — Standards Governance & Specification Standard (v1.2.0, APPROVED)
+# ATC-STD-000 — Standards Governance & Specification Standard (v1.3.0, CANDIDATE)
 
 > ATC-STD-000 ist der Meta-Standard fuer alle ATC Standards: Er definiert das
 > uebergeordnete Governance- und Spezifikationsmodell des gesamten
@@ -226,6 +226,10 @@ Regeln:
 - Die Allokation erfolgt ausschliesslich ueber die Registry (naechste freie
   Nummer je Bereich; SCR-0001). Neue Domaenen-Codes, Familien-Namespaces und
   Bereichs-Reservierungen werden per SCR entschieden (ATC-STD-000 §20).
+- Die verbindliche Bereichs-Reservierung der 10 Domaenen-Familien (000–900)
+  ist ab v1.3.0 in ATC-STD-002 (Standards Family ID & Artifact Identifier
+  Architecture, SCR-0096) festgelegt; neue Standards MUSSSEN im Bereich
+  ihrer Domaene allokiert werden (Grandfathering s. ATC-STD-002 §3).
 - Eine vergebene ID wird nie wieder frei (7.3).
 
 ### 7.8 Duplicate Prevention
@@ -584,6 +588,11 @@ Damit ist ATC-STD-000 keine Ausnahme von den Regeln, die es definiert —
 die Verfassung ist vollstaendig durch die eigene Kette gelaufen.
 
 **Fassungsstand:**
+- v1.3.0 = CANDIDATE (11.09.2026, SCR-0096): §7.7 um Verweis auf die
+  verbindliche Domaenen-Familien-Bereichs-Reservierung in ATC-STD-002
+  (Standards Family ID & Artifact Identifier Architecture) erweitert —
+  Allokation kuenftig im Bereich der Domaene, Bestand grandfathered. Bis
+  zur §9-Freigabe gilt v1.2.0 APPROVED.
 - v1.1.0 = APPROVED-Fassung (07.09.2026, SCR-0004)
 - v1.2.0 = APPROVED (07.09.2026, 20:00 UTC+2, Owner-Freigabe "Alles freigeben"):
   §37 ID-Allokationsprozess (SCR-0001), §38 Security Considerations (F-004).
