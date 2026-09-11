@@ -11,7 +11,7 @@
 | Standard-Dateien (`standards/`) | **469** |
 | Familien | **51** |
 | Registry SHA-256 | `3b3158e248667e86…` (vollständig: `registry/registry.lock`) |
-| Stand | 2026-09-11 02:17 UTC+2 |
+| Stand | 2026-09-11 02:19 UTC+2 |
 
 Implementierungs-Matrix: [`registry/standard-implementation.yaml`](registry/standard-implementation.yaml) (ATC-STD-IMPLEMENTATION-001).
 
@@ -60,7 +60,7 @@ deren CI-Gates; Nachweis via Implementierungs-Matrix).
 ## Architecture
 
 ### Core Components
-- `registry/` — SSOT (standards.yaml, versions.yaml, dependencies.yaml, findings.yaml)
+- `registry/` — SSOT (standards.yaml, versions.yaml, dependencies.yaml, findings.yaml, families/ = Familien-SSOT, standards/ = generierte Per-Standard-Records)
 - `standards/` — 469 Standard-Dateien in 51 Familien
 - `schemas/` — naming-conventions.schema.json, milestone.schema.json, etc.
 - `tools/` — Validators, Auditors, Generators

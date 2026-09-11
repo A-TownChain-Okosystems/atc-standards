@@ -59,17 +59,31 @@ ATC-STD-000 §7.7, entschieden per SCR-0096):
 | 800 | OS & Runtime | ShivaCore, GlobusOS, Runtime, Kernel, HAL | ATC-STD-800–899 |
 | 900 | Integration & Interoperability | APIs, Bridges, Cross-Chain, externe Systeme | ATC-STD-900–999 |
 
-Die Familie leitet sich aus dem Hunderter-Präfix ab: ATC-STD-017 → Familie
-000 (Governance/Meta); ATC-STD-217 → 200; ATC-STD-417 → 400; ATC-STD-617 →
-600; ATC-STD-817 → 800. Neue Standards MÜSSEN im Bereich ihrer Domäne
-allokiert werden.
+**Regel (REQ-STD-001a):** Die Hunderterstelle bestimmt die Standards-Familie;
+die letzten zwei Stellen identifizieren den Standard innerhalb dieser Familie
+(ATC-STD-417 → Familie 400, Standard 17). Neue Standards MÜSSEN im Bereich
+ihrer Domäne allokiert werden. SSOT der Familien-Definitionen:
+registry/families/FAMILY-000.yaml … FAMILY-900.yaml (§6).
 
 ## §2 Kein Recycling (REQ-STD-002, MUST)
 
-Zurückgezogene Standards bleiben historisch mit ihrer ID verbunden
-(ATC-STD-000 §7.3/§7.9: vergebene IDs werden nie wieder frei; Lücken sind
-historische Marker). Familien-Nummernbereiche MÜSSEN dauerhaft reserviert
-bleiben.
+Zurückgezogene Standards bleiben historisch mit ihrer ID verbunden.
+Verbindliche Reservierungsregeln (Owner-Härtung 11.09.):
+
+1. Eine ID wird NIEMALS wiederverwendet.
+2. Die ID bleibt bei DEPRECATED und RETIRED erhalten.
+3. Eine ID DARF nur einem Standard zugeordnet werden.
+4. Ein Standard DARF seine ID nach Veröffentlichung NICHT ändern.
+5. Änderungen erfolgen über `version`, nicht über eine neue ID.
+6. Ein komplett neuer Standard erhält eine NEUE ID.
+7. Ein Family-Wechsel eines bestehenden Standards erzeugt KEINE stille
+   Umnummerierung (Ausnahmeprozess: Nachfolge-Standard mit neuer ID + explicit
+   `superseded_by`).
+8. Die Registry ist die Single Source of Truth.
+9. Freie IDs DÜRFEN reserviert werden (Registry-Zeile Status `reserved`).
+10. Gelöschte Dateien geben eine bereits vergebene ID NIEMALS erneut frei.
+
+(Kopplung: ATC-STD-000 §7.3/§7.9, §36 ID-Immutabilität.)
 
 ## §3 Bestands-Mapping & Grandfathering (REQ-STD-003, MUST)
 
@@ -77,6 +91,20 @@ Bestehende IDs SIND unveränderlich (§36 ID-Immutabilität) und werden nicht
 renummeriert. Bestandskonformität: 000 Governance ✓ (ATC-STD-000, 002),
 100 Architecture ✓ (ATC-STD-100 Language Architecture), 200 Repository ✓
 (ATC-STD-201–215), 300 Software Engineering ✓ (ATC-STD-300/314).
+
+**Datenmodell (REQ-STD-003a): family_id ≠ standard_id.** Die Domänenkennung
+und die Standard-Identität sind im Datenmodell explizit getrennt — 400 ist die
+Domänenkennung, ATC-STD-417 die unveränderliche Identität des Standards:
+
+```
+family_id: 400
+family: SECURITY
+
+standard_id: ATC-STD-417
+title: Security Baseline Standard
+status: DRAFT
+version: 1.0.0
+```
 
 **Dokumentierte Legacy-Ausnahme:** die Enterprise-Assurance-Familie
 ATC-STD-016–043 (SCR-0087–0095) ist inhaltlich Security/Assurance-Domäne,
@@ -93,7 +121,7 @@ sie sind eigene Klassen mit standard-bezogener ID-Struktur:
 
 | Klasse | Format (neu) | Beispiel |
 |---|---|---|
-| Requirement | REQ-STD-<std>-NNN | REQ-STD-417-001 |
+| Requirement | REQ-<std>-NNN | REQ-417-001 |
 | Test Case | TC-<std>-NNN | TC-417-001 |
 | Gate (standard-scoped) | GATE-<std>-NNN | GATE-417-001 |
 | Architecture Decision | ADR-<std>-NNN | ADR-417-001 |
@@ -114,17 +142,54 @@ bleiben):
   standard-scoped Gate-Instanzen DÜRFEN GATE-<std>-NNN nutzen.
 - **AD-NNN** (DECISIONS_REGISTER) bleibt grandfathered (ATC-STD-000 §7.9);
   neue Architecture Decisions DÜRFEN ADR-<std>-NNN nutzen.
-- Per-Standard-REQ-Namespaces der Bestandsstandards (REQ-STD-001…NNN je
-  Datei, REQ-TUD-…, REQ-RM-…) bleiben gültig; Migration auf das
-  3-Teile-Format erfolgt bei nächster Major-Revision des jeweiligen
-  Standards.
+- **REQ-Format (Owner-Korrektur):** REQ-417-001 statt REQ-STD-417-001 — REQ
+  drückt bereits die Artefakt-Klasse aus, 417 verweist auf den Standard.
+  Per-Standard-Namespaces der Bestandsstandards (REQ-STD-001…NNN je Datei,
+  REQ-TUD-…, REQ-RM-…) bleiben gültig; Migration erfolgt bei nächster
+  Major-Revision des jeweiligen Standards.
+- **Vierdimensionale Identität:** Family (400) · Standard (ATC-STD-417) ·
+  Artifact (REQ/SPEC/ADR/TC/SCR/GATE) · Instance (-001).
+- **SCR-Doppelformat (dokumentiert):** SCR-NNNN (4-stellig) = org-weiter
+  System Change Request (SCR-0001…); SCR-<std>-NNN (3+3) = standard-scoped
+  Security Check gemäß Owner-Kette §5. Beide Muster sind lexikalisch
+  unterscheidbar; Validator-Regeln trennen sie strikt. (Owner-Alternative
+  ATC-CTRL-<std>-NNN aus SCR-0096-Entwurf bleibt als Alias dokumentiert.)
 
 ## §5 Traceability-Kette (REQ-STD-005, MUST)
 
-Jede Kette MUSS auflösbar sein: Familie → Standard → Requirement →
-Implementierung → Test → Gate → Evidence (DTC-Kette nach ATC-STD-300;
-Evidence Store nach ATC-GATE-SEC-001 §4). Die Registry bleibt
-Allokations-Autorität (ATC-STD-000 §7.8).
+Jede Kette MUSS auflösbar sein (vollständige 11-Stufen-Kette):
+
+FAMILY → ATC-STD → REQ → SPEC → ADR → IMPLEMENTATION → TEST CASE →
+SECURITY CHECK → GATE → EVIDENCE → RELEASE
+
+Beispiel: Family 400 → ATC-STD-417 → REQ-417-001/002, SPEC-417-001,
+ADR-417-001, SCR-417-001, TC-417-001/002 → GATE-417-001 → EVIDENCE →
+RELEASE. (DTC-Kette nach ATC-STD-300; Evidence Store nach
+ATC-GATE-SEC-001 §4.) Die Registry bleibt Allokations-Autorität
+(ATC-STD-000 §7.8).
+
+## §6 Registry-Struktur (REQ-STD-006, MUST)
+
+Die Registry gliedert sich in Familien-Definitionen und Standard-Records:
+
+```
+registry/
+├── families/            # SSOT der Familien (normativ)
+│   ├── FAMILY-000.yaml
+│   ├── FAMILY-100.yaml
+│   └── … FAMILY-900.yaml
+└── standards/           # normalisierte Standard-Records (je Standard eine Datei)
+    ├── ATC-STD-000.yaml
+    ├── ATC-STD-001.yaml
+    └── …
+```
+
+Übergangs-SSOT: registry/standards.yaml bleibt die maschinenlesbare
+Allokations-Autorität (ATC-STD-000 §7.8), bis sämtliche Tools die
+per-Standard-Records lesen; registry/standards/*.yaml werden daraus
+generiert (Generator: tools/gen_views/gen_registry_records.py) und MÜSSEN
+NICHT manuell gepflegt werden. Familie-Dateien SIND normativ (keine
+Ableitung). Migration der Tool-Kette = Nachfolge-SCR.
 
 ## REQ-Matrix (normative Anforderungen)
 
@@ -132,7 +197,8 @@ Allokations-Autorität (ATC-STD-000 §7.8).
 - id: REQ-STD-002 — Recycling IST VERBOTEN; Lücken bleiben historische Marker.
 - id: REQ-STD-003 — Bestands-IDs SIND unveränderlich; Legacy-Ausnahmen (016–043) MÜSSEN dokumentiert bleiben; Security ab jetzt in 400.
 - id: REQ-STD-004 — Artefakt-Klassen MÜSSEN eigene ID-Strukturen nutzen; Abgrenzungen (SCR, Findings, Org-Gates, AD) MÜSSEN eingehalten werden.
-- id: REQ-STD-005 — Traceability-Kette MUSS durchgehend auflösbar sein.
+- id: REQ-STD-005 — Traceability-Kette MUSS durchgehend auflösbar sein (11 Stufen, vierdimensionale Identität).
+- id: REQ-STD-006 — Registry-Struktur MUSS aus families/ (normativ) und standards/ (normalisiert) bestehen; Reservierungsregeln 1–10 MÜSSEN gelten.
 
 ## Compliance
 
@@ -156,9 +222,11 @@ als Nachfolge-SCR offen. SSOT: registry/standard-implementation.yaml.
 
 ## Changelog
 
-- v1.0.0 (2026-09-11): Owner-Entwurf (SCR-0096) — 10 Domänen-Familien,
-  No-Recycling, Bestands-Mapping/Grandfathering, Artefakt-Klassen- Architektur,
-  Traceability-Kette. CANDIDATE.
+- v1.0.0 (2026-09-11): SCR-0096 Initial + Owner-Härtung (gleicher Tag):
+  Hunderterstellen-Regel, 10 Reservierungsregeln, Datenmodell-Trennung
+  family_id/standard_id, REQ-417-001-Format (Owner-Korrektur), SCR-Doppelformat
+  dokumentiert, 11-Stufen-Traceability-Kette, Registry-Struktur families/ +
+  standards/. CANDIDATE.
 
 ## References
 
