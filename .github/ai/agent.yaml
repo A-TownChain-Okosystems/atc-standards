@@ -480,6 +480,7 @@ required_standards:
 - ATC-STD-220
 - ATC-ORG-BASELINE-001
 - ATC-STD-003
+- ATC-STD-ENG-001
 workflow:
   require_tests: true
   require_audit: true
