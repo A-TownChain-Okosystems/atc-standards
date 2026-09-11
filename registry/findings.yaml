@@ -1082,3 +1082,16 @@ findings:
   repo: atc-standards
   title: '12 DRAFT-Standards pruefen: vollstaendige Huelle -> SCR-Elaborierung, unvollstaendig -> ehrlich als GEPLANT/leer dokumentieren; KEIN Blanko-Approval (SCR-0102 begrenzt auf 25 CANDIDATEs)'
   resolution: 'Audit je DRAFT via SCR; entscheidung je Standard'
+
+- id: F-132
+  priority: P2
+  status: OPEN
+  repo: .github
+  title: 'Org Compliance Scan robust haerten: tarfile.AbsoluteLinkError durch absolute Symlinks in Repo-Tarballs bricht den GESAMT-Scan ab (atc-contracts .venv-t, 11.09. 12:16, transienter Parallel-Stand) — Symlinks beim Extrahieren ueberspringen + Fehler je Repo isolieren; Hub-Aenderung via PR (PR-gated)'
+  resolution: 'Hub-PR mit Scanner-Patch (tarfile-Filter + je-Repo-try/except), danach Scan verifizieren'
+- id: F-133
+  priority: P3
+  status: OPEN
+  repo: a-townchain-os
+  title: 'CodeQL-Exemption dokumentieren: Monorepo-Shell ist docs-only (18 md, 0 Quellcode, L7-Integrationsshell) — Rust-CodeQL-Rollout 504e3e0 scheiterte konfigurativ (autobuild unanwendbar), codeql.yml-Loeschung war korrekt; CodeQL ohne Quellcode nicht anwendbar; bei Re-Ansiedlung von Code wieder aktivieren'
+  resolution: 'Exemption in Scan-EXEMPT-Klasse dokumentieren; Reaktivierung an Code-Wiedereinzug binden'
