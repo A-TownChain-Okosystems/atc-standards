@@ -477,6 +477,7 @@ required_standards:
 - ATC-STD-043
 - ATC-STD-002
 - ATC-GOV-001
+- ATC-STD-220
 workflow:
   require_tests: true
   require_audit: true

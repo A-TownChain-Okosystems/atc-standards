@@ -7431,3 +7431,7 @@ versions:
   - version: 1.0.0
     date: '2026-09-11'
     change: 'Owner-Entwurf Governance Operating System (SCR-0097): Level-0-Verfassung mit Authorities, Quoren, Gates, Enforcement; Status CANDIDATE'
+  ATC-STD-220:
+  - version: 1.0.0
+    date: '2026-09-11'
+    change: 'Owner-Entwurf SCR-0099: File Admission & Placement Master; Checker CHECK-FILE-001 implementiert und pilotiert; Status CANDIDATE'

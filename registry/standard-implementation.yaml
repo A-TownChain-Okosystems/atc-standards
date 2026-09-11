@@ -11,7 +11,7 @@ generated_from: registry/standards.yaml
 updated: "2026-09-08"
 coverage_kpi:
   registry_total: 431
-  matrix_entries: 472
+  matrix_entries: 473
   matrix_coverage: "100%"
   enforced_target: "je Wartungszyklus steigend (REQ-IMP-007)"
   hinweis: "Wertigkeit der 21 SCR-0045-Detail-Eintraege bleibt; Familien-Evidence konsolidiert"
@@ -3909,4 +3909,12 @@ standards:
     implementation:
       status: reference
       evidence: "Legacy-Serie (atc/): durch ATC-STD-000ff superseded; historische Referenz konserviert"
+    independence: L1
+
+  - standard: ATC-STD-220
+    version: "1.0.0"
+    applicability: MANDATORY
+    implementation:
+      status: enforced
+      evidence: "Governance-CI 26/26 (fetch-depth:0, AUD-2026-0002 F-048); AGENT_MANIFEST v3.1.7 Rollout 26/26; Branch-Protection SCR-0003"
     independence: L1
