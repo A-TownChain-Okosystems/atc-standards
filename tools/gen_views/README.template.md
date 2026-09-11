@@ -37,7 +37,7 @@ Umsetzungsgrad: ausschließlich State-Block oben (SCR-0090).
 ATC Standards is the canonical normative governance layer of the A-TownChain ecosystem. It maintains:
 
 - **Registry:** SSOT für alle @@TOTAL@@ Standards mit Versionierung, Dependencies (DAG) und Findings
-- **Verfassung:** ATC-STD-000 v1.2.0 (ID-System, Lifecycle, Change Control, Immutabilität)
+- **Verfassung:** ATC-STD-000 v@@VER000@@, @@ST000@@ (ID-System, Lifecycle, Change Control, Immutabilität)
 - **Validator-Suite:** atc-std-validator, atc-repo-audit (R3), atc-readme-validator
 - **Governance Framework:** @@FAMS@@ Familien, Enterprise-Ebenen (ATC-ENT-001..015), AI-Standards (ATC-AAS-001..025)
 - **Governance-Determinismus:** @@STD@@ (SSOT-Matrix, State-ID, Ein-Zahl-Regel)
@@ -113,7 +113,7 @@ python3 tools/atc-readme-validator/check_readme.py .     # README-Compliance
 
 ## Governance
 
-This repository is governed according to ATC-STD-000 v1.2.0 (A-TownChain Enterprise Governance Framework):
+This repository is governed according to ATC-STD-000 v@@VER000@@ (@@ST000@@, A-TownChain Enterprise Governance Framework):
 
 - **Changes to APPROVED Standards:** via SCR only (§30 Immutabilität)
 - **New Standards:** Registry-First (Eintrag → Validierung → §9-Owner-Freigabe); @@STD@@ §7: No standard because a slot exists
@@ -128,13 +128,7 @@ See `CONTRIBUTING.md` and `governance/ATC-STD-000.md` for details.
 
 | Standard | Version | Status |
 |---|---|---|
-| ATC-STD-000 | 1.2.0 | ✅ APPROVED (Verfassung; Bootstrap-EXEMPT mit Sunset, @@STD@@ §6) |
-| ATC-STD-003 | 1.0.0 | ✅ APPROVED (Governance Determinism & SSOT Matrix) |
-| ATC-STD-201 | 1.0.0 | ✅ APPROVED |
-| ATC-STD-202 | 1.1.0 | ✅ APPROVED |
-| ATC-STD-203 | 1.0.0 | ✅ APPROVED |
-| ATC-STD-204 | 1.0.0 | ✅ APPROVED |
-| ATC-STD-README-001 | 1.0.0 | ✅ APPROVED |
+@@COMPTABLE@@
 
 See [`registry/standards.yaml`](registry/standards.yaml) for the complete registry.
 
@@ -225,7 +219,7 @@ Additional ATC usage terms (separate from Apache-2.0) are governed by the ATC-LI
 - **Project:** atc-standards
 - **Organization:** A-TownChain-Okosystems
 - **Status:** `release-candidate`
-- **Version:** 1.2.0
+- **Version:** @@REPOVER@@
 - **Registry ID:** ATC-REPO-GOV-001
 - **Owner:** Michael Wroblewski (§9-Freigaben)
 - **Maintainer:** Aurora #1 (operative Pflege, AUD-pflichtig)

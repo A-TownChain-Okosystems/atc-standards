@@ -83,11 +83,23 @@ for name, meta in families.items():
     dom_fams[dom].append(fam)
 
 # Kategorie-Ebene: für neue Familien via ATC-CAT-REQ; Bestand führt GENERAL (Grandfathering)
+
+import re as _re, datetime as _dt
+def reg_lookup(mid):
+    """SCR-0091: Status/Version aus Registry-SSOT abgeleitet — keine Hartcodes."""
+    for line in open("registry/standards.yaml", encoding="utf-8"):
+        m = _re.search(r'- \{id: ' + mid + r',.*?version: "?([\d.]+)"?, status: (\w+)', line)
+        if m:
+            return {"id": mid, "version": m.group(1), "status": m.group(2).upper()}
+    raise SystemExit("ERROR: taxonomy entry '" + mid + "' has no corresponding registry entry (SCR-0091)")
+def reg_ver(mid):
+    return reg_lookup(mid).get("version", "n/a")
+
 data = {
     "taxonomy": {
         "standard": "ATC-STD-TAXONOMY-001",
-        "version": "1.0.0",
-        "generated": "2026-09-08",
+        "version": reg_ver("ATC-STD-TAXONOMY-001"),
+        "generated": _dt.date.today().isoformat(),
         "hierarchy": ["DOMAIN", "FAMILY", "CATEGORY", "STANDARD"],
         "id_scheme_new_families": "ATC-STD-<FAMCODE>[-<CATEGORY>]-NNN",
         "grandfathering": "Bestehende Standards behalten ihre IDs (§30); Bestands-Familien fuehren Kategorie GENERAL bis Unterteilung via ATC-CAT-REQ.",
@@ -96,13 +108,9 @@ data = {
         "tax_checks": "TAX-CHECK-001..018 (S-24 automatisiert 001-006, 013, 014, 015)",
         "governance_core": {
             "family": "FAM-43 Standards Governance Core",
-            "members": [
-                {"id": "ATC-STD-TAXONOMY-001", "status": "DRAFT (SCR-0024, §9 ausstehend)"},
-                {"id": "ATC-STD-STDDEV-001", "status": "GEPLANT (Standards-Development-Standard)"},
-                {"id": "ATC-STD-REGISTRY-001", "status": "GEPLANT (Registry-Management)"},
-                {"id": "ATC-STD-CHANGE-001", "status": "GEPLANT (Change-Control-Dachnorm; konsolidiert ATC-STD-000 §19-33 + UPDATE-001 + COMPAT-001; Abgrenzung bei Erstellung klaeren)"},
-                {"id": "ATC-STD-AUDIT-001", "status": "APPROVED"},
-            ],
+            "members": [reg_lookup(mid) for mid in [
+                "ATC-STD-TAXONOMY-001", "ATC-STD-STDDEV-001", "ATC-STD-REGISTRY-001",
+                "ATC-STD-CHANGE-001", "ATC-STD-AUDIT-001"]],
         },
         "documented_negativfall": "Owner-Beispielfamilie AIA (AI Agents) ueberlappt Bestands-Familie AAS (ATC-AAS-001..025) — TAX-CHECK-008/010 wuerden ATC-FAM-REQ zurueckweisen bzw. auf MERGE lenken.",
         "domains": [

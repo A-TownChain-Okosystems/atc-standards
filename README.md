@@ -6,8 +6,8 @@
 ```yaml
 state:
   id: ATC-STATE-20260911-77988037
-  generated_at: "2026-09-11 09:50 UTC+2"
-  registry_version: "1.2.0"
+  generated_at: "2026-09-11 10:29 UTC+2"
+  registry_version: "1.0.0"
   registry_sha256: "7798803757d741a8c5ef99ec80e355c26be672085572f2549973897b5014afc2"
   standards_total: 474
   standards_approved: 436
@@ -37,7 +37,7 @@ Umsetzungsgrad: ausschließlich State-Block oben (SCR-0090).
 ATC Standards is the canonical normative governance layer of the A-TownChain ecosystem. It maintains:
 
 - **Registry:** SSOT für alle 474 Standards mit Versionierung, Dependencies (DAG) und Findings
-- **Verfassung:** ATC-STD-000 v1.2.0 (ID-System, Lifecycle, Change Control, Immutabilität)
+- **Verfassung:** ATC-STD-000 v1.3.0, CANDIDATE (ID-System, Lifecycle, Change Control, Immutabilität)
 - **Validator-Suite:** atc-std-validator, atc-repo-audit (R3), atc-readme-validator
 - **Governance Framework:** 51 Familien, Enterprise-Ebenen (ATC-ENT-001..015), AI-Standards (ATC-AAS-001..025)
 - **Governance-Determinismus:** ATC-STD-003 (SSOT-Matrix, State-ID, Ein-Zahl-Regel)
@@ -113,7 +113,7 @@ python3 tools/atc-readme-validator/check_readme.py .     # README-Compliance
 
 ## Governance
 
-This repository is governed according to ATC-STD-000 v1.2.0 (A-TownChain Enterprise Governance Framework):
+This repository is governed according to ATC-STD-000 v1.3.0 (CANDIDATE, A-TownChain Enterprise Governance Framework):
 
 - **Changes to APPROVED Standards:** via SCR only (§30 Immutabilität)
 - **New Standards:** Registry-First (Eintrag → Validierung → §9-Owner-Freigabe); ATC-STD-003 §7: No standard because a slot exists
@@ -128,11 +128,11 @@ See `CONTRIBUTING.md` and `governance/ATC-STD-000.md` for details.
 
 | Standard | Version | Status |
 |---|---|---|
-| ATC-STD-000 | 1.2.0 | ✅ APPROVED (Verfassung; Bootstrap-EXEMPT mit Sunset, ATC-STD-003 §6) |
+| ATC-STD-000 | 1.3.0 | 🔶 CANDIDATE (Verfassung; Bootstrap-EXEMPT mit Sunset, ATC-STD-003 §6) |
 | ATC-STD-003 | 1.0.0 | ✅ APPROVED (Governance Determinism & SSOT Matrix) |
-| ATC-STD-201 | 1.0.0 | ✅ APPROVED |
-| ATC-STD-202 | 1.1.0 | ✅ APPROVED |
-| ATC-STD-203 | 1.0.0 | ✅ APPROVED |
+| ATC-STD-201 | 1.0.1 | ✅ APPROVED |
+| ATC-STD-202 | 1.2.0 | ✅ APPROVED |
+| ATC-STD-203 | 1.0.1 | ✅ APPROVED |
 | ATC-STD-204 | 1.0.0 | ✅ APPROVED |
 | ATC-STD-README-001 | 1.0.0 | ✅ APPROVED |
 
@@ -225,7 +225,7 @@ Additional ATC usage terms (separate from Apache-2.0) are governed by the ATC-LI
 - **Project:** atc-standards
 - **Organization:** A-TownChain-Okosystems
 - **Status:** `release-candidate`
-- **Version:** 1.2.0
+- **Version:** 1.0.0
 - **Registry ID:** ATC-REPO-GOV-001
 - **Owner:** Michael Wroblewski (§9-Freigaben)
 - **Maintainer:** Aurora #1 (operative Pflege, AUD-pflichtig)

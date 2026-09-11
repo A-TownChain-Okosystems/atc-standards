@@ -103,3 +103,19 @@ jobs:
               raise SystemExit(1)
           print("Views-Drift-Check OK (nur Zeitstempel-Delta)")
           PY
+
+  cross-registry:
+    name: Cross-Registry-Konsistenztest (SCR-0091, R1-R10, Exit 1 bei Drift)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pyyaml
+      - name: Views regenerieren + Cross-Registry-Validierung
+        run: |
+          python3 tools/gen_views/generate_views.py
+          python3 tools/taxonomy/gen_taxonomy.py
+          python3 tools/index/gen_index.py
+          python3 tools/consistency/check_cross_registry.py

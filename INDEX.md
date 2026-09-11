@@ -64,7 +64,7 @@ Kernregister: **standards.yaml** (Bestand, 474 Standards) · **versions.yaml**
 477 Slots) · **categories.yaml**
 (Kategorien) · **taxonomy.yaml** (Domain/Familie/Kategorie) · **protocol-registry.yaml**
 (26 Protokollfamilien, Status {'draft': 10, 'planned': 16}) ·
-**findings.yaml** (Findings: 52 OPEN / 64 RESOLVED von 116).
+**findings.yaml** (Findings: 56 OPEN / 64 RESOLVED von 120).
 
 ## 3. Standardfamilien (Katalog, 51 Familien)
 
@@ -623,7 +623,7 @@ Klassifikation (ATC-STD-REPO-AUDIT-001/002).
 
 ## 7. Offene Punkte (Auszug — Details: STATUS.md)
 
-- Findings OPEN: 52 (aktuelle Liste: registry/findings.yaml)
+- Findings OPEN: 56 (aktuelle Liste: registry/findings.yaml)
 - Org-Audit-Ableitungen: Issues #94–98 (a-townchain-os) — CI 23/26, CodeQL,
   Versions-Baseline, verwaister Tag, ATC-STD-202-Klassifizierung
 - ATC-LICENSE: 5 Lizenztypen PLANNED (SOURCE, COMMERCIAL, PROPRIETARY, DATA,

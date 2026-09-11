@@ -3,7 +3,7 @@
 taxonomy:
   standard: ATC-STD-TAXONOMY-001
   version: 1.0.0
-  generated: '2026-09-08'
+  generated: '2026-09-11'
   hierarchy:
   - DOMAIN
   - FAMILY
@@ -27,14 +27,19 @@ taxonomy:
     family: FAM-43 Standards Governance Core
     members:
     - id: ATC-STD-TAXONOMY-001
-      status: DRAFT (SCR-0024, §9 ausstehend)
+      version: 1.0.0
+      status: APPROVED
     - id: ATC-STD-STDDEV-001
-      status: GEPLANT (Standards-Development-Standard)
+      version: 1.0.0
+      status: APPROVED
     - id: ATC-STD-REGISTRY-001
-      status: GEPLANT (Registry-Management)
+      version: 1.0.0
+      status: APPROVED
     - id: ATC-STD-CHANGE-001
-      status: GEPLANT (Change-Control-Dachnorm; konsolidiert ATC-STD-000 §19-33 + UPDATE-001 + COMPAT-001; Abgrenzung bei Erstellung klaeren)
+      version: 1.0.1
+      status: APPROVED
     - id: ATC-STD-AUDIT-001
+      version: 1.0.0
       status: APPROVED
   documented_negativfall: Owner-Beispielfamilie AIA (AI Agents) ueberlappt Bestands-Familie AAS (ATC-AAS-001..025) — TAX-CHECK-008/010 wuerden ATC-FAM-REQ zurueckweisen bzw. auf MERGE lenken.
   domains:
@@ -50,7 +55,7 @@ taxonomy:
       id_range: ATC-STD-000
       source: numeric-§7
       description: Standard Governance (Verfassung)
-      standards_count: 10
+      standards_count: 14
       categories:
       - id: GENERAL
         name: Allgemein (Bestand, keine Unterteilung)
@@ -76,7 +81,7 @@ taxonomy:
       id_range: ATC-ENT-001-015
       source: named-family
       description: Enterprise Standards Layer (Org-Governance, Freigabe 07.09.)
-      standards_count: 28
+      standards_count: 53
       categories:
       - id: GENERAL
         name: Allgemein (Bestand, keine Unterteilung)
@@ -356,7 +361,7 @@ taxonomy:
       id_range: ATC-STD-200–299
       source: numeric-§7
       description: Repository & Git
-      standards_count: 23
+      standards_count: 24
       categories:
       - id: GENERAL
         name: Allgemein (Bestand, keine Unterteilung)
