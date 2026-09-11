@@ -187,8 +187,8 @@ findings:
   severity: S2
   source: AUD-2026-0002 (Bereich 11)
   audit: AUD-2026-0002
-  status: PARTIAL
-  resolution: 'Dependabot.yml in 16 Manifest-Repos eingerichtet (npm/cargo/pip, weekly, Commits 07.09.); 6 Repos ohne Manifeste + 4 spec-only ohne Bedarf; CodeQL-Rollout offen → Issue #95 (Code-Repos: atc-shivacore, atclang, aurora-ai, a-townchain, atc-contracts, atc-zkp, globus-os, genesis-chronicles)'
+  status: RESOLVED
+  resolution: 'SCR-0103 + SCR-0105: Dependabot 26/26 (F-043 RESOLVED via API-Rollout der 10 fehlenden Konfigs) und CodeQL 25/26 Code-Repos gruen (9 T1-Repos via Parallel-Session ausgerollt + atc-sdk Sprach-Fix python,rust; a-townchain-os legit EXEMPT docs-only F-133, .github PR-gated, demo-repository Loeschung offen). Beide zum Audit-Stand 0/26 genannten Dimensionen sind damit flächendeckend abgedeckt; Security-Automatisierung aktiv'
   priority: P2
 - id: F-026
   title: Manifest-Versionen inkonsistent (5x 0.1.0, atc-contracts 1.0.0, Rest unversioniert); Releases nur 2/26; keine Tag-Disziplin
