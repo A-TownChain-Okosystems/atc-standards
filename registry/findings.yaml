@@ -632,9 +632,10 @@ findings:
   resolution: 'SCR-0073: primary python, Referenzmodell ehrlich deklariert'
 - id: F-084
   priority: P1
-  status: OPEN
+  status: PARTIALLY_RESOLVED
   repo: atc-contracts
   title: 'ATC-CONTRACT-EXEC-001: .atc zu Bytecode zu ATC-VM zu Receipt ohne Evidence'
+  resolution: 'SCR-0104: EXEC-Chain-MVP CI-erzwungen — assemble.py kompiliert e2e_adder.atc (EXEC-GATE-Subset, fail-fast Simulation) nach ATVM-Ops; exec_receipt.rs fuehrt aus + verifiziert + schreibt deterministischen Receipt; contract-exec-gate.yml GRUEN (a47373e5). Restoffen: Vollcompiler (symbolische Parameter), Gas-Modell, weitere Contracts'
 - id: F-085
   priority: P1
   status: OPEN
@@ -938,10 +939,33 @@ findings:
   repo: (org-weit)
   title: 'Release-Security-Programm (ATC-ORG-BASELINE-001 par.5 P1): SBOM, signierte Releases, Reproducible Builds, Tag-/Release-Protection — IST 0/26; Proto-Evidence-Gate vorhanden; Ablauf SOURCE->CI->TEST->SECURITY->BUILD->SBOM->HASH->SIGN->RELEASE je Tier ableiten'
   resolution: Programm-SCR je Teilgabe mit Evidence-Bindung; T1 zuerst
-
 - id: F-136
   priority: P0
   status: OPEN
   repo: a-townchain-os
   title: 'Secret-Scanning-Alert #1 (google_api_key, 05.07.2026, Validitaet unknown): Datei aus main entfernt, Alert offen — OWNER-VERIFIKATION noetig: wenn Key real, in Google Cloud Console widerrufen, dann Alert als revoked loesen; wenn Test-Dummy, als false_positive loesen'
-  resolution: 'Owner-Verifikation + Widerruf; danach Alert-Resolution via API'
+  resolution: Owner-Verifikation + Widerruf; danach Alert-Resolution via API
+- id: F-137
+  priority: P1
+  status: OPEN
+  repo: atc-zkp
+  title: 'ZKVM-Implementierung (ATC-STD-ZKP-009 APPROVED): 7-Crate-MVP, aber keine ZKVM-Crate — Proof-System-Auswahl, Circuit-Modell, ZKVM-Runtime fehlen; Spec approved, Implementation 0'
+  resolution: ZKVM-SCR nach Proof-System-Freeze
+- id: F-138
+  priority: P2
+  status: OPEN
+  repo: (org-weit)
+  title: 'EVM-Compatibility-Layer (ATC-STD-245 APPROVED): kein Implementierungs-Repo — Owner-Entscheidung: eigenes Repo vs. Modul in atc-interop; Scope (Adapter vs. volle EVM) offen'
+  resolution: Owner-Portfolio-Entscheidung, dann SCR
+- id: F-139
+  priority: P1
+  status: OPEN
+  repo: (org-weit)
+  title: 'Devnet/Testnet-Infrastruktur fehlt komplett: kein Bootstrapping-Repro, keine Node-Aufstellung, Chain-ID 658467 existiert nur als Konstante — Mainnet-Termin (F-069) hat keine erprobte Vorstufe; Devnet-MVP = 2 Nodes + Boot-Genesis + RPC-Erreichbarkeit waere erster Gate'
+  resolution: Devnet-SCR (bootstrap-genesis, docker-compose/2-Node, Smoke-Test) vor jede Testnet-Planung
+- id: F-140
+  priority: P1
+  status: OPEN
+  repo: (org-weit)
+  title: 'Chain-Access-Layer fehlt: kein RPC/API-Dienst zwischen atc-node und Wallet/Explorer/SDK — atc-sdk ist Bibliothek ohne Dienstknoten, atc-explorer hat keine Node-Anbindung; IFC-Vertraege 0009/0010 ohne Consumer'
+  resolution: 'RPC-Gateway-SCR (JSON-RPC-Subset: chainId, blockNumber, getBlock, sendTx) auf atc-node aufsetzend'
