@@ -7372,3 +7372,51 @@ versions:
   - version: 1.0.0
     date: '2026-09-11'
     change: 'Owner-Entwurf Continuous Assurance (SCR-0094): neuer Standard der Assurance-Familie; Status CANDIDATE'
+  ATC-STD-030:
+  - version: 1.0.0
+    date: '2026-09-11'
+    change: 'Owner-Entwurf Automated Assurance (SCR-0095): neuer Standard der Assurance-Familie; Status CANDIDATE'
+  ATC-STD-031:
+  - version: 1.0.0
+    date: '2026-09-11'
+    change: 'Owner-Entwurf Automated Assurance (SCR-0095): neuer Standard der Assurance-Familie; Status CANDIDATE'
+  ATC-STD-032:
+  - version: 1.0.0
+    date: '2026-09-11'
+    change: 'Owner-Entwurf Automated Assurance (SCR-0095): neuer Standard der Assurance-Familie; Status CANDIDATE'
+  ATC-STD-033:
+  - version: 1.0.0
+    date: '2026-09-11'
+    change: 'Owner-Entwurf Automated Assurance (SCR-0095): neuer Standard der Assurance-Familie; Status CANDIDATE'
+  ATC-STD-034:
+  - version: 1.0.0
+    date: '2026-09-11'
+    change: 'Owner-Entwurf Automated Assurance (SCR-0095): neuer Standard der Assurance-Familie; Status CANDIDATE'
+  ATC-STD-035:
+  - version: 1.0.0
+    date: '2026-09-11'
+    change: 'Owner-Entwurf Automated Assurance (SCR-0095): neuer Standard der Assurance-Familie; Status CANDIDATE'
+  ATC-STD-036:
+  - version: 1.0.0
+    date: '2026-09-11'
+    change: 'Owner-Entwurf Automated Assurance (SCR-0095): neuer Standard der Assurance-Familie; Status CANDIDATE'
+  ATC-STD-037:
+  - version: 1.0.0
+    date: '2026-09-11'
+    change: 'Owner-Entwurf Automated Assurance (SCR-0095): neuer Standard der Assurance-Familie; Status CANDIDATE'
+  ATC-STD-038:
+  - version: 1.0.0
+    date: '2026-09-11'
+    change: 'Owner-Entwurf Automated Assurance (SCR-0095): neuer Standard der Assurance-Familie; Status CANDIDATE'
+  ATC-STD-039:
+  - version: 1.0.0
+    date: '2026-09-11'
+    change: 'Owner-Entwurf Automated Assurance (SCR-0095): neuer Standard der Assurance-Familie; Status CANDIDATE'
+  ATC-STD-041:
+  - version: 1.0.0
+    date: '2026-09-11'
+    change: 'Owner-Entwurf Automated Assurance (SCR-0095): neuer Standard der Assurance-Familie; Status CANDIDATE'
+  ATC-STD-043:
+  - version: 1.0.0
+    date: '2026-09-11'
+    change: 'Owner-Entwurf Automated Assurance (SCR-0095): neuer Standard der Assurance-Familie; Status CANDIDATE'

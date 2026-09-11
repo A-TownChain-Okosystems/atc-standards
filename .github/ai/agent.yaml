@@ -463,6 +463,18 @@ required_standards:
 - ATC-STD-028
 - ATC-STD-029
 - ATC-GATE-SEC-001
+- ATC-STD-030
+- ATC-STD-031
+- ATC-STD-032
+- ATC-STD-033
+- ATC-STD-034
+- ATC-STD-035
+- ATC-STD-036
+- ATC-STD-037
+- ATC-STD-038
+- ATC-STD-039
+- ATC-STD-041
+- ATC-STD-043
 workflow:
   require_tests: true
   require_audit: true

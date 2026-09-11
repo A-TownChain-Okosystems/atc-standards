@@ -110,12 +110,36 @@ Score (BLOCKED bei P0/P1, ATC-STD-018 §8-Prinzip). Vollautomatisierung SOLLTE
 über SCR-Planung erreicht werden; bis dahin läuft der Audit agentengestützt
 (Aurora, AGENT_MANIFEST) mit denselben Gate-Zeilen.
 
+## §6 Security Release Gate — Spaltenstruktur (REQ-GATE-006, MUST)
+
+Das Release-Gate fasst die Assurance-Standards in drei Spalten:
+
+| Technology | Security | Supply Chain |
+|---|---|---|
+| Dependencies | Vulnerability | SBOM |
+| EOL | SAST | Provenance |
+| Compatibility | Secrets | Integrity |
+| Updates (ATC-STD-032) | Fuzzing* | Reproducibility (ATC-STD-041) |
+
+ALL REQUIRED PASSED? → YES: RELEASE · NO: BLOCK. Die Spalten strukturieren
+§1-Zeilen; die Release-Entscheidung bleibt an §2 gebunden.
+
+## §7 ATC Assurance Framework — Endzustand (REQ-GATE-007, SHOULD)
+
+Zielarchitektur (Owner-Endzustand): ATC STANDARDS speisen die drei Achsen
+Governance/Technology/Security → ATC Assurance Engine prüft fortlaufend
+Repository, Dependencies, Releases → Evidence Layer (evidence/) →
+Compliance Gate → PASS: RELEASE / FAIL: BLOCK. Standards sind damit keine
+Markdown-Sammlung, sondern ein ausführbares Framework.
+
 ## REQ-Matrix (normative Anforderungen)
 
 - id: REQ-GATE-001 — Gate-Zeilen: 14 Zeilen MÜSSEN geprüft werden; kritikalitätsabhängige Zeilen MÜSSEN als solche markiert sein.
 - id: REQ-GATE-002 — Release-Readiness: ALL REQUIRED = PASS sonst NO RELEASE; keine Kompensation durch Score/Dokumentation.
 - id: REQ-GATE-003 — Security-Status: 5-Stufen-Definition MUSS verwendet werden; pauschale Sicherheitsaussagen sind unzulässig.
 - id: REQ-GATE-004 — Evidence Store: Struktur MUSS bestehen; NOT VERIFIED MUSS NICHT überschrieben werden.
+- id: REQ-GATE-006 — Release-Gate MUSS die 3-Spaltenstruktur Technology/Security/Supply Chain abbilden.
+- id: REQ-GATE-007 — Endzustand: Framework-Architektur SOLLTE vollausgebaut sein (Engine, Evidence Layer, Gate).
 - id: REQ-GATE-005 — Org-Audit: Assurance Engine SOLLTE alle Repos fortlaufend prüfen und einen BLOCKED-fähigen Score speisen.
 
 ## Compliance
@@ -138,9 +162,10 @@ registry/standard-implementation.yaml.
 
 ## Changelog
 
-- v1.0.0 (2026-09-11): Owner-Entwurf Continuous Assurance (SCR-0094) — 14
-  Gate-Zeilen, Release-Readiness-Regel, 5-Stufen-Security-Status, Evidence-
-  Store-Struktur, Org-Audit-Zielarchitektur. CANDIDATE.
+- v1.0.0 (2026-09-11): SCR-0094 Initial (14 Gate-Zeilen, Release-Readiness-
+  Regel, 5-Stufen-Security-Status, Evidence-Store, Org-Audit) + SCR-0095
+  Erweiterung: 3-Spalten-Release-Gate (§6), Assurance-Framework-Endzustand
+  (§7), REQ-GATE-006/007. CANDIDATE.
 
 ## References
 
