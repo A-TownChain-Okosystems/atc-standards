@@ -3,6 +3,9 @@ versions:
   - version: 1.3.0
     date: '2026-09-11'
     change: 'SCR-0096: §7.7 Domaenen-Familien-Verweis auf ATC-STD-002 (10 Familien, Artefakt-Klassen); Status CANDIDATE — bis §9 gilt v1.2.0 APPROVED'
+  - version: 1.3.0-Approval
+    date: '2026-09-11'
+    change: 'SCR-0098: par.9-FREIGEGEBEN durch Owner (Alexander, 11.09.2026 14:49 UTC+2): CANDIDATE -> APPROVED; v1.3.0 ist die gueltige Verfassungsfassung, Immutabilitaet per par.30; Bootstrap-EXEMPT beendet (Sunset v1.3.0, ATC-STD-003 par.6), Verfassung in normaler Review-Chain, R11 bleibt Dauerwaechter; approval/APPROVAL-DECISION-2026-09-11-000-v1.3.0.md'
   - version: 1.2.0
     date: '2026-09-07'
     change: 'SCR-0001 + F-004: neuer §37 ID-Allokationsprozess (REQ-STD-002), neuer §38 Security Considerations

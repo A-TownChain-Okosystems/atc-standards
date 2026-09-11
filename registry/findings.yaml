@@ -1050,3 +1050,22 @@ findings:
   repo: atc-standards
   title: 'Repository-Typen/Criticality/maturity/standards_profile maschinenlesbar (Owner-Audit P1-7): repositories.yaml hat Layer-Taxonomie (L0-L7) + Capabilities, aber KEINE criticality-/repository_type-/maturity-Felder (SCR-0093-Verifikation: 0 Vorkommen)'
   resolution: 'Schema v1.1: je Repo repository_type/system_layer/criticality/maturity/owner/standards_profile; Org-Scan leitet Pflichtanforderungen daraus ab'
+
+- id: F-127
+  priority: P1
+  status: OPEN
+  repo: atc-standards
+  title: 'Standards-Library-Phase 1+3: metadata.yaml je Standard (aus Registry GENERIERT, R13-Konsistenz) und Strukturumzug auf Ordner-je-Standard inkl. ATC-STD-000 (MAJOR, COMPAT-001, Owner-Gate) — ATC-STD-LIB-001 par.6/10'
+  resolution: 'Phasenplan in ATC-STD-LIB-001 par.10; Phase 3 als MAJOR mit Owner-Freigabe'
+- id: F-128
+  priority: P1
+  status: OPEN
+  repo: (org-weit)
+  title: 'Standards-Library-Phase 2: profiles/<repo>/ + .atc/standards.yaml je Repository (Standards Profile = Compliance-Vertrag) + Org-Scan-Profile-Check; baut auf F-124 (Repo-Klassifikation) auf'
+  resolution: 'Phase 2 nach F-124; Profile-Daten aus repositories.yaml ableiten'
+- id: F-129
+  priority: P2
+  status: OPEN
+  repo: atc-standards
+  title: 'Standards-Library-Phase 4+5: STABLE-Status (GATE-006..008: Reference Implementation, Conformance Evidence, Stability Period) + Validator-CLI + ATC-SPEC/ATC-TEST-Hierarchien fuer kritische Familien'
+  resolution: 'nach Phase 1-2; Konsens-Familie zuerst'

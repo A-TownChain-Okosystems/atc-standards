@@ -98,7 +98,7 @@ def main():
         if not s:
             return "| " + i + " | — | NICHT IN REGISTRY |"
         em = {"approved": "✅", "candidate": "🔶", "draft": "📝"}.get(s["status"], "")
-        extra = " (Verfassung; Bootstrap-EXEMPT mit Sunset, ATC-STD-003 \u00a76)" if i == "ATC-STD-000" else (" (Governance Determinism & SSOT Matrix)" if i == "ATC-STD-003" else "")
+        extra = " (Verfassung; par.9-freigegeben 11.09.2026 — Bootstrap-EXEMPT beendet, R11 waecht weiter)" if i == "ATC-STD-000" else (" (Governance Determinism & SSOT Matrix)" if i == "ATC-STD-003" else "")
         return "| " + i + " | " + s["version"] + " | " + em + " " + s["status"].upper() + extra + " |"
     comptable = "\n".join(_st(i) for i in ["ATC-STD-000", "ATC-STD-003", "ATC-STD-201",
         "ATC-STD-202", "ATC-STD-203", "ATC-STD-204", "ATC-STD-README-001"])

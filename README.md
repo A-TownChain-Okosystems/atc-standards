@@ -8,7 +8,7 @@
 ```yaml
 state:
   id: ATC-STATE-20260911-d21129f7
-  generated_at: "2026-09-11 15:01 UTC+2"
+  generated_at: "2026-09-11 15:23 UTC+2"
   registry_version: "1.0.0"
   registry_sha256: "d21129f78eebb10c6a1752bba0e7fb364c614f3772b538b01245c037678b95dc"
   standards_total: 474
@@ -130,7 +130,7 @@ See `CONTRIBUTING.md` and `governance/ATC-STD-000.md` for details.
 
 | Standard | Version | Status |
 |---|---|---|
-| ATC-STD-000 | 1.3.0 | ✅ APPROVED (Verfassung; Bootstrap-EXEMPT mit Sunset, ATC-STD-003 §6) |
+| ATC-STD-000 | 1.3.0 | ✅ APPROVED (Verfassung; par.9-freigegeben 11.09.2026 — Bootstrap-EXEMPT beendet, R11 waecht weiter) |
 | ATC-STD-003 | 1.0.0 | ✅ APPROVED (Governance Determinism & SSOT Matrix) |
 | ATC-STD-201 | 1.0.1 | ✅ APPROVED |
 | ATC-STD-202 | 1.2.0 | ✅ APPROVED |

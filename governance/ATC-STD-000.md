@@ -3,7 +3,7 @@ standard:
   id: ATC-STD-000
   title: "Standards Governance & Specification Standard"
   version: "1.3.0"
-  status: candidate
+  status: approved
   category: governance
   authority: A-TownChain Ecosystems
   owner: ShivaCoreDev
@@ -17,7 +17,7 @@ standard:
   license: "Copyright (c) 2026 Michael Wroblewski"
 ---
 
-# ATC-STD-000 — Standards Governance & Specification Standard (v1.3.0, CANDIDATE)
+# ATC-STD-000 — Standards Governance & Specification Standard (v1.3.0, APPROVED)
 
 > ATC-STD-000 ist der Meta-Standard fuer alle ATC Standards: Er definiert das
 > uebergeordnete Governance- und Spezifikationsmodell des gesamten
