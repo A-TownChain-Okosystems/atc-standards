@@ -1,5 +1,5 @@
 # AGENT_MANIFEST.md
-> **Registry-Stand (GENERIERT aus `registry/standards.yaml`):** 474 Standards — 436 APPROVED · 26 CANDIDATE · 51 Familien · Stand 2026-09-11 14:50 UTC+2 · SHA-256 `7798803757d7…`
+> **Registry-Stand (GENERIERT aus `registry/standards.yaml`):** 474 Standards — 437 APPROVED · 25 CANDIDATE · 51 Familien · Stand 2026-09-11 15:01 UTC+2 · SHA-256 `d21129f78eeb…`
 > Letzte Aktualisierung: 2026-09-11 00:58 UTC | Aurora Master Sync v3.1.7 | 27 governed Repos (28 total, ai/org-scope.yaml-SSOT) | Rollout auf alle governed Repos
 
 ## ⚖️ Standard-Compliance-Mandat (verbindlich — ATC-AAS-003/AAS-004, AI-DEV-001 §6)
@@ -38,7 +38,7 @@
 | Repo | Rolle | Zustand (07.09.2026) |
 |------|-------|---------------------|
 | [a-townchain-os-docs](https://github.com/A-TownChain-Okosystems/a-townchain-os-docs) | **DOCS-HUB** — Wiki (kanonisch: `wiki/kai-os/` — SCR-0090), DECISIONS_REGISTER (AD-001…039), Roadmaps, Audits | ✅ aktiv |
-| [atc-standards](https://github.com/A-TownChain-Okosystems/atc-standards) | **KANONISCHE Standards-Heimat** (AD-030): ATC-STD-000…203 + ATC-STD-300 (DTC), Registry, Validator | ✅ ATC-STD-000 v1.3.0 CANDIDATE |
+| [atc-standards](https://github.com/A-TownChain-Okosystems/atc-standards) | **KANONISCHE Standards-Heimat** (AD-030): ATC-STD-000…203 + ATC-STD-300 (DTC), Registry, Validator | ✅ ATC-STD-000 v1.3.0 APPROVED |
 | [atclang](https://github.com/A-TownChain-Okosystems/atclang) | ATCLang 1.0 (Rust-first, AD-021/022), Gates G0-G19 | ✅ G1+G2 bestanden, Suite 126/126 (Python-Baseline; Rust-first G0 ausstehend) |
 | [atc-vm](https://github.com/A-TownChain-Okosystems/atc-vm) | A-TownChain Virtual Machine — verifizierte Bytecode-Ausfuehrung (AD-043) | 🆕 R1-Skeleton (07.09.) |
 | [atc-algorithm](https://github.com/A-TownChain-Okosystems/atc-algorithm) | ATC-Algorithmus — Hybrid Consensus PoH+PoS+PoW (AD-044) | 🆕 R1-Skeleton (07.09.) |
@@ -76,7 +76,7 @@
 
 > **UPDATE 08.09.2026 (SCR-0035):** Die nachfolgenden AD-034–AD-039-Zeilen
 > beschreiben den HISTORISCHEN Stand vom 07.09.2026 und sind als Archiv zu
-> lesen. Aktueller Ist-Zustand: **ATC-STD-000 v1.3.0 CANDIDATE** (§9-freigegeben
+> lesen. Aktueller Ist-Zustand: **ATC-STD-000 v1.3.0 APPROVED** (§9-freigegeben
 > 07.09. 23:48 UTC+2, SCR-0019), ATC-AAS-001..025 APPROVED, Registry 387/387
 > Standards APPROVED. **Einzige verbindliche Versions-/Status-Quelle ist
 > registry/standards.yaml (SSOT, Validator S-14/S-19-erzwungen)** — alle

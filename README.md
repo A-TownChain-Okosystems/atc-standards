@@ -7,13 +7,13 @@
 
 ```yaml
 state:
-  id: ATC-STATE-20260911-77988037
-  generated_at: "2026-09-11 14:50 UTC+2"
+  id: ATC-STATE-20260911-d21129f7
+  generated_at: "2026-09-11 15:01 UTC+2"
   registry_version: "1.0.0"
-  registry_sha256: "7798803757d741a8c5ef99ec80e355c26be672085572f2549973897b5014afc2"
+  registry_sha256: "d21129f78eebb10c6a1752bba0e7fb364c614f3772b538b01245c037678b95dc"
   standards_total: 474
-  standards_approved: 436
-  standards_candidate: 26
+  standards_approved: 437
+  standards_candidate: 25
   standards_other: 12
   standard_files: 471
   families: 51
@@ -39,7 +39,7 @@ Umsetzungsgrad: ausschließlich State-Block oben (SCR-0090).
 ATC Standards is the canonical normative governance layer of the A-TownChain ecosystem. It maintains:
 
 - **Registry:** SSOT für alle 474 Standards mit Versionierung, Dependencies (DAG) und Findings
-- **Verfassung:** ATC-STD-000 v1.3.0, CANDIDATE (ID-System, Lifecycle, Change Control, Immutabilität)
+- **Verfassung:** ATC-STD-000 v1.3.0, APPROVED (ID-System, Lifecycle, Change Control, Immutabilität)
 - **Validator-Suite:** atc-std-validator, atc-repo-audit (R3), atc-readme-validator
 - **Governance Framework:** 51 Familien, Enterprise-Ebenen (ATC-ENT-001..015), AI-Standards (ATC-AAS-001..025)
 - **Governance-Determinismus:** ATC-STD-003 (SSOT-Matrix, State-ID, Ein-Zahl-Regel)
@@ -115,7 +115,7 @@ python3 tools/atc-readme-validator/check_readme.py .     # README-Compliance
 
 ## Governance
 
-This repository is governed according to ATC-STD-000 v1.3.0 (CANDIDATE, A-TownChain Enterprise Governance Framework):
+This repository is governed according to ATC-STD-000 v1.3.0 (APPROVED, A-TownChain Enterprise Governance Framework):
 
 - **Changes to APPROVED Standards:** via SCR only (§30 Immutabilität)
 - **New Standards:** Registry-First (Eintrag → Validierung → §9-Owner-Freigabe); ATC-STD-003 §7: No standard because a slot exists
@@ -130,7 +130,7 @@ See `CONTRIBUTING.md` and `governance/ATC-STD-000.md` for details.
 
 | Standard | Version | Status |
 |---|---|---|
-| ATC-STD-000 | 1.3.0 | 🔶 CANDIDATE (Verfassung; Bootstrap-EXEMPT mit Sunset, ATC-STD-003 §6) |
+| ATC-STD-000 | 1.3.0 | ✅ APPROVED (Verfassung; Bootstrap-EXEMPT mit Sunset, ATC-STD-003 §6) |
 | ATC-STD-003 | 1.0.0 | ✅ APPROVED (Governance Determinism & SSOT Matrix) |
 | ATC-STD-201 | 1.0.1 | ✅ APPROVED |
 | ATC-STD-202 | 1.2.0 | ✅ APPROVED |
