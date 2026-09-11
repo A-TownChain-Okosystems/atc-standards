@@ -20,7 +20,7 @@ standard:
 
 # ATC-STD-IMPLEMENTATION-001 — Standard Implementation Matrix (v1.0.0, CANDIDATE)
 
-> **Status:** CANDIDATE (v1.0.0) — normativ per Owner-Entwurf-Mandat §33 (08.09.2026,
+> **Status:** APPROVED (v1.0.0) — normativ per Owner-Entwurf-Mandat §33 (08.09.2026,
 > SCR-0045, Owner-Re-Audit „von Standards definiert zu Standards nachweisbar implementiert
 > und dauerhaft erzwungen"). Familie FAM-48 (Implementation Tracking, Kategorie
 > implementation). **Prioritaet:** P0 (Kern des Implementierungs-Pivots).

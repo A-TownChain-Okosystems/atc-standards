@@ -10,7 +10,7 @@ implementation:
 normative: true
 owner: Michael (Owner-Entwurf) / Standards Governance
 source_file: standards/enterprise/ATC-STD-036.md
-status: candidate
+status: approved
 title: Emergency Security Change Standard (7-Schritt-Notfallpfad mit Security Authorization,
   Minimal-Safe-Change, Ex-Post-Review, volle Rückverfolgbarkeit)
 version: 1.0.0

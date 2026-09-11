@@ -10,7 +10,7 @@ implementation:
 normative: true
 owner: Michael (Owner-Entwurf) / Standards Governance
 source_file: standards/enterprise/ATC-STD-024.md
-status: candidate
+status: approved
 title: Known Bug Management Standard (9-Status-Bug-Lifecycle, Bug-Record-Schema, Root-Cause-Pflicht
   bis Preventive Control, ERR-Kopplung)
 version: 1.0.0

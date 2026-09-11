@@ -3,7 +3,7 @@ standard:
   id: ATC-STD-002
   title: "Standards Family ID & Artifact Identifier Architecture"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: governance
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"
@@ -18,9 +18,9 @@ standard:
     - ATC-STD-000
 ----
 
-# ATC-STD-002 — Standards Family ID & Artifact Identifier Architecture (v1.0.0, CANDIDATE)
+# ATC-STD-002 — Standards Family ID & Artifact Identifier Architecture (v1.0.0, APPROVED)
 
-> **Status:** CANDIDATE (v1.0.0) — Owner-Entwurf 11.09.2026 (SCR-0096): numerische,
+> **Status:** APPROVED (v1.0.0) — Owner-Entwurf 11.09.2026 (SCR-0096): numerische,
 > dauerhaft reservierte Standards-Familien. Die ID beschreibt die Domäne, die
 > konkrete Nummer den einzelnen Standard. Bis zur §9-Freigabe bleibt die
 > Allokation nach ATC-STD-000 §37 wirksam. **Scope:** ATC-STD-002 ·

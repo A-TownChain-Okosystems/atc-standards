@@ -3,7 +3,7 @@ standard:
   id: ATC-STD-043
   title: "Artifact Integrity Standard"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: enterprise
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"
@@ -19,9 +19,9 @@ standard:
     - ATC-STD-018
 ----
 
-# ATC-STD-043 — Artifact Integrity Standard (v1.0.0, CANDIDATE)
+# ATC-STD-043 — Artifact Integrity Standard (v1.0.0, APPROVED)
 
-> **Status:** CANDIDATE (v1.0.0) — Owner-Entwurf Automated Assurance 11.09.2026
+> **Status:** APPROVED (v1.0.0) — Owner-Entwurf Automated Assurance 11.09.2026
 > (SCR-0095; Owner-Referenz s. Kopf-Mapping). Bis zur §9-Freigabe nicht wirksam.
 > **Scope:** ATC-STD-043 · Integritäts-Metadaten kritischer Artefakte · **Governance:** ATC-STD-000
 > **ID-Mapping:** Owner-Referenz "ATC-STD-039" — Slots 040/042 belegt

@@ -10,7 +10,7 @@ implementation:
 normative: true
 owner: Michael (Owner-Entwurf) / Standards Governance
 source_file: standards/enterprise/ATC-STD-030.md
-status: candidate
+status: approved
 title: Automated Repository Health & Compliance Standard (10-Scanner-Dimensionen,
   P0-P3-Finding-Klassen mit 10 Kategorien und ID-Format, Continuous-Assurance-Prinzip,
   Feedback-Loop, Standards-Evolution-Engine)

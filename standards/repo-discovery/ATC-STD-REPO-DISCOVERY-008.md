@@ -20,7 +20,7 @@ standard:
 
 # ATC-STD-REPO-DISCOVERY-008 — Security-Relevant Content Detection (v1.0.0, CANDIDATE)
 
-> **Status:** CANDIDATE (v1.0.0) — normativ per Owner-Entwurf-Mandat §33
+> **Status:** APPROVED (v1.0.0) — normativ per Owner-Entwurf-Mandat §33
 > (08.09.2026, SCR-0046). Familie FAM-49 (Repository Content Discovery,
 > Kategorie repo-discovery). **Prioritaet:** P1 · **Grundregel der Familie:**
 > Kein neuer Repository-Inhalt darf unbewertet bleiben.

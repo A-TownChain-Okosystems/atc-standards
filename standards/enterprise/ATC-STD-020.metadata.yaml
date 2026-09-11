@@ -10,7 +10,7 @@ implementation:
 normative: true
 owner: Michael (Owner-Entwurf)
 source_file: standards/enterprise/ATC-STD-020.md
-status: candidate
+status: approved
 title: Security Incident & Vulnerability Response Standard (Erkennung->Eskalation->Containment->Patch->Verifikation->Disclosure->PIR,
   SEV-1..4 mit SLA, Human-Gate SEV-1/2+Disclosure, ATC-VULN-Record-Schema v1.1.0)
 version: 1.1.0

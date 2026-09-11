@@ -3,7 +3,7 @@ standard:
   id: ATC-STD-023
   title: "Technology Lifecycle Management Standard"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: enterprise
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"
@@ -20,9 +20,9 @@ standard:
     - ATC-STD-TUD-001
 ----
 
-# ATC-STD-023 — Technology Lifecycle Management (v1.0.0, CANDIDATE)
+# ATC-STD-023 — Technology Lifecycle Management (v1.0.0, APPROVED)
 
-> **Status:** CANDIDATE (v1.0.0) — Owner-Entwurf Continuous Assurance 11.09.2026 (SCR-0094):
+> **Status:** APPROVED (v1.0.0) — Owner-Entwurf Continuous Assurance 11.09.2026 (SCR-0094):
 > Verbindlicher Lebenszyklus und Adoption-Gate für Technologien — verhindert
 > Technologie-Wildwuchs. Bis zur §9-Freigabe nicht wirksam. **Scope:** ATC-STD-023 ·
 > Technologie-Lebenszyklus + Adoption Gate · **Governance:** ATC-STD-000

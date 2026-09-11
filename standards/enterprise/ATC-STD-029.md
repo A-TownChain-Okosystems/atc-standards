@@ -3,7 +3,7 @@ standard:
   id: ATC-STD-029
   title: "Threat Modeling Standard"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: enterprise
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"
@@ -20,9 +20,9 @@ standard:
     - ATC-STD-028
 ----
 
-# ATC-STD-029 — Threat Modeling (v1.0.0, CANDIDATE)
+# ATC-STD-029 — Threat Modeling (v1.0.0, APPROVED)
 
-> **Status:** CANDIDATE (v1.0.0) — Owner-Entwurf Continuous Assurance 11.09.2026
+> **Status:** APPROVED (v1.0.0) — Owner-Entwurf Continuous Assurance 11.09.2026
 > (SCR-0094; Owners Referenz "ATC-STD-027" — Slot 027 ist durch den Standards
 > Deprecation Standard belegt, §37 ergab 029). Bis zur §9-Freigabe nicht wirksam.
 > **Scope:** ATC-STD-029 · Threat-Model-Pflicht für kritische Komponenten ·

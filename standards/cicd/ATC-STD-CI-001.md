@@ -20,7 +20,7 @@ standard:
 
 # ATC-STD-CI-001 — Reproducible CI Dependencies (v1.0.0, CANDIDATE)
 
-> **Status:** CANDIDATE (v1.0.0) — normativ per Owner-Entwurf-Mandat §33 (08.09.2026,
+> **Status:** APPROVED (v1.0.0) — normativ per Owner-Entwurf-Mandat §33 (08.09.2026,
 > SCR-0054, Issue #1 P1-Change). Familie FAM-50 (CI/CD-Standards, Range ATC-STD-CI-001..999).
 > **Ausloeser:** AUD-2026-0003 F-035/F-037 (PyYAML auf Runner fehlte, CI lief im
 > ungeprueften Fallback gruen). **Bezug:** ATC-STD-ERR-000/004/005/008/009.

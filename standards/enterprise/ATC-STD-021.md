@@ -3,7 +3,7 @@ standard:
   id: ATC-STD-021
   title: "Continuous Security Monitoring Standard"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: enterprise
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"
@@ -20,9 +20,9 @@ standard:
     - ATC-STD-020
 ----
 
-# ATC-STD-021 — Continuous Security Monitoring (v1.0.0, CANDIDATE)
+# ATC-STD-021 — Continuous Security Monitoring (v1.0.0, APPROVED)
 
-> **Status:** CANDIDATE (v1.0.0) — Owner-Entwurf Continuous Assurance 11.09.2026 (SCR-0094):
+> **Status:** APPROVED (v1.0.0) — Owner-Entwurf Continuous Assurance 11.09.2026 (SCR-0094):
 > Sicherheit wird kontinuierlich überwacht, nicht nur beim Release geprüft. Bis zur §9-Freigabe
 > nicht wirksam. **Scope:** ATC-STD-021 · Monitoring-Geltungsbereich + Zustandsmodell ·
 > **Governance:** ATC-STD-000

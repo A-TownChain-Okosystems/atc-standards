@@ -1069,3 +1069,16 @@ findings:
   repo: atc-standards
   title: 'Standards-Library-Phase 4+5: STABLE-Status (GATE-006..008: Reference Implementation, Conformance Evidence, Stability Period) + Validator-CLI + ATC-SPEC/ATC-TEST-Hierarchien fuer kritische Familien'
   resolution: 'nach Phase 1-2; Konsens-Familie zuerst'
+
+- id: F-130
+  priority: P1
+  status: OPEN
+  repo: (org-weit)
+  title: 'Implementierungs-Mapping der 25 restaurierten Standards (SCR-0102): je Standard Tooling-Evidence zuordnen (Org-Scan 030/031, CodeQL+Dependabot 021/022, Incident-Prozesse 020/035/036), Implementierungs-Matrix nachfuehren; No-Evidence-No-Claim'
+  resolution: 'Je Familie SCR mit Evidence-Bindung; Matrix-Status specification_only bis Evidence vorliegt'
+- id: F-131
+  priority: P2
+  status: OPEN
+  repo: atc-standards
+  title: '12 DRAFT-Standards pruefen: vollstaendige Huelle -> SCR-Elaborierung, unvollstaendig -> ehrlich als GEPLANT/leer dokumentieren; KEIN Blanko-Approval (SCR-0102 begrenzt auf 25 CANDIDATEs)'
+  resolution: 'Audit je DRAFT via SCR; entscheidung je Standard'

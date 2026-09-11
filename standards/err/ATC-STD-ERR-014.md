@@ -20,7 +20,7 @@ standard:
 
 # ATC-STD-ERR-014 — Recurrence Monitoring (v1.0.0, CANDIDATE)
 
-> **Status:** CANDIDATE (v1.0.0) — normativ per Owner-Entwurf-Mandat §33 (08.09.2026,
+> **Status:** APPROVED (v1.0.0) — normativ per Owner-Entwurf-Mandat §33 (08.09.2026,
 > SCR-0044). Familie FAM-47 (Error Propagation & Prevention, Range ATC-STD-ERR-000..999).
 > **Prioritaet:** P1 · **Master:** ATC-STD-ERR-000 · **Abgrenzung:** BUG-001..005
 > decken den Fehler-PROZESS ab; ERR deckt die systemische PROPAGATION ab.

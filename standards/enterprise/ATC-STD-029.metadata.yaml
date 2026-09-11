@@ -10,7 +10,7 @@ implementation:
 normative: true
 owner: Michael (Owner-Entwurf) / Standards Governance
 source_file: standards/enterprise/ATC-STD-029.md
-status: candidate
+status: approved
 title: Threat Modeling Standard (8-Glied-Analysekette Asset..Residual Risk, Pflicht
   fuer 18 kritische Komponenten, Evidence-Pflicht)
 version: 1.0.0

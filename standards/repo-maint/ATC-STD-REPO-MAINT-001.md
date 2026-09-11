@@ -20,7 +20,7 @@ standard:
 
 # ATC-STD-REPO-MAINT-001 — Repository Maintenance & Lifecycle (v1.0.0, CANDIDATE)
 
-> **Status:** CANDIDATE (v1.0.0) — normativ per Owner-Entwurf-Mandat §33 (08.09.2026,
+> **Status:** APPROVED (v1.0.0) — normativ per Owner-Entwurf-Mandat §33 (08.09.2026,
 > SCR-0043). Master-Standard der Familie Repository Maintenance (FAM-46,
 > Range ATC-STD-REPO-MAINT-001..999). Bis zur §9-Freigabe gilt dieser Standard
 > als CANDIDATE-normativ; Abweichungen sind Findings nach ATC-STD-BUG-001.

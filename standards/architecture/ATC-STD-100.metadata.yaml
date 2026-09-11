@@ -11,6 +11,6 @@ implementation:
 normative: true
 owner: ShivaCoreDev
 source_file: standards/architecture/ATC-STD-100.md
-status: candidate
+status: approved
 title: Language & Technology Stack Standard
 version: 2.0.0

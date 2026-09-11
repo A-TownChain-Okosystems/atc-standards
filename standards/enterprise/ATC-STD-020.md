@@ -3,7 +3,7 @@ standard:
   id: ATC-STD-020
   title: "Security Incident & Vulnerability Response Standard"
   version: "1.1.0"
-  status: candidate
+  status: approved
   category: enterprise
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"
@@ -27,9 +27,9 @@ standard:
   applies_to: "Alle ATC-Repositories"
 ----
 
-# ATC-STD-020 — Security Incident & Vulnerability Response (v1.1.0, CANDIDATE)
+# ATC-STD-020 — Security Incident & Vulnerability Response (v1.1.0, APPROVED)
 
-> **Status:** CANDIDATE (v1.1.0) — Owner-Entwurf Continuous Assurance 11.09.2026 (SCR-0094): ATC-VULN-Record-Schema (§8) + ACCEPT/MITIGATE-Pflicht (§1). Die Vorgängervassung bleibt bis zur §9-Freigabe gültig. **Scope:** ATC-STD-020 · Schwachstellen-Response-Kette + Vulnerability-Records · **Governance:** ATC-STD-000
+> **Status:** APPROVED (v1.1.0) — Owner-Entwurf Continuous Assurance 11.09.2026 (SCR-0094): ATC-VULN-Record-Schema (§8) + ACCEPT/MITIGATE-Pflicht (§1). Die Vorgängervassung par.9-freigegeben 11.09.2026 per Owner-Direktive (SCR-0102) — in Kraft. **Scope:** ATC-STD-020 · Schwachstellen-Response-Kette + Vulnerability-Records · **Governance:** ATC-STD-000
 > passiert, wenn eine neue kritische Schwachstelle oder ein neuer Angriff bekannt wird.
 
 ## Abstract

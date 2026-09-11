@@ -3,7 +3,7 @@ standard:
   id: ATC-STD-100
   title: "Language & Technology Stack Standard"
   version: "2.0.0"
-  status: candidate
+  status: approved
   category: architecture
   authority: "A-TownChain Ecosystems"
   owner: "Michael Wroblewski (Owner-Entwurf) / Standards Governance"
@@ -14,12 +14,11 @@ standard:
   mandate: "Owner-Entwurf 11.09.2026 (Language Architecture, SCR-0093)"
 ----
 
-# ATC-STD-100 — Language & Technology Stack Standard (v2.0.0, CANDIDATE)
+# ATC-STD-100 — Language & Technology Stack Standard (v2.0.0, APPROVED)
 
-> **Status:** CANDIDATE (v2.0.0) — Owner-Entwurf Language Architecture 11.09.2026
+> **Status:** APPROVED (v2.0.0) — Owner-Entwurf Language Architecture 11.09.2026
 > (SCR-0093): Hierarchische Language Architecture L0-L8 mit Entscheidungskaskade
-> und Repo-Matrix; ersetzt das 5-Layer-Modell von v1.0.0 (Mapping §7). Bis zur
-> §9-Freigabe gilt v1.0.0 APPROVED. **Scope:** ATC-STD-100 · Sprache- und
+> und Repo-Matrix; ersetzt das 5-Layer-Modell von v1.0.0 (Mapping §7). par.9-freigegeben 11.09.2026 (Owner-Direktive, SCR-0102) — v2.0.0 APPROVED als MAJOR (Migration par.7 dokumentiert, COMPAT-001). **Scope:** ATC-STD-100 · Sprache- und
 > Technologieauswahl aller Repositories · **Governance:** ATC-STD-000
 
 ## Abstract

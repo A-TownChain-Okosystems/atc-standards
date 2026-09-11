@@ -3,7 +3,7 @@ standard:
   id: ATC-GOV-001
   title: "A-TownChain Governance Constitution"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: governance
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf) / Governance Authority"
@@ -19,14 +19,14 @@ standard:
     - ATC-STD-002
 ----
 
-# ATC-GOV-001 — A-TownChain Governance Constitution (v1.0.0, CANDIDATE)
+# ATC-GOV-001 — A-TownChain Governance Constitution (v1.0.0, APPROVED)
 
-> **Status:** CANDIDATE (v1.0.0) — Owner-Entwurf 11.09.2026 (SCR-0097).
+> **Status:** APPROVED (v1.0.0) — Owner-Entwurf 11.09.2026 (SCR-0097).
 > Level 0 der Governance-Hierarchie; ATC-STD-000 (Standards-Governance)
 > bleibt Level-2-Ausführungsnorm und wird von dieser Verfassung getragen —
 > nicht ersetzt. Die Verfassung selbst steht NICHT außerhalb des
 > Governance-Prozesses: Änderungen laufen ausschließlich über Kap. 22.
-> **Governance:** bis zur §9-Freigabe wirksam als Zielbild.
+> **Governance:** par.9-freigegeben 11.09.2026 (Owner-Direktive, SCR-0102) — wirksam; ATC-STD-000 bleibt Level-2-Ausfuehrungsnorm und wird getragen.
 
 ## Abstract
 

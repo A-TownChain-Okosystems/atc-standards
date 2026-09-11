@@ -3,7 +3,7 @@ standard:
   id: ATC-STD-028
   title: "Attack Surface Management Standard"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: enterprise
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"
@@ -20,9 +20,9 @@ standard:
     - ATC-STD-029
 ----
 
-# ATC-STD-028 — Attack Surface Management (v1.0.0, CANDIDATE)
+# ATC-STD-028 — Attack Surface Management (v1.0.0, APPROVED)
 
-> **Status:** CANDIDATE (v1.0.0) — Owner-Entwurf Continuous Assurance 11.09.2026
+> **Status:** APPROVED (v1.0.0) — Owner-Entwurf Continuous Assurance 11.09.2026
 > (SCR-0094; Owners Referenz "ATC-STD-026" — Slot 026 ist durch Security
 > Regression Prevention belegt, §37 ergab 028). Bis zur §9-Freigabe nicht wirksam.
 > **Scope:** ATC-STD-028 · Angriffsflächen-Inventar + Vektor-Zustände ·

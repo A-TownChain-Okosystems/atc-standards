@@ -3,7 +3,7 @@ standard:
   id: ATC-STD-220
   title: "Repository File Admission & Placement Standard (Master der Subfamilie 220-229)"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: repository
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"
@@ -20,9 +20,9 @@ standard:
     - ATC-GOV-001
 ----
 
-# ATC-STD-220 — Repository File Admission & Placement (v1.0.0, CANDIDATE)
+# ATC-STD-220 — Repository File Admission & Placement (v1.0.0, APPROVED)
 
-> **Status:** CANDIDATE — Owner-Entwurf 11.09.2026 (SCR-0099). Subfamilie
+> **Status:** APPROVED — Owner-Entwurf 11.09.2026 (SCR-0099). Subfamilie
 > 220–229 (Familie 200 Repository/Git gem. ATC-STD-002 §1; Owner-Referenz
 > „ATC-STD-1XX" als inhaltliche Familien-Kennung interpretiert und der
 > Repository-Domaene zugeordnet). Leitgrundsatz: **Presence is not

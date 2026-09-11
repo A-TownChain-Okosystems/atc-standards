@@ -3,7 +3,7 @@ standard:
   id: ATC-STD-022
   title: "Security Patch Management Standard"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: enterprise
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"
@@ -20,9 +20,9 @@ standard:
     - ATC-STD-020
 ----
 
-# ATC-STD-022 — Security Patch Management (v1.0.0, CANDIDATE)
+# ATC-STD-022 — Security Patch Management (v1.0.0, APPROVED)
 
-> **Status:** CANDIDATE (v1.0.0) — Owner-Entwurf Continuous Assurance 11.09.2026 (SCR-0094):
+> **Status:** APPROVED (v1.0.0) — Owner-Entwurf Continuous Assurance 11.09.2026 (SCR-0094):
 > Verbindliche Reaktionszeiten auf Schwachstellen. Bis zur §9-Freigabe nicht wirksam.
 > **Scope:** ATC-STD-022 · Patch-SLAs + Emergency Response · **Governance:** ATC-STD-000
 

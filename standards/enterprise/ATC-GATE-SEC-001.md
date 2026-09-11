@@ -3,7 +3,7 @@ standard:
   id: ATC-GATE-SEC-001
   title: "Continuous Security & Technology Assurance Gate"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: enterprise
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"
@@ -27,9 +27,9 @@ standard:
     - ATC-STD-029
 ----
 
-# ATC-GATE-SEC-001 — Continuous Security & Technology Assurance Gate (v1.0.0, CANDIDATE)
+# ATC-GATE-SEC-001 — Continuous Security & Technology Assurance Gate (v1.0.0, APPROVED)
 
-> **Status:** CANDIDATE (v1.0.0) — Owner-Entwurf Continuous Assurance 11.09.2026
+> **Status:** APPROVED (v1.0.0) — Owner-Entwurf Continuous Assurance 11.09.2026
 > (SCR-0094). Meta-Gate: verbindet 018–029 zu einem Release-Readiness-Gate.
 > Bis zur §9-Freigabe nicht wirksam. **Scope:** ATC-GATE-SEC-001 ·
 > Gate-Zeilen, Security-Status-Definition, Evidence Store, Org-Audit ·

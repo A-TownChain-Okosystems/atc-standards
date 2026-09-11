@@ -10,7 +10,7 @@ implementation:
 normative: true
 owner: Michael (Owner-Entwurf) / Standards Governance
 source_file: standards/enterprise/ATC-STD-023.md
-status: candidate
+status: approved
 title: Technology Lifecycle Management Standard (8-Status-Zyklus PROPOSED..REMOVED,
   9-Kriterien-Adoption-Gate, 5 Entscheidungen, Registry-Kopplung)
 version: 1.0.0

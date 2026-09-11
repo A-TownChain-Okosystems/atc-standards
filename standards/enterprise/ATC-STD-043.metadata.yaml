@@ -10,7 +10,7 @@ implementation:
 normative: true
 owner: Michael (Owner-Entwurf) / Standards Governance
 source_file: standards/enterprise/ATC-STD-043.md
-status: candidate
+status: approved
 title: Artifact Integrity Standard (9-Feld-Artefakt-Record id/hash/build/sbom/provenance/signature,
   Provenance-Kette zu Reproducible Builds, Ablage evidence/releases)
 version: 1.0.0

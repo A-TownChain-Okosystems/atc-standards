@@ -20,7 +20,7 @@ standard:
 
 # ATC-STD-V2S-000 — Vision-to-Software Lifecycle Master (v1.0.0, CANDIDATE)
 
-> **Status:** CANDIDATE (v1.0.0) — normativ per Owner-Entwurf-Mandat §33 (08.09.2026,
+> **Status:** APPROVED (v1.0.0) — normativ per Owner-Entwurf-Mandat §33 (08.09.2026,
 > SCR-0042). Master-Standard der Familie Vision-to-Software (FAM-45, Range
 > ATC-STD-V2S-000..026). Die 26 Phasen-Standards V2S-001..026 docken an diesen
 > Master an; dieser Standard definiert das verbindliche Rahmenwerk.

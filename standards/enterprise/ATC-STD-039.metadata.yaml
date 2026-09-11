@@ -10,7 +10,7 @@ implementation:
 normative: true
 owner: Michael (Owner-Entwurf) / Standards Governance
 source_file: standards/enterprise/ATC-STD-039.md
-status: candidate
+status: approved
 title: Cryptographic Agility Standard (austauschbare Crypto-Interfaces Current/Alternative/Future,
   4 Wechselkriterien inkl. Quantum Threat, Eigenbau-Krypto-Verbot)
 version: 1.0.0

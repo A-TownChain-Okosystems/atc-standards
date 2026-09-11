@@ -3,7 +3,7 @@ standard:
   id: ATC-STD-024
   title: "Known Bug Management Standard"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: enterprise
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"
@@ -20,9 +20,9 @@ standard:
     - ATC-STD-026
 ----
 
-# ATC-STD-024 — Known Bug Management (v1.0.0, CANDIDATE)
+# ATC-STD-024 — Known Bug Management (v1.0.0, APPROVED)
 
-> **Status:** CANDIDATE (v1.0.0) — Owner-Entwurf Continuous Assurance 11.09.2026
+> **Status:** APPROVED (v1.0.0) — Owner-Entwurf Continuous Assurance 11.09.2026
 > (SCR-0094): separater Known-Bug-Lifecycle und Root-Cause-Pflicht — nicht jeder
 > Fehler ist eine Security Vulnerability. Bis zur §9-Freigabe nicht wirksam.
 > **Scope:** ATC-STD-024 · Bug-Lifecycle + RCA · **Governance:** ATC-STD-000

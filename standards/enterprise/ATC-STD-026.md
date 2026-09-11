@@ -3,7 +3,7 @@ standard:
   id: ATC-STD-026
   title: "Security Regression Prevention Standard"
   version: "1.0.0"
-  status: candidate
+  status: approved
   category: enterprise
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"
@@ -21,9 +21,9 @@ standard:
     - ATC-STD-022
 ----
 
-# ATC-STD-026 — Security Regression Prevention (v1.0.0, CANDIDATE)
+# ATC-STD-026 — Security Regression Prevention (v1.0.0, APPROVED)
 
-> **Status:** CANDIDATE (v1.0.0) — Owner-Entwurf Continuous Assurance 11.09.2026
+> **Status:** APPROVED (v1.0.0) — Owner-Entwurf Continuous Assurance 11.09.2026
 > (SCR-0094; Owners Referenz "ATC-STD-025" — Slot 025 ist durch den Standards
 > Review Standard belegt, §37 ID-Allokation ergab 026). Bis zur §9-Freigabe nicht
 > wirksam. **Scope:** ATC-STD-026 · Fix-zu-Test-Pflicht · **Governance:** ATC-STD-000

@@ -10,7 +10,7 @@ implementation:
 normative: true
 owner: Michael (Owner-Entwurf) / Standards Governance
 source_file: standards/enterprise/ATC-STD-021.md
-status: candidate
+status: approved
 title: Continuous Security Monitoring Standard (11-Umfeld, 7-Zustandsmodell MONITORED..VERIFIED,
   Kontinuitaets- und Eskalationspflicht)
 version: 1.0.0
