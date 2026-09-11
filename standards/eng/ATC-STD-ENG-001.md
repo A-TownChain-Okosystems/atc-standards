@@ -3,7 +3,7 @@ standard:
   id: ATC-STD-ENG-001
   title: "ATC-STD-ENG-001 — Software Engineering & Code Quality Standard"
   version: "1.0.0"
-  status: draft
+  status: approved
   category: eng
   authority: A-TownChain-Okosystems
   owner: Michael (Owner-Entwurf)
@@ -18,11 +18,11 @@ standard:
   implementation: {status: specification_only}
 ---
 
-# ATC-STD-ENG-001 — Software Engineering & Code Quality Standard (v1.0.0, DRAFT)
+# ATC-STD-ENG-001 — Software Engineering & Code Quality Standard (v1.0.0, APPROVED)
 
 **Standard-ID:** ATC-STD-ENG-001
 **Version:** 1.0.0
-**Status:** DRAFT (wartet auf §9-Freigabe)
+**Status:** APPROVED — §9-Freigabe Michael 11.09.2026 21:21, §30-eingefroren
 **Autorität:** A-TownChain-Okosystems
 **Owner:** Michael (Owner-Entwurf 11.09.2026)
 **Kategorie:** eng
