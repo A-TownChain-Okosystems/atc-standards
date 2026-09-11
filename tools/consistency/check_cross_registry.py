@@ -26,6 +26,9 @@ FAILS = []
 def fail(rule, msg):
     FAILS.append(f"[{rule}] {msg}")
 
+def _vge(a, b):
+    return tuple(int(x) for x in a.split(".")) >= tuple(int(x) for x in b.split("."))
+
 def main():
     # Registry laden
     reg_text = open(REG, encoding="utf-8").read()
@@ -160,6 +163,32 @@ def main():
     if r.returncode != 0 or norm(before) != norm(after):
         fail("R10", "generate_views.py nicht idempotent reproduzierbar")
     print("R10 Reproduzierbarkeit: geprueft")
+
+
+    # R11: ATC-STD-000-Bootstrap-Sunset technisch erzwungen (Owner-Audit 11.09.2026 P0-2)
+    std003 = open(os.path.join(ROOT, "standards", "governance", "ATC-STD-003.md"), encoding="utf-8").read()
+    msun = re.search(r"Sunset mit ATC-STD-000 v([\d.]+)", std003)
+    if not msun:
+        fail("R11", "ATC-STD-003 par.6: keine maschinenlesbare Sunset-Version (Sunset mit ATC-STD-000 vX.Y.Z)")
+    else:
+        sunset = msun.group(1)
+        e000 = reg_by_id.get("ATC-STD-000", {})
+        cur = e000.get("version", "0")
+        if _vge(cur, sunset):
+            f000 = os.path.join(ROOT, "governance", "ATC-STD-000.md")
+            if not os.path.exists(f000):
+                fail("R11", "ATC-STD-000: Datei fehlt - EXEMPT endet mit v" + sunset)
+            else:
+                head = open(f000, encoding="utf-8").read(4000)
+                mv = re.search(r'version:\s*"?([\d.]+)"?', head)
+                mst = re.search(r"status:\s*(\w+)", head)
+                if mv and mv.group(1) != cur:
+                    fail("R11", "ATC-STD-000 Datei v" + mv.group(1) + " != Registry v" + cur)
+                if mst and mst.group(1).lower() != e000.get("status", "").lower():
+                    fail("R11", "ATC-STD-000 Datei-Status " + mst.group(1) + " != Registry " + str(e000.get("status")))
+        if _vge(cur, sunset) and tuple(int(x) for x in cur.split(".")) > tuple(int(x) for x in sunset.split(".")) and e000.get("status") != "approved":
+            fail("R11", "ATC-STD-000 v" + cur + " ueberschreitet Sunset v" + sunset + " ohne APPROVED - par.9-Freigabe (Owner) fehlt")
+        print("R11 ATC-STD-000-Sunset: Sunset v" + sunset + ", Registry v" + cur + " - geprueft")
 
     print()
     if FAILS:

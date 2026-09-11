@@ -1013,3 +1013,40 @@ findings:
   repo: (org-weit)
   title: 'Cross-Repo Dependency-DAG + maschinell generierter Architekturgraph + org-weite State-Snapshot-Datei je Lauf (Owner-Audit P2-18/19/20, SCR-0090)'
   resolution: 'dependencies.yaml-DAG ausbauen, Graph-Generator, Snapshot-Tool; offen'
+
+- id: F-121
+  priority: P0
+  status: OPEN
+  repo: (org-weit)
+  title: 'Security-Gates organisationsweit vereinheitlichen (Owner-Audit 11.09.2026 P0-5): Secret Scanning + Push Protection (Org-Settings, OWNER-Aktion), SBOM, Artifact-Signing/Provenance, reproducible builds fuer kritische Komponenten'
+  resolution: 'Org-Settings durch Owner setzen; SBOM/Provenance-SCR planen; CodeQL/Dependabot bereits 27/27 bzw. aktiv'
+- id: F-122
+  priority: P0
+  status: OPEN
+  repo: (critical-Repositories)
+  title: 'Critical-Repositories mit CODEOWNERS + verpflichtendem Review (Owner-Audit P0-6): Dateien via SCR-0093 angelegt (Human-Reviewer @A-TownChain, Agenten nie Approver gem. ATC-STD-003); Branch-Protection-Enforcement erfordert Owner-Aktion (Protection-PUT mit Agent-Token 404, RCA SCR-0077)'
+  resolution: 'CODEOWNERS liegt in Critical-Repos; Owner muss required-review-Branch-Protection aktivieren'
+- id: F-123
+  priority: P1
+  status: OPEN
+  repo: atc-standards
+  title: 'SSOT fuer Implementierungsstatus (Owner-Audit P0-4): Version/Status in registry/standards.yaml, Implementierungsstatus nur in .atc/evidence — maschinenlesbare Kopplung als Registry-Feld mit Generator-Ableitung spezifizieren'
+  resolution: 'Schema-Erweiterung designen (SCR), Generatoren anpassen'
+- id: F-125
+  priority: P1
+  status: OPEN
+  repo: atclang
+  title: 'ATCLang-ATC-VM kanonische Synchronisierung (Owner-Audit P1-9, baut auf F-112 auf): ATC-Bytecode als einzige kanonische Semantik, Differential-Tests Compiler-VM'
+  resolution: 'nach Stage 3 (fn/Kontrollfluss, F-112): Bytecode-Contract + Differential-Harness'
+- id: F-126
+  priority: P2
+  status: OPEN
+  repo: (org-weit)
+  title: 'AI-Agent Audit Trail vereinheitlichen (Owner-Audit P1-11): 9-Stufen-Kette IDENTITY-TASK-OBSERVATION-FINDING-DECISION-CHANGE-TEST-EVIDENCE-RESULT als maschinenlesbares Evidence-Schema je Aenderung'
+  resolution: 'Evidence-Schema-Erweiterung, SCRs als Pilot'
+- id: F-124
+  priority: P1
+  status: OPEN
+  repo: atc-standards
+  title: 'Repository-Typen/Criticality/maturity/standards_profile maschinenlesbar (Owner-Audit P1-7): repositories.yaml hat Layer-Taxonomie (L0-L7) + Capabilities, aber KEINE criticality-/repository_type-/maturity-Felder (SCR-0093-Verifikation: 0 Vorkommen)'
+  resolution: 'Schema v1.1: je Repo repository_type/system_layer/criticality/maturity/owner/standards_profile; Org-Scan leitet Pflichtanforderungen daraus ab'
