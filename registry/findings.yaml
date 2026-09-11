@@ -1035,7 +1035,7 @@ findings:
   status: PARTIALLY_RESOLVED
   repo: (org-weit)
   title: 'Devnet/Testnet-Infrastruktur fehlt komplett: kein Bootstrapping-Repro, keine Node-Aufstellung, Chain-ID 658467 existiert nur als Konstante — Mainnet-Termin (F-069) hat keine erprobte Vorstufe; Devnet-MVP = 2 Nodes + Boot-Genesis + RPC-Erreichbarkeit waere erster Gate'
-  resolution: 'SCR-0106/0108/0109/0112/0113: Devnet fuenfstufig CI-verifiziert — Genesis-Bootstrap mit Boot-Hash, TCP-RPC (Zeile plus JSON-RPC), Node als startbarer Prozess (src/main.rs) und jetzt Zwei-Node-Devnet-Smoke: zwei lebende Node-Dienste mit gleicher Genesis, Client verifiziert ueber echte Sockets identische Chain-ID/Boot-Hash auf beiden (atc-node Test Suite GRUEN d841bb9c). Restoffen: Docker-Compose-Devnet (echte Prozesse), Genesis-File-Bindung via serde, echtes P2P-Gossip, Blockproduktion'
+  resolution: 'SCR-0106/0108/0109/0112/0113/0114: Devnet sechsstufig CI-verifiziert — Genesis-Bootstrap mit Boot-Hash, TCP-RPC (Zeile plus JSON-RPC), Node als startbarer Prozess (src/main.rs), Zwei-Node-Devnet-Smoke (identische Chain-ID/Boot-Hash ueber zwei lebende Dienste), und jetzt Genesis-File-Bindung via serde: CI-Test erzwingt Code-Genesis == config/devnet/genesis.json (atc-node Test Suite GRUEN e3088555). Restoffen: Docker-Compose-Devnet mit echten Prozessen, echtes P2P-Gossip, Blockproduktion'
 - id: F-140
   priority: P1
   status: PARTIALLY_RESOLVED
