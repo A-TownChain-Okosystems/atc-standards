@@ -7190,6 +7190,7 @@ versions:
   ATC-STD-019:
     - {version: "1.0.0", date: "2026-09-10", change: "Initial Release APPROVED: Owner-Direktive 10.09. (SCR-0088) — Dependency & Supply Chain Security; §9-Freigabe via Owner-Direktive"}
   ATC-STD-020:
+    - {version: "1.1.0", date: "2026-09-11", change: "Owner-Entwurf Continuous Assurance (SCR-0094): ATC-VULN-NNN-Record-Schema + ACCEPT/MITIGATE-Pflicht; Status CANDIDATE — bis §9-Freigabe gilt v1.0.0 APPROVED"}
     - {version: "1.0.0", date: "2026-09-10", change: "Initial Release APPROVED: Owner-Direktive 10.09. (SCR-0088) — Security Incident & Vulnerability Response; §9-Freigabe via Owner-Direktive"}
   ATC-STD-114:
   - version: 1.0.0-Approval
@@ -7339,3 +7340,35 @@ versions:
   - version: 1.0.0-Approval
     date: '2026-09-11'
     change: 'Owner-Sammelfreigabe 11.09.2026 (Chat-Freigabe): CANDIDATE -> APPROVED; dokumentiert in approval/APPROVAL-DECISION-2026-09-11.md'
+  ATC-STD-021:
+  - version: 1.0.0
+    date: '2026-09-11'
+    change: 'Owner-Entwurf Continuous Assurance (SCR-0094): neuer Standard der Assurance-Familie; Status CANDIDATE'
+  ATC-STD-022:
+  - version: 1.0.0
+    date: '2026-09-11'
+    change: 'Owner-Entwurf Continuous Assurance (SCR-0094): neuer Standard der Assurance-Familie; Status CANDIDATE'
+  ATC-STD-023:
+  - version: 1.0.0
+    date: '2026-09-11'
+    change: 'Owner-Entwurf Continuous Assurance (SCR-0094): neuer Standard der Assurance-Familie; Status CANDIDATE'
+  ATC-STD-024:
+  - version: 1.0.0
+    date: '2026-09-11'
+    change: 'Owner-Entwurf Continuous Assurance (SCR-0094): neuer Standard der Assurance-Familie; Status CANDIDATE'
+  ATC-STD-026:
+  - version: 1.0.0
+    date: '2026-09-11'
+    change: 'Owner-Entwurf Continuous Assurance (SCR-0094): neuer Standard der Assurance-Familie; Status CANDIDATE'
+  ATC-STD-028:
+  - version: 1.0.0
+    date: '2026-09-11'
+    change: 'Owner-Entwurf Continuous Assurance (SCR-0094): neuer Standard der Assurance-Familie; Status CANDIDATE'
+  ATC-STD-029:
+  - version: 1.0.0
+    date: '2026-09-11'
+    change: 'Owner-Entwurf Continuous Assurance (SCR-0094): neuer Standard der Assurance-Familie; Status CANDIDATE'
+  ATC-GATE-SEC-001:
+  - version: 1.0.0
+    date: '2026-09-11'
+    change: 'Owner-Entwurf Continuous Assurance (SCR-0094): neuer Standard der Assurance-Familie; Status CANDIDATE'

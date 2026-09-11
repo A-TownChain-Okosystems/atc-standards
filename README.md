@@ -5,17 +5,17 @@
 
 | Kennzahl | Wert |
 |---|---|
-| Registry Standards | **450** |
-| Registry APPROVED | **437** |
-| Registry CANDIDATE (§33) | **1** |
-| Standard-Dateien (`standards/`) | **449** |
+| Registry Standards | **458** |
+| Registry APPROVED | **436** |
+| Registry CANDIDATE (§33) | **10** |
+| Standard-Dateien (`standards/`) | **457** |
 | Familien | **51** |
-| Registry SHA-256 | `28b71eeed794a869…` (vollständig: `registry/registry.lock`) |
-| Stand | 2026-09-11 01:53 UTC+2 |
+| Registry SHA-256 | `696b6bbb0c5386a3…` (vollständig: `registry/registry.lock`) |
+| Stand | 2026-09-11 02:03 UTC+2 |
 
 Implementierungs-Matrix: [`registry/standard-implementation.yaml`](registry/standard-implementation.yaml) (ATC-STD-IMPLEMENTATION-001).
 
-**Implementierungs-KPI:** 450 Standards normativ definiert — 62 enforced, 129 implemented, 245 specification-only (Zielsysteme im qualitätsgetriebenen Rebuild AD-023/AD-045). Die Aussage „450 Standards implementiert“ ist unzulässig (SCR-0048).
+**Implementierungs-KPI:** 458 Standards normativ definiert — 62 enforced, 129 implemented, 253 specification-only (Zielsysteme im qualitätsgetriebenen Rebuild AD-023/AD-045). Die Aussage „458 Standards implementiert“ ist unzulässig (SCR-0048).
 
 **ATC COMPLIANCE: YES** — Repository-Audit R3 · Naming/Versioning/Ownership/Lizenz konform ([Audit-Details](#standards--compliance))
 
@@ -61,7 +61,7 @@ deren CI-Gates; Nachweis via Implementierungs-Matrix).
 
 ### Core Components
 - `registry/` — SSOT (standards.yaml, versions.yaml, dependencies.yaml, findings.yaml)
-- `standards/` — 449 Standard-Dateien in 51 Familien
+- `standards/` — 457 Standard-Dateien in 51 Familien
 - `schemas/` — naming-conventions.schema.json, milestone.schema.json, etc.
 - `tools/` — Validators, Auditors, Generators
 - `governance/`, `approval/`, `change-requests/` — Verfassung, Freigaben, SCR-System
@@ -166,6 +166,7 @@ Implementierungs-Pivot (kein Standard ohne Implementierungsstatus).
 ├── change-requests/ # SCR-*.md (Change-Requests)
 ├── contracts/       # Smart-Contract-Framework (Referenz)
 ├── docs/            # Patches, ADR, REPOSITORY_STANDARD, Audits
+├── evidence/        # Security & Technology Evidence Store (ATC-GATE-SEC-001 §4)
 ├── governance/      # ATC-STD-000 Verfassung + Governance-Doku
 ├── licenses/        # Lizenz-Texte
 ├── licensing/       # ATC-LICENSE-Standards (Code/Marke/Assets/Doku)
@@ -173,7 +174,7 @@ Implementierungs-Pivot (kein Standard ohne Implementierungsstatus).
 ├── references/      # Normative Referenzen
 ├── registry/        # SSOT: standards.yaml, Matrix, Lock, Schemata-Reg
 ├── schemas/         # JSON/YAML-Schemata (standard.schema.yaml)
-├── standards/       # 449 Standard-Dateien in 51 Familien
+├── standards/       # 457 Standard-Dateien in 51 Familien
 ├── templates/       # Dokumentvorlagen
 └── tools/           # Validatoren, Generatoren, Audits (Python)
 ```

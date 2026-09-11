@@ -10,8 +10,8 @@ version: "1.1.0"
 generated_from: registry/standards.yaml
 updated: "2026-09-08"
 coverage_kpi:
-  registry_total: 450
-  matrix_entries: 450
+  registry_total: 431
+  matrix_entries: 458
   matrix_coverage: "100%"
   enforced_target: "je Wartungszyklus steigend (REQ-IMP-007)"
   hinweis: "Wertigkeit der 21 SCR-0045-Detail-Eintraege bleibt; Familien-Evidence konsolidiert"
@@ -262,7 +262,7 @@ standards:
     independence: L1
 
   - standard: ATC-STD-100
-    version: "1.0.0"
+    version: "2.0.0"
     applicability: MANDATORY
     implementation:
       status: implemented
@@ -3720,16 +3720,81 @@ standards:
     independence: L1
 
   - standard: ATC-STD-020
+    version: "1.1.0"
+    applicability: CONDITIONAL
+    implementation:
+      status: specification_only
+      evidence: "Enterprise-Module ohne aktive Ziel-Repos im 26er-Stand; AD-047-Disposition fuer verwaiste Module gilt"
+    independence: L1
+
+  - standard: ATC-STD-TUD-001
+    version: "1.0.0"
+    applicability: REFERENCE
+    implementation:
+      status: reference
+      evidence: "Legacy-Serie (atc/): durch ATC-STD-000ff superseded; historische Referenz konserviert"
+    independence: L1
+
+  - standard: ATC-STD-021
     version: "1.0.0"
     applicability: CONDITIONAL
     implementation:
       status: specification_only
       evidence: "Enterprise-Module ohne aktive Ziel-Repos im 26er-Stand; AD-047-Disposition fuer verwaiste Module gilt"
     independence: L1
-  - standard: ATC-STD-TUD-001
+
+  - standard: ATC-STD-022
     version: "1.0.0"
-    applicability: MANDATORY
+    applicability: CONDITIONAL
     implementation:
-      status: specified
-      evidence: "SCR-0091: Standard + registry/technology-registry.yaml (18 Eintraege) + Validator TUD-1..TUD-6 PASS (11.09.)"
+      status: specification_only
+      evidence: "Enterprise-Module ohne aktive Ziel-Repos im 26er-Stand; AD-047-Disposition fuer verwaiste Module gilt"
+    independence: L1
+
+  - standard: ATC-STD-023
+    version: "1.0.0"
+    applicability: CONDITIONAL
+    implementation:
+      status: specification_only
+      evidence: "Enterprise-Module ohne aktive Ziel-Repos im 26er-Stand; AD-047-Disposition fuer verwaiste Module gilt"
+    independence: L1
+
+  - standard: ATC-STD-024
+    version: "1.0.0"
+    applicability: CONDITIONAL
+    implementation:
+      status: specification_only
+      evidence: "Enterprise-Module ohne aktive Ziel-Repos im 26er-Stand; AD-047-Disposition fuer verwaiste Module gilt"
+    independence: L1
+
+  - standard: ATC-STD-026
+    version: "1.0.0"
+    applicability: CONDITIONAL
+    implementation:
+      status: specification_only
+      evidence: "Enterprise-Module ohne aktive Ziel-Repos im 26er-Stand; AD-047-Disposition fuer verwaiste Module gilt"
+    independence: L1
+
+  - standard: ATC-STD-028
+    version: "1.0.0"
+    applicability: CONDITIONAL
+    implementation:
+      status: specification_only
+      evidence: "Enterprise-Module ohne aktive Ziel-Repos im 26er-Stand; AD-047-Disposition fuer verwaiste Module gilt"
+    independence: L1
+
+  - standard: ATC-STD-029
+    version: "1.0.0"
+    applicability: CONDITIONAL
+    implementation:
+      status: specification_only
+      evidence: "Enterprise-Module ohne aktive Ziel-Repos im 26er-Stand; AD-047-Disposition fuer verwaiste Module gilt"
+    independence: L1
+
+  - standard: ATC-GATE-SEC-001
+    version: "1.0.0"
+    applicability: CONDITIONAL
+    implementation:
+      status: specification_only
+      evidence: "Enterprise-Module ohne aktive Ziel-Repos im 26er-Stand; AD-047-Disposition fuer verwaiste Module gilt"
     independence: L1
