@@ -5,17 +5,17 @@
 
 | Kennzahl | Wert |
 |---|---|
-| Registry Standards | **471** |
+| Registry Standards | **472** |
 | Registry APPROVED | **435** |
-| Registry CANDIDATE (§33) | **24** |
+| Registry CANDIDATE (§33) | **25** |
 | Standard-Dateien (`standards/`) | **469** |
 | Familien | **51** |
-| Registry SHA-256 | `3b3158e248667e86…` (vollständig: `registry/registry.lock`) |
-| Stand | 2026-09-11 02:19 UTC+2 |
+| Registry SHA-256 | `90abbcb073c2e527…` (vollständig: `registry/registry.lock`) |
+| Stand | 2026-09-11 02:22 UTC+2 |
 
 Implementierungs-Matrix: [`registry/standard-implementation.yaml`](registry/standard-implementation.yaml) (ATC-STD-IMPLEMENTATION-001).
 
-**Implementierungs-KPI:** 471 Standards normativ definiert — 63 enforced, 129 implemented, 265 specification-only (Zielsysteme im qualitätsgetriebenen Rebuild AD-023/AD-045). Die Aussage „471 Standards implementiert“ ist unzulässig (SCR-0048).
+**Implementierungs-KPI:** 472 Standards normativ definiert — 63 enforced, 129 implemented, 266 specification-only (Zielsysteme im qualitätsgetriebenen Rebuild AD-023/AD-045). Die Aussage „472 Standards implementiert“ ist unzulässig (SCR-0048).
 
 **ATC COMPLIANCE: YES** — Repository-Audit R3 · Naming/Versioning/Ownership/Lizenz konform ([Audit-Details](#standards--compliance))
 
@@ -64,7 +64,7 @@ deren CI-Gates; Nachweis via Implementierungs-Matrix).
 - `standards/` — 469 Standard-Dateien in 51 Familien
 - `schemas/` — naming-conventions.schema.json, milestone.schema.json, etc.
 - `tools/` — Validators, Auditors, Generators
-- `governance/`, `approval/`, `change-requests/` — Verfassung, Freigaben, SCR-System
+- `governance/` (constitution/, authority/, decision-rights/, repository-governance/), `approval/`, `change-requests/` — Verfassung, Freigaben, SCR-System
 
 ### Usage
 

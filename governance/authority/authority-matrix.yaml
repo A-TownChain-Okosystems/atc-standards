@@ -1,0 +1,38 @@
+# ATC-GOV-001 Kap. 3/4 — Authorities & Decision Rights Matrix (L1)
+# SSOT: maschinenlesbar; Änderung nur via Governance-Prozess (Kap. 18)
+constitution_ref: ATC-GOV-001
+version: "1.0.0"
+god_mode: forbidden
+
+authorities:
+  standards_authority:     { capabilities: [standards-approval, standards-review-chain, registry-allokation], forbidden: [treasury, release, repo-deletion] }
+  architecture_authority:  { capabilities: [architecture-approval, adr-review, layer-model], forbidden: [treasury, security-gate-override] }
+  security_authority:      { capabilities: [security-policies, security-gates, emergency-freeze, security-audit], forbidden: [treasury, standards-approval, arbitrary-repo-deletion] }
+  release_authority:       { capabilities: [release-approval, gate-6-signoff], forbidden: [standards-approval, treasury] }
+  treasury_authority:     { capabilities: [treasury-proposal, multisig-execute], forbidden: [standards-approval, security-gate-override] }
+  protocol_authority:     { capabilities: [consensus-changes, smart-contract-approval, timelock-admin], forbidden: [treasury, release] }
+  infrastructure_authority: { capabilities: [github-rulesets, ci-config, deploy-infra], forbidden: [treasury, protocol-changes] }
+  ai_governance_authority: { capabilities: [agent-approval, agent-policy, kill-switch], forbidden: [treasury, standards-approval] }
+
+decision_rights_matrix:
+  # Entscheidung: Propose / Review / Approve / Execute / Audit (+ Block/Info)
+  standard:          { propose: Author, review: [Technical, Security], approve: Standards Authority, execute: Maintainer, audit: Audit, block: [Security Authority], info: [Governance] }
+  architecture:      { propose: Architect, review: [Security], approve: Architecture Authority, execute: Engineering, audit: Audit }
+  security_fix:      { propose: Security, review: [Security Council], approve: Emergency Authority (Critical) / Security Authority, execute: Maintainer, audit: Audit }
+  mainnet_release:   { propose: Release Team, review: [Security, QA], approve: Release Authority, execute: Release Team, audit: Audit }
+  smart_contract:    { propose: Developer, review: [Security], approve: Protocol Authority, execute: Deployment Team, audit: Audit }
+  github_ruleset:    { propose: Admin, review: [Governance], approve: Governance Authority, execute: GitHub Admin, audit: Audit }
+  treasury_transfer: { propose: Treasury, review: [Security], approve: Treasury Authority (Multisig), execute: Multisig, audit: Audit, timelock: required }
+  ai_agent_policy:   { propose: Agent Owner, review: [Security], approve: AI Governance, execute: Platform, audit: Audit }
+
+approval_quorums:
+  normal_change:      "2 unabhaengige Approvals"
+  high_risk:          "3-of-5 Governance"
+  critical_infra:     "3-of-5 Security/Architecture"
+  protocol_consensus: "4-of-7 Governance + Timelock"
+  emergency:          "2-of-N Emergency Authority + mandatory post-incident audit"
+
+transition_provisions:
+  reality: "Ein-Personen-Org, Agenten teilen GitHub-Identitaet (Stand 11.09.2026)"
+  rule: "Quoren gelten mit kompensierenden Kontrollen bis zweiter Reviewer-Account existiert (ATC-EXC-001-Muster: dokumentiert, befristet, Post-Merge-Audit)"
+  deadline: "2026-09-30 — ATC-EXC-001-Ablauf; ohne zweiten Account Fail-Closed"

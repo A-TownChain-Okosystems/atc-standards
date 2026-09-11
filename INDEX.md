@@ -59,7 +59,7 @@ eines Standards liegt ausschließlich in seiner Standarddatei; die Registry
 | registry/technology-registry.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
 | registry/versions.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
 
-Kernregister: **standards.yaml** (Bestand, 470 Standards) · **versions.yaml**
+Kernregister: **standards.yaml** (Bestand, 472 Standards) · **versions.yaml**
 (Versionierung je Standard) · **framework.yaml** (Katalog: 51 Familien,
 477 Slots) · **categories.yaml**
 (Kategorien) · **taxonomy.yaml** (Domain/Familie/Kategorie) · **protocol-registry.yaml**
@@ -122,11 +122,11 @@ Kernregister: **standards.yaml** (Bestand, 470 Standards) · **versions.yaml**
 | FAM-50 | CI/CD-Standards (CICD) | 1 | 1 | 0 |
 | FAM-51 | Technology Uniqueness & Differentiation (TUD) | 1 | 1 | 0 |
 
-Statusverteilung der 470 Registry-Standards: {'approved': 436, 'candidate': 22, 'draft': 12}.
-Alle 470 sind APPROVED und normativ (§30-eingefroren); Details je Standard
+Statusverteilung der 472 Registry-Standards: {'candidate': 25, 'approved': 435, 'draft': 12}.
+Alle 472 sind APPROVED und normativ (§30-eingefroren); Details je Standard
 in registry/standards.yaml und registry/versions.yaml.
 
-## 4. Master-Registry-Tabelle (470 Standards)
+## 4. Master-Registry-Tabelle (472 Standards)
 
 Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 
@@ -184,8 +184,10 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 | ATC-ENT-014 | Audit & Nachvollziehbarkeit Standard (P1) | enterprise | 1.0.0 | approved | standards/enterprise/ATC-ENT-014.md |
 | ATC-ENT-015 | Qualitätsmanagement & Definition of Done Standard (P2) | enterprise | 1.0.0 | approved | standards/enterprise/ATC-ENT-015.md |
 | ATC-GATE-SEC-001 | Continuous Security & Technology Assurance Gate (14 Gate-Zeilen, RELEASE-READY-Regel, 5-Stufen-Security-Status, Evidence Store, Org-Audit-Zielarchitektur) | enterprise | 1.0.0 | candidate | standards/enterprise/ATC-GATE-SEC-001.md |
-| ATC-STD-000 | Standards Governance & Specification Standard | governance | 1.2.0 | approved | governance/ATC-STD-000.md |
+| ATC-GOV-001 | A-TownChain Governance Constitution (Level-0-Verfassung: 5-Ebenen-Hierarchie, 8 Authorities ohne God Mode, Decision Rights Matrix, Quoren 2/3-of-5/4-of-7 mit Timelock, Emergency/Exception/COI/Appeals/Succession, AI-Agent-Pflichtkette, 8 Governance Gates, GitHub-Enforcement, G0-G4-Profile, Governance Score mit harten Deckeln, Amendment-Prozess) | governance | 1.0.0 | candidate | governance/constitution/ATC-GOV-001.md |
+| ATC-STD-000 | Standards Governance & Specification Standard (Verfassung; v1.3.0: Domaenen-Familien-Verweis §7.7) | governance | 1.3.0 | candidate | governance/ATC-STD-000.md |
 | ATC-STD-001 | Enterprise Governance Standard | enterprise | 1.2.0 | approved | standards/enterprise/ATC-STD-001.md |
+| ATC-STD-002 | Standards Family ID & Artifact Identifier Architecture (10 Domaenen-Familien 000-900 dauerhaft reserviert, No-Recycling, Artefakt-Klassen REQ/TC/GATE/ADR/CTRL/SPEC/SCHEMA, Traceability-Kette Familie->Standard->REQ->Impl->Test->Gate->Evidence) | governance | 1.0.0 | candidate | governance/ATC-STD-002.md |
 | ATC-STD-006 | Policy Management Standard | enterprise | 1.2.0 | approved | standards/enterprise/ATC-STD-006.md |
 | ATC-STD-008 | Compliance Management Standard | enterprise | 1.2.0 | approved | standards/enterprise/ATC-STD-008.md |
 | ATC-STD-012 | Incident Governance Standard | enterprise | 1.2.0 | approved | standards/enterprise/ATC-STD-012.md |
@@ -605,7 +607,7 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 
 ## 5. Statusmodell (Registry-Lifecycle)
 
-Registry-Statusverteilung (Ist): {'approved': 436, 'candidate': 22, 'draft': 12}. Lifecycle der Standards-Entwicklung
+Registry-Statusverteilung (Ist): {'candidate': 25, 'approved': 435, 'draft': 12}. Lifecycle der Standards-Entwicklung
 gemäß ATC-STD-STDDEV-001 / ATC-STD-TAXONOMY-001: Entwurf (Owner-Entwurf/SCR) →
 §9-Freigabe (Owner, Human-Gate) → APPROVED (normativ, §30-eingefroren) → ggf.
 DEPRECATED/RETIRED via Change-Control (ATC-STD-CHANGE-001). Protokolle folgen
@@ -648,7 +650,7 @@ die Kennung dieses generierten Dokuments.
 
 atc-standards/ · INDEX.md (generiert) · README.md · CHANGELOG.md · STATUS.md ·
 LICENSE (Apache-2.0) · AGENT_MANIFEST.md · AGENTS.md · governance/ (ATC-STD-000) ·
-standards/<kategorie>/ (Fachstandards, 470-Bestand) · registry/ (25
+standards/<kategorie>/ (Fachstandards, 472-Bestand) · registry/ (25
 SSOT-Dateien) · licenses/ (ATC-LICENSE-System) · schemas/ · tools/ (Generatoren +
 atc-std-validator) · approval/ (§9-Freigabe-Archiv) · change-requests/ (SCR-0001…) ·
 docs/ (Audits & Analysen) · templates/ · .github/workflows (Governance-CI, 2) +

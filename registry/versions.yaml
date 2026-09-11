@@ -7427,3 +7427,7 @@ versions:
   - version: 1.0.0
     date: '2026-09-11'
     change: 'Owner-Entwurf (SCR-0096): 10 Domaenen-Familien, Artefakt-Klassen-Architektur, Traceability-Kette; CANDIDATE'
+  ATC-GOV-001:
+  - version: 1.0.0
+    date: '2026-09-11'
+    change: 'Owner-Entwurf Governance Operating System (SCR-0097): Level-0-Verfassung mit Authorities, Quoren, Gates, Enforcement; Status CANDIDATE'
