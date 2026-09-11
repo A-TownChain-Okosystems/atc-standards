@@ -59,7 +59,7 @@ eines Standards liegt ausschließlich in seiner Standarddatei; die Registry
 | registry/technology-registry.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
 | registry/versions.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
 
-Kernregister: **standards.yaml** (Bestand, 472 Standards) · **versions.yaml**
+Kernregister: **standards.yaml** (Bestand, 474 Standards) · **versions.yaml**
 (Versionierung je Standard) · **framework.yaml** (Katalog: 51 Familien,
 477 Slots) · **categories.yaml**
 (Kategorien) · **taxonomy.yaml** (Domain/Familie/Kategorie) · **protocol-registry.yaml**
@@ -70,7 +70,7 @@ Kernregister: **standards.yaml** (Bestand, 472 Standards) · **versions.yaml**
 
 | FAM | Familie | Slots | BELEGT | VERWEIST |
 |---|---|---|---|---|
-| FAM-01 | Enterprise & Governance | 20 | 11 | 9 |
+| FAM-01 | Enterprise & Governance | 20 | 12 | 8 |
 | FAM-02 | Standards-Governance | 13 | 2 | 11 |
 | FAM-03 | Repository Standards | 15 | 7 | 8 |
 | FAM-04 | Dokumentationsstandards | 16 | 8 | 8 |
@@ -122,11 +122,11 @@ Kernregister: **standards.yaml** (Bestand, 472 Standards) · **versions.yaml**
 | FAM-50 | CI/CD-Standards (CICD) | 1 | 1 | 0 |
 | FAM-51 | Technology Uniqueness & Differentiation (TUD) | 1 | 1 | 0 |
 
-Statusverteilung der 472 Registry-Standards: {'candidate': 25, 'approved': 435, 'draft': 12}.
-Alle 472 sind APPROVED und normativ (§30-eingefroren); Details je Standard
+Statusverteilung der 474 Registry-Standards: {'candidate': 26, 'approved': 436, 'draft': 12}.
+Alle 474 sind APPROVED und normativ (§30-eingefroren); Details je Standard
 in registry/standards.yaml und registry/versions.yaml.
 
-## 4. Master-Registry-Tabelle (472 Standards)
+## 4. Master-Registry-Tabelle (474 Standards)
 
 Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 
@@ -188,6 +188,7 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 | ATC-STD-000 | Standards Governance & Specification Standard (Verfassung; v1.3.0: Domaenen-Familien-Verweis §7.7) | governance | 1.3.0 | candidate | governance/ATC-STD-000.md |
 | ATC-STD-001 | Enterprise Governance Standard | enterprise | 1.2.0 | approved | standards/enterprise/ATC-STD-001.md |
 | ATC-STD-002 | Standards Family ID & Artifact Identifier Architecture (10 Domaenen-Familien 000-900 dauerhaft reserviert, No-Recycling, Artefakt-Klassen REQ/TC/GATE/ADR/CTRL/SPEC/SCHEMA, Traceability-Kette Familie->Standard->REQ->Impl->Test->Gate->Evidence) | governance | 1.0.0 | candidate | governance/ATC-STD-002.md |
+| ATC-STD-003 | Governance Determinism & Source-of-Truth Matrix Standard (SSOT-Matrix je Informationsklasse, State-ID/Ein-Zahl-Regel mit Registry-SHA, README-Vollregeneration/CURRENT-STATE-only, .github-Referenzpflicht, Autoritaetskaskade Registry>Evidence>Doku, ATC-STD-000-Bootstrap mit Sunset, Slot-Prinzip, APPROVED!=IMPLEMENTED, Agent-Autoritaetsgrenzen 2-of-N, State-Snapshot-Pflicht) | governance | 1.0.0 | approved | standards/governance/ATC-STD-003.md |
 | ATC-STD-006 | Policy Management Standard | enterprise | 1.2.0 | approved | standards/enterprise/ATC-STD-006.md |
 | ATC-STD-008 | Compliance Management Standard | enterprise | 1.2.0 | approved | standards/enterprise/ATC-STD-008.md |
 | ATC-STD-012 | Incident Governance Standard | enterprise | 1.2.0 | approved | standards/enterprise/ATC-STD-012.md |
@@ -305,6 +306,7 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 | ATC-STD-213 | Emission Standard | blockchain | 1.0.0 | approved | standards/blockchain/ATC-STD-213.md |
 | ATC-STD-214 | Burning Standard | blockchain | 1.0.0 | approved | standards/blockchain/ATC-STD-214.md |
 | ATC-STD-215 | Tokenomics Standard | blockchain | 1.0.0 | approved | standards/blockchain/ATC-STD-215.md |
+| ATC-STD-220 | Repository File Admission & Placement Standard (Master Subfamilie 220-229: Entscheidungsmodell 10 Spalten, Admission-Status ADMITTED/CONDITIONAL/QUARANTINED/REJECTED, Taxonomie 20 Klassen, File Entitlements A/B/T/D/G/S/C/I/P/O, autoritative Quelle, Generated-Artifact-Policy, CHECK-FILE-001 Checker, Ausnahmeprozess mit Expiry; Grundsatz Presence is not permission) | repository | 1.0.0 | candidate | standards/repository/ATC-STD-220.md |
 | ATC-STD-240 | Interoperability Standard | blockchain | 1.2.0 | approved | standards/blockchain/ATC-STD-240.md |
 | ATC-STD-241 | Bridge Standard | blockchain | 1.2.0 | approved | standards/blockchain/ATC-STD-241.md |
 | ATC-STD-242 | Bridge Security Standard | blockchain | 1.2.0 | approved | standards/blockchain/ATC-STD-242.md |
@@ -607,7 +609,7 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 
 ## 5. Statusmodell (Registry-Lifecycle)
 
-Registry-Statusverteilung (Ist): {'candidate': 25, 'approved': 435, 'draft': 12}. Lifecycle der Standards-Entwicklung
+Registry-Statusverteilung (Ist): {'candidate': 26, 'approved': 436, 'draft': 12}. Lifecycle der Standards-Entwicklung
 gemäß ATC-STD-STDDEV-001 / ATC-STD-TAXONOMY-001: Entwurf (Owner-Entwurf/SCR) →
 §9-Freigabe (Owner, Human-Gate) → APPROVED (normativ, §30-eingefroren) → ggf.
 DEPRECATED/RETIRED via Change-Control (ATC-STD-CHANGE-001). Protokolle folgen
@@ -650,7 +652,7 @@ die Kennung dieses generierten Dokuments.
 
 atc-standards/ · INDEX.md (generiert) · README.md · CHANGELOG.md · STATUS.md ·
 LICENSE (Apache-2.0) · AGENT_MANIFEST.md · AGENTS.md · governance/ (ATC-STD-000) ·
-standards/<kategorie>/ (Fachstandards, 472-Bestand) · registry/ (25
+standards/<kategorie>/ (Fachstandards, 474-Bestand) · registry/ (25
 SSOT-Dateien) · licenses/ (ATC-LICENSE-System) · schemas/ · tools/ (Generatoren +
 atc-std-validator) · approval/ (§9-Freigabe-Archiv) · change-requests/ (SCR-0001…) ·
 docs/ (Audits & Analysen) · templates/ · .github/workflows (Governance-CI, 2) +

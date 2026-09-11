@@ -1,26 +1,26 @@
-<!-- GENERATED-BY generate_views.py — NICHT MANUELL BEARBEITEN -->
+@@STAMP@@
 # ATC Standards
 
-## State (GENERIERT — Quelle: `registry/standards.yaml`, SCR-0090/ATC-STD-003)
+## State (GENERIERT — Quelle: `registry/standards.yaml`, SCR-0090/@@STD@@)
 
 ```yaml
 state:
-  id: ATC-STATE-20260911-77988037
-  generated_at: "2026-09-11 09:50 UTC+2"
-  registry_version: "1.2.0"
-  registry_sha256: "7798803757d741a8c5ef99ec80e355c26be672085572f2549973897b5014afc2"
-  standards_total: 474
-  standards_approved: 436
-  standards_candidate: 26
-  standards_other: 12
-  standard_files: 471
-  families: 51
+  id: ATC-STATE-@@DATE@@-@@SHA8@@
+  generated_at: "@@NOW@@"
+  registry_version: "@@REGVER@@"
+  registry_sha256: "@@SHA@@"
+  standards_total: @@TOTAL@@
+  standards_approved: @@APPROVED@@
+  standards_candidate: @@CANDIDATE@@
+  standards_other: @@OTHER@@
+  standard_files: @@FILES@@
+  families: @@FAMS@@
 ```
 
-**Diese Zahlen sind die EINZIG maschinenverbindliche Auskunft** (ATC-STD-003 §2 Ein-Zahl-Regel).
+**Diese Zahlen sind die EINZIG maschinenverbindliche Auskunft** (@@STD@@ §2 Ein-Zahl-Regel).
 Historische Zahlenstände: ausschließlich `STATUS.md` / `CHANGELOG.md` / `audits/`.
 
-**Implementierungs-KPI:** 474 Standards normativ definiert — 64 enforced, 129 implemented, 265 specification-only (Zielsysteme im qualitätsgetriebenen Rebuild AD-023/AD-045). Die Aussage „474 Standards implementiert“ ist unzulässig (SCR-0048, ATC-STD-003 §8: APPROVED ≠ IMPLEMENTED).
+**Implementierungs-KPI:** @@TOTAL@@ Standards normativ definiert — @@ENF@@ enforced, @@IMPL@@ implemented, @@SPEC@@ specification-only (Zielsysteme im qualitätsgetriebenen Rebuild AD-023/AD-045). Die Aussage „@@TOTAL@@ Standards implementiert“ ist unzulässig (SCR-0048, @@STD@@ §8: APPROVED ≠ IMPLEMENTED).
 
 **ATC COMPLIANCE: YES** — Repository-Audit R3 · Naming/Versioning/Ownership/Lizenz konform ([Audit-Details](#standards--compliance))
 
@@ -36,11 +36,11 @@ Umsetzungsgrad: ausschließlich State-Block oben (SCR-0090).
 
 ATC Standards is the canonical normative governance layer of the A-TownChain ecosystem. It maintains:
 
-- **Registry:** SSOT für alle 474 Standards mit Versionierung, Dependencies (DAG) und Findings
+- **Registry:** SSOT für alle @@TOTAL@@ Standards mit Versionierung, Dependencies (DAG) und Findings
 - **Verfassung:** ATC-STD-000 v1.2.0 (ID-System, Lifecycle, Change Control, Immutabilität)
 - **Validator-Suite:** atc-std-validator, atc-repo-audit (R3), atc-readme-validator
-- **Governance Framework:** 51 Familien, Enterprise-Ebenen (ATC-ENT-001..015), AI-Standards (ATC-AAS-001..025)
-- **Governance-Determinismus:** ATC-STD-003 (SSOT-Matrix, State-ID, Ein-Zahl-Regel)
+- **Governance Framework:** @@FAMS@@ Familien, Enterprise-Ebenen (ATC-ENT-001..015), AI-Standards (ATC-AAS-001..025)
+- **Governance-Determinismus:** @@STD@@ (SSOT-Matrix, State-ID, Ein-Zahl-Regel)
 
 All 26 organizational repositories follow these standards (Registry-First principle).
 
@@ -50,7 +50,7 @@ All 26 organizational repositories follow these standards (Registry-First princi
 
 Governance-Root der A-TownChain-Organisation: Registry, Standards,
 Schemata, Validatoren, Audits und Change-Requests. In Scope: normative
-Standards (471 Dateien, 51 Familien) und ihre Metadaten/Validierung.
+Standards (@@FILES@@ Dateien, @@FAMS@@ Familien) und ihre Metadaten/Validierung.
 Out of Scope: Implementierung der Standards (liegt in den 27 governed Repos und
 deren CI-Gates; Nachweis via Implementierungs-Matrix).
 
@@ -66,7 +66,7 @@ deren CI-Gates; Nachweis via Implementierungs-Matrix).
 
 ### Core Components
 - `registry/` — SSOT (standards.yaml, versions.yaml, dependencies.yaml, findings.yaml, families/ = Familien-SSOT, standards/ = generierte Per-Standard-Records)
-- `standards/` — 471 Standard-Dateien in 51 Familien
+- `standards/` — @@FILES@@ Standard-Dateien in @@FAMS@@ Familien
 - `schemas/` — naming-conventions.schema.json, milestone.schema.json, etc.
 - `tools/` — Validators, Auditors, Generators
 - `governance/` (constitution/, authority/, decision-rights/, repository-governance/), `approval/`, `change-requests/` — Verfassung, Freigaben, SCR-System
@@ -116,8 +116,8 @@ python3 tools/atc-readme-validator/check_readme.py .     # README-Compliance
 This repository is governed according to ATC-STD-000 v1.2.0 (A-TownChain Enterprise Governance Framework):
 
 - **Changes to APPROVED Standards:** via SCR only (§30 Immutabilität)
-- **New Standards:** Registry-First (Eintrag → Validierung → §9-Owner-Freigabe); ATC-STD-003 §7: No standard because a slot exists
-- **AI Agents:** Voll-Compliance-Mandat, CI-Enforcement, AUD-Records (AI-DEV-009); ATC-STD-003 §9: Agenten sind Executor/Auditor/Maintainer, nie Approver
+- **New Standards:** Registry-First (Eintrag → Validierung → §9-Owner-Freigabe); @@STD@@ §7: No standard because a slot exists
+- **AI Agents:** Voll-Compliance-Mandat, CI-Enforcement, AUD-Records (AI-DEV-009); @@STD@@ §9: Agenten sind Executor/Auditor/Maintainer, nie Approver
 - **CI Gates:** Standards-Validierung, Mutationssuite, Repo-Audit R3, Agent-Manifest-Enforcement
 
 See `CONTRIBUTING.md` and `governance/ATC-STD-000.md` for details.
@@ -128,7 +128,7 @@ See `CONTRIBUTING.md` and `governance/ATC-STD-000.md` for details.
 
 | Standard | Version | Status |
 |---|---|---|
-| ATC-STD-000 | 1.2.0 | ✅ APPROVED (Verfassung; Bootstrap-EXEMPT mit Sunset, ATC-STD-003 §6) |
+| ATC-STD-000 | 1.2.0 | ✅ APPROVED (Verfassung; Bootstrap-EXEMPT mit Sunset, @@STD@@ §6) |
 | ATC-STD-003 | 1.0.0 | ✅ APPROVED (Governance Determinism & SSOT Matrix) |
 | ATC-STD-201 | 1.0.0 | ✅ APPROVED |
 | ATC-STD-202 | 1.1.0 | ✅ APPROVED |
@@ -180,7 +180,7 @@ Implementierungs-Pivot (kein Standard ohne Implementierungsstatus).
 ├── references/      # Normative Referenzen
 ├── registry/        # SSOT: standards.yaml, Matrix, Lock, Schemata-Reg
 ├── schemas/         # JSON/YAML-Schemata (standard.schema.yaml)
-├── standards/       # 471 Standard-Dateien in 51 Familien
+├── standards/       # @@FILES@@ Standard-Dateien in @@FAMS@@ Familien
 ├── templates/       # Dokumentvorlagen
 └── tools/           # Validatoren, Generatoren, Audits (Python)
 ```
@@ -208,7 +208,7 @@ See [`SECURITY.md`](SECURITY.md) for the full disclosure policy.
 ## Maintainers
 
 **Organization:** A-TownChain-Okosystems · **Owner:** Michael Wroblewski
-(GitHub: ShivaCoreDev) · Agent: Aurora (Base44 Superagent — Executor/Auditor/Maintainer, ATC-STD-003 §9)
+(GitHub: ShivaCoreDev) · Agent: Aurora (Base44 Superagent — Executor/Auditor/Maintainer, @@STD@@ §9)
 
 ## License
 
@@ -236,6 +236,6 @@ Machine-readable metadata: State-Block oben (SCR-0090); Registry-SSOT: `registry
 
 Regel: Jeder Registry-Eintrag besitzt eine Datei in `standards/` ODER eine dokumentierte
 EXEMPT-Begruendung (aktuell einzig: `ATC-STD-000` als Master-Dokument außerhalb `standards/`,
-Bootstrap-EXEMPT mit Sunset, ATC-STD-003 §6). Die GUltigkeit dieser Relation wird je Lauf geprueft;
+Bootstrap-EXEMPT mit Sunset, @@STD@@ §6). Die GUltigkeit dieser Relation wird je Lauf geprueft;
 alle Zahlen hierzu ausschließlich im State-Block oben. Historische Zustaende (z.B. 08.09.):
 `STATUS.md` (Audit-Trail).

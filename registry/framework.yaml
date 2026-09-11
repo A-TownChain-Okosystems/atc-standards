@@ -48,11 +48,11 @@ framework:
       - ATC-ENT-015
       note: Enterprise Layer ATC-ENT-001..015 als Basis
     - id: ATC-STD-003
-      title: Rollen & Verantwortlichkeiten
-      status: VERWEIST
+      title: Governance Determinism & Source-of-Truth Matrix
+      status: BELEGT
       refs:
-      - ATC-STD-000
-      note: §14.1 Rollenmodell
+      - ATC-STD-003
+      note: Owner-Direktive 11.09. via SCR-0090 — Governance-Determinismus; ersetzt VERWEIST Rollen (ATC-STD-000 §14.1 bleibt ueber ATC-STD-000 gebunden)
     - id: ATC-STD-004
       title: Entscheidungsfindungsstandard
       status: VERWEIST

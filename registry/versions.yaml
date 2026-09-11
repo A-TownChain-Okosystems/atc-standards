@@ -7435,3 +7435,5 @@ versions:
   - version: 1.0.0
     date: '2026-09-11'
     change: 'Owner-Entwurf SCR-0099: File Admission & Placement Master; Checker CHECK-FILE-001 implementiert und pilotiert; Status CANDIDATE'
+  ATC-STD-003:
+    - {version: "1.0.0", date: "2026-09-11", change: "Initial Release APPROVED: Owner-Direktive 11.09. (SCR-0090) — Governance Determinism & SSOT Matrix"}

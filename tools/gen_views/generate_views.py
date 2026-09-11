@@ -61,48 +61,31 @@ def main():
           f"| Stand | {now} |\n\n"
           f"Implementierungs-Matrix: [`registry/standard-implementation.yaml`]({ROOT and 'registry/standard-implementation.yaml'}) (ATC-STD-IMPLEMENTATION-001).\n")
 
-    # ---------- 1. README ----------
+    # ---------- 1. README (SCR-0090/ATC-STD-003: VOLLREGENERATION aus Template) ----------
     p = os.path.join(ROOT, "README.md")
-    c = open(p, encoding="utf-8").read()
-    c = re.sub(r"<!-- GENERATED-BY generate_views\.py[\s\S]*?ATC-STD-IMPLEMENTATION-001\)\.\n", "", c)  # alter Block weg
-    # Inline-Zaehler-Patches (REQ-IMP-006: keine manuellen Zaehler)
-    c = re.sub(r"aller \d+ registrierten Standards", f"aller {total} registrierten Standards", c)
-    c = re.sub(r"\*\*\d+ Standards\**: \d+ APPROVED, \d+ offen", f"**{total} Standards**: {approved} APPROVED, {candidate} CANDIDATE", c)
-    c = re.sub(r"\(\d+/\d+ \+ Gates\)", "(Registry-Validierung + Gates)", c)
-    c = re.sub(r"CI-Validierung \(\d+/\d+ \+ Gates\)", "CI-Validierung (Registry-Validierung + Gates)", c)
-    c = re.sub(r"# \d+/\d+ COMPLIANT", f"# {total}/{total} COMPLIANT", c)
-    c = re.sub(r"\(\d+/\d+ COMPLIANT\)", f"({total}/{total} COMPLIANT)", c)
-    c = re.sub(r"alle \d+ Standards APPROVED und normativ in Kraft", f"{approved} Standards APPROVED und normativ in Kraft, {candidate} CANDIDATE (§33)", c)
-    c = re.sub(r"\d+ Standard-Dateien in \d+ Familien", f"{std_files} Standard-Dateien in {fam_count} Familien", c)
-    c = re.sub(r"\d+ Standards in \d+ Verzeichnissen", f"{total} Standards in {fam_count} Verzeichnissen", c)
-    c = re.sub(r"\d+ Standards in \d+ Familien, vollständige REQ-ID-Struktur", f"{total} Standards in {fam_count} Familien, vollständige REQ-ID-Struktur", c)
-    # Kennzahlen-Block nach der ersten Ueberschrift einfuegen
-    m = re.search(r"(^# .*\n)", c, re.M)
-    if m and "GENERATED-BY generate_views.py" not in c:
-        c = c.replace(m.group(1), m.group(1) + "\n" + kb, 1)
-    elif "GENERATED-BY generate_views.py" not in c:
-        c = kb + "\n" + c
-    # Implementierungs-KPI (SCR-0052/P1-004): SSOT-generiert aus standard-implementation.yaml
+    tpl = open(os.path.join(ROOT, "tools", "gen_views", "README.template.md"), encoding="utf-8").read()
+    state_id = f"ATC-STATE-{now[:10].replace('-', '')}-{sha[:8]}"
+    date_compact = now[:10].replace("-", "")
+    kpi = {"enforced": 0, "implemented": 0, "specification_only": 0}
     try:
         import yaml as _y
         _impl = _y.safe_load(open(os.path.join(ROOT, "registry", "standard-implementation.yaml"), encoding="utf-8"))
-        _cnt = {}
         for _s in _impl.get("standards", []):
             _st = _s.get("implementation", {}).get("status", "specification_only")
-            _cnt[_st] = _cnt.get(_st, 0) + 1
-        _kpi = (f"**Implementierungs-KPI:** {total} Standards normativ definiert — "
-                f"{_cnt.get('enforced', 0)} enforced, {_cnt.get('implemented', 0)} implemented, "
-                f"{_cnt.get('specification_only', 0)} specification-only (Zielsysteme im qualitätsgetriebenen Rebuild AD-023/AD-045). "
-                f"Die Aussage „{total} Standards implementiert“ ist unzulässig (SCR-0048).")
-        if "**Implementierungs-KPI:**" in c:
-            c = re.sub(r"\*\*Implementierungs-KPI:\*\*.*?unzulässig \(SCR-0048\)\.", _kpi, c)
-        else:
-            c = c.replace("[`registry/standard-implementation.yaml`](registry/standard-implementation.yaml) (ATC-STD-IMPLEMENTATION-001).",
-                          "[`registry/standard-implementation.yaml`](registry/standard-implementation.yaml) (ATC-STD-IMPLEMENTATION-001)." + chr(10) + _kpi, 1)
+            kpi[_st] = kpi.get(_st, 0) + 1
     except Exception as _e:
-        print(f"  Hinweis: Implementierungs-KPI nicht gepatcht ({_e})")
-    c = re.sub(r"\n{3,}", "\n\n", c)  # Generator-Hygiene: idempotent, keine Leerzeilen-Akkumulation
-    open(p, "w", encoding="utf-8").write(c)
+        print(f"  Hinweis: KPI-Daten nicht verfuegbar ({_e})")
+    for tok, val in {
+        "@@STAMP@@": stamp, "@@STD@@": "ATC-STD-003", "@@DATE@@": date_compact, "@@SHA8@@": sha[:8],
+        "@@NOW@@": now, "@@SHA@@": sha, "@@REGVER@@": "1.2.0", "@@TOTAL@@": str(total),
+        "@@APPROVED@@": str(approved), "@@CANDIDATE@@": str(candidate), "@@OTHER@@": str(other),
+        "@@FILES@@": str(std_files), "@@FAMS@@": str(fam_count),
+        "@@ENF@@": str(kpi.get("enforced", 0)), "@@IMPL@@": str(kpi.get("implemented", 0)),
+        "@@SPEC@@": str(kpi.get("specification_only", 0)),
+    }.items():
+        tpl = tpl.replace(tok, val)
+    open(p, "w", encoding="utf-8").write(tpl)
+    print("  README vollregeneriert (State-ID:", state_id + ")")
 
     # ---------- 2. AGENT_MANIFEST ----------
     p = os.path.join(ROOT, "AGENT_MANIFEST.md")
