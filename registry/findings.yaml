@@ -1041,4 +1041,4 @@ findings:
   status: PARTIALLY_RESOLVED
   repo: (org-weit)
   title: 'Chain-Access-Layer fehlt: kein RPC/API-Dienst zwischen atc-node und Wallet/Explorer/SDK — atc-sdk ist Bibliothek ohne Dienstknoten, atc-explorer hat keine Node-Anbindung; IFC-Vertraege 0009/0010 ohne Consumer'
-  resolution: 'SCR-0108/0109: Chain-Access live und CI-verifiziert — atc-node Test Suite GRUEN (5b0af587) — Zeilenprotokoll (Stufe 2) PLUS JSON-RPC-2.0-Subset (Stufe 3: chain_id/boot_hash/peers/ping, -32601, Auto-Erkennung am Socket, 5 Unit-Tests inkl. 2 echten TCP-Roundtrips). Restoffen: Auth/TLS, Wallet/Explorer/SDK-Consumer (IFC-0009/0010), Node-zu-Node-Gossip, Blockproduktion'
+  resolution: 'SCR-0108/0109/0110: Chain-Access beidseitig live und CI-verifiziert — atc-node Devnet-RPC (Zeile + JSON-RPC-2.0-Subset, Test Suite GRUEN 5b0af587) PLUS erster Consumer: atc-sdk modules/atc-cli/src/rpc_client.rs, JSON-RPC-Client mit Mock-Node-Roundtrip (atc-sdk Test Suite GRUEN 9a237047). Die SDK-Seite der Access-Luecke ist geschlossen; Restoffen: echte Node-Anbindung im Integrationstest (Cross-Repo-Runner), Auth/TLS, Explorer/Wallet-Consumer (IFC-0009/0010), Gossip, Blockproduktion'
