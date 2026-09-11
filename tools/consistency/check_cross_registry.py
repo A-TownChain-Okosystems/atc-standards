@@ -296,6 +296,28 @@ def main():
         if not os.path.exists(os.path.join(_profiles_dir, _rn + ".yaml")):
             fail("R14", "Profile fehlt fuer Repo: " + _rn)
     print("R14 Standards-Profile: " + str(len(_pfiles)) + " geprueft")
+    # R15: Org-Engineering-Baseline (ATC-ORG-BASELINE-001, SCR-0103)
+    import yaml as _y15
+    _ry = _y15.safe_load(open("registry/repositories.yaml", encoding="utf-8"))
+    _rl15 = _ry.get("repositories", _ry) if isinstance(_ry, dict) else []
+    _T0 = {".github", "atc-standards"}
+    _T1E = {"a-townchain", "atclang", "atc-shivacore", "atc-zkp", "atc-wallet", "atc-algorithm"}
+    for _re in _rl15:
+        _nm = str(_re.get("name"))
+        _t = _re.get("tier")
+        if _t not in ("T0", "T1", "T2", "T3", "T4"):
+            fail("R15", "Tier fehlt/ungueltig: " + _nm)
+        elif _nm in _T0 and _t != "T0":
+            fail("R15", "T0-Mitgliedschaft verletzt: " + _nm)
+        elif _nm in _T1E and _t != "T1":
+            fail("R15", "T1-Owner-Liste verletzt: " + _nm)
+        elif str(_re.get("criticality")) == "C1" and str(_re.get("security_class")) == "S4" and _t not in ("T0", "T1"):
+            fail("R15", "C1+S4-Regel verletzt (muss T0/T1 sein): " + _nm)
+    _st15 = _y15.safe_load(open("registry/standards.yaml", encoding="utf-8"))["standards"]
+    _b15 = [x for x in _st15 if str(x.get("id")) == "ATC-ORG-BASELINE-001"]
+    if len(_b15) != 1 or _b15[0].get("status") != "approved":
+        fail("R15", "ATC-ORG-BASELINE-001 fehlt in Registry oder nicht APPROVED")
+    print("R15 Org-Baseline-Tiers: 27 Repos geprueft")
 
     print()
     if FAILS:

@@ -7,24 +7,24 @@
 
 ```yaml
 state:
-  id: ATC-STATE-20260911-362d8da6
-  generated_at: "2026-09-11 17:25 UTC+2"
+  id: ATC-STATE-20260911-4894fb05
+  generated_at: "2026-09-11 17:36 UTC+2"
   registry_version: "1.0.0"
-  registry_sha256: "362d8da677daeb54a10608baa51b7e37673b5d146373415eb1d89e1ba9ed5d60"
-  standards_total: 474
-  standards_approved: 462
+  registry_sha256: "4894fb05289a937703b353ba5aa864d14d8cba4d9c931c962e34c1c76c4840cb"
+  standards_total: 475
+  standards_approved: 463
   standards_candidate: 0
   standards_other: 12
-  standard_files: 471
+  standard_files: 472
   families: 51
 ```
 
 **Diese Zahlen sind die EINZIG maschinenverbindliche Auskunft** (ATC-STD-003 §2 Ein-Zahl-Regel).
 Historische Zahlenstände: ausschließlich `STATUS.md` / `CHANGELOG.md` / `audits/`.
 
-**Implementierungs-KPI:** 474 Standards normativ definiert — 65 enforced, 129 implemented, 265 specification-only (Zielsysteme im qualitätsgetriebenen Rebuild AD-023/AD-045). Die Aussage „474 Standards implementiert“ ist unzulässig (SCR-0048, ATC-STD-003 §8: APPROVED ≠ IMPLEMENTED).
+**Implementierungs-KPI:** 475 Standards normativ definiert — 65 enforced, 129 implemented, 265 specification-only (Zielsysteme im qualitätsgetriebenen Rebuild AD-023/AD-045). Die Aussage „475 Standards implementiert“ ist unzulässig (SCR-0048, ATC-STD-003 §8: APPROVED ≠ IMPLEMENTED).
 
-**FORMALE COMPLIANCE: PASS** (Repository-Audit R3: Naming/Versioning/Ownership/Lizenz + Cross-Registry-Test R1-R12) · **IMPLEMENTATION: PARTIAL** (41 % code-backed: 65 enforced + 129 implemented von 474 Matrix-Eintraegen erfassten (Registry-Gesamt: 474)) · **PRODUCTION READINESS: NOT_READY** (Release-/Mainnet-Gates, registry/milestones.yaml) — ein Zustand behauptet nie den anderen ([Audit-Details](#standards--compliance))
+**FORMALE COMPLIANCE: PASS** (Repository-Audit R3: Naming/Versioning/Ownership/Lizenz + Cross-Registry-Test R1-R12) · **IMPLEMENTATION: PARTIAL** (41 % code-backed: 65 enforced + 129 implemented von 475 Matrix-Eintraegen erfassten (Registry-Gesamt: 475)) · **PRODUCTION READINESS: NOT_READY** (Release-/Mainnet-Gates, registry/milestones.yaml) — ein Zustand behauptet nie den anderen ([Audit-Details](#standards--compliance))
 
 ---
 
@@ -38,7 +38,7 @@ Umsetzungsgrad: ausschließlich State-Block oben (SCR-0090).
 
 ATC Standards is the canonical normative governance layer of the A-TownChain ecosystem. It maintains:
 
-- **Registry:** SSOT für alle 474 Standards mit Versionierung, Dependencies (DAG) und Findings
+- **Registry:** SSOT für alle 475 Standards mit Versionierung, Dependencies (DAG) und Findings
 - **Verfassung:** ATC-STD-000 v1.3.0, APPROVED (ID-System, Lifecycle, Change Control, Immutabilität)
 - **Validator-Suite:** atc-std-validator, atc-repo-audit (R3), atc-readme-validator
 - **Governance Framework:** 51 Familien, Enterprise-Ebenen (ATC-ENT-001..015), AI-Standards (ATC-AAS-001..025)
@@ -52,7 +52,7 @@ All 26 organizational repositories follow these standards (Registry-First princi
 
 Governance-Root der A-TownChain-Organisation: Registry, Standards,
 Schemata, Validatoren, Audits und Change-Requests. In Scope: normative
-Standards (471 Dateien, 51 Familien) und ihre Metadaten/Validierung.
+Standards (472 Dateien, 51 Familien) und ihre Metadaten/Validierung.
 Out of Scope: Implementierung der Standards (liegt in den 27 governed Repos und
 deren CI-Gates; Nachweis via Implementierungs-Matrix).
 
@@ -68,7 +68,7 @@ deren CI-Gates; Nachweis via Implementierungs-Matrix).
 
 ### Core Components
 - `registry/` — SSOT (standards.yaml, versions.yaml, dependencies.yaml, findings.yaml, families/ = Familien-SSOT, standards/ = generierte Per-Standard-Records)
-- `standards/` — 471 Standard-Dateien in 51 Familien
+- `standards/` — 472 Standard-Dateien in 51 Familien
 - `profiles/` — 27 verbindliche Standards-Profile je Repository (Compliance-Vertrag, ATC-STD-LIB-001 §8) + `docs/architecture/` — Zielarchitektur
 - `schemas/` — naming-conventions.schema.json, milestone.schema.json, etc.
 - `tools/` — Validators, Auditors, Generators
@@ -184,7 +184,7 @@ Implementierungs-Pivot (kein Standard ohne Implementierungsstatus).
 ├── references/      # Normative Referenzen
 ├── registry/        # SSOT: standards.yaml, Matrix, Lock, Schemata-Reg
 ├── schemas/         # JSON/YAML-Schemata (standard.schema.yaml)
-├── standards/       # 471 Standard-Dateien in 51 Familien
+├── standards/       # 472 Standard-Dateien in 51 Familien
 ├── templates/       # Dokumentvorlagen
 └── tools/           # Validatoren, Generatoren, Audits (Python)
 ```

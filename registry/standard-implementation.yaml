@@ -3922,3 +3922,10 @@ standards:
     implementation:
       status: enforced
       evidence: CI-Job cross-registry (tools/consistency/check_cross_registry.py R1-R12, SCR-0091/0094)
+  - standard: ATC-ORG-BASELINE-001
+    version: "1.0.0"
+    applicability: MANDATORY
+    implementation:
+      status: partial
+      evidence: "R15-Tier-Pruefung live im Cross-Registry-Test (27/27 tier-Felder, T0/T1-Verdraftung, C1+S4-Regel, Baseline-Existenz); Merge-Gate-Enforcement und Branch-Protection Owner-pending (F-122); Roadmap-IST ehrlich in par.5 (F-134/F-135 offen)"
+    independence: L1

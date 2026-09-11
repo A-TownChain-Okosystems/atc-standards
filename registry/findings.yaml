@@ -1095,3 +1095,16 @@ findings:
   repo: a-townchain-os
   title: 'CodeQL-Exemption dokumentieren: Monorepo-Shell ist docs-only (18 md, 0 Quellcode, L7-Integrationsshell) — Rust-CodeQL-Rollout 504e3e0 scheiterte konfigurativ (autobuild unanwendbar), codeql.yml-Loeschung war korrekt; CodeQL ohne Quellcode nicht anwendbar; bei Re-Ansiedlung von Code wieder aktivieren'
   resolution: 'Exemption in Scan-EXEMPT-Klasse dokumentieren; Reaktivierung an Code-Wiedereinzug binden'
+
+- id: F-134
+  priority: P1
+  status: OPEN
+  repo: (org-weit)
+  title: 'Actions-SHA-Pinning: 0 von ~130 Action-Referenzen sind auf Commit-SHA gepinnt (alle Floating-Tags, ATC-ORG-BASELINE-001 par.5 P0) — Pinning-Rollout je Repo mit SHA-Aufloesung via API, Ausnahme nur fuer org-eigene Referenzen'
+  resolution: 'Pinning-Welle je Tier (T0/T1 zuerst), danach org-weit; CI-verifiziert'
+- id: F-135
+  priority: P1
+  status: OPEN
+  repo: (org-weit)
+  title: 'Release-Security-Programm (ATC-ORG-BASELINE-001 par.5 P1): SBOM, signierte Releases, Reproducible Builds, Tag-/Release-Protection — IST 0/26; Proto-Evidence-Gate vorhanden; Ablauf SOURCE->CI->TEST->SECURITY->BUILD->SBOM->HASH->SIGN->RELEASE je Tier ableiten'
+  resolution: 'Programm-SCR je Teilgabe mit Evidence-Bindung; T1 zuerst'

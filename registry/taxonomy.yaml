@@ -81,7 +81,7 @@ taxonomy:
       id_range: ATC-ENT-001-015
       source: named-family
       description: Enterprise Standards Layer (Org-Governance, Freigabe 07.09.)
-      standards_count: 53
+      standards_count: 54
       categories:
       - id: GENERAL
         name: Allgemein (Bestand, keine Unterteilung)

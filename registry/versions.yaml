@@ -4772,3 +4772,7 @@ versions:
   - version: 1.0.0
     date: '2026-09-11'
     change: 'Initial Release APPROVED: Owner-Direktive 11.09. (SCR-0090) — Governance Determinism & SSOT Matrix'
+  ATC-ORG-BASELINE-001:
+  - version: 1.0.0
+    date: '2026-09-11'
+    change: Initial Release APPROVED aus Owner-Direktive 11.09. 17:30 (Engineering-Governance-System) + Freigabe 17:33; SCR-0103
