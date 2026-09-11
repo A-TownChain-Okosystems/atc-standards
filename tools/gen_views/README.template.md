@@ -69,6 +69,7 @@ deren CI-Gates; Nachweis via Implementierungs-Matrix).
 ### Core Components
 - `registry/` — SSOT (standards.yaml, versions.yaml, dependencies.yaml, findings.yaml, families/ = Familien-SSOT, standards/ = generierte Per-Standard-Records)
 - `standards/` — @@FILES@@ Standard-Dateien in @@FAMS@@ Familien
+- `profiles/` — @@REPONUM@@ verbindliche Standards-Profile je Repository (Compliance-Vertrag, ATC-STD-LIB-001 §8) + `docs/architecture/` — Zielarchitektur
 - `schemas/` — naming-conventions.schema.json, milestone.schema.json, etc.
 - `tools/` — Validators, Auditors, Generators
 - `governance/` (constitution/, authority/, decision-rights/, repository-governance/), `approval/`, `change-requests/` — Verfassung, Freigaben, SCR-System
@@ -172,6 +173,7 @@ Implementierungs-Pivot (kein Standard ohne Implementierungsstatus).
 ├── governance/      # ATC-STD-000 Verfassung + Governance-Doku
 ├── licenses/        # Lizenz-Texte
 ├── licensing/       # ATC-LICENSE-Standards (Code/Marke/Assets/Doku)
+├── profiles/       # @@REPONUM@@ Standards-Profile je Repository (Compliance-Vertrag, ATC-STD-LIB-001 §8)
 ├── protocols/       # Prozessprotokolle
 ├── references/      # Normative Referenzen
 ├── registry/        # SSOT: standards.yaml, Matrix, Lock, Schemata-Reg

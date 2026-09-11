@@ -268,6 +268,35 @@ def main():
         fail("R13", "Metadaten-Datei ohne Registry-Eintrag (Waiskind): " + os.path.relpath(_o, ROOT))
     print("R13 Per-Standard-Metadaten: " + str(_found) + " geprueft, " + str(len(_orphans)) + " Waiskinder")
 
+
+    # R14: Standards-Profile (ATC-STD-LIB-001 sec.8, SCR-0101)
+    _reg_all = yaml.safe_load(open(os.path.join(ROOT, "registry", "repositories.yaml"), encoding="utf-8"))
+    _std_ids = {s["id"]: s for s in yaml.safe_load(open(REG, encoding="utf-8")).get("standards", [])}
+    _profiles_dir = os.path.join(ROOT, "profiles")
+    _pfiles = sorted([f for f in os.listdir(_profiles_dir) if f.endswith(".yaml")]) if os.path.isdir(_profiles_dir) else []
+    _regnames = {e["name"]: e for e in _reg_all.get("repositories", [])}
+    for _pf in _pfiles:
+        _p = yaml.safe_load(open(os.path.join(_profiles_dir, _pf), encoding="utf-8")) or {}
+        _pn = _p.get("profile")
+        if _pn not in _regnames:
+            fail("R14", "Profile ohne Registry-Repo: " + str(_pn))
+            continue
+        _e = _regnames[_pn]
+        if _p.get("registry_id") != _e.get("id") or _p.get("domain") != _e.get("domain") or _p.get("criticality") != _e.get("criticality"):
+            fail("R14", "Profile-Drift gegen repositories.yaml: " + str(_pn))
+        _req = _p.get("required_standards") or []
+        if not _req:
+            fail("R14", "required_standards leer: " + str(_pn))
+        for _rs in _req:
+            if _rs not in _std_ids:
+                fail("R14", "Profile " + str(_pn) + " referenziert unbekannten Standard: " + str(_rs))
+            elif _std_ids[_rs].get("status") != "approved":
+                fail("R14", "Profile " + str(_pn) + " bindet nicht-APPROVED Standard: " + str(_rs))
+    for _rn in _regnames:
+        if not os.path.exists(os.path.join(_profiles_dir, _rn + ".yaml")):
+            fail("R14", "Profile fehlt fuer Repo: " + _rn)
+    print("R14 Standards-Profile: " + str(len(_pfiles)) + " geprueft")
+
     print()
     if FAILS:
         print("RESULT: CROSS-REGISTRY NON-COMPLIANT")

@@ -1046,10 +1046,10 @@ findings:
   resolution: 'Evidence-Schema-Erweiterung, SCRs als Pilot'
 - id: F-124
   priority: P1
-  status: OPEN
+  status: RESOLVED
   repo: atc-standards
   title: 'Repository-Typen/Criticality/maturity/standards_profile maschinenlesbar (Owner-Audit P1-7): repositories.yaml hat Layer-Taxonomie (L0-L7) + Capabilities, aber KEINE criticality-/repository_type-/maturity-Felder (SCR-0093-Verifikation: 0 Vorkommen)'
-  resolution: 'Schema v1.1: je Repo repository_type/system_layer/criticality/maturity/owner/standards_profile; Org-Scan leitet Pflichtanforderungen daraus ab'
+  resolution: 'STALE aufgeloest + vervollstaendigt (SCR-0101): criticality/maturity_class/domain/layer existierten bereits (SCR-0093-Verifikung war veraltet); standards_profile jetzt ergaenzt: profile-Feld je repositories.yaml-Eintrag + 27 profiles/<repo>.yaml + R14-Enforcement'
 
 - id: F-127
   priority: P1

@@ -121,6 +121,7 @@ def main():
         "@@FCOMP@@": str(_cs.get("formal_compliance", "?")), "@@ICOMP@@": str(_cs.get("implementation_compliance", "?")), "@@PRD@@": str(_cs.get("production_readiness", "?")),
         "@@SPEC@@": str(kpi.get("specification_only", 0)),
         "@@VER000@@": v000.get("version", "n/a"),
+        "@@REPONUM@@": str(len([l for l in open(os.path.join(ROOT, "registry", "repositories.yaml"), encoding="utf-8") if l.strip().startswith("- {name:")])),
         "@@ST000@@": v000.get("status", "NICHT IN REGISTRY").upper(),
         "@@COMPTABLE@@": comptable, "@@REPOVER@@": str(repover),
     }.items():
