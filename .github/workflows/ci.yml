@@ -9,7 +9,7 @@ jobs:
   atc-repo-audit:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
       
@@ -108,7 +108,7 @@ jobs:
     name: Cross-Registry-Konsistenztest (SCR-0091, R1-R10, Exit 1 bei Drift)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
