@@ -237,6 +237,37 @@ def main():
             fail("R12", "production_readiness != NOT_READY ohne ACCEPTED Mainnet-/Release-Meilenstein - von Agenten nicht frei setzbar")
         print("R12 Drei-Stufen-Compliance: formal=" + str(cs.get("formal_compliance")) + ", implementation=" + str(cs.get("implementation_compliance")) + ", production=" + str(cs.get("production_readiness")))
 
+
+    # R13: Per-Standard-Metadaten (ATC-STD-LIB-001 Phase 1, SCR-0100)
+    reg_data = yaml.safe_load(open(REG, encoding="utf-8")).get("standards", [])
+    try:
+        _impl = {e.get("id"): e for e in yaml.safe_load(open(os.path.join(ROOT, "registry", "standard-implementation.yaml"), encoding="utf-8")).get("standards", [])}
+    except Exception:
+        _impl = {}
+    _expected = {}
+    for _s in reg_data:
+        _f = _s.get("file")
+        if _f:
+            _expected[_s["id"]] = (os.path.join(ROOT, os.path.dirname(_f), _s["id"] + ".metadata.yaml"), _s)
+    _found = 0
+    for _sid, (_path, _s) in _expected.items():
+        if not os.path.exists(_path):
+            fail("R13", "Metadaten fehlen: " + _sid + " (" + os.path.basename(_path) + ")")
+            continue
+        _m = yaml.safe_load(open(_path, encoding="utf-8")) or {}
+        if str(_m.get("version", "")) != str(_s.get("version", "")) or _m.get("status") != _s.get("status") or _m.get("title") != _s.get("title"):
+            fail("R13", "Metadaten-Drift: " + _sid + " (Registry version=" + str(_s.get("version")) + " status=" + str(_s.get("status")) + ")")
+        _im = (_m.get("implementation") or {}).get("status", "specification_only")
+        _is = (_impl.get(_sid) or {}).get("implementation", {}).get("status", "specification_only")
+        if _im != _is:
+            fail("R13", "Implementierungs-Drift in Metadaten: " + _sid + " (" + str(_im) + " != " + str(_is) + ")")
+        _found += 1
+    import glob as _glob
+    _orphans = [p for p in _glob.glob(os.path.join(ROOT, "standards", "**", "*.metadata.yaml"), recursive=True) + _glob.glob(os.path.join(ROOT, "governance", "**", "*.metadata.yaml"), recursive=True) if os.path.basename(p).replace(".metadata.yaml", "") not in _expected]
+    for _o in _orphans:
+        fail("R13", "Metadaten-Datei ohne Registry-Eintrag (Waiskind): " + os.path.relpath(_o, ROOT))
+    print("R13 Per-Standard-Metadaten: " + str(_found) + " geprueft, " + str(len(_orphans)) + " Waiskinder")
+
     print()
     if FAILS:
         print("RESULT: CROSS-REGISTRY NON-COMPLIANT")

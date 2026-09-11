@@ -87,7 +87,7 @@ jobs:
       - name: Views-Drift-Check (gen_views, REQ-IMP-006, SCR-0081)
         run: |
           pip install pyyaml -q
-          python3 tools/gen_views/generate_views.py
+          python3 tools/gen_views/generate_views.py && python3 tools/gen_views/gen_metadata.py
           python3 - <<'PY'
           import subprocess, re
           diff = subprocess.run(["git", "diff", "-U0", "--", "README.md", "AGENT_MANIFEST.md", "STATUS.md", "registry/registry.lock"], capture_output=True, text=True).stdout
