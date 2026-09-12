@@ -6,9 +6,7 @@ conformance:
 dependencies: []
 id: ATC-STD-003
 implementation:
-  evidence: CI-Job cross-registry (tools/consistency/check_cross_registry.py R1-R12,
-    SCR-0091/0094)
-  status: enforced
+  status: specification_only
 normative: true
 owner: Michael (Owner-Entwurf)
 source_file: standards/governance/ATC-STD-003.md
