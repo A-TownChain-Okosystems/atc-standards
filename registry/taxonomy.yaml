@@ -465,7 +465,7 @@ taxonomy:
       id_range: ATC-STD-ENG-001-999
       source: named-family
       description: Software Engineering & Code Quality (Owner-Entwurf 11.09.2026, SCR-0092)
-      standards_count: 0
+      standards_count: 1
       categories:
       - id: GENERAL
         name: Allgemein (Bestand, keine Unterteilung)
