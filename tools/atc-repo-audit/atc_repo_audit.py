@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Copyright (c) 2026 Michael Wroblewski / ShivaCore / A-TownChain-Okosystems. All Rights Reserved.
-"""ATC Repository Auditor v0.1.0 — Validator fuer ATC-STD-201 v1.0.0 (AD-031).
+"""ATC Repository Auditor v0.2.0 — Validator fuer ATC-STD-201 v1.0.0 (AD-031).
 
 Prueft die MUST/SHOULD-Regeln der Compliance-Matrix (V-01…V-16), erzeugt einen
 Health Score (ATC-STD-203 §15) und entscheidet GATE: PASS / NO-GO.
@@ -14,10 +14,10 @@ import re
 import subprocess
 import sys
 
-VERSION = "0.1.0"
+VERSION = "0.2.0"  # SCR-0115: Ticket-Praefix erlaubt, Merges ausgenommen
 LEVELS = ["R0", "R1", "R2", "R3", "R4"]
 BAD_PATHS = [".env", "node_modules/", "target/debug/", "/dist/", "/*.log", "tmp/", ".DS_Store"]
-CC_RE = re.compile(r"^(feat|fix|docs|refactor|test|security|perf|build|ci|chore|spec|release|audit|approve|restore|sync|review|init)(\([^)]+\))?: .+")
+CC_RE = re.compile(r"^(\[[^\]]+\]\s*)?(feat|fix|docs|refactor|test|security|perf|build|ci|chore|spec|release|audit|approve|restore|sync|review|init)(\([^)]+\))?: .+")  # SCR-0115: optionaler [Ticket]-Praefix ist Org-Konvention (z.B. "[S26] docs(...):")
 
 
 def lvl_ge(required, level):
@@ -212,6 +212,9 @@ def audit_repo(repo, level, registry_path=None):
         log = subprocess.run(["git", "log", "--oneline", "-20"], cwd=repo,
                              capture_output=True, text=True).stdout.splitlines()
         subs = [l.split(" ", 1)[-1].strip() for l in log if l.strip()]
+        # SCR-0115: Merge-Commits unterliegen nicht dem Conventional-Commits-Format
+        # und werden aus der Stichprobe ausgenommen (Spec: Merge-Commits ausgenommen).
+        subs = [s for s in subs if not s.startswith("Merge ")]
         if len(subs) <= 2:
             a.add("V-16", "WARN", "CI/CD",
                   "Historie zu flach (%d Commit(s)) — fetch-depth: 0 im Workflow verwenden (F-048/SCR-0039)" % len(subs))
