@@ -28,7 +28,8 @@ STDLIB_OK = {"os", "re", "sys", "json", "collections", "datetime", "hashlib",
              "subprocess", "argparse", "io", "zipfile", "urllib", "time",
              "shutil", "unittest", "tempfile", "glob", "textwrap", "pathlib",
              "typing", "functools", "itertools", "math", "string", "random",
-             "stat", "platform", "contextlib", "version", "csv", "logging"}
+             "stat", "platform", "contextlib", "version", "csv", "logging",
+             "base64"}   # base64 nachgetragen (Drift-Fix 13.09., AUD-Followup: version_gate.py)
 local_mods = {p.stem for p in (ROOT / "tools").rglob("*.py")}
 for py in (ROOT / "tools").rglob("*.py"):
     src = py.read_text(encoding="utf-8", errors="replace")
