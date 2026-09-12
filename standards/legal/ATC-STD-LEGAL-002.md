@@ -2,7 +2,7 @@
 standard:
   id: ATC-STD-LEGAL-002
   title: "ATC-STD-LEGAL-002 — Impressum & Anbieterkennzeichnung Standard"
-  version: "1.0.0-RC1"
+  version: "1.0.0"
   status: draft
   category: legal
   authority: A-TownChain Ecosystems
@@ -18,10 +18,10 @@ standard:
   license: "Copyright (c) 2026 Michael Wroblewski"
 ---
 
-# ATC-STD-LEGAL-002 — Impressum & Anbieterkennzeichnung Standard (v1.0.0-RC1, DRAFT)
+# ATC-STD-LEGAL-002 — Impressum & Anbieterkennzeichnung Standard (v1.0.0, DRAFT — RC1)
 
 > **Status:** DRAFT (1.0.0-RC1) — wartet auf §9-Freigabe gemäß ATC-STD-000; bis dahin nicht normativ in Kraft
-> **Version:** 1.0.0-RC1 (FORMAL) · **Datum:** 13.09.2026 · **Autoren:** Michael Wroblewski (Owner), Aurora (Superagent)
+> **Version:** 1.0.0 (FORMAL, Release Candidate RC1 — Status DRAFT) · **Datum:** 13.09.2026 · **Autoren:** Michael Wroblewski (Owner), Aurora (Superagent)
 > **Standard-ID:** ATC-STD-LEGAL-002 · **Scope:** Alle öffentlich zugänglichen Ressourcen der Organisation
 > **Normative Sprache:** RFC 2119 / RFC 8174 (MUST/SHOULD/MAY)
 > **Review Required:** Technical, Security, Architecture, Governance, Legal/Compliance
