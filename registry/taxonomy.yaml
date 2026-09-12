@@ -3,7 +3,7 @@
 taxonomy:
   standard: ATC-STD-TAXONOMY-001
   version: 1.0.0
-  generated: '2026-09-11'
+  generated: '2026-09-12'
   hierarchy:
   - DOMAIN
   - FAMILY
@@ -336,6 +336,19 @@ taxonomy:
         name: Allgemein (Bestand, keine Unterteilung)
         status: ACTIVE
         lifecycle: ACTIVE
+    - id: LEGAL
+      name: legal
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-STD-LEGAL-001-999
+      source: named-family
+      description: 'Legal & Compliance-Familie: Impressum/Anbieterkennzeichnung, Datenschutz, ToS, Lizenzen, Notices (Owner-Mandat 13.09., SCR-0117)'
+      standards_count: 1
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
   - id: SW
     name: Software Engineering
     status: ACTIVE
@@ -348,7 +361,7 @@ taxonomy:
       id_range: ATC-STD-100–199
       source: numeric-§7
       description: Architektur-Standards
-      standards_count: 1
+      standards_count: 2
       categories:
       - id: GENERAL
         name: Allgemein (Bestand, keine Unterteilung)
@@ -440,6 +453,19 @@ taxonomy:
       source: named-family
       description: ATC Markdown & Documentation Standard (Owner-Entwurf 07.09.)
       standards_count: 9
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
+    - id: ENG
+      name: eng
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-STD-ENG-001-999
+      source: named-family
+      description: Software Engineering & Code Quality (Owner-Entwurf 11.09.2026, SCR-0092)
+      standards_count: 0
       categories:
       - id: GENERAL
         name: Allgemein (Bestand, keine Unterteilung)
