@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""SCR-0080: Repository-Registry-Check — 27 GitHub == 27 Registry == 27 Evidence.
+"""SCR-0080: Repository-Registry-Check — Registry-Count == Eintraege (dynamisch).
 
 Prueft (offline-Modus): Eintrag-Anzahl, eindeutige IDs/Namen, Canonical-Eindeutigkeit
 (je Capability genau EIN canonical), Layer-Taxonomie-Vollstaendigkeit, Evidence-Pfad.
@@ -18,8 +18,8 @@ def main():
     repos = reg.get("repositories", [])
     if reg.get("count") != len(repos):
         errs.append(f"count {reg.get('count')} != Eintraege {len(repos)}")
-    if len(repos) != 27:
-        errs.append(f"Erwartet 27 Repos, gefunden {len(repos)}")
+    # Keine Handzahl (REQ-IMP-006/SCR-0081): count-Feld == Eintraege wird oben geprueft;
+    # die erwartete Gesamtzahl ergibt sich aus der Registry selbst, nicht aus Code.
     ids = [r.get("id") for r in repos]; names = [r.get("name") for r in repos]
     if len(set(ids)) != len(ids): errs.append("Doppelte IDs")
     if len(set(names)) != len(names): errs.append("Doppelte Namen")
@@ -61,7 +61,7 @@ def main():
         print("REPO-REGISTRY-CHECK FAIL:")
         for e in errs: print(" -", e)
         sys.exit(1)
-    print(f"REPO-REGISTRY-CHECK OK: {len(repos)}/27 Eintraege, Layer L0-L7 vollständig, IDs/Namen eindeutig")
+    print(f"REPO-REGISTRY-CHECK OK: {len(repos)}/{reg.get('count')} Eintraege, Layer L0-L7 vollständig, IDs/Namen eindeutig")
 
 if __name__ == "__main__":
     main()
