@@ -11,7 +11,7 @@ generated_from: registry/standards.yaml
 updated: "2026-09-08"
 coverage_kpi:
   registry_total: 431
-  matrix_entries: 473
+  matrix_entries: 478
   matrix_coverage: "100%"
   enforced_target: "je Wartungszyklus steigend (REQ-IMP-007)"
   hinweis: "Wertigkeit der 21 SCR-0045-Detail-Eintraege bleibt; Familien-Evidence konsolidiert"
@@ -263,6 +263,14 @@ standards:
 
   - standard: ATC-STD-100
     version: "2.0.0"
+    applicability: MANDATORY
+    implementation:
+      status: implemented
+      evidence: "Architektur-Layer AD-026; REPOSITORY_MAP; Rollen AD-046/SCR-0005"
+    independence: L1
+
+  - standard: ATC-ARCH-001
+    version: "1.0.0"
     applicability: MANDATORY
     implementation:
       status: implemented
@@ -3918,14 +3926,35 @@ standards:
       status: enforced
       evidence: "Governance-CI 26/26 (fetch-depth:0, AUD-2026-0002 F-048); AGENT_MANIFEST v3.1.7 Rollout 26/26; Branch-Protection SCR-0003"
     independence: L1
-  - id: ATC-STD-003
-    implementation:
-      status: enforced
-      evidence: CI-Job cross-registry (tools/consistency/check_cross_registry.py R1-R12, SCR-0091/0094)
+
   - standard: ATC-ORG-BASELINE-001
+    version: "1.0.0"
+    applicability: CONDITIONAL
+    implementation:
+      status: specification_only
+      evidence: "Enterprise-Module ohne aktive Ziel-Repos im 26er-Stand; AD-047-Disposition fuer verwaiste Module gilt"
+    independence: L1
+
+  - standard: ATC-STD-003
     version: "1.0.0"
     applicability: MANDATORY
     implementation:
-      status: partial
-      evidence: "R15-Tier-Pruefung live im Cross-Registry-Test (27/27 tier-Felder, T0/T1-Verdraftung, C1+S4-Regel, Baseline-Existenz); Merge-Gate-Enforcement und Branch-Protection Owner-pending (F-122); Roadmap-IST ehrlich in par.5 (F-134/F-135 offen)"
+      status: enforced
+      evidence: "atc-standards Governance-CI + Validator-Suite S-01..S-25 ALL COMPLIANT; immutable Tag-Ruleset"
+    independence: L1
+
+  - standard: ATC-STD-LEGAL-002
+    version: "1.0.0"
+    applicability: REFERENCE
+    implementation:
+      status: reference
+      evidence: "Legacy-Serie (atc/): durch ATC-STD-000ff superseded; historische Referenz konserviert"
+    independence: L1
+
+  - standard: ATC-STD-ENG-001
+    version: "1.0.0"
+    applicability: REFERENCE
+    implementation:
+      status: reference
+      evidence: "Legacy-Serie (atc/): durch ATC-STD-000ff superseded; historische Referenz konserviert"
     independence: L1

@@ -171,6 +171,7 @@ Implementierungs-Pivot (kein Standard ohne Implementierungsstatus).
 ├── docs/            # Patches, ADR, REPOSITORY_STANDARD, Audits
 ├── evidence/        # Security & Technology Evidence Store (ATC-GATE-SEC-001 §4)
 ├── governance/      # ATC-STD-000 Verfassung + Governance-Doku
+├── legal/           # Kanonische Anbieter-/Impressumsquelle (ATC-STD-LEGAL-002 §10–11, SCR-0117)
 ├── licenses/        # Lizenz-Texte
 ├── licensing/       # ATC-LICENSE-Standards (Code/Marke/Assets/Doku)
 ├── profiles/       # @@REPONUM@@ Standards-Profile je Repository (Compliance-Vertrag, ATC-STD-LIB-001 §8)

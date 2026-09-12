@@ -35,6 +35,7 @@ required_standards:
 - ATC-STD-NET-007
 - ATC-STD-NET-008
 - ATC-STD-100
+- ATC-ARCH-001
 - ATC-STD-ZKP-001
 - ATC-STD-ZKP-002
 - ATC-STD-ZKP-003
@@ -480,6 +481,7 @@ required_standards:
 - ATC-STD-220
 - ATC-ORG-BASELINE-001
 - ATC-STD-003
+- ATC-STD-LEGAL-002
 - ATC-STD-ENG-001
 workflow:
   require_tests: true
