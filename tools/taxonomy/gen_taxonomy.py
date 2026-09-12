@@ -22,6 +22,10 @@ DOMAIN_MAP = {
     # neu via SCR-0056
     "improvement": "GOV",
     "ai-gov": "AI",
+    # neu via SCR-0092 (11.09., Drift-Fix 13.09.: fehlte beim ENG-001-Commit -> KeyError auf main)
+    "eng": "SW",
+    # neu via SCR-0117 (13.09.)
+    "legal": "GOV",
 }
 DOMAINS = {
     "GOV":   "Governance & Meta-Standards",
@@ -38,6 +42,8 @@ FAMILY_CODES = {
     "repo-audit": "RA", "repo-maint": "RM", "err": "ER", "cicd": "CI", "implementation": "IM", "repo-discovery": "RD", "protocol": "PROT", "agent-operating": "AOS",
     "master-audit": "MAUD", "framework": "FW", "milestone": "MIL", "compat": "CMP",
     "taxonomy": "TAX", "governance-core": "SGC", "license": "LIC", "improvement": "IMP", "ai-gov": "AIG",
+    "eng": "ENG",
+    "legal": "LEGAL",
 }
 
 cats = yaml.safe_load(open("registry/categories.yaml", encoding="utf-8"))
