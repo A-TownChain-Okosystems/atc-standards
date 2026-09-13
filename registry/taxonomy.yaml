@@ -3,7 +3,7 @@
 taxonomy:
   standard: ATC-STD-TAXONOMY-001
   version: 1.0.0
-  generated: '2026-09-12'
+  generated: '2026-09-13'
   hierarchy:
   - DOMAIN
   - FAMILY
