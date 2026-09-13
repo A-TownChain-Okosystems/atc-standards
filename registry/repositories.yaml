@@ -1,10 +1,10 @@
 # ATC Repository Registry (SSOT) — SCR-0080 (Owner-P0-02 Canonical Ownership + P1 Repository Inventory)
-# Ehrlicher Stand (SCR-0081): 29 Registry-Einträge · 28 Evidence-Dateien auf main · 27. (.github) via PR #4 · 28. (demo-repository) via AUD-2026-0005 F-ORG-001 · 29. (atc-ide) via Org-Adoption Lumino-IDE 13.09.2026
+# Ehrlicher Stand (SCR-0081): 29 Registry-Einträge · 28 Evidence-Dateien auf main · 27. (.github) via PR #4 · 28. (demo-repository) via AUD-2026-0005 F-ORG-001 · 29. (atc-ide) via Org-Adoption Lumino-IDE 13.09.2026 · 30. (genesis-franchise-factory) via Org-Build 13.09.2026
 # Layer-Taxonomie: DRAFT bis ATC-STD-LAYER-001 (F-096) — System-Layer, NICHT Blockchain-Protocol-Layer.
 schema_version: "1.0.0"
 generated: "2026-09-10"
 organization: A-TownChain-Okosystems
-count: 29
+count: 30
 
 layer_taxonomy_draft:   # F-096 — §9-Freigabe ATC-STD-LAYER-001 ausstehend
   L0: language
@@ -129,4 +129,5 @@ repositories:
   - {name: genesis-chronicles, tier: T3, profile: genesis-chronicles, id: ATC-REPO-GAME-001, domain: game, layer: L6, criticality: C3, security_class: S2, maturity_class: C, canonical: true, evidence: .atc/evidence/evidence.yaml, exempt: false}
   - {name: .github, tier: T0, profile: .github, id: ATC-REPO-HUB-001, domain: governance_hub, layer: L7, criticality: C1, security_class: S3, maturity_class: A, canonical: true, evidence: .atc/evidence/evidence.yaml, exempt: true}   # Hub: PR-Pflicht-Regime
   - {name: atc-ide, tier: T3, profile: atc-ide, id: ATC-REPO-IDE-001, domain: developer_tools, layer: L6, criticality: C3, security_class: S2, maturity_class: C, canonical: true, evidence: .atc/evidence/evidence.yaml, exempt: false}
+  - {name: genesis-franchise-factory, tier: T3, profile: genesis-franchise-factory, id: ATC-REPO-GFF-001, domain: franchise_factory, layer: L6, criticality: C3, security_class: S2, maturity_class: C, canonical: true, evidence: .atc/evidence/evidence.yaml, exempt: false}
   - {name: demo-repository, tier: T3, profile: demo-repository, id: ATC-REPO-DEMO-001, domain: demo, layer: L7, criticality: C3, security_class: S1, maturity_class: C, canonical: false, evidence: .atc/evidence/evidence.yaml, exempt: true}
