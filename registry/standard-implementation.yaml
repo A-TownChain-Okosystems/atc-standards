@@ -229,6 +229,14 @@ standards:
       evidence: "atc-node R1-Skeleton (S4, AD-046); Bootstrap/Discovery-Standards warten auf Node-Rebuild"
     independence: L1
 
+  - standard: ATC-STD-NET-009
+    version: "1.0.0"
+    applicability: CONDITIONAL
+    implementation:
+      status: specification_only
+      evidence: "DRAFT (SCR-0122): Alle 3 Netzwerke status=planned, keine Genesis; maturity/version-Felder noch nicht in registry/networks.yaml"
+    independence: L1
+
   - standard: ATC-STD-NET-005
     version: "1.0.0"
     applicability: CONDITIONAL
