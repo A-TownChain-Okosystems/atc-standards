@@ -24,6 +24,7 @@ Regeln:
 
 Exit 0 = PASS, 1 = FAIL (Drift). Neue ID-Vergabe ohne Aktualisierung beider
 Seiten laesst das Gate anschlagen — 'ID nicht gefunden' wird nie 'ID ist frei'."""
+
 import argparse
 import os
 import re
@@ -48,6 +49,7 @@ def _range_covers(fam_range, ident, namespace_only=False):
     Ident-Komponente muss gedeckt sein), '/'-Gruppen mit gemeinsamer Nummer
     (STDDEV/REGISTRY/CHANGE-001), numerische Baender (120..131) und
     Einzel-Slots (AOS-001)."""
+
     def norm(x):
         x = x.replace("ATC-STD-", "").strip().strip('"')
         return re.sub(r"\s*\([^)]*\)\s*$", "", x)
@@ -68,7 +70,9 @@ def _range_covers(fam_range, ident, namespace_only=False):
             return int(mb.group(1)) <= ident_num <= int(mb.group(2))
         parts = [s.strip() for s in sub.split("/")]
         # 2) '/'-Gruppe: letzte Komponente traegt die Nummer, gilt fuer alle Namespaces
-        mc_last = re.match(r"^(.*?)-(\d+)(?:\s*\.\.\s*(?:ATC-STD-)?(?:[A-Z0-9-]*?-)?(\d+))?$", parts[-1])
+        mc_last = re.match(
+            r"^(.*?)-(\d+)(?:\s*\.\.\s*(?:ATC-STD-)?(?:[A-Z0-9-]*?-)?(\d+))?$", parts[-1]
+        )
         num_lo = int(mc_last.group(2)) if mc_last else None
         num_hi = int(mc_last.group(3)) if (mc_last and mc_last.group(3)) else None
         for idx, part in enumerate(parts):
@@ -76,7 +80,7 @@ def _range_covers(fam_range, ident, namespace_only=False):
             if cns != ident_ns and not ident_ns.startswith(cns + "-"):
                 continue
             if ns_only or num_lo is None or num_hi is None:
-                return True   # Einzel-Slot/Gruppe: Namespace-Deckung genuegt
+                return True  # Einzel-Slot/Gruppe: Namespace-Deckung genuegt
             return num_lo <= ident_num <= num_hi
         return False
 
@@ -86,7 +90,7 @@ def _range_covers(fam_range, ident, namespace_only=False):
         if not ic:
             continue
         if fr == ic:
-            continue   # exakte Gleichheit (z.B. ATC-STD-999)
+            continue  # exakte Gleichheit (z.B. ATC-STD-999)
         ins, inum = ns_of(ic), num_of(ic)
         if not any(comp_covers(c, ins, inum, namespace_only) for c in fr.split("+")):
             return False
@@ -108,13 +112,13 @@ def main():
     status = yaml.safe_load(open(args.status, encoding="utf-8"))
 
     lo, hi = args.family, args.family + 99
-    all_ids = [f"ATC-STD-{n}" for n in range(lo, hi + 1)]
-    allocated = {s["id"] for s in reg.get("standards", [])
-                 if re.fullmatch(rf"ATC-STD-{b}\d\d", s["id"])}
+    allocated = {
+        s["id"] for s in reg.get("standards", []) if re.fullmatch(rf"ATC-STD-{b}\d\d", s["id"])
+    }
     reserved = set()
     for m in re.finditer(
-            rf"- id: (ATC-STD-{b}\d\d)\s*\n\s*title: [^\n]*\n\s*status: VERWEIST",
-            fw_raw):
+        rf"- id: (ATC-STD-{b}\d\d)\s*\n\s*title: [^\n]*\n\s*status: VERWEIST", fw_raw
+    ):
         reserved.add(m.group(1))
     for m in re.finditer(r"range: (ATC-STD-(\d+)\.\.ATC-STD-(\d+))", fw_raw):
         for n in range(int(m.group(2)), int(m.group(3)) + 1):
@@ -128,8 +132,10 @@ def main():
     counts = alloc_sec["counts"]
 
     errs = 0
-    print(f"Allocation-Gate Familie {args.family}: Registry {len(allocated)} | "
-          f"Verweise {len(reserved)} | Status-Datei {len(st_alloc)}/{len(st_res)}/{len(st_free)}")
+    print(
+        f"Allocation-Gate Familie {args.family}: Registry {len(allocated)} | "
+        f"Verweise {len(reserved)} | Status-Datei {len(st_alloc)}/{len(st_res)}/{len(st_free)}"
+    )
     errs += fail_count(allocated - st_alloc, "ALLOC-01 Registry-ID fehlt als ALLOCATED", errs)
     for x in st_alloc - allocated:
         errs += fail(f"ALLOC-02 als ALLOCATED gefuehrt, aber nicht in Registry: {x}")
@@ -140,14 +146,22 @@ def main():
     for x in st_free & (allocated | reserved):
         errs += fail(f"ALLOC-05 als FREE gefuehrt, aber belegt: {x}")
     if counts.get("allocated") != len(st_alloc):
-        errs += fail(f"ALLOC-06a counts.allocated falsch ({counts.get('allocated')} != {len(st_alloc)})")
+        errs += fail(
+            f"ALLOC-06a counts.allocated falsch ({counts.get('allocated')} != {len(st_alloc)})"
+        )
     if counts.get("reserved") != len(st_res):
-        errs += fail(f"ALLOC-06b counts.reserved falsch ({counts.get('reserved')} != {len(st_res)})")
+        errs += fail(
+            f"ALLOC-06b counts.reserved falsch ({counts.get('reserved')} != {len(st_res)})"
+        )
     if counts.get("free_numerically_unobserved") != len(st_free):
-        errs += fail(f"ALLOC-06c counts.free falsch ({counts.get('free_numerically_unobserved')} != {len(st_free)})")
+        errs += fail(
+            f"ALLOC-06c counts.free falsch ({counts.get('free_numerically_unobserved')} != {len(st_free)})"
+        )
     if len(st_alloc) + len(st_res) + len(st_free) != 100:
-        errs += fail(f"ALLOC-06d Familie nicht vollstaendig abgebildet "
-                     f"({len(st_alloc)}+{len(st_res)}+{len(st_free)} != 100)")
+        errs += fail(
+            f"ALLOC-06d Familie nicht vollstaendig abgebildet "
+            f"({len(st_alloc)}+{len(st_res)}+{len(st_free)} != 100)"
+        )
     if alloc_sec.get("rule_free_is_not_allocatable") is not True:
         errs += fail("ALLOC-07 rule_free_is_not_allocatable != true")
 
@@ -156,7 +170,9 @@ def main():
         for r in resv.get("reservations", []):
             rid = r.get("id", "")
             if rid.startswith("ATC-STD-") and rid not in st_res:
-                errs += fail(f"ALLOC-08 {rid} in reservations.yaml, aber nicht RESERVED in allocation-status")
+                errs += fail(
+                    f"ALLOC-08 {rid} in reservations.yaml, aber nicht RESERVED in allocation-status"
+                )
     except FileNotFoundError:
         errs += fail("ALLOC-08 reservations.yaml nicht gefunden")
 
@@ -165,20 +181,24 @@ def main():
     if os.path.exists(cat_path):
         cats = yaml.safe_load(open(cat_path, encoding="utf-8"))
         fw_raw2 = open(args.framework, encoding="utf-8").read()
-        fam_entries = {}   # FAM-ID -> (name, range)
+        fam_entries = {}  # FAM-ID -> (name, range)
         for m in re.finditer(r"- id: (FAM-\d+)\n\s+name: (.+?)\n\s+range: (.+?)(?:\n|$)", fw_raw2):
-            fam_entries[m.group(1)] = (m.group(2).strip('\"'), m.group(3).strip('\"'))
+            fam_entries[m.group(1)] = (m.group(2).strip('"'), m.group(3).strip('"'))
         real = {k: v for k, v in cats.items() if k != "categories" and isinstance(v, dict)}
         wired = {k: v for k, v in real.items() if v.get("fam")}
         legacy = len(real) - len(wired)
         for cat, meta in sorted(wired.items()):
             fam = meta["fam"]
             if fam not in fam_entries:
-                errs += fail(f"ALLOC-11 Kategorie '{cat}' verweist auf {fam}, aber {fam} fehlt in framework.yaml")
+                errs += fail(
+                    f"ALLOC-11 Kategorie '{cat}' verweist auf {fam}, aber {fam} fehlt in framework.yaml"
+                )
                 continue
             frange = fam_entries[fam][1]
             if not _range_covers(frange, meta.get("range", ""), namespace_only=True):
-                errs += fail(f"ALLOC-11 {fam}-Range '{frange}' deckt Kategorie-Range '{meta.get('range','')}' ({cat}) nicht ab")
+                errs += fail(
+                    f"ALLOC-11 {fam}-Range '{frange}' deckt Kategorie-Range '{meta.get('range', '')}' ({cat}) nicht ab"
+                )
 
         # ALLOC-12: Jeder Registry-Standard MUSS von mindestens einer FAM-Range
         # gedeckt sein; liegt er im Namespace der Familien-Range seiner Kategorie,
@@ -193,24 +213,39 @@ def main():
             cat = s.get("category")
             if cat in wired and wired[cat]["fam"] in fam_entries:
                 frange = fam_entries[wired[cat]["fam"]][1]
-                if _range_covers(frange, sid, namespace_only=True) and wired[cat]["fam"] not in covered_by:
+                if (
+                    _range_covers(frange, sid, namespace_only=True)
+                    and wired[cat]["fam"] not in covered_by
+                ):
                     own_miss.append((sid, cat, wired[cat]["fam"]))
         for sid in sorted(uncovered):
-            errs += fail(f"ALLOC-12 {sid} liegt in keiner FAM-Range — keine formale Familien-Allokation")
+            errs += fail(
+                f"ALLOC-12 {sid} liegt in keiner FAM-Range — keine formale Familien-Allokation"
+            )
         for sid, cat, fam in own_miss:
-            errs += fail(f"ALLOC-12 {sid} (Namespace von Kategorie '{cat}') liegt ausserhalb der {fam}-Range")
-        print(f"ALLOC-12 Standard-Abdeckung: {len(reg.get('standards', [])) - len(uncovered) - len(own_miss)}/{len(reg.get('standards', []))} "
-              f"Registry-Standards formal durch FAM-Ranges gedeckt")
+            errs += fail(
+                f"ALLOC-12 {sid} (Namespace von Kategorie '{cat}') liegt ausserhalb der {fam}-Range"
+            )
+        print(
+            f"ALLOC-12 Standard-Abdeckung: {len(reg.get('standards', [])) - len(uncovered) - len(own_miss)}/{len(reg.get('standards', []))} "
+            f"Registry-Standards formal durch FAM-Ranges gedeckt"
+        )
         if legacy:
-            print(f"ALLOC-11/12 Familien-Allokation: {len(wired)} fam-verkabelte Kategorien geprueft "
-                  f"({legacy} Legacy-Kategorien ohne fam:-Feld, grandfathered)")
+            print(
+                f"ALLOC-11/12 Familien-Allokation: {len(wired)} fam-verkabelte Kategorien geprueft "
+                f"({legacy} Legacy-Kategorien ohne fam:-Feld, grandfathered)"
+            )
         else:
-            print(f"ALLOC-11/12 Familien-Allokation: ALLE {len(wired)} Kategorien fam-verkabelt — "
-                  f"Grandfathering vollstaendig entfallen (Owner-Direktive 14.09., SCR-0120 v9)")
+            print(
+                f"ALLOC-11/12 Familien-Allokation: ALLE {len(wired)} Kategorien fam-verkabelt — "
+                f"Grandfathering vollstaendig entfallen (Owner-Direktive 14.09., SCR-0120 v9)"
+            )
 
     if errs:
-        print(f"Ergebnis: FAIL — {errs} Allocation-Drift-Funde. Registry-Update oder "
-              f"allocation-status.yaml-Update erforderlich.")
+        print(
+            f"Ergebnis: FAIL — {errs} Allocation-Drift-Funde. Registry-Update oder "
+            f"allocation-status.yaml-Update erforderlich."
+        )
         sys.exit(1)
     print("Ergebnis: PASS — allocation-status konsistent mit Registry + Framework.")
 
@@ -227,8 +262,11 @@ def _free_ids(status):
     """Parst ids wie '305, 315-319, 336-339' in eine Liste von Slot-Nummern."""
     ids = []
     raw = status.get("free_numerically_unobserved", {}).get("ids", [])
-    parts = [str(p).strip() for p in raw] if isinstance(raw, list) \
+    parts = (
+        [str(p).strip() for p in raw]
+        if isinstance(raw, list)
         else [p.strip() for p in str(raw).split(",")]
+    )
     for part in parts:
         if not part:
             continue

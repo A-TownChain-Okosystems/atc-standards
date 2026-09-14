@@ -28,10 +28,11 @@ nicht FAIL = Pipeline-Fehler).
 Exit-Codes: 0 = Gate PASS (Records ehrlich + vollstaendig abgedeckt),
             1 = Gate FAIL (Schema-Verstoss, fehlender Pflicht-Record oder Fake-PASS).
 """
-import os
-import sys
+
 import glob
 import json
+import os
+import sys
 
 try:
     import yaml
@@ -49,14 +50,23 @@ SCHEMA = os.path.join(ROOT, "schemas", "maintenance", "maintenance-readiness.sch
 REQUIRED_COMPONENTS = ["a-townchain-os", "atc-standards"]
 
 REQUIRED_FIELDS = [
-    "maintenance_owner", "maintenance_documentation", "dependency_inventory",
-    "security_process", "test_suite", "rollback_strategy",
-    "compatibility_strategy", "monitoring", "evidence_collection",
+    "maintenance_owner",
+    "maintenance_documentation",
+    "dependency_inventory",
+    "security_process",
+    "test_suite",
+    "rollback_strategy",
+    "compatibility_strategy",
+    "monitoring",
+    "evidence_collection",
     "lifecycle_status",
 ]
 CRITICAL_FIELDS = [
-    "independent_validation", "security_review", "rollback_test",
-    "incident_record", "audit_evidence",
+    "independent_validation",
+    "security_review",
+    "rollback_test",
+    "incident_record",
+    "audit_evidence",
 ]
 
 
@@ -96,21 +106,30 @@ def main() -> int:
         # 3) Semantik: Fake-PASS erkennen
         incomplete = [f for f in REQUIRED_FIELDS if (mr.get(f) or {}).get("state") != "complete"]
         cm = doc.get("critical_maintenance") or {}
-        cm_incomplete = [f for f in CRITICAL_FIELDS if (cm.get(f) or {}).get("state") != "complete"] if cm else []
+        cm_incomplete = (
+            [f for f in CRITICAL_FIELDS if (cm.get(f) or {}).get("state") != "complete"]
+            if cm
+            else []
+        )
 
         if result == "PASS" and incomplete:
             errors.append(
                 "%s: FAKE-PASS - result=PASS, aber unvollstaendig: %s "
-                "(MAINT-000 Par.7.2: PASS erfordert alle 10 Felder complete)" % (comp, ", ".join(incomplete)))
+                "(MAINT-000 Par.7.2: PASS erfordert alle 10 Felder complete)"
+                % (comp, ", ".join(incomplete))
+            )
         if result == "PASS" and cm and cm_incomplete:
             errors.append(
-                "%s: FAKE-PASS - critical_maintenance unvollstaendig: %s" % (comp, ", ".join(cm_incomplete)))
+                "%s: FAKE-PASS - critical_maintenance unvollstaendig: %s"
+                % (comp, ", ".join(cm_incomplete))
+            )
 
         # Legitimer BLOCK-Zustand: ehrlich dokumentiert
         if result == "FAIL":
             warnings.append(
                 "%s: RELEASE BLOCKED (ehrlicher BLOCK-Zustand) - unvollstaendig: %s"
-                % (comp, ", ".join(incomplete + cm_incomplete) or "?"))
+                % (comp, ", ".join(incomplete + cm_incomplete) or "?")
+            )
         if result not in ("PASS", "FAIL"):
             errors.append("%s: result fehlt oder ungueltig: %r" % (comp, result))
 

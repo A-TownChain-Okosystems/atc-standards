@@ -8,7 +8,7 @@
 ```yaml
 state:
   id: ATC-STATE-20260914-8ff9ce3b
-  generated_at: "2026-09-14 10:20 UTC+2"
+  generated_at: "2026-09-14 12:50 UTC+2"
   registry_version: "1.0.0"
   registry_sha256: "8ff9ce3b9aba170adbeb0833ad1b7f0ada86f671c036ba152b4aeb7d1f87cf27"
   standards_total: 505
@@ -69,7 +69,7 @@ deren CI-Gates; Nachweis via Implementierungs-Matrix).
 ### Core Components
 - `registry/` — SSOT (standards.yaml, versions.yaml, dependencies.yaml, findings.yaml, families/ = Familien-SSOT, standards/ = generierte Per-Standard-Records)
 - `standards/` — 503 Standard-Dateien in 75 Familien
-- `profiles/` — 30 verbindliche Standards-Profile je Repository (Compliance-Vertrag, ATC-STD-LIB-001 §8) + `docs/architecture/` — Zielarchitektur
+- `profiles/` — 31 verbindliche Standards-Profile je Repository (Compliance-Vertrag, ATC-STD-LIB-001 §8) + `docs/architecture/` — Zielarchitektur
 - `schemas/` — naming-conventions.schema.json, milestone.schema.json, etc.
 - `tools/` — Validators, Auditors, Generators
 - `governance/` (constitution/, authority/, decision-rights/, repository-governance/), `approval/`, `change-requests/` — Verfassung, Freigaben, SCR-System
@@ -180,7 +180,7 @@ Implementierungs-Pivot (kein Standard ohne Implementierungsstatus).
 ├── legal/           # Kanonische Anbieter-/Impressumsquelle (ATC-STD-LEGAL-002 §10–11, SCR-0117)
 ├── licenses/        # Lizenz-Texte
 ├── licensing/       # ATC-LICENSE-Standards (Code/Marke/Assets/Doku)
-├── profiles/       # 30 Standards-Profile je Repository (Compliance-Vertrag, ATC-STD-LIB-001 §8)
+├── profiles/       # 31 Standards-Profile je Repository (Compliance-Vertrag, ATC-STD-LIB-001 §8)
 ├── protocols/       # Prozessprotokolle
 ├── references/      # Normative Referenzen
 ├── registry/        # SSOT: standards.yaml, Matrix, Lock, Schemata-Reg

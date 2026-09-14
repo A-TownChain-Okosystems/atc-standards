@@ -6,8 +6,9 @@ Standard-Datei. Registry ist SSOT (ATC-STD-003): dieses Tool PROJIZIERT nur —
 es sammelt nichts selbst. Manuelle Aenderungen sind verboten und werden von
 Pruefregel R13 (Cross-Registry-Test) als Drift abgelehnt.
 """
+
 import os
-import sys
+
 import yaml
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -24,7 +25,10 @@ def main():
     except FileNotFoundError:
         deps = {}
     try:
-        impl = {e.get("id"): e for e in yaml.safe_load(open(IMPL, encoding="utf-8")).get("standards", [])}
+        impl = {
+            e.get("id"): e
+            for e in yaml.safe_load(open(IMPL, encoding="utf-8")).get("standards", [])
+        }
     except FileNotFoundError:
         impl = {}
     n = 0
@@ -43,14 +47,22 @@ def main():
             "owner": s.get("owner"),
             "normative": bool(s.get("normative", False)),
             "source_file": f,
-            "dependencies": sorted((deps.get(sid) or {}).get("depends", []) if isinstance(deps.get(sid), dict) else (deps.get(sid) or [])),
-            "implementation": (impl.get(sid) or {}).get("implementation", {"status": "specification_only"}),
+            "dependencies": sorted(
+                (deps.get(sid) or {}).get("depends", [])
+                if isinstance(deps.get(sid), dict)
+                else (deps.get(sid) or [])
+            ),
+            "implementation": (impl.get(sid) or {}).get(
+                "implementation", {"status": "specification_only"}
+            ),
             "conformance": {"required": bool(s.get("normative", False))},
         }
         out = os.path.join(ROOT, os.path.dirname(f), sid + ".metadata.yaml")
         with open(out, "w", encoding="utf-8") as fh:
             fh.write("# " + STAMP + "\n")
-            fh.write(yaml.safe_dump(data, sort_keys=True, allow_unicode=True, default_flow_style=False))
+            fh.write(
+                yaml.safe_dump(data, sort_keys=True, allow_unicode=True, default_flow_style=False)
+            )
         n += 1
     print(f"OK gen_metadata: {n} Metadaten-Dateien aus Registry projiziert")
 

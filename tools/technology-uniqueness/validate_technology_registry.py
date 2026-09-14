@@ -13,14 +13,24 @@ TUD-6: DIFFERENTIATED erfordert Implementierungs-Evidence oder R-Skelett-Note
 
 Exit: 0 = PASS, 1 = FAIL. Teil von validate_all.py (CI-gebunden).
 """
-import sys, datetime, pathlib, yaml
+
+import datetime
+import pathlib
+import sys
+
+import yaml
 
 REGISTRY = pathlib.Path(__file__).resolve().parents[2] / "registry" / "technology-registry.yaml"
 VALID_CLASSES = {"UNIQUE", "NOVEL", "DIFFERENTIATED", "PENDING-EVIDENCE"}
 VALID_TIERS = {"S", "A"}
-EVIDENCE_KEYS = ["prior_art_analysis", "implementation_evidence",
-                 "benchmark_test_evidence", "security_review",
-                 "patent_ip_assessment"]
+EVIDENCE_KEYS = [
+    "prior_art_analysis",
+    "implementation_evidence",
+    "benchmark_test_evidence",
+    "security_review",
+    "patent_ip_assessment",
+]
+
 
 def main():
     fails = []
@@ -54,7 +64,9 @@ def main():
         # TUD-4
         rd = e.get("review_date", "")
         if rd and rd < today:
-            fails.append(f"TUD-4 {eid}: review_date {rd} abgelaufen -> PENDING-EVIDENCE (Fail-Closed)")
+            fails.append(
+                f"TUD-4 {eid}: review_date {rd} abgelaufen -> PENDING-EVIDENCE (Fail-Closed)"
+            )
         # TUD-6
         if cls == "DIFFERENTIATED":
             impl = str(ev.get("implementation_evidence", ""))
@@ -62,12 +74,17 @@ def main():
                 fails.append(f"TUD-6 {eid}: DIFFERENTIATED ohne Implementierungs-Evidence")
 
     # TUD-5 (optional, nur mit Token)
-    import os, json, urllib.request
+    import json
+    import os
+    import urllib.request
+
     token = os.environ.get("GITHUB_ACCESS_TOKEN")
     if token:
         org = "A-TownChain-Okosystems"
-        req = urllib.request.Request(f"https://api.github.com/orgs/{org}/repos?per_page=100",
-            headers={"Authorization": f"token {token}"})
+        req = urllib.request.Request(
+            f"https://api.github.com/orgs/{org}/repos?per_page=100",
+            headers={"Authorization": f"token {token}"},
+        )
         org_repos = {r["name"] for r in json.loads(urllib.request.urlopen(req).read())}
         for e in entries:
             repos = e.get("repo", [])
@@ -77,12 +94,14 @@ def main():
                     fails.append(f"TUD-5 {e['id']}: Repo '{r}' nicht im Org-Scope")
 
     if fails:
-        for f in fails: print(f"FAIL {f}")
+        for f in fails:
+            print(f"FAIL {f}")
         print(f"RESULT: FAIL ({len(fails)} Findings)")
         sys.exit(1)
     print(f"Technology Registry: {len(entries)} Eintraege — TUD-1..TUD-6 PASS")
     print("RESULT: ALL COMPLIANT")
     sys.exit(0)
+
 
 if __name__ == "__main__":
     main()

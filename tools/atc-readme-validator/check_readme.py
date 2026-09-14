@@ -20,21 +20,48 @@ Gates:
   README-12  Governance + Maintainer definiert
   README-13  README entspricht Repository-Zustand (Struktur-Abgleich)
 """
+
 import argparse
 import os
 import re
 import sys
 
-STATUS_ENUM = {"planning", "prototype", "development", "alpha", "beta",
-               "release-candidate", "stable", "deprecated", "archived"}
+STATUS_ENUM = {
+    "planning",
+    "prototype",
+    "development",
+    "alpha",
+    "beta",
+    "release-candidate",
+    "stable",
+    "deprecated",
+    "archived",
+}
 
 H2 = "^##+\\s*(%s)\\b"
-REQUIRED_SECTIONS = ["Overview", "Purpose", "Status", "Architecture",
-                     "Features", "Repository Structure", "Requirements",
-                     "Installation", "Configuration", "Usage", "Development",
-                     "Testing", "Security", "Documentation", "Governance",
-                     "Standards & Compliance", "Roadmap", "Contributing",
-                     "License", "Maintainers", "Repository Metadata"]
+REQUIRED_SECTIONS = [
+    "Overview",
+    "Purpose",
+    "Status",
+    "Architecture",
+    "Features",
+    "Repository Structure",
+    "Requirements",
+    "Installation",
+    "Configuration",
+    "Usage",
+    "Development",
+    "Testing",
+    "Security",
+    "Documentation",
+    "Governance",
+    "Standards & Compliance",
+    "Roadmap",
+    "Contributing",
+    "License",
+    "Maintainers",
+    "Repository Metadata",
+]
 
 
 def gate_01(text):
@@ -52,8 +79,9 @@ def gate_03(text):
     ok = bool(re.search(H2 % "Status", text, re.M | re.I))
     found = re.findall(r"Status:\*\*\s*`?([a-z\-]+)`?", text)
     bad = [s for s in found if s.lower() not in STATUS_ENUM]
-    return ok and not bad, ("Status-Enum ok" if not bad else
-                            "Status nicht im Enum: " + ", ".join(bad))
+    return ok and not bad, (
+        "Status-Enum ok" if not bad else "Status nicht im Enum: " + ", ".join(bad)
+    )
 
 
 def gate_04(text):
@@ -68,8 +96,14 @@ def gate_05(text):
 
 def gate_06(text):
     ok = bool(re.search(H2 % "Installation", text, re.M | re.I))
-    ok = ok and bool(re.search(r"(git clone|cargo build|npm install|pip install"
-                               r"|docker|make\b)", text, re.I))
+    ok = ok and bool(
+        re.search(
+            r"(git clone|cargo build|npm install|pip install"
+            r"|docker|make\b)",
+            text,
+            re.I,
+        )
+    )
     return ok, "Installation mit reproduzierbarem Setup"
 
 
@@ -79,16 +113,28 @@ def gate_07(text):
 
 def gate_08(text):
     ok = bool(re.search(H2 % "Testing", text, re.M | re.I))
-    ok = ok and bool(re.search(r"(PASS|cargo test|pytest|npm test|jest|"
-                               r"go test|rustc --test)", text, re.I))
+    ok = ok and bool(
+        re.search(
+            r"(PASS|cargo test|pytest|npm test|jest|"
+            r"go test|rustc --test)",
+            text,
+            re.I,
+        )
+    )
     return ok, "Testing mit Kommando + erwartetem Ergebnis"
 
 
 def gate_09(text):
     if not re.search(H2 % "Security", text, re.M | re.I):
         return False, "## Security-Sektion fehlt"
-    ok = bool(re.search(r"(not be disclosed publicly|nicht.*(ffentlich|public)"
-                        r"|official ATC security reporting|ATC-STD-203)", text, re.I))
+    ok = bool(
+        re.search(
+            r"(not be disclosed publicly|nicht.*(ffentlich|public)"
+            r"|official ATC security reporting|ATC-STD-203)",
+            text,
+            re.I,
+        )
+    )
     return ok, "Security-Reporting-Hinweis"
 
 
@@ -100,8 +146,13 @@ def gate_10(text):
 
 def gate_11(text):
     ok = bool(re.search(H2 % "Roadmap", text, re.M | re.I))
-    ok = ok and bool(re.search(r"ROADMAP\.md|GitHub (Issues|Projects)|"
-                               r"Development Management|Notion", text))
+    ok = ok and bool(
+        re.search(
+            r"ROADMAP\.md|GitHub (Issues|Projects)|"
+            r"Development Management|Notion",
+            text,
+        )
+    )
     return ok, "Roadmap kanonisch verlinkt"
 
 
@@ -119,13 +170,18 @@ def gate_13(text, repo):
     if not m:
         return False, "Repository Structure-Block fehlt"
     tree = m.group(1)
-    listed = set(re.findall(r"^\s*[├└][─]+\s+([A-Za-z0-9_.\-]+)",
-                            tree, re.M))
+    listed = set(re.findall(r"^\s*[├└][─]+\s+([A-Za-z0-9_.\-]+)", tree, re.M))
     listed = {x.rstrip("/") for x in listed if x not in ("...", "…")}
-    real = {x for x in os.listdir(repo)
-            if not x.startswith(".") and os.path.isdir(os.path.join(repo, x))}
-    fehlt = sorted(x for x in real if x not in listed and x not in
-                   ("node_modules", "target", "venv", "__pycache__"))
+    real = {
+        x
+        for x in os.listdir(repo)
+        if not x.startswith(".") and os.path.isdir(os.path.join(repo, x))
+    }
+    fehlt = sorted(
+        x
+        for x in real
+        if x not in listed and x not in ("node_modules", "target", "venv", "__pycache__")
+    )
     if fehlt:
         return False, "Im README fehlende Verzeichnisse: " + ", ".join(fehlt[:5])
     return True, "Struktur synchron mit Repository"
@@ -137,25 +193,44 @@ def main():
     args = ap.parse_args()
     rpath = os.path.join(args.repo, "README.md")
     if not os.path.exists(rpath):
-        print("README-Validator: KEINE README.md in %s — NON-COMPLIANT "
-              "(ATC-STD-README-001)" % args.repo)
+        print(
+            "README-Validator: KEINE README.md in %s — NON-COMPLIANT "
+            "(ATC-STD-README-001)" % args.repo
+        )
         return 1
     text = open(rpath, encoding="utf-8").read()
-    gates = [("README-01", lambda: gate_01(text)), ("README-02", lambda: gate_02(text)),
-             ("README-03", lambda: gate_03(text)), ("README-04", lambda: gate_04(text)),
-             ("README-05", lambda: gate_05(text)), ("README-06", lambda: gate_06(text)),
-             ("README-07", lambda: gate_07(text)), ("README-08", lambda: gate_08(text)),
-             ("README-09", lambda: gate_09(text)), ("README-10", lambda: gate_10(text)),
-             ("README-11", lambda: gate_11(text)), ("README-12", lambda: gate_12(text)),
-             ("README-13", lambda: gate_13(text, args.repo))]
+    gates = [
+        ("README-01", lambda: gate_01(text)),
+        ("README-02", lambda: gate_02(text)),
+        ("README-03", lambda: gate_03(text)),
+        ("README-04", lambda: gate_04(text)),
+        ("README-05", lambda: gate_05(text)),
+        ("README-06", lambda: gate_06(text)),
+        ("README-07", lambda: gate_07(text)),
+        ("README-08", lambda: gate_08(text)),
+        ("README-09", lambda: gate_09(text)),
+        ("README-10", lambda: gate_10(text)),
+        ("README-11", lambda: gate_11(text)),
+        ("README-12", lambda: gate_12(text)),
+        ("README-13", lambda: gate_13(text, args.repo)),
+    ]
     fails = 0
-    print("== README-Compliance (ATC-STD-README-001 v1.0.0) — %s ==" % os.path.basename(os.path.abspath(args.repo)))
+    print(
+        "== README-Compliance (ATC-STD-README-001 v1.0.0) — %s =="
+        % os.path.basename(os.path.abspath(args.repo))
+    )
     for gid, fn in gates:
         ok, msg = fn()
         print("  [%s] %s: %s" % ("PASS" if ok else "FAIL", gid, msg))
         fails += 0 if ok else 1
-    print("RESULT: " + ("CONFORM — alle 13 Gates bestanden" if not fails else
-                       "NON-COMPLIANT (%d Gate(s) FAIL)" % fails))
+    print(
+        "RESULT: "
+        + (
+            "CONFORM — alle 13 Gates bestanden"
+            if not fails
+            else "NON-COMPLIANT (%d Gate(s) FAIL)" % fails
+        )
+    )
     return 1 if fails else 0
 
 

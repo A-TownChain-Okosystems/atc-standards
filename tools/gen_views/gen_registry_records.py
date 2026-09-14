@@ -12,13 +12,26 @@ Datenmodell je Record (family_id != standard_id, ATC-STD-002 §3):
 Praefix-Familien (ERR-, ZKP-, ...) und Legacy-Serien: family_id: PREFIX/LEGACY
 (grandfathered, ATC-STD-002 §3). Generierte Dateien: NICHT manuell pflegen.
 """
-import yaml, os, sys, re
+
+import os
+import re
+
+import yaml
 
 BASE = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-FAMS = {0: "GOVERNANCE / META", 1: "ARCHITECTURE", 2: "REPOSITORY / GIT",
-        3: "SOFTWARE ENGINEERING", 4: "SECURITY", 5: "DATA / STORAGE",
-        6: "BLOCKCHAIN / PROTOCOL", 7: "AI / AGENTS", 8: "OS / RUNTIME",
-        9: "INTEGRATION / INTEROPERABILITY"}
+FAMS = {
+    0: "GOVERNANCE / META",
+    1: "ARCHITECTURE",
+    2: "REPOSITORY / GIT",
+    3: "SOFTWARE ENGINEERING",
+    4: "SECURITY",
+    5: "DATA / STORAGE",
+    6: "BLOCKCHAIN / PROTOCOL",
+    7: "AI / AGENTS",
+    8: "OS / RUNTIME",
+    9: "INTEGRATION / INTEROPERABILITY",
+}
+
 
 def main():
     src = os.path.join(BASE, "registry", "standards.yaml")
@@ -50,11 +63,14 @@ def main():
         }
         fn = os.path.join(out_dir, f"{sid}.yaml")
         with open(fn, "w", encoding="utf-8") as f:
-            f.write("# GENERIERT aus registry/standards.yaml (Allokations-SSOT) — nicht manuell pflegen\n")
+            f.write(
+                "# GENERIERT aus registry/standards.yaml (Allokations-SSOT) — nicht manuell pflegen\n"
+            )
             f.write("# ATC-STD-002 §3/§6: family_id != standard_id\n")
             yaml.safe_dump(rec, f, allow_unicode=True, sort_keys=True, default_flow_style=False)
         n += 1
     print(f"✓ {n} Standard-Records generiert -> registry/standards/")
+
 
 if __name__ == "__main__":
     main()

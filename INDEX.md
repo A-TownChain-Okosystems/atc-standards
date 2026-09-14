@@ -63,19 +63,19 @@ eines Standards liegt ausschließlich in seiner Standarddatei; die Registry
 | registry/technology-registry.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
 | registry/versions.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
 
-Kernregister: **standards.yaml** (Bestand, 503 Standards) · **versions.yaml**
-(Versionierung je Standard) · **framework.yaml** (Katalog: 51 Familien,
-477 Slots) · **categories.yaml**
+Kernregister: **standards.yaml** (Bestand, 505 Standards) · **versions.yaml**
+(Versionierung je Standard) · **framework.yaml** (Katalog: 75 Familien,
+632 Slots) · **categories.yaml**
 (Kategorien) · **taxonomy.yaml** (Domain/Familie/Kategorie) · **protocol-registry.yaml**
 (26 Protokollfamilien, Status {'draft': 10, 'planned': 16}) ·
 **findings.yaml** (Findings: 70 OPEN / 70 RESOLVED von 140).
 
-## 3. Standardfamilien (Katalog, 51 Familien)
+## 3. Standardfamilien (Katalog, 75 Familien)
 
 | FAM | Familie | Slots | BELEGT | VERWEIST |
 |---|---|---|---|---|
 | FAM-01 | Enterprise & Governance | 20 | 12 | 8 |
-| FAM-02 | Standards-Governance | 13 | 2 | 11 |
+| FAM-02 | Standards-Governance | 14 | 3 | 11 |
 | FAM-03 | Repository Standards | 15 | 7 | 8 |
 | FAM-04 | Dokumentationsstandards | 16 | 8 | 8 |
 | FAM-05 | Software Development | 16 | 12 | 4 |
@@ -125,12 +125,36 @@ Kernregister: **standards.yaml** (Bestand, 503 Standards) · **versions.yaml**
 | FAM-49 | Repository Content Discovery (REPO-DISCOVERY) | 10 | 10 | 0 |
 | FAM-50 | CI/CD-Standards (CICD) | 1 | 1 | 0 |
 | FAM-51 | Technology Uniqueness & Differentiation (TUD) | 1 | 1 | 0 |
+| FAM-52 | Maintenance (MAINT) | 25 | 25 | 0 |
+| FAM-53 | Bug & Fehler-Reports (BUG) | 5 | 5 | 0 |
+| FAM-54 | Zero-Knowledge Proofs (ZKP) | 10 | 10 | 0 |
+| FAM-55 | AI-Assisted Development (AI-DEV) | 12 | 12 | 0 |
+| FAM-56 | AI-Agent Standards (AAS) | 25 | 25 | 0 |
+| FAM-57 | Enterprise Standards (ATC-ENT) | 23 | 23 | 0 |
+| FAM-58 | README Governance (README) | 1 | 1 | 0 |
+| FAM-59 | Markdown & Metadata (MD) | 1 | 1 | 0 |
+| FAM-60 | Smart Contracts (SC) | 20 | 20 | 0 |
+| FAM-61 | Network Standards (NET) | 8 | 8 | 0 |
+| FAM-62 | Description Standards (DESC) | 1 | 1 | 0 |
+| FAM-63 | Versioning Standards (VERSION) | 1 | 1 | 0 |
+| FAM-64 | Audit Standards (AUDIT) | 1 | 1 | 0 |
+| FAM-65 | AI Decision Records (AI-DECISION) | 1 | 1 | 0 |
+| FAM-66 | Update Standards (UPDATE) | 1 | 1 | 0 |
+| FAM-67 | Framework Standards (FRAMEWORK) | 1 | 1 | 0 |
+| FAM-68 | Milestone Standards (MILESTONE) | 1 | 1 | 0 |
+| FAM-69 | Compatibility Standards (COMPAT) | 1 | 1 | 0 |
+| FAM-70 | Improvement Standards (IMPROVEMENT) | 1 | 1 | 0 |
+| FAM-71 | AI Governance (ATC-AI-GOV) | 11 | 11 | 0 |
+| FAM-72 | Engineering Standards (ENG) | 1 | 1 | 0 |
+| FAM-73 | Legal Standards (LEGAL) | 1 | 1 | 0 |
+| FAM-74 | Governance Constitution (GOV) | 1 | 1 | 0 |
+| FAM-75 | System Architecture (ARCH) | 1 | 1 | 0 |
 
-Statusverteilung der 503 Registry-Standards: {'approved': 465, 'draft': 38}.
-Alle 503 sind APPROVED und normativ (§30-eingefroren); Details je Standard
+Statusverteilung der 505 Registry-Standards: {'approved': 465, 'draft': 40}.
+Alle 505 sind APPROVED und normativ (§30-eingefroren); Details je Standard
 in registry/standards.yaml und registry/versions.yaml.
 
-## 4. Master-Registry-Tabelle (503 Standards)
+## 4. Master-Registry-Tabelle (505 Standards)
 
 Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 
@@ -162,6 +186,7 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 | ATC-AAS-024 | Agent-to-Agent Protocol Standard (P1) | aas | 1.0.0 | approved | standards/aas/ATC-AAS-024.md |
 | ATC-AAS-025 | Agent Repository Manifest Standard (P1) | aas | 1.0.0 | approved | standards/aas/ATC-AAS-025.md |
 | ATC-AI-GOV-001 | ATC Agent Governance Framework v1.0 — Produktionsarchitektur (18-stufige Governance-Kette, 4 Kontrollprinzipien: Fail Closed / Evidence First / Persistent Findings / No Self-Certification, Severity-Modell mit Repository-Status-Berechnung, Zuständigkeits-Trennung, 7-Phasen-Roadmap) | ai-gov | 1.0.0 | draft | standards/ai-gov/ATC-AI-GOV-001.md |
+| ATC-AI-GOV-ACCESS-001 | ATC Agent Governance — AI Access Role Model (Rollenprofile ATC-AUDITOR/ATC-DEVELOPER/ATC-CI, Omni-Verbot, Stufe-3-Reserve, Token-Hygiene, Access Review) | ai-gov | 1.0.0 | draft | standards/ai-gov/ATC-AI-GOV-ACCESS-001.md |
 | ATC-AI-GOV-AGENTS-001 | ATC Agent Governance — Organisationsweite Arbeitsregeln (Discovery, Hierarchie, Registry-Binding, Session-Mandat, Readiness) | ai-gov | 1.0.0 | draft | standards/ai-gov/ATC-AI-GOV-AGENTS-001.md |
 | ATC-AI-GOV-AUDIT-001 | ATC Agent Governance — Auditverfahren (AGOV-FULL/DELTA/GATE, Snapshot, Readiness, Post-Change-Audit) | ai-gov | 1.0.0 | draft | standards/ai-gov/ATC-AI-GOV-AUDIT-001.md |
 | ATC-AI-GOV-CAPABILITY-001 | ATC Agent Governance — Capability & Authorization Model (explizite Berechtigungen, Autorisierungskette, Owner-Gates fuer P0-Capabilities, Entzug/Suspendierung) | ai-gov | 1.0.0 | draft | standards/ai-gov/ATC-AI-GOV-CAPABILITY-001.md |
@@ -584,6 +609,7 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 | ATC-STD-NET-006 | Network Upgrade Standard | net | 1.0.0 | approved | standards/net/ATC-STD-NET-006.md |
 | ATC-STD-NET-007 | Network Security Standard | net | 1.0.0 | approved | standards/net/ATC-STD-NET-007.md |
 | ATC-STD-NET-008 | Network Recovery Standard | net | 1.0.0 | approved | standards/net/ATC-STD-NET-008.md |
+| ATC-STD-NET-009 | Network Release Maturity & Versioning Standard (NETWORK x MATURITY, Reifestufen-Matrix Alpha/Beta/Stable, 6 Release Gates GATE-DEV/TEST/MAINNET, Versionslogik 0.x-Prerelease/1.0.0+, Release State SSOT registry/networks.yaml) | net | 1.0.0 | draft | standards/net/ATC-STD-NET-009.md |
 | ATC-STD-PROTOCOL-001 | ATC Protocol Standards — Dachstandard oberhalb der Einzelprotokolle: einheitliche Regeln für Identität, Versionierung, Nachrichten, Sicherheit, Fehler, Kompatibilität, Governance und Auditing aller ATC-Protokolle (ATC-PROTO-*) | protocol | 1.0.0 | approved | standards/protocol/ATC-STD-PROTOCOL-001.md |
 | ATC-STD-PROTOCOL-002 | ATC Protocol Conformance- & Interoperabilitäts-Test-Standard — CONF-Pläne je Familie, 10 Pflicht-Testkategorien, Stufen CONF-BRONZE/SILBER/GOLD, Conformance-Registry, active-Gate-Verschärfung | protocol | 1.0.0 | approved | standards/protocol/ATC-STD-PROTOCOL-002.md |
 | ATC-STD-PROTOCOL-003 | ATC Protocol Threat-Model- & Security-Audit-Standard — 12 Pflicht-Angriffe je Familie, Ehrlichkeitsregel, Security-Registry, Audit-Kadenz, Crypto-HAL-Disziplin | protocol | 1.0.0 | approved | standards/protocol/ATC-STD-PROTOCOL-003.md |
@@ -642,7 +668,7 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 
 ## 5. Statusmodell (Registry-Lifecycle)
 
-Registry-Statusverteilung (Ist): {'approved': 465, 'draft': 38}. Lifecycle der Standards-Entwicklung
+Registry-Statusverteilung (Ist): {'approved': 465, 'draft': 40}. Lifecycle der Standards-Entwicklung
 gemäß ATC-STD-STDDEV-001 / ATC-STD-TAXONOMY-001: Entwurf (Owner-Entwurf/SCR) →
 §9-Freigabe (Owner, Human-Gate) → APPROVED (normativ, §30-eingefroren) → ggf.
 DEPRECATED/RETIRED via Change-Control (ATC-STD-CHANGE-001). Protokolle folgen
@@ -685,7 +711,7 @@ die Kennung dieses generierten Dokuments.
 
 atc-standards/ · INDEX.md (generiert) · README.md · CHANGELOG.md · STATUS.md ·
 LICENSE (Apache-2.0) · AGENT_MANIFEST.md · AGENTS.md · governance/ (ATC-STD-000) ·
-standards/<kategorie>/ (Fachstandards, 503-Bestand) · registry/ (29
+standards/<kategorie>/ (Fachstandards, 505-Bestand) · registry/ (29
 SSOT-Dateien) · licenses/ (ATC-LICENSE-System) · schemas/ · tools/ (Generatoren +
 atc-std-validator) · approval/ (§9-Freigabe-Archiv) · change-requests/ (SCR-0001…) ·
 docs/ (Audits & Analysen) · templates/ · .github/workflows (Governance-CI, 2) +
