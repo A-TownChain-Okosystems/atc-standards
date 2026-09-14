@@ -6,6 +6,7 @@ family_id: LEGACY
 file: standards/ai-gov/ATC-AI-GOV-AUDIT-001.md
 mandate: Owner-Entwurf 09.09.; SSOT ai/audit.yaml + SNAPSHOT/READINESS-Reports; 4
   REQ-AGOV-AUD; SCR-0061
+registry_version: 1
 standard_id: ATC-AI-GOV-AUDIT-001
 status: draft
 title: ATC Agent Governance — Auditverfahren (AGOV-FULL/DELTA/GATE, Snapshot, Readiness,

@@ -6,6 +6,7 @@ family_id: '000'
 file: standards/enterprise/ATC-STD-016.md
 mandate: Owner-Direktive 10.09. (ATC-STD-017-Etablierung, Governance-Kette 000->016->017);
   REQ-STD-001..005 (hausweiter Per-Standard-Namespace); SCR-0087
+registry_version: 1
 standard_id: ATC-STD-016
 status: approved
 title: Repository Artifact & File Inventory Standard (generiertes Inventar-SSOT, Manifest-Schema,

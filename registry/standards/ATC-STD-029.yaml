@@ -6,6 +6,7 @@ family_id: '000'
 file: standards/enterprise/ATC-STD-029.md
 mandate: Owner-Entwurf 11.09. (SCR-0094 Continuous Assurance; Owner-Referenz 027 —
   Slot belegt (Standards Deprecation), §37 -> 029)
+registry_version: 1
 standard_id: ATC-STD-029
 status: approved
 title: Threat Modeling Standard (8-Glied-Analysekette Asset..Residual Risk, Pflicht

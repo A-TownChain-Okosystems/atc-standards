@@ -10,6 +10,7 @@ mandate: Owner-Entwurf 07.09. 23:31 — 19 REQ-MS, ATC-MILESTONE-ACCEPTANCE-GATE
   (UPD-G04/COMPAT-001), Risikomodell, KI-Agenten-Regeln, 18-Punkte-DoD, maschinenlesbar
   (milestone.schema.json + milestones.yaml + Validator S-20); AD-027 M1-M8 als ATC-M-001..008
   registriert; SCR-0018; §9-Freigabe 07.09. 23:38, APPROVED, normativ, §30-eingefroren
+registry_version: 1
 standard_id: ATC-STD-MILESTONE-001
 status: approved
 title: 'ATC Milestone Standard — Verbindliche Meilenstein-Governance: Zustandsnachweis,

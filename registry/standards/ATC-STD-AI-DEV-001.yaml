@@ -5,6 +5,7 @@ family: AI
 family_id: PREFIX
 file: standards/ai/ATC-STD-AI-DEV-001.md
 mandate: Owner-Entwurf 07.09. (AI Development Governance, Familien-Dach AI-DEV-001..012)
+registry_version: 1
 standard_id: ATC-STD-AI-DEV-001
 status: approved
 title: Software Development AI Agent Identity & Workflow Standard

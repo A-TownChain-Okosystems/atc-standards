@@ -11,6 +11,7 @@ mandate: Owner-Richtung aus REPO-AUDIT-001 §28 — 12 REQ-RB, CHECK-Katalog (re
   Health-Report-Format mit AUD-Record-Kopplung, Human-Gate für Agenten-Audits, S-22-Integritätsprüfung;
   REPO-AUDIT-003 (Auditor-Agent) GEPLANT; SCR-0021; §9-Freigabe 08.09. 00:05, APPROVED,
   normativ, §30-eingefroren
+registry_version: 1
 standard_id: ATC-STD-REPO-AUDIT-002
 status: approved
 title: ATC Repository Audit Checklisten- & Health-Score-Standard — Konkrete automatisierbare

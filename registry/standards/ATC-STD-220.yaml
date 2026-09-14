@@ -6,6 +6,7 @@ family_id: '200'
 file: standards/repository/ATC-STD-220.md
 mandate: Owner-Entwurf Repository File Admission 11.09. (SCR-0099; Subfamilie 220-229
   in Familie 200 Repository/Git)
+registry_version: 1
 standard_id: ATC-STD-220
 status: approved
 title: 'Repository File Admission & Placement Standard (Master Subfamilie 220-229:

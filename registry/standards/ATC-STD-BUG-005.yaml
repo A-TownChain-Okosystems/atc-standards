@@ -7,6 +7,7 @@ file: standards/bug/ATC-STD-BUG-005.md
 mandate: Owner-Entwurf 07.09. 22:06 als ERR-001 (SCR-0011), per Owner-Entscheid in
   Bug-Familie integriert als BUG-005 (SCR-0012) — 18 Fehlerklassen, 24 REQ-STD-141..164,
   6 COM-BUG-Gates; §9-Freigabe 07.09. 22:25 Sammelfreigabe, APPROVED
+registry_version: 1
 standard_id: ATC-STD-BUG-005
 status: approved
 title: 'Fehleranalyse- und Root-Cause-Analysis-Standard — Analyse- und QMS-Schicht

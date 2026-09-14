@@ -52,7 +52,7 @@ def main():
     files = []
     for dp, _, fs in os.walk(std_dir):
         for f in fs:
-            if f.endswith(".md"):
+            if f.endswith(".md") and f != "INDEX.md":  # INDEX.md = generierter Familien-Navigationsindex (MAINT-000 §25), kein Standard
                 files.append((os.path.join(dp, f), os.path.splitext(f)[0]))
     file_ids = {fid for _, fid in files}
     no_file, masters = [], []

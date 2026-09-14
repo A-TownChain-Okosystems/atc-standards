@@ -48,7 +48,7 @@ Repository: Dependency Scanner · Vulnerability Scanner · SBOM Generator · Lic
 1. Keine autonome M2/M3-Durchfuehrung: Eskalation an Humans (Owner/Governance), immer.
 2. Automation folgt ATC-STD-AI-DEV-001..012 (Agent-Governance) und darf Gates nicht umgehen.
 
-## §4 Systemintegritaet (Verkettung, MAINT-000 §26 Relationship to GSEPF)
+## §4 Systemintegritaet (Verkettung, MAINT-000 §23 GSEPF Integration)
 
 ```
 ATC-STD-MAINT-* (normativ) → GSEPF (kontrollierter Prozess) → Maintenance Engine (CI/CD)

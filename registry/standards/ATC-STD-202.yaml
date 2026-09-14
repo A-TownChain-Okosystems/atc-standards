@@ -5,6 +5,7 @@ family: REPOSITORY / GIT
 family_id: '200'
 file: standards/repository/ATC-STD-202.md
 mandate: ''
+registry_version: 1
 standard_id: ATC-STD-202
 status: approved
 title: Repository Naming & Classification Standard

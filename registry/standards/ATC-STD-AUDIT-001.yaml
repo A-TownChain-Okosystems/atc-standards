@@ -7,6 +7,7 @@ file: standards/audit/ATC-STD-AUDIT-001.md
 mandate: Owner-Entwurf 07.09. 22:15 — 30 REQ-AUDIT, 6 COM-AUDIT-Gates, Completeness
   Score A-F, AUD-C01..C20, AUD-G01..G08, AUD-YYYY-NNNN; harmonisiert mit BUG-001..005,
   VERSION-001, SC-003..005; SCR-0013; §9-Freigabe 07.09. 22:25 Sammelfreigabe, APPROVED
+registry_version: 1
 standard_id: ATC-STD-AUDIT-001
 status: approved
 title: 'ATC Completeness & Audit Standard — Vollständigkeitsprüfung & Audit: Kontrollschicht

@@ -6,6 +6,7 @@ family_id: '000'
 file: standards/enterprise/ATC-STD-036.md
 mandate: Owner-Entwurf 11.09. (SCR-0095 Automated Assurance; Owner-Referenz 034 —
   §37 -> 036)
+registry_version: 1
 standard_id: ATC-STD-036
 status: approved
 title: Emergency Security Change Standard (7-Schritt-Notfallpfad mit Security Authorization,

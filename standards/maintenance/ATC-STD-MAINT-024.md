@@ -37,7 +37,7 @@ Cross-Repo-/Cross-Schicht-Aenderungen: Registry- und Standards-Syncs, Plattform-
 1. Cross-Ecosystem-Aenderungen laufen unter EINER Change-Nummer ueber alle betroffenen Repos
    (konsolidierter Evidence-Record, MAINT-019).
 2. Betroffenheit wird Registry-basiert bestimmt (Abhaengigkeits-/Consumer-Pruefung), nicht geraten.
-3. Kompatibilitaet wird an allen Schichtgrenzen geprueft (MAINT-000 §27 Relationship to KAI-OS; Pruefkette MAINT-009 als
+3. Kompatibilitaet wird an allen Schichtgrenzen geprueft (MAINT-000 §24 Ecosystem Integration; Pruefkette MAINT-009 als
    Muster).
 4. Reihenfolge: Kernel-nahe Schichten zuerst, dann aufwaerts (Hardware → ATCLang → Chain → VM →
    OS → AI), sofern die Aenderung nicht ausdruecklich anders erfordert.

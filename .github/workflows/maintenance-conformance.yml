@@ -1,13 +1,13 @@
-# Maintenance Conformance — ATC-STD-MAINT-000 §20 (SCR-0120 v4)
+# Maintenance Conformance — ATC-STD-MAINT-000 §20.1 (SCR-0120 v7)
 # Machine-readable Conformance-Gate: prueft Schemas, Registry-Projektion,
 # Conformance-SSOT (Idempotenz) und die MAINTENANCE-READY-Checkliste.
-name: Maintenance Conformance (MAINT-000 §20)
+name: Maintenance Conformance (MAINT-000 §20.1)
 on:
   push:
     branches: [main]
-    paths: ['standards/maintenance/**', 'schemas/maintenance/**', 'registry/maintenance-conformance.yaml', 'registry/standards.yaml', '.github/workflows/maintenance-conformance.yml']
+    paths: ['standards/maintenance/**', 'schemas/maintenance/**', 'registry/maintenance-conformance.yaml', 'registry/maintenance-requirements.yaml', 'registry/standards.yaml', '.github/workflows/maintenance-conformance.yml']
   pull_request:
-    paths: ['standards/maintenance/**', 'schemas/maintenance/**', 'registry/maintenance-conformance.yaml', 'registry/standards.yaml', '.github/workflows/maintenance-conformance.yml']
+    paths: ['standards/maintenance/**', 'schemas/maintenance/**', 'registry/maintenance-conformance.yaml', 'registry/maintenance-requirements.yaml', 'registry/standards.yaml', '.github/workflows/maintenance-conformance.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -23,8 +23,8 @@ jobs:
       - name: Conformance-Pruefung
         run: |
           python tools/maintenance/gen_maintenance_conformance.py
-          git diff --exit-code -- registry/maintenance-conformance.yaml \
-            || (echo "F-MAINT-C01: maintenance-conformance.yaml nicht idempotent (Generator laufen lassen)" && exit 1)
+          git diff --exit-code -- registry/maintenance-conformance.yaml registry/maintenance-requirements.yaml standards/maintenance/INDEX.md \
+            || (echo "F-MAINT-C01: Conformance-/Requirements-Registry-/Index-Dateien nicht idempotent (Generator laufen lassen)" && exit 1)
           python tools/gen_views/gen_registry_records.py >/dev/null
           git diff --exit-code -- 'registry/standards/ATC-STD-MAINT-*.yaml' \
             || (echo "F-MAINT-C02: registry/standards/MAINT-Records nicht idempotent" && exit 1)
@@ -75,6 +75,21 @@ jobs:
           print("Repository")
           for item in ["MAINTENANCE.md-Pflicht (kritische Repos)", "dependency inventory", "security scanning", "SBOM", "tests", "rollback strategy", "compatibility strategy", "monitoring", "evidence", "lifecycle metadata"]:
               print(f"   {item:<45} (Standards: normativ definiert — MAINT-000..024)")
+          print()
+          # C6: Requirements-Registry (MAINT-000 §6) konsistent mit Conformance-SSOT
+          rr = yaml.safe_load(open("registry/maintenance-requirements.yaml", encoding="utf-8"))["maintenance_requirements"]
+          rr_ids = sorted(r["id"] for r in rr["requirements"])
+          c0 = [s for s in conf["standards"] if s["id"] == "ATC-STD-MAINT-000"][0]
+          if rr_ids != sorted(set(c0["reqs"])):
+              fails.append(f"[C6] Requirements-Registry vs MAINT-000-Tabelle: {rr_ids} vs {sorted(set(c0['reqs']))}")
+          if len(rr["requirements"]) != rr["req_count"]:
+              fails.append("[C6] req_count Drift")
+          for r in rr["requirements"]:
+              if r["verification"]["type"] not in ("evidence", "gate", "ci", "audit"):
+                  fails.append(f"[C6] {r['id']}: unbekannter verification type {r['verification']['type']}")
+              if not r["verification"]["required"]:
+                  fails.append(f"[C6] {r['id']}: verification.required leer")
+          print(f"  [C6] Requirements-Registry konsistent: {len(rr_ids)} REQ-Definitionen (statement+priority+verification je REQ)")
           print()
           print("RESULT: STANDARDS-CONFORMANCE " + ("PASS" if not fails else "FAIL"))
           for f in fails: print("  " + f)

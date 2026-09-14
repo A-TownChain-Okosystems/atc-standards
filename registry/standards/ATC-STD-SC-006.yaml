@@ -5,6 +5,7 @@ family: SC
 family_id: PREFIX
 file: standards/sc/ATC-STD-SC-006.md
 mandate: Owner-Entwurf 07.09. — Deployment Records ATC-DEP-NNNN, Verification
+registry_version: 1
 standard_id: ATC-STD-SC-006
 status: approved
 title: Smart Contract Deployment Standard

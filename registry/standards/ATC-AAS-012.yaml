@@ -5,6 +5,7 @@ family: LEGACY-SERIES
 family_id: LEGACY
 file: standards/aas/ATC-AAS-012.md
 mandate: ''
+registry_version: 1
 standard_id: ATC-AAS-012
 status: approved
 title: Agent Hallucination / Assumption Standard (P0)

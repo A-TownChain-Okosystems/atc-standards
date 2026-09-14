@@ -5,6 +5,7 @@ family: BUG
 family_id: PREFIX
 file: standards/bug/ATC-STD-BUG-002.md
 mandate: Owner-Mandat 07.09. (AD-040)
+registry_version: 1
 standard_id: ATC-STD-BUG-002
 status: approved
 title: Bug Documentation Standard

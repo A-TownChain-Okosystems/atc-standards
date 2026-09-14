@@ -6,6 +6,7 @@ family_id: LEGACY
 file: standards/ai-gov/ATC-AI-GOV-POLICY-001.md
 mandate: Owner-Entwurf 09.09.; SSOT ai/policies.yaml (AP-001..016 + ATC-POL-001..010);
   4 REQ-AGOV-POL; SCR-0061
+registry_version: 1
 standard_id: ATC-AI-GOV-POLICY-001
 status: draft
 title: ATC Agent Governance — Maschinenlesbare Policies (ATC-POL-001..010, MUST/SHOULD/MAY,

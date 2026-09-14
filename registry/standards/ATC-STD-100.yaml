@@ -6,6 +6,7 @@ family_id: '100'
 file: standards/architecture/ATC-STD-100.md
 mandate: Owner-Entwurf 11.09. (Language Architecture L0-L8, SCR-0093); v1.0.0 APPROVED
   bleibt bis §9 gueltig
+registry_version: 1
 standard_id: ATC-STD-100
 status: approved
 title: Language & Technology Stack Standard

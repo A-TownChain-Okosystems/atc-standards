@@ -9,6 +9,7 @@ mandate: 'SCR-0030 (08.09.): Grundgerüst-Standard aus Katalog-Slot der Familie 
   Elaborierung via SCR (MINOR); §9-FREIGEGEBEN 08.09. 02:15 UTC+2 — APPROVED, normativ,
   §30-eingefroren; Struktur-Elaboration v1.1.0 via SCR-0031; Slot-Fertigbau v1.2.0
   via SCR-0034'
+registry_version: 1
 standard_id: ATC-STD-082
 status: approved
 title: Code Style Standard

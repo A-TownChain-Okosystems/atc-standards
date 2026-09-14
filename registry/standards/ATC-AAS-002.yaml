@@ -5,6 +5,7 @@ family: LEGACY-SERIES
 family_id: LEGACY
 file: standards/aas/ATC-AAS-002.md
 mandate: ''
+registry_version: 1
 standard_id: ATC-AAS-002
 status: approved
 title: Agent Capability Standard (P0)

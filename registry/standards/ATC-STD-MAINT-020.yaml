@@ -5,6 +5,7 @@ family: MAINT
 family_id: PREFIX
 file: standards/maintenance/ATC-STD-MAINT-020.md
 mandate: Owner-Direktive 14.09.2026 (SCR-0120, MAINT-Familie; MAINT-021..024 RESERVED)
+registry_version: 1
 standard_id: ATC-STD-MAINT-020
 status: draft
 title: Maintenance Automation Standard (Scanner, Maintenance Engine, M0 Auto/M1 Review/M2-M3

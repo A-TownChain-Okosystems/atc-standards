@@ -5,6 +5,7 @@ family: GOVERNANCE / META
 family_id: '000'
 file: standards/governance/ATC-STD-003.md
 mandate: 'Owner-Direktive 11.09.: Governance selbst deterministisch machen; SCR-0090'
+registry_version: 1
 standard_id: ATC-STD-003
 status: approved
 title: Governance Determinism & Source-of-Truth Matrix Standard (SSOT-Matrix je Informationsklasse,

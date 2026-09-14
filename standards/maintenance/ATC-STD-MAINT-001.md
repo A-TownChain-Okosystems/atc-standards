@@ -57,7 +57,7 @@ Emergency-Maintenance-Pfad (ATC-STD-000 §32) und kann normale Governance-Zyklen
    Emergency-Governance uebersteuert normale Zyklen.
 5. Reklassifizierung ist dokumentierbar (Evidence-Record, MAINT-019).
 
-## §3 Gates je Klasse (Verweis MAINT-000 §8 Classification)
+## §3 Gates je Klasse (Verweis MAINT-000 §9 Classification)
 
 M0 → Standard Review · M1 → Operational Review · M2 → Security Review (mit Separation of
 Duties) · M3 → Emergency Governance (mit Release Authority ≠ Implementer).

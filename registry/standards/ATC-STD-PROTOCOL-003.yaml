@@ -9,6 +9,7 @@ mandate: 'SCR-0029 (08.09. 01:40): 124. Standard — 6 REQ-PTS, 12 Pflicht-Angri
   erste Instanz), Kadenz je RC/MAJOR/quartalsweise, Ed25519-Backend-Pflicht vor Mainnet-Wert-Transport;
   schließt FAM-42-Flanken — §9-FREIGEGEBEN 08.09. 01:41 UTC+2, normativ, §30-eingefroren;
   gebuendelt genehmigt FRAMEWORK-001 v1.0.7-PATCH'
+registry_version: 1
 standard_id: ATC-STD-PROTOCOL-003
 status: approved
 title: ATC Protocol Threat-Model- & Security-Audit-Standard — 12 Pflicht-Angriffe

@@ -6,6 +6,7 @@ family_id: '000'
 file: standards/enterprise/ATC-STD-033.md
 mandate: Owner-Entwurf 11.09. (SCR-0095 Automated Assurance; Owner-Referenz 031 —
   §37 -> 033)
+registry_version: 1
 standard_id: ATC-STD-033
 status: approved
 title: Vulnerability Intelligence Standard (10 Quellklassen CVE..Bug-Bounty, 5-Stufen-Betroffenheitskette

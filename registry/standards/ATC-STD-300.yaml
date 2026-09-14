@@ -5,6 +5,7 @@ family: SOFTWARE ENGINEERING
 family_id: '300'
 file: standards/development/ATC-STD-300.md
 mandate: Owner-Entwurf 07.09. (DTC-Traceability, ID 300er-Block)
+registry_version: 1
 standard_id: ATC-STD-300
 status: approved
 title: Development & Project Management Standard
