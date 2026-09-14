@@ -126,6 +126,11 @@ ATC-STD-MAINT-000
 A specialized Maintenance Standard MUST NOT weaken a requirement established by this standard
 unless an explicitly governed exception exists.
 
+This standard defines the Governance Contract Layer of the maintenance framework: what maintenance
+governance is, which capabilities exist, which gates apply, and which evidence is required.
+Technical and procedural detail belongs to the specialized standards MAINT-001..024; this standard
+MUST NOT accumulate their implementation details.
+
 ## 4. Normative Language
 
 The following terms are normative:
@@ -954,7 +959,108 @@ Normative:
 - applicable GSEPF specifications
 - applicable repository, security, OS, blockchain, AI, and architecture standards
 
-## 32. Changelog
+## 32. Requirements
+
+Normative requirements carry unique, machine-identifiable IDs (REQ-MAINT-000-NNN, per §4 and
+ATC-STD-000 §10/§11). Each requirement definition includes ID, Level, Description, Applicability,
+and Validation Method. The requirement layer sits at the top of the maintenance architecture:
+
+```
+ATC-STD-000
+     │
+     ▼
+ATC-STD-MAINT-000
+     │
+     ├── Requirements
+     │      ├── REQ-MAINT-000-001
+     │      ├── REQ-MAINT-000-002
+     │      └── ...
+     │
+     ├── Governance
+     ├── Classification
+     ├── Lifecycle
+     ├── Gates
+     ├── Evidence
+     ├── Compliance
+     │
+     ▼
+ATC-STD-MAINT-001..024
+     │
+     ▼
+GSEPF
+     │
+     ▼
+CI / Maintenance Engine
+     │
+     ▼
+Evidence
+     │
+     ▼
+VERIFIED STATE
+```
+
+| ID | Requirement | Level | Priority | Source |
+|---|---|---|---|---|
+| REQ-MAINT-000-001 | Maintenance Capability MUST be defined before supported release | MUST | P0 | §6, §29 |
+| REQ-MAINT-000-002 | Maintenance Readiness MUST be a release gate | MUST | P0 | §7, §29 |
+| REQ-MAINT-000-003 | Maintenance MUST use M0–M3 classification | MUST | P0 | §2, §8 |
+| REQ-MAINT-000-004 | Controlled maintenance MUST produce evidence | MUST | P0 | §5.2, §5.3, §11, §12 |
+| REQ-MAINT-000-005 | Mandatory gates MUST fail closed | MUST | P0 | §5.4 |
+| REQ-MAINT-000-006 | M2/M3 MUST enforce Separation of Duties | MUST | P0 | §5.6 |
+| REQ-MAINT-000-007 | Production systems MUST define rollback/recovery capability | MUST | P0 | §17 |
+| REQ-MAINT-000-008 | Production systems MUST define compatibility strategy | MUST | P0 | §15 |
+| REQ-MAINT-000-009 | Maintenance automation MUST operate within authorization boundaries | MUST | P0 | §5.5, §18 |
+| REQ-MAINT-000-010 | Compliance MUST be evidence-based | MUST | P0 | §23 |
+| REQ-MAINT-000-011 | Maintenance records MUST be machine-readable | MUST | P1 | §11, §20 |
+| REQ-MAINT-000-012 | Maintenance conformance SHOULD be CI-enforced | SHOULD | P1 | §20, §21 |
+| REQ-MAINT-000-013 | Maintenance metrics SHOULD be collected | SHOULD | P1 | §22 |
+| REQ-MAINT-000-014 | Cross-boundary maintenance MUST assess interface impact | MUST | P0 | §14, §27 |
+| REQ-MAINT-000-015 | M3 maintenance MUST use Emergency Maintenance | MUST | P0 | §8.4, MAINT-021 |
+
+Applicability: all normative ATC systems, repositories, and production-bound artifacts (§2).
+Validation Method: machine-readable conformance (§20, §21, registry/maintenance-conformance.yaml)
+for REQ-001..002, 011..012, 014; evidence audit (§12, MAINT-019) for REQ-003..010, 013, 015.
+
+## 33. Dependencies
+
+This standard depends on and references the following artifacts. Circular dependencies between
+standards are PROHIBITED (ATC-STD-000 §12).
+
+| Dependency | Type | Direction |
+|---|---|---|
+| ATC-STD-000 | Meta-governance (conformance, §9 approval, §32 emergency) | upward (this standard MUST conform) |
+| ATC-STD-MAINT-001..024 | Specialized standards | downward (inherit the governance baseline, §3) |
+| schemas/maintenance/maintenance-record.schema.json | Machine-readable record schema (§11) | enforced by CI (§20, §21) |
+| schemas/maintenance/maintenance-readiness.schema.json | Machine-readable gate schema (§7) | enforced by CI (§20, §21) |
+| schemas/maintenance/maintenance-evidence.schema.json | Machine-readable evidence envelope (§12) | enforced by CI (§20, §21) |
+| registry/standards.yaml + registry/maintenance-conformance.yaml | Registry records and conformance SSOT | mirrored, never diverged |
+| GSEPF | Governed execution framework (§26) | GSEPF MUST NOT weaken this standard |
+| ATC-STD-REPO-MAINT-001 / ATC-STD-UPDATE-001 / ATC-STD-COMPAT-001 | Domain SSOTs | referenced, not superseded |
+| ATC-STD-MAINT-021 | Emergency Maintenance process (§8.4, REQ-015) | downward |
+
+## 34. Review Chain
+
+This standard MUST NOT receive the status APPROVED or STABLE without the defined review chain
+(ATC-STD-000 §14). The minimal review chain:
+
+```
+Author -> Technical Review -> Security Review -> Architecture Review -> Approval (Owner, §9)
+```
+
+Status flow (§25): DRAFT -> REVIEW -> CANDIDATE -> APPROVED -> STABLE.
+
+### 34.1 Version and Status Separation (normative)
+
+Document version (SemVer) and lifecycle status are independent axes:
+
+- Version 1.0.0 of this document is a **DRAFT**. It MUST NOT be represented as APPROVED or STABLE
+  until the review chain completes, including Owner approval under ATC-STD-000 §9.
+- A status transition does not change the document version; a material change requires a version
+  bump. The standard identifier remains immutable (§25).
+- The registry record MUST mirror BOTH the document version AND the lifecycle status at all times
+  (registry/standards.yaml; divergence is a registry drift).
+
+## 35. Changelog
 
 v1.0.0 — Draft — 2026-09-13
 
@@ -972,24 +1078,9 @@ v1.0.0 — Draft — 2026-09-13
 - Included MAINT-021 through MAINT-024 as committed family members (Emergency, End-of-Life,
   Vendor & Supply-Chain, Cross-Ecosystem).
 
-## Anhang A — REQ-Matrix (machine-identifiable, §4)
+2026-09-14 — draft amendments (structural alignment with ATC-STD-000):
 
-| REQ | Anforderung (Quelle) | Pflicht |
-|---|---|---|
-| REQ-MAINT-000-001 | Specialized Maintenance Standards inherit the governance baseline; MUST NOT weaken a requirement without an explicitly governed exception (§3) | MUST |
-| REQ-MAINT-000-002 | Maintenance MUST be treated as a lifecycle capability, not solely post-release (§1, §5.1) | MUST |
-| REQ-MAINT-000-003 | A system MUST NOT be released to a lifecycle state requiring operational support unless its required maintenance capabilities are implemented, validated, documented, and evidenced (§7, §29) | MUST |
-| REQ-MAINT-000-004 | Required maintenance gates MUST fail closed; missing evidence/validation/approval blocks the release or operation (§5.4) | MUST |
-| REQ-MAINT-000-005 | SoD for M2/M3 (Implementer != Validator != Auditor) and for critical release operations (Release Authority != Implementer); exceptions explicitly authorized and evidenced (§5.6) | MUST |
-| REQ-MAINT-000-006 | No Evidence, No Trust: completion requires verifiable evidence, not implementation claims (§5.2, §5.3) | MUST |
-| REQ-MAINT-000-007 | Every maintenance activity MUST receive an M0-M3 classification (§8) | MUST |
-| REQ-MAINT-000-008 | Required lifecycle controls MUST be demonstrably satisfied; a record MUST NOT close before all mandatory acceptance conditions hold (§9, §9.12) | MUST |
-| REQ-MAINT-000-009 | M2/M3 controls (independent_validation, security_review, rollback_test, incident_record, audit_evidence) REQUIRED unless documented emergency exception; retrospective review mandatory (§13, §24) | MUST |
-| REQ-MAINT-000-010 | Changes crossing architectural boundaries MUST validate affected interfaces; ATC-VM maintenance MUST NOT be treated as an isolated package update (§14, §27) | MUST |
-| REQ-MAINT-000-011 | Intentional compatibility breaks MUST be identified, documented, consumer-checked, validated, and rollback-evaluated (§15) | MUST |
-| REQ-MAINT-000-012 | A rollback strategy that has never been validated MUST NOT be represented as tested (§17) | MUST |
-| REQ-MAINT-000-013 | Automation MUST operate within explicit authorization boundaries, MUST NOT bypass mandatory gates; an AI agent MUST NOT independently authorize human-approval actions (§18, §5.5) | MUST |
-| REQ-MAINT-000-014 | The framework MUST support machine-readable validation; schemas use explicit types and reject unknown properties where strict validation is required (§20) | MUST |
-| REQ-MAINT-000-015 | A system MUST NOT be declared compliant solely from documentation claims; compliance MUST be evidence-supported (§23) | MUST |
-| REQ-MAINT-000-016 | Exceptions MUST identify requirement/reason/system/risk/compensating controls/owner/expiration, be approved, and be recorded as evidence (§24) | MUST |
-| REQ-MAINT-000-017 | Family membership per §28 is fixed; reserved identifiers MUST NOT be assigned to unrelated standards (§28) | MUST |
+- Added explicit Requirements section (§32) with machine-identifiable REQ-IDs and priorities.
+- Added Standard Dependencies (§33) and Review Chain (§34) as explicit sections.
+- Version/status separation made normative (§34.1): v1.0.0 remains DRAFT until review.
+- Governance Contract Layer scope rule added (§3).
