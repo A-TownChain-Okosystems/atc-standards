@@ -44,7 +44,7 @@ ATC Standards is the canonical normative governance layer of the A-TownChain eco
 - **Governance Framework:** @@FAMS@@ Familien, Enterprise-Ebenen (ATC-ENT-001..015), AI-Standards (ATC-AAS-001..025)
 - **Governance-Determinismus:** @@STD@@ (SSOT-Matrix, State-ID, Ein-Zahl-Regel)
 
-All 26 organizational repositories follow these standards (Registry-First principle).
+**Organisationsbestand:** @@REPONUM@@ Repository-Einträge im Repository-Registry-SSOT. Governance-Status und Ausnahmen werden ausschließlich aus `registry/repositories.yaml` bzw. den daraus generierten Compliance-Views abgeleitet.
 
 ---
 
@@ -53,8 +53,7 @@ All 26 organizational repositories follow these standards (Registry-First princi
 Governance-Root der A-TownChain-Organisation: Registry, Standards,
 Schemata, Validatoren, Audits und Change-Requests. In Scope: normative
 Standards (@@FILES@@ Dateien, @@FAMS@@ Familien) und ihre Metadaten/Validierung.
-Out of Scope: Implementierung der Standards (liegt in den 27 governed Repos und
-deren CI-Gates; Nachweis via Implementierungs-Matrix).
+Out of Scope: Implementierung der Standards (liegt in den Repository-Einträgen der Organisation und deren CI-Gates; Nachweis via Implementierungs-Matrix).
 
 ## Features
 
@@ -174,7 +173,7 @@ Implementierungs-Pivot (kein Standard ohne Implementierungsstatus).
 ├── legal/           # Kanonische Anbieter-/Impressumsquelle (ATC-STD-LEGAL-002 §10–11, SCR-0117)
 ├── licenses/        # Lizenz-Texte
 ├── licensing/       # ATC-LICENSE-Standards (Code/Marke/Assets/Doku)
-├── profiles/       # @@REPONUM@@ Standards-Profile je Repository (Compliance-Vertrag, ATC-STD-LIB-001 §8)
+├── profiles/       # @@REPONUM@@ verbindliche Standards-Profile je Repository
 ├── protocols/       # Prozessprotokolle
 ├── references/      # Normative Referenzen
 ├── registry/        # SSOT: standards.yaml, Matrix, Lock, Schemata-Reg
@@ -235,6 +234,6 @@ Machine-readable metadata: State-Block oben (SCR-0090); Registry-SSOT: `registry
 
 Regel: Jeder Registry-Eintrag besitzt eine Datei in `standards/` ODER eine dokumentierte
 EXEMPT-Begruendung (aktuell einzig: `ATC-STD-000` als Master-Dokument außerhalb `standards/`,
-Bootstrap-EXEMPT mit Sunset, @@STD@@ §6). Die GUltigkeit dieser Relation wird je Lauf geprueft;
+Bootstrap-EXEMPT mit Sunset, @@STD@@ §6). Die GUeltigkeit dieser Relation wird je Lauf geprueft;
 alle Zahlen hierzu ausschließlich im State-Block oben. Historische Zustaende (z.B. 08.09.):
 `STATUS.md` (Audit-Trail).
