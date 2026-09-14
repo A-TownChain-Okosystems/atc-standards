@@ -26,6 +26,7 @@ for _n in re.findall(r"^\s*([A-Za-z0-9_\-.]+)\s*[<>=~!]", req_text, re.M):
     _n = _n.lower()
     declared.add(PKG_IMPORT_MAP.get(_n, _n))
 STDLIB_OK = {
+    "__future__",
     "os",
     "re",
     "sys",
