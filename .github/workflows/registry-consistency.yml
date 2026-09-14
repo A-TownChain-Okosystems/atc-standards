@@ -35,6 +35,18 @@ jobs:
             --inventory registry/migrations/standard-inventory.generated.yaml \
             --output registry/migrations/classification-backlog.yaml
 
+      - name: Generate Phase-2B classification matrix
+        run: |
+          python tools/registry-migration/classification_matrix.py \
+            --repo . \
+            --output registry/migrations/classification-matrix.generated.yaml
+
+      - name: Validate Phase-2B classification matrix
+        run: |
+          python tools/registry-migration/classification_matrix_validator.py \
+            --registry registry/standards.yaml \
+            --matrix registry/migrations/classification-matrix.generated.yaml
+
       - name: Validate migration invariants
         run: |
           python - <<'PY'
@@ -42,6 +54,7 @@ jobs:
           import yaml
           inventory = yaml.safe_load(Path('registry/migrations/standard-inventory.generated.yaml').read_text(encoding='utf-8'))
           backlog = yaml.safe_load(Path('registry/migrations/classification-backlog.yaml').read_text(encoding='utf-8'))
+          matrix = yaml.safe_load(Path('registry/migrations/classification-matrix.generated.yaml').read_text(encoding='utf-8'))
           assert inventory['rules']['canonical_ids_allocated_only_after_review'] is True
           assert inventory['rules']['automatic_family_assignment'] is False
           assert all(e['canonical_id'] is None for e in inventory['entries'])
@@ -53,17 +66,24 @@ jobs:
           assert backlog['rules']['family_assignments_allocated'] is False
           assert len(backlog['entries']) == len(inventory['entries'])
           assert all(e['classification']['canonical_id'] is None for e in backlog['entries'])
+          assert matrix['summary']['canonical_ids'] == 0
+          assert all(e['migration']['canonical_id'] is None for e in matrix['entries'])
+          assert all(e['migration']['family_id'] is None for e in matrix['entries'])
+          assert all(e['migration']['category_id'] is None for e in matrix['entries'])
+          assert all(e['migration']['class_id'] is None for e in matrix['entries'])
+          assert all(e['migration']['sequence'] is None for e in matrix['entries'])
           print(f"Inventory entries: {len(inventory['entries'])}")
           print(f"Registry SHA-256: {inventory['discovery']['registry_sha256']}")
           print(f"Duplicate IDs: {len(inventory['discovery']['duplicate_legacy_ids'])}")
           print(f"Classification status counts: {backlog['summary']['status_counts']}")
+          print(f"Classification matrix entries: {len(matrix['entries'])}")
           PY
 
       - name: Persist generated migration baseline
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add registry/migrations/standard-inventory.generated.yaml registry/migrations/classification-backlog.yaml
+          git add registry/migrations/standard-inventory.generated.yaml registry/migrations/classification-backlog.yaml registry/migrations/classification-matrix.generated.yaml
           if git diff --cached --quiet; then
             echo 'Generated migration baseline unchanged.'
           else
@@ -83,6 +103,13 @@ jobs:
         with:
           name: classification-backlog-generated
           path: registry/migrations/classification-backlog.yaml
+          if-no-files-found: error
+
+      - name: Upload classification matrix artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: classification-matrix-generated
+          path: registry/migrations/classification-matrix.generated.yaml
           if-no-files-found: error
 
       - name: Validate registry-generated views
