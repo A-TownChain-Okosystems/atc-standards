@@ -3,7 +3,7 @@
 taxonomy:
   standard: ATC-STD-TAXONOMY-001
   version: 1.0.0
-  generated: '2026-09-13'
+  generated: '2026-09-14'
   hierarchy:
   - DOMAIN
   - FAMILY
@@ -522,7 +522,7 @@ taxonomy:
       id_range: ATC-STD-NET-001-899
       source: named-family
       description: Netzwerk-Umgebungen Devnet/Testnet/Mainnet & Promotion (Owner-Mandat AD-041)
-      standards_count: 8
+      standards_count: 9
       categories:
       - id: GENERAL
         name: Allgemein (Bestand, keine Unterteilung)

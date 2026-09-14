@@ -6,7 +6,7 @@ family_id: '000'
 file: standards/enterprise/ATC-STD-023.md
 mandate: Owner-Entwurf 11.09. (SCR-0094 Continuous Assurance)
 standard_id: ATC-STD-023
-status: candidate
+status: approved
 title: Technology Lifecycle Management Standard (8-Status-Zyklus PROPOSED..REMOVED,
   9-Kriterien-Adoption-Gate, 5 Entscheidungen, Registry-Kopplung)
 version: 1.0.0

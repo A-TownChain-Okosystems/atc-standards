@@ -6,7 +6,7 @@ family_id: LEGACY
 file: governance/constitution/ATC-GOV-001.md
 mandate: Owner-Entwurf Governance Operating System 11.09. (SCR-0097; neue GOV-Praefix-Familie)
 standard_id: ATC-GOV-001
-status: candidate
+status: approved
 title: 'A-TownChain Governance Constitution (Level-0-Verfassung: 5-Ebenen-Hierarchie,
   8 Authorities ohne God Mode, Decision Rights Matrix, Quoren 2/3-of-5/4-of-7 mit
   Timelock, Emergency/Exception/COI/Appeals/Succession, AI-Agent-Pflichtkette, 8 Governance

@@ -7,7 +7,7 @@ file: standards/enterprise/ATC-STD-037.md
 mandate: Owner-Entwurf 11.09. (SCR-0095 Automated Assurance; Owner-Referenz 035 —
   §37 -> 037)
 standard_id: ATC-STD-037
-status: candidate
+status: approved
 title: Security Configuration Baseline Standard (15 Konfigurationsbereiche OS..Monitoring,
   maschinenlesbare Baseline-Datei, Scanner-Anbindung)
 version: 1.0.0
