@@ -3,7 +3,7 @@
 taxonomy:
   standard: ATC-STD-TAXONOMY-001
   version: 1.0.0
-  generated: '2026-09-13'
+  generated: '2026-09-14'
   hierarchy:
   - DOMAIN
   - FAMILY
@@ -465,6 +465,19 @@ taxonomy:
       id_range: ATC-STD-ENG-001-999
       source: named-family
       description: Software Engineering & Code Quality (Owner-Entwurf 11.09.2026, SCR-0092)
+      standards_count: 1
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
+    - id: MAINT
+      name: maint
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-STD-MAINT-001-999
+      source: named-family
+      description: 'Maintenance-Familie: Verbindliche Betriebs-Disziplin KAI-OS/GlobusOS — 12 Bereiche, M0-M3-Klassen, Maintenance-from-Development (Owner-Direktive 14.09., SCR-0120)'
       standards_count: 1
       categories:
       - id: GENERAL

@@ -482,6 +482,7 @@ required_standards:
 - ATC-ORG-BASELINE-001
 - ATC-STD-003
 - ATC-STD-LEGAL-002
+- ATC-STD-MAINT-001
 - ATC-STD-ENG-001
 workflow:
   require_tests: true

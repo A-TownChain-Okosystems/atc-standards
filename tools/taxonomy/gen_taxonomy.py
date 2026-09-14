@@ -26,6 +26,8 @@ DOMAIN_MAP = {
     "eng": "SW",
     # neu via SCR-0117 (13.09.)
     "legal": "GOV",
+    # neu via SCR-0120 (14.09.)
+    "maint": "SW",
 }
 DOMAINS = {
     "GOV":   "Governance & Meta-Standards",
@@ -44,6 +46,7 @@ FAMILY_CODES = {
     "taxonomy": "TAX", "governance-core": "SGC", "license": "LIC", "improvement": "IMP", "ai-gov": "AIG",
     "eng": "ENG",
     "legal": "LEGAL",
+    "maint": "MAINT",
 }
 
 cats = yaml.safe_load(open("registry/categories.yaml", encoding="utf-8"))
