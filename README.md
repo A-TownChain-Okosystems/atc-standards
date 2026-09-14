@@ -8,7 +8,7 @@
 ```yaml
 state:
   id: ATC-STATE-20260914-8ff9ce3b
-  generated_at: "2026-09-14 10:06 UTC+2"
+  generated_at: "2026-09-14 10:20 UTC+2"
   registry_version: "1.0.0"
   registry_sha256: "8ff9ce3b9aba170adbeb0833ad1b7f0ada86f671c036ba152b4aeb7d1f87cf27"
   standards_total: 505
@@ -22,9 +22,9 @@ state:
 **Diese Zahlen sind die EINZIG maschinenverbindliche Auskunft** (ATC-STD-003 §2 Ein-Zahl-Regel).
 Historische Zahlenstände: ausschließlich `STATUS.md` / `CHANGELOG.md` / `audits/`.
 
-**Implementierungs-KPI:** 505 Standards normativ definiert — 65 enforced, 130 implemented, 293 specification-only (Zielsysteme im qualitätsgetriebenen Rebuild AD-023/AD-045). Die Aussage „505 Standards implementiert“ ist unzulässig (SCR-0048, ATC-STD-003 §8: APPROVED ≠ IMPLEMENTED).
+**Implementierungs-KPI:** 505 Standards normativ definiert — 65 enforced, 131 implemented, 303 specification-only (Zielsysteme im qualitätsgetriebenen Rebuild AD-023/AD-045). Die Aussage „505 Standards implementiert“ ist unzulässig (SCR-0048, ATC-STD-003 §8: APPROVED ≠ IMPLEMENTED).
 
-**FORMALE COMPLIANCE: PASS** (Repository-Audit R3: Naming/Versioning/Ownership/Lizenz + Cross-Registry-Test R1-R12) · **IMPLEMENTATION: PARTIAL** (39 % code-backed: 65 enforced + 130 implemented von 505 Matrix-Eintraegen erfassten (Registry-Gesamt: 505)) · **PRODUCTION READINESS: NOT_READY** (Release-/Mainnet-Gates, registry/milestones.yaml) — ein Zustand behauptet nie den anderen ([Audit-Details](#standards--compliance))
+**FORMALE COMPLIANCE: PASS** (Repository-Audit R3: Naming/Versioning/Ownership/Lizenz + Cross-Registry-Test R1-R12) · **IMPLEMENTATION: PARTIAL** (39 % code-backed: 65 enforced + 131 implemented von 505 Matrix-Eintraegen erfassten (Registry-Gesamt: 505)) · **PRODUCTION READINESS: NOT_READY** (Release-/Mainnet-Gates, registry/milestones.yaml) — ein Zustand behauptet nie den anderen ([Audit-Details](#standards--compliance))
 
 ---
 

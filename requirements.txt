@@ -2,3 +2,4 @@
 # CI-Install vor Validierung: python3 -m pip install -r requirements.txt (ATC-STD-CI-001 CI-003)
 # Versionsschranken sind Pflicht (ATC-STD-CI-001 CI-004) — keine offenen Versionen.
 pyyaml>=6.0,<7.0
+jsonschema>=4.0,<5.0

@@ -1,13 +1,13 @@
-# Maintenance Conformance — ATC-STD-MAINT-000 §20.1 (SCR-0120 v7)
+# Maintenance Conformance — ATC-STD-MAINT-000 §20.1 (SCR-0120 v7; Readiness-Gate: SCR-0123 Welle 1)
 # Machine-readable Conformance-Gate: prueft Schemas, Registry-Projektion,
 # Conformance-SSOT (Idempotenz) und die MAINTENANCE-READY-Checkliste.
 name: Maintenance Conformance (MAINT-000 §20.1)
 on:
   push:
     branches: [main]
-    paths: ['standards/maintenance/**', 'schemas/maintenance/**', 'registry/maintenance-conformance.yaml', 'registry/maintenance-requirements.yaml', 'registry/standards.yaml', '.github/workflows/maintenance-conformance.yml']
+    paths: ['standards/maintenance/**', 'schemas/maintenance/**', 'registry/maintenance-conformance.yaml', 'registry/maintenance-requirements.yaml', 'registry/maintenance/**', 'tools/maintenance/**', 'registry/standards.yaml', '.github/workflows/maintenance-conformance.yml']
   pull_request:
-    paths: ['standards/maintenance/**', 'schemas/maintenance/**', 'registry/maintenance-conformance.yaml', 'registry/maintenance-requirements.yaml', 'registry/standards.yaml', '.github/workflows/maintenance-conformance.yml']
+    paths: ['standards/maintenance/**', 'schemas/maintenance/**', 'registry/maintenance-conformance.yaml', 'registry/maintenance-requirements.yaml', 'registry/maintenance/**', 'tools/maintenance/**', 'registry/standards.yaml', '.github/workflows/maintenance-conformance.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -95,3 +95,6 @@ jobs:
           for f in fails: print("  " + f)
           sys.exit(1 if fails else 0)
           PY
+      - name: Maintenance Readiness Gate (MAINT-000 Par.7.2, SCR-0123)
+        run: |
+          python tools/maintenance/validate_maintenance_readiness.py
