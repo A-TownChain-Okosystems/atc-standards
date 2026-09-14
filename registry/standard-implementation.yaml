@@ -3951,6 +3951,14 @@ standards:
       evidence: "Legacy-Serie (atc/): durch ATC-STD-000ff superseded; historische Referenz konserviert"
     independence: L1
 
+  - standard: ATC-STD-MAINT-001
+    version: "1.0.0"
+    applicability: MANDATORY
+    implementation:
+      status: specification_only
+      evidence: "SCR-0120 DRAFT (14.09.2026): Maintenance Discipline Standard — wartet auf §9-Freigabe; org-weiter Maintenance-Report und M0-M3-Klassifizierung NICHT implementiert (SPECIFICATION_ONLY); bestehende CI-Evidence (cargo audit, Drift-Checks) referenziert"
+    independence: L1
+
   - standard: ATC-STD-ENG-001
     version: "1.0.0"
     applicability: REFERENCE
