@@ -73,15 +73,23 @@ python3 tools/atc-std-validator/validate_all.py
 python3 tools/atc-repo-audit/atc_repo_audit.py . --level R3
 ```
 
+## Installation
+
+Voraussetzungen: Git und Python 3.11+. Reproduzierbares Setup:
+
+```bash
+git clone https://github.com/A-TownChain-Okosystems/atc-standards.git
+cd atc-standards
+python3 -m pip install -r requirements.txt
+```
+
 ## Governance Flow
 Change Request → SCR → Owner-Freigabe (§9) → Registry-Eintrag → CI-Validierung → APPROVED → normativ in Kraft.
 
 ## Quick Start
 
 ```bash
-git clone https://github.com/A-TownChain-Okosystems/atc-standards.git
-cd atc-standards
-python3 -m pip install pyyaml
+python3 tools/atc-std-validator/validate_all.py
 ```
 
 ## Governance
@@ -122,6 +130,7 @@ Governance-Hardening: Registry-Integritäts-Gate, Discovery→Audit→SCR-Kopplu
 ## Repository Structure
 
 ```text
+atc-standards/
 ├── approval/
 ├── audits/
 ├── change-requests/
