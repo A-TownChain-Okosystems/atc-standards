@@ -6,6 +6,7 @@ family_id: LEGACY
 file: standards/ai-gov/ATC-AI-GOV-ACCESS-001.md
 mandate: 'Owner-Direktive 14.09. 09:36 (''Weiter''): Rollenprofil-Matrix als kanonisierungsfaehiger
   Gegenentwurf zur Omni-Konfiguration (Owner-Beratung 14.09.); 6 REQ-AGOV-ACC; SCR-0121'
+registry_version: 1
 standard_id: ATC-AI-GOV-ACCESS-001
 status: draft
 title: ATC Agent Governance — AI Access Role Model (Rollenprofile ATC-AUDITOR/ATC-DEVELOPER/ATC-CI,

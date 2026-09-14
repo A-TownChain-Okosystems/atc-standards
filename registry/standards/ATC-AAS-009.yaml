@@ -5,6 +5,7 @@ family: LEGACY-SERIES
 family_id: LEGACY
 file: standards/aas/ATC-AAS-009.md
 mandate: ''
+registry_version: 1
 standard_id: ATC-AAS-009
 status: approved
 title: Agent Change Standard (P1)

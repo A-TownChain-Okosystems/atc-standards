@@ -6,6 +6,7 @@ family_id: '000'
 file: standards/enterprise/ATC-STD-039.md
 mandate: Owner-Entwurf 11.09. (SCR-0095 Automated Assurance; Owner-Referenz 037 —
   §37 -> 039)
+registry_version: 1
 standard_id: ATC-STD-039
 status: approved
 title: Cryptographic Agility Standard (austauschbare Crypto-Interfaces Current/Alternative/Future,

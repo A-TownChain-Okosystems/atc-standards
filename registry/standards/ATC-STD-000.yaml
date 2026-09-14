@@ -5,6 +5,7 @@ family: GOVERNANCE / META
 family_id: '000'
 file: governance/ATC-STD-000.md
 mandate: ''
+registry_version: 1
 standard_id: ATC-STD-000
 status: approved
 title: 'Standards Governance & Specification Standard (Verfassung; v1.3.0: Domaenen-Familien-Verweis

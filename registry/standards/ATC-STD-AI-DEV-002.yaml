@@ -5,6 +5,7 @@ family: AI
 family_id: PREFIX
 file: standards/ai/ATC-STD-AI-DEV-002.md
 mandate: ''
+registry_version: 1
 standard_id: ATC-STD-AI-DEV-002
 status: approved
 title: Agent Capabilities & Permissions Standard

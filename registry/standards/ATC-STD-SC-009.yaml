@@ -5,6 +5,7 @@ family: SC
 family_id: PREFIX
 file: standards/sc/ATC-STD-SC-009.md
 mandate: Owner-Entwurf 07.09. — Rollen OWNER..AUDITOR, Autorisierungskette mit Timelock
+registry_version: 1
 standard_id: ATC-STD-SC-009
 status: approved
 title: Smart Contract Access Control Standard

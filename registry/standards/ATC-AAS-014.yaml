@@ -5,6 +5,7 @@ family: LEGACY-SERIES
 family_id: LEGACY
 file: standards/aas/ATC-AAS-014.md
 mandate: ''
+registry_version: 1
 standard_id: ATC-AAS-014
 status: approved
 title: Agent Security Standard (P0)

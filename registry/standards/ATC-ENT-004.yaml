@@ -5,6 +5,7 @@ family: LEGACY-SERIES
 family_id: LEGACY
 file: standards/enterprise/ATC-ENT-004.md
 mandate: ''
+registry_version: 1
 standard_id: ATC-ENT-004
 status: approved
 title: Delegation & Berechtigungen Standard (P0)

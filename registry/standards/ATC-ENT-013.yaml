@@ -5,6 +5,7 @@ family: LEGACY-SERIES
 family_id: LEGACY
 file: standards/enterprise/ATC-ENT-013.md
 mandate: ''
+registry_version: 1
 standard_id: ATC-ENT-013
 status: approved
 title: KPI & Performance Standard (P2)

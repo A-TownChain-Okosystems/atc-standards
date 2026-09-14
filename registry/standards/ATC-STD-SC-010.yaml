@@ -5,6 +5,7 @@ family: SC
 family_id: PREFIX
 file: standards/sc/ATC-STD-SC-010.md
 mandate: Owner-Entwurf 07.09. — FundsTransferred-Events, Multisig/Limits/Timelock
+registry_version: 1
 standard_id: ATC-STD-SC-010
 status: approved
 title: Smart Contract Treasury Standard

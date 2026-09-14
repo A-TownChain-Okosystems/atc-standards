@@ -11,6 +11,7 @@ mandate: Owner-Entwurf 07.09. 23:41 (Abschnitt 40) via FRAMEWORK-001 §9/REQ-FW-
   statt Duplikation (S-01..S-22, Health Scores, RR-Gates, MILESTONE/COMPAT), MAJOR
   ohne Master-Audit-PASS verboten, Audit-der-Audits als Continuous-Improvement; SCR-0022;
   §9-Freigabe 08.09. 00:18, APPROVED, normativ, §30-eingefroren
+registry_version: 1
 standard_id: ATC-STD-999
 status: approved
 title: 'ATC Master-Audit — Enterprise Completeness & Consistency Audit: 16-Stufen-System-Audit-Kette,

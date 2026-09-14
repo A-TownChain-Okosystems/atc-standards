@@ -5,6 +5,7 @@ family: ZKP
 family_id: PREFIX
 file: standards/zkp/ATC-STD-ZKP-007.md
 mandate: Owner-Entwurf 07.09. (AD-045)
+registry_version: 1
 standard_id: ATC-STD-ZKP-007
 status: approved
 title: Private Transaction Standard

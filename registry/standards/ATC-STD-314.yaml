@@ -5,6 +5,7 @@ family: SOFTWARE ENGINEERING
 family_id: '300'
 file: standards/security/ATC-STD-314.md
 mandate: Owner-Auftrag 08.09. KONFLIKT-Aufloesung (SCR-0040)
+registry_version: 1
 standard_id: ATC-STD-314
 status: approved
 title: Cybersecurity Framework Standard

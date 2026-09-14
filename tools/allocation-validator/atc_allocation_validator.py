@@ -16,10 +16,16 @@ Regeln:
   ALLOC-06  counts muessen stimmen (allocated/reserved/free = 100 je Familie).
   ALLOC-07  rule_free_is_not_allocatable muss auf true stehen.
   ALLOC-08  Jede ID in reservations.yaml muss in allocation-status als RESERVED stehen.
+  ALLOC-11  Jede Kategorie mit fam:-Feld (categories.yaml) muss einen FAM-Eintrag dieser ID
+            in framework.yaml haben, dessen Range den Namespace der Kategorie abdeckt
+            (Owner-Direktive 14.09.: keine Registry-Integration ohne formale Familien-Allokation).
+  ALLOC-12  Jeder Standard einer fam:-verkabelten Kategorie muss in der FAM-Range liegen
+            (Standards-Registry-Eintrag nur innerhalb der allokierten Namespace-Range).
 
 Exit 0 = PASS, 1 = FAIL (Drift). Neue ID-Vergabe ohne Aktualisierung beider
 Seiten laesst das Gate anschlagen — 'ID nicht gefunden' wird nie 'ID ist frei'."""
 import argparse
+import os
 import re
 import sys
 
@@ -32,6 +38,59 @@ except ImportError:
 def fail(msg):
     print(f"  FAIL  {msg}")
     return 1
+
+
+def _range_covers(fam_range, ident, namespace_only=False):
+    """True, wenn die FAM-Range die Identitaet abdeckt.
+    namespace_only=True: Namespace-Gleichheit reicht (ALLOC-11, Kategorie-Ranges);
+    sonst numerische Deckung (ALLOC-12).
+    Unterstuetzt: '+'-Komposite (FAM-Range wie Kategorie-Range; jede
+    Ident-Komponente muss gedeckt sein), '/'-Gruppen mit gemeinsamer Nummer
+    (STDDEV/REGISTRY/CHANGE-001), numerische Baender (120..131) und
+    Einzel-Slots (AOS-001)."""
+    def norm(x):
+        x = x.replace("ATC-STD-", "").strip().strip('"')
+        return re.sub(r"\s*\([^)]*\)\s*$", "", x)
+
+    def ns_of(x):
+        m = re.match(r"^(.*?)(?:-\d+)+$", x)
+        return m.group(1).rstrip("-") if m else x
+
+    def num_of(x):
+        m = re.search(r"(\d+)$", x)
+        return int(m.group(1)) if m else -1
+
+    def comp_covers(sub, ident_ns, ident_num, ns_only):
+        sub = sub.strip()
+        # 1) Numerisches Band: 120..131
+        mb = re.match(r"^(\d+)\s*\.\.\s*(\d+)$", sub)
+        if mb and ident_ns.isdigit() and re.fullmatch(r"\d+", str(ident_num)):
+            return int(mb.group(1)) <= ident_num <= int(mb.group(2))
+        parts = [s.strip() for s in sub.split("/")]
+        # 2) '/'-Gruppe: letzte Komponente traegt die Nummer, gilt fuer alle Namespaces
+        mc_last = re.match(r"^(.*?)-(\d+)(?:\s*\.\.\s*(?:ATC-STD-)?(?:[A-Z0-9-]*?-)?(\d+))?$", parts[-1])
+        num_lo = int(mc_last.group(2)) if mc_last else None
+        num_hi = int(mc_last.group(3)) if (mc_last and mc_last.group(3)) else None
+        for idx, part in enumerate(parts):
+            cns = mc_last.group(1) if idx == len(parts) - 1 and mc_last else part
+            if cns != ident_ns and not ident_ns.startswith(cns + "-"):
+                continue
+            if ns_only or num_lo is None or num_hi is None:
+                return True   # Einzel-Slot/Gruppe: Namespace-Deckung genuegt
+            return num_lo <= ident_num <= num_hi
+        return False
+
+    fr = norm(fam_range)
+    for ident_comp in norm(ident).split("+"):
+        ic = ident_comp.strip()
+        if not ic:
+            continue
+        if fr == ic:
+            continue   # exakte Gleichheit (z.B. ATC-STD-999)
+        ins, inum = ns_of(ic), num_of(ic)
+        if not any(comp_covers(c, ins, inum, namespace_only) for c in fr.split("+")):
+            return False
+    return True
 
 
 def main():
@@ -100,6 +159,54 @@ def main():
                 errs += fail(f"ALLOC-08 {rid} in reservations.yaml, aber nicht RESERVED in allocation-status")
     except FileNotFoundError:
         errs += fail("ALLOC-08 reservations.yaml nicht gefunden")
+
+    # ALLOC-11/12: Familien-Allokation fuer fam:-verkabelte Kategorien (SCR-0120 v8)
+    cat_path = os.path.join(os.path.dirname(os.path.abspath(args.framework)), "categories.yaml")
+    if os.path.exists(cat_path):
+        cats = yaml.safe_load(open(cat_path, encoding="utf-8"))
+        fw_raw2 = open(args.framework, encoding="utf-8").read()
+        fam_entries = {}   # FAM-ID -> (name, range)
+        for m in re.finditer(r"- id: (FAM-\d+)\n\s+name: (.+?)\n\s+range: (.+?)(?:\n|$)", fw_raw2):
+            fam_entries[m.group(1)] = (m.group(2).strip('\"'), m.group(3).strip('\"'))
+        real = {k: v for k, v in cats.items() if k != "categories" and isinstance(v, dict)}
+        wired = {k: v for k, v in real.items() if v.get("fam")}
+        legacy = len(real) - len(wired)
+        for cat, meta in sorted(wired.items()):
+            fam = meta["fam"]
+            if fam not in fam_entries:
+                errs += fail(f"ALLOC-11 Kategorie '{cat}' verweist auf {fam}, aber {fam} fehlt in framework.yaml")
+                continue
+            frange = fam_entries[fam][1]
+            if not _range_covers(frange, meta.get("range", ""), namespace_only=True):
+                errs += fail(f"ALLOC-11 {fam}-Range '{frange}' deckt Kategorie-Range '{meta.get('range','')}' ({cat}) nicht ab")
+
+        # ALLOC-12: Jeder Registry-Standard MUSS von mindestens einer FAM-Range
+        # gedeckt sein; liegt er im Namespace der Familien-Range seiner Kategorie,
+        # zwingend durch genau diese Familie (Namespace-Konsistenz).
+        uncovered, own_miss = [], []
+        for s in reg.get("standards", []):
+            sid = s.get("id", "")
+            covered_by = [fid for fid, (_, rg) in fam_entries.items() if _range_covers(rg, sid)]
+            if not covered_by:
+                uncovered.append(sid)
+                continue
+            cat = s.get("category")
+            if cat in wired and wired[cat]["fam"] in fam_entries:
+                frange = fam_entries[wired[cat]["fam"]][1]
+                if _range_covers(frange, sid, namespace_only=True) and wired[cat]["fam"] not in covered_by:
+                    own_miss.append((sid, cat, wired[cat]["fam"]))
+        for sid in sorted(uncovered):
+            errs += fail(f"ALLOC-12 {sid} liegt in keiner FAM-Range — keine formale Familien-Allokation")
+        for sid, cat, fam in own_miss:
+            errs += fail(f"ALLOC-12 {sid} (Namespace von Kategorie '{cat}') liegt ausserhalb der {fam}-Range")
+        print(f"ALLOC-12 Standard-Abdeckung: {len(reg.get('standards', [])) - len(uncovered) - len(own_miss)}/{len(reg.get('standards', []))} "
+              f"Registry-Standards formal durch FAM-Ranges gedeckt")
+        if legacy:
+            print(f"ALLOC-11/12 Familien-Allokation: {len(wired)} fam-verkabelte Kategorien geprueft "
+                  f"({legacy} Legacy-Kategorien ohne fam:-Feld, grandfathered)")
+        else:
+            print(f"ALLOC-11/12 Familien-Allokation: ALLE {len(wired)} Kategorien fam-verkabelt — "
+                  f"Grandfathering vollstaendig entfallen (Owner-Direktive 14.09., SCR-0120 v9)")
 
     if errs:
         print(f"Ergebnis: FAIL — {errs} Allocation-Drift-Funde. Registry-Update oder "

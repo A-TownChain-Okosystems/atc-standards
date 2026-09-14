@@ -26,6 +26,8 @@ DOMAIN_MAP = {
     "eng": "SW",
     # neu via SCR-0117 (13.09.)
     "legal": "GOV",
+    # neu via SCR-0120 (14.09.)
+    "maint": "SW",
 }
 DOMAINS = {
     "GOV":   "Governance & Meta-Standards",
@@ -44,6 +46,7 @@ FAMILY_CODES = {
     "taxonomy": "TAX", "governance-core": "SGC", "license": "LIC", "improvement": "IMP", "ai-gov": "AIG",
     "eng": "ENG",
     "legal": "LEGAL",
+    "maint": "MAINT",
 }
 
 cats = yaml.safe_load(open("registry/categories.yaml", encoding="utf-8"))
@@ -53,16 +56,19 @@ std = yaml.safe_load(open("registry/standards.yaml", encoding="utf-8"))
 families = {}
 for num, meta in cats.get("categories", {}).items():
     families[meta["name"]] = {"code": "N" + str(num), "range": meta["range"],
-                              "description": meta["description"], "source": "numeric-§7"}
+                              "description": meta["description"], "source": "numeric-§7",
+                              "fam": meta.get("fam")}
 for key, meta in cats.items():
     if key == "categories" or not isinstance(meta, dict):
         continue
     if meta["name"] in families:  # Namenskollision numeric/named (protocol)
         families[meta["name"] + " (familie)"] = {"code": FAMILY_CODES[meta["name"]],
-            "range": meta["range"], "description": meta["description"], "source": "named-family"}
+            "range": meta["range"], "description": meta["description"], "source": "named-family",
+            "fam": meta.get("fam")}
     else:
         families[meta["name"]] = {"code": FAMILY_CODES[meta["name"]], "range": meta["range"],
-                                  "description": meta["description"], "source": "named-family"}
+                                  "description": meta["description"], "source": "named-family",
+                                  "fam": meta.get("fam")}
 families["taxonomy"] = {"code": "TAX", "range": "ATC-STD-TAXONOMY-001-999",
     "description": "Standards Taxonomy & Family Creation (Meta-Governance, SCR-0024)", "source": "named-family"}
 
@@ -86,6 +92,8 @@ for name, meta in families.items():
         "categories": [{"id": "GENERAL", "name": "Allgemein (Bestand, keine Unterteilung)",
                         "status": "ACTIVE", "lifecycle": "ACTIVE"}],
     }
+    if meta.get("fam"):
+        fam["fam"] = meta["fam"]  # FAM-Allokationsverweis (framework.yaml, ALLOC-11)
     dom_fams[dom].append(fam)
 
 # Kategorie-Ebene: für neue Familien via ATC-CAT-REQ; Bestand führt GENERAL (Grandfathering)

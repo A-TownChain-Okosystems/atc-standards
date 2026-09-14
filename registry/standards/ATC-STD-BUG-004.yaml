@@ -5,6 +5,7 @@ family: BUG
 family_id: PREFIX
 file: standards/bug/ATC-STD-BUG-004.md
 mandate: Owner-Mandat 07.09. (AD-040)
+registry_version: 1
 standard_id: ATC-STD-BUG-004
 status: approved
 title: Repository Synchronization & Merge Gate

@@ -37,6 +37,7 @@ def main():
         else:
             family_id, family = "LEGACY", "LEGACY-SERIES"
         rec = {
+            "registry_version": 1,  # Record-Format-Version, unabhaengig von der Standard-Version (MAINT-000 §22.1)
             "family_id": family_id,
             "family": family,
             "standard_id": sid,

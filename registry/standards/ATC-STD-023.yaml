@@ -5,6 +5,7 @@ family: GOVERNANCE / META
 family_id: '000'
 file: standards/enterprise/ATC-STD-023.md
 mandate: Owner-Entwurf 11.09. (SCR-0094 Continuous Assurance)
+registry_version: 1
 standard_id: ATC-STD-023
 status: approved
 title: Technology Lifecycle Management Standard (8-Status-Zyklus PROPOSED..REMOVED,

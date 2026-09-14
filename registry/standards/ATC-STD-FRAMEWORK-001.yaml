@@ -11,6 +11,7 @@ mandate: 'Owner-Entwurf 07.09. 23:41 — 12 REQ-FW, 43-Familien-Katalog (registr
   5 GEPLANT), RR-G01..G08 Release-Readiness, Agent Operating Mandate (14 Fragen, AOS-001
   GEPLANT), Master-Audit ATC-STD-999 GEPLANT, Gap-Roadmap P1-P3; maschinenlesbar (framework.yaml
   + Validator S-21); SCR-0019; §9-Freigabe 07.09. 23:48, APPROVED, normativ, §30-eingefroren'
+registry_version: 1
 standard_id: ATC-STD-FRAMEWORK-001
 status: approved
 title: 'ATC Enterprise Standards Framework — Master-Dokument (ATC-STANDARDS-MASTER):

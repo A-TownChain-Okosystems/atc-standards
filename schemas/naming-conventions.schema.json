@@ -651,6 +651,16 @@
           "pattern": "^ATC-HANDOFF-[0-9]{4}-[0-9]{3,}$",
           "example": "ATC-HANDOFF-2026-001",
           "note": "Maschinenlesbare Agent-Handoffs (HANDOFF-001, Schema handoff.schema.yaml, SCR-0064)"
+        },
+        "maintStandardId": {
+          "type": "string",
+          "pattern": "^ATC-STD-MAINT-[0-9]{3,}$",
+          "description": "Maintenance family standard (FAM-52, SCR-0120)"
+        },
+        "maintRequirementId": {
+          "type": "string",
+          "pattern": "^REQ-MAINT-[0-9]{3,}$",
+          "description": "Maintenance requirement class MAINT — family-wide number space (Variante A, SCR-0120 v8)"
         }
       }
     },

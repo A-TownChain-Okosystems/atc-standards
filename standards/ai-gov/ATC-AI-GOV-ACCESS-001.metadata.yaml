@@ -3,7 +3,9 @@ authority: A-TownChain-Okosystems
 category: ai-gov
 conformance:
   required: false
-dependencies: []
+dependencies:
+- ATC-AI-GOV-CAPABILITY-001
+- ATC-STD-000
 id: ATC-AI-GOV-ACCESS-001
 implementation:
   status: specification_only

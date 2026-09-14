@@ -229,6 +229,14 @@ standards:
       evidence: "atc-node R1-Skeleton (S4, AD-046); Bootstrap/Discovery-Standards warten auf Node-Rebuild"
     independence: L1
 
+  - standard: ATC-STD-NET-009
+    version: "1.0.0"
+    applicability: CONDITIONAL
+    implementation:
+      status: specification_only
+      evidence: "DRAFT (SCR-0122): Alle 3 Netzwerke status=planned, keine Genesis; maturity/version-Felder noch nicht in registry/networks.yaml"
+    independence: L1
+
   - standard: ATC-STD-NET-005
     version: "1.0.0"
     applicability: CONDITIONAL
@@ -3957,6 +3965,206 @@ standards:
     implementation:
       status: reference
       evidence: "Legacy-Serie (atc/): durch ATC-STD-000ff superseded; historische Referenz konserviert"
+    independence: L1
+
+  - standard: ATC-STD-MAINT-000
+    version: "1.0.0"
+    applicability: MANDATORY
+    implementation:
+      status: specification_only
+      evidence: "SCR-0120 DRAFT (14.09.2026): Maintenance Governance (Dachstandard) — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence (cargo audit, CodeQL, Drift-Checks) referenziert"
+    independence: L1
+
+  - standard: ATC-STD-MAINT-001
+    version: "1.0.0"
+    applicability: MANDATORY
+    implementation:
+      status: specification_only
+      evidence: "SCR-0120 DRAFT (14.09.2026): Maintenance Classification (M0-M3) — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence (cargo audit, CodeQL, Drift-Checks) referenziert"
+    independence: L1
+
+  - standard: ATC-STD-MAINT-002
+    version: "1.0.0"
+    applicability: MANDATORY
+    implementation:
+      status: specification_only
+      evidence: "SCR-0120 DRAFT (14.09.2026): Maintenance Lifecycle (13 Phasen) — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence (cargo audit, CodeQL, Drift-Checks) referenziert"
+    independence: L1
+
+  - standard: ATC-STD-MAINT-003
+    version: "1.0.0"
+    applicability: MANDATORY
+    implementation:
+      status: specification_only
+      evidence: "SCR-0120 DRAFT (14.09.2026): Code Maintenance — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence (cargo audit, CodeQL, Drift-Checks) referenziert"
+    independence: L1
+
+  - standard: ATC-STD-MAINT-004
+    version: "1.0.0"
+    applicability: MANDATORY
+    implementation:
+      status: specification_only
+      evidence: "SCR-0120 DRAFT (14.09.2026): Dependency Maintenance — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence (cargo audit, CodeQL, Drift-Checks) referenziert"
+    independence: L1
+
+  - standard: ATC-STD-MAINT-005
+    version: "1.0.0"
+    applicability: MANDATORY
+    implementation:
+      status: specification_only
+      evidence: "SCR-0120 DRAFT (14.09.2026): Security Maintenance — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence (cargo audit, CodeQL, Drift-Checks) referenziert"
+    independence: L1
+
+  - standard: ATC-STD-MAINT-006
+    version: "1.0.0"
+    applicability: MANDATORY
+    implementation:
+      status: specification_only
+      evidence: "SCR-0120 DRAFT (14.09.2026): Infrastructure Maintenance — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence (cargo audit, CodeQL, Drift-Checks) referenziert"
+    independence: L1
+
+  - standard: ATC-STD-MAINT-007
+    version: "1.0.0"
+    applicability: MANDATORY
+    implementation:
+      status: specification_only
+      evidence: "SCR-0120 DRAFT (14.09.2026): OS Maintenance — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence (cargo audit, CodeQL, Drift-Checks) referenziert"
+    independence: L1
+
+  - standard: ATC-STD-MAINT-008
+    version: "1.0.0"
+    applicability: MANDATORY
+    implementation:
+      status: specification_only
+      evidence: "SCR-0120 DRAFT (14.09.2026): Blockchain Maintenance — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence (cargo audit, CodeQL, Drift-Checks) referenziert"
+    independence: L1
+
+  - standard: ATC-STD-MAINT-009
+    version: "1.0.0"
+    applicability: MANDATORY
+    implementation:
+      status: specification_only
+      evidence: "SCR-0120 DRAFT (14.09.2026): VM & Runtime Maintenance — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence (cargo audit, CodeQL, Drift-Checks) referenziert"
+    independence: L1
+
+  - standard: ATC-STD-MAINT-010
+    version: "1.0.0"
+    applicability: MANDATORY
+    implementation:
+      status: specification_only
+      evidence: "SCR-0120 DRAFT (14.09.2026): AI Maintenance — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence (cargo audit, CodeQL, Drift-Checks) referenziert"
+    independence: L1
+
+  - standard: ATC-STD-MAINT-011
+    version: "1.0.0"
+    applicability: MANDATORY
+    implementation:
+      status: specification_only
+      evidence: "SCR-0120 DRAFT (14.09.2026): Repository Maintenance — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence (cargo audit, CodeQL, Drift-Checks) referenziert"
+    independence: L1
+
+  - standard: ATC-STD-MAINT-012
+    version: "1.0.0"
+    applicability: MANDATORY
+    implementation:
+      status: specification_only
+      evidence: "SCR-0120 DRAFT (14.09.2026): Standards Maintenance — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence (cargo audit, CodeQL, Drift-Checks) referenziert"
+    independence: L1
+
+  - standard: ATC-STD-MAINT-013
+    version: "1.0.0"
+    applicability: MANDATORY
+    implementation:
+      status: specification_only
+      evidence: "SCR-0120 DRAFT (14.09.2026): Documentation Maintenance — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence (cargo audit, CodeQL, Drift-Checks) referenziert"
+    independence: L1
+
+  - standard: ATC-STD-MAINT-014
+    version: "1.0.0"
+    applicability: MANDATORY
+    implementation:
+      status: specification_only
+      evidence: "SCR-0120 DRAFT (14.09.2026): Performance Maintenance — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence (cargo audit, CodeQL, Drift-Checks) referenziert"
+    independence: L1
+
+  - standard: ATC-STD-MAINT-015
+    version: "1.0.0"
+    applicability: MANDATORY
+    implementation:
+      status: specification_only
+      evidence: "SCR-0120 DRAFT (14.09.2026): Reliability Maintenance — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence (cargo audit, CodeQL, Drift-Checks) referenziert"
+    independence: L1
+
+  - standard: ATC-STD-MAINT-016
+    version: "1.0.0"
+    applicability: MANDATORY
+    implementation:
+      status: specification_only
+      evidence: "SCR-0120 DRAFT (14.09.2026): Compatibility Maintenance — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence (cargo audit, CodeQL, Drift-Checks) referenziert"
+    independence: L1
+
+  - standard: ATC-STD-MAINT-017
+    version: "1.0.0"
+    applicability: MANDATORY
+    implementation:
+      status: specification_only
+      evidence: "SCR-0120 DRAFT (14.09.2026): Upgrade & Migration — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence (cargo audit, CodeQL, Drift-Checks) referenziert"
+    independence: L1
+
+  - standard: ATC-STD-MAINT-018
+    version: "1.0.0"
+    applicability: MANDATORY
+    implementation:
+      status: specification_only
+      evidence: "SCR-0120 DRAFT (14.09.2026): Rollback & Recovery — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence (cargo audit, CodeQL, Drift-Checks) referenziert"
+    independence: L1
+
+  - standard: ATC-STD-MAINT-019
+    version: "1.0.0"
+    applicability: MANDATORY
+    implementation:
+      status: specification_only
+      evidence: "SCR-0120 DRAFT (14.09.2026): Maintenance Evidence — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence (cargo audit, CodeQL, Drift-Checks) referenziert"
+    independence: L1
+
+  - standard: ATC-STD-MAINT-020
+    version: "1.0.0"
+    applicability: MANDATORY
+    implementation:
+      status: specification_only
+      evidence: "SCR-0120 DRAFT (14.09.2026): Maintenance Automation — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence (cargo audit, CodeQL, Drift-Checks) referenziert"
+    independence: L1
+
+  - standard: ATC-STD-MAINT-021
+    version: "1.0.0"
+    applicability: MANDATORY
+    implementation:
+      status: specification_only
+      evidence: "SCR-0120 v3 DRAFT (14.09.2026): Emergency Maintenance — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence referenziert"
+    independence: L1
+
+  - standard: ATC-STD-MAINT-022
+    version: "1.0.0"
+    applicability: MANDATORY
+    implementation:
+      status: specification_only
+      evidence: "SCR-0120 v3 DRAFT (14.09.2026): End-of-Life & Retirement — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence referenziert"
+    independence: L1
+
+  - standard: ATC-STD-MAINT-023
+    version: "1.0.0"
+    applicability: MANDATORY
+    implementation:
+      status: specification_only
+      evidence: "SCR-0120 v3 DRAFT (14.09.2026): Vendor & Supply-Chain Maintenance — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence referenziert"
+    independence: L1
+
+  - standard: ATC-STD-MAINT-024
+    version: "1.0.0"
+    applicability: MANDATORY
+    implementation:
+      status: specification_only
+      evidence: "SCR-0120 v3 DRAFT (14.09.2026): Cross-Ecosystem Maintenance — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence referenziert"
     independence: L1
 
   - standard: ATC-STD-ENG-001

@@ -5,6 +5,7 @@ family: LEGACY-SERIES
 family_id: LEGACY
 file: governance/constitution/ATC-GOV-001.md
 mandate: Owner-Entwurf Governance Operating System 11.09. (SCR-0097; neue GOV-Praefix-Familie)
+registry_version: 1
 standard_id: ATC-GOV-001
 status: approved
 title: 'A-TownChain Governance Constitution (Level-0-Verfassung: 5-Ebenen-Hierarchie,

@@ -6,6 +6,7 @@ family_id: '000'
 file: standards/enterprise/ATC-STD-032.md
 mandate: Owner-Entwurf 11.09. (SCR-0095 Automated Assurance; Owner-Referenz 030 —
   §37 -> 032)
+registry_version: 1
 standard_id: ATC-STD-032
 status: approved
 title: Automated Update Management Standard (5-Kategorie-Release-Klassifizierung,

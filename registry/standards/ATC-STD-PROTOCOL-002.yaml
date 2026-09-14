@@ -9,6 +9,7 @@ mandate: 'SCR-0029 (08.09. 01:40): 123. Standard — 7 REQ-CONF, CONF-[FAMILY]-N
   registry/protocol-conformance.yaml (SSOT, CONF-P2P-001 erste Instanz) — §9-FREIGEGEBEN
   08.09. 01:41 UTC+2, normativ, §30-eingefroren; gebuendelt genehmigt FRAMEWORK-001
   v1.0.7-PATCH'
+registry_version: 1
 standard_id: ATC-STD-PROTOCOL-002
 status: approved
 title: ATC Protocol Conformance- & Interoperabilitäts-Test-Standard — CONF-Pläne je

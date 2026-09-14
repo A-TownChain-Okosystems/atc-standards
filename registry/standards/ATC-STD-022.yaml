@@ -5,6 +5,7 @@ family: GOVERNANCE / META
 family_id: '000'
 file: standards/enterprise/ATC-STD-022.md
 mandate: Owner-Entwurf 11.09. (SCR-0094 Continuous Assurance)
+registry_version: 1
 standard_id: ATC-STD-022
 status: approved
 title: Security Patch Management Standard (SLA Critical<=24h/High<=72h/Medium<=14d/Low<=30d,

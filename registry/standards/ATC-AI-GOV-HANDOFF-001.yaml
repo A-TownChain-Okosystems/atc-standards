@@ -6,6 +6,7 @@ family_id: LEGACY
 file: standards/ai-gov/ATC-AI-GOV-HANDOFF-001.md
 mandate: Owner-Entwurf 09.09.; SSOT ai/handoff.yaml (Protokoll+Template); 3 REQ-AGOV-HOF;
   SCR-0061
+registry_version: 1
 standard_id: ATC-AI-GOV-HANDOFF-001
 status: draft
 title: ATC Agent Governance — Agent-to-Agent Übergabe (10 Pflichtfelder, Kontinuität,

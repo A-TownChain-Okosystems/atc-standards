@@ -6,6 +6,7 @@ family_id: PREFIX
 file: standards/sc/ATC-STD-SC-001.md
 mandate: 'Owner-Entwurf 07.09. — Familien-Hauptstandard: Kategorien, SSOT-Kette, Gates
   SC-G0..G13'
+registry_version: 1
 standard_id: ATC-STD-SC-001
 status: approved
 title: Smart Contract General Standard

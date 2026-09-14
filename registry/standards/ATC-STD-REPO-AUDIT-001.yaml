@@ -11,6 +11,7 @@ mandate: Owner-Entwurf 07.09. 23:54 — 25 REQ-RA, 16 Prüfbereiche, 26-Zeilen-P
   via AUDIT-001, COMPAT-001-Kopplung §20, RCA via BUG-005, REPO-AUDIT-002 (Health-Score/CHECK-NNN)
   + 003 (Auditor-Agent) GEPLANT; SCR-0020; §9-Freigabe 07.09. 23:58, APPROVED, normativ,
   §30-eingefroren
+registry_version: 1
 standard_id: ATC-STD-REPO-AUDIT-001
 status: approved
 title: 'ATC Repository Audit Standard — Verbindlicher, reproduzierbarer Repository

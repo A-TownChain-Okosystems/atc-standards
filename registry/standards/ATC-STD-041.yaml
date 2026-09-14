@@ -6,6 +6,7 @@ family_id: '000'
 file: standards/enterprise/ATC-STD-041.md
 mandate: Owner-Entwurf 11.09. (SCR-0095 Automated Assurance; Owner-Referenz 038 —
   Slots 040 belegt, §37 -> 041)
+registry_version: 1
 standard_id: ATC-STD-041
 status: approved
 title: Reproducible & Verifiable Builds Standard (Build-Kette Pinned Deps->Reproducible

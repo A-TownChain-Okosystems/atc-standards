@@ -5,6 +5,7 @@ family: ZKP
 family_id: PREFIX
 file: standards/zkp/ATC-STD-ZKP-001.md
 mandate: Owner-Entwurf 07.09. (AD-045)
+registry_version: 1
 standard_id: ATC-STD-ZKP-001
 status: approved
 title: ZKP Architecture Standard
