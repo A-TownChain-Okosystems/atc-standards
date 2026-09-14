@@ -13,7 +13,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-MARKER = re.compile(r"ATC-REGISTRY-BLOB-SHA256:\s*([0-9a-f]{40})")
+MARKER = re.compile(r"ATC-REGISTRY-BLOB-SHA256:\s*`?([0-9a-f]{40})`?")
 
 
 def git_blob_sha(path: str) -> str:
