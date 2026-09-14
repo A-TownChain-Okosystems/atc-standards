@@ -13,14 +13,16 @@ conflicts:
     status: open
     severity: high
     scope: registry/standards.yaml
-    description: "The registry contains multiple identifier namespaces: numeric ATC-STD-NNN and domain-prefixed ATC-STD-* identifiers."
+    description: "The registry contains multiple identifier namespaces: numeric ATC-STD-NNN, domain-prefixed ATC-STD-*, and additional ATC-AAS/ATC-ENT/ATC-ARCH namespaces."
     evidence:
-      - "ATC-STD-000"
-      - "ATC-STD-201..204"
-      - "ATC-STD-AI-DEV-*"
-      - "ATC-STD-BUG-*"
-      - "ATC-STD-NET-*"
-      - "ATC-STD-ZKP-*"
+      observed_record_count: 505
+      namespace_counts:
+        ATC-STD-numeric: 304
+        ATC-STD-domain-prefixed: 145
+        ATC-AAS: 25
+        ATC-ENT: 15
+        ATC-ARCH: 1
+        ATC: 15
     resolution: "Inventory all namespaces before canonical Family-scoped allocation."
 
   - id: MIG-CONFLICT-002
@@ -28,23 +30,35 @@ conflicts:
     status: open
     severity: critical
     scope: "ATC-STD-600..699"
-    description: "The legacy numeric 600-range cannot be assumed to represent one semantic family because existing standards in adjacent numeric ranges have established domain ownership."
+    description: "The legacy 600-range is semantically partitioned across OS, language/development, audit/evidence, repository/supply-chain, and governance standards. It cannot be interpreted as a Blockchain Family."
     evidence:
-      - "Existing OS standards include ATC-STD-601 through ATC-STD-607."
-      - "Blockchain candidates must be classified individually."
+      observed_entries: 31
+      categories:
+        os: 8
+        development: 6
+        audit: 4
+        repository: 6
+        governance: 7
+      examples:
+        - "ATC-STD-600..607 are OS standards."
+        - "ATC-STD-620, 623..627 are ATCLang/development standards."
+        - "ATC-STD-640, 641, 643, 646 are audit standards."
+        - "ATC-STD-660, 662, 664..667 are repository/supply-chain standards."
+        - "ATC-STD-680..686 are governance standards."
     resolution: "Perform semantic classification per legacy standard; never bulk-map 600..699 to F03."
 
   - id: MIG-CONFLICT-003
     type: generated-state-drift
     status: open
-    severity: high
-    scope: "registry/registry.lock vs registry/GENERATED_STATE.md"
-    description: "Registry state artifacts currently expose different registry hashes."
+    severity: critical
+    scope: "registry/standards.yaml vs generated registry anchors"
+    description: "The authoritative registry currently hashes differently from both generated-state anchors, so derived registry state is stale or based on a different source revision."
     evidence:
+      observed_registry_sha256: "f5171f46250c6ad0e7a08b906a1657225413dbc1929e57d78cc38a138c80fcde"
       registry_lock_sha256: "8ff9ce3b9aba170adbeb0833ad1b7f0ada86f671c036ba152b4aebd7f1f87cf27"
       generated_state_sha256: "2c1ae2355ee1bb5110898a3bb8839ae713e85203"
-      status_manifest_sha256_prefix: "8ff9ce3b9aba"
-    resolution: "Determine authoritative registry generation input, regenerate derived state, and verify all propagated hashes before migration."
+      duplicate_legacy_ids: 0
+    resolution: "Determine the authoritative registry generation input, regenerate derived state, and verify all propagated hashes before migration."
 
   - id: MIG-CONFLICT-004
     type: legacy-structure
