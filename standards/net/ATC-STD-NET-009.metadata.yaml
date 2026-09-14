@@ -3,7 +3,10 @@ authority: A-TownChain-Okosystems
 category: net
 conformance:
   required: true
-dependencies: []
+dependencies:
+- ATC-STD-COMPAT-001
+- ATC-STD-NET-004
+- ATC-STD-VERSION-001
 id: ATC-STD-NET-009
 implementation:
   status: specification_only
