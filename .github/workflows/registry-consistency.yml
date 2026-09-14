@@ -15,6 +15,46 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Set up Python for migration inventory
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install YAML parser for migration inventory
+        run: python -m pip install --disable-pip-version-check PyYAML
+
+      - name: Generate legacy migration inventory
+        run: |
+          python tools/registry-migration/inventory.py \
+            --repo . \
+            --output registry/migrations/standard-inventory.generated.yaml
+
+      - name: Validate migration inventory invariants
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import yaml
+          p = Path('registry/migrations/standard-inventory.generated.yaml')
+          data = yaml.safe_load(p.read_text(encoding='utf-8'))
+          assert data['rules']['canonical_ids_allocated_only_after_review'] is True
+          assert data['rules']['automatic_family_assignment'] is False
+          assert all(e['canonical_id'] is None for e in data['entries'])
+          assert all(e['sequence'] is None for e in data['entries'])
+          assert all(e['family']['id'] is None for e in data['entries'])
+          assert all(e['category']['id'] is None for e in data['entries'])
+          assert all(e['class']['id'] is None for e in data['entries'])
+          print(f"Validated {len(data['entries'])} legacy inventory entries")
+          print(f"Registry SHA-256: {data['discovery']['registry_sha256']}")
+          print(f"Duplicate IDs: {len(data['discovery']['duplicate_legacy_ids'])}")
+          PY
+
+      - name: Upload migration inventory artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: standard-inventory-generated
+          path: registry/migrations/standard-inventory.generated.yaml
+          if-no-files-found: error
+
       - name: Validate registry-generated views
         run: python3 tools/consistency/registry_view_gate.py
 
