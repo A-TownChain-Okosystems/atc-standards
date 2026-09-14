@@ -185,6 +185,7 @@ for name, meta in families.items():
 
 # Kategorie-Ebene: für neue Familien via ATC-CAT-REQ; Bestand führt GENERAL (Grandfathering)
 
+
 def reg_lookup(mid):
     """SCR-0091: Status/Version aus Registry-SSOT abgeleitet — keine Hartcodes."""
     for line in open("registry/standards.yaml", encoding="utf-8"):
