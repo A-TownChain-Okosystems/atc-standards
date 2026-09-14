@@ -1,0 +1,11 @@
+schema_version: "1.0.0"
+status: working_inventory
+purpose: "Phase-1 inventory of existing standards before canonical Family-scoped ID migration"
+source_of_truth: registry/standards.yaml
+rules:
+  legacy_ids_immutable: true
+  canonical_ids_allocated_only_after_review: true
+  automatic_numeric_renumbering: false
+  automatic_family_assignment: false
+  conflicts_fail_closed: true
+entries: []
