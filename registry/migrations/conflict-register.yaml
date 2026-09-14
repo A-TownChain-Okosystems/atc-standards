@@ -49,16 +49,18 @@ conflicts:
 
   - id: MIG-CONFLICT-003
     type: generated-state-drift
-    status: open
+    status: resolved
     severity: critical
     scope: "registry/standards.yaml vs generated registry anchors"
-    description: "The authoritative registry currently hashes differently from both generated-state anchors, so derived registry state is stale or based on a different source revision."
+    description: "The previous audit incorrectly compared two different hash types. registry/GENERATED_STATE.md stores the Git blob SHA of registry/standards.yaml, while registry/registry.lock stores a SHA-256 digest of the file bytes. The current Git blob SHA is consistent with GENERATED_STATE.md. The registry.lock SHA-256 was stale and has now been refreshed from the observed repository bytes."
     evidence:
       observed_registry_sha256: "f5171f46250c6ad0e7a08b906a1657225413dbc1929e57d78cc38a138c80fcde"
-      registry_lock_sha256: "8ff9ce3b9aba170adbeb0833ad1b7f0ada86f671c036ba152b4aebd7f1f87cf27"
-      generated_state_sha256: "2c1ae2355ee1bb5110898a3bb8839ae713e85203"
+      registry_lock_sha256_previous: "8ff9ce3b9aba170adbeb0833ad1b7f0ada86f671c036ba152b4aebd7f1f87cf27"
+      registry_lock_sha256_current: "f5171f46250c6ad0e7a08b906a1657225413dbc1929e57d78cc38a138c80fcde"
+      generated_state_git_blob_sha: "2c1ae2355ee1bb5110898a3bb8839ae713e85203"
+      current_registry_git_blob_sha: "2c1ae2355ee1bb5110898a3bb8839ae713e85203"
       duplicate_legacy_ids: 0
-    resolution: "Determine the authoritative registry generation input, regenerate derived state, and verify all propagated hashes before migration."
+    resolution: "Keep hash semantics explicit: Git blob SHA for GENERATED_STATE.md gate; SHA-256 file digest for registry.lock. Recompute both from the authoritative registry whenever registry/standards.yaml changes."
 
   - id: MIG-CONFLICT-004
     type: legacy-structure
