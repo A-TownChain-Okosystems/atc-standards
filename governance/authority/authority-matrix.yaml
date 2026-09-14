@@ -1,7 +1,7 @@
 # ATC-GOV-001 Kap. 3/4 — Authorities & Decision Rights Matrix (L1)
 # SSOT: maschinenlesbar; Änderung nur via Governance-Prozess (Kap. 18)
 constitution_ref: ATC-GOV-001
-version: "1.1.0"
+version: "1.1.1"
 god_mode: forbidden
 
 # Identity SSOT: current person-level authority is declared here.
@@ -9,19 +9,19 @@ god_mode: forbidden
 identity_authority:
   current:
     owner:
+      name: "Michael Wroblewski"
+      status: CURRENT
+      source: "Current owner authority; authoritative governance identity"
+    reviewer:
       name: "Alexander Wroblewski"
       status: CURRENT
-      source: "Current §9 approval record dated 2026-09-11"
+      source: "Current review authority; authoritative governance review role"
     approver:
-      name: "Alexander Wroblewski"
+      name: "Michael Wroblewski"
       status: CURRENT
-      source: "Current §9 approval record dated 2026-09-11"
-  historical:
-    - name: "Michael Wroblewski"
-      aliases: ["ShivaCoreDev"]
-      status: HISTORICAL
-      rule: "Historical approval/security/copyright/audit records remain immutable and do not imply current authority."
-  conflict_rule: "Current normative documents reference this SSOT; conflicting current documents are governance findings, while historical records remain unchanged."
+      source: "Current owner authority; approval remains with owner unless a specific decision-right matrix delegates it"
+  historical: []
+  conflict_rule: "Current normative documents reference this SSOT. Historical approval/security/copyright/audit records retain their original identities and are not rewritten. A reviewer is not implicitly an owner or approver."
 
 authorities:
   standards_authority:     { capabilities: [standards-approval, standards-review-chain, registry-allokation], forbidden: [treasury, release, repo-deletion] }
@@ -35,14 +35,14 @@ authorities:
 
 decision_rights_matrix:
   # Entscheidung: Propose / Review / Approve / Execute / Audit (+ Block/Info)
-  standard:          { propose: Author, review: [Technical, Security], approve: Standards Authority, execute: Maintainer, audit: Audit, block: [Security Authority], info: [Governance] }
-  architecture:      { propose: Architect, review: [Security], approve: Architecture Authority, execute: Engineering, audit: Audit }
-  security_fix:      { propose: Security, review: [Security Council], approve: Emergency Authority (Critical) / Security Authority, execute: Maintainer, audit: Audit }
-  mainnet_release:   { propose: Release Team, review: [Security, QA], approve: Release Authority, execute: Release Team, audit: Audit }
-  smart_contract:    { propose: Developer, review: [Security], approve: Protocol Authority, execute: Deployment Team, audit: Audit }
-  github_ruleset:    { propose: Admin, review: [Governance], approve: Governance Authority, execute: GitHub Admin, audit: Audit }
-  treasury_transfer: { propose: Treasury, review: [Security], approve: Treasury Authority (Multisig), execute: Multisig, audit: Audit, timelock: required }
-  ai_agent_policy:   { propose: Agent Owner, review: [Security], approve: AI Governance, execute: Platform, audit: Audit }
+  standard:          { propose: Author, review: Reviewer, approve: Owner, execute: Maintainer, audit: Audit, block: [Security Authority], info: [Governance] }
+  architecture:      { propose: Architect, review: Reviewer, approve: Owner, execute: Engineering, audit: Audit }
+  security_fix:      { propose: Security, review: [Reviewer, Security Council], approve: Owner / Emergency Authority (Critical), execute: Maintainer, audit: Audit }
+  mainnet_release:   { propose: Release Team, review: [Reviewer, Security, QA], approve: Release Authority, execute: Release Team, audit: Audit }
+  smart_contract:    { propose: Developer, review: [Reviewer, Security], approve: Protocol Authority, execute: Deployment Team, audit: Audit }
+  github_ruleset:    { propose: Admin, review: Reviewer, approve: Governance Authority, execute: GitHub Admin, audit: Audit }
+  treasury_transfer: { propose: Treasury, review: [Reviewer, Security], approve: Treasury Authority (Multisig), execute: Multisig, audit: Audit, timelock: required }
+  ai_agent_policy:   { propose: Agent Owner, review: [Reviewer, Security], approve: AI Governance, execute: Platform, audit: Audit }
 
 approval_quorums:
   normal_change:      "2 unabhaengige Approvals"
