@@ -5,10 +5,8 @@ The generator is intentionally fail-closed:
 - registry/standards.yaml is the primary registry source;
 - existing IDs are preserved verbatim as legacy_id;
 - family/category/class/sequence/canonical_id remain unset;
-- duplicate IDs and cross-source collisions are reported as conflicts;
+- duplicate IDs are reported as conflicts;
 - no file rename or ID migration is performed.
-
-Requires PyYAML. No dependency installation is performed by this tool.
 """
 
 from __future__ import annotations
@@ -26,6 +24,8 @@ except ImportError as exc:  # pragma: no cover
 
 ID_RE = re.compile(r"\b(?:ATC-(?:STD|AAS|ENT|ARCH)|FAM)-[A-Z0-9][A-Z0-9_-]*\b")
 CANONICAL_RE = re.compile(r"^ATC-STD-F\d{2}-\d{3}$")
+NUMERIC_RE = re.compile(r"^ATC-STD-\d+$")
+DOMAIN_PREFIX_RE = re.compile(r"^ATC-STD-[A-Z][A-Z0-9]+-")
 
 
 def sha256(path: Path) -> str:
@@ -44,9 +44,14 @@ def load_registry(path: Path) -> list[dict]:
 
 
 def namespace(identifier: str) -> str:
+    if CANONICAL_RE.fullmatch(identifier):
+        return "ATC-STD-canonical"
+    if NUMERIC_RE.fullmatch(identifier):
+        return "ATC-STD-numeric"
+    if DOMAIN_PREFIX_RE.match(identifier):
+        return "ATC-STD-domain-prefixed"
     if identifier.startswith("ATC-STD-"):
-        rest = identifier[len("ATC-STD-"):]
-        return "ATC-STD-Fxx" if CANONICAL_RE.fullmatch(identifier) else "ATC-STD"
+        return "ATC-STD-other"
     if identifier.startswith("ATC-AAS-"):
         return "ATC-AAS"
     if identifier.startswith("ATC-ENT-"):
@@ -74,9 +79,8 @@ def main() -> int:
     by_id: dict[str, list[dict]] = defaultdict(list)
     for record in records:
         identifier = str(record.get("id", "")).strip()
-        if not identifier:
-            continue
-        by_id[identifier].append(record)
+        if identifier:
+            by_id[identifier].append(record)
 
     source_occurrences: dict[str, set[str]] = defaultdict(set)
     for rel_root in args.scan_root:
@@ -100,8 +104,6 @@ def main() -> int:
             continue
         duplicate = len(by_id[identifier]) > 1
         source_paths = sorted(source_occurrences.get(identifier, set()))
-        conflict = duplicate
-        reason = "duplicate legacy ID in authoritative registry" if duplicate else None
         entries.append(
             {
                 "legacy_id": identifier,
@@ -117,9 +119,9 @@ def main() -> int:
                 "sequence": None,
                 "canonical_id": None,
                 "migration": {
-                    "status": "conflict" if conflict else "unreviewed",
-                    "conflict": conflict,
-                    "reason": reason,
+                    "status": "conflict" if duplicate else "unreviewed",
+                    "conflict": duplicate,
+                    "reason": "duplicate legacy ID in authoritative registry" if duplicate else None,
                 },
                 "observed_sources": source_paths,
             }
