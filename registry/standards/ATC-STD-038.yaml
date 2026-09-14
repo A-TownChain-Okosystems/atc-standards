@@ -7,7 +7,7 @@ file: standards/enterprise/ATC-STD-038.md
 mandate: Owner-Entwurf 11.09. (SCR-0095 Automated Assurance; Owner-Referenz 036 —
   §37 -> 038)
 standard_id: ATC-STD-038
-status: candidate
+status: approved
 title: Secrets & Credential Security Standard (Source-Control-Verbot P0, Leak-Kette
   Detection->Revocation->Rotation->Verification, Löschen genügt nie)
 version: 1.0.0

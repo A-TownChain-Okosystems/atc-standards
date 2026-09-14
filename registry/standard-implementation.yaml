@@ -3695,6 +3695,14 @@ standards:
       evidence: "Legacy-Serie (atc/): durch ATC-STD-000ff superseded; historische Referenz konserviert"
     independence: L1
 
+  - standard: ATC-AI-GOV-ACCESS-001
+    version: "1.0.0"
+    applicability: REFERENCE
+    implementation:
+      status: specification_only
+      evidence: "DRAFT (SCR-0121): Rollenprofil-Matrix als Zielarchitektur; Ist-Zustand klassisches PAT dokumentiert (SCR-0121 §3)"
+    independence: L1
+
   - standard: ATC-STD-016
     version: "1.0.0"
     applicability: CONDITIONAL

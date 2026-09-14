@@ -7,7 +7,7 @@ file: standards/enterprise/ATC-STD-026.md
 mandate: Owner-Entwurf 11.09. (SCR-0094 Continuous Assurance; Owner-Referenz 025 —
   Slot belegt (Standards Review), §37 -> 026)
 standard_id: ATC-STD-026
-status: candidate
+status: approved
 title: 'Security Regression Prevention Standard (Fix-zu-Test-Pflicht: jede behobene
   Vulnerability wird permanent Testfall, Qualitaets-/Nachweispflicht)'
 version: 1.0.0
