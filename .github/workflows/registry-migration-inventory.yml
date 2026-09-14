@@ -1,0 +1,73 @@
+name: Registry Migration Inventory
+
+on:
+  push:
+    branches:
+      - feat/standard-registry-migration-foundation
+    paths:
+      - 'registry/standards.yaml'
+      - 'registry/categories.yaml'
+      - 'registry/families/**'
+      - 'registry/GENERATED_STATE.md'
+      - 'registry/registry.lock'
+      - 'registry/migrations/**'
+      - 'tools/registry-migration/**'
+      - '.github/workflows/registry-migration-inventory.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout migration branch
+        uses: actions/checkout@v4
+        with:
+          ref: feat/standard-registry-migration-foundation
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install YAML parser
+        run: python -m pip install --disable-pip-version-check PyYAML
+
+      - name: Generate legacy inventory
+        run: |
+          python tools/registry-migration/inventory.py \
+            --repo . \
+            --output registry/migrations/standard-inventory.generated.yaml
+
+      - name: Validate generated inventory invariants
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import yaml
+          p = Path('registry/migrations/standard-inventory.generated.yaml')
+          data = yaml.safe_load(p.read_text(encoding='utf-8'))
+          assert data['rules']['canonical_ids_allocated_only_after_review'] is True
+          assert data['rules']['automatic_family_assignment'] is False
+          assert all(e['canonical_id'] is None for e in data['entries'])
+          assert all(e['sequence'] is None for e in data['entries'])
+          assert all(e['family']['id'] is None for e in data['entries'])
+          assert all(e['category']['id'] is None for e in data['entries'])
+          assert all(e['class']['id'] is None for e in data['entries'])
+          print(f"Validated {len(data['entries'])} legacy inventory entries")
+          print(f"Registry SHA-256: {data['discovery']['registry_sha256']}")
+          print(f"Duplicate IDs: {len(data['discovery']['duplicate_legacy_ids'])}")
+          PY
+
+      - name: Commit generated inventory
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add registry/migrations/standard-inventory.generated.yaml
+          if git diff --cached --quiet; then
+            echo 'Generated inventory unchanged.'
+            exit 0
+          fi
+          git commit -m 'chore(migration): generate legacy standard inventory [skip ci]'
+          git push origin HEAD:feat/standard-registry-migration-foundation
