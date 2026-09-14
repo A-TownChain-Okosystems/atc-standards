@@ -157,10 +157,15 @@ framework:
       note: Owner-Direktive 10.09. via SCR-0088 — Range-Verschiebung FAM-02 auf 021..033 dokumentiert
   - id: FAM-02
     name: Standards-Governance
-    range: ATC-STD-021..033
+    range: ATC-STD-000..033
     note: null
     family_refs: null
     slots:
+    - id: ATC-STD-000
+      title: "Standards Governance & Specification Standard (Verfassung; v1.3.0: Domaenen-Fami"
+      status: BELEGT
+      refs:
+      - ATC-STD-000
     - id: ATC-STD-021
       title: Standards Registry
       status: VERWEIST
@@ -3235,3 +3240,832 @@ framework:
       status: BELEGT
       refs:
       - ATC-STD-MAINT-024
+  - id: FAM-53
+    name: "Bug & Fehler-Reports (BUG)"
+    range: "ATC-STD-BUG-001..499"
+    note: 'Formale Familien-Allokation: Owner-Direktive 14.09. 08:54 "Jede Familie bekommt ihre eigene Nummierung" (SCR-0120 v9) — naechster freier Slot; Grandfathering der Kategorie entfaellt. Namespace BUG-*, abgesetzt von FAM-07 (numerisches Band ATC-STD-120..131).'
+    family_refs:
+    - ATC-STD-000
+    - ATC-STD-129
+    slots:
+    - id: ATC-STD-BUG-001
+      title: "Bug Finding Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-BUG-001
+    - id: ATC-STD-BUG-002
+      title: "Bug Documentation Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-BUG-002
+    - id: ATC-STD-BUG-003
+      title: "Bug Fix Lifecycle Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-BUG-003
+    - id: ATC-STD-BUG-004
+      title: "Repository Synchronization & Merge Gate"
+      status: BELEGT
+      refs:
+      - ATC-STD-BUG-004
+    - id: ATC-STD-BUG-005
+      title: "Fehleranalyse- und Root-Cause-Analysis-Standard — Analyse- und QMS-Schicht der B"
+      status: BELEGT
+      refs:
+      - ATC-STD-BUG-005
+  - id: FAM-54
+    name: "Zero-Knowledge Proofs (ZKP)"
+    range: "ATC-STD-ZKP-001..999"
+    note: 'Formale Familien-Allokation: Owner-Direktive 14.09. 08:54 "Jede Familie bekommt ihre eigene Nummierung" (SCR-0120 v9) — naechster freier Slot; Grandfathering der Kategorie entfaellt. Namespace ZKP-*, abgesetzt von FAM-15 (numerisches Band ATC-STD-260..267).'
+    family_refs:
+    - ATC-STD-000
+    - ATC-STD-ZKP-001
+    slots:
+    - id: ATC-STD-ZKP-001
+      title: "ZKP Architecture Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-ZKP-001
+    - id: ATC-STD-ZKP-002
+      title: "Proof System Interface Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-ZKP-002
+    - id: ATC-STD-ZKP-003
+      title: "Circuit Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-ZKP-003
+    - id: ATC-STD-ZKP-004
+      title: "On-Chain Verification Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-ZKP-004
+    - id: ATC-STD-ZKP-005
+      title: "Commitment & Nullifier Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-ZKP-005
+    - id: ATC-STD-ZKP-006
+      title: "ZK Identity Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-ZKP-006
+    - id: ATC-STD-ZKP-007
+      title: "Private Transaction Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-ZKP-007
+    - id: ATC-STD-ZKP-008
+      title: "ZK Rollup Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-ZKP-008
+    - id: ATC-STD-ZKP-009
+      title: "ZKVM Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-ZKP-009
+    - id: ATC-STD-ZKP-010
+      title: "ZKP Security & Audit Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-ZKP-010
+  - id: FAM-55
+    name: "AI-Assisted Development (AI-DEV)"
+    range: "ATC-STD-AI-DEV-001..012"
+    note: 'Formale Familien-Allokation: Owner-Direktive 14.09. 08:54 "Jede Familie bekommt ihre eigene Nummierung" (SCR-0120 v9) — naechster freier Slot; Grandfathering der Kategorie entfaellt.'
+    family_refs:
+    - ATC-STD-000
+    - ATC-STD-AI-DEV-001
+    slots:
+    - id: ATC-STD-AI-DEV-001
+      title: "Software Development AI Agent Identity & Workflow Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-AI-DEV-001
+    - id: ATC-STD-AI-DEV-002
+      title: "Agent Capabilities & Permissions Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-AI-DEV-002
+    - id: ATC-STD-AI-DEV-003
+      title: "Repository Discovery Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-AI-DEV-003
+    - id: ATC-STD-AI-DEV-004
+      title: "AI Task Management Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-AI-DEV-004
+    - id: ATC-STD-AI-DEV-005
+      title: "Finding & Evidence Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-AI-DEV-005
+    - id: ATC-STD-AI-DEV-006
+      title: "AI Decision & Action Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-AI-DEV-006
+    - id: ATC-STD-AI-DEV-007
+      title: "AI Git Commit & Pull Request Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-AI-DEV-007
+    - id: ATC-STD-AI-DEV-008
+      title: "AI Testing & Validation Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-AI-DEV-008
+    - id: ATC-STD-AI-DEV-009
+      title: "AI Audit Trail Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-AI-DEV-009
+    - id: ATC-STD-AI-DEV-010
+      title: "AI Documentation Synchronization Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-AI-DEV-010
+    - id: ATC-STD-AI-DEV-011
+      title: "Human Approval & Escalation Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-AI-DEV-011
+    - id: ATC-STD-AI-DEV-012
+      title: "Multi-Agent Coordination Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-AI-DEV-012
+  - id: FAM-56
+    name: "AI-Agent Standards (AAS)"
+    range: "ATC-AAS-001..025"
+    note: 'Formale Familien-Allokation: Owner-Direktive 14.09. 08:54 "Jede Familie bekommt ihre eigene Nummierung" (SCR-0120 v9) — naechster freier Slot; Grandfathering der Kategorie entfaellt.'
+    family_refs:
+    - ATC-STD-000
+    - ATC-AAS-001
+    slots:
+    - id: ATC-AAS-001
+      title: "Agent Identity Standard (P0)"
+      status: BELEGT
+      refs:
+      - ATC-AAS-001
+    - id: ATC-AAS-002
+      title: "Agent Capability Standard (P0)"
+      status: BELEGT
+      refs:
+      - ATC-AAS-002
+    - id: ATC-AAS-003
+      title: "Agent Permission Standard (P0)"
+      status: BELEGT
+      refs:
+      - ATC-AAS-003
+    - id: ATC-AAS-004
+      title: "Agent Scope Standard (P0)"
+      status: BELEGT
+      refs:
+      - ATC-AAS-004
+    - id: ATC-AAS-005
+      title: "Agent Discovery Standard (P0)"
+      status: BELEGT
+      refs:
+      - ATC-AAS-005
+    - id: ATC-AAS-006
+      title: "Agent Context Standard (P1)"
+      status: BELEGT
+      refs:
+      - ATC-AAS-006
+    - id: ATC-AAS-007
+      title: "Agent Task Standard (P0)"
+      status: BELEGT
+      refs:
+      - ATC-AAS-007
+    - id: ATC-AAS-008
+      title: "Agent Workflow Standard (P0)"
+      status: BELEGT
+      refs:
+      - ATC-AAS-008
+    - id: ATC-AAS-009
+      title: "Agent Change Standard (P1)"
+      status: BELEGT
+      refs:
+      - ATC-AAS-009
+    - id: ATC-AAS-010
+      title: "Agent Evidence Standard (P0)"
+      status: BELEGT
+      refs:
+      - ATC-AAS-010
+    - id: ATC-AAS-011
+      title: "Agent Verification Standard (P0)"
+      status: BELEGT
+      refs:
+      - ATC-AAS-011
+    - id: ATC-AAS-012
+      title: "Agent Hallucination / Assumption Standard (P0)"
+      status: BELEGT
+      refs:
+      - ATC-AAS-012
+    - id: ATC-AAS-013
+      title: "Agent Conflict Resolution Standard (P1)"
+      status: BELEGT
+      refs:
+      - ATC-AAS-013
+    - id: ATC-AAS-014
+      title: "Agent Security Standard (P0)"
+      status: BELEGT
+      refs:
+      - ATC-AAS-014
+    - id: ATC-AAS-015
+      title: "Agent Git Standard (P0)"
+      status: BELEGT
+      refs:
+      - ATC-AAS-015
+    - id: ATC-AAS-016
+      title: "Agent PR Standard (P0)"
+      status: BELEGT
+      refs:
+      - ATC-AAS-016
+    - id: ATC-AAS-017
+      title: "Agent Human Approval Standard (P0)"
+      status: BELEGT
+      refs:
+      - ATC-AAS-017
+    - id: ATC-AAS-018
+      title: "Agent Audit Trail Standard (P0)"
+      status: BELEGT
+      refs:
+      - ATC-AAS-018
+    - id: ATC-AAS-019
+      title: "Agent Handoff Standard (P1)"
+      status: BELEGT
+      refs:
+      - ATC-AAS-019
+    - id: ATC-AAS-020
+      title: "Agent Failure Standard (P1)"
+      status: BELEGT
+      refs:
+      - ATC-AAS-020
+    - id: ATC-AAS-021
+      title: "Agent Quality Standard (P2)"
+      status: BELEGT
+      refs:
+      - ATC-AAS-021
+    - id: ATC-AAS-022
+      title: "Agent Versioning Standard (P1)"
+      status: BELEGT
+      refs:
+      - ATC-AAS-022
+    - id: ATC-AAS-023
+      title: "Agent Role Standard (P2)"
+      status: BELEGT
+      refs:
+      - ATC-AAS-023
+    - id: ATC-AAS-024
+      title: "Agent-to-Agent Protocol Standard (P1)"
+      status: BELEGT
+      refs:
+      - ATC-AAS-024
+    - id: ATC-AAS-025
+      title: "Agent Repository Manifest Standard (P1)"
+      status: BELEGT
+      refs:
+      - ATC-AAS-025
+  - id: FAM-57
+    name: "Enterprise Standards (ATC-ENT)"
+    range: "ATC-ENT-001..015 + ATC-STD-034..039 + ATC-GATE-SEC-001 + ATC-ORG-BASELINE-001"
+    note: 'Formale Familien-Allokation: Owner-Direktive 14.09. 08:54 "Jede Familie bekommt ihre eigene Nummierung" (SCR-0120 v9) — naechster freier Slot; Grandfathering der Kategorie entfaellt.'
+    family_refs:
+    - ATC-STD-000
+    - ATC-ENT-001
+    slots:
+    - id: ATC-ENT-001
+      title: "Enterprise Governance Standard (P0)"
+      status: BELEGT
+      refs:
+      - ATC-ENT-001
+    - id: ATC-ENT-002
+      title: "Rollen & Verantwortlichkeiten Standard (P0)"
+      status: BELEGT
+      refs:
+      - ATC-ENT-002
+    - id: ATC-ENT-003
+      title: "Entscheidungsmanagement Standard (P0)"
+      status: BELEGT
+      refs:
+      - ATC-ENT-003
+    - id: ATC-ENT-004
+      title: "Delegation & Berechtigungen Standard (P0)"
+      status: BELEGT
+      refs:
+      - ATC-ENT-004
+    - id: ATC-ENT-005
+      title: "Unternehmensrichtlinien Standard (P1)"
+      status: BELEGT
+      refs:
+      - ATC-ENT-005
+    - id: ATC-ENT-006
+      title: "Interessenkonflikte Standard (P2)"
+      status: BELEGT
+      refs:
+      - ATC-ENT-006
+    - id: ATC-ENT-007
+      title: "Eskalationsmanagement Standard (P1)"
+      status: BELEGT
+      refs:
+      - ATC-ENT-007
+    - id: ATC-ENT-008
+      title: "Organisationsstruktur Standard (P1)"
+      status: BELEGT
+      refs:
+      - ATC-ENT-008
+    - id: ATC-ENT-009
+      title: "Repository Governance Standard (P1)"
+      status: BELEGT
+      refs:
+      - ATC-ENT-009
+    - id: ATC-ENT-010
+      title: "Enterprise Change Management Standard (P0)"
+      status: BELEGT
+      refs:
+      - ATC-ENT-010
+    - id: ATC-ENT-011
+      title: "Risiko-Management Standard (P0)"
+      status: BELEGT
+      refs:
+      - ATC-ENT-011
+    - id: ATC-ENT-012
+      title: "Wissensmanagement & Consistency-Gate Standard (P1)"
+      status: BELEGT
+      refs:
+      - ATC-ENT-012
+    - id: ATC-ENT-013
+      title: "KPI & Performance Standard (P2)"
+      status: BELEGT
+      refs:
+      - ATC-ENT-013
+    - id: ATC-ENT-014
+      title: "Audit & Nachvollziehbarkeit Standard (P1)"
+      status: BELEGT
+      refs:
+      - ATC-ENT-014
+    - id: ATC-ENT-015
+      title: "Qualitätsmanagement & Definition of Done Standard (P2)"
+      status: BELEGT
+      refs:
+      - ATC-ENT-015
+    - id: ATC-GATE-SEC-001
+      title: "Continuous Security & Technology Assurance Gate (14 Gate-Zeilen, RELEASE-READY-R"
+      status: BELEGT
+      refs:
+      - ATC-GATE-SEC-001
+    - id: ATC-ORG-BASELINE-001
+      title: "ATC Organization Engineering Baseline (5 Schutzschichten, Repo-Tiers T0-T4 mit A"
+      status: BELEGT
+      refs:
+      - ATC-ORG-BASELINE-001
+    - id: ATC-STD-034
+      title: "Exploitability Assessment Standard (7 Bewertungsfaktoren Existence..Network-Reac"
+      status: BELEGT
+      refs:
+      - ATC-STD-034
+    - id: ATC-STD-035
+      title: "Zero-Day Response Standard (9-Schritt-Kette Confirm..Recover, 8 Containment-Maßn"
+      status: BELEGT
+      refs:
+      - ATC-STD-035
+    - id: ATC-STD-036
+      title: "Emergency Security Change Standard (7-Schritt-Notfallpfad mit Security Authoriza"
+      status: BELEGT
+      refs:
+      - ATC-STD-036
+    - id: ATC-STD-037
+      title: "Security Configuration Baseline Standard (15 Konfigurationsbereiche OS..Monitori"
+      status: BELEGT
+      refs:
+      - ATC-STD-037
+    - id: ATC-STD-038
+      title: "Secrets & Credential Security Standard (Source-Control-Verbot P0, Leak-Kette Det"
+      status: BELEGT
+      refs:
+      - ATC-STD-038
+    - id: ATC-STD-039
+      title: "Cryptographic Agility Standard (austauschbare Crypto-Interfaces Current/Alternat"
+      status: BELEGT
+      refs:
+      - ATC-STD-039
+  - id: FAM-58
+    name: "README Governance (README)"
+    range: "ATC-STD-README-001..999"
+    note: 'Formale Familien-Allokation: Owner-Direktive 14.09. 08:54 "Jede Familie bekommt ihre eigene Nummierung" (SCR-0120 v9) — naechster freier Slot; Grandfathering der Kategorie entfaellt.'
+    family_refs:
+    - ATC-STD-000
+    - ATC-STD-README-001
+    slots:
+    - id: ATC-STD-README-001
+      title: "README Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-README-001
+  - id: FAM-59
+    name: "Markdown & Metadata (MD)"
+    range: "ATC-STD-MD-001..999"
+    note: 'Formale Familien-Allokation: Owner-Direktive 14.09. 08:54 "Jede Familie bekommt ihre eigene Nummierung" (SCR-0120 v9) — naechster freier Slot; Grandfathering der Kategorie entfaellt.'
+    family_refs:
+    - ATC-STD-000
+    - ATC-STD-062
+    slots:
+    - id: ATC-STD-MD-001
+      title: "ATC Markdown & Documentation Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-MD-001
+  - id: FAM-60
+    name: "Smart Contracts (SC)"
+    range: "ATC-STD-SC-001..999"
+    note: 'Formale Familien-Allokation: Owner-Direktive 14.09. 08:54 "Jede Familie bekommt ihre eigene Nummierung" (SCR-0120 v9) — naechster freier Slot; Grandfathering der Kategorie entfaellt. Namespace SC-*, abgesetzt von FAM-13 (numerisches Band ATC-STD-220..230).'
+    family_refs:
+    - ATC-STD-000
+    - ATC-STD-SC-001
+    slots:
+    - id: ATC-STD-SC-001
+      title: "Smart Contract General Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-SC-001
+    - id: ATC-STD-SC-002
+      title: "Smart Contract Identity Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-SC-002
+    - id: ATC-STD-SC-003
+      title: "Smart Contract Security Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-SC-003
+    - id: ATC-STD-SC-004
+      title: "Smart Contract Testing Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-SC-004
+    - id: ATC-STD-SC-005
+      title: "Smart Contract Audit Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-SC-005
+    - id: ATC-STD-SC-006
+      title: "Smart Contract Deployment Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-SC-006
+    - id: ATC-STD-SC-007
+      title: "Smart Contract Upgrade Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-SC-007
+    - id: ATC-STD-SC-008
+      title: "Smart Contract Event Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-SC-008
+    - id: ATC-STD-SC-009
+      title: "Smart Contract Access Control Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-SC-009
+    - id: ATC-STD-SC-010
+      title: "Smart Contract Treasury Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-SC-010
+    - id: ATC-STD-SC-011
+      title: "Token Contract Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-SC-011
+    - id: ATC-STD-SC-012
+      title: "NFT Contract Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-SC-012
+    - id: ATC-STD-SC-013
+      title: "DeFi Contract Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-SC-013
+    - id: ATC-STD-SC-014
+      title: "Governance Contract Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-SC-014
+    - id: ATC-STD-SC-015
+      title: "Bridge Contract Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-SC-015
+    - id: ATC-STD-SC-016
+      title: "Oracle Contract Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-SC-016
+    - id: ATC-STD-SC-017
+      title: "GameFi Contract Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-SC-017
+    - id: ATC-STD-SC-018
+      title: "Mining Contract Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-SC-018
+    - id: ATC-STD-SC-019
+      title: "Contract Registry Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-SC-019
+    - id: ATC-STD-SC-020
+      title: "AI-Assisted Smart Contract Development Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-SC-020
+  - id: FAM-61
+    name: "Network Standards (NET)"
+    range: "ATC-STD-NET-001..899"
+    note: 'Formale Familien-Allokation: Owner-Direktive 14.09. 08:54 "Jede Familie bekommt ihre eigene Nummierung" (SCR-0120 v9) — naechster freier Slot; Grandfathering der Kategorie entfaellt.'
+    family_refs:
+    - ATC-STD-000
+    - ATC-STD-NET-001
+    slots:
+    - id: ATC-STD-NET-001
+      title: "Devnet Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-NET-001
+    - id: ATC-STD-NET-002
+      title: "Testnet Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-NET-002
+    - id: ATC-STD-NET-003
+      title: "Mainnet Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-NET-003
+    - id: ATC-STD-NET-004
+      title: "Network Promotion Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-NET-004
+    - id: ATC-STD-NET-005
+      title: "Network Genesis Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-NET-005
+    - id: ATC-STD-NET-006
+      title: "Network Upgrade Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-NET-006
+    - id: ATC-STD-NET-007
+      title: "Network Security Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-NET-007
+    - id: ATC-STD-NET-008
+      title: "Network Recovery Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-NET-008
+  - id: FAM-62
+    name: "Description Standards (DESC)"
+    range: "ATC-STD-DESC-001..999"
+    note: 'Formale Familien-Allokation: Owner-Direktive 14.09. 08:54 "Jede Familie bekommt ihre eigene Nummierung" (SCR-0120 v9) — naechster freier Slot; Grandfathering der Kategorie entfaellt.'
+    family_refs:
+    - ATC-STD-000
+    - ATC-STD-DESC-001
+    slots:
+    - id: ATC-STD-DESC-001
+      title: "Standard Description Standard — Standard zur Beschreibung von Standards"
+      status: BELEGT
+      refs:
+      - ATC-STD-DESC-001
+  - id: FAM-63
+    name: "Versioning Standards (VERSION)"
+    range: "ATC-STD-VERSION-001..999"
+    note: 'Formale Familien-Allokation: Owner-Direktive 14.09. 08:54 "Jede Familie bekommt ihre eigene Nummierung" (SCR-0120 v9) — naechster freier Slot; Grandfathering der Kategorie entfaellt.'
+    family_refs:
+    - ATC-STD-000
+    - ATC-STD-VERSION-001
+    slots:
+    - id: ATC-STD-VERSION-001
+      title: "ATC Versioning Standard — einheitliche Versionierung von Software, Standards, AP"
+      status: BELEGT
+      refs:
+      - ATC-STD-VERSION-001
+  - id: FAM-64
+    name: "Audit Standards (AUDIT)"
+    range: "ATC-STD-AUDIT-001..999"
+    note: 'Formale Familien-Allokation: Owner-Direktive 14.09. 08:54 "Jede Familie bekommt ihre eigene Nummierung" (SCR-0120 v9) — naechster freier Slot; Grandfathering der Kategorie entfaellt. Namespace AUDIT-*, abgesetzt von FAM-36 (AuditTrail/LogChain, ATC-STD-640..646).'
+    family_refs:
+    - ATC-STD-000
+    - ATC-STD-640
+    slots:
+    - id: ATC-STD-AUDIT-001
+      title: "ATC Completeness & Audit Standard — Vollständigkeitsprüfung & Audit: Kontrollsch"
+      status: BELEGT
+      refs:
+      - ATC-STD-AUDIT-001
+  - id: FAM-65
+    name: "AI Decision Records (AI-DECISION)"
+    range: "ATC-STD-AI-DECISION-001..999"
+    note: 'Formale Familien-Allokation: Owner-Direktive 14.09. 08:54 "Jede Familie bekommt ihre eigene Nummierung" (SCR-0120 v9) — naechster freier Slot; Grandfathering der Kategorie entfaellt.'
+    family_refs:
+    - ATC-STD-000
+    - ATC-STD-AI-DECISION-001
+    slots:
+    - id: ATC-STD-AI-DECISION-001
+      title: "ATC Agent Decision-Making Standard — Entscheidungsmodell für KI-Agenten: Pipelin"
+      status: BELEGT
+      refs:
+      - ATC-STD-AI-DECISION-001
+  - id: FAM-66
+    name: "Update Standards (UPDATE)"
+    range: "ATC-STD-UPDATE-001..999"
+    note: 'Formale Familien-Allokation: Owner-Direktive 14.09. 08:54 "Jede Familie bekommt ihre eigene Nummierung" (SCR-0120 v9) — naechster freier Slot; Grandfathering der Kategorie entfaellt. Namespace UPDATE-*, abgesetzt von FAM-30 (numerisches Band ATC-STD-520..529).'
+    family_refs:
+    - ATC-STD-000
+    - ATC-STD-UPDATE-001
+    slots:
+    - id: ATC-STD-UPDATE-001
+      title: "ATC Update Standard — Change Control für Artefakt-Updates: Kategorien, Lifecycle"
+      status: BELEGT
+      refs:
+      - ATC-STD-UPDATE-001
+  - id: FAM-67
+    name: "Framework Standards (FRAMEWORK)"
+    range: "ATC-STD-FRAMEWORK-001..999"
+    note: 'Formale Familien-Allokation: Owner-Direktive 14.09. 08:54 "Jede Familie bekommt ihre eigene Nummierung" (SCR-0120 v9) — naechster freier Slot; Grandfathering der Kategorie entfaellt.'
+    family_refs:
+    - ATC-STD-000
+    - ATC-STD-FRAMEWORK-001
+    slots:
+    - id: ATC-STD-FRAMEWORK-001
+      title: "ATC Enterprise Standards Framework — Master-Dokument (ATC-STANDARDS-MASTER): Zus"
+      status: BELEGT
+      refs:
+      - ATC-STD-FRAMEWORK-001
+  - id: FAM-68
+    name: "Milestone Standards (MILESTONE)"
+    range: "ATC-STD-MILESTONE-001..999"
+    note: 'Formale Familien-Allokation: Owner-Direktive 14.09. 08:54 "Jede Familie bekommt ihre eigene Nummierung" (SCR-0120 v9) — naechster freier Slot; Grandfathering der Kategorie entfaellt.'
+    family_refs:
+    - ATC-STD-000
+    - ATC-STD-MILESTONE-001
+    slots:
+    - id: ATC-STD-MILESTONE-001
+      title: "ATC Milestone Standard — Verbindliche Meilenstein-Governance: Zustandsnachweis, "
+      status: BELEGT
+      refs:
+      - ATC-STD-MILESTONE-001
+  - id: FAM-69
+    name: "Compatibility Standards (COMPAT)"
+    range: "ATC-STD-COMPAT-001..999"
+    note: 'Formale Familien-Allokation: Owner-Direktive 14.09. 08:54 "Jede Familie bekommt ihre eigene Nummierung" (SCR-0120 v9) — naechster freier Slot; Grandfathering der Kategorie entfaellt.'
+    family_refs:
+    - ATC-STD-000
+    - ATC-STD-COMPAT-001
+    slots:
+    - id: ATC-STD-COMPAT-001
+      title: "ATC Major Version Compatibility & Recovery Standard — Verbindliche Kompatibilitä"
+      status: BELEGT
+      refs:
+      - ATC-STD-COMPAT-001
+  - id: FAM-70
+    name: "Improvement Standards (IMPROVEMENT)"
+    range: "ATC-STD-IMPROVEMENT-001..999"
+    note: 'Formale Familien-Allokation: Owner-Direktive 14.09. 08:54 "Jede Familie bekommt ihre eigene Nummierung" (SCR-0120 v9) — naechster freier Slot; Grandfathering der Kategorie entfaellt.'
+    family_refs:
+    - ATC-STD-000
+    - ATC-STD-IMPROVEMENT-001
+    slots:
+    - id: ATC-STD-IMPROVEMENT-001
+      title: "ATC Improvement Standard — Systemverbesserungsstandard: Continuous Improvement M"
+      status: BELEGT
+      refs:
+      - ATC-STD-IMPROVEMENT-001
+  - id: FAM-71
+    name: "AI Governance (ATC-AI-GOV)"
+    range: "ATC-AI-GOV-001..999"
+    note: 'Formale Familien-Allokation: Owner-Direktive 14.09. 08:54 "Jede Familie bekommt ihre eigene Nummierung" (SCR-0120 v9) — naechster freier Slot; Grandfathering der Kategorie entfaellt.'
+    family_refs:
+    - ATC-STD-000
+    - ATC-AI-GOV-001
+    slots:
+    - id: ATC-AI-GOV-001
+      title: "ATC Agent Governance Framework v1.0 — Produktionsarchitektur (18-stufige Governa"
+      status: BELEGT
+      refs:
+      - ATC-AI-GOV-001
+    - id: ATC-AI-GOV-AGENTS-001
+      title: "ATC Agent Governance — Organisationsweite Arbeitsregeln (Discovery, Hierarchie, "
+      status: BELEGT
+      refs:
+      - ATC-AI-GOV-AGENTS-001
+    - id: ATC-AI-GOV-AUDIT-001
+      title: "ATC Agent Governance — Auditverfahren (AGOV-FULL/DELTA/GATE, Snapshot, Readiness"
+      status: BELEGT
+      refs:
+      - ATC-AI-GOV-AUDIT-001
+    - id: ATC-AI-GOV-CAPABILITY-001
+      title: "ATC Agent Governance — Capability & Authorization Model (explizite Berechtigunge"
+      status: BELEGT
+      refs:
+      - ATC-AI-GOV-CAPABILITY-001
+    - id: ATC-AI-GOV-CHANGE-001
+      title: "ATC Agent Governance — Governance Change Management (SCR-Pflicht, SemVer, Vorher"
+      status: BELEGT
+      refs:
+      - ATC-AI-GOV-CHANGE-001
+    - id: ATC-AI-GOV-CHECK-001
+      title: "ATC Agent Governance — Automatisierte Compliance Checks (AGOV-CHECK-001..020 ver"
+      status: BELEGT
+      refs:
+      - ATC-AI-GOV-CHECK-001
+    - id: ATC-AI-GOV-FINDING-001
+      title: "ATC Agent Governance — Persistent Findings (ATC-FINDING-YYYY-NNNNNN, Lifecycle b"
+      status: BELEGT
+      refs:
+      - ATC-AI-GOV-FINDING-001
+    - id: ATC-AI-GOV-HANDOFF-001
+      title: "ATC Agent Governance — Agent-to-Agent Übergabe (10 Pflichtfelder, Kontinuität, A"
+      status: BELEGT
+      refs:
+      - ATC-AI-GOV-HANDOFF-001
+    - id: ATC-AI-GOV-INCIDENT-001
+      title: "ATC Agent Governance — Incident & Fehlerbehandlung (6 Klassen, Lifecycle, RCA-Pf"
+      status: BELEGT
+      refs:
+      - ATC-AI-GOV-INCIDENT-001
+    - id: ATC-AI-GOV-MANIFEST-001
+      title: "ATC Agent Governance — Agent Identity & Scope (Manifest, Registry, Capabilities,"
+      status: BELEGT
+      refs:
+      - ATC-AI-GOV-MANIFEST-001
+    - id: ATC-AI-GOV-POLICY-001
+      title: "ATC Agent Governance — Maschinenlesbare Policies (ATC-POL-001..010, MUST/SHOULD/"
+      status: BELEGT
+      refs:
+      - ATC-AI-GOV-POLICY-001
+  - id: FAM-72
+    name: "Engineering Standards (ENG)"
+    range: "ATC-STD-ENG-001..999"
+    note: 'Formale Familien-Allokation: Owner-Direktive 14.09. 08:54 "Jede Familie bekommt ihre eigene Nummierung" (SCR-0120 v9) — naechster freier Slot; Grandfathering der Kategorie entfaellt.'
+    family_refs:
+    - ATC-STD-000
+    - ATC-STD-ENG-001
+    slots:
+    - id: ATC-STD-ENG-001
+      title: "Software Engineering & Code Quality Standard (Determinism First-Class, Security "
+      status: BELEGT
+      refs:
+      - ATC-STD-ENG-001
+  - id: FAM-73
+    name: "Legal Standards (LEGAL)"
+    range: "ATC-STD-LEGAL-001..999"
+    note: 'Formale Familien-Allokation: Owner-Direktive 14.09. 08:54 "Jede Familie bekommt ihre eigene Nummierung" (SCR-0120 v9) — naechster freier Slot; Grandfathering der Kategorie entfaellt.'
+    family_refs:
+    - ATC-STD-000
+    - ATC-STD-LEGAL-002
+    slots:
+    - id: ATC-STD-LEGAL-002
+      title: "Impressum & Anbieterkennzeichnung Standard"
+      status: BELEGT
+      refs:
+      - ATC-STD-LEGAL-002
+
+  - id: FAM-74
+    name: "Governance Constitution (GOV)"
+    range: "ATC-GOV-001..999"
+    note: 'Einzelfamilien-Allokation: ATC-GOV-001 (Level-0-Verfassung) hatte keine formale Familien-Nummer — Owner-Direktive 14.09. 08:54 "Jede Familie bekommt ihre eigene Nummierung" (SCR-0120 v9); naechster freier Slot.'
+    family_refs:
+    - ATC-STD-000
+    slots:
+    - id: ATC-GOV-001
+      title: "A-TownChain Governance Constitution (Level-0-Verfassung: 5-Ebenen-Hierarchie, 8 "
+      status: BELEGT
+      refs:
+      - ATC-GOV-001
+
+  - id: FAM-75
+    name: "System Architecture (ARCH)"
+    range: "ATC-ARCH-001..999"
+    note: 'Einzelfamilien-Allokation: ATC-ARCH-001 (KAI-OS System Architecture) hatte keine formale Familien-Nummer — Owner-Direktive 14.09. 08:54 "Jede Familie bekommt ihre eigene Nummierung" (SCR-0120 v9); naechster freier Slot.'
+    family_refs:
+    - ATC-STD-000
+    slots:
+    - id: ATC-ARCH-001
+      title: "KAI-OS System Architecture Standard"
+      status: BELEGT
+      refs:
+      - ATC-ARCH-001

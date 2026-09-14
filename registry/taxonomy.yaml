@@ -74,11 +74,12 @@ taxonomy:
         name: Allgemein (Bestand, keine Unterteilung)
         status: ACTIVE
         lifecycle: ACTIVE
+      fam: FAM-53
     - id: ENT
       name: enterprise
       status: ACTIVE
       lifecycle: ACTIVE
-      id_range: ATC-ENT-001-015
+      id_range: ATC-ENT-001-015 + ATC-STD-034-039 + ATC-GATE-SEC-001 + ATC-ORG-BASELINE-001
       source: named-family
       description: Enterprise Standards Layer (Org-Governance, Freigabe 07.09.)
       standards_count: 54
@@ -87,6 +88,7 @@ taxonomy:
         name: Allgemein (Bestand, keine Unterteilung)
         status: ACTIVE
         lifecycle: ACTIVE
+      fam: FAM-57
     - id: DESC
       name: desc
       status: ACTIVE
@@ -100,6 +102,7 @@ taxonomy:
         name: Allgemein (Bestand, keine Unterteilung)
         status: ACTIVE
         lifecycle: ACTIVE
+      fam: FAM-62
     - id: VER
       name: version
       status: ACTIVE
@@ -113,6 +116,7 @@ taxonomy:
         name: Allgemein (Bestand, keine Unterteilung)
         status: ACTIVE
         lifecycle: ACTIVE
+      fam: FAM-63
     - id: AUD
       name: audit
       status: ACTIVE
@@ -126,6 +130,7 @@ taxonomy:
         name: Allgemein (Bestand, keine Unterteilung)
         status: ACTIVE
         lifecycle: ACTIVE
+      fam: FAM-64
     - id: UPD
       name: update
       status: ACTIVE
@@ -139,6 +144,7 @@ taxonomy:
         name: Allgemein (Bestand, keine Unterteilung)
         status: ACTIVE
         lifecycle: ACTIVE
+      fam: FAM-66
     - id: RA
       name: repo-audit
       status: ACTIVE
@@ -223,6 +229,7 @@ taxonomy:
         name: Allgemein (Bestand, keine Unterteilung)
         status: ACTIVE
         lifecycle: ACTIVE
+      fam: FAM-43
     - id: TAX
       name: taxonomy
       status: ACTIVE
@@ -249,6 +256,7 @@ taxonomy:
         name: Allgemein (Bestand, keine Unterteilung)
         status: ACTIVE
         lifecycle: ACTIVE
+      fam: FAM-40
     - id: FW
       name: framework
       status: ACTIVE
@@ -262,6 +270,7 @@ taxonomy:
         name: Allgemein (Bestand, keine Unterteilung)
         status: ACTIVE
         lifecycle: ACTIVE
+      fam: FAM-67
     - id: MIL
       name: milestone
       status: ACTIVE
@@ -275,6 +284,7 @@ taxonomy:
         name: Allgemein (Bestand, keine Unterteilung)
         status: ACTIVE
         lifecycle: ACTIVE
+      fam: FAM-68
     - id: CMP
       name: compat
       status: ACTIVE
@@ -288,6 +298,7 @@ taxonomy:
         name: Allgemein (Bestand, keine Unterteilung)
         status: ACTIVE
         lifecycle: ACTIVE
+      fam: FAM-69
     - id: LIC
       name: license
       status: ACTIVE
@@ -344,6 +355,7 @@ taxonomy:
         name: Allgemein (Bestand, keine Unterteilung)
         status: ACTIVE
         lifecycle: ACTIVE
+      fam: FAM-70
     - id: LEGAL
       name: legal
       status: ACTIVE
@@ -357,6 +369,7 @@ taxonomy:
         name: Allgemein (Bestand, keine Unterteilung)
         status: ACTIVE
         lifecycle: ACTIVE
+      fam: FAM-73
   - id: SW
     name: Software Engineering
     status: ACTIVE
@@ -453,6 +466,7 @@ taxonomy:
         name: Allgemein (Bestand, keine Unterteilung)
         status: ACTIVE
         lifecycle: ACTIVE
+      fam: FAM-58
     - id: MD
       name: md
       status: ACTIVE
@@ -466,6 +480,7 @@ taxonomy:
         name: Allgemein (Bestand, keine Unterteilung)
         status: ACTIVE
         lifecycle: ACTIVE
+      fam: FAM-59
     - id: ENG
       name: eng
       status: ACTIVE
@@ -479,6 +494,7 @@ taxonomy:
         name: Allgemein (Bestand, keine Unterteilung)
         status: ACTIVE
         lifecycle: ACTIVE
+      fam: FAM-72
     - id: MAINT
       name: maint
       status: ACTIVE
@@ -539,6 +555,7 @@ taxonomy:
         name: Allgemein (Bestand, keine Unterteilung)
         status: ACTIVE
         lifecycle: ACTIVE
+      fam: FAM-60
     - id: NET
       name: net
       status: ACTIVE
@@ -552,6 +569,7 @@ taxonomy:
         name: Allgemein (Bestand, keine Unterteilung)
         status: ACTIVE
         lifecycle: ACTIVE
+      fam: FAM-61
     - id: PROT
       name: protocol (familie)
       status: ACTIVE
@@ -598,6 +616,7 @@ taxonomy:
         name: Allgemein (Bestand, keine Unterteilung)
         status: ACTIVE
         lifecycle: ACTIVE
+      fam: FAM-55
     - id: AAS
       name: aas
       status: ACTIVE
@@ -611,6 +630,7 @@ taxonomy:
         name: Allgemein (Bestand, keine Unterteilung)
         status: ACTIVE
         lifecycle: ACTIVE
+      fam: FAM-56
     - id: AIDEC
       name: ai-decision
       status: ACTIVE
@@ -625,6 +645,7 @@ taxonomy:
         name: Allgemein (Bestand, keine Unterteilung)
         status: ACTIVE
         lifecycle: ACTIVE
+      fam: FAM-65
     - id: AOS
       name: agent-operating
       status: ACTIVE
@@ -643,7 +664,7 @@ taxonomy:
       name: ai-gov
       status: ACTIVE
       lifecycle: ACTIVE
-      id_range: ATC-AI-GOV-AGENTS/MANIFEST/POLICY/CHECK/AUDIT/HANDOFF/INCIDENT/CHANGE-001-999
+      id_range: ATC-AI-GOV-001-999
       source: named-family
       description: 'ATC Agent Governance Framework: Organisationsweite Arbeitsregeln, Agent Identity & Scope, maschinenlesbare Policies (ATC-POL), versionierter CHECK-Katalog (AGOV-CHECK, MUST/SHOULD/MAY
         + PASS/FAIL/WARN/N/A), Auditverfahren, Handoff, Incident, Governance Change Management (Owner-Entwurf 09.09., SCR-0061)'
@@ -653,6 +674,7 @@ taxonomy:
         name: Allgemein (Bestand, keine Unterteilung)
         status: ACTIVE
         lifecycle: ACTIVE
+      fam: FAM-71
   - id: TRUST
     name: Security & Trust
     status: ACTIVE
@@ -684,3 +706,4 @@ taxonomy:
         name: Allgemein (Bestand, keine Unterteilung)
         status: ACTIVE
         lifecycle: ACTIVE
+      fam: FAM-54
