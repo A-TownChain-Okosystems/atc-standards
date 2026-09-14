@@ -5,6 +5,7 @@ family: AI
 family_id: PREFIX
 file: standards/ai/ATC-STD-AI-DEV-010.md
 mandate: ''
+registry_version: 1
 standard_id: ATC-STD-AI-DEV-010
 status: approved
 title: AI Documentation Synchronization Standard

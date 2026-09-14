@@ -6,6 +6,7 @@ family_id: '000'
 file: standards/enterprise/ATC-STD-030.md
 mandate: Owner-Entwurf 11.09. (SCR-0095 Automated Assurance; Owner-Referenz 028 —
   Slot belegt, §37 -> 030)
+registry_version: 1
 standard_id: ATC-STD-030
 status: approved
 title: Automated Repository Health & Compliance Standard (10-Scanner-Dimensionen,

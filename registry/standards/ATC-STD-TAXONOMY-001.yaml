@@ -15,6 +15,7 @@ mandate: 'Owner-Entwurf 08.09. 00:22 (14 Abschnitte) — 16 REQ-TAX: vierstufige
   GEPLANT + AUDIT-001); Registry registry/taxonomy.yaml (SSOT: 5 Domains, 33 Familien,
   118 Standards zugeordnet); SCR-0024; §9-Freigabe 08.09. 00:27, APPROVED, normativ,
   §30-eingefroren'
+registry_version: 1
 standard_id: ATC-STD-TAXONOMY-001
 status: approved
 title: 'ATC Standards Taxonomy & Family Creation Standard — Meta-Governance: vierstufige

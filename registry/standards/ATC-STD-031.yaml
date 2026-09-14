@@ -6,6 +6,7 @@ family_id: '000'
 file: standards/enterprise/ATC-STD-031.md
 mandate: Owner-Entwurf 11.09. (SCR-0095 Automated Assurance; Owner-Referenz 029 —
   §37 -> 031)
+registry_version: 1
 standard_id: ATC-STD-031
 status: approved
 title: 'Repository Health Score Standard (9 Dimensionen, 5 Bänder EXCELLENT..CRITICAL,

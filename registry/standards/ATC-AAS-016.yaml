@@ -5,6 +5,7 @@ family: LEGACY-SERIES
 family_id: LEGACY
 file: standards/aas/ATC-AAS-016.md
 mandate: ''
+registry_version: 1
 standard_id: ATC-AAS-016
 status: approved
 title: Agent PR Standard (P0)

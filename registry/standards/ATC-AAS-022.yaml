@@ -5,6 +5,7 @@ family: LEGACY-SERIES
 family_id: LEGACY
 file: standards/aas/ATC-AAS-022.md
 mandate: ''
+registry_version: 1
 standard_id: ATC-AAS-022
 status: approved
 title: Agent Versioning Standard (P1)

@@ -6,6 +6,7 @@ family_id: '000'
 file: standards/enterprise/ATC-STD-020.md
 mandate: 'Owner-Direktive 10.09.: Incident-Response-Standard als Abschluss der Familie;
   REQ-STD-001..007; SCR-0088'
+registry_version: 1
 standard_id: ATC-STD-020
 status: approved
 title: Security Incident & Vulnerability Response Standard (Erkennung->Eskalation->Containment->Patch->Verifikation->Disclosure->PIR,

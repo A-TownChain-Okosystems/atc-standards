@@ -6,6 +6,7 @@ family_id: '000'
 file: standards/enterprise/ATC-STD-026.md
 mandate: Owner-Entwurf 11.09. (SCR-0094 Continuous Assurance; Owner-Referenz 025 —
   Slot belegt (Standards Review), §37 -> 026)
+registry_version: 1
 standard_id: ATC-STD-026
 status: approved
 title: 'Security Regression Prevention Standard (Fix-zu-Test-Pflicht: jede behobene

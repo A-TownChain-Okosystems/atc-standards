@@ -6,6 +6,7 @@ family_id: LEGACY
 file: standards/ai-gov/ATC-AI-GOV-001.md
 mandate: Owner-Architektur-Freeze 09.09. ('ATC-AI-GOV v1.0 Produktionsarchitektur
   einfrieren'); 7 REQ-AIGOV; Umbrella ueber 10 Sub-Standards; SCR-0062
+registry_version: 1
 standard_id: ATC-AI-GOV-001
 status: draft
 title: 'ATC Agent Governance Framework v1.0 — Produktionsarchitektur (18-stufige Governance-Kette,

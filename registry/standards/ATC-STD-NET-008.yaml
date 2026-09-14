@@ -5,6 +5,7 @@ family: NET
 family_id: PREFIX
 file: standards/net/ATC-STD-NET-008.md
 mandate: Owner-Mandat 07.09. (AD-041)
+registry_version: 1
 standard_id: ATC-STD-NET-008
 status: approved
 title: Network Recovery Standard

@@ -9,6 +9,7 @@ mandate: 'SCR-0029 (08.09. 01:40): 122. Standard, letzte Flanke FAM-41 — 11 RE
   Stop-Pflichten (E/P0/Secrets/Chain-ID), Determinismus, AAS-/AUDIT-001-/MILESTONE-001-Kopplung
   — §9-FREIGEGEBEN 08.09. 01:41 UTC+2, normativ, §30-eingefroren; gebuendelt genehmigt
   FRAMEWORK-001 v1.0.7-PATCH'
+registry_version: 1
 standard_id: ATC-STD-REPO-AUDIT-003
 status: approved
 title: 'Automatisierter ATC Repository Auditor — verbindliche Spezifikation des KI-/Automatisierungsagenten

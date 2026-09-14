@@ -6,6 +6,7 @@ family_id: LEGACY
 file: standards/ai-gov/ATC-AI-GOV-CAPABILITY-001.md
 mandate: Owner-Entwurf 09.09.; 4 REQ-AGOV-CAP; SSOT ai/capabilities.yaml + agent.schema.yaml;
   SCR-0062
+registry_version: 1
 standard_id: ATC-AI-GOV-CAPABILITY-001
 status: draft
 title: ATC Agent Governance — Capability & Authorization Model (explizite Berechtigungen,

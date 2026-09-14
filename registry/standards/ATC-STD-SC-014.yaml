@@ -5,6 +5,7 @@ family: SC
 family_id: PREFIX
 file: standards/sc/ATC-STD-SC-014.md
 mandate: Owner-Entwurf 07.09. — DAO/Voting/Proposals, Timelock vor Execution
+registry_version: 1
 standard_id: ATC-STD-SC-014
 status: approved
 title: Governance Contract Standard

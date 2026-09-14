@@ -5,6 +5,7 @@ family: LEGACY-SERIES
 family_id: LEGACY
 file: standards/aas/ATC-AAS-018.md
 mandate: ''
+registry_version: 1
 standard_id: ATC-AAS-018
 status: approved
 title: Agent Audit Trail Standard (P0)

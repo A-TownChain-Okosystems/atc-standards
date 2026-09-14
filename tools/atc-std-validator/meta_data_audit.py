@@ -53,6 +53,7 @@ def main():
         if not os.path.isdir(fdir): continue
         for fn in sorted(os.listdir(fdir)):
             if not fn.endswith(".md"): continue
+            if fn == "INDEX.md": continue  # generierter Familien-Navigationsindex (MAINT-000 §25), kein Standard
             total += 1
             path = os.path.join(fdir, fn)
             sid_file = fn.replace(".md", "")

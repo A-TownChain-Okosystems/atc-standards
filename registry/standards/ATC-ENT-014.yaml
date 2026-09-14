@@ -5,6 +5,7 @@ family: LEGACY-SERIES
 family_id: LEGACY
 file: standards/enterprise/ATC-ENT-014.md
 mandate: ''
+registry_version: 1
 standard_id: ATC-ENT-014
 status: approved
 title: Audit & Nachvollziehbarkeit Standard (P1)

@@ -5,6 +5,7 @@ family: LEGACY-SERIES
 family_id: LEGACY
 file: standards/aas/ATC-AAS-023.md
 mandate: ''
+registry_version: 1
 standard_id: ATC-AAS-023
 status: approved
 title: Agent Role Standard (P2)

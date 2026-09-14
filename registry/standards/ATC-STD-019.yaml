@@ -6,6 +6,7 @@ family_id: '000'
 file: standards/enterprise/ATC-STD-019.md
 mandate: 'Owner-Direktive 10.09.: bewusst getrennt von 018 (Supply-Chain-Integritaet);
   REQ-STD-001..008; SCR-0088'
+registry_version: 1
 standard_id: ATC-STD-019
 status: approved
 title: Dependency & Supply Chain Security Standard (Lockfiles, SBOM, Pinning, Signing/Provenance,

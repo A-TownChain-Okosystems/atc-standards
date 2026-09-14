@@ -6,6 +6,7 @@ family_id: LEGACY
 file: standards/ai-gov/ATC-AI-GOV-FINDING-001.md
 mandate: Owner-Entwurf 09.09. (Kontrollprinzip 3); 5 REQ-AGOV-FIN; SSOT ai/audit/finding-schema.yaml;
   Abgrenzung zu F-NNNN (BUG-001) via registry_ref; SCR-0062
+registry_version: 1
 standard_id: ATC-AI-GOV-FINDING-001
 status: draft
 title: ATC Agent Governance — Persistent Findings (ATC-FINDING-YYYY-NNNNNN, Lifecycle

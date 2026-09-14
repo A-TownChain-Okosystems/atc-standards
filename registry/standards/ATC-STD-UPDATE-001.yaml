@@ -8,6 +8,7 @@ mandate: Owner-Entwurf 07.09. 22:40 — 19 REQ-UPD, 6 COM-UPD-Gates, UPD-NNN/UPD
   No-Silent-Update-Kernregel, SCR-Kopplung; Change-Control-Kette SCR→VERSION→UPDATE→AUDIT;
   SCR-0015; §9-Freigabe 07.09. 23:28, APPROVED, normativ, §30-eingefroren; UPD-G04
   (MAJOR) bindet COMPAT-001 als Pflicht-Gate
+registry_version: 1
 standard_id: ATC-STD-UPDATE-001
 status: approved
 title: 'ATC Update Standard — Change Control für Artefakt-Updates: Kategorien, Lifecycle,

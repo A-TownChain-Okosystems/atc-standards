@@ -7,6 +7,7 @@ file: standards/ai-decision/ATC-STD-AI-DECISION-001.md
 mandate: Owner-Entwurf 07.09. 22:15 — 23 REQ-AIDEC, 6 COM-AIDEC-Gates; Entscheidungsmodell
   ÜBER AAS/AI-DEV; §24-Familie auf Bestand gemappt (12/15); SCR-0014; §9-Freigabe
   07.09. 22:25 Sammelfreigabe, APPROVED
+registry_version: 1
 standard_id: ATC-STD-AI-DECISION-001
 status: approved
 title: 'ATC Agent Decision-Making Standard — Entscheidungsmodell für KI-Agenten: Pipeline,

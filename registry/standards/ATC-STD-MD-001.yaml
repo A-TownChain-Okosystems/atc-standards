@@ -6,6 +6,7 @@ family_id: PREFIX
 file: standards/md/ATC-STD-MD-001.md
 mandate: Owner-Entwurf 07.09. — .md als verbindliches Documentation-Standard-Modell
   je Repository
+registry_version: 1
 standard_id: ATC-STD-MD-001
 status: approved
 title: ATC Markdown & Documentation Standard

@@ -5,6 +5,7 @@ family: LEGACY-SERIES
 family_id: LEGACY
 file: standards/aas/ATC-AAS-001.md
 mandate: ''
+registry_version: 1
 standard_id: ATC-AAS-001
 status: approved
 title: Agent Identity Standard (P0)
