@@ -97,14 +97,14 @@ die Transaktionslogik zu unterbrechen.
 
 ```python
 class TaskType(IntEnum):
-    BLOCKCHAIN  = auto()
-    WALLET      = auto()
-    AI          = auto()
-    GAME        = auto()
-    GOVERNANCE  = auto()
+    BLOCKCHAIN = auto()
+    WALLET = auto()
+    AI = auto()
+    GAME = auto()
+    GOVERNANCE = auto()
     MARKETPLACE = auto()
-    NODES       = auto()
-    SYSTEM      = auto()
+    NODES = auto()
+    SYSTEM = auto()
 ```
 
 ### 2.3 Wartungsfähigkeit

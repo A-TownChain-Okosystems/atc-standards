@@ -3,3 +3,4 @@
 # Versionsschranken sind Pflicht (ATC-STD-CI-001 CI-004) — keine offenen Versionen.
 pyyaml>=6.0,<7.0
 jsonschema>=4.0,<5.0
+requests>=2.31,<3.0

@@ -5,17 +5,42 @@ Prueft contracts/registry/contracts.yaml und deployments.yaml gegen
 SC-002 (Identitaet) und SC-019 (Registry-Pflichten).
 Aufruf: python3 tools/atc-sc-validator/check_contracts.py [atc-standards-pfad]
 """
+
 import re
 import sys
+
 import yaml
 
-REQ_FIELDS = ["contract_id", "name", "category", "repository", "version",
-              "status", "language", "runtime", "owner", "upgradeable",
-              "verified", "audited"]
+REQ_FIELDS = [
+    "contract_id",
+    "name",
+    "category",
+    "repository",
+    "version",
+    "status",
+    "language",
+    "runtime",
+    "owner",
+    "upgradeable",
+    "verified",
+    "audited",
+]
 CID = re.compile(r"^ATC-SC-[A-Z]+-[0-9]{3,}$")
 DEP = re.compile(r"^ATC-DEP-[0-9]{3,}$")
-CATS = {"SC-CORE", "SC-TOKEN", "SC-NFT", "SC-DEFI", "SC-GOV", "SC-MARKET",
-        "SC-GAME", "SC-MINING", "SC-BRIDGE", "SC-IDENTITY", "SC-ORACLE", "SC-SYSTEM"}
+CATS = {
+    "SC-CORE",
+    "SC-TOKEN",
+    "SC-NFT",
+    "SC-DEFI",
+    "SC-GOV",
+    "SC-MARKET",
+    "SC-GAME",
+    "SC-MINING",
+    "SC-BRIDGE",
+    "SC-IDENTITY",
+    "SC-ORACLE",
+    "SC-SYSTEM",
+}
 
 
 def main():

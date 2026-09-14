@@ -6,10 +6,12 @@ generiert (registry/*.yaml). Manuelle Aenderungen sind verboten —
 Regeneration via tools/index/gen_index.py. Bei Konflikten gilt die
 SSOT-Kaskade: Governance > Standard > Registry > INDEX > Implementierung.
 """
+
 import os
-import yaml
 from collections import Counter
 from datetime import date
+
+import yaml
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))
@@ -22,11 +24,14 @@ vs = R("versions.yaml")["versions"]
 proto = R("protocol-registry.yaml")["protocol-registry"]
 findings = R("findings.yaml")
 F = findings.get("findings", findings if isinstance(findings, list) else [])
-reg_files = sorted(f for f in os.listdir(os.path.join(ROOT, "registry")) if f.endswith((".yaml", ".json")))
+reg_files = sorted(
+    f for f in os.listdir(os.path.join(ROOT, "registry")) if f.endswith((".yaml", ".json"))
+)
 
 today = date.today().isoformat()
 sc = Counter(e["status"] for e in std)
 latest = {e["id"]: vs.get(e["id"], [{}])[0].get("version", e["version"]) for e in std}
+
 
 # Familien-Slot-Statistik
 def slotstat(f):
@@ -34,13 +39,17 @@ def slotstat(f):
     st = Counter(s["status"] for s in ss)
     return len(ss), st.get("BELEGT", 0), st.get("VERWEIST", 0)
 
+
 fam_rows = "\n".join(
-    f"| {f['id']} | {f['name']} | {n} | {b} | {v} |" for f, (n, b, v) in
-    ((f, slotstat(f)) for f in fams))
+    f"| {f['id']} | {f['name']} | {n} | {b} | {v} |"
+    for f, (n, b, v) in ((f, slotstat(f)) for f in fams)
+)
 
 std_rows = "\n".join(
     f"| {e['id']} | {e['title'].replace('|', '/')} | {e['category']} | {e['version']} | "
-    f"{e['status']} | {e['file']} |" for e in sorted(std, key=lambda x: x["id"]))
+    f"{e['status']} | {e['file']} |"
+    for e in sorted(std, key=lambda x: x["id"])
+)
 
 find_open = [x for x in F if isinstance(x, dict) and x.get("status") == "OPEN"]
 find_res = len(F) - len(find_open)
@@ -85,7 +94,7 @@ eines Standards liegt ausschließlich in seiner Standarddatei; die Registry
 
 Kernregister: **standards.yaml** (Bestand, {len(std)} Standards) · **versions.yaml**
 (Versionierung je Standard) · **framework.yaml** (Katalog: {len(fams)} Familien,
-{sum(len(f.get('slots', [])) for f in fams)} Slots) · **categories.yaml**
+{sum(len(f.get("slots", [])) for f in fams)} Slots) · **categories.yaml**
 (Kategorien) · **taxonomy.yaml** (Domain/Familie/Kategorie) · **protocol-registry.yaml**
 ({sum(proto_stat.values())} Protokollfamilien, Status {dict(proto_stat)}) ·
 **findings.yaml** (Findings: {len(find_open)} OPEN / {find_res} RESOLVED von {len(F)}).
@@ -129,7 +138,7 @@ Klassifikation (ATC-STD-REPO-AUDIT-001/002).
   Versions-Baseline, verwaister Tag, ATC-STD-202-Klassifizierung
 - ATC-LICENSE: 5 Lizenztypen PLANNED (SOURCE, COMMERCIAL, PROPRIETARY, DATA,
   EXPERIMENTAL); ATC-LICENSE.yaml-Manifeste + License Scanner S-26 ausstehend
-- Protokollfamilien: {proto_stat.get('planned', 0)} planned / {proto_stat.get('draft', 0)} draft
+- Protokollfamilien: {proto_stat.get("planned", 0)} planned / {proto_stat.get("draft", 0)} draft
   (registry/protocol-registry.yaml)
 
 ## 8. Integrität & automatische Prüfung
@@ -163,4 +172,6 @@ ai/agent.yaml (Agenten-Bindung).
 '''
 
 open(os.path.join(ROOT, "INDEX.md"), "w", encoding="utf-8").write(IDX)
-print(f"INDEX.md generiert: {len(IDX.splitlines())} Zeilen, {len(std)} Standards, {len(fams)} Familien")
+print(
+    f"INDEX.md generiert: {len(IDX.splitlines())} Zeilen, {len(std)} Standards, {len(fams)} Familien"
+)

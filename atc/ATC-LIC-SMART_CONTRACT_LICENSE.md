@@ -94,33 +94,32 @@ Entwickler registrieren ihren Code in der License Registry:
 ```python
 # ATC-LIC Developer Registration (Smart Contract)
 class LicenseRegistry:
-    def register_code(self, code_hash: str, developer_did: str,
-                      license_type: str, price: float):
+    def register_code(self, code_hash: str, developer_did: str, license_type: str, price: float):
         """
         Registriert Code in der ATC-LIC Registry.
         Ab diesem Moment wird jede ATVM-Ausfuehrung royalty-pflichtig.
         """
         self.registry[code_hash] = {
-            "developer": developer_did,       # ATC-03 DID
-            "license_type": license_type,      # PER_CALL / SUBSCRIPTION / ...
-            "price": price,                    # ATC-11 Token amount
+            "developer": developer_did,  # ATC-03 DID
+            "license_type": license_type,  # PER_CALL / SUBSCRIPTION / ...
+            "price": price,  # ATC-11 Token amount
             "registered_at": block_timestamp,
             "total_calls": 0,
             "total_royalties": 0,
-            "version": "1.0.0"
+            "version": "1.0.0",
         }
-    
+
     def execute_with_license(self, code_hash: str, caller_did: str):
         """ATVM ruft dies vor jeder Code-Ausfuehrung auf."""
         entry = self.registry.get(code_hash)
         if not entry:
             return True  # Public domain, free execution
-        
+
         royalty = self._calculate_royalty(entry, caller_did)
         if royalty > 0:
             if not self._check_balance(caller_did, royalty):
                 return False  # BLOCKED — unlicensed execution
-        
+
         # Atomic: Transfer royalty + execute
         self._transfer_royalty(caller_did, entry["developer"], royalty)
         entry["total_calls"] += 1
@@ -250,7 +249,7 @@ license_registry.register_code(
     code_hash="sha256(atc_neural_inference_module)",
     developer_did="ATC-DID:0xabc...developer",
     license_type="PER_CALL",
-    price=0.5  # 0.5 ATC-11 Token pro Ausfuehrung
+    price=0.5,  # 0.5 ATC-11 Token pro Ausfuehrung
 )
 
 # 2. User moechte Code ausfuehren

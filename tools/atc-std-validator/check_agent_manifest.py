@@ -10,10 +10,10 @@ Prueft, dass der Agent vollstaendig an die Registry gebunden ist:
 Exit-Code 0 = PASS (Gate), 1 = FAIL.
 CI-ungebunden lauffaehig: python3 tools/atc-std-validator/check_agent_manifest.py
 """
+
 import os
 import re
 import sys
-
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))
@@ -36,8 +36,10 @@ def main():
     fehlt = sorted(ids - required)
     zuviel = sorted(required - ids)
     if fehlt:
-        fails.append("A1: required_standards fehlen %d Registry-Standards: %s%s" % (
-            len(fehlt), ", ".join(fehlt[:5]), " …" if len(fehlt) > 5 else ""))
+        fails.append(
+            "A1: required_standards fehlen %d Registry-Standards: %s%s"
+            % (len(fehlt), ", ".join(fehlt[:5]), " …" if len(fehlt) > 5 else "")
+        )
     if zuviel:
         fails.append("A1: required_standards enthalten unbekannte IDs: " + ", ".join(zuviel[:5]))
 
@@ -57,7 +59,9 @@ def main():
         fails.append("A3: AGENTS.md ohne Mandat-Verweis")
 
     # A4: Audit-Records (AI-DEV-009)
-    if not os.path.isdir(AUDIT_DIR) or not [f for f in os.listdir(AUDIT_DIR) if f.endswith(".yaml")]:
+    if not os.path.isdir(AUDIT_DIR) or not [
+        f for f in os.listdir(AUDIT_DIR) if f.endswith(".yaml")
+    ]:
         fails.append("A4: Keine AUD-Records in .github/ai/audit/ (AI-DEV-009)")
 
     print("== Agent-Manifest-Enforcement (Vollmandat: %d Standards) ==" % len(ids))

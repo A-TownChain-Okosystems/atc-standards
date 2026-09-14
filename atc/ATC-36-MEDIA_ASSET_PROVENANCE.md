@@ -46,14 +46,14 @@ Dieses Tag enthaelt zudem den kryptografischen Hash des verwendeten KI-Modells
 ```python
 # GEPLANT: Content Provenance Metadata
 {
-  asset_hash: "sha256(...)",
-  creator_did: "ATC-DID:...",
-  signature: "ECDSA(...)",
-  ai_generated: true,
-  model_hash: "ATC-MODEL-abc123...",  # ATC-29 Registry
-  created_at: "2026-07-04T22:51:00Z",
-  parent_asset: "sha256(parent...)",  # Provenance
-  modifications: [...]
+    asset_hash: "sha256(...)",
+    creator_did: "ATC-DID:...",
+    signature: "ECDSA(...)",
+    ai_generated: true,
+    model_hash: "ATC-MODEL-abc123...",  # ATC-29 Registry
+    created_at: "2026-07-04T22:51:00Z",
+    parent_asset: "sha256(parent...)",  # Provenance
+    modifications: [...],
 }
 ```
 

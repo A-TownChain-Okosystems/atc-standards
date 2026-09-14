@@ -39,10 +39,10 @@ Node) ist konzeptionell als naechste Evolutionsstufe geplant.
 
 ```python
 class NodeType(Enum):
-    FULL      = "full"    # Komplette Chain — entspricht "Global State"
-    LIGHT     = "light"   # Nur Header — entspricht "Light Client"
+    FULL = "full"  # Komplette Chain — entspricht "Global State"
+    LIGHT = "light"  # Nur Header — entspricht "Light Client"
     VALIDATOR = "validator"  # PoS-Teilnehmer
-    MINER     = "miner"   # PoW-Teilnehmer
+    MINER = "miner"  # PoW-Teilnehmer
 ```
 
 > **Geplant:** SHARD_NODE Typ mit Partition-ID (`0xAF32` etc.)

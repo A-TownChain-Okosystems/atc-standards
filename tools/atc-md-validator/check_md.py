@@ -20,19 +20,47 @@ Gates:
   MD-09  Interne Links relativ (keine file://- oder abs. Repo-URLs)
   MD-10  Dokumentationshierarchie: docs/-Struktur vorhanden oder begründet
 """
+
 import os
 import re
 import sys
 
-DOC_STATUS = {"draft", "proposed", "review", "approved", "active",
-              "deprecated", "superseded", "archived"}
+DOC_STATUS = {
+    "draft",
+    "proposed",
+    "review",
+    "approved",
+    "active",
+    "deprecated",
+    "superseded",
+    "archived",
+}
 MUST_FILES = ["README.md", "CONTRIBUTING.md", "SECURITY.md", "CHANGELOG.md", "STATUS.md"]
 LICENSE_OK = ["LICENSE", "LICENSE.md", "LICENCE", "LICENCE.md", "COPYING"]
-COND_FILES = {"ROADMAP.md": "aktive Entwicklung", "ARCHITECTURE.md": "Software",
-              "GOVERNANCE.md": "Governance-relevant", "CODE_OF_CONDUCT.md": "oeffentliches Repo"}
-EXCLUDE_DIRS = {"standards", "atc", "ats", "references", "node_modules", "target",
-                "vendor", ".git", ".github", "tools", "templates", "approval",
-                "change-requests", "licensing", "governance", "docs"}
+COND_FILES = {
+    "ROADMAP.md": "aktive Entwicklung",
+    "ARCHITECTURE.md": "Software",
+    "GOVERNANCE.md": "Governance-relevant",
+    "CODE_OF_CONDUCT.md": "oeffentliches Repo",
+}
+EXCLUDE_DIRS = {
+    "standards",
+    "atc",
+    "ats",
+    "references",
+    "node_modules",
+    "target",
+    "vendor",
+    ".git",
+    ".github",
+    "tools",
+    "templates",
+    "approval",
+    "change-requests",
+    "licensing",
+    "governance",
+    "docs",
+}
 
 
 def iter_md(repo):
@@ -60,7 +88,11 @@ def main():
     # MD-02 UPPER_SNAKE_CASE
     for p in iter_md(repo):
         name = os.path.basename(p)
-        if name not in ("AGENTS.md",) and not re.match(r"^[A-Z0-9_-]+\.md$", name) and name != "AGENT_MANIFEST.md":
+        if (
+            name not in ("AGENTS.md",)
+            and not re.match(r"^[A-Z0-9_-]+\.md$", name)
+            and name != "AGENT_MANIFEST.md"
+        ):
             fails.append("MD-02: kein UPPER_SNAKE_CASE: " + name)
 
     # MD-03/04/05 Überschriften, Fences, Frontmatter-Status
@@ -78,8 +110,8 @@ def main():
         if lv and max(lv) > 6:
             fails.append("MD-03: >6 Ebenen: " + name)
         for i in range(1, len(lv)):
-            if lv[i] > lv[i-1] + 1:
-                warns.append("MD-03: Ebenensprung in %s (H%d->H%d)" % (name, lv[i-1], lv[i]))
+            if lv[i] > lv[i - 1] + 1:
+                warns.append("MD-03: Ebenensprung in %s (H%d->H%d)" % (name, lv[i - 1], lv[i]))
                 break
         fence_open = False
         bad_fences = []
@@ -93,7 +125,22 @@ def main():
         fm = re.match(r"^---\n(.*?)\n---", text, re.S)
         if fm:
             m = re.search(r"^status:\s*(\S+)", fm.group(1), re.M)
-            if m and m.group(1).lower() not in DOC_STATUS and m.group(1).lower() not in ("candidate", "approved", "planning", "prototype", "development", "alpha", "beta", "release-candidate", "stable"):
+            if (
+                m
+                and m.group(1).lower() not in DOC_STATUS
+                and m.group(1).lower()
+                not in (
+                    "candidate",
+                    "approved",
+                    "planning",
+                    "prototype",
+                    "development",
+                    "alpha",
+                    "beta",
+                    "release-candidate",
+                    "stable",
+                )
+            ):
                 fails.append("MD-05: Status '%s' nicht im Enum: %s" % (m.group(1), name))
 
     # MD-06 CHANGELOG
@@ -113,9 +160,13 @@ def main():
             fails.append("MD-07: STATUS.md ohne Property-Value-Tabelle")
 
     # MD-08 AI-Agenten-Bereich
-    ag = os.path.exists(os.path.join(repo, "AGENTS.md")) or \
-        (os.path.exists(os.path.join(repo, "README.md")) and
-         re.search(r"AI Agent Instructions|AGENTS\.md", open(os.path.join(repo, "README.md"), encoding="utf-8").read()))
+    ag = os.path.exists(os.path.join(repo, "AGENTS.md")) or (
+        os.path.exists(os.path.join(repo, "README.md"))
+        and re.search(
+            r"AI Agent Instructions|AGENTS\.md",
+            open(os.path.join(repo, "README.md"), encoding="utf-8").read(),
+        )
+    )
     if not ag:
         fails.append("MD-08: Kein AI-Agenten-Bereich (AGENTS.md oder README)")
 
@@ -123,7 +174,9 @@ def main():
     for p in [f for f in iter_md(repo)]:
         name = os.path.basename(p)
         text = open(p, encoding="utf-8", errors="replace").read()
-        if re.search(r"\]\(\s*file://", text) or re.search(r"\]\(https?://github\.com/A-TownChain-Okosystems/[^/]+/blob/", text):
+        if re.search(r"\]\(\s*file://", text) or re.search(
+            r"\]\(https?://github\.com/A-TownChain-Okosystems/[^/]+/blob/", text
+        ):
             warns.append("MD-09: Nicht-relative Links in " + name)
 
     # MD-10 docs/-Struktur
@@ -136,8 +189,12 @@ def main():
     for w in warns:
         print("  [WARN] " + w)
     if not fails:
-        print("RESULT: " + ("CONFORM — %d Gate-Verstoss(e), %d Warnung(en)" % (len(fails), len(warns)))
-              if warns else "CONFORM — keine Befunde")
+        print(
+            "RESULT: "
+            + ("CONFORM — %d Gate-Verstoss(e), %d Warnung(en)" % (len(fails), len(warns)))
+            if warns
+            else "CONFORM — keine Befunde"
+        )
     else:
         print("RESULT: NON-COMPLIANT (%d FAIL, %d WARN)" % (len(fails), len(warns)))
     return 1 if fails else 0

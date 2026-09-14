@@ -12,38 +12,85 @@ Ausbaustufen (dokumentiert in RD-004..009): Duplicate/Cross-Repo/Impact/Dependen
 INV-010: Unvollstaendige Pruefung = Scan FAIL — Coverage-Felder im Report machen
 Pruefstand transparent (checked vs. deferred).
 """
-import json, os, re, subprocess, sys
+
+import json
+import os
+import re
+import subprocess
+import sys
 from datetime import datetime
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DISC = os.path.join(ROOT, ".atc", "discovery")
 
 CLASS_EXT = {
-    ".rs": "code/rust", ".ts": "code/typescript", ".tsx": "code/typescript", ".js": "code/javascript",
-    ".py": "code/python", ".md": "documentation", ".yaml": "configuration", ".yml": "configuration",
-    ".json": "data", ".toml": "configuration", ".sol": "smart-contract", ".atc": "smart-contract",
-    ".proto": "interface", ".sql": "data", ".lock": "dependency-lock",
-    ".png": "asset", ".jpg": "asset", ".svg": "asset", ".ico": "asset",
-    ".tf": "configuration/iac", "Dockerfile": "configuration/docker", ".sh": "automation",
-    ".feature": "test", ".atc": "smart-contract",
+    ".rs": "code/rust",
+    ".ts": "code/typescript",
+    ".tsx": "code/typescript",
+    ".js": "code/javascript",
+    ".py": "code/python",
+    ".md": "documentation",
+    ".yaml": "configuration",
+    ".yml": "configuration",
+    ".json": "data",
+    ".toml": "configuration",
+    ".sol": "smart-contract",
+    ".atc": "smart-contract",
+    ".proto": "interface",
+    ".sql": "data",
+    ".lock": "dependency-lock",
+    ".png": "asset",
+    ".jpg": "asset",
+    ".svg": "asset",
+    ".ico": "asset",
+    ".tf": "configuration/iac",
+    "Dockerfile": "configuration/docker",
+    ".sh": "automation",
+    ".feature": "test",
 }
 DIR_SIGNALS = {
-    "docs/": "documentation", "standards/": "standards", "specs/": "specification",
-    "contracts/": "smart-contract", "src/": "code", "tests/": "test", "agents/": "ai-agent",
-    ".github/": "ci", "tools/": "automation", "registry/": "governance-registry",
-    "templates/": "template", "schemas/": "data", "security/": "security",
+    "docs/": "documentation",
+    "standards/": "standards",
+    "specs/": "specification",
+    "contracts/": "smart-contract",
+    "src/": "code",
+    "tests/": "test",
+    "agents/": "ai-agent",
+    ".github/": "ci",
+    "tools/": "automation",
+    "registry/": "governance-registry",
+    "templates/": "template",
+    "schemas/": "data",
+    "security/": "security",
 }
 RULE_PATTERNS = [
-    r"\bMUST\b", r"\bmuss\b", r"\bverbindlich\b", r"\bPflicht\b", r"\brequired\b",
-    r"\bDARF NICHT\b", r"\bmay not\b", r"\bMUSS\b", r"\bhas to\b",
+    r"\bMUST\b",
+    r"\bmuss\b",
+    r"\bverbindlich\b",
+    r"\bPflicht\b",
+    r"\brequired\b",
+    r"\bDARF NICHT\b",
+    r"\bmay not\b",
+    r"\bMUSS\b",
+    r"\bhas to\b",
 ]
-PRIORITY_FILES = {"readme.md", "architecture.md", "spec.md", "standard.md", "policy.md",
-                  "security.md", "changelog.md", "roadmap.md", "status.md", "governance.md"}
+PRIORITY_FILES = {
+    "readme.md",
+    "architecture.md",
+    "spec.md",
+    "standard.md",
+    "policy.md",
+    "security.md",
+    "changelog.md",
+    "roadmap.md",
+    "status.md",
+    "governance.md",
+}
 
 
 def git_files(rev="HEAD"):
     out = subprocess.check_output(["git", "ls-tree", "-r", "--name-only", rev], cwd=ROOT, text=True)
-    return set(l for l in out.splitlines() if l.strip() and not l.startswith(".git"))
+    return set(ln for ln in out.splitlines() if ln.strip() and not ln.startswith(".git"))
 
 
 def classify(path):
@@ -76,8 +123,11 @@ def main():
     if not os.path.exists(baseline_path):
         scan_id = f"DISC-{today}-001"
         baseline = {
-            "scan_id": scan_id, "repository": "atc-standards", "baseline_commit": git_sha(),
-            "created_at": now, "totals": {"files": len(current)},
+            "scan_id": scan_id,
+            "repository": "atc-standards",
+            "baseline_commit": git_sha(),
+            "created_at": now,
+            "totals": {"files": len(current)},
             "by_class": dict(sorted(counts.items())),
         }
         json.dump(baseline, open(baseline_path, "w"), indent=2, ensure_ascii=False)
@@ -86,14 +136,20 @@ def main():
 
     baseline = json.load(open(baseline_path))
     base_files = set()
-    for rel in git_files(baseline["baseline_commit"] if False else "HEAD"):  # Baseline-Files via Zaehler; fuer Diff nutzen wir Baseline-Snapshot
+    for rel in git_files(
+        baseline["baseline_commit"] if False else "HEAD"
+    ):  # Baseline-Files via Zaehler; fuer Diff nutzen wir Baseline-Snapshot
         base_files.add(rel)
     # Echte Diffs: Baseline speichert nur Zaehler — daher Diff gegen baseline_commit via git
     try:
         base_rev = baseline["baseline_commit"]
-        base_files = {l for l in subprocess.check_output(
-            ["git", "ls-tree", "-r", "--name-only", base_rev], cwd=ROOT, text=True).splitlines()
-            if l.strip() and not l.startswith(".git")}
+        base_files = {
+            ln
+            for ln in subprocess.check_output(
+                ["git", "ls-tree", "-r", "--name-only", base_rev], cwd=ROOT, text=True
+            ).splitlines()
+            if ln.strip() and not ln.startswith(".git")
+        }
     except Exception:
         base_files = current
 
@@ -102,7 +158,9 @@ def main():
     modified, rule_hits = [], []
     for f in sorted(current & base_files):
         try:
-            diff = subprocess.check_output(["git", "diff", base_rev, "HEAD", "--", f], cwd=ROOT, text=True)
+            diff = subprocess.check_output(
+                ["git", "diff", base_rev, "HEAD", "--", f], cwd=ROOT, text=True
+            )
         except Exception:
             continue
         if diff.strip():
@@ -121,9 +179,14 @@ def main():
 
     # INV-010: Pruefstand transparent — welche Stationen geprueft, welche deferred
     checks = {
-        "S1_bestand": True, "S2_git_diff": True, "S3_neue_inhalte": True,
-        "S4_klassifikation": True, "S6_standardsrelevanz": bool(rule_hits) or True,
-        "S7_risiko": False, "S8_doku_bedarf": False, "S9_cross_repo": False,
+        "S1_bestand": True,
+        "S2_git_diff": True,
+        "S3_neue_inhalte": True,
+        "S4_klassifikation": True,
+        "S6_standardsrelevanz": bool(rule_hits) or True,
+        "S7_risiko": False,
+        "S8_doku_bedarf": False,
+        "S9_cross_repo": False,
         "S10_massnahmen": False,
     }
     complete = all(checks.values())
@@ -137,31 +200,49 @@ def main():
             prev = 0
     scan_id = f"DISC-{today}-{prev + 1:03d}"
     report = {
-        "scan_id": scan_id, "repository": "atc-standards",
-        "baseline_commit": baseline["baseline_commit"], "current_commit": git_sha(),
-        "scanned_at": now, "standard": "ATC-STD-REPO-DISCOVERY-001..010 (SCR-0046)",
+        "scan_id": scan_id,
+        "repository": "atc-standards",
+        "baseline_commit": baseline["baseline_commit"],
+        "current_commit": git_sha(),
+        "scanned_at": now,
+        "standard": "ATC-STD-REPO-DISCOVERY-001..010 (SCR-0046)",
         "totals": {"files": len(current), "by_class": dict(sorted(counts.items()))},
-        "new_content": len(new), "modified_content": len(modified), "deleted_content": len(deleted),
+        "new_content": len(new),
+        "modified_content": len(modified),
+        "deleted_content": len(deleted),
         "changes": {"NEW": new, "MODIFIED": modified, "DELETED": deleted},
-        "standard_candidates": [{"file": r["file"], "signals": r["signals"], "status": "DISCOVERED"} for r in rule_hits],
+        "standard_candidates": [
+            {"file": r["file"], "signals": r["signals"], "status": "DISCOVERED"} for r in rule_hits
+        ],
         "security_review_required": any(classify(f).startswith("security") for f in new + modified),
         "documentation_required": any(f.endswith(".md") for f in new),
         "cross_repository_review": bool(rule_hits),
         "invariants": {
-            "INV-001_erkannt": True, "INV-002_klassifiziert": True,
-            "INV-003_kandidaten_geprueft": True, "INV-004_duplikat_geprueft": "deferred (RD-004-Ausbaustufe)",
+            "INV-001_erkannt": True,
+            "INV-002_klassifiziert": True,
+            "INV-003_kandidaten_geprueft": True,
+            "INV-004_duplikat_geprueft": "deferred (RD-004-Ausbaustufe)",
             "INV-005_cross_repo_geprueft": "deferred (RD-005-Ausbaustufe)",
             "INV-006_doku_geprueft": "deferred (RD-009-Ausbaustufe)",
-            "INV-007_test_geprueft": "deferred", "INV-008_security_review": "klassifiziert, Review deferred",
-            "INV-009_revisionssicher": True, "INV-010_vollstaendigkeit": complete,
+            "INV-007_test_geprueft": "deferred",
+            "INV-008_security_review": "klassifiziert, Review deferred",
+            "INV-009_revisionssicher": True,
+            "INV-010_vollstaendigkeit": complete,
         },
         "checks": checks,
-        "scan_result": "SUCCESS" if complete else "PARTIAL — INV-010: Pruefung unvollstaendig (Ausbaustufen offen)",
+        "scan_result": "SUCCESS"
+        if complete
+        else "PARTIAL — INV-010: Pruefung unvollstaendig (Ausbaustufen offen)",
     }
-    json.dump(report, open(os.path.join(DISC, "latest-scan.json"), "w"), indent=2, ensure_ascii=False)
-    print(f"✓ Scan {scan_id}: {len(new)} NEW / {len(modified)} MODIFIED / {len(deleted)} DELETED — "
-          f"{len(rule_hits)} Regel-Signal-Dateien — Result: {report['scan_result']}")
+    json.dump(
+        report, open(os.path.join(DISC, "latest-scan.json"), "w"), indent=2, ensure_ascii=False
+    )
+    print(
+        f"✓ Scan {scan_id}: {len(new)} NEW / {len(modified)} MODIFIED / {len(deleted)} DELETED — "
+        f"{len(rule_hits)} Regel-Signal-Dateien — Result: {report['scan_result']}"
+    )
     return 0
+
 
 if __name__ == "__main__":
     sys.exit(main())

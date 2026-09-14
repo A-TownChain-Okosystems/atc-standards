@@ -8,6 +8,7 @@ Reproduziert F-035/F-037 (AUD-2026-0003): MUSS vor dem Workflow-Fix fehlschlagen
 
 Laeuft stdlib-only — selbst auf einem frischen Runner ohne Drittmodule (CI-006).
 """
+
 import pathlib
 import re
 import sys
@@ -24,19 +25,50 @@ declared = set()
 for _n in re.findall(r"^\s*([A-Za-z0-9_\-.]+)\s*[<>=~!]", req_text, re.M):
     _n = _n.lower()
     declared.add(PKG_IMPORT_MAP.get(_n, _n))
-STDLIB_OK = {"os", "re", "sys", "json", "collections", "datetime", "hashlib",
-             "subprocess", "argparse", "io", "zipfile", "urllib", "time",
-             "shutil", "unittest", "tempfile", "glob", "textwrap", "pathlib",
-             "typing", "functools", "itertools", "math", "string", "random",
-             "stat", "platform", "contextlib", "version", "csv", "logging",
-             "base64"}   # base64 nachgetragen (Drift-Fix 13.09., AUD-Followup: version_gate.py)
+STDLIB_OK = {
+    "os",
+    "re",
+    "sys",
+    "json",
+    "collections",
+    "datetime",
+    "hashlib",
+    "subprocess",
+    "argparse",
+    "io",
+    "zipfile",
+    "urllib",
+    "time",
+    "shutil",
+    "unittest",
+    "tempfile",
+    "glob",
+    "textwrap",
+    "pathlib",
+    "typing",
+    "functools",
+    "itertools",
+    "math",
+    "string",
+    "random",
+    "stat",
+    "platform",
+    "contextlib",
+    "version",
+    "csv",
+    "logging",
+    "base64",
+}  # base64 nachgetragen (Drift-Fix 13.09., AUD-Followup: version_gate.py)
 local_mods = {p.stem for p in (ROOT / "tools").rglob("*.py")}
 for py in (ROOT / "tools").rglob("*.py"):
     src = py.read_text(encoding="utf-8", errors="replace")
     for mod in re.findall(r"^\s*(?:import|from)\s+([A-Za-z0-9_]+)", src, re.M):
         if mod in STDLIB_OK or mod.lower() in declared or mod in local_mods:
             continue
-        finding = "T1: undeklarierte Dependency '%s' in %s (CI-001/CI-006)" % (mod, py.relative_to(ROOT))
+        finding = "T1: undeklarierte Dependency '%s' in %s (CI-001/CI-006)" % (
+            mod,
+            py.relative_to(ROOT),
+        )
         if finding not in fails:
             fails.append(finding)
 
@@ -44,7 +76,10 @@ for py in (ROOT / "tools").rglob("*.py"):
 for wf in (ROOT / ".github" / "workflows").glob("*.yml"):
     w = wf.read_text(encoding="utf-8")
     if re.search(r"python3?\s+tools/", w) and "pip install" not in w:
-        fails.append("T2: %s fuehrt Python-Validatoren aus, ohne Dependencies zu installieren (CI-002/CI-003, Issue #1)" % wf.name)
+        fails.append(
+            "T2: %s fuehrt Python-Validatoren aus, ohne Dependencies zu installieren (CI-002/CI-003, Issue #1)"
+            % wf.name
+        )
 
 # T3 (CI-007): Dependency-Fehler muessen klassifiziert sein (DEPENDENCY_MISSING)
 va = (ROOT / "tools" / "atc-std-validator" / "validate_all.py").read_text(encoding="utf-8")

@@ -28,7 +28,7 @@ GENESIS_BLOCK = {
     "nonce": 0,
     "difficulty": 1,
     "validator": "genesis",
-    "signature": None
+    "signature": None,
 }
 ```
 
@@ -46,14 +46,14 @@ GENESIS_BLOCK = {
 
 ```python
 class ATC8300Token:
-    token_id: str       # Format: "ATC-8300-{uuid4}"
-    name: str           # z.B. "A-TownCoin"
-    symbol: str         # z.B. "ATC"
-    decimals: int       # Standard: 18
-    total_supply: int   # In kleinster Einheit (Zatoshi)
-    owner: str          # Wallet-Adresse (ECDSA public key hash)
-    balances: dict      # {address: balance}
-    allowances: dict    # {owner: {spender: amount}}
+    token_id: str  # Format: "ATC-8300-{uuid4}"
+    name: str  # z.B. "A-TownCoin"
+    symbol: str  # z.B. "ATC"
+    decimals: int  # Standard: 18
+    total_supply: int  # In kleinster Einheit (Zatoshi)
+    owner: str  # Wallet-Adresse (ECDSA public key hash)
+    balances: dict  # {address: balance}
+    allowances: dict  # {owner: {spender: amount}}
 ```
 
 **Pflicht-Methoden:**
@@ -84,15 +84,15 @@ class ATC8300Token:
 
 ```python
 class ATC9000NFT:
-    token_id: int          # Eindeutige ID (auto-increment)
+    token_id: int  # Eindeutige ID (auto-increment)
     contract_address: str  # Contract-Identifier
-    owner: str             # Aktuelle Wallet-Adresse
-    creator: str           # Ursprünglicher Ersteller (unveränderlich)
-    metadata: dict         # {name, description, image_uri, attributes}
-    transfer_history: list # [{from, to, timestamp, tx_hash}]
-    is_soulbound: bool     # True = nicht übertragbar (Agent-NFTs)
-    generation: int        # Gen 1 = geminted, Gen 2+ = Breeding
-    royalty_bps: int       # Basis-Punkte (250 = 2.5%)
+    owner: str  # Aktuelle Wallet-Adresse
+    creator: str  # Ursprünglicher Ersteller (unveränderlich)
+    metadata: dict  # {name, description, image_uri, attributes}
+    transfer_history: list  # [{from, to, timestamp, tx_hash}]
+    is_soulbound: bool  # True = nicht übertragbar (Agent-NFTs)
+    generation: int  # Gen 1 = geminted, Gen 2+ = Breeding
+    royalty_bps: int  # Basis-Punkte (250 = 2.5%)
 ```
 
 **Pflicht-Methoden:**
@@ -106,20 +106,20 @@ class ATC9000NFT:
 **Genesis-Chronicles-spezifische Attribute:**
 ```python
 GENESIS_CHRONICLES_ATTRIBUTES = {
-    "name": str,          # "Flamara", "Aquarix", etc.
-    "element": str,       # "Fire", "Water", "Earth", "Air", "Lightning"
-    "level": int,         # 1–100
-    "hp": int,            # 50–500
-    "attack": int,        # 10–200
-    "defense": int,       # 10–200
-    "speed": int,         # 10–200
-    "rarity": str,        # "Common", "Rare", "Epic", "Legendary"
-    "generation": int,    # 1 = Genesis, 2+ = Bred
-    "xp": int,            # Erfahrungspunkte
-    "wins": int,          # Battle-Siege
-    "losses": int,        # Battle-Niederlagen
-    "image_uri": str,     # IPFS-CID
-    "dna": str            # 64-Hex-String (genetischer Code)
+    "name": str,  # "Flamara", "Aquarix", etc.
+    "element": str,  # "Fire", "Water", "Earth", "Air", "Lightning"
+    "level": int,  # 1–100
+    "hp": int,  # 50–500
+    "attack": int,  # 10–200
+    "defense": int,  # 10–200
+    "speed": int,  # 10–200
+    "rarity": str,  # "Common", "Rare", "Epic", "Legendary"
+    "generation": int,  # 1 = Genesis, 2+ = Bred
+    "xp": int,  # Erfahrungspunkte
+    "wins": int,  # Battle-Siege
+    "losses": int,  # Battle-Niederlagen
+    "image_uri": str,  # IPFS-CID
+    "dna": str,  # 64-Hex-String (genetischer Code)
 }
 ```
 
@@ -134,16 +134,16 @@ class ATC9900Proposal:
     proposal_id: int
     title: str
     description: str
-    proposer: str           # Wallet-Adresse
-    options: list[str]      # ["Ja", "Nein", "Enthaltung"]
-    voting_start: int       # Block-Nummer
-    voting_end: int         # Block-Nummer
-    quorum_bps: int         # 1000 = 10% der ATC-Supply
-    votes: dict             # {option: total_atc_weight}
-    voters: dict            # {address: option} (verhindert Doppelabstimmung)
-    status: str             # "active", "passed", "rejected", "executed"
-    execution_data: bytes   # Calldata für automatische Ausführung
-    timelock_blocks: int    # Wartezeit nach Annahme (Standard: 5760 = ~24h)
+    proposer: str  # Wallet-Adresse
+    options: list[str]  # ["Ja", "Nein", "Enthaltung"]
+    voting_start: int  # Block-Nummer
+    voting_end: int  # Block-Nummer
+    quorum_bps: int  # 1000 = 10% der ATC-Supply
+    votes: dict  # {option: total_atc_weight}
+    voters: dict  # {address: option} (verhindert Doppelabstimmung)
+    status: str  # "active", "passed", "rejected", "executed"
+    execution_data: bytes  # Calldata für automatische Ausführung
+    timelock_blocks: int  # Wartezeit nach Annahme (Standard: 5760 = ~24h)
 ```
 
 **Regeln:**
@@ -163,27 +163,29 @@ class ATC9900Proposal:
 
 ```python
 class Block:
-    index: int              # Blockhöhe
-    timestamp: float        # Unix-Timestamp (UTC)
-    transactions: list      # Liste von TX-Hashes
-    prev_hash: str          # BLAKE2b-256 des Vorgänger-Blocks
-    hash: str               # BLAKE2b-256 dieses Blocks
-    nonce: int              # Proof-of-Work Nonce
-    difficulty: int         # Aktuelle Mining-Schwierigkeit
-    validator: str          # Wallet-Adresse des Miners/Validators
-    signature: str          # ECDSA-Signatur des Validators
-    merkle_root: str        # Merkle-Root aller Transaktionen
-    gas_used: int           # Verbrauchtes Gas
-    gas_limit: int          # Standard: 10.000.000
-    poh_hash: str           # Proof-of-History Hash (BLAKE2b-256)
-    poh_sequence: int       # PoH Tick-Sequenz-Nummer
-    size_bytes: int         # Block-Größe in Bytes
-    version: int            # Block-Version (aktuell: 2)
+    index: int  # Blockhöhe
+    timestamp: float  # Unix-Timestamp (UTC)
+    transactions: list  # Liste von TX-Hashes
+    prev_hash: str  # BLAKE2b-256 des Vorgänger-Blocks
+    hash: str  # BLAKE2b-256 dieses Blocks
+    nonce: int  # Proof-of-Work Nonce
+    difficulty: int  # Aktuelle Mining-Schwierigkeit
+    validator: str  # Wallet-Adresse des Miners/Validators
+    signature: str  # ECDSA-Signatur des Validators
+    merkle_root: str  # Merkle-Root aller Transaktionen
+    gas_used: int  # Verbrauchtes Gas
+    gas_limit: int  # Standard: 10.000.000
+    poh_hash: str  # Proof-of-History Hash (BLAKE2b-256)
+    poh_sequence: int  # PoH Tick-Sequenz-Nummer
+    size_bytes: int  # Block-Größe in Bytes
+    version: int  # Block-Version (aktuell: 2)
 ```
 
 **Hash-Berechnung:**
 ```python
 import hashlib
+
+
 def calculate_hash(block):
     data = f"{block.index}{block.timestamp}{block.prev_hash}{block.merkle_root}{block.nonce}"
     return hashlib.blake2b(data.encode(), digest_size=32).hexdigest()
@@ -195,21 +197,21 @@ def calculate_hash(block):
 
 ```python
 class Transaction:
-    tx_hash: str            # BLAKE2b-256(sender+receiver+amount+nonce+timestamp)
-    sender: str             # Wallet-Adresse (44-Zeichen Base58-kodiert)
-    receiver: str           # Wallet-Adresse
-    amount: int             # In Zatoshi (1 ATC = 10^18 Zatoshi)
-    fee: int                # Miner-Fee in Zatoshi
-    nonce: int              # Sender-Nonce (verhindert Replay-Angriffe)
-    timestamp: float        # Unix-Timestamp
-    signature: str          # ECDSA secp256k1 Signatur
-    public_key: str         # Sender-Public-Key (für Verifikation)
-    data: bytes             # Optional: Smart-Contract-Calldata
-    tx_type: str            # "transfer", "contract_call", "nft_mint", "stake", "unstake"
-    status: str             # "pending", "confirmed", "failed"
-    block_index: int        # Block in dem die TX enthalten ist (-1 = pending)
-    gas_price: int          # Zatoshi pro Gas-Einheit
-    gas_limit: int          # Max. Gas für diese TX
+    tx_hash: str  # BLAKE2b-256(sender+receiver+amount+nonce+timestamp)
+    sender: str  # Wallet-Adresse (44-Zeichen Base58-kodiert)
+    receiver: str  # Wallet-Adresse
+    amount: int  # In Zatoshi (1 ATC = 10^18 Zatoshi)
+    fee: int  # Miner-Fee in Zatoshi
+    nonce: int  # Sender-Nonce (verhindert Replay-Angriffe)
+    timestamp: float  # Unix-Timestamp
+    signature: str  # ECDSA secp256k1 Signatur
+    public_key: str  # Sender-Public-Key (für Verifikation)
+    data: bytes  # Optional: Smart-Contract-Calldata
+    tx_type: str  # "transfer", "contract_call", "nft_mint", "stake", "unstake"
+    status: str  # "pending", "confirmed", "failed"
+    block_index: int  # Block in dem die TX enthalten ist (-1 = pending)
+    gas_price: int  # Zatoshi pro Gas-Einheit
+    gas_limit: int  # Max. Gas für diese TX
 ```
 
 **Gültigkeits-Regeln:**
@@ -242,11 +244,11 @@ class Transaction:
 ```python
 P2P_MESSAGE = {
     "version": "1.0",
-    "type": str,          # "block", "tx", "ping", "pong", "peers", "sync_request", "sync_response"
-    "sender": str,        # Node-ID (public key hash)
+    "type": str,  # "block", "tx", "ping", "pong", "peers", "sync_request", "sync_response"
+    "sender": str,  # Node-ID (public key hash)
     "timestamp": float,
-    "payload": dict,      # Typ-spezifische Daten
-    "signature": str      # ECDSA-Signatur des Senders
+    "payload": dict,  # Typ-spezifische Daten
+    "signature": str,  # ECDSA-Signatur des Senders
 }
 ```
 
@@ -265,10 +267,10 @@ P2P_MESSAGE = {
 **Proof-of-Importance (PoI):**
 ```python
 IMPORTANCE_SCORE = (
-    0.35 * normalized_balance +
-    0.25 * normalized_tx_count +
-    0.20 * normalized_tx_volume +
-    0.20 * normalized_age
+    0.35 * normalized_balance
+    + 0.25 * normalized_tx_count
+    + 0.20 * normalized_tx_volume
+    + 0.20 * normalized_age
 )
 ```
 
@@ -282,6 +284,7 @@ IMPORTANCE_SCORE = (
 ```python
 def tick(prev_hash: str) -> str:
     return hashlib.blake2b(prev_hash.encode(), digest_size=32).hexdigest()
+
 
 def tick_n(prev_hash: str, n: int) -> str:
     h = prev_hash
@@ -307,10 +310,11 @@ public_key = private_key.public_key()
 
 # Adress-Ableitung
 import hashlib, base58
+
 pubkey_bytes = public_key.public_bytes(...)
 sha256_hash = hashlib.sha256(pubkey_bytes).digest()
-ripemd160_hash = hashlib.new('ripemd160', sha256_hash).digest()
-address = base58.b58encode_check(b'\x41' + ripemd160_hash).decode()
+ripemd160_hash = hashlib.new("ripemd160", sha256_hash).digest()
+address = base58.b58encode_check(b"\x41" + ripemd160_hash).decode()
 # Ergibt: 44-Zeichen Base58-Adresse
 ```
 
@@ -331,16 +335,16 @@ address = base58.b58encode_check(b'\x41' + ripemd160_hash).decode()
 **Contract-Registrierung:**
 ```python
 class SmartContract:
-    contract_id: str        # Format: "ATC-{type}-{hash[:8]}"
-    contract_type: str      # "ATC8300", "ATC9000", "GOVERNANCE", "CUSTOM"
-    owner: str              # Deployer-Adresse
-    code_hash: str          # BLAKE2b-256 des Contract-Codes
-    abi: dict               # Function-Signaturen + Parameter
-    state: dict             # Mutable Contract State
-    deployed_at: int        # Block-Nummer
-    version: str            # Semantic Versioning
-    is_upgradeable: bool    # Proxy-Pattern erlaubt
-    admin: str              # Nur bei upgradeable Contracts
+    contract_id: str  # Format: "ATC-{type}-{hash[:8]}"
+    contract_type: str  # "ATC8300", "ATC9000", "GOVERNANCE", "CUSTOM"
+    owner: str  # Deployer-Adresse
+    code_hash: str  # BLAKE2b-256 des Contract-Codes
+    abi: dict  # Function-Signaturen + Parameter
+    state: dict  # Mutable Contract State
+    deployed_at: int  # Block-Nummer
+    version: str  # Semantic Versioning
+    is_upgradeable: bool  # Proxy-Pattern erlaubt
+    admin: str  # Nur bei upgradeable Contracts
 ```
 
 **Gas-Kosten:**
