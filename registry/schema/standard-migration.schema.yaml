@@ -1,0 +1,95 @@
+# ATC Standards — Canonical Standard Migration Schema
+# Governance basis: SCR-0125
+# Purpose: machine-validatable bridge from immutable legacy IDs to family-scoped IDs.
+# This schema is descriptive YAML and is intended to be enforced by the registry validator.
+
+schema:
+  id: standard-migration
+  version: "1.0.0"
+  status: active
+  governance_basis: SCR-0125
+
+identity:
+  canonical_id:
+    pattern: "^ATC-STD-F[0-9]{2}-[0-9]{3}$"
+    required: true
+    immutable_after_allocation: true
+  legacy_id:
+    pattern: "^ATC-STD-[A-Z0-9]+(?:-[A-Z0-9]+)*$"
+    required: true
+    immutable: true
+    reusable: false
+
+classification:
+  family:
+    id_pattern: "^F[0-9]{2}$"
+    required: true
+    exactly_one: true
+  category:
+    id_pattern: "^C[0-9]{2}$"
+    required: true
+    exactly_one: true
+  class:
+    id_pattern: "^CL[0-9]{2}$"
+    required: true
+    exactly_one: true
+  sequence:
+    type: integer
+    minimum: 1
+    maximum: 999
+    required: true
+    namespace: family
+
+migration:
+  status:
+    type: enum
+    values:
+      - unmapped
+      - classified
+      - mapped
+      - migrated
+      - blocked
+      - retired
+    required: true
+  effective_version:
+    type: semver
+    required_when:
+      - migrated
+  notes:
+    type: string
+    required: false
+
+invariants:
+  - name: canonical_id_format
+    rule: canonical_id MUST match ^ATC-STD-F[0-9]{2}-[0-9]{3}$
+  - name: canonical_identity
+    rule: canonical_id MUST be unique across the registry
+  - name: family_sequence_uniqueness
+    rule: family.id + sequence MUST be unique across active standards
+  - name: legacy_identity
+    rule: legacy_id MUST map to at most one canonical_id
+  - name: no_recycling
+    rule: allocated canonical IDs and legacy IDs MUST never be reused
+  - name: complete_classification
+    rule: every standard MUST have exactly one family, category, and class
+  - name: registry_authority
+    rule: IDs MUST be allocated only through an approved registry change
+  - name: fail_closed
+    rule: validation MUST fail closed on malformed, ambiguous, duplicate, or missing identity data
+
+example:
+  family:
+    id: F03
+    name: Blockchain
+  category:
+    id: C01
+    name: Identity
+  class:
+    id: CL01
+    name: Chain Identity
+  sequence: 1
+  canonical_id: ATC-STD-F03-001
+  legacy_id: ATC-STD-600
+  migration:
+    status: mapped
+    effective_version: "2.0.0"
