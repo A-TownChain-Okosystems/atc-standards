@@ -1,168 +1,516 @@
 ---
 standard:
   id: ATC-STD-600
-  title: "Platform Architecture Standard"
-  version: "1.2.0"
-  status: approved
-  category: os
+  title: "Chain Identity & Network Identification"
+  version: "1.0.0"
+  status: stable
+  lifecycle: frozen
+  role: "Root Specification"
+  category: blockchain
   authority: A-TownChain-Okosystems
-  owner: "Michael (Owner-Entwurf) / Standards Governance"
-  created: "2026-09-08"
-  updated: "2026-09-08"
+  owner: "Standards Governance"
+  created: "2026-09-14"
+  updated: "2026-09-14"
   normative: true
-  effective_date: "2026-09-08"
-  review_date: "2027-09-08"
   classification: PUBLIC
   language: de-DE
   supersedes: null
   superseded_by: null
   dependencies:
     - ATC-STD-000
-  related_standards: []
-  license: "Copyright (c) 2026 Michael Wroblewski"
-  applies_to: "Alle ATC-Repositories"
-----
+  related_standards:
+    - ATC-STD-601
+    - ATC-STD-602
+    - ATC-STD-603
+    - ATC-STD-604
+    - ATC-STD-605
+    - ATC-STD-606
+  applies_to: "A-TownChain Core"
+  license: "Copyright (c) 2026 A-TownChain-Okosystems"
+---
 
-# ATC-STD-600 — Platform Architecture (v1.2.0, APPROVED)
+# ATC-STD-600 — Chain Identity & Network Identification
 
-> **Status:** APPROVED (v1.2.0, §30-eingefroren) — Standard aus Katalog-Slot der Familie
-> Mobile / Desktop / OS (FAM-34); §9-FREIGEGEBEN 08.09.2026, 02:15 UTC+2 — APPROVED, normativ,
-> §30-eingefroren. Struktur-Elaboration v1.1.0 via SCR-0031; Slot-Fertigbau v1.2.0 via
-> SCR-0034 (08.09.2026, 03:15 UTC+2): slot-spezifische Pruefkriterien (§6) mit eigener REQ-Menge
-> je Gegenstand. Engineering-Bindung (Code/Tests) entsteht bei Slot-Aktivierung
-> via SCR/MINOR (ehrlich dokumentiert).
+> **Version:** 1.0.0  
+> **Status:** STABLE / BASELINE  
+> **Lifecycle:** FROZEN  
+> **Role:** Root Specification  
+> **Scope:** A-TownChain Core  
+> **Implementation:** AUTHORIZED
 
 ## Abstract
 
-ATC-STD-600 (Platform Architecture) ist der Standard für den gleichnamigen Katalog-Slot der Familie
-**Mobile / Desktop / OS** (FAM-34, Range ATC-STD-600..607) im ATC Enterprise Standards Framework. Er
-definiert den Gegenstand, seine Verortung im Ökosystem, die familienweiten
-Kernregeln, die slot-spezifischen Prüfkriterien (§6) mit je-Kriterium-Nachweis,
-Compliance- und Verifikationspflichten sowie Security-Betrachtungen. Der Standard
-ist APPROVED, normativ in Kraft und §30-eingefroren (Owner-§9-Freigabe 08.09.2026,
-02:15 UTC+2, SCR-0030-Batch); Elaboration SCR-0031 (v1.1.0) und Slot-Fertigbau
-SCR-0034 (v1.2.0) sind additive MINOR-Updates (ATC-STD-UPDATE-001 UPD-G03).
+ATC-STD-600 defines the canonical identity model of an A-TownChain chain instance and the normative boundary between chain identity, transaction authentication, and runtime compatibility.
 
-Schlüsselwörter: MUSS/MUSS NICHT, SOLLTE, DARF/KANN — RFC-2119 gemäß ATC-STD-000 §10.
+The standard defines schema, semantics, validation rules, canonical encoding requirements, fail-closed behavior, and conformance requirements. It does **not** hardcode deployment-specific values for devnet, testnet, or mainnet.
 
-## Scope
+A valid cryptographic signature alone does not make a transaction valid. The transaction MUST belong to the correct chain and network context and MUST be compatible with the applicable protocol/runtime context.
 
-**Gilt:** Der durch den Slot-Titel (Platform Architecture) bezeichnete Gegenstandsbereich im
-Zuständigkeitsfeld der Familie Mobile / Desktop / OS. **Gilt nicht:** Bereiche, die durch
-fachlich konkretere Standards derselben Familie verbindlich geregelt sind
-(Subsidiarität: der konkrete Standard geht vor).
+Keywords **MUST**, **MUST NOT**, **SHOULD**, **SHOULD NOT**, and **MAY** are normative according to ATC-STD-000.
 
-## §1 Gegenstand & Ökosystem-Verortung
+## 1. Scope
 
-Dieser Standard adressiert **Platform Architecture** im Katalog-Slot ATC-STD-600 der Familie Mobile / Desktop / OS
-(FAM-34); die Zuordnung folgt registry/framework.yaml (S-21) und darf nur via SCR
-geändert werden.
+This standard applies to A-TownChain Core components that create, validate, transport, sign, execute, display, or otherwise consume Chain Identity information.
 
-Plattform-/OS-Schicht: ShivaCore (Kernel, no_std) vs. Desktop-Editions (Rust std) vs. globus-os (L4 Userspace) — Trennung verbindlich (AD-026).
+It is the root specification for:
 
-**Katalog-Referenz:** keine zusätzliche Katalog-Notiz; Verortung ausschließlich über Familie und Slot.
+- ATC-STD-601 — Genesis Specification & Genesis Identity
+- ATC-STD-602 — Transaction Domain Separation & Replay Protection
+- ATC-STD-603 — Network Environment Specification
+- ATC-STD-604 — Protocol & VM Version Compatibility
+- ATC-STD-605 — Chain Identity Validation
+- ATC-STD-606 — Chain Identity Registry
 
-## §2 Kernregeln (familienweit, elaboriert)
+Concrete deployment values belong to authoritative Genesis and network configuration, not to this root specification.
 
-1. **KR-1:** OS-Komponenten MÜSSEN der Layer-Zuordnung folgen (L1 Kernel, L4 Userspace, Editions separat).
-2. **KR-2:** Editions-Repos DÜRFEN den bare-metal-Kernel nicht ersetzen (parallele Vorhaben).
-3. **KR-3:** Boot-/Treiber-Verhalten MUSS in QEMU/hardwarenah verifizierbar sein.
-4. **KR-4:** Plattform-APIs MÜSSEN stabil dokumentiert sein (Syscalls, ABI).
-5. **KR-5:** Geräteunterstützung MUSS je Zielplattform katalogisiert sein.
-6. **KR-6:** Kernel-/Userspace-Grenze MUSS sauber gehalten werden (keine Ring-0-Helfer im Userspace).
+## 2. Canonical Chain Identity
 
-## §3 Schnittstellen & Kopplungen
+Every chain instance MUST expose the following canonical identity structure:
 
-- **Registry-Kopplung:** standards.yaml/versions.yaml (Version/Status S-14/S-19),
-  Katalog-Slot in registry/framework.yaml.
-- **Governance-Kette:** SCR → VERSION → UPDATE (UPD-G03 MINOR) → COMPAT (bei MAJOR)
-  → AUDIT; Findings via registry/findings.yaml (F-NNN).
-- **Nachbarfamilien:** Familie Mobile / Desktop / OS — Subsidiarität: konkretere Standards gehen vor.
-- **Agenten-Bindung:** Vollmandat via .github/ai/agent.yaml; Umsetzungspflicht nach
-  AGENT_MANIFEST.
+```yaml
+chain:
+  chain_id: "atc"
 
-## §4 Metriken & Akzeptanzkriterien
+  network:
+    network_id: "mainnet"
 
-- **M1:** QEMU-Boot-Nachweise
-- **M2:** Syscall-/ABI-Doku 100 %
-- **M3:** 0 Grenzverletzungen Kernel/Userspace
+  genesis:
+    genesis_id: "<canonical-genesis-hash>"
 
-- **M4:** Slot-Fertigbau: 5 verbindliche Prüfkriterien (§6) mit Nachweisangabe
-  deklariert; Abdeckung nachzuweisen via AUD-Record bei Slot-Aktivierung.
+  protocol:
+    protocol_version: "1.0.0"
 
-Akzeptanz gilt als nachgewiesen, wenn die genannten Kriterien in einem AUD-Record
-oder Validator-Lauf dokumentiert sind; fehlende Nachweise werden als Findings
-geführt und nach ATC-STD-BUG-005 (RCA) bearbeitet.
+  vm:
+    vm_version: "1.0.0"
+```
 
-## §5 Compliance & Verifikation
+### 2.1 Identity fields
 
-Compliance wird über die Gesamt-Validierung (CI, S-01..S-25) je Registry-Eintrag
-geprüft: Metadaten-Vollständigkeit, Naming, Status-/Version-Konsistenz und
-Registry-Konsistenz. Abweichungen werden als Findings (F-NNN) geführt und nach
-ATC-STD-BUG-005 (RCA) bearbeitet.
+| Field | Meaning | Normative role |
+|---|---|---|
+| `chain_id` | Logical blockchain identity | Identifies **which blockchain** |
+| `network_id` | Deployment/operating environment | Identifies **which environment** |
+| `genesis_id` | Concrete Genesis state identity | Identifies **which Genesis state** |
+| `protocol_version` | Consensus/protocol version | Runtime/protocol compatibility |
+| `vm_version` | ATC-VM execution version | Execution compatibility |
 
-## §6 Slot-Spezifikation Platform Architecture — verbindliche Prüfkriterien
+### 2.2 Identity invariant
 
-Jedes Kriterium ist normativ (MUSS). Nachweis je Kriterium: Konzept-/Design-Dokument
-plus AUD-Record, oder Validator-/Testlauf — je nach Art des Kriteriums; bei
-Slot-Aktivierung wird der Nachweis je Kriterium einzeln erbracht.
+The canonical Chain Identity is:
 
-- **P1** (MUSS): Gegenstandsdefinition und -abgrenzung — Nachweis: Design-/Konzeptdokument + AUD-Record
-- **P2** (MUSS): Zustaendigkeiten und Nachweispflicht — Nachweis: Validator-/Testlauf bzw. dokumentierte Prüfung
-- **P3** (MUSS): Verifikations- und Akzeptanzkriterien — Nachweis: Design-/Konzeptdokument + AUD-Record
-- **P4** (MUSS): Lifecycle- und Change-Control-Bindung — Nachweis: Validator-/Testlauf bzw. dokumentierte Prüfung
-- **P5** (MUSS): Familienkonformitaet: Mobile / Desktop / OS-Kernregeln KR-1..KR-6 eingehalten — Nachweis: Design-/Konzeptdokument + AUD-Record
+```text
+CHAIN_IDENTITY
+    =
+    chain_id
+  + network_id
+  + genesis_id
+```
 
-## Requirements (normativ)
+The fields MUST be interpreted as structured fields. Implementations MUST NOT rely on ambiguous string concatenation for identity derivation or comparison.
 
-- **REQ-STD-001** (§1): Gegenstand eindeutig definiert und im Katalog verortet.
-- **REQ-STD-002** (§2): Fachliche Regeln als deklarierte, verifizierbare REQ-IDs.
-- **REQ-STD-003** (§2): Compliance nachweisbar über Validator-Gates oder Prüfung.
-- **REQ-STD-004** (§2): Änderungen ausschließlich über die Change-Control-Kette.
-- **REQ-STD-005** (§2): Sicherheitsaspekte dokumentiert (Security Considerations).
-- **REQ-STD-006**: Ökosystem-Verortung nachgewiesen (§1).
-- **REQ-STD-007**: Familien-Kernregeln KR-1..KR-6 eingehalten und verifizierbar (§2).
-- **REQ-STD-008**: Schnittstellen zu Registry/Governance-Kette/Agenten gebunden (§3).
-- **REQ-STD-009**: Metriken M-1..M-4 definiert, Nachweis via AUD-Record (§4).
-- **REQ-STD-010**: Familienspezifische Security-Bedrohungen katalogisiert (§5).
-- **REQ-STD-011** (§6/P1): Gegenstandsdefinition und -abgrenzung
-- **REQ-STD-012** (§6/P2): Zustaendigkeiten und Nachweispflicht
-- **REQ-STD-013** (§6/P3): Verifikations- und Akzeptanzkriterien
-- **REQ-STD-014** (§6/P4): Lifecycle- und Change-Control-Bindung
-- **REQ-STD-015** (§6/P5): Familienkonformitaet: Mobile / Desktop / OS-Kernregeln KR-1..KR-6 eingehalten
+## 3. Network Model
 
-## Security Considerations
+A-TownChain uses one stable logical `chain_id` with explicitly identified deployment environments:
 
-Feature-Creep im Kernel destabilisiert das System; ABI-Brüche brechen Userspace-Programme.
+```text
+A-TownChain
+  chain_id = "atc"
+       │
+  ┌────┼────┐
+ devnet testnet mainnet
+```
 
-Ehrlichkeitsregel: Sicherheitszustände MÜSSEN ehrlich benannt sein
-(ACTIVE/PARTIAL/PLANNED); erfundene Sicherheitszusagen sind verboten (vgl.
-ATC-STD-PROTOCOL-003).
+Each environment MUST have its own `network_id` and authoritative Genesis configuration.
 
-## Implementierungsstatus
+`network_id` MUST NOT be derived implicitly from `chain_id`.
 
-| Zustand | Wert |
+A node MUST NOT silently reinterpret a configured network identity based on peer claims or discovered metadata.
+
+## 4. Separation of Security Domains
+
+ATC-STD-600 deliberately separates three concepts.
+
+### 4.1 Chain Identity
+
+```text
+chain_id
+network_id
+genesis_id
+```
+
+This establishes the identity of the chain instance.
+
+### 4.2 Transaction Authentication
+
+```text
+chain_id
+network_id
+protocol_version
+transaction_type
+canonical_transaction
+signature
+```
+
+This establishes the transaction's cryptographic authentication within the defined transaction domain.
+
+### 4.3 Runtime Compatibility
+
+```text
+protocol_version
+vm_version
+execution_rules
+```
+
+This establishes whether the receiving runtime is permitted to execute the transaction/state transition.
+
+These domains MUST NOT be collapsed into one implicit identity mechanism.
+
+## 5. Transaction Domain
+
+The canonical transaction domain is:
+
+```text
+TRANSACTION_DOMAIN
+    =
+    ATC-TX-DOMAIN
+  + chain_id
+  + network_id
+  + protocol_version
+  + transaction_type
+  + canonical_transaction
+```
+
+The domain separator `ATC-TX-DOMAIN` MUST be explicit and MUST prevent cross-domain interpretation of signatures.
+
+### 5.1 Canonical signing input
+
+Conceptually, implementations MUST authenticate a deterministic canonical encoding equivalent to:
+
+```text
+hash(
+    canonical_encode(
+        domain,
+        chain_id,
+        network_id,
+        protocol_version,
+        transaction_type,
+        nonce,
+        sender,
+        recipient,
+        value,
+        fee,
+        payload
+    )
+)
+```
+
+The exact canonical serialization format is governed by the applicable transaction/encoding standards. Ambiguous or multiple encodings of the same transaction MUST NOT be accepted as equivalent signing inputs.
+
+### 5.2 Genesis exclusion from transaction signatures
+
+`genesis_id` is mandatory for local Chain Identity validation but MUST NOT automatically be inserted into every transaction signature domain solely by this standard.
+
+Replay protection is established through the defined chain/network/domain context. Standards or protocol versions MAY introduce additional explicit replay-protection fields through their own governed changes.
+
+`vm_version` is likewise not automatically part of every transaction signature domain; it belongs primarily to runtime compatibility.
+
+## 6. Genesis Identity
+
+A Genesis state MUST have a deterministically derived `genesis_id`.
+
+The canonical conceptual derivation is:
+
+```text
+ genesis_id
+     =
+ HASH(
+     CANONICAL_ENCODE(
+         genesis_document
+     )
+ )
+```
+
+The configured Genesis identity MUST equal the deterministically computed Genesis identity:
+
+```text
+configured_genesis_id == computed_genesis_id
+
+YES -> ACCEPT
+NO  -> REJECT
+```
+
+Implementations MUST NOT automatically correct, replace, or overwrite a configured `genesis_id` after detecting a mismatch.
+
+Genesis identity is part of Chain Identity validation and is not merely descriptive metadata.
+
+## 7. Runtime Context
+
+ATC-VM and other execution components MUST operate against an explicit validated runtime context.
+
+A conceptual Rust representation is:
+
+```rust
+struct ChainContext {
+    chain_id: ChainId,
+    network_id: NetworkId,
+    genesis_id: GenesisId,
+    protocol_version: ProtocolVersion,
+    vm_version: VmVersion,
+}
+```
+
+The runtime compatibility model is:
+
+```text
+RUNTIME_COMPATIBILITY
+    =
+    protocol_version
+  + vm_version
+  + execution_rules
+```
+
+ATC-VM MUST NOT perform a state transition until the relevant chain, network, Genesis, protocol, and runtime context has passed the required validation gates.
+
+## 8. Fail-Closed Execution Model
+
+The normative execution sequence is:
+
+```text
+Incoming Transaction
+        │
+        ▼
+Chain Identity Validation
+        │
+   VALID / INVALID
+        │
+        ├── INVALID -> REJECT
+        ▼
+Transaction Domain Validation
+        │
+   VALID / INVALID
+        │
+        ├── INVALID -> REJECT
+        ▼
+Signature Validation
+        │
+   VALID / INVALID
+        │
+        ├── INVALID -> REJECT
+        ▼
+Runtime Compatibility
+        │
+    PASS / FAIL
+        │
+        ├── FAIL -> REJECT
+        ▼
+ATC-VM
+        │
+        ▼
+STATE TRANSITION
+```
+
+The following safety rules are mandatory:
+
+```text
+IDENTITY != VALID -> REJECT
+SIGNATURE != VALID -> REJECT
+RUNTIME != COMPATIBLE -> REJECT
+CONFORMANCE != PASS -> NO EXECUTION
+```
+
+A valid signature MUST NOT bypass identity, domain, runtime, or conformance validation.
+
+## 9. Normative Requirements
+
+### 9.1 Chain identity
+
+- **REQ-STD-600-001:** Every chain instance MUST have `chain_id`.
+- **REQ-STD-600-002:** Every deployment environment MUST have `network_id`.
+- **REQ-STD-600-003:** Every Genesis state MUST have a deterministically derived `genesis_id`.
+- **REQ-STD-600-004:** Nodes MUST validate local Chain Identity before joining or participating in the network.
+- **REQ-STD-600-005:** `chain_id`, `network_id`, and `genesis_id` MUST be treated as structured identity fields.
+
+### 9.2 Transaction domain
+
+- **REQ-STD-600-006:** Transactions MUST use defined canonical encoding.
+- **REQ-STD-600-007:** The transaction signing context MUST include at least `chain_id`, `network_id`, `protocol_version`, and an explicit transaction domain separator.
+- **REQ-STD-600-008:** Transaction domain validation MUST occur before state execution.
+- **REQ-STD-600-009:** Non-canonical encoding variants MUST NOT be accepted as equivalent authenticated transactions.
+
+### 9.3 Runtime
+
+- **REQ-STD-600-010:** ATC-VM MUST enforce a validated execution context.
+- **REQ-STD-600-011:** Protocol/runtime incompatibility MUST cause rejection.
+- **REQ-STD-600-012:** No state transition MAY occur when conformance has not passed.
+
+### 9.4 Fail-closed behavior
+
+- **REQ-STD-600-013:** Identity validation errors MUST be fail-closed.
+- **REQ-STD-600-014:** Signature validation errors MUST be fail-closed.
+- **REQ-STD-600-015:** Runtime compatibility errors MUST be fail-closed.
+- **REQ-STD-600-016:** Implementations MUST NOT silently repair identity mismatches.
+
+## 10. Prohibited Behavior
+
+Implementations MUST NOT:
+
+1. automatically correct `chain_id`;
+2. derive `network_id` from `chain_id`;
+3. manually override `genesis_id` after validation failure;
+4. accept non-canonical transaction encoding variants;
+5. execute a transaction after Chain Identity mismatch;
+6. execute a state transition when runtime compatibility fails;
+7. allow divergent Chain Identity definitions between node, VM, SDK, wallet, explorer, or interoperability components.
+
+## 11. Conformance
+
+An implementation conforms to ATC-STD-600 only when all mandatory identity, domain, runtime, and fail-closed requirements are machine-verifiably satisfied.
+
+Minimum conformance gate:
+
+```text
+ATC-STD-600 Conformance
+  - Schema valid
+  - Chain ID valid
+  - Network ID valid
+  - Genesis ID verified
+  - Protocol compatible
+  - VM compatible
+  - Canonical encoding valid
+  - Signature domain valid
+  - Replay protection verified
+        ↓
+      PASS
+```
+
+A failed conformance gate MUST prevent execution of the affected functionality.
+
+## 12. Implementation Matrix
+
+| Component | ATC-STD-600 requirement |
 |---|---|
-| Standard-Status | SPECIFIED — retro-aktiv erfasst (Meta-Sweep 08.09.2026, SCR-0047) |
-| Autoritativ | Implementierungs-Status gemaess ATC-STD-IMPLEMENTATION-001 §3/§4 in `registry/standard-implementation.yaml` (SSOT); Detail-Erfassung laeuft via Coverage-Programm gemaess ATC-STD-IMPLEMENTATION-001 §6 |
+| `atc-node` | Chain Identity + Genesis + Network validation |
+| `atc-vm` | Enforce validated execution context |
+| `atc-sdk` | Generate the correct transaction domain separator |
+| `atc-wallet` | Sign using the correct Chain/Network context |
+| `atc-explorer` | Display Chain Identity correctly |
+| `atc-interop` | Address Chain Identity unambiguously |
+| Genesis Configuration | Provide authoritative concrete values |
+| CI / Conformance | Machine-validate all applicable rules |
 
-## Changelog (Standard-intern)
+## 13. Governance and Change Control
 
-- **1.2.0** (2026-09-08): MINOR via SCR-0034 — Slot-Fertigbau: slot-spezifische
-  Prüfkriterien (§6, 5 Kriterien mit je-Kriterium-Nachweis), REQ-STD-006..015
-  slot-spezifisch, M4-Abdeckungsmetrik ergänzt. Additiv, abwärtskompatibel
-  (ATC-STD-UPDATE-001 UPD-G03).
-- **1.1.0** (2026-09-08): MINOR via SCR-0031 — Struktur-Elaboration: familien-spezifische
-  Kernregeln (§2), Ökosystem-Verortung (§1), Schnittstellen (§3), Metriken (§4)
-  und Security-Bedrohungen; REQ-STD-006..010 additiv.
-- **1.0.0** (2026-09-08): Initial Release — Grundgerüst-Standard aus
-  Katalog-Slot ATC-STD-600 (Familie Mobile / Desktop / OS, FAM-34) via SCR-0030; §9-FREIGEGEBEN
-  08.09.2026, 02:15 UTC+2 — APPROVED, normativ, §30-eingefroren.
+ATC-STD-600 defines schema, semantics, and validation rules. It does not define concrete deployment values.
+
+Therefore:
+
+```text
+ATC-STD-600
+    defines
+SCHEMA + SEMANTICS + VALIDATION RULES
+    does NOT define
+specific deployment values
+    ↓
+Genesis / Network Configuration
+```
+
+The meanings of `chain_id`, `network_id`, and `genesis_id` are normative. A semantic change to any of these fields, to transaction-domain semantics, replay protection, or runtime compatibility MUST proceed through the ATC-STD lifecycle and MUST NOT be introduced as an implementation-only change.
+
+ATC-STD-600 v1.0.0 is frozen. Deployment-specific values MAY evolve through governed Genesis/network configuration without changing the semantics of this standard.
+
+## 14. Reference Deployment Model
+
+The root standard does not hardcode concrete production values. Each environment MUST provide its own authoritative configuration.
+
+```yaml
+# devnet
+chain:
+  chain_id: "atc"
+  network:
+    network_id: "devnet"
+  genesis:
+    genesis_id: "<devnet-genesis-hash>"
+```
+
+```yaml
+# testnet
+chain:
+  chain_id: "atc"
+  network:
+    network_id: "testnet"
+  genesis:
+    genesis_id: "<testnet-genesis-hash>"
+```
+
+```yaml
+# mainnet
+chain:
+  chain_id: "atc"
+  network:
+    network_id: "mainnet"
+  genesis:
+    genesis_id: "<mainnet-genesis-hash>"
+```
+
+The concrete values MUST be supplied by authoritative Genesis/network configuration and MUST NOT be inferred from this example.
+
+## 15. Standard Family
+
+```text
+ATC-STD-600  Chain Identity & Network Identification
+ATC-STD-601  Genesis Specification & Genesis Identity
+ATC-STD-602  Transaction Domain Separation & Replay Protection
+ATC-STD-603  Network Environment Specification
+ATC-STD-604  Protocol & VM Version Compatibility
+ATC-STD-605  Chain Identity Validation
+ATC-STD-606  Chain Identity Registry
+```
+
+ATC-STD-600 is the root specification. Standards 601–606 depend on its identity model and MUST NOT redefine the semantics of the root identity fields inconsistently.
+
+## 16. Implementation Dependency Order
+
+```text
+atc-standards
+      ↓
+atc-node
+      ↓
+atc-vm
+      ↓
+atc-sdk
+      ↓
+atc-wallet
+      ↓
+atc-explorer
+      ↓
+atc-interop
+```
+
+The dependency order is implementation guidance and MUST NOT be interpreted as permission to bypass conformance gates.
+
+## 17. Freeze Record
+
+```text
+ATC-STD-600 v1.0.0
+Status: STABLE / BASELINE
+Lifecycle: FROZEN
+Role: Root Specification
+Scope: A-TownChain Core
+Implementation: AUTHORIZED
+```
+
+No further semantic changes are authorized within v1.0.0. Corrections that alter semantics require a governed standard revision.
+
+## 18. Changelog
+
+- **1.0.0 — 2026-09-14:** Root specification frozen. Establishes Chain Identity, Network Identity, Genesis Identity, transaction-domain separation, runtime compatibility, canonical encoding requirements, fail-closed execution, conformance gates, and the ATC-STD-600 family model.
 
 ## References
 
-- ATC-STD-000 (Standards Governance & Specification), ATC-STD-FRAMEWORK-001
-- ATC-STD-UPDATE-001/CHANGE-001 (Change-Control), ATC-STD-BUG-005 (RCA)
-- registry/framework.yaml (FAM-34), registry/standards.yaml + versions.yaml
-
-*ATC-STD-600 v1.2.0 · Slot-Fertigbau via SCR-0034 · Aurora (Superagent) · 08.09.2026*
+- ATC-STD-000 — Standards Governance & Specification
+- ATC-STD-601 — Genesis Specification & Genesis Identity
+- ATC-STD-602 — Transaction Domain Separation & Replay Protection
+- ATC-STD-603 — Network Environment Specification
+- ATC-STD-604 — Protocol & VM Version Compatibility
+- ATC-STD-605 — Chain Identity Validation
+- ATC-STD-606 — Chain Identity Registry
