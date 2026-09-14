@@ -61,7 +61,7 @@ eines Standards liegt ausschließlich in seiner Standarddatei; die Registry
 | registry/technology-registry.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
 | registry/versions.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
 
-Kernregister: **standards.yaml** (Bestand, 499 Standards) · **versions.yaml**
+Kernregister: **standards.yaml** (Bestand, 503 Standards) · **versions.yaml**
 (Versionierung je Standard) · **framework.yaml** (Katalog: 51 Familien,
 477 Slots) · **categories.yaml**
 (Kategorien) · **taxonomy.yaml** (Domain/Familie/Kategorie) · **protocol-registry.yaml**
@@ -124,11 +124,11 @@ Kernregister: **standards.yaml** (Bestand, 499 Standards) · **versions.yaml**
 | FAM-50 | CI/CD-Standards (CICD) | 1 | 1 | 0 |
 | FAM-51 | Technology Uniqueness & Differentiation (TUD) | 1 | 1 | 0 |
 
-Statusverteilung der 499 Registry-Standards: {'approved': 465, 'draft': 34}.
-Alle 499 sind APPROVED und normativ (§30-eingefroren); Details je Standard
+Statusverteilung der 503 Registry-Standards: {'approved': 465, 'draft': 38}.
+Alle 503 sind APPROVED und normativ (§30-eingefroren); Details je Standard
 in registry/standards.yaml und registry/versions.yaml.
 
-## 4. Master-Registry-Tabelle (499 Standards)
+## 4. Master-Registry-Tabelle (503 Standards)
 
 Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 
@@ -568,6 +568,10 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 | ATC-STD-MAINT-018 | Rollback & Recovery Standard (Rollback, Restore, Failover, A/B-Prinzip) | maint | 1.0.0 | draft | standards/maint/ATC-STD-MAINT-018.md |
 | ATC-STD-MAINT-019 | Maintenance Evidence Standard (maschinenlesbares Record-Schema, No Evidence No Trust) | maint | 1.0.0 | draft | standards/maint/ATC-STD-MAINT-019.md |
 | ATC-STD-MAINT-020 | Maintenance Automation Standard (Scanner, Maintenance Engine, M0 Auto/M1 Review/M2-M3 Escalate) | maint | 1.0.0 | draft | standards/maint/ATC-STD-MAINT-020.md |
+| ATC-STD-MAINT-021 | Emergency Maintenance Standard (M3-Emergency-Pfad, Incident Records, Post-Mortem-Evidence) | maint | 1.0.0 | draft | standards/maint/ATC-STD-MAINT-021.md |
+| ATC-STD-MAINT-022 | End-of-Life & Retirement Standard (Deprecation-Sunset-Retirement, Consumer-Koordination, Retirement-Evidence) | maint | 1.0.0 | draft | standards/maint/ATC-STD-MAINT-022.md |
+| ATC-STD-MAINT-023 | Vendor & Supply-Chain Maintenance Standard (Vendor-Abhaengigkeiten, Provenance/SBOM, Third-Party-Risiken, Ersatz-Strategien) | maint | 1.0.0 | draft | standards/maint/ATC-STD-MAINT-023.md |
+| ATC-STD-MAINT-024 | Cross-Ecosystem Maintenance Standard (Multi-Repo-/Schicht-Koordination, konsolidierte Evidence, Schichtreihenfolge) | maint | 1.0.0 | draft | standards/maint/ATC-STD-MAINT-024.md |
 | ATC-STD-MD-001 | ATC Markdown & Documentation Standard | md | 1.0.0 | approved | standards/md/ATC-STD-MD-001.md |
 | ATC-STD-MILESTONE-001 | ATC Milestone Standard — Verbindliche Meilenstein-Governance: Zustandsnachweis, Lebenszyklus, Acceptance Gates, Evidence Packs, maschinenlesbare Registry | milestone | 1.0.0 | approved | standards/milestone/ATC-STD-MILESTONE-001.md |
 | ATC-STD-NET-001 | Devnet Standard | net | 1.0.0 | approved | standards/net/ATC-STD-NET-001.md |
@@ -636,7 +640,7 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 
 ## 5. Statusmodell (Registry-Lifecycle)
 
-Registry-Statusverteilung (Ist): {'approved': 465, 'draft': 34}. Lifecycle der Standards-Entwicklung
+Registry-Statusverteilung (Ist): {'approved': 465, 'draft': 38}. Lifecycle der Standards-Entwicklung
 gemäß ATC-STD-STDDEV-001 / ATC-STD-TAXONOMY-001: Entwurf (Owner-Entwurf/SCR) →
 §9-Freigabe (Owner, Human-Gate) → APPROVED (normativ, §30-eingefroren) → ggf.
 DEPRECATED/RETIRED via Change-Control (ATC-STD-CHANGE-001). Protokolle folgen
@@ -679,7 +683,7 @@ die Kennung dieses generierten Dokuments.
 
 atc-standards/ · INDEX.md (generiert) · README.md · CHANGELOG.md · STATUS.md ·
 LICENSE (Apache-2.0) · AGENT_MANIFEST.md · AGENTS.md · governance/ (ATC-STD-000) ·
-standards/<kategorie>/ (Fachstandards, 499-Bestand) · registry/ (27
+standards/<kategorie>/ (Fachstandards, 503-Bestand) · registry/ (27
 SSOT-Dateien) · licenses/ (ATC-LICENSE-System) · schemas/ · tools/ (Generatoren +
 atc-std-validator) · approval/ (§9-Freigabe-Archiv) · change-requests/ (SCR-0001…) ·
 docs/ (Audits & Analysen) · templates/ · .github/workflows (Governance-CI, 2) +

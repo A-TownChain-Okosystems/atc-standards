@@ -48,6 +48,17 @@ Repository: Dependency Scanner · Vulnerability Scanner · SBOM Generator · Lic
 1. Keine autonome M2/M3-Durchfuehrung: Eskalation an Humans (Owner/Governance), immer.
 2. Automation folgt ATC-STD-AI-DEV-001..012 (Agent-Governance) und darf Gates nicht umgehen.
 
+## §4 Systemintegritaet (Verkettung, MAINT-000 §2)
+
+```
+ATC-STD-MAINT-* (normativ) → GSEPF (kontrollierter Prozess) → Maintenance Engine (CI/CD)
+   → M0 Automate / M1 Review / M2+M3 Escalate → Evidence → Verified State
+```
+
+ATC-STD-MAINT-* definiert die normative Ebene, GSEPF setzt sie als kontrollierten Prozess um,
+CI/CD bzw. Maintenance Automation erzeugen die tatsaechlichen Evidence-Records. Dadurch ist
+Maintenance ein Bestandteil der Systemintegritaet — nicht bloss ein organisatorisches To-do.
+
 ## REQ-Matrix (normativ)
 
 | REQ | Anforderung | Pflicht |
