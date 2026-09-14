@@ -132,13 +132,24 @@ Governance-Hardening: Registry-Integritäts-Gate, Discovery→Audit→SCR-Kopplu
 ```text
 atc-standards/
 ├── approval/
+├── atc/
+├── ats/
 ├── audits/
 ├── change-requests/
+├── contracts/
+├── docs/
+├── evidence/
 ├── governance/
+├── legal/
+├── licenses/
+├── licensing/
 ├── profiles/
+├── protocols/
+├── references/
 ├── registry/
 ├── schemas/
 ├── standards/
+├── templates/
 └── tools/
 ```
 
