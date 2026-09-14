@@ -475,10 +475,11 @@ taxonomy:
       name: maint
       status: ACTIVE
       lifecycle: ACTIVE
-      id_range: ATC-STD-MAINT-001-999
+      id_range: ATC-STD-MAINT-000-999
       source: named-family
-      description: 'Maintenance-Familie: Verbindliche Betriebs-Disziplin KAI-OS/GlobusOS — 12 Bereiche, M0-M3-Klassen, Maintenance-from-Development (Owner-Direktive 14.09., SCR-0120)'
-      standards_count: 1
+      description: 'Maintenance-Familie: Vollstaendige normative Betriebs-Disziplin (praeventiv/korrektiv/adaptiv/sicherheitkritisch, maschinenpruefbar) — MAINT-000 Governance-Dach, 001 Klassifikation M0-M3,
+        002 Lifecycle, 003-020 Spezialstandards, 021-024 RESERVED (Owner-Direktive 14.09., SCR-0120)'
+      standards_count: 21
       categories:
       - id: GENERAL
         name: Allgemein (Bestand, keine Unterteilung)

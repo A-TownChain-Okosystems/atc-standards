@@ -61,7 +61,7 @@ eines Standards liegt ausschließlich in seiner Standarddatei; die Registry
 | registry/technology-registry.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
 | registry/versions.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
 
-Kernregister: **standards.yaml** (Bestand, 479 Standards) · **versions.yaml**
+Kernregister: **standards.yaml** (Bestand, 499 Standards) · **versions.yaml**
 (Versionierung je Standard) · **framework.yaml** (Katalog: 51 Familien,
 477 Slots) · **categories.yaml**
 (Kategorien) · **taxonomy.yaml** (Domain/Familie/Kategorie) · **protocol-registry.yaml**
@@ -124,11 +124,11 @@ Kernregister: **standards.yaml** (Bestand, 479 Standards) · **versions.yaml**
 | FAM-50 | CI/CD-Standards (CICD) | 1 | 1 | 0 |
 | FAM-51 | Technology Uniqueness & Differentiation (TUD) | 1 | 1 | 0 |
 
-Statusverteilung der 479 Registry-Standards: {'approved': 465, 'draft': 14}.
-Alle 479 sind APPROVED und normativ (§30-eingefroren); Details je Standard
+Statusverteilung der 499 Registry-Standards: {'approved': 465, 'draft': 34}.
+Alle 499 sind APPROVED und normativ (§30-eingefroren); Details je Standard
 in registry/standards.yaml und registry/versions.yaml.
 
-## 4. Master-Registry-Tabelle (479 Standards)
+## 4. Master-Registry-Tabelle (499 Standards)
 
 Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 
@@ -547,7 +547,27 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 | ATC-STD-LICENSE-007 | License Audit Standard | license | 1.0.0 | approved | standards/license/ATC-STD-LICENSE-007.md |
 | ATC-STD-LICENSE-008 | Trademark Separation Standard | license | 1.0.0 | approved | standards/license/ATC-STD-LICENSE-008.md |
 | ATC-STD-LICENSE-009 | License Versioning Standard | license | 1.0.0 | approved | standards/license/ATC-STD-LICENSE-009.md |
-| ATC-STD-MAINT-001 | Maintenance Discipline Standard (12 Bereiche, M0-M3-Klassen, Maintenance-from-Development) | maint | 1.0.0 | draft | standards/maint/ATC-STD-MAINT-001.md |
+| ATC-STD-MAINT-000 | Maintenance Governance Standard (Gesamtmodell, Rollen, Lifecycle, Familienstruktur 000-024, SoD, KPIs) | maint | 1.0.0 | draft | standards/maint/ATC-STD-MAINT-000.md |
+| ATC-STD-MAINT-001 | Maintenance Classification Standard (M0-Routine, M1-Operational, M2-Security, M3-Critical verbindlich) | maint | 1.0.0 | draft | standards/maint/ATC-STD-MAINT-001.md |
+| ATC-STD-MAINT-002 | Maintenance Lifecycle Standard (DETECT..CLOSE, 13 Phasen, GSEPF-Mapping) | maint | 1.0.0 | draft | standards/maint/ATC-STD-MAINT-002.md |
+| ATC-STD-MAINT-003 | Code Maintenance Standard (Refactoring, Technical Debt, Deprecation) | maint | 1.0.0 | draft | standards/maint/ATC-STD-MAINT-003.md |
+| ATC-STD-MAINT-004 | Dependency Maintenance Standard (Dependencies, Lockfiles, SBOM, Updates, CVE-Reaktion) | maint | 1.0.0 | draft | standards/maint/ATC-STD-MAINT-004.md |
+| ATC-STD-MAINT-005 | Security Maintenance Standard (CVEs, Hardening, Secrets, Keys, Sandbox, SoD) | maint | 1.0.0 | draft | standards/maint/ATC-STD-MAINT-005.md |
+| ATC-STD-MAINT-006 | Infrastructure Maintenance Standard (CI/CD, Runner, Build-/Release-Infrastruktur) | maint | 1.0.0 | draft | standards/maint/ATC-STD-MAINT-006.md |
+| ATC-STD-MAINT-007 | OS Maintenance Standard (Kernel, Treiber, Runtime, Systemdienste, TCB-Grenzen) | maint | 1.0.0 | draft | standards/maint/ATC-STD-MAINT-007.md |
+| ATC-STD-MAINT-008 | Blockchain Maintenance Standard (Node, P2P, State, Storage, Consensus) | maint | 1.0.0 | draft | standards/maint/ATC-STD-MAINT-008.md |
+| ATC-STD-MAINT-009 | VM & Runtime Maintenance Standard (ATC-VM, ABI/API, 7-Stufen-Pruefkette) | maint | 1.0.0 | draft | standards/maint/ATC-STD-MAINT-009.md |
+| ATC-STD-MAINT-010 | AI Maintenance Standard (Modelle, Registry, Inference, Evaluation) | maint | 1.0.0 | draft | standards/maint/ATC-STD-MAINT-010.md |
+| ATC-STD-MAINT-011 | Repository Maintenance Standard (Bindung an REPO-MAINT-001-SSOT) | maint | 1.0.0 | draft | standards/maint/ATC-STD-MAINT-011.md |
+| ATC-STD-MAINT-012 | Standards Maintenance Standard (Standards, Registry, Schemas, Conformance) | maint | 1.0.0 | draft | standards/maint/ATC-STD-MAINT-012.md |
+| ATC-STD-MAINT-013 | Documentation Maintenance Standard (README, Wiki, API, Architektur) | maint | 1.0.0 | draft | standards/maint/ATC-STD-MAINT-013.md |
+| ATC-STD-MAINT-014 | Performance Maintenance Standard (CPU, RAM, I/O, Netzwerk, Latenz) | maint | 1.0.0 | draft | standards/maint/ATC-STD-MAINT-014.md |
+| ATC-STD-MAINT-015 | Reliability Maintenance Standard (Monitoring, Backup, Recovery, Regression) | maint | 1.0.0 | draft | standards/maint/ATC-STD-MAINT-015.md |
+| ATC-STD-MAINT-016 | Compatibility Maintenance Standard (Bindung an COMPAT-001-SSOT) | maint | 1.0.0 | draft | standards/maint/ATC-STD-MAINT-016.md |
+| ATC-STD-MAINT-017 | Upgrade & Migration Standard (Version Upgrades, Migrationen, Schemaaenderungen) | maint | 1.0.0 | draft | standards/maint/ATC-STD-MAINT-017.md |
+| ATC-STD-MAINT-018 | Rollback & Recovery Standard (Rollback, Restore, Failover, A/B-Prinzip) | maint | 1.0.0 | draft | standards/maint/ATC-STD-MAINT-018.md |
+| ATC-STD-MAINT-019 | Maintenance Evidence Standard (maschinenlesbares Record-Schema, No Evidence No Trust) | maint | 1.0.0 | draft | standards/maint/ATC-STD-MAINT-019.md |
+| ATC-STD-MAINT-020 | Maintenance Automation Standard (Scanner, Maintenance Engine, M0 Auto/M1 Review/M2-M3 Escalate) | maint | 1.0.0 | draft | standards/maint/ATC-STD-MAINT-020.md |
 | ATC-STD-MD-001 | ATC Markdown & Documentation Standard | md | 1.0.0 | approved | standards/md/ATC-STD-MD-001.md |
 | ATC-STD-MILESTONE-001 | ATC Milestone Standard — Verbindliche Meilenstein-Governance: Zustandsnachweis, Lebenszyklus, Acceptance Gates, Evidence Packs, maschinenlesbare Registry | milestone | 1.0.0 | approved | standards/milestone/ATC-STD-MILESTONE-001.md |
 | ATC-STD-NET-001 | Devnet Standard | net | 1.0.0 | approved | standards/net/ATC-STD-NET-001.md |
@@ -616,7 +636,7 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 
 ## 5. Statusmodell (Registry-Lifecycle)
 
-Registry-Statusverteilung (Ist): {'approved': 465, 'draft': 14}. Lifecycle der Standards-Entwicklung
+Registry-Statusverteilung (Ist): {'approved': 465, 'draft': 34}. Lifecycle der Standards-Entwicklung
 gemäß ATC-STD-STDDEV-001 / ATC-STD-TAXONOMY-001: Entwurf (Owner-Entwurf/SCR) →
 §9-Freigabe (Owner, Human-Gate) → APPROVED (normativ, §30-eingefroren) → ggf.
 DEPRECATED/RETIRED via Change-Control (ATC-STD-CHANGE-001). Protokolle folgen
@@ -659,7 +679,7 @@ die Kennung dieses generierten Dokuments.
 
 atc-standards/ · INDEX.md (generiert) · README.md · CHANGELOG.md · STATUS.md ·
 LICENSE (Apache-2.0) · AGENT_MANIFEST.md · AGENTS.md · governance/ (ATC-STD-000) ·
-standards/<kategorie>/ (Fachstandards, 479-Bestand) · registry/ (27
+standards/<kategorie>/ (Fachstandards, 499-Bestand) · registry/ (27
 SSOT-Dateien) · licenses/ (ATC-LICENSE-System) · schemas/ · tools/ (Generatoren +
 atc-std-validator) · approval/ (§9-Freigabe-Archiv) · change-requests/ (SCR-0001…) ·
 docs/ (Audits & Analysen) · templates/ · .github/workflows (Governance-CI, 2) +
