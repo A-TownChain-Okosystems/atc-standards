@@ -1,0 +1,361 @@
+maintenance_conformance:
+  standard: ATC-STD-MAINT-000 §12
+  version: 1.0.0
+  generated_note: GENERIERT aus standards/maintenance/ + registry/standards.yaml — nicht manuell pflegen (SCR-0120
+    v4)
+  parent_standard: ATC-STD-MAINT-000
+  family_range: ATC-STD-MAINT-000..024 (ab 025 frei via SCR)
+  ecosystem_positioning: Uebergeordnete Ecosystem-Governance-Capability (nicht Teil von KAI-OS); wiederverwendbar
+    ausserhalb KAI-OS (P10)
+  normative_release_gate: A system MUST NOT be released to a lifecycle state requiring operational support unless
+    its required maintenance capabilities are implemented, validated, documented, and evidenced.
+  schemas:
+    record: schemas/maintenance/maintenance-record.schema.json
+    readiness: schemas/maintenance/maintenance-readiness.schema.json
+    evidence: schemas/maintenance/maintenance-evidence.schema.json
+  conformance_workflow: .github/workflows/maintenance-conformance.yml
+  conformance_workflow_repo: registry/standards (ATC-*.yaml, kanonisch via tools/gen_views/gen_registry_records.py)
+  standards:
+  - id: ATC-STD-MAINT-000
+    group: Governance & Classification
+    group_key: governance_classification
+    priority_kai_os: P0
+    parent_standard: null
+    inherits_mandatory_baseline: false
+    req_count: 14
+    reqs:
+    - REQ-MAINT-000-001
+    - REQ-MAINT-000-002
+    - REQ-MAINT-000-003
+    - REQ-MAINT-000-004
+    - REQ-MAINT-000-005
+    - REQ-MAINT-000-006
+    - REQ-MAINT-000-007
+    - REQ-MAINT-000-008
+    - REQ-MAINT-000-009
+    - REQ-MAINT-000-010
+    - REQ-MAINT-000-011
+    - REQ-MAINT-000-012
+    - REQ-MAINT-000-013
+    - REQ-MAINT-000-014
+    version: 1.0.0
+    status: draft
+  - id: ATC-STD-MAINT-001
+    group: Governance & Classification
+    group_key: governance_classification
+    priority_kai_os: P0
+    parent_standard: ATC-STD-MAINT-000
+    inherits_mandatory_baseline: true
+    req_count: 5
+    reqs:
+    - REQ-MAINT-001-001
+    - REQ-MAINT-001-002
+    - REQ-MAINT-001-003
+    - REQ-MAINT-001-004
+    - REQ-MAINT-001-005
+    version: 1.0.0
+    status: draft
+  - id: ATC-STD-MAINT-002
+    group: Governance & Classification
+    group_key: governance_classification
+    priority_kai_os: P0
+    parent_standard: ATC-STD-MAINT-000
+    inherits_mandatory_baseline: true
+    req_count: 4
+    reqs:
+    - REQ-MAINT-002-001
+    - REQ-MAINT-002-002
+    - REQ-MAINT-002-003
+    - REQ-MAINT-002-004
+    version: 1.0.0
+    status: draft
+  - id: ATC-STD-MAINT-003
+    group: Engineering
+    group_key: engineering
+    priority_kai_os: P1
+    parent_standard: ATC-STD-MAINT-000
+    inherits_mandatory_baseline: true
+    req_count: 3
+    reqs:
+    - REQ-MAINT-003-001
+    - REQ-MAINT-003-002
+    - REQ-MAINT-003-003
+    version: 1.0.0
+    status: draft
+  - id: ATC-STD-MAINT-004
+    group: Engineering
+    group_key: engineering
+    priority_kai_os: P0
+    parent_standard: ATC-STD-MAINT-000
+    inherits_mandatory_baseline: true
+    req_count: 4
+    reqs:
+    - REQ-MAINT-004-001
+    - REQ-MAINT-004-002
+    - REQ-MAINT-004-003
+    - REQ-MAINT-004-004
+    version: 1.0.0
+    status: draft
+  - id: ATC-STD-MAINT-005
+    group: Security
+    group_key: security
+    priority_kai_os: P0
+    parent_standard: ATC-STD-MAINT-000
+    inherits_mandatory_baseline: true
+    req_count: 4
+    reqs:
+    - REQ-MAINT-005-001
+    - REQ-MAINT-005-002
+    - REQ-MAINT-005-003
+    - REQ-MAINT-005-004
+    version: 1.0.0
+    status: draft
+  - id: ATC-STD-MAINT-006
+    group: Engineering
+    group_key: engineering
+    priority_kai_os: P1
+    parent_standard: ATC-STD-MAINT-000
+    inherits_mandatory_baseline: true
+    req_count: 3
+    reqs:
+    - REQ-MAINT-006-001
+    - REQ-MAINT-006-002
+    - REQ-MAINT-006-003
+    version: 1.0.0
+    status: draft
+  - id: ATC-STD-MAINT-007
+    group: Platform
+    group_key: platform
+    priority_kai_os: P0
+    parent_standard: ATC-STD-MAINT-000
+    inherits_mandatory_baseline: true
+    req_count: 3
+    reqs:
+    - REQ-MAINT-007-001
+    - REQ-MAINT-007-002
+    - REQ-MAINT-007-003
+    version: 1.0.0
+    status: draft
+  - id: ATC-STD-MAINT-008
+    group: Platform
+    group_key: platform
+    priority_kai_os: P0
+    parent_standard: ATC-STD-MAINT-000
+    inherits_mandatory_baseline: true
+    req_count: 3
+    reqs:
+    - REQ-MAINT-008-001
+    - REQ-MAINT-008-002
+    - REQ-MAINT-008-003
+    version: 1.0.0
+    status: draft
+  - id: ATC-STD-MAINT-009
+    group: Platform
+    group_key: platform
+    priority_kai_os: P0
+    parent_standard: ATC-STD-MAINT-000
+    inherits_mandatory_baseline: true
+    req_count: 4
+    reqs:
+    - REQ-MAINT-009-001
+    - REQ-MAINT-009-002
+    - REQ-MAINT-009-003
+    - REQ-MAINT-009-004
+    version: 1.0.0
+    status: draft
+  - id: ATC-STD-MAINT-010
+    group: Platform
+    group_key: platform
+    priority_kai_os: P1
+    parent_standard: ATC-STD-MAINT-000
+    inherits_mandatory_baseline: true
+    req_count: 3
+    reqs:
+    - REQ-MAINT-010-001
+    - REQ-MAINT-010-002
+    - REQ-MAINT-010-003
+    version: 1.0.0
+    status: draft
+  - id: ATC-STD-MAINT-011
+    group: Governance Assets
+    group_key: governance_assets
+    priority_kai_os: P1
+    parent_standard: ATC-STD-MAINT-000
+    inherits_mandatory_baseline: true
+    req_count: 2
+    reqs:
+    - REQ-MAINT-011-001
+    - REQ-MAINT-011-002
+    version: 1.0.0
+    status: draft
+  - id: ATC-STD-MAINT-012
+    group: Governance Assets
+    group_key: governance_assets
+    priority_kai_os: P1
+    parent_standard: ATC-STD-MAINT-000
+    inherits_mandatory_baseline: true
+    req_count: 3
+    reqs:
+    - REQ-MAINT-012-001
+    - REQ-MAINT-012-002
+    - REQ-MAINT-012-003
+    version: 1.0.0
+    status: draft
+  - id: ATC-STD-MAINT-013
+    group: Governance Assets
+    group_key: governance_assets
+    priority_kai_os: P2
+    parent_standard: ATC-STD-MAINT-000
+    inherits_mandatory_baseline: true
+    req_count: 3
+    reqs:
+    - REQ-MAINT-013-001
+    - REQ-MAINT-013-002
+    - REQ-MAINT-013-003
+    version: 1.0.0
+    status: draft
+  - id: ATC-STD-MAINT-014
+    group: Engineering
+    group_key: engineering
+    priority_kai_os: P1
+    parent_standard: ATC-STD-MAINT-000
+    inherits_mandatory_baseline: true
+    req_count: 2
+    reqs:
+    - REQ-MAINT-014-001
+    - REQ-MAINT-014-002
+    version: 1.0.0
+    status: draft
+  - id: ATC-STD-MAINT-015
+    group: Assurance
+    group_key: assurance
+    priority_kai_os: P0
+    parent_standard: ATC-STD-MAINT-000
+    inherits_mandatory_baseline: true
+    req_count: 3
+    reqs:
+    - REQ-MAINT-015-001
+    - REQ-MAINT-015-002
+    - REQ-MAINT-015-003
+    version: 1.0.0
+    status: draft
+  - id: ATC-STD-MAINT-016
+    group: Lifecycle
+    group_key: lifecycle
+    priority_kai_os: P1
+    parent_standard: ATC-STD-MAINT-000
+    inherits_mandatory_baseline: true
+    req_count: 2
+    reqs:
+    - REQ-MAINT-016-001
+    - REQ-MAINT-016-002
+    version: 1.0.0
+    status: draft
+  - id: ATC-STD-MAINT-017
+    group: Lifecycle
+    group_key: lifecycle
+    priority_kai_os: P0
+    parent_standard: ATC-STD-MAINT-000
+    inherits_mandatory_baseline: true
+    req_count: 2
+    reqs:
+    - REQ-MAINT-017-001
+    - REQ-MAINT-017-002
+    version: 1.0.0
+    status: draft
+  - id: ATC-STD-MAINT-018
+    group: Security
+    group_key: security
+    priority_kai_os: P0
+    parent_standard: ATC-STD-MAINT-000
+    inherits_mandatory_baseline: true
+    req_count: 3
+    reqs:
+    - REQ-MAINT-018-001
+    - REQ-MAINT-018-002
+    - REQ-MAINT-018-003
+    version: 1.0.0
+    status: draft
+  - id: ATC-STD-MAINT-019
+    group: Assurance
+    group_key: assurance
+    priority_kai_os: P0
+    parent_standard: ATC-STD-MAINT-000
+    inherits_mandatory_baseline: true
+    req_count: 4
+    reqs:
+    - REQ-MAINT-019-001
+    - REQ-MAINT-019-002
+    - REQ-MAINT-019-003
+    - REQ-MAINT-019-004
+    version: 1.0.0
+    status: draft
+  - id: ATC-STD-MAINT-020
+    group: Assurance
+    group_key: assurance
+    priority_kai_os: P1
+    parent_standard: ATC-STD-MAINT-000
+    inherits_mandatory_baseline: true
+    req_count: 4
+    reqs:
+    - REQ-MAINT-020-001
+    - REQ-MAINT-020-002
+    - REQ-MAINT-020-003
+    - REQ-MAINT-020-004
+    version: 1.0.0
+    status: draft
+  - id: ATC-STD-MAINT-021
+    group: Security
+    group_key: security
+    priority_kai_os: P1
+    parent_standard: ATC-STD-MAINT-000
+    inherits_mandatory_baseline: true
+    req_count: 5
+    reqs:
+    - REQ-MAINT-021-001
+    - REQ-MAINT-021-002
+    - REQ-MAINT-021-003
+    - REQ-MAINT-021-004
+    - REQ-MAINT-021-005
+    version: 1.0.0
+    status: draft
+  - id: ATC-STD-MAINT-022
+    group: Lifecycle
+    group_key: lifecycle
+    priority_kai_os: P2
+    parent_standard: ATC-STD-MAINT-000
+    inherits_mandatory_baseline: true
+    req_count: 3
+    reqs:
+    - REQ-MAINT-022-001
+    - REQ-MAINT-022-002
+    - REQ-MAINT-022-003
+    version: 1.0.0
+    status: draft
+  - id: ATC-STD-MAINT-023
+    group: Supply & Ecosystem
+    group_key: supply_ecosystem
+    priority_kai_os: P2
+    parent_standard: ATC-STD-MAINT-000
+    inherits_mandatory_baseline: true
+    req_count: 4
+    reqs:
+    - REQ-MAINT-023-001
+    - REQ-MAINT-023-002
+    - REQ-MAINT-023-003
+    - REQ-MAINT-023-004
+    version: 1.0.0
+    status: draft
+  - id: ATC-STD-MAINT-024
+    group: Supply & Ecosystem
+    group_key: supply_ecosystem
+    priority_kai_os: P2
+    parent_standard: ATC-STD-MAINT-000
+    inherits_mandatory_baseline: true
+    req_count: 3
+    reqs:
+    - REQ-MAINT-024-001
+    - REQ-MAINT-024-002
+    - REQ-MAINT-024-003
+    version: 1.0.0
+    status: draft

@@ -7,7 +7,7 @@ file: standards/enterprise/ATC-STD-020.md
 mandate: 'Owner-Direktive 10.09.: Incident-Response-Standard als Abschluss der Familie;
   REQ-STD-001..007; SCR-0088'
 standard_id: ATC-STD-020
-status: candidate
+status: approved
 title: Security Incident & Vulnerability Response Standard (Erkennung->Eskalation->Containment->Patch->Verifikation->Disclosure->PIR,
   SEV-1..4 mit SLA, Human-Gate SEV-1/2+Disclosure, ATC-VULN-Record-Schema v1.1.0)
 version: 1.1.0
