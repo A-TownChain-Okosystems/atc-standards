@@ -5,7 +5,7 @@ on:
   pull_request:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   registry-consistency:
@@ -47,6 +47,18 @@ jobs:
           print(f"Registry SHA-256: {data['discovery']['registry_sha256']}")
           print(f"Duplicate IDs: {len(data['discovery']['duplicate_legacy_ids'])}")
           PY
+
+      - name: Persist generated legacy inventory
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add registry/migrations/standard-inventory.generated.yaml
+          if git diff --cached --quiet; then
+            echo 'Generated inventory unchanged.'
+          else
+            git commit -m 'chore(migration): persist generated legacy inventory [skip ci]'
+            git push origin HEAD:feat/standard-registry-migration-foundation
+          fi
 
       - name: Upload migration inventory artifact
         uses: actions/upload-artifact@v4
