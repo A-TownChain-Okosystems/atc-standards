@@ -23,12 +23,11 @@ ORG = "A-TownChain-Okosystems"
 TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", "")
 H = {"Authorization": f"token {TOKEN}", "Accept": "application/vnd.github.v3+json"}
 BASE = os.path.join(os.path.dirname(__file__), "..")
-EXCLUDED = {"demo-repository"}  # Owner-Entscheidung 11.09.2026
+EXCLUDED = {"demo-repository"}
 
 
 def api(url, retries=3):
     import time
-
     for i in range(retries):
         try:
             return json.loads(urllib.request.urlopen(urllib.request.Request(url, headers=H)).read())
@@ -39,7 +38,6 @@ def api(url, retries=3):
 
 
 def repo_ist(name):
-    """Ist-Daten: Primärsprache + Workflow-Dateien."""
     tree = api(f"https://api.github.com/repos/{ORG}/{name}/git/trees/main?recursive=1")
     wfs = (
         [
@@ -82,8 +80,7 @@ def main():
         if name in EXCLUDED or (only and name != only):
             continue
         import time
-
-        time.sleep(0.7)  # Secondary-Rate-Limit-Daempfung
+        time.sleep(0.7)
         ist = repo_ist(name)
         if not ist["workflows"]:
             print(f"  WARN: {name} — Tree-Fetch fehlgeschlagen (Fail Closed → FINDING)")
@@ -96,33 +93,23 @@ def main():
         verdict = "PASS" if (lang_ok and not gates_missing) else "FINDING"
         if verdict == "FINDING":
             fails += 1
-        rows.append(
-            (
-                name,
-                m["layer"],
-                m["determinism"],
-                ist["language"],
-                "✅" if lang_ok else "❌",
-                ", ".join(m["ci_gates"]),
-                ", ".join(gates_missing) or "—",
-                verdict,
+            print(
+                f"FINDING: {name} — language={'PASS' if lang_ok else 'MISMATCH'}; "
+                f"missing_gates={', '.join(gates_missing) or '—'}"
             )
-        )
-    # Report
+        rows.append((name, m["layer"], m["determinism"], ist["language"], "✅" if lang_ok else "❌",
+                     ", ".join(m["ci_gates"]), ", ".join(gates_missing) or "—", verdict))
+
     d = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
     lines = [
-        f"# ATC Code Quality Matrix — Ist-Erhebung ({d})",
-        "",
-        f"Standard: ATC-STD-ENG-001 (REQ-ENG-011) · SSOT: registry/code-quality-matrix.yaml · Exit: {'0' if not fails else '1'}",
-        "",
+        f"# ATC Code Quality Matrix — Ist-Erhebung ({d})", "",
+        f"Standard: ATC-STD-ENG-001 (REQ-ENG-011) · SSOT: registry/code-quality-matrix.yaml · Exit: {'0' if not fails else '1'}", "",
         "| Repository | Layer | Det.-Klasse | Ist-Sprache | Lang | CI-Gates (Soll) | Fehlt | Verdict |",
         "|---|---|---|---|---|---|---|---|",
     ]
     for r in rows:
         lines.append(f"| {r[0]} | {r[1]} | {r[2]} | {r[3]} | {r[4]} | {r[5]} | {r[6]} | {r[7]} |")
-    lines.append(
-        f"\n**Ergebnis: {len(rows) - fails}/{len(rows)} PASS, {fails} FINDING(s)** (Fail Closed; Findings → ATC-STD-BUG-001)"
-    )
+    lines.append(f"\n**Ergebnis: {len(rows) - fails}/{len(rows)} PASS, {fails} FINDING(s)** (Fail Closed; Findings → ATC-STD-BUG-001)")
     out = os.path.join(BASE, "docs/CODE-QUALITY-MATRIX.md")
     os.makedirs(os.path.dirname(out), exist_ok=True)
     open(out, "w").write("\n".join(lines) + "\n")
