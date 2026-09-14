@@ -61,6 +61,7 @@ entries:
   - registry/framework.yaml
   - registry/lifecycle.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/migrations/namespace-inventory.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
@@ -910,6 +911,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/migrations/namespace-inventory.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
@@ -1036,6 +1038,7 @@ entries:
   - registry/findings.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/protocol-registry.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
@@ -1112,6 +1115,7 @@ entries:
   - registry/framework.yaml
   - registry/interfaces.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-203.yaml
@@ -1264,6 +1268,7 @@ entries:
   - registry/framework.yaml
   - registry/interfaces.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/repo-audit-checks.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
@@ -1340,6 +1345,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/migrations/namespace-inventory.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
@@ -1407,6 +1413,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-AI-DEV-004.yaml
@@ -1450,6 +1457,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-AI-DEV-007.yaml
@@ -1488,6 +1496,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-AI-DEV-009.yaml
@@ -1527,6 +1536,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-AI-DEV-002.yaml
@@ -1566,6 +1576,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-AI-DEV-003.yaml
@@ -1602,6 +1613,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-AI-DEV-005.yaml
@@ -1642,6 +1654,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-AI-DEV-006.yaml
@@ -1680,6 +1693,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-AI-DEV-008.yaml
@@ -1717,6 +1731,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-AI-DEV-010.yaml
@@ -1754,6 +1769,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-AI-DEV-011.yaml
@@ -1793,6 +1809,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-AI-DEV-012.yaml
@@ -1834,6 +1851,7 @@ entries:
   - registry/findings.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/migrations/namespace-inventory.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
@@ -1963,6 +1981,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-BUG-002.yaml
@@ -2008,6 +2027,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-BUG-003.yaml
@@ -2060,6 +2080,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-BUG-004.yaml
@@ -2111,6 +2132,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/migrations/namespace-inventory.yaml
   - registry/networks.yaml
   - registry/standard-implementation.yaml
@@ -2165,6 +2187,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-NET-002.yaml
@@ -2199,6 +2222,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-NET-003.yaml
@@ -2236,6 +2260,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/networks.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
@@ -2272,6 +2297,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-NET-005.yaml
@@ -2305,6 +2331,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-NET-006.yaml
@@ -2342,6 +2369,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-NET-007.yaml
@@ -2376,6 +2404,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-NET-008.yaml
@@ -2409,6 +2438,7 @@ entries:
   observed_sources:
   - registry/dependencies.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-NET-009.yaml
@@ -2446,6 +2476,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/migrations/namespace-inventory.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
@@ -2501,6 +2532,7 @@ entries:
   observed_sources:
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/migrations/namespace-inventory.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
@@ -2534,6 +2566,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/migrations/namespace-inventory.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
@@ -2590,6 +2623,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-ZKP-002.yaml
@@ -2623,6 +2657,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-ZKP-003.yaml
@@ -2658,6 +2693,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-ZKP-004.yaml
@@ -2691,6 +2727,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-ZKP-005.yaml
@@ -2725,6 +2762,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-ZKP-006.yaml
@@ -2758,6 +2796,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-ZKP-007.yaml
@@ -2791,6 +2830,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-ZKP-008.yaml
@@ -2825,6 +2865,7 @@ entries:
   - registry/findings.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-ZKP-009.yaml
@@ -2858,6 +2899,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-ZKP-010.yaml
@@ -2906,6 +2948,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-300.yaml
@@ -2954,6 +2997,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/migrations/namespace-inventory.yaml
   - registry/protocol-registry.yaml
   - registry/standard-implementation.yaml
@@ -3049,6 +3093,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-AAS-002.yaml
@@ -3085,6 +3130,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-AAS-003.yaml
@@ -3123,6 +3169,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-AAS-004.yaml
@@ -3160,6 +3207,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-AAS-005.yaml
@@ -3193,6 +3241,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-AAS-006.yaml
@@ -3228,6 +3277,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-AAS-007.yaml
@@ -3265,6 +3315,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-AAS-008.yaml
@@ -3300,6 +3351,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-AAS-009.yaml
@@ -3336,6 +3388,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-AAS-010.yaml
@@ -3370,6 +3423,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-AAS-011.yaml
@@ -3407,6 +3461,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-AAS-012.yaml
@@ -3442,6 +3497,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-AAS-013.yaml
@@ -3478,6 +3534,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-AAS-014.yaml
@@ -3514,6 +3571,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-AAS-015.yaml
@@ -3547,6 +3605,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-AAS-016.yaml
@@ -3580,6 +3639,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-AAS-017.yaml
@@ -3617,6 +3677,7 @@ entries:
   - registry/findings.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-AAS-018.yaml
@@ -3653,6 +3714,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-AAS-019.yaml
@@ -3686,6 +3748,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-AAS-020.yaml
@@ -3722,6 +3785,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-AAS-021.yaml
@@ -3756,6 +3820,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-AAS-022.yaml
@@ -3792,6 +3857,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-AAS-023.yaml
@@ -3825,6 +3891,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-AAS-024.yaml
@@ -3859,6 +3926,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-AAS-025.yaml
@@ -3895,6 +3963,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-ENT-001.yaml
@@ -3946,6 +4015,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-ENT-002.yaml
@@ -4011,6 +4081,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-ENT-003.yaml
@@ -4046,6 +4117,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-ENT-004.yaml
@@ -4079,6 +4151,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-ENT-005.yaml
@@ -4112,6 +4185,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-ENT-006.yaml
@@ -4145,6 +4219,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-ENT-007.yaml
@@ -4178,6 +4253,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-ENT-008.yaml
@@ -4211,6 +4287,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-ENT-009.yaml
@@ -4246,6 +4323,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-ENT-010.yaml
@@ -4279,6 +4357,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-ENT-011.yaml
@@ -4313,6 +4392,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-ENT-012.yaml
@@ -4347,6 +4427,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-ENT-013.yaml
@@ -4380,6 +4461,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-ENT-014.yaml
@@ -4413,6 +4495,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-ENT-015.yaml
@@ -4445,6 +4528,7 @@ entries:
   - registry/STANDARDS_REGISTRY.md
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-114.yaml
@@ -4477,6 +4561,7 @@ entries:
   - registry/STANDARDS_REGISTRY.md
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-215.yaml
@@ -4511,6 +4596,7 @@ entries:
   - registry/STANDARDS_REGISTRY.md
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-212.yaml
@@ -4546,6 +4632,7 @@ entries:
   - registry/STANDARDS_REGISTRY.md
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-213.yaml
@@ -4579,6 +4666,7 @@ entries:
   - registry/STANDARDS_REGISTRY.md
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-214.yaml
@@ -4612,6 +4700,7 @@ entries:
   - registry/STANDARDS_REGISTRY.md
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-314.yaml
@@ -4645,6 +4734,7 @@ entries:
   - registry/STANDARDS_REGISTRY.md
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-V2S-000.yaml
@@ -4678,6 +4768,7 @@ entries:
   - registry/STANDARDS_REGISTRY.md
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-REPO-MAINT-001.yaml
@@ -4720,6 +4811,7 @@ entries:
   - registry/STANDARDS_REGISTRY.md
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-ERR-000.yaml
@@ -4769,6 +4861,7 @@ entries:
   - registry/STANDARDS_REGISTRY.md
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-ERR-001.yaml
@@ -4803,6 +4896,7 @@ entries:
   - registry/STANDARDS_REGISTRY.md
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-ERR-002.yaml
@@ -4835,6 +4929,7 @@ entries:
   - registry/STANDARDS_REGISTRY.md
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-ERR-003.yaml
@@ -4867,6 +4962,7 @@ entries:
   - registry/STANDARDS_REGISTRY.md
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-ERR-004.yaml
@@ -4901,6 +4997,7 @@ entries:
   - registry/STANDARDS_REGISTRY.md
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-ERR-005.yaml
@@ -4933,6 +5030,7 @@ entries:
   - registry/STANDARDS_REGISTRY.md
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-ERR-006.yaml
@@ -4965,6 +5063,7 @@ entries:
   - registry/STANDARDS_REGISTRY.md
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-ERR-007.yaml
@@ -4998,6 +5097,7 @@ entries:
   - registry/STANDARDS_REGISTRY.md
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-ERR-008.yaml
@@ -5030,6 +5130,7 @@ entries:
   - registry/STANDARDS_REGISTRY.md
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-ERR-009.yaml
@@ -5063,6 +5164,7 @@ entries:
   - registry/STANDARDS_REGISTRY.md
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-ERR-010.yaml
@@ -5095,6 +5197,7 @@ entries:
   - registry/STANDARDS_REGISTRY.md
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-ERR-011.yaml
@@ -5127,6 +5230,7 @@ entries:
   - registry/STANDARDS_REGISTRY.md
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-ERR-012.yaml
@@ -5159,6 +5263,7 @@ entries:
   - registry/STANDARDS_REGISTRY.md
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-ERR-013.yaml
@@ -5191,6 +5296,7 @@ entries:
   - registry/STANDARDS_REGISTRY.md
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-ERR-014.yaml
@@ -5223,6 +5329,7 @@ entries:
   - registry/STANDARDS_REGISTRY.md
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-ERR-015.yaml
@@ -5255,6 +5362,7 @@ entries:
   - registry/STANDARDS_REGISTRY.md
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/registry.lock
   - registry/standard-implementation.yaml
   - registry/standards.yaml
@@ -5567,6 +5675,7 @@ entries:
   - standards/net/ATC-STD-NET-006.md
   - standards/net/ATC-STD-NET-007.md
   - standards/net/ATC-STD-NET-008.md
+  - standards/os/ATC-STD-600.md
   - standards/os/ATC-STD-601.md
   - standards/os/ATC-STD-602.md
   - standards/os/ATC-STD-603.md
@@ -5690,6 +5799,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-REPO-DISCOVERY-001.yaml
@@ -5724,6 +5834,7 @@ entries:
   - registry/STANDARDS_REGISTRY.md
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-REPO-DISCOVERY-002.yaml
@@ -5756,6 +5867,7 @@ entries:
   - registry/STANDARDS_REGISTRY.md
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-REPO-DISCOVERY-003.yaml
@@ -5788,6 +5900,7 @@ entries:
   - registry/STANDARDS_REGISTRY.md
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-REPO-DISCOVERY-004.yaml
@@ -5820,6 +5933,7 @@ entries:
   - registry/STANDARDS_REGISTRY.md
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-REPO-DISCOVERY-005.yaml
@@ -5853,6 +5967,7 @@ entries:
   - registry/STANDARDS_REGISTRY.md
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-REPO-DISCOVERY-006.yaml
@@ -5885,6 +6000,7 @@ entries:
   - registry/STANDARDS_REGISTRY.md
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-REPO-DISCOVERY-007.yaml
@@ -5917,6 +6033,7 @@ entries:
   - registry/STANDARDS_REGISTRY.md
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-REPO-DISCOVERY-008.yaml
@@ -5949,6 +6066,7 @@ entries:
   - registry/STANDARDS_REGISTRY.md
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-REPO-DISCOVERY-009.yaml
@@ -5981,6 +6099,7 @@ entries:
   - registry/STANDARDS_REGISTRY.md
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-REPO-DISCOVERY-010.yaml
@@ -6013,6 +6132,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-README-001.yaml
@@ -6053,6 +6173,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-MD-001.yaml
@@ -6095,6 +6216,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-SC-001.yaml
@@ -6168,6 +6290,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-SC-002.yaml
@@ -6200,6 +6323,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-SC-003.yaml
@@ -6235,6 +6359,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-SC-004.yaml
@@ -6271,6 +6396,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-SC-005.yaml
@@ -6304,6 +6430,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-SC-006.yaml
@@ -6336,6 +6463,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-SC-007.yaml
@@ -6368,6 +6496,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-SC-008.yaml
@@ -6401,6 +6530,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-SC-009.yaml
@@ -6434,6 +6564,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-SC-010.yaml
@@ -6466,6 +6597,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-SC-011.yaml
@@ -6499,6 +6631,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-SC-012.yaml
@@ -6531,6 +6664,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-SC-013.yaml
@@ -6563,6 +6697,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-SC-014.yaml
@@ -6595,6 +6730,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-SC-015.yaml
@@ -6627,6 +6763,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-SC-016.yaml
@@ -6659,6 +6796,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-SC-017.yaml
@@ -6691,6 +6829,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-SC-018.yaml
@@ -6723,6 +6862,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-SC-019.yaml
@@ -6775,6 +6915,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-SC-020.yaml
@@ -6807,6 +6948,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-DESC-001.yaml
@@ -6865,6 +7007,7 @@ entries:
   - registry/framework.yaml
   - registry/maintenance/readiness/atc-standards.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-VERSION-001.yaml
@@ -6927,6 +7070,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/requirements.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
@@ -7176,6 +7320,7 @@ entries:
   - standards/md/ATC-STD-070.md
   - standards/md/ATC-STD-072.md
   - standards/milestone/ATC-STD-MILESTONE-001.md
+  - standards/os/ATC-STD-600.md
   - standards/os/ATC-STD-601.md
   - standards/os/ATC-STD-602.md
   - standards/os/ATC-STD-603.md
@@ -7263,6 +7408,7 @@ entries:
   - registry/findings.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-AUDIT-001.yaml
@@ -7343,6 +7489,7 @@ entries:
   - registry/findings.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-AI-DECISION-001.yaml
@@ -7389,6 +7536,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/requirements.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
@@ -7639,6 +7787,7 @@ entries:
   - standards/md/ATC-STD-072.md
   - standards/milestone/ATC-STD-MILESTONE-001.md
   - standards/milestone/ATC-STD-MILESTONE-001.metadata.yaml
+  - standards/os/ATC-STD-600.md
   - standards/os/ATC-STD-601.md
   - standards/os/ATC-STD-602.md
   - standards/os/ATC-STD-603.md
@@ -7726,6 +7875,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-STDDEV-001.yaml
@@ -7767,6 +7917,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-REGISTRY-001.yaml
@@ -7809,6 +7960,7 @@ entries:
   - registry/findings.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-CHANGE-001.yaml
@@ -7857,6 +8009,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-TAXONOMY-001.yaml
@@ -7898,6 +8051,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/protocol-registry.yaml
   - registry/requirements.yaml
   - registry/standard-implementation.yaml
@@ -7941,6 +8095,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/requirements.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
@@ -7985,6 +8140,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-999.yaml
@@ -8026,6 +8182,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/repo-audit-checks.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
@@ -8072,6 +8229,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/requirements.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
@@ -8125,6 +8283,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/releases.yaml
   - registry/requirements.yaml
   - registry/security.yaml
@@ -8361,6 +8520,7 @@ entries:
   - standards/md/ATC-STD-069.md
   - standards/md/ATC-STD-070.md
   - standards/md/ATC-STD-072.md
+  - standards/os/ATC-STD-600.md
   - standards/os/ATC-STD-601.md
   - standards/os/ATC-STD-602.md
   - standards/os/ATC-STD-603.md
@@ -8452,6 +8612,7 @@ entries:
   - registry/findings.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/milestones.yaml
   - registry/requirements.yaml
   - registry/standard-implementation.yaml
@@ -8511,6 +8672,7 @@ entries:
   - registry/framework.yaml
   - registry/maintenance/readiness/a-townchain-os.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-COMPAT-001.yaml
@@ -8576,6 +8738,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/requirements.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
@@ -8616,6 +8779,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/protocol-conformance.yaml
   - registry/requirements.yaml
   - registry/standard-implementation.yaml
@@ -8654,6 +8818,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/protocol-security.yaml
   - registry/requirements.yaml
   - registry/security.yaml
@@ -8875,6 +9040,7 @@ entries:
   - standards/md/ATC-STD-069.md
   - standards/md/ATC-STD-070.md
   - standards/md/ATC-STD-072.md
+  - standards/os/ATC-STD-600.md
   - standards/os/ATC-STD-601.md
   - standards/os/ATC-STD-602.md
   - standards/os/ATC-STD-603.md
@@ -8954,6 +9120,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-001.yaml
@@ -8991,6 +9158,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-006.yaml
@@ -9023,6 +9191,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-008.yaml
@@ -9055,6 +9224,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-012.yaml
@@ -9087,6 +9257,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-013.yaml
@@ -9119,6 +9290,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-015.yaml
@@ -9151,6 +9323,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-025.yaml
@@ -9184,6 +9357,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-027.yaml
@@ -9217,6 +9391,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-040.yaml
@@ -9256,6 +9431,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-042.yaml
@@ -9290,6 +9466,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-045.yaml
@@ -9322,6 +9499,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-048.yaml
@@ -9354,6 +9532,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-050.yaml
@@ -9386,6 +9565,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-051.yaml
@@ -9418,6 +9598,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-052.yaml
@@ -9450,6 +9631,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-062.yaml
@@ -9482,6 +9664,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-063.yaml
@@ -9514,6 +9697,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-064.yaml
@@ -9546,6 +9730,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-066.yaml
@@ -9578,6 +9763,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-067.yaml
@@ -9610,6 +9796,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-069.yaml
@@ -9642,6 +9829,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-070.yaml
@@ -9674,6 +9862,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-072.yaml
@@ -9706,6 +9895,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-081.yaml
@@ -9739,6 +9929,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-082.yaml
@@ -9771,6 +9962,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-085.yaml
@@ -9803,6 +9995,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-087.yaml
@@ -9835,6 +10028,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-088.yaml
@@ -9867,6 +10061,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-089.yaml
@@ -9899,6 +10094,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-090.yaml
@@ -9931,6 +10127,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-091.yaml
@@ -9963,6 +10160,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-093.yaml
@@ -9995,6 +10193,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-094.yaml
@@ -10027,6 +10226,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-095.yaml
@@ -10059,6 +10259,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-101.yaml
@@ -10092,6 +10293,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-103.yaml
@@ -10125,6 +10327,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-104.yaml
@@ -10158,6 +10361,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-105.yaml
@@ -10191,6 +10395,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-107.yaml
@@ -10224,6 +10429,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-129.yaml
@@ -10256,6 +10462,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-130.yaml
@@ -10288,6 +10495,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-140.yaml
@@ -10329,6 +10537,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-141.yaml
@@ -10361,6 +10570,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-142.yaml
@@ -10393,6 +10603,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-143.yaml
@@ -10425,6 +10636,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-144.yaml
@@ -10457,6 +10669,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-146.yaml
@@ -10489,6 +10702,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-147.yaml
@@ -10521,6 +10735,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-148.yaml
@@ -10553,6 +10768,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-149.yaml
@@ -10585,6 +10801,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-160.yaml
@@ -10625,6 +10842,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-161.yaml
@@ -10657,6 +10875,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-163.yaml
@@ -10689,6 +10908,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-164.yaml
@@ -10721,6 +10941,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-169.yaml
@@ -10753,6 +10974,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-170.yaml
@@ -10785,6 +11007,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-171.yaml
@@ -10817,6 +11040,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-172.yaml
@@ -10849,6 +11073,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-174.yaml
@@ -10881,6 +11106,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-180.yaml
@@ -10930,6 +11156,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-181.yaml
@@ -10962,6 +11189,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-182.yaml
@@ -10994,6 +11222,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-183.yaml
@@ -11026,6 +11255,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-184.yaml
@@ -11058,6 +11288,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-185.yaml
@@ -11090,6 +11321,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-186.yaml
@@ -11122,6 +11354,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-187.yaml
@@ -11154,6 +11387,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-188.yaml
@@ -11186,6 +11420,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-189.yaml
@@ -11218,6 +11453,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-190.yaml
@@ -11250,6 +11486,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-191.yaml
@@ -11282,6 +11519,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-192.yaml
@@ -11314,6 +11552,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-193.yaml
@@ -11346,6 +11585,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-194.yaml
@@ -11378,6 +11618,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-195.yaml
@@ -11410,6 +11651,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-196.yaml
@@ -11442,6 +11684,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-197.yaml
@@ -11478,6 +11721,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-200.yaml
@@ -11520,6 +11764,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-205.yaml
@@ -11554,6 +11799,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-206.yaml
@@ -11587,6 +11833,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-207.yaml
@@ -11620,6 +11867,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-208.yaml
@@ -11653,6 +11901,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-209.yaml
@@ -11686,6 +11935,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-210.yaml
@@ -11719,6 +11969,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-240.yaml
@@ -11760,6 +12011,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-241.yaml
@@ -11792,6 +12044,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-242.yaml
@@ -11824,6 +12077,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-243.yaml
@@ -11856,6 +12110,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-244.yaml
@@ -11889,6 +12144,7 @@ entries:
   - registry/findings.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-245.yaml
@@ -11921,6 +12177,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-246.yaml
@@ -11953,6 +12210,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-247.yaml
@@ -11985,6 +12243,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-248.yaml
@@ -12017,6 +12276,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-249.yaml
@@ -12049,6 +12309,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-270.yaml
@@ -12087,6 +12348,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-271.yaml
@@ -12119,6 +12381,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-272.yaml
@@ -12151,6 +12414,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-273.yaml
@@ -12183,6 +12447,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-274.yaml
@@ -12215,6 +12480,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-275.yaml
@@ -12247,6 +12513,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-276.yaml
@@ -12279,6 +12546,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-280.yaml
@@ -12316,6 +12584,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-282.yaml
@@ -12348,6 +12617,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-283.yaml
@@ -12380,6 +12650,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-284.yaml
@@ -12412,6 +12683,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-285.yaml
@@ -12444,6 +12716,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-286.yaml
@@ -12476,6 +12749,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-301.yaml
@@ -12509,6 +12783,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-302.yaml
@@ -12542,6 +12817,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-303.yaml
@@ -12575,6 +12851,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-304.yaml
@@ -12608,6 +12885,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-306.yaml
@@ -12640,6 +12918,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-307.yaml
@@ -12672,6 +12951,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-308.yaml
@@ -12705,6 +12985,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-309.yaml
@@ -12737,6 +13018,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-311.yaml
@@ -12769,6 +13051,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-312.yaml
@@ -12801,6 +13084,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-340.yaml
@@ -12843,6 +13127,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-341.yaml
@@ -12875,6 +13160,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-342.yaml
@@ -12907,6 +13193,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-343.yaml
@@ -12939,6 +13226,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-344.yaml
@@ -12971,6 +13259,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-345.yaml
@@ -13003,6 +13292,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-346.yaml
@@ -13035,6 +13325,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-347.yaml
@@ -13067,6 +13358,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-348.yaml
@@ -13099,6 +13391,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-349.yaml
@@ -13131,6 +13424,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-350.yaml
@@ -13163,6 +13457,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-360.yaml
@@ -13203,6 +13498,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-361.yaml
@@ -13235,6 +13531,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-362.yaml
@@ -13267,6 +13564,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-363.yaml
@@ -13299,6 +13597,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-364.yaml
@@ -13331,6 +13630,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-365.yaml
@@ -13363,6 +13663,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-366.yaml
@@ -13395,6 +13696,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-367.yaml
@@ -13427,6 +13729,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-368.yaml
@@ -13460,6 +13763,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-380.yaml
@@ -13501,6 +13805,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-381.yaml
@@ -13533,6 +13838,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-382.yaml
@@ -13565,6 +13871,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-383.yaml
@@ -13597,6 +13904,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-384.yaml
@@ -13629,6 +13937,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-385.yaml
@@ -13661,6 +13970,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-386.yaml
@@ -13693,6 +14003,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-387.yaml
@@ -13725,6 +14036,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-388.yaml
@@ -13757,6 +14069,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-389.yaml
@@ -13793,6 +14106,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-400.yaml
@@ -13835,6 +14149,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-401.yaml
@@ -13867,6 +14182,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-402.yaml
@@ -13899,6 +14215,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-403.yaml
@@ -13931,6 +14248,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-404.yaml
@@ -13963,6 +14281,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-405.yaml
@@ -13995,6 +14314,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-406.yaml
@@ -14027,6 +14347,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-407.yaml
@@ -14059,6 +14380,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-408.yaml
@@ -14091,6 +14413,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-409.yaml
@@ -14123,6 +14446,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-420.yaml
@@ -14169,6 +14493,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-421.yaml
@@ -14201,6 +14526,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-422.yaml
@@ -14233,6 +14559,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-423.yaml
@@ -14265,6 +14592,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-424.yaml
@@ -14297,6 +14625,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-425.yaml
@@ -14329,6 +14658,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-426.yaml
@@ -14361,6 +14691,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-427.yaml
@@ -14393,6 +14724,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-428.yaml
@@ -14425,6 +14757,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-429.yaml
@@ -14457,6 +14790,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-430.yaml
@@ -14489,6 +14823,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-431.yaml
@@ -14521,6 +14856,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-432.yaml
@@ -14553,6 +14889,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-433.yaml
@@ -14585,6 +14922,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-434.yaml
@@ -14617,6 +14955,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-440.yaml
@@ -14658,6 +14997,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-441.yaml
@@ -14690,6 +15030,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-442.yaml
@@ -14722,6 +15063,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-443.yaml
@@ -14754,6 +15096,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-444.yaml
@@ -14786,6 +15129,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-445.yaml
@@ -14818,6 +15162,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-447.yaml
@@ -14850,6 +15195,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-448.yaml
@@ -14882,6 +15228,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-449.yaml
@@ -14915,6 +15262,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-450.yaml
@@ -14947,6 +15295,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-460.yaml
@@ -14986,6 +15335,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-461.yaml
@@ -15018,6 +15368,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-462.yaml
@@ -15050,6 +15401,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-463.yaml
@@ -15082,6 +15434,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-466.yaml
@@ -15114,6 +15467,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-467.yaml
@@ -15146,6 +15500,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-468.yaml
@@ -15178,6 +15533,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-469.yaml
@@ -15210,6 +15566,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-480.yaml
@@ -15249,6 +15606,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-481.yaml
@@ -15281,6 +15639,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-482.yaml
@@ -15313,6 +15672,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-483.yaml
@@ -15345,6 +15705,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-484.yaml
@@ -15377,6 +15738,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-485.yaml
@@ -15409,6 +15771,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-486.yaml
@@ -15441,6 +15804,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-488.yaml
@@ -15477,6 +15841,7 @@ entries:
   - registry/findings.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-500.yaml
@@ -15517,6 +15882,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-501.yaml
@@ -15549,6 +15915,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-502.yaml
@@ -15581,6 +15948,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-504.yaml
@@ -15613,6 +15981,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-505.yaml
@@ -15645,6 +16014,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-507.yaml
@@ -15677,6 +16047,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-508.yaml
@@ -15709,6 +16080,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-509.yaml
@@ -15741,6 +16113,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-540.yaml
@@ -15779,6 +16152,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-541.yaml
@@ -15811,6 +16185,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-542.yaml
@@ -15843,6 +16218,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-543.yaml
@@ -15875,6 +16251,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-544.yaml
@@ -15907,6 +16284,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-545.yaml
@@ -15939,6 +16317,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-546.yaml
@@ -15971,6 +16350,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-560.yaml
@@ -16006,6 +16386,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-561.yaml
@@ -16038,6 +16419,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-562.yaml
@@ -16070,6 +16452,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-566.yaml
@@ -16102,6 +16485,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-580.yaml
@@ -16141,6 +16525,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-581.yaml
@@ -16173,6 +16558,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-582.yaml
@@ -16205,6 +16591,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-583.yaml
@@ -16237,6 +16624,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-584.yaml
@@ -16269,6 +16657,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-585.yaml
@@ -16301,6 +16690,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-586.yaml
@@ -16333,6 +16723,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-587.yaml
@@ -16369,6 +16760,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/migrations/conflict-register.yaml
   - registry/migrations/namespace-inventory.yaml
   - registry/schema/standard-migration.schema.yaml
@@ -16412,11 +16804,11 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-601.yaml
   - registry/versions.yaml
-  - standards/os/ATC-STD-600.md
   - standards/os/ATC-STD-601.md
   - standards/os/ATC-STD-601.metadata.yaml
 - legacy_id: ATC-STD-602
@@ -16445,11 +16837,11 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-602.yaml
   - registry/versions.yaml
-  - standards/os/ATC-STD-600.md
   - standards/os/ATC-STD-602.md
   - standards/os/ATC-STD-602.metadata.yaml
 - legacy_id: ATC-STD-603
@@ -16478,11 +16870,11 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-603.yaml
   - registry/versions.yaml
-  - standards/os/ATC-STD-600.md
   - standards/os/ATC-STD-603.md
   - standards/os/ATC-STD-603.metadata.yaml
 - legacy_id: ATC-STD-604
@@ -16511,11 +16903,11 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-604.yaml
   - registry/versions.yaml
-  - standards/os/ATC-STD-600.md
   - standards/os/ATC-STD-604.md
   - standards/os/ATC-STD-604.metadata.yaml
 - legacy_id: ATC-STD-605
@@ -16544,11 +16936,11 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-605.yaml
   - registry/versions.yaml
-  - standards/os/ATC-STD-600.md
   - standards/os/ATC-STD-605.md
   - standards/os/ATC-STD-605.metadata.yaml
 - legacy_id: ATC-STD-606
@@ -16577,11 +16969,11 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-606.yaml
   - registry/versions.yaml
-  - standards/os/ATC-STD-600.md
   - standards/os/ATC-STD-606.md
   - standards/os/ATC-STD-606.metadata.yaml
 - legacy_id: ATC-STD-607
@@ -16610,6 +17002,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-607.yaml
@@ -16642,6 +17035,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/migrations/conflict-register.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
@@ -16680,6 +17074,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-623.yaml
@@ -16712,6 +17107,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-624.yaml
@@ -16744,6 +17140,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-625.yaml
@@ -16776,6 +17173,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-626.yaml
@@ -16808,6 +17206,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-627.yaml
@@ -16840,6 +17239,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/migrations/conflict-register.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
@@ -16876,6 +17276,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-641.yaml
@@ -16908,6 +17309,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-643.yaml
@@ -16940,6 +17342,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-646.yaml
@@ -16972,6 +17375,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/migrations/conflict-register.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
@@ -17010,6 +17414,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-662.yaml
@@ -17042,6 +17447,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-664.yaml
@@ -17074,6 +17480,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-665.yaml
@@ -17106,6 +17513,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-666.yaml
@@ -17138,6 +17546,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-667.yaml
@@ -17170,6 +17579,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/migrations/conflict-register.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
@@ -17209,6 +17619,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-681.yaml
@@ -17241,6 +17652,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-682.yaml
@@ -17273,6 +17685,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-683.yaml
@@ -17305,6 +17718,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-684.yaml
@@ -17337,6 +17751,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-685.yaml
@@ -17369,6 +17784,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-686.yaml
@@ -17404,6 +17820,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-700.yaml
@@ -17443,6 +17860,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-701.yaml
@@ -17475,6 +17893,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-702.yaml
@@ -17507,6 +17926,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-703.yaml
@@ -17539,6 +17959,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-704.yaml
@@ -17571,6 +17992,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-705.yaml
@@ -17603,6 +18025,7 @@ entries:
   - registry/dependencies.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-706.yaml
@@ -17634,6 +18057,7 @@ entries:
   observed_sources:
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-LICENSE-001.yaml
@@ -17673,6 +18097,7 @@ entries:
   observed_sources:
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-LICENSE-002.yaml
@@ -17704,6 +18129,7 @@ entries:
   observed_sources:
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-LICENSE-003.yaml
@@ -17735,6 +18161,7 @@ entries:
   observed_sources:
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-LICENSE-004.yaml
@@ -17766,6 +18193,7 @@ entries:
   observed_sources:
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-LICENSE-005.yaml
@@ -17797,6 +18225,7 @@ entries:
   observed_sources:
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-LICENSE-006.yaml
@@ -17828,6 +18257,7 @@ entries:
   observed_sources:
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-LICENSE-007.yaml
@@ -17859,6 +18289,7 @@ entries:
   observed_sources:
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-LICENSE-008.yaml
@@ -17890,6 +18321,7 @@ entries:
   observed_sources:
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-LICENSE-009.yaml
@@ -17923,6 +18355,7 @@ entries:
   - registry/STANDARDS_REGISTRY.md
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-CI-001.yaml
@@ -17961,6 +18394,7 @@ entries:
   - registry/framework.yaml
   - registry/improvements.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-IMPROVEMENT-001.yaml
@@ -18288,6 +18722,7 @@ entries:
   - governance/ATC-STD-002.md
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-016.yaml
@@ -18325,6 +18760,7 @@ entries:
   observed_sources:
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-017.yaml
@@ -18364,6 +18800,7 @@ entries:
   observed_sources:
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-018.yaml
@@ -18419,6 +18856,7 @@ entries:
   observed_sources:
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-019.yaml
@@ -18462,6 +18900,7 @@ entries:
   - governance/constitution/ATC-GOV-001.md
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-020.yaml
@@ -18508,6 +18947,7 @@ entries:
   observed_sources:
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-TUD-001.yaml
@@ -18545,6 +18985,7 @@ entries:
   - registry/findings.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-021.yaml
@@ -18580,6 +19021,7 @@ entries:
   observed_sources:
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-022.yaml
@@ -18618,6 +19060,7 @@ entries:
   observed_sources:
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-023.yaml
@@ -18652,6 +19095,7 @@ entries:
   observed_sources:
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-024.yaml
@@ -18687,6 +19131,7 @@ entries:
   observed_sources:
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-026.yaml
@@ -18725,6 +19170,7 @@ entries:
   observed_sources:
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-028.yaml
@@ -18763,6 +19209,7 @@ entries:
   observed_sources:
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-029.yaml
@@ -18824,6 +19271,7 @@ entries:
   - governance/ATC-STD-002.md
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-030.yaml
@@ -18860,6 +19308,7 @@ entries:
   observed_sources:
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-031.yaml
@@ -18894,6 +19343,7 @@ entries:
   observed_sources:
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-032.yaml
@@ -18928,6 +19378,7 @@ entries:
   observed_sources:
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-033.yaml
@@ -18963,6 +19414,7 @@ entries:
   observed_sources:
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-034.yaml
@@ -18999,6 +19451,7 @@ entries:
   - governance/constitution/ATC-GOV-001.md
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-035.yaml
@@ -19034,6 +19487,7 @@ entries:
   observed_sources:
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-036.yaml
@@ -19068,6 +19522,7 @@ entries:
   observed_sources:
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-037.yaml
@@ -19101,6 +19556,7 @@ entries:
   observed_sources:
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-038.yaml
@@ -19136,6 +19592,7 @@ entries:
   observed_sources:
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-039.yaml
@@ -19169,6 +19626,7 @@ entries:
   observed_sources:
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-041.yaml
@@ -19205,6 +19663,7 @@ entries:
   - governance/ATC-STD-000.md
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-043.yaml
@@ -19255,6 +19714,7 @@ entries:
   - registry/families/FAMILY-900.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-AAS-001.yaml
@@ -19820,6 +20280,7 @@ entries:
   observed_sources:
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-220.yaml
@@ -19880,6 +20341,7 @@ entries:
   - registry/findings.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-003.yaml
@@ -19912,6 +20374,7 @@ entries:
   observed_sources:
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-LEGAL-002.yaml
@@ -19948,6 +20411,7 @@ entries:
   - registry/maintenance/readiness/a-townchain-os.yaml
   - registry/maintenance/readiness/atc-standards.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-MAINT-000.yaml
@@ -20006,6 +20470,7 @@ entries:
   - registry/framework.yaml
   - registry/maintenance-conformance.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-MAINT-001.yaml
@@ -20040,6 +20505,7 @@ entries:
   - registry/framework.yaml
   - registry/maintenance-conformance.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-MAINT-002.yaml
@@ -20074,6 +20540,7 @@ entries:
   - registry/framework.yaml
   - registry/maintenance-conformance.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-MAINT-003.yaml
@@ -20109,6 +20576,7 @@ entries:
   - registry/framework.yaml
   - registry/maintenance-conformance.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-MAINT-004.yaml
@@ -20143,6 +20611,7 @@ entries:
   - registry/framework.yaml
   - registry/maintenance-conformance.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-MAINT-005.yaml
@@ -20177,6 +20646,7 @@ entries:
   - registry/framework.yaml
   - registry/maintenance-conformance.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-MAINT-006.yaml
@@ -20211,6 +20681,7 @@ entries:
   - registry/framework.yaml
   - registry/maintenance-conformance.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-MAINT-007.yaml
@@ -20245,6 +20716,7 @@ entries:
   - registry/framework.yaml
   - registry/maintenance-conformance.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-MAINT-008.yaml
@@ -20279,6 +20751,7 @@ entries:
   - registry/framework.yaml
   - registry/maintenance-conformance.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-MAINT-009.yaml
@@ -20313,6 +20786,7 @@ entries:
   - registry/framework.yaml
   - registry/maintenance-conformance.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-MAINT-010.yaml
@@ -20347,6 +20821,7 @@ entries:
   - registry/framework.yaml
   - registry/maintenance-conformance.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-MAINT-011.yaml
@@ -20381,6 +20856,7 @@ entries:
   - registry/framework.yaml
   - registry/maintenance-conformance.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-MAINT-012.yaml
@@ -20415,6 +20891,7 @@ entries:
   - registry/framework.yaml
   - registry/maintenance-conformance.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-MAINT-013.yaml
@@ -20449,6 +20926,7 @@ entries:
   - registry/framework.yaml
   - registry/maintenance-conformance.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-MAINT-014.yaml
@@ -20483,6 +20961,7 @@ entries:
   - registry/framework.yaml
   - registry/maintenance-conformance.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-MAINT-015.yaml
@@ -20517,6 +20996,7 @@ entries:
   - registry/framework.yaml
   - registry/maintenance-conformance.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-MAINT-016.yaml
@@ -20551,6 +21031,7 @@ entries:
   - registry/framework.yaml
   - registry/maintenance-conformance.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-MAINT-017.yaml
@@ -20585,6 +21066,7 @@ entries:
   - registry/framework.yaml
   - registry/maintenance-conformance.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-MAINT-018.yaml
@@ -20620,6 +21102,7 @@ entries:
   - registry/framework.yaml
   - registry/maintenance-conformance.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-MAINT-019.yaml
@@ -20655,6 +21138,7 @@ entries:
   - registry/framework.yaml
   - registry/maintenance-conformance.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-MAINT-020.yaml
@@ -20689,6 +21173,7 @@ entries:
   - registry/framework.yaml
   - registry/maintenance-conformance.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-MAINT-021.yaml
@@ -20724,6 +21209,7 @@ entries:
   - registry/framework.yaml
   - registry/maintenance-conformance.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-MAINT-022.yaml
@@ -20759,6 +21245,7 @@ entries:
   - registry/framework.yaml
   - registry/maintenance-conformance.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-MAINT-023.yaml
@@ -20794,6 +21281,7 @@ entries:
   - registry/framework.yaml
   - registry/maintenance-conformance.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-MAINT-024.yaml
@@ -20829,6 +21317,7 @@ entries:
   - registry/code-quality-matrix.yaml
   - registry/framework.yaml
   - registry/migrations/classification-backlog.yaml
+  - registry/migrations/classification-matrix.generated.yaml
   - registry/standard-implementation.yaml
   - registry/standards.yaml
   - registry/standards/ATC-STD-ENG-001.yaml
