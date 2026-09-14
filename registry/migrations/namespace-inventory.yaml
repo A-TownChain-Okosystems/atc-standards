@@ -1,0 +1,57 @@
+schema_version: "1.0.0"
+status: working_inventory
+purpose: "Observed legacy identifier namespaces that must be classified before canonical Family-scoped migration"
+rules:
+  preserve_legacy_identifiers: true
+  namespace_is_not_family: true
+  no_implicit_canonical_mapping: true
+  conflicts_fail_closed: true
+namespaces:
+  - namespace: ATC-STD
+    examples:
+      - ATC-STD-000
+      - ATC-STD-100
+      - ATC-STD-201
+      - ATC-STD-600
+    interpretation: "Legacy numeric and generic ATC standard namespace; semantic family must be determined per standard."
+    status: observed
+
+  - namespace: ATC-STD-domain-prefixed
+    examples:
+      - ATC-STD-AI-DEV-001
+      - ATC-STD-BUG-001
+      - ATC-STD-NET-001
+      - ATC-STD-ZKP-001
+    interpretation: "Legacy domain-prefixed standard namespace; prefix is evidence for classification, not automatic canonical Family assignment."
+    status: observed
+
+  - namespace: ATC-AAS
+    examples:
+      - ATC-AAS-001
+    interpretation: "Legacy ATC-AAS namespace; requires semantic classification against the new Family/Category/Class model."
+    status: observed
+
+  - namespace: ATC-ENT
+    examples:
+      - ATC-ENT-LAYER-001
+    interpretation: "Legacy enterprise/ecosystem namespace; requires explicit classification."
+    status: observed
+
+  - namespace: ATC-ARCH
+    examples:
+      - ATC-ARCH-001
+    interpretation: "Legacy architecture namespace; requires explicit classification."
+    status: observed
+
+  - namespace: FAM
+    examples:
+      - FAM-*
+    interpretation: "Existing legacy family identifiers. They are not implicitly equivalent to canonical F01/F02/F03 identifiers."
+    status: observed
+
+classification_gates:
+  - "Identify every registry record using each namespace."
+  - "Identify every file/reference using each namespace."
+  - "Detect collisions where one legacy identifier has multiple semantic definitions."
+  - "Record legacy aliases before any canonical allocation."
+  - "Do not treat numeric ranges as semantic Families."
