@@ -1,0 +1,71 @@
+schema_version: "1.0.0"
+status: open
+purpose: "Fail-closed conflict register for legacy registry and taxonomy migration"
+rules:
+  canonical_ids_allocated: false
+  legacy_ids_modified: false
+  conflicts_block_migration: true
+  numeric_range_implies_family: false
+  generated_state_drift_requires_resolution: true
+conflicts:
+  - id: MIG-CONFLICT-001
+    type: taxonomy-model
+    status: open
+    severity: high
+    scope: registry/standards.yaml
+    description: "The registry contains multiple identifier namespaces: numeric ATC-STD-NNN and domain-prefixed ATC-STD-* identifiers."
+    evidence:
+      - "ATC-STD-000"
+      - "ATC-STD-201..204"
+      - "ATC-STD-AI-DEV-*"
+      - "ATC-STD-BUG-*"
+      - "ATC-STD-NET-*"
+      - "ATC-STD-ZKP-*"
+    resolution: "Inventory all namespaces before canonical Family-scoped allocation."
+
+  - id: MIG-CONFLICT-002
+    type: semantic-range-collision
+    status: open
+    severity: critical
+    scope: "ATC-STD-600..699"
+    description: "The legacy numeric 600-range cannot be assumed to represent one semantic family because existing standards in adjacent numeric ranges have established domain ownership."
+    evidence:
+      - "Existing OS standards include ATC-STD-601 through ATC-STD-607."
+      - "Blockchain candidates must be classified individually."
+    resolution: "Perform semantic classification per legacy standard; never bulk-map 600..699 to F03."
+
+  - id: MIG-CONFLICT-003
+    type: generated-state-drift
+    status: open
+    severity: high
+    scope: "registry/registry.lock vs registry/GENERATED_STATE.md"
+    description: "Registry state artifacts currently expose different registry hashes."
+    evidence:
+      registry_lock_sha256: "8ff9ce3b9aba170adbeb0833ad1b7f0ada86f671c036ba152b4aebd7f1f87cf27"
+      generated_state_sha256: "2c1ae2355ee1bb5110898a3bb8839ae713e85203"
+      status_manifest_sha256_prefix: "8ff9ce3b9aba"
+    resolution: "Determine authoritative registry generation input, regenerate derived state, and verify all propagated hashes before migration."
+
+  - id: MIG-CONFLICT-004
+    type: legacy-structure
+    status: open
+    severity: high
+    scope: registry/categories.yaml
+    description: "The existing category registry still models the former numeric 000..900 family/range scheme."
+    resolution: "Treat the existing structure as legacy input; do not reinterpret it as the new Fxx/Cxx/CLxx hierarchy until the successor governance standards are approved."
+
+  - id: MIG-CONFLICT-005
+    type: legacy-family-structure
+    status: open
+    severity: medium
+    scope: registry/families
+    description: "Existing FAM-* family artifacts coexist with the proposed F01/F02/F03 family namespace."
+    resolution: "Inventory and explicitly map legacy FAM-* records; no implicit equivalence with canonical Fxx IDs."
+
+  - id: MIG-CONFLICT-006
+    type: canonical-allocation
+    status: open
+    severity: critical
+    scope: registry/migrations/standard-inventory.yaml
+    description: "Canonical IDs cannot be allocated until semantic Family/Category/Class classification has been reviewed."
+    resolution: "Keep canonical_id and sequence null for unreviewed records; allocate only through governed registry changes."
