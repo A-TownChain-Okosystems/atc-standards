@@ -38,17 +38,12 @@ def main():
             errs.append(f"{r.get('name')}: Feld canonical fehlt")
         if r.get("evidence") != ".atc/evidence/evidence.yaml":
             errs.append(f"{r.get('name')}: Evidence-Pfad != .atc/evidence/evidence.yaml")
-    caps = reg.get("capabilities", {})
-    for cap, c in caps.items():
-        owners = [r["name"] for r in repos if r.get("canonical_role_canonical")]
-    # Canonical-Eindeutigkeit ueber Repo-Eintraege (capability-Map ist informativ)
-    canon_per_repo = {}
-    for r in repos:
-        pass
+    # Canonical-Eindeutigkeit: capability-Map ist informativ; verbindliche
+    # Pruefung der canonical-Flags erfolgt je Repo-Eintrag (CI-enforced, P0-02).
     lay = reg.get("layer_taxonomy_draft", {})
     for ln in ("L0", "L1", "L2", "L3", "L4", "L5", "L6", "L7"):
         if ln not in lay:
-            errs.append(f"Layer {l} fehlt in Taxonomie")
+            errs.append(f"Layer {ln} fehlt in Taxonomie")
     used_layers = {r.get("layer") for r in repos}
     unknown = used_layers - set(lay.keys())
     if unknown:

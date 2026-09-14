@@ -87,8 +87,8 @@ def main():
         if r.returncode:
             fails += 1
             for ln in r.stdout.splitlines():
-                if "[FAIL]" in l:
-                    print("    " + l.strip())
+                if "[FAIL]" in ln:
+                    print("    " + ln.strip())
     # S-17 Duplicate Detection (7.8): gleiche ID in mehreren Dateien = FAIL
     ids = {}
     for f in files:

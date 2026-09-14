@@ -15,7 +15,8 @@ import yaml
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))
-R = lambda n: yaml.safe_load(open(os.path.join(ROOT, "registry", n), encoding="utf-8"))
+def R(n):
+    return yaml.safe_load(open(os.path.join(ROOT, "registry", n), encoding="utf-8"))
 
 std = R("standards.yaml")["standards"]
 fw = R("framework.yaml")["framework"]

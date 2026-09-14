@@ -3,6 +3,9 @@
 SSOT der vierstufigen Hierarchie (Domain→Familie→Kategorie→Standard); Bestands-Abbild
 aus registry/categories.yaml + registry/standards.yaml. Regenerierung nur via TCR + SCR."""
 
+import datetime as _dt
+import re as _re
+
 import yaml
 
 # ── Domain-Zuordnung: JEDER Bestands-Familie MUSS ein Domain zugewiesen sein.
@@ -181,10 +184,6 @@ for name, meta in families.items():
     dom_fams[dom].append(fam)
 
 # Kategorie-Ebene: für neue Familien via ATC-CAT-REQ; Bestand führt GENERAL (Grandfathering)
-
-import datetime as _dt
-import re as _re
-
 
 def reg_lookup(mid):
     """SCR-0091: Status/Version aus Registry-SSOT abgeleitet — keine Hartcodes."""
