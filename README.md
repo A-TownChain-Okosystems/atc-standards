@@ -10,7 +10,7 @@ state:
   id: ATC-STATE-20260914-8ff9ce3b
   generated_at: "2026-09-14 12:54 UTC+2"
   registry_version: "1.0.0"
-  registry_sha256: "8ff9ce3b9aba170adbeb0833ad1b7f0ada86f671c036ba152b4aeb7d1f87cf27"
+  registry_sha256: "8ff9ce3b9aba170adbeb0833ad1b7f0ada86f671c036ba152b4aebd7f1f87cf27"
   standards_total: 505
   standards_approved: 505
   standards_candidate: 0
@@ -73,17 +73,23 @@ python3 tools/atc-std-validator/validate_all.py
 python3 tools/atc-repo-audit/atc_repo_audit.py . --level R3
 ```
 
-## Governance Flow
-Change Request → SCR (§19–33) → Owner-Freigabe (§9) → Registry-Eintrag → CI-Validierung → APPROVED → normativ in Kraft (§30 Immutabilität).
+## Installation
 
----
-
-## Quick Start
+Voraussetzungen: Git und Python 3.11+. Reproduzierbares Setup:
 
 ```bash
 git clone https://github.com/A-TownChain-Okosystems/atc-standards.git
 cd atc-standards
-python3 -m pip install pyyaml
+python3 -m pip install -r requirements.txt
+```
+
+## Governance Flow
+Change Request → SCR (§19–33) → Owner-Freigabe (§9) → Registry-Eintrag → CI-Validierung → APPROVED → normativ in Kraft (§30 Immutabilität).
+
+## Quick Start
+
+```bash
+python3 tools/atc-std-validator/validate_all.py
 ```
 
 ## Governance
@@ -128,6 +134,32 @@ python3 tools/atc-readme-validator/check_readme.py .
 ## Roadmap
 
 Governance-Hardening: Registry-Integritäts-Gate, Discovery→Audit→SCR-Kopplung, Evidence-L3 für kritische Standards und CI-Evidence-Kopplung der Implementierungs-Matrix.
+
+## Repository Structure
+
+```text
+atc-standards/
+├── approval/
+├── atc/
+├── ats/
+├── audits/
+├── change-requests/
+├── contracts/
+├── docs/
+├── evidence/
+├── governance/
+├── legal/
+├── licenses/
+├── licensing/
+├── profiles/
+├── protocols/
+├── references/
+├── registry/
+├── schemas/
+├── standards/
+├── templates/
+└── tools/
+```
 
 ## Documentation
 
