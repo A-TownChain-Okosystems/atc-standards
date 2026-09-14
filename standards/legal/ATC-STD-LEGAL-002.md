@@ -3,7 +3,7 @@ standard:
   id: ATC-STD-LEGAL-002
   title: "ATC-STD-LEGAL-002 — Impressum & Anbieterkennzeichnung Standard"
   version: "1.0.0"
-  status: draft
+  status: approved
   category: legal
   authority: A-TownChain Ecosystems
   owner: ShivaCoreDev
@@ -12,16 +12,16 @@ standard:
   normative: true
   supersedes: []
   superseded_by: null
-  effective_date: "pending §9-Freigabe"
+  effective_date: "2026-09-14"
   review_date: null
   applies_to: "Alle öffentlich zugänglichen ATC-Ressourcen (Websites, Web-Apps, Docs, Pages, Wikis, Portale)"
   license: "Copyright (c) 2026 Michael Wroblewski"
 ---
 
-# ATC-STD-LEGAL-002 — Impressum & Anbieterkennzeichnung Standard (v1.0.0, DRAFT — RC1)
+# ATC-STD-LEGAL-002 — Impressum & Anbieterkennzeichnung Standard (v1.0.0, APPROVED — SCR-0124)
 
-> **Status:** DRAFT (1.0.0-RC1) — wartet auf §9-Freigabe gemäß ATC-STD-000; bis dahin nicht normativ in Kraft
-> **Version:** 1.0.0 (FORMAL, Release Candidate RC1 — Status DRAFT) · **Datum:** 13.09.2026 · **Autoren:** Michael Wroblewski (Owner), Aurora (Superagent)
+> **Status:** APPROVED (Sammelfreigabe SCR-0124) (1.0.0-RC1) — freigegeben per Sammelfreigabe SCR-0124 gemäß ATC-STD-000; bis dahin nicht normativ in Kraft
+> **Version:** 1.0.0 (FORMAL, APPROVED per Sammelfreigabe SCR-0124; vormals RC1) · **Datum:** 13.09.2026 · **Autoren:** Michael Wroblewski (Owner), Aurora (Superagent)
 > **Standard-ID:** ATC-STD-LEGAL-002 · **Scope:** Alle öffentlich zugänglichen Ressourcen der Organisation
 > **Normative Sprache:** RFC 2119 / RFC 8174 (MUST/SHOULD/MAY)
 > **Review Required:** Technical, Security, Architecture, Governance, Legal/Compliance
@@ -408,7 +408,7 @@ This standard follows the ATC standards lifecycle (ATC-STD-000):
 IDEA → PROPOSED → DRAFT → REVIEW → CANDIDATE → APPROVED → STABLE → DEPRECATED → RETIRED
 ```
 
-The current lifecycle state is: **DRAFT**.
+The current lifecycle state is: **APPROVED** (Sammelfreigabe SCR-0124, 14.09.2026).
 
 ## 39. Acceptance Criteria for 1.0.0
 
@@ -478,7 +478,7 @@ This standard SHOULD be used together with:
 | ID | Titel | Status |
 |---|---|---|
 | ATC-STD-LEGAL-001 | Legal & Compliance Framework | GEPLANT — noch nicht registriert (Kein Eintrag = kein Standard) |
-| ATC-STD-LEGAL-002 | Impressum & Anbieterkennzeichnung (dieser Standard) | DRAFT |
+| ATC-STD-LEGAL-002 | Impressum & Anbieterkennzeichnung (dieser Standard) | APPROVED |
 | ATC-STD-LEGAL-003 | Privacy & Data Protection Standard | GEPLANT — noch nicht registriert |
 | ATC-STD-LEGAL-004 | Terms of Service Standard | GEPLANT — noch nicht registriert |
 | ATC-STD-LEGAL-005 | Open-Source Licensing Standard | GEPLANT — noch nicht registriert |

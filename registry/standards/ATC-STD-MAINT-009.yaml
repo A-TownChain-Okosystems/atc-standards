@@ -7,6 +7,6 @@ file: standards/maintenance/ATC-STD-MAINT-009.md
 mandate: Owner-Direktive 14.09.2026 (SCR-0120, MAINT-Familie; MAINT-021..024 RESERVED)
 registry_version: 1
 standard_id: ATC-STD-MAINT-009
-status: draft
+status: approved
 title: VM & Runtime Maintenance Standard (ATC-VM, ABI/API, 7-Stufen-Pruefkette)
 version: 1.0.0

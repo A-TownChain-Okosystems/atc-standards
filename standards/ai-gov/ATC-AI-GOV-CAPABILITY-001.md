@@ -3,7 +3,7 @@ standard:
   id: ATC-AI-GOV-CAPABILITY-001
   title: "ATC Agent Governance — Capability & Authorization Model (explizite Berechtigungen, Owner-Gates, Suspendierung)"
   version: "1.0.0"
-  status: draft
+  status: approved
   category: ai-gov
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf 09.09.)"
@@ -15,9 +15,9 @@ standard:
   requirements: [REQ-AGOV-CAP-001, REQ-AGOV-CAP-002, REQ-AGOV-CAP-003, REQ-AGOV-CAP-004]
 ---
 
-# ATC-AI-GOV-CAPABILITY-001 — Capability & Authorization Model (v1.0.0, DRAFT)
+# ATC-AI-GOV-CAPABILITY-001 — Capability & Authorization Model (v1.0.0, APPROVED)
 
-> **Status:** DRAFT — Owner-Entwurf 09.09. (Zielstruktur: capabilities.yaml als eigenständiges Berechtigungsmodell); operativer SSOT: `.github`-Hub `ai/capabilities.yaml` + Schema `ai/schemas/agent.schema.yaml`; SCR-0062.
+> **Status:** APPROVED (Sammelfreigabe SCR-0124) — Owner-Entwurf 09.09. (Zielstruktur: capabilities.yaml als eigenständiges Berechtigungsmodell); operativer SSOT: `.github`-Hub `ai/capabilities.yaml` + Schema `ai/schemas/agent.schema.yaml`; SCR-0062.
 
 ## 1. Zweck (Purpose)
 

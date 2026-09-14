@@ -3,7 +3,7 @@ standard:
   id: ATC-AI-GOV-INCIDENT-001
   title: "ATC Agent Governance — Incident & Fehlerbehandlung (Klassen, Lifecycle, RCA, Postmortem)"
   version: "1.0.0"
-  status: draft
+  status: approved
   category: ai-gov
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"
@@ -15,9 +15,9 @@ standard:
   requirements: [REQ-AGOV-INC-001, REQ-AGOV-INC-002, REQ-AGOV-INC-003, REQ-AGOV-INC-004]
 ---
 
-# ATC-AI-GOV-INCIDENT-001 — Incident & Fehlerbehandlung (v1.0.0, DRAFT)
+# ATC-AI-GOV-INCIDENT-001 — Incident & Fehlerbehandlung (v1.0.0, APPROVED)
 
-> **Status:** DRAFT — Owner-Entwurf 09.09.; operativer SSOT: `.github`-Hub `ai/incident.yaml`; §9-Freigabe ausstehend.
+> **Status:** APPROVED (Sammelfreigabe SCR-0124) — Owner-Entwurf 09.09.; operativer SSOT: `.github`-Hub `ai/incident.yaml`; §9-Freigabe ausstehend.
 
 ## 1. Zweck (Purpose)
 

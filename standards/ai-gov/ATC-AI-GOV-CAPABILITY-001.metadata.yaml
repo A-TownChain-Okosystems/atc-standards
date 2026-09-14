@@ -12,7 +12,7 @@ implementation:
 normative: false
 owner: Michael (Owner-Entwurf)
 source_file: standards/ai-gov/ATC-AI-GOV-CAPABILITY-001.md
-status: draft
+status: approved
 title: ATC Agent Governance — Capability & Authorization Model (explizite Berechtigungen,
   Autorisierungskette, Owner-Gates fuer P0-Capabilities, Entzug/Suspendierung)
 version: 1.0.0

@@ -13,7 +13,7 @@ implementation:
 normative: false
 owner: Michael (Owner-Entwurf)
 source_file: standards/ai-gov/ATC-AI-GOV-INCIDENT-001.md
-status: draft
+status: approved
 title: ATC Agent Governance — Incident & Fehlerbehandlung (6 Klassen, Lifecycle, RCA-Pflicht,
   Postmortem)
 version: 1.0.0

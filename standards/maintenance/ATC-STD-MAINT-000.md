@@ -3,7 +3,7 @@ standard:
   id: ATC-STD-MAINT-000
   title: "Maintenance Governance & Specification Standard"
   version: "1.0.0"
-  status: draft
+  status: approved
   category: maint
   family: MAINT
   authority: A-TownChain Ecosystems
@@ -1248,8 +1248,8 @@ ATC-STD-MAINT-000
 - The registry record carries its own `registry_version` (record format version), separate from
   the standard version; the registry MUST mirror BOTH the standard version AND the lifecycle
   status at all times (divergence is a registry drift).
-- Version 1.0.0 of this document is a DRAFT. It MUST NOT be represented as APPROVED or STABLE
-  until the review chain (§21) completes, including Owner approval under ATC-STD-000 §9.
+- Version 1.0.0 of this document is APPROVED per Sammelfreigabe SCR-0124 (Owner-Direktive
+  14.09.2026, ATC-STD-000 §9); Immutabilitaet per §30.
 
 ## 23. GSEPF Integration
 

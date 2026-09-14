@@ -3,7 +3,7 @@ standard:
   id: ATC-AI-GOV-FINDING-001
   title: "ATC Agent Governance — Persistent Findings (ATC-FINDING-YYYY-NNNNNN, Lifecycle, Verifikation, Registry-Kopplung)"
   version: "1.0.0"
-  status: draft
+  status: approved
   category: ai-gov
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf 09.09.)"
@@ -15,9 +15,9 @@ standard:
   requirements: [REQ-AGOV-FIN-001, REQ-AGOV-FIN-002, REQ-AGOV-FIN-003, REQ-AGOV-FIN-004, REQ-AGOV-FIN-005]
 ---
 
-# ATC-AI-GOV-FINDING-001 — Persistent Findings (v1.0.0, DRAFT)
+# ATC-AI-GOV-FINDING-001 — Persistent Findings (v1.0.0, APPROVED)
 
-> **Status:** DRAFT — Owner-Entwurf 09.09. (Kontrollprinzip 3 „Findings sind persistent"); operativer SSOT: `.github`-Hub `ai/audit/finding-schema.yaml`; SCR-0062.
+> **Status:** APPROVED (Sammelfreigabe SCR-0124) — Owner-Entwurf 09.09. (Kontrollprinzip 3 „Findings sind persistent"); operativer SSOT: `.github`-Hub `ai/audit/finding-schema.yaml`; SCR-0062.
 
 ## 1. Zweck (Purpose)
 

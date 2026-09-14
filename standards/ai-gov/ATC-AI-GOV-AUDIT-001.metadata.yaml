@@ -13,7 +13,7 @@ implementation:
 normative: false
 owner: Michael (Owner-Entwurf)
 source_file: standards/ai-gov/ATC-AI-GOV-AUDIT-001.md
-status: draft
+status: approved
 title: ATC Agent Governance — Auditverfahren (AGOV-FULL/DELTA/GATE, Snapshot, Readiness,
   Post-Change-Audit)
 version: 1.0.0

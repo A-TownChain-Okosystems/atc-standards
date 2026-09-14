@@ -3,7 +3,7 @@ standard:
   id: ATC-AI-GOV-HANDOFF-001
   title: "ATC Agent Governance — Agent-to-Agent Übergabe (Handoff-Pflichtfelder, Kontinuität, Auditierbarkeit)"
   version: "1.0.0"
-  status: draft
+  status: approved
   category: ai-gov
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"
@@ -15,9 +15,9 @@ standard:
   requirements: [REQ-AGOV-HOF-001, REQ-AGOV-HOF-002, REQ-AGOV-HOF-003]
 ---
 
-# ATC-AI-GOV-HANDOFF-001 — Agent-to-Agent Übergabe (v1.0.0, DRAFT)
+# ATC-AI-GOV-HANDOFF-001 — Agent-to-Agent Übergabe (v1.0.0, APPROVED)
 
-> **Status:** DRAFT — Owner-Entwurf 09.09.; operativer SSOT: `.github`-Hub `ai/handoff.yaml` (Protokoll + Template); §9-Freigabe ausstehend.
+> **Status:** APPROVED (Sammelfreigabe SCR-0124) — Owner-Entwurf 09.09.; operativer SSOT: `.github`-Hub `ai/handoff.yaml` (Protokoll + Template); §9-Freigabe ausstehend.
 
 ## 1. Zweck (Purpose)
 

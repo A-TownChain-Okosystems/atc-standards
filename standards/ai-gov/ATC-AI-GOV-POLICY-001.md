@@ -3,7 +3,7 @@ standard:
   id: ATC-AI-GOV-POLICY-001
   title: "ATC Agent Governance — Maschinenlesbare Policies (ATC-POL-001..010, MUST/SHOULD/MAY)"
   version: "1.0.0"
-  status: draft
+  status: approved
   category: ai-gov
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"
@@ -15,9 +15,9 @@ standard:
   requirements: [REQ-AGOV-POL-001, REQ-AGOV-POL-002, REQ-AGOV-POL-003, REQ-AGOV-POL-004]
 ---
 
-# ATC-AI-GOV-POLICY-001 — Maschinenlesbare Policies (v1.0.0, DRAFT)
+# ATC-AI-GOV-POLICY-001 — Maschinenlesbare Policies (v1.0.0, APPROVED)
 
-> **Status:** DRAFT — Owner-Entwurf 09.09.; operativer SSOT: `.github`-Hub `ai/policies.yaml` (AP-001..016 Grundsätze + ATC-POL-001..010 maschinenprüfbar); §9-Freigabe ausstehend.
+> **Status:** APPROVED (Sammelfreigabe SCR-0124) — Owner-Entwurf 09.09.; operativer SSOT: `.github`-Hub `ai/policies.yaml` (AP-001..016 Grundsätze + ATC-POL-001..010 maschinenprüfbar); §9-Freigabe ausstehend.
 
 ## 1. Zweck (Purpose)
 

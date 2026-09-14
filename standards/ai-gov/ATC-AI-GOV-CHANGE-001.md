@@ -3,7 +3,7 @@ standard:
   id: ATC-AI-GOV-CHANGE-001
   title: "ATC Agent Governance — Governance Change Management (SCR-Pflicht, SemVer, Rollback)"
   version: "1.0.0"
-  status: draft
+  status: approved
   category: ai-gov
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"
@@ -15,9 +15,9 @@ standard:
   requirements: [REQ-AGOV-CHG-001, REQ-AGOV-CHG-002, REQ-AGOV-CHG-003]
 ---
 
-# ATC-AI-GOV-CHANGE-001 — Governance Change Management (v1.0.0, DRAFT)
+# ATC-AI-GOV-CHANGE-001 — Governance Change Management (v1.0.0, APPROVED)
 
-> **Status:** DRAFT — Owner-Entwurf 09.09.; operativer SSOT: `.github`-Hub `ai/change.yaml`; §9-Freigabe ausstehend.
+> **Status:** APPROVED (Sammelfreigabe SCR-0124) — Owner-Entwurf 09.09.; operativer SSOT: `.github`-Hub `ai/change.yaml`; §9-Freigabe ausstehend.
 
 ## 1. Zweck (Purpose)
 

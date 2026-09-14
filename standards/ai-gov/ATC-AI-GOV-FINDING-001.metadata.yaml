@@ -13,7 +13,7 @@ implementation:
 normative: false
 owner: Michael (Owner-Entwurf)
 source_file: standards/ai-gov/ATC-AI-GOV-FINDING-001.md
-status: draft
+status: approved
 title: ATC Agent Governance — Persistent Findings (ATC-FINDING-YYYY-NNNNNN, Lifecycle
   bis VERIFIED, Verifikations-Wahrheit, deterministische Repository-Status-Aggregation,
   Registry-Kopplung registry_ref)

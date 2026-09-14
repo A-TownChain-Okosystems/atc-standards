@@ -3,7 +3,7 @@ standard:
   id: ATC-STD-IMPROVEMENT-001
   title: "ATC Improvement Standard — Systemverbesserungsstandard (Continuous Improvement Management System: Zyklus, Board, Root-Cause, Regression Prevention, Automatisierungsleiter)"
   version: "1.0.0"
-  status: draft
+  status: approved
   category: improvement
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"
@@ -41,9 +41,9 @@ standard:
     - REQ-IMP-017
 ---
 
-# ATC-STD-IMPROVEMENT-001 — ATC Improvement Standard (v1.0.0, DRAFT)
+# ATC-STD-IMPROVEMENT-001 — ATC Improvement Standard (v1.0.0, APPROVED)
 
-> **Status:** DRAFT (v1.0.0) — Owner-Entwurf Michael Wroblewski (08.09.2026, 18:14 UTC+2); Agenten-Review + Konfliktanalyse SCR-0056; Owner-§9-Freigabe ausstehend. Bei Freigabe: APPROVED, normativ, §30-eingefroren.
+> **Status:** APPROVED (Sammelfreigabe SCR-0124) (v1.0.0) — Owner-Entwurf Michael Wroblewski (08.09.2026, 18:14 UTC+2); Agenten-Review + Konfliktanalyse SCR-0056; Owner-§9-Freigabe ausstehend. Bei Freigabe: APPROVED, normativ, §30-eingefroren.
 > **Familie:** Improvement Standards (ATC-STD-IMPROVEMENT-001..999) — Kategorie `improvement`. Schirm-Standard des ATC Continuous Improvement Management Systems; Sub-Standards 002..012 geplant (je eigene SCR, Abschnitt 18).
 > **Einordnung:** Ergänzt Fehleranalyse (BUG-005), Repository-Audit (201..204), Standards-Erstellung (000), Updates (UPDATE-001) und Vollständigkeitsprüfung (AUDIT-001) zum geschlossenen Verbesserungszyklus.
 
@@ -236,4 +236,4 @@ ATC-STD-IMPROVEMENT-002 Continuous Improvement · 003 Root Cause Improvement · 
 - 17 normative Anforderungen (REQ-IMP-001..017), 5 COM-IMP-Gates
 - ATC Improvement Principle als Grundsatz; 13-stufiger Zyklus; 14 Quellen; 10 Klassen; P0-P3 + 9 Impact-Dimensionen; ATC-IMP-NNNNNN-Pflichtdatensatz; Root-Cause-Pflicht; Regression Prevention; Verbesserungsregel (lokal → systemweit → Standard → automatisierter Check); Standards-Selbstverbesserung; Automatisierungsleiter (6 Stufen); KI-Agenten-Regel (13 Schritte); 8 Regressions-Dimensionen; Verbesserungskette; DoD (11 Nachweispunkte); zentrales Improvement Board (9 Zustände, registry/improvements.yaml); org-weite Anwendung (26 Repos, Registry-SSOT + E-Stage)
 - SCR-0056: Familien-Allokation, Board-Infrastruktur, Seed aus AUD-2026-0004-Findings
-- Status DRAFT — §9-Freigabe ausstehend
+- Status APPROVED — Sammelfreigabe SCR-0124 (14.09.2026)

@@ -3,7 +3,7 @@ standard:
   id: ATC-AI-GOV-001
   title: "ATC Agent Governance Framework v1.0 — Produktionsarchitektur (Governance-Kette, 4 Kontrollprinzipien, Severity-/Status-Modell, Zuständigkeiten, Phasen-Roadmap)"
   version: "1.0.0"
-  status: draft
+  status: approved
   category: ai-gov
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Architektur-Freeze 09.09.)"
@@ -15,9 +15,9 @@ standard:
   requirements: [REQ-AIGOV-001, REQ-AIGOV-002, REQ-AIGOV-003, REQ-AIGOV-004, REQ-AIGOV-005, REQ-AIGOV-006, REQ-AIGOV-007]
 ---
 
-# ATC-AI-GOV-001 — ATC Agent Governance Framework v1.0 (DRAFT)
+# ATC-AI-GOV-001 — ATC Agent Governance Framework v1.0 (APPROVED — SCR-0124)
 
-> **Status:** DRAFT v1.0.0 — **Owner-Architektur-Freeze 09.09.** („ATC-AI-GOV v1.0 Produktionsarchitektur einfrieren", SCR-0062). §9-Formalfreigabe der Familie empfohlen als Sammelfreigabe. Umbrella-Standard der Familie; die 10 Sub-Standards tragen die Details.
+> **Status:** APPROVED (Sammelfreigabe SCR-0124) v1.0.0 — **Owner-Architektur-Freeze 09.09.** („ATC-AI-GOV v1.0 Produktionsarchitektur einfrieren", SCR-0062). §9-Formalfreigabe der Familie empfohlen als Sammelfreigabe. Umbrella-Standard der Familie; die 10 Sub-Standards tragen die Details.
 > **Grundsatz:** Agentenanweisungen behaupten Compliance nicht — die Checks beweisen sie.
 
 ## 1. Zweck (Purpose)

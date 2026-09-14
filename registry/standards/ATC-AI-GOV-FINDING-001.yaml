@@ -8,7 +8,7 @@ mandate: Owner-Entwurf 09.09. (Kontrollprinzip 3); 5 REQ-AGOV-FIN; SSOT ai/audit
   Abgrenzung zu F-NNNN (BUG-001) via registry_ref; SCR-0062
 registry_version: 1
 standard_id: ATC-AI-GOV-FINDING-001
-status: draft
+status: approved
 title: ATC Agent Governance — Persistent Findings (ATC-FINDING-YYYY-NNNNNN, Lifecycle
   bis VERIFIED, Verifikations-Wahrheit, deterministische Repository-Status-Aggregation,
   Registry-Kopplung registry_ref)

@@ -3,7 +3,7 @@ standard:
   id: ATC-AI-GOV-AGENTS-001
   title: "ATC Agent Governance — Organisationsweite Arbeitsregeln (Discovery, Hierarchie, Binding)"
   version: "1.0.0"
-  status: draft
+  status: approved
   category: ai-gov
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"
@@ -15,9 +15,9 @@ standard:
   requirements: [REQ-AGOV-001, REQ-AGOV-002, REQ-AGOV-003, REQ-AGOV-004, REQ-AGOV-005, REQ-AGOV-006]
 ---
 
-# ATC-AI-GOV-AGENTS-001 — Organisationsweite Arbeitsregeln (v1.0.0, DRAFT)
+# ATC-AI-GOV-AGENTS-001 — Organisationsweite Arbeitsregeln (v1.0.0, APPROVED)
 
-> **Status:** DRAFT — Owner-Entwurf 09.09. (Zielbild ATC-AI-GOV, „prüfbares Governance-System"); operativer SSOT: `.github`-Hub `AGENTS.md` + `agent-instructions/00-11` (SCR-0057); §9-Freigabe ausstehend.
+> **Status:** APPROVED (Sammelfreigabe SCR-0124) — Owner-Entwurf 09.09. (Zielbild ATC-AI-GOV, „prüfbares Governance-System"); operativer SSOT: `.github`-Hub `AGENTS.md` + `agent-instructions/00-11` (SCR-0057); §9-Freigabe ausstehend.
 
 ## 1. Zweck (Purpose)
 

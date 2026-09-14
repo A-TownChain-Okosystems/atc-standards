@@ -7,7 +7,7 @@ file: standards/ai-gov/ATC-AI-GOV-CHANGE-001.md
 mandate: Owner-Entwurf 09.09.; SSOT ai/change.yaml; 3 REQ-AGOV-CHG; SCR-0061
 registry_version: 1
 standard_id: ATC-AI-GOV-CHANGE-001
-status: draft
+status: approved
 title: ATC Agent Governance — Governance Change Management (SCR-Pflicht, SemVer, Vorher/Nachher,
   Rollback)
 version: 1.0.0

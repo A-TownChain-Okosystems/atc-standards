@@ -7,6 +7,6 @@ file: standards/maintenance/ATC-STD-MAINT-008.md
 mandate: Owner-Direktive 14.09.2026 (SCR-0120, MAINT-Familie; MAINT-021..024 RESERVED)
 registry_version: 1
 standard_id: ATC-STD-MAINT-008
-status: draft
+status: approved
 title: Blockchain Maintenance Standard (Node, P2P, State, Storage, Consensus)
 version: 1.0.0

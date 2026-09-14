@@ -3,7 +3,7 @@ standard:
   id: ATC-AI-GOV-ACCESS-001
   title: "ATC Agent Governance — AI Access Role Model (Rollenprofile fuer GitHub-Zugangs-Identitaeten, Omni-Verbot, Token-Hygiene, Access Review)"
   version: "1.0.0"
-  status: draft
+  status: approved
   category: ai-gov
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf 14.09.)"
@@ -15,9 +15,9 @@ standard:
   requirements: [REQ-AGOV-ACC-001, REQ-AGOV-ACC-002, REQ-AGOV-ACC-003, REQ-AGOV-ACC-004, REQ-AGOV-ACC-005, REQ-AGOV-ACC-006]
 ---
 
-# ATC-AI-GOV-ACCESS-001 — AI Access Role Model (v1.0.0, DRAFT)
+# ATC-AI-GOV-ACCESS-001 — AI Access Role Model (v1.0.0, APPROVED)
 
-> **Status:** DRAFT — Owner-Entwurf 14.09. 09:36 (Rollenprofil-Matrix als Gegenentwurf zur
+> **Status:** APPROVED (Sammelfreigabe SCR-0124) — Owner-Entwurf 14.09. 09:36 (Rollenprofil-Matrix als Gegenentwurf zur
 > Omni-Konfiguration aus der Owner-Beratung 14.09.); SCR-0121. Wartet auf §9-Freigabe (ATC-STD-000).
 
 ## 1. Zweck (Purpose)

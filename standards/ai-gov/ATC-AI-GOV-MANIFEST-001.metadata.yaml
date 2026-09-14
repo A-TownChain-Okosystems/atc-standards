@@ -12,7 +12,7 @@ implementation:
 normative: false
 owner: Michael (Owner-Entwurf)
 source_file: standards/ai-gov/ATC-AI-GOV-MANIFEST-001.md
-status: draft
+status: approved
 title: ATC Agent Governance — Agent Identity & Scope (Manifest, Registry, Capabilities,
   Status-Modell)
 version: 1.0.0

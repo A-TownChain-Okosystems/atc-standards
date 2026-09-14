@@ -8,7 +8,7 @@ mandate: Owner-Architektur-Freeze 09.09. ('ATC-AI-GOV v1.0 Produktionsarchitektu
   einfrieren'); 7 REQ-AIGOV; Umbrella ueber 10 Sub-Standards; SCR-0062
 registry_version: 1
 standard_id: ATC-AI-GOV-001
-status: draft
+status: approved
 title: 'ATC Agent Governance Framework v1.0 — Produktionsarchitektur (18-stufige Governance-Kette,
   4 Kontrollprinzipien: Fail Closed / Evidence First / Persistent Findings / No Self-Certification,
   Severity-Modell mit Repository-Status-Berechnung, Zuständigkeits-Trennung, 7-Phasen-Roadmap)'

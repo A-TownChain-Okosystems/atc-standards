@@ -3,7 +3,7 @@ standard:
   id: ATC-AI-GOV-CHECK-001
   title: "ATC Agent Governance — Automatisierte Compliance Checks (AGOV-CHECK-001..020, versioniert)"
   version: "1.0.0"
-  status: draft
+  status: approved
   category: ai-gov
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"
@@ -15,9 +15,9 @@ standard:
   requirements: [REQ-AGOV-CHK-001, REQ-AGOV-CHK-002, REQ-AGOV-CHK-003, REQ-AGOV-CHK-004, REQ-AGOV-CHK-005]
 ---
 
-# ATC-AI-GOV-CHECK-001 — Automatisierte Compliance Checks (v1.0.0, DRAFT)
+# ATC-AI-GOV-CHECK-001 — Automatisierte Compliance Checks (v1.0.0, APPROVED)
 
-> **Status:** DRAFT — Owner-Entwurf 09.09.; operativer SSOT: `.github`-Hub `ai/checks.yaml` (AGOV-CHECK-001..020, Version 1.0.0, Ausführung `tools/agov_check.py`); §9-Freigabe ausstehend.
+> **Status:** APPROVED (Sammelfreigabe SCR-0124) — Owner-Entwurf 09.09.; operativer SSOT: `.github`-Hub `ai/checks.yaml` (AGOV-CHECK-001..020, Version 1.0.0, Ausführung `tools/agov_check.py`); §9-Freigabe ausstehend.
 
 ## 1. Zweck (Purpose)
 

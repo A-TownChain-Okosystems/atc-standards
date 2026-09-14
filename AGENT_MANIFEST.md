@@ -1,11 +1,11 @@
 # AGENT_MANIFEST.md
 <<<<<<< HEAD
-> **Registry-Stand (GENERIERT aus `registry/standards.yaml`):** 505 Standards — 465 APPROVED · 0 CANDIDATE · 75 Familien · Stand 2026-09-14 12:50 UTC+2 · SHA-256 `8ff9ce3b9aba…`
+> **Registry-Stand (GENERIERT aus `registry/standards.yaml`):** 505 Standards — 465 APPROVED · 0 CANDIDATE · 75 Familien · Stand 2026-09-14 12:54 UTC+2 · SHA-256 `8ff9ce3b9aba…`
 =======
 <<<<<<< HEAD
-> **Registry-Stand (GENERIERT aus `registry/standards.yaml`):** 505 Standards — 465 APPROVED · 0 CANDIDATE · 75 Familien · Stand 2026-09-14 12:50 UTC+2 · SHA-256 `8ff9ce3b9aba…`
+> **Registry-Stand (GENERIERT aus `registry/standards.yaml`):** 505 Standards — 465 APPROVED · 0 CANDIDATE · 75 Familien · Stand 2026-09-14 12:54 UTC+2 · SHA-256 `8ff9ce3b9aba…`
 =======
-> **Registry-Stand (GENERIERT aus `registry/standards.yaml`):** 505 Standards — 465 APPROVED · 0 CANDIDATE · 75 Familien · Stand 2026-09-14 12:50 UTC+2 · SHA-256 `8ff9ce3b9aba…`
+> **Registry-Stand (GENERIERT aus `registry/standards.yaml`):** 505 Standards — 465 APPROVED · 0 CANDIDATE · 75 Familien · Stand 2026-09-14 12:54 UTC+2 · SHA-256 `8ff9ce3b9aba…`
 >>>>>>> origin/main
 >>>>>>> origin/main
 > Letzte Aktualisierung: 2026-09-11 00:58 UTC | Aurora Master Sync v3.1.7 | 27 governed Repos (28 total, ai/org-scope.yaml-SSOT) | Rollout auf alle governed Repos

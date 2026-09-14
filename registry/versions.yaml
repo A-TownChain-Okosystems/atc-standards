@@ -4776,3 +4776,163 @@ versions:
   - version: 1.0.0
     date: '2026-09-11'
     change: Initial Release APPROVED aus Owner-Direktive 11.09. 17:30 (Engineering-Governance-System) + Freigabe 17:33; SCR-0103
+  ATC-AI-GOV-001:
+  - version: 1.0.0-Approval
+    date: '2026-09-14'
+    change: 'Sammelfreigabe SCR-0124 (Owner-Direktive 14.09.2026 13:48 Builder-Chat: "Stelle die 40 Entwuerfe fertig und schreibe den code"): DRAFT -> APPROVED; v1.0.0 gueltig, Immutabilitaet per par.30; approval/APPROVAL-DECISION-2026-09-14-000-scr-0124.md'
+  ATC-AI-GOV-ACCESS-001:
+  - version: 1.0.0-Approval
+    date: '2026-09-14'
+    change: 'Sammelfreigabe SCR-0124 (Owner-Direktive 14.09.2026 13:48 Builder-Chat: "Stelle die 40 Entwuerfe fertig und schreibe den code"): DRAFT -> APPROVED; v1.0.0 gueltig, Immutabilitaet per par.30; approval/APPROVAL-DECISION-2026-09-14-000-scr-0124.md'
+  ATC-AI-GOV-AGENTS-001:
+  - version: 1.0.0-Approval
+    date: '2026-09-14'
+    change: 'Sammelfreigabe SCR-0124 (Owner-Direktive 14.09.2026 13:48 Builder-Chat: "Stelle die 40 Entwuerfe fertig und schreibe den code"): DRAFT -> APPROVED; v1.0.0 gueltig, Immutabilitaet per par.30; approval/APPROVAL-DECISION-2026-09-14-000-scr-0124.md'
+  ATC-AI-GOV-AUDIT-001:
+  - version: 1.0.0-Approval
+    date: '2026-09-14'
+    change: 'Sammelfreigabe SCR-0124 (Owner-Direktive 14.09.2026 13:48 Builder-Chat: "Stelle die 40 Entwuerfe fertig und schreibe den code"): DRAFT -> APPROVED; v1.0.0 gueltig, Immutabilitaet per par.30; approval/APPROVAL-DECISION-2026-09-14-000-scr-0124.md'
+  ATC-AI-GOV-CAPABILITY-001:
+  - version: 1.0.0-Approval
+    date: '2026-09-14'
+    change: 'Sammelfreigabe SCR-0124 (Owner-Direktive 14.09.2026 13:48 Builder-Chat: "Stelle die 40 Entwuerfe fertig und schreibe den code"): DRAFT -> APPROVED; v1.0.0 gueltig, Immutabilitaet per par.30; approval/APPROVAL-DECISION-2026-09-14-000-scr-0124.md'
+  ATC-AI-GOV-CHANGE-001:
+  - version: 1.0.0-Approval
+    date: '2026-09-14'
+    change: 'Sammelfreigabe SCR-0124 (Owner-Direktive 14.09.2026 13:48 Builder-Chat: "Stelle die 40 Entwuerfe fertig und schreibe den code"): DRAFT -> APPROVED; v1.0.0 gueltig, Immutabilitaet per par.30; approval/APPROVAL-DECISION-2026-09-14-000-scr-0124.md'
+  ATC-AI-GOV-CHECK-001:
+  - version: 1.0.0-Approval
+    date: '2026-09-14'
+    change: 'Sammelfreigabe SCR-0124 (Owner-Direktive 14.09.2026 13:48 Builder-Chat: "Stelle die 40 Entwuerfe fertig und schreibe den code"): DRAFT -> APPROVED; v1.0.0 gueltig, Immutabilitaet per par.30; approval/APPROVAL-DECISION-2026-09-14-000-scr-0124.md'
+  ATC-AI-GOV-FINDING-001:
+  - version: 1.0.0-Approval
+    date: '2026-09-14'
+    change: 'Sammelfreigabe SCR-0124 (Owner-Direktive 14.09.2026 13:48 Builder-Chat: "Stelle die 40 Entwuerfe fertig und schreibe den code"): DRAFT -> APPROVED; v1.0.0 gueltig, Immutabilitaet per par.30; approval/APPROVAL-DECISION-2026-09-14-000-scr-0124.md'
+  ATC-AI-GOV-HANDOFF-001:
+  - version: 1.0.0-Approval
+    date: '2026-09-14'
+    change: 'Sammelfreigabe SCR-0124 (Owner-Direktive 14.09.2026 13:48 Builder-Chat: "Stelle die 40 Entwuerfe fertig und schreibe den code"): DRAFT -> APPROVED; v1.0.0 gueltig, Immutabilitaet per par.30; approval/APPROVAL-DECISION-2026-09-14-000-scr-0124.md'
+  ATC-AI-GOV-INCIDENT-001:
+  - version: 1.0.0-Approval
+    date: '2026-09-14'
+    change: 'Sammelfreigabe SCR-0124 (Owner-Direktive 14.09.2026 13:48 Builder-Chat: "Stelle die 40 Entwuerfe fertig und schreibe den code"): DRAFT -> APPROVED; v1.0.0 gueltig, Immutabilitaet per par.30; approval/APPROVAL-DECISION-2026-09-14-000-scr-0124.md'
+  ATC-AI-GOV-MANIFEST-001:
+  - version: 1.0.0-Approval
+    date: '2026-09-14'
+    change: 'Sammelfreigabe SCR-0124 (Owner-Direktive 14.09.2026 13:48 Builder-Chat: "Stelle die 40 Entwuerfe fertig und schreibe den code"): DRAFT -> APPROVED; v1.0.0 gueltig, Immutabilitaet per par.30; approval/APPROVAL-DECISION-2026-09-14-000-scr-0124.md'
+  ATC-AI-GOV-POLICY-001:
+  - version: 1.0.0-Approval
+    date: '2026-09-14'
+    change: 'Sammelfreigabe SCR-0124 (Owner-Direktive 14.09.2026 13:48 Builder-Chat: "Stelle die 40 Entwuerfe fertig und schreibe den code"): DRAFT -> APPROVED; v1.0.0 gueltig, Immutabilitaet per par.30; approval/APPROVAL-DECISION-2026-09-14-000-scr-0124.md'
+  ATC-STD-IMPROVEMENT-001:
+  - version: 1.0.0-Approval
+    date: '2026-09-14'
+    change: 'Sammelfreigabe SCR-0124 (Owner-Direktive 14.09.2026 13:48 Builder-Chat: "Stelle die 40 Entwuerfe fertig und schreibe den code"): DRAFT -> APPROVED; v1.0.0 gueltig, Immutabilitaet per par.30; approval/APPROVAL-DECISION-2026-09-14-000-scr-0124.md'
+  ATC-STD-LEGAL-002:
+  - version: 1.0.0-Approval
+    date: '2026-09-14'
+    change: 'Sammelfreigabe SCR-0124 (Owner-Direktive 14.09.2026 13:48 Builder-Chat: "Stelle die 40 Entwuerfe fertig und schreibe den code"): DRAFT -> APPROVED; v1.0.0 gueltig, Immutabilitaet per par.30; approval/APPROVAL-DECISION-2026-09-14-000-scr-0124.md'
+  ATC-STD-MAINT-000:
+  - version: 1.0.0-Approval
+    date: '2026-09-14'
+    change: 'Sammelfreigabe SCR-0124 (Owner-Direktive 14.09.2026 13:48 Builder-Chat: "Stelle die 40 Entwuerfe fertig und schreibe den code"): DRAFT -> APPROVED; v1.0.0 gueltig, Immutabilitaet per par.30; approval/APPROVAL-DECISION-2026-09-14-000-scr-0124.md'
+  ATC-STD-MAINT-001:
+  - version: 1.0.0-Approval
+    date: '2026-09-14'
+    change: 'Sammelfreigabe SCR-0124 (Owner-Direktive 14.09.2026 13:48 Builder-Chat: "Stelle die 40 Entwuerfe fertig und schreibe den code"): DRAFT -> APPROVED; v1.0.0 gueltig, Immutabilitaet per par.30; approval/APPROVAL-DECISION-2026-09-14-000-scr-0124.md'
+  ATC-STD-MAINT-002:
+  - version: 1.0.0-Approval
+    date: '2026-09-14'
+    change: 'Sammelfreigabe SCR-0124 (Owner-Direktive 14.09.2026 13:48 Builder-Chat: "Stelle die 40 Entwuerfe fertig und schreibe den code"): DRAFT -> APPROVED; v1.0.0 gueltig, Immutabilitaet per par.30; approval/APPROVAL-DECISION-2026-09-14-000-scr-0124.md'
+  ATC-STD-MAINT-003:
+  - version: 1.0.0-Approval
+    date: '2026-09-14'
+    change: 'Sammelfreigabe SCR-0124 (Owner-Direktive 14.09.2026 13:48 Builder-Chat: "Stelle die 40 Entwuerfe fertig und schreibe den code"): DRAFT -> APPROVED; v1.0.0 gueltig, Immutabilitaet per par.30; approval/APPROVAL-DECISION-2026-09-14-000-scr-0124.md'
+  ATC-STD-MAINT-004:
+  - version: 1.0.0-Approval
+    date: '2026-09-14'
+    change: 'Sammelfreigabe SCR-0124 (Owner-Direktive 14.09.2026 13:48 Builder-Chat: "Stelle die 40 Entwuerfe fertig und schreibe den code"): DRAFT -> APPROVED; v1.0.0 gueltig, Immutabilitaet per par.30; approval/APPROVAL-DECISION-2026-09-14-000-scr-0124.md'
+  ATC-STD-MAINT-005:
+  - version: 1.0.0-Approval
+    date: '2026-09-14'
+    change: 'Sammelfreigabe SCR-0124 (Owner-Direktive 14.09.2026 13:48 Builder-Chat: "Stelle die 40 Entwuerfe fertig und schreibe den code"): DRAFT -> APPROVED; v1.0.0 gueltig, Immutabilitaet per par.30; approval/APPROVAL-DECISION-2026-09-14-000-scr-0124.md'
+  ATC-STD-MAINT-006:
+  - version: 1.0.0-Approval
+    date: '2026-09-14'
+    change: 'Sammelfreigabe SCR-0124 (Owner-Direktive 14.09.2026 13:48 Builder-Chat: "Stelle die 40 Entwuerfe fertig und schreibe den code"): DRAFT -> APPROVED; v1.0.0 gueltig, Immutabilitaet per par.30; approval/APPROVAL-DECISION-2026-09-14-000-scr-0124.md'
+  ATC-STD-MAINT-007:
+  - version: 1.0.0-Approval
+    date: '2026-09-14'
+    change: 'Sammelfreigabe SCR-0124 (Owner-Direktive 14.09.2026 13:48 Builder-Chat: "Stelle die 40 Entwuerfe fertig und schreibe den code"): DRAFT -> APPROVED; v1.0.0 gueltig, Immutabilitaet per par.30; approval/APPROVAL-DECISION-2026-09-14-000-scr-0124.md'
+  ATC-STD-MAINT-008:
+  - version: 1.0.0-Approval
+    date: '2026-09-14'
+    change: 'Sammelfreigabe SCR-0124 (Owner-Direktive 14.09.2026 13:48 Builder-Chat: "Stelle die 40 Entwuerfe fertig und schreibe den code"): DRAFT -> APPROVED; v1.0.0 gueltig, Immutabilitaet per par.30; approval/APPROVAL-DECISION-2026-09-14-000-scr-0124.md'
+  ATC-STD-MAINT-009:
+  - version: 1.0.0-Approval
+    date: '2026-09-14'
+    change: 'Sammelfreigabe SCR-0124 (Owner-Direktive 14.09.2026 13:48 Builder-Chat: "Stelle die 40 Entwuerfe fertig und schreibe den code"): DRAFT -> APPROVED; v1.0.0 gueltig, Immutabilitaet per par.30; approval/APPROVAL-DECISION-2026-09-14-000-scr-0124.md'
+  ATC-STD-MAINT-010:
+  - version: 1.0.0-Approval
+    date: '2026-09-14'
+    change: 'Sammelfreigabe SCR-0124 (Owner-Direktive 14.09.2026 13:48 Builder-Chat: "Stelle die 40 Entwuerfe fertig und schreibe den code"): DRAFT -> APPROVED; v1.0.0 gueltig, Immutabilitaet per par.30; approval/APPROVAL-DECISION-2026-09-14-000-scr-0124.md'
+  ATC-STD-MAINT-011:
+  - version: 1.0.0-Approval
+    date: '2026-09-14'
+    change: 'Sammelfreigabe SCR-0124 (Owner-Direktive 14.09.2026 13:48 Builder-Chat: "Stelle die 40 Entwuerfe fertig und schreibe den code"): DRAFT -> APPROVED; v1.0.0 gueltig, Immutabilitaet per par.30; approval/APPROVAL-DECISION-2026-09-14-000-scr-0124.md'
+  ATC-STD-MAINT-012:
+  - version: 1.0.0-Approval
+    date: '2026-09-14'
+    change: 'Sammelfreigabe SCR-0124 (Owner-Direktive 14.09.2026 13:48 Builder-Chat: "Stelle die 40 Entwuerfe fertig und schreibe den code"): DRAFT -> APPROVED; v1.0.0 gueltig, Immutabilitaet per par.30; approval/APPROVAL-DECISION-2026-09-14-000-scr-0124.md'
+  ATC-STD-MAINT-013:
+  - version: 1.0.0-Approval
+    date: '2026-09-14'
+    change: 'Sammelfreigabe SCR-0124 (Owner-Direktive 14.09.2026 13:48 Builder-Chat: "Stelle die 40 Entwuerfe fertig und schreibe den code"): DRAFT -> APPROVED; v1.0.0 gueltig, Immutabilitaet per par.30; approval/APPROVAL-DECISION-2026-09-14-000-scr-0124.md'
+  ATC-STD-MAINT-014:
+  - version: 1.0.0-Approval
+    date: '2026-09-14'
+    change: 'Sammelfreigabe SCR-0124 (Owner-Direktive 14.09.2026 13:48 Builder-Chat: "Stelle die 40 Entwuerfe fertig und schreibe den code"): DRAFT -> APPROVED; v1.0.0 gueltig, Immutabilitaet per par.30; approval/APPROVAL-DECISION-2026-09-14-000-scr-0124.md'
+  ATC-STD-MAINT-015:
+  - version: 1.0.0-Approval
+    date: '2026-09-14'
+    change: 'Sammelfreigabe SCR-0124 (Owner-Direktive 14.09.2026 13:48 Builder-Chat: "Stelle die 40 Entwuerfe fertig und schreibe den code"): DRAFT -> APPROVED; v1.0.0 gueltig, Immutabilitaet per par.30; approval/APPROVAL-DECISION-2026-09-14-000-scr-0124.md'
+  ATC-STD-MAINT-016:
+  - version: 1.0.0-Approval
+    date: '2026-09-14'
+    change: 'Sammelfreigabe SCR-0124 (Owner-Direktive 14.09.2026 13:48 Builder-Chat: "Stelle die 40 Entwuerfe fertig und schreibe den code"): DRAFT -> APPROVED; v1.0.0 gueltig, Immutabilitaet per par.30; approval/APPROVAL-DECISION-2026-09-14-000-scr-0124.md'
+  ATC-STD-MAINT-017:
+  - version: 1.0.0-Approval
+    date: '2026-09-14'
+    change: 'Sammelfreigabe SCR-0124 (Owner-Direktive 14.09.2026 13:48 Builder-Chat: "Stelle die 40 Entwuerfe fertig und schreibe den code"): DRAFT -> APPROVED; v1.0.0 gueltig, Immutabilitaet per par.30; approval/APPROVAL-DECISION-2026-09-14-000-scr-0124.md'
+  ATC-STD-MAINT-018:
+  - version: 1.0.0-Approval
+    date: '2026-09-14'
+    change: 'Sammelfreigabe SCR-0124 (Owner-Direktive 14.09.2026 13:48 Builder-Chat: "Stelle die 40 Entwuerfe fertig und schreibe den code"): DRAFT -> APPROVED; v1.0.0 gueltig, Immutabilitaet per par.30; approval/APPROVAL-DECISION-2026-09-14-000-scr-0124.md'
+  ATC-STD-MAINT-019:
+  - version: 1.0.0-Approval
+    date: '2026-09-14'
+    change: 'Sammelfreigabe SCR-0124 (Owner-Direktive 14.09.2026 13:48 Builder-Chat: "Stelle die 40 Entwuerfe fertig und schreibe den code"): DRAFT -> APPROVED; v1.0.0 gueltig, Immutabilitaet per par.30; approval/APPROVAL-DECISION-2026-09-14-000-scr-0124.md'
+  ATC-STD-MAINT-020:
+  - version: 1.0.0-Approval
+    date: '2026-09-14'
+    change: 'Sammelfreigabe SCR-0124 (Owner-Direktive 14.09.2026 13:48 Builder-Chat: "Stelle die 40 Entwuerfe fertig und schreibe den code"): DRAFT -> APPROVED; v1.0.0 gueltig, Immutabilitaet per par.30; approval/APPROVAL-DECISION-2026-09-14-000-scr-0124.md'
+  ATC-STD-MAINT-021:
+  - version: 1.0.0-Approval
+    date: '2026-09-14'
+    change: 'Sammelfreigabe SCR-0124 (Owner-Direktive 14.09.2026 13:48 Builder-Chat: "Stelle die 40 Entwuerfe fertig und schreibe den code"): DRAFT -> APPROVED; v1.0.0 gueltig, Immutabilitaet per par.30; approval/APPROVAL-DECISION-2026-09-14-000-scr-0124.md'
+  ATC-STD-MAINT-022:
+  - version: 1.0.0-Approval
+    date: '2026-09-14'
+    change: 'Sammelfreigabe SCR-0124 (Owner-Direktive 14.09.2026 13:48 Builder-Chat: "Stelle die 40 Entwuerfe fertig und schreibe den code"): DRAFT -> APPROVED; v1.0.0 gueltig, Immutabilitaet per par.30; approval/APPROVAL-DECISION-2026-09-14-000-scr-0124.md'
+  ATC-STD-MAINT-023:
+  - version: 1.0.0-Approval
+    date: '2026-09-14'
+    change: 'Sammelfreigabe SCR-0124 (Owner-Direktive 14.09.2026 13:48 Builder-Chat: "Stelle die 40 Entwuerfe fertig und schreibe den code"): DRAFT -> APPROVED; v1.0.0 gueltig, Immutabilitaet per par.30; approval/APPROVAL-DECISION-2026-09-14-000-scr-0124.md'
+  ATC-STD-MAINT-024:
+  - version: 1.0.0-Approval
+    date: '2026-09-14'
+    change: 'Sammelfreigabe SCR-0124 (Owner-Direktive 14.09.2026 13:48 Builder-Chat: "Stelle die 40 Entwuerfe fertig und schreibe den code"): DRAFT -> APPROVED; v1.0.0 gueltig, Immutabilitaet per par.30; approval/APPROVAL-DECISION-2026-09-14-000-scr-0124.md'
+  ATC-STD-NET-009:
+  - version: 1.0.0-Approval
+    date: '2026-09-14'
+    change: 'Sammelfreigabe SCR-0124 (Owner-Direktive 14.09.2026 13:48 Builder-Chat: "Stelle die 40 Entwuerfe fertig und schreibe den code"): DRAFT -> APPROVED; v1.0.0 gueltig, Immutabilitaet per par.30; approval/APPROVAL-DECISION-2026-09-14-000-scr-0124.md'

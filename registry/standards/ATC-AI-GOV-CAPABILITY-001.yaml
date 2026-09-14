@@ -8,7 +8,7 @@ mandate: Owner-Entwurf 09.09.; 4 REQ-AGOV-CAP; SSOT ai/capabilities.yaml + agent
   SCR-0062
 registry_version: 1
 standard_id: ATC-AI-GOV-CAPABILITY-001
-status: draft
+status: approved
 title: ATC Agent Governance — Capability & Authorization Model (explizite Berechtigungen,
   Autorisierungskette, Owner-Gates fuer P0-Capabilities, Entzug/Suspendierung)
 version: 1.0.0

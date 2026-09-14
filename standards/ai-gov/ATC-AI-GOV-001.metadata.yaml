@@ -11,7 +11,7 @@ implementation:
 normative: false
 owner: Michael (Owner-Architektur-Freeze)
 source_file: standards/ai-gov/ATC-AI-GOV-001.md
-status: draft
+status: approved
 title: 'ATC Agent Governance Framework v1.0 — Produktionsarchitektur (18-stufige Governance-Kette,
   4 Kontrollprinzipien: Fail Closed / Evidence First / Persistent Findings / No Self-Certification,
   Severity-Modell mit Repository-Status-Berechnung, Zuständigkeits-Trennung, 7-Phasen-Roadmap)'

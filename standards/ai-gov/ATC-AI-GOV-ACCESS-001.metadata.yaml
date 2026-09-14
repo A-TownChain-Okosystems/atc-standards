@@ -12,7 +12,7 @@ implementation:
 normative: false
 owner: Michael (Owner-Entwurf 14.09.)
 source_file: standards/ai-gov/ATC-AI-GOV-ACCESS-001.md
-status: draft
+status: approved
 title: ATC Agent Governance — AI Access Role Model (Rollenprofile ATC-AUDITOR/ATC-DEVELOPER/ATC-CI,
   Omni-Verbot, Stufe-3-Reserve, Token-Hygiene, Access Review)
 version: 1.0.0

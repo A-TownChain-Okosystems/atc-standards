@@ -3,7 +3,7 @@ standard:
   id: ATC-STD-MAINT-021
   title: "ATC-STD-MAINT-021 — Emergency Maintenance Standard"
   version: "1.0.0"
-  status: draft
+  status: approved
   category: maint
   authority: A-TownChain Ecosystems
   owner: ShivaCoreDev
@@ -12,15 +12,15 @@ standard:
   normative: true
   supersedes: []
   superseded_by: null
-  effective_date: "pending §9-Freigabe"
+  effective_date: "2026-09-14"
   review_date: null
   applies_to: "Alle M3-Emergency-Faelle des Oekosystems (Konsensfehler, Kernel Security Boundary, VM-Inkompatibilitaet, Chain-State-Korruption, Datenverlust, kritische RCE, kryptografischer Vertrauensbruch)"
   license: "Copyright (c) 2026 Michael Wroblewski"
 ---
 
-# ATC-STD-MAINT-021 — Emergency Maintenance Standard (v1.0.0, DRAFT)
+# ATC-STD-MAINT-021 — Emergency Maintenance Standard (v1.0.0, APPROVED)
 
-> **Status:** DRAFT — wartet auf §9-Freigabe (ATC-STD-000). Dach: ATC-STD-MAINT-000 ·
+> **Status:** APPROVED — §9-Freigabe erteilt per Sammelfreigabe SCR-0124 (Owner-Direktive 14.09.2026). Dach: ATC-STD-MAINT-000 ·
 > Klassifikation: MAINT-001 · Lifecycle: MAINT-002 · Evidence: MAINT-019.
 
 ## Abstract

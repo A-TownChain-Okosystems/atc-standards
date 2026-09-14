@@ -7,7 +7,7 @@ file: standards/ai-gov/ATC-AI-GOV-INCIDENT-001.md
 mandate: Owner-Entwurf 09.09.; SSOT ai/incident.yaml; 4 REQ-AGOV-INC; SCR-0061
 registry_version: 1
 standard_id: ATC-AI-GOV-INCIDENT-001
-status: draft
+status: approved
 title: ATC Agent Governance — Incident & Fehlerbehandlung (6 Klassen, Lifecycle, RCA-Pflicht,
   Postmortem)
 version: 1.0.0

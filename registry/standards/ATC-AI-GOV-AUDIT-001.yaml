@@ -8,7 +8,7 @@ mandate: Owner-Entwurf 09.09.; SSOT ai/audit.yaml + SNAPSHOT/READINESS-Reports; 
   REQ-AGOV-AUD; SCR-0061
 registry_version: 1
 standard_id: ATC-AI-GOV-AUDIT-001
-status: draft
+status: approved
 title: ATC Agent Governance — Auditverfahren (AGOV-FULL/DELTA/GATE, Snapshot, Readiness,
   Post-Change-Audit)
 version: 1.0.0

@@ -3,7 +3,7 @@ standard:
   id: ATC-STD-NET-009
   title: "Network Release Maturity & Versioning Standard (NETWORK x MATURITY Reifestufenmodell, 6 Release Gates, Versionslogik, Release State SSOT)"
   version: "1.0.0"
-  status: draft
+  status: approved
   category: net
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf 14.09.)"
@@ -18,9 +18,9 @@ standard:
   applies_to: "Alle ATC-Netzwerk-Releases (Devnet/Testnet/Mainnet)"
 ---
 
-# ATC-STD-NET-009 — Network Release Maturity & Versioning Standard (v1.0.0, DRAFT)
+# ATC-STD-NET-009 — Network Release Maturity & Versioning Standard (v1.0.0, APPROVED)
 
-> **Status:** DRAFT — Owner-Entwurf 14.09. 09:42 (ATC Network Release Lifecycle); SCR-0122. Wartet auf §9-Freigabe (ATC-STD-000).
+> **Status:** APPROVED (Sammelfreigabe SCR-0124) — Owner-Entwurf 14.09. 09:42 (ATC Network Release Lifecycle); SCR-0122. Wartet auf §9-Freigabe (ATC-STD-000).
 > **Reihe:** ATC-STD-NET-001…009 · **Abgrenzung:** NET-004 bleibt SSOT der Promotion-Pipeline (GATE-011…013); dieser Standard definiert die MATURITY-Dimension INNERHALB der Umgebungen plus Versionssemantik.
 
 ## 1. Zweck (Purpose)

@@ -3,7 +3,7 @@ standard:
   id: ATC-AI-GOV-AUDIT-001
   title: "ATC Agent Governance — Auditverfahren (AGOV-Läufe, Snapshot, Readiness, Post-Change-Audit)"
   version: "1.0.0"
-  status: draft
+  status: approved
   category: ai-gov
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"
@@ -15,9 +15,9 @@ standard:
   requirements: [REQ-AGOV-AUD-001, REQ-AGOV-AUD-002, REQ-AGOV-AUD-003, REQ-AGOV-AUD-004]
 ---
 
-# ATC-AI-GOV-AUDIT-001 — Auditverfahren (v1.0.0, DRAFT)
+# ATC-AI-GOV-AUDIT-001 — Auditverfahren (v1.0.0, APPROVED)
 
-> **Status:** DRAFT — Owner-Entwurf 09.09.; operativer SSOT: `.github`-Hub `ai/audit.yaml` + `tools/agov_check.py`/`readiness_check.py` + `ai/audit/SNAPSHOT-*.json`; §9-Freigabe ausstehend. Abgegrenzt zu ATC-STD-AUDIT-001 (Standards-Completeness): hier Governance-Einhaltung der Repositories.
+> **Status:** APPROVED (Sammelfreigabe SCR-0124) — Owner-Entwurf 09.09.; operativer SSOT: `.github`-Hub `ai/audit.yaml` + `tools/agov_check.py`/`readiness_check.py` + `ai/audit/SNAPSHOT-*.json`; §9-Freigabe ausstehend. Abgegrenzt zu ATC-STD-AUDIT-001 (Standards-Completeness): hier Governance-Einhaltung der Repositories.
 
 ## 1. Zweck (Purpose)
 

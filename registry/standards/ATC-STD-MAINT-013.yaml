@@ -7,6 +7,6 @@ file: standards/maintenance/ATC-STD-MAINT-013.md
 mandate: Owner-Direktive 14.09.2026 (SCR-0120, MAINT-Familie; MAINT-021..024 RESERVED)
 registry_version: 1
 standard_id: ATC-STD-MAINT-013
-status: draft
+status: approved
 title: Documentation Maintenance Standard (README, Wiki, API, Architektur)
 version: 1.0.0

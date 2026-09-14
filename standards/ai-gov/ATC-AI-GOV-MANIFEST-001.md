@@ -3,7 +3,7 @@ standard:
   id: ATC-AI-GOV-MANIFEST-001
   title: "ATC Agent Governance — Agent Identity & Scope (Manifest, Registry, Capabilities, Handoff-Felder)"
   version: "1.0.0"
-  status: draft
+  status: approved
   category: ai-gov
   authority: A-TownChain-Okosystems
   owner: "Michael (Owner-Entwurf) / Standards Governance"
@@ -15,9 +15,9 @@ standard:
   requirements: [REQ-AGOV-MAN-001, REQ-AGOV-MAN-002, REQ-AGOV-MAN-003, REQ-AGOV-MAN-004, REQ-AGOV-MAN-005, REQ-AGOV-MAN-006, REQ-AGOV-MAN-007]
 ---
 
-# ATC-AI-GOV-MANIFEST-001 — Agent Identity & Scope (v1.0.0, DRAFT)
+# ATC-AI-GOV-MANIFEST-001 — Agent Identity & Scope (v1.0.0, APPROVED)
 
-> **Status:** DRAFT — Owner-Entwurf 09.09.; operativer SSOT: `.github`-Hub `AGENT_MANIFEST.md` v1.2.0 + `ai/agent.yaml` + `ai/capabilities.yaml`; §9-Freigabe ausstehend.
+> **Status:** APPROVED (Sammelfreigabe SCR-0124) — Owner-Entwurf 09.09.; operativer SSOT: `.github`-Hub `AGENT_MANIFEST.md` v1.2.0 + `ai/agent.yaml` + `ai/capabilities.yaml`; §9-Freigabe ausstehend.
 
 ## 1. Zweck (Purpose)
 

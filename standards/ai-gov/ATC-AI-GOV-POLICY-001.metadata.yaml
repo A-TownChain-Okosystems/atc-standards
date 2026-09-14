@@ -12,7 +12,7 @@ implementation:
 normative: false
 owner: Michael (Owner-Entwurf)
 source_file: standards/ai-gov/ATC-AI-GOV-POLICY-001.md
-status: draft
+status: approved
 title: ATC Agent Governance — Maschinenlesbare Policies (ATC-POL-001..010, MUST/SHOULD/MAY,
   Verdikt-Modell)
 version: 1.0.0
