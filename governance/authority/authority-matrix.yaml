@@ -1,8 +1,27 @@
 # ATC-GOV-001 Kap. 3/4 — Authorities & Decision Rights Matrix (L1)
 # SSOT: maschinenlesbar; Änderung nur via Governance-Prozess (Kap. 18)
 constitution_ref: ATC-GOV-001
-version: "1.0.0"
+version: "1.1.0"
 god_mode: forbidden
+
+# Identity SSOT: current person-level authority is declared here.
+# Historical records must not be rewritten; they are interpreted against this section.
+identity_authority:
+  current:
+    owner:
+      name: "Alexander Wroblewski"
+      status: CURRENT
+      source: "Current §9 approval record dated 2026-09-11"
+    approver:
+      name: "Alexander Wroblewski"
+      status: CURRENT
+      source: "Current §9 approval record dated 2026-09-11"
+  historical:
+    - name: "Michael Wroblewski"
+      aliases: ["ShivaCoreDev"]
+      status: HISTORICAL
+      rule: "Historical approval/security/copyright/audit records remain immutable and do not imply current authority."
+  conflict_rule: "Current normative documents reference this SSOT; conflicting current documents are governance findings, while historical records remain unchanged."
 
 authorities:
   standards_authority:     { capabilities: [standards-approval, standards-review-chain, registry-allokation], forbidden: [treasury, release, repo-deletion] }
