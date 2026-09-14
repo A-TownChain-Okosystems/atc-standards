@@ -70,10 +70,10 @@ maintenance:
 
 | REQ | Anforderung | Pflicht |
 |---|---|---|
-| REQ-MAINT-019-001 | Jede Maintenance-Aufgabe schliesst mit Record im §1-Schema | MUST |
-| REQ-MAINT-019-002 | Kein CLOSE ohne vollstaendige validation- und evidence-Felder | MUST |
-| REQ-MAINT-019-003 | M2/M3-Records enthalten SoD-Vermerke | MUST |
-| REQ-MAINT-019-004 | Records sind maschinenlesbar gespeichert und auditierbar | MUST |
+| REQ-MAINT-072 | Jede Maintenance-Aufgabe schliesst mit Record im §1-Schema | MUST |
+| REQ-MAINT-073 | Kein CLOSE ohne vollstaendige validation- und evidence-Felder | MUST |
+| REQ-MAINT-074 | M2/M3-Records enthalten SoD-Vermerke | MUST |
+| REQ-MAINT-075 | Records sind maschinenlesbar gespeichert und auditierbar | MUST |
 
 ## Implementierungsstatus (ehrlich, SCR-0080-Doktrin)
 

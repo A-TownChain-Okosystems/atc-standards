@@ -63,10 +63,10 @@ Maintenance ein Bestandteil der Systemintegritaet — nicht bloss ein organisato
 
 | REQ | Anforderung | Pflicht |
 |---|---|---|
-| REQ-MAINT-020-001 | Detection-Gates in CI sind verbindlich (bestehend: cargo audit/CodeQL/Drift-Checks) | MUST |
-| REQ-MAINT-020-002 | M2/M3-Befunde werden eskaliert, niemals autonom bearbeitet | MUST |
-| REQ-MAINT-020-003 | Automatische M0-Remediation erzeugt vollstaendige Evidence-Records | MUST |
-| REQ-MAINT-020-004 | Automation umgeht niemals Governance-Gates | MUST |
+| REQ-MAINT-076 | Detection-Gates in CI sind verbindlich (bestehend: cargo audit/CodeQL/Drift-Checks) | MUST |
+| REQ-MAINT-077 | M2/M3-Befunde werden eskaliert, niemals autonom bearbeitet | MUST |
+| REQ-MAINT-078 | Automatische M0-Remediation erzeugt vollstaendige Evidence-Records | MUST |
+| REQ-MAINT-079 | Automation umgeht niemals Governance-Gates | MUST |
 
 ## Implementierungsstatus (ehrlich, SCR-0080-Doktrin)
 

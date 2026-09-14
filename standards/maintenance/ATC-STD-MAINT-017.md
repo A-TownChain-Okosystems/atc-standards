@@ -42,8 +42,8 @@ Schemaaenderungen (Synchron mit Consumer-Repos; Registry-Schemas via SCR).
 
 | REQ | Anforderung | Pflicht |
 |---|---|---|
-| REQ-MAINT-017-001 | Upgrades/Migrationen haben Rollback und Vorher/Nachher-Evidence | MUST |
-| REQ-MAINT-017-002 | Schemaaenderungen koordinieren alle Consumer | MUST |
+| REQ-MAINT-067 | Upgrades/Migrationen haben Rollback und Vorher/Nachher-Evidence | MUST |
+| REQ-MAINT-068 | Schemaaenderungen koordinieren alle Consumer | MUST |
 
 ## Implementierungsstatus (ehrlich, SCR-0080-Doktrin)
 

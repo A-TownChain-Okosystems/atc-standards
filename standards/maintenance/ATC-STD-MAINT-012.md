@@ -43,9 +43,9 @@ Schemas (Versionierung) · Conformance (Profile, Drift-Checks).
 
 | REQ | Anforderung | Pflicht |
 |---|---|---|
-| REQ-MAINT-012-001 | Standards-Aenderungen nur via SCR inkl. Views-Regeneration | MUST |
-| REQ-MAINT-012-002 | Registry-Integritaets-Gates werden instand gehalten (R1-R15) | MUST |
-| REQ-MAINT-012-003 | Auslaufende Standards folgen Sunset/Supersede, nie stiller Entfernung | MUST |
+| REQ-MAINT-054 | Standards-Aenderungen nur via SCR inkl. Views-Regeneration | MUST |
+| REQ-MAINT-055 | Registry-Integritaets-Gates werden instand gehalten (R1-R15) | MUST |
+| REQ-MAINT-056 | Auslaufende Standards folgen Sunset/Supersede, nie stiller Entfernung | MUST |
 
 ## Implementierungsstatus (ehrlich, SCR-0080-Doktrin)
 

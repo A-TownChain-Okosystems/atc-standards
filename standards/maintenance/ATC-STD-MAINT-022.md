@@ -46,9 +46,9 @@ Geordneter Ausstieg: Deprecation → Sunset → Retirement mit koordinierten Con
 
 | REQ | Anforderung | Pflicht |
 |---|---|---|
-| REQ-MAINT-022-001 | Ausstieg nur ueber Deprecation → Sunset → Retirement (nie still) | MUST |
-| REQ-MAINT-022-002 | Consumer werden vor Retirement geprueft und koordiniert | MUST |
-| REQ-MAINT-022-003 | Retirement erzeugt vollstaendigen Evidence-Record | MUST |
+| REQ-MAINT-085 | Ausstieg nur ueber Deprecation → Sunset → Retirement (nie still) | MUST |
+| REQ-MAINT-086 | Consumer werden vor Retirement geprueft und koordiniert | MUST |
+| REQ-MAINT-087 | Retirement erzeugt vollstaendigen Evidence-Record | MUST |
 
 ## Implementierungsstatus (ehrlich, SCR-0080-Doktrin)
 

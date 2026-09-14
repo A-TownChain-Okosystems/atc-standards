@@ -45,10 +45,10 @@ License-Aenderung, Abandonment) · Ersatz-Strategie (Fork-, Pin- oder Migrations
 
 | REQ | Anforderung | Pflicht |
 |---|---|---|
-| REQ-MAINT-023-001 | Vendor-Komponenten sind gepinnt, versioniert und M-klassifiziert | MUST |
-| REQ-MAINT-023-002 | Releases erzeugen SBOM mit Provenance | MUST |
-| REQ-MAINT-023-003 | Kompromittierte Vendor-Komponente = M2 (mit Kernel-/Chain-Bezug M3) | MUST |
-| REQ-MAINT-023-004 | Vendor-Risiken haben eine dokumentierte Ersatz-Strategie | MUST |
+| REQ-MAINT-088 | Vendor-Komponenten sind gepinnt, versioniert und M-klassifiziert | MUST |
+| REQ-MAINT-089 | Releases erzeugen SBOM mit Provenance | MUST |
+| REQ-MAINT-090 | Kompromittierte Vendor-Komponente = M2 (mit Kernel-/Chain-Bezug M3) | MUST |
+| REQ-MAINT-091 | Vendor-Risiken haben eine dokumentierte Ersatz-Strategie | MUST |
 
 ## Implementierungsstatus (ehrlich, SCR-0080-Doktrin)
 

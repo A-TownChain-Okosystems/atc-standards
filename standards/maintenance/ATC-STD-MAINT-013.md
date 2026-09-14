@@ -42,9 +42,9 @@ API-Dokumentation (Sync mit Implementierung) · Architekturdokumentation (Sync m
 
 | REQ | Anforderung | Pflicht |
 |---|---|---|
-| REQ-MAINT-013-001 | README-Claims bleiben gegen CI-Evidence pruefbar | MUST |
-| REQ-MAINT-013-002 | Doku-Aktualisierung erfolgt im selben PR wie die zugehoerige Aenderung | MUST |
-| REQ-MAINT-013-003 | Generierbare Doku-Views werden generiert | MUST |
+| REQ-MAINT-057 | README-Claims bleiben gegen CI-Evidence pruefbar | MUST |
+| REQ-MAINT-058 | Doku-Aktualisierung erfolgt im selben PR wie die zugehoerige Aenderung | MUST |
+| REQ-MAINT-059 | Generierbare Doku-Views werden generiert | MUST |
 
 ## Implementierungsstatus (ehrlich, SCR-0080-Doktrin)
 

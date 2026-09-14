@@ -42,9 +42,9 @@ Monitoring (lokale Observability, Health) · Backup (Plan, Takt, Verification) �
 
 | REQ | Anforderung | Pflicht |
 |---|---|---|
-| REQ-MAINT-015-001 | Recovery wird regelmaeßig getestet (Recovery Readiness KPI) | MUST |
-| REQ-MAINT-015-002 | Monitoring bleibt lokal (keine ungepruefte ausgehende Telemetrie) | MUST |
-| REQ-MAINT-015-003 | Backups werden per Restore-Probe verifiziert | MUST |
+| REQ-MAINT-062 | Recovery wird regelmaeßig getestet (Recovery Readiness KPI) | MUST |
+| REQ-MAINT-063 | Monitoring bleibt lokal (keine ungepruefte ausgehende Telemetrie) | MUST |
+| REQ-MAINT-064 | Backups werden per Restore-Probe verifiziert | MUST |
 
 ## Implementierungsstatus (ehrlich, SCR-0080-Doktrin)
 

@@ -42,8 +42,8 @@ CPU · RAM · I/O · Netzwerk · Latenz. Benchmarks/Lasttests als Evidence-Basis
 
 | REQ | Anforderung | Pflicht |
 |---|---|---|
-| REQ-MAINT-014-001 | Performance-Regressionen werden als M1 priorisiert | MUST |
-| REQ-MAINT-014-002 | Performance-Claims erfordern Benchmark-Evidence | MUST |
+| REQ-MAINT-060 | Performance-Regressionen werden als M1 priorisiert | MUST |
+| REQ-MAINT-061 | Performance-Claims erfordern Benchmark-Evidence | MUST |
 
 ## Implementierungsstatus (ehrlich, SCR-0080-Doktrin)
 

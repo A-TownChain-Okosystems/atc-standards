@@ -66,11 +66,11 @@ Duties) · M3 → Emergency Governance (mit Release Authority ≠ Implementer).
 
 | REQ | Anforderung | Pflicht |
 |---|---|---|
-| REQ-MAINT-001-001 | Klasse ist ab Anlage eines jeden Maintenance-Items pflichtig | MUST |
-| REQ-MAINT-001-002 | Im Zweifel gilt die hoehere Klasse | MUST |
-| REQ-MAINT-001-003 | M2 darf Release-Zyklen vorlagern | MUST |
-| REQ-MAINT-001-004 | M3 folgt dem Emergency-Pfad (ATC-STD-000 §32) und uebersteuert normale Zyklen | MUST |
-| REQ-MAINT-001-005 | M2/M3 erzeugen Separation-of-Duties-Pflicht (MAINT-000 §5.6 Separation of Duties) | MUST |
+| REQ-MAINT-016 | Klasse ist ab Anlage eines jeden Maintenance-Items pflichtig | MUST |
+| REQ-MAINT-017 | Im Zweifel gilt die hoehere Klasse | MUST |
+| REQ-MAINT-018 | M2 darf Release-Zyklen vorlagern | MUST |
+| REQ-MAINT-019 | M3 folgt dem Emergency-Pfad (ATC-STD-000 §32) und uebersteuert normale Zyklen | MUST |
+| REQ-MAINT-020 | M2/M3 erzeugen Separation-of-Duties-Pflicht (MAINT-000 §5.6 Separation of Duties) | MUST |
 
 ## Implementierungsstatus (ehrlich, SCR-0080-Doktrin)
 

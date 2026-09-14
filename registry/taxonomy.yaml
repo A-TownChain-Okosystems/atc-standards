@@ -152,6 +152,7 @@ taxonomy:
         name: Allgemein (Bestand, keine Unterteilung)
         status: ACTIVE
         lifecycle: ACTIVE
+      fam: FAM-41
     - id: RM
       name: repo-maint
       status: ACTIVE
@@ -165,6 +166,7 @@ taxonomy:
         name: Allgemein (Bestand, keine Unterteilung)
         status: ACTIVE
         lifecycle: ACTIVE
+      fam: FAM-46
     - id: ER
       name: err
       status: ACTIVE
@@ -178,6 +180,7 @@ taxonomy:
         name: Allgemein (Bestand, keine Unterteilung)
         status: ACTIVE
         lifecycle: ACTIVE
+      fam: FAM-47
     - id: IM
       name: implementation
       status: ACTIVE
@@ -191,6 +194,7 @@ taxonomy:
         name: Allgemein (Bestand, keine Unterteilung)
         status: ACTIVE
         lifecycle: ACTIVE
+      fam: FAM-48
     - id: RD
       name: repo-discovery
       status: ACTIVE
@@ -205,6 +209,7 @@ taxonomy:
         name: Allgemein (Bestand, keine Unterteilung)
         status: ACTIVE
         lifecycle: ACTIVE
+      fam: FAM-49
     - id: SGC
       name: governance-core
       status: ACTIVE
@@ -296,6 +301,7 @@ taxonomy:
         name: Allgemein (Bestand, keine Unterteilung)
         status: ACTIVE
         lifecycle: ACTIVE
+      fam: FAM-44
     - id: V2S
       name: v2s
       status: ACTIVE
@@ -309,6 +315,7 @@ taxonomy:
         name: Allgemein (Bestand, keine Unterteilung)
         status: ACTIVE
         lifecycle: ACTIVE
+      fam: FAM-45
     - id: CI
       name: cicd
       status: ACTIVE
@@ -322,6 +329,7 @@ taxonomy:
         name: Allgemein (Bestand, keine Unterteilung)
         status: ACTIVE
         lifecycle: ACTIVE
+      fam: FAM-50
     - id: IMP
       name: improvement
       status: ACTIVE
@@ -477,7 +485,7 @@ taxonomy:
       lifecycle: ACTIVE
       id_range: ATC-STD-MAINT-000-999
       source: named-family
-      description: 'Maintenance-Familie: Vollstaendige normative Betriebs-Disziplin (praeventiv/korrektiv/adaptiv/sicherheitkritisch, maschinenpruefbar) — MAINT-000 Governance-Dach mit Maintenance-Readiness-Gate
+      description: 'Maintenance-Familie (FAM-52): Vollstaendige normative Betriebs-Disziplin (praeventiv/korrektiv/adaptiv/sicherheitkritisch, maschinenpruefbar) — MAINT-000 Governance-Dach mit Maintenance-Readiness-Gate
         (Maintenance Capability = Release-Voraussetzung), 001 Klassifikation M0-M3, 002 Lifecycle, 003-020 Spezialstandards, 021-024 fest eingeplant (Emergency/EOL/Vendor-Supply-Chain/Cross-Ecosystem),
         ab 025 frei via SCR (Owner-Direktive 14.09., SCR-0120)'
       standards_count: 25
@@ -486,6 +494,7 @@ taxonomy:
         name: Allgemein (Bestand, keine Unterteilung)
         status: ACTIVE
         lifecycle: ACTIVE
+      fam: FAM-52
   - id: CHAIN
     name: Blockchain, Smart Contracts & Protokolle
     status: ACTIVE
@@ -557,6 +566,7 @@ taxonomy:
         name: Allgemein (Bestand, keine Unterteilung)
         status: ACTIVE
         lifecycle: ACTIVE
+      fam: FAM-42
   - id: AI
     name: Artificial Intelligence & Agenten
     status: ACTIVE
@@ -628,6 +638,7 @@ taxonomy:
         name: Allgemein (Bestand, keine Unterteilung)
         status: ACTIVE
         lifecycle: ACTIVE
+      fam: FAM-20
     - id: AIG
       name: ai-gov
       status: ACTIVE

@@ -42,9 +42,9 @@ CI/CD-Workflows (Versionen der Actions, governance-konform, .github als Org-SSOT
 
 | REQ | Anforderung | Pflicht |
 |---|---|---|
-| REQ-MAINT-006-001 | Workflow-Aenderungen folgen der Org-Governance und versionierten Actions | MUST |
-| REQ-MAINT-006-002 | Infrastruktur-Ausfaelle werden als M1 priorisiert | MUST |
-| REQ-MAINT-006-003 | Builds sind reproduzierbar | MUST |
+| REQ-MAINT-036 | Workflow-Aenderungen folgen der Org-Governance und versionierten Actions | MUST |
+| REQ-MAINT-037 | Infrastruktur-Ausfaelle werden als M1 priorisiert | MUST |
+| REQ-MAINT-038 | Builds sind reproduzierbar | MUST |
 
 ## Implementierungsstatus (ehrlich, SCR-0080-Doktrin)
 

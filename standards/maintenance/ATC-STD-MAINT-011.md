@@ -40,8 +40,8 @@ Pflicht-Checkliste). Dieser Standard normiert NUR die Einbindung in die MAINT-Fa
 
 | REQ | Anforderung | Pflicht |
 |---|---|---|
-| REQ-MAINT-011-001 | Repository-Pflege folgt REPO-MAINT-001 als SSOT (keine Doppelnormierung) | MUST |
-| REQ-MAINT-011-002 | Repository-Maintenance-Items tragen M-Klassen und MAINT-Evidence | MUST |
+| REQ-MAINT-052 | Repository-Pflege folgt REPO-MAINT-001 als SSOT (keine Doppelnormierung) | MUST |
+| REQ-MAINT-053 | Repository-Maintenance-Items tragen M-Klassen und MAINT-Evidence | MUST |
 
 ## Implementierungsstatus (ehrlich, SCR-0080-Doktrin)
 

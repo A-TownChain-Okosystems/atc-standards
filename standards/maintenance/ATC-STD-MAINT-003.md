@@ -42,9 +42,9 @@ die Pflege an M-Klassifikation und Lifecycle.
 
 | REQ | Anforderung | Pflicht |
 |---|---|---|
-| REQ-MAINT-003-001 | Refactorings sind verhaltensinvariant und testgesichert | MUST |
-| REQ-MAINT-003-002 | Technical Debt wird im Maintenance-Backlog gefuehrt (KPI Technical Debt) | MUST |
-| REQ-MAINT-003-003 | Deprecations werden ankuendigt, dokumentiert und planbar entfernt | MUST |
+| REQ-MAINT-025 | Refactorings sind verhaltensinvariant und testgesichert | MUST |
+| REQ-MAINT-026 | Technical Debt wird im Maintenance-Backlog gefuehrt (KPI Technical Debt) | MUST |
+| REQ-MAINT-027 | Deprecations werden ankuendigt, dokumentiert und planbar entfernt | MUST |
 
 ## Implementierungsstatus (ehrlich, SCR-0080-Doktrin)
 

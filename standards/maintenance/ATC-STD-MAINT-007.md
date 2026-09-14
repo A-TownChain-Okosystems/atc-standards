@@ -43,9 +43,9 @@ Desktop/Shell. Architekturrahmen: ATC-DOC-ARC-GLOB-002 (13 Layer, TCB-Grenze).
 
 | REQ | Anforderung | Pflicht |
 |---|---|---|
-| REQ-MAINT-007-001 | Kernel-Aenderungen unterliegen SoD und sind M3-sensitiv (Security Boundary) | MUST |
-| REQ-MAINT-007-002 | OS-Komponenten-Updates weisen Kompatibilitaet zu Nachbarschichten nach | MUST |
-| REQ-MAINT-007-003 | OS-Updates laufen nach A/B-Prinzip mit Health-Check und Rollback | MUST |
+| REQ-MAINT-039 | Kernel-Aenderungen unterliegen SoD und sind M3-sensitiv (Security Boundary) | MUST |
+| REQ-MAINT-040 | OS-Komponenten-Updates weisen Kompatibilitaet zu Nachbarschichten nach | MUST |
+| REQ-MAINT-041 | OS-Updates laufen nach A/B-Prinzip mit Health-Check und Rollback | MUST |
 
 ## Implementierungsstatus (ehrlich, SCR-0080-Doktrin)
 

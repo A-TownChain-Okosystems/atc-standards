@@ -48,9 +48,9 @@ Cross-Repo-/Cross-Schicht-Aenderungen: Registry- und Standards-Syncs, Plattform-
 
 | REQ | Anforderung | Pflicht |
 |---|---|---|
-| REQ-MAINT-024-001 | Cross-Ecosystem-Aenderungen nutzen eine Change-Nummer und konsolidierte Evidence | MUST |
-| REQ-MAINT-024-002 | Betroffenheit wird Registry-basiert bestimmt | MUST |
-| REQ-MAINT-024-003 | Kompatibilitaetspruefung an allen betroffenen Schichtgrenzen | MUST |
+| REQ-MAINT-092 | Cross-Ecosystem-Aenderungen nutzen eine Change-Nummer und konsolidierte Evidence | MUST |
+| REQ-MAINT-093 | Betroffenheit wird Registry-basiert bestimmt | MUST |
+| REQ-MAINT-094 | Kompatibilitaetspruefung an allen betroffenen Schichtgrenzen | MUST |
 
 ## Implementierungsstatus (ehrlich, SCR-0080-Doktrin)
 

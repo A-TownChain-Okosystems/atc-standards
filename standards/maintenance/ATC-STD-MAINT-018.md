@@ -47,9 +47,9 @@ Version N → Update → N+1 → Health Check → PASS: commit
 
 | REQ | Anforderung | Pflicht |
 |---|---|---|
-| REQ-MAINT-018-001 | M2/M3 ohne getesteten Rollback: kein CLOSE (rollback.available + rollback.tested) | MUST |
-| REQ-MAINT-018-002 | OS-/Plattform-Updates laufen nach A/B-Prinzip mit Health-Check | MUST |
-| REQ-MAINT-018-003 | Rollback Success Rate wird als KPI gefuehrt | MUST |
+| REQ-MAINT-069 | M2/M3 ohne getesteten Rollback: kein CLOSE (rollback.available + rollback.tested) | MUST |
+| REQ-MAINT-070 | OS-/Plattform-Updates laufen nach A/B-Prinzip mit Health-Check | MUST |
+| REQ-MAINT-071 | Rollback Success Rate wird als KPI gefuehrt | MUST |
 
 ## Implementierungsstatus (ehrlich, SCR-0080-Doktrin)
 

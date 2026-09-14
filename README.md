@@ -8,7 +8,7 @@
 ```yaml
 state:
   id: ATC-STATE-20260914-19b7fb6b
-  generated_at: "2026-09-14 08:29 UTC+2"
+  generated_at: "2026-09-14 08:48 UTC+2"
   registry_version: "1.0.0"
   registry_sha256: "19b7fb6b4f59696971ec9fa24e022fa84f1d62eadb2864251d4b89dca895ac71"
   standards_total: 503
@@ -16,7 +16,7 @@ state:
   standards_candidate: 0
   standards_other: 38
   standard_files: 501
-  families: 51
+  families: 52
 ```
 
 **Diese Zahlen sind die EINZIG maschinenverbindliche Auskunft** (ATC-STD-003 §2 Ein-Zahl-Regel).
@@ -41,7 +41,7 @@ ATC Standards is the canonical normative governance layer of the A-TownChain eco
 - **Registry:** SSOT für alle 503 Standards mit Versionierung, Dependencies (DAG) und Findings
 - **Verfassung:** ATC-STD-000 v1.3.0, APPROVED (ID-System, Lifecycle, Change Control, Immutabilität)
 - **Validator-Suite:** atc-std-validator, atc-repo-audit (R3), atc-readme-validator
-- **Governance Framework:** 51 Familien, Enterprise-Ebenen (ATC-ENT-001..015), AI-Standards (ATC-AAS-001..025)
+- **Governance Framework:** 52 Familien, Enterprise-Ebenen (ATC-ENT-001..015), AI-Standards (ATC-AAS-001..025)
 - **Governance-Determinismus:** ATC-STD-003 (SSOT-Matrix, State-ID, Ein-Zahl-Regel)
 
 All 26 organizational repositories follow these standards (Registry-First principle).
@@ -52,7 +52,7 @@ All 26 organizational repositories follow these standards (Registry-First princi
 
 Governance-Root der A-TownChain-Organisation: Registry, Standards,
 Schemata, Validatoren, Audits und Change-Requests. In Scope: normative
-Standards (501 Dateien, 51 Familien) und ihre Metadaten/Validierung.
+Standards (501 Dateien, 52 Familien) und ihre Metadaten/Validierung.
 Out of Scope: Implementierung der Standards (liegt in den 27 governed Repos und
 deren CI-Gates; Nachweis via Implementierungs-Matrix).
 
@@ -68,7 +68,7 @@ deren CI-Gates; Nachweis via Implementierungs-Matrix).
 
 ### Core Components
 - `registry/` — SSOT (standards.yaml, versions.yaml, dependencies.yaml, findings.yaml, families/ = Familien-SSOT, standards/ = generierte Per-Standard-Records)
-- `standards/` — 501 Standard-Dateien in 51 Familien
+- `standards/` — 501 Standard-Dateien in 52 Familien
 - `profiles/` — 30 verbindliche Standards-Profile je Repository (Compliance-Vertrag, ATC-STD-LIB-001 §8) + `docs/architecture/` — Zielarchitektur
 - `schemas/` — naming-conventions.schema.json, milestone.schema.json, etc.
 - `tools/` — Validators, Auditors, Generators
@@ -185,7 +185,7 @@ Implementierungs-Pivot (kein Standard ohne Implementierungsstatus).
 ├── references/      # Normative Referenzen
 ├── registry/        # SSOT: standards.yaml, Matrix, Lock, Schemata-Reg
 ├── schemas/         # JSON/YAML-Schemata (standard.schema.yaml)
-├── standards/       # 501 Standard-Dateien in 51 Familien
+├── standards/       # 501 Standard-Dateien in 52 Familien
 ├── templates/       # Dokumentvorlagen
 └── tools/           # Validatoren, Generatoren, Audits (Python)
 ```

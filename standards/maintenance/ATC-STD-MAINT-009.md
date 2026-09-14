@@ -49,10 +49,10 @@ Jede Stufe erzeugt Evidence (MAINT-019); ein Abbruch einer Stufe blockiert das U
 
 | REQ | Anforderung | Pflicht |
 |---|---|---|
-| REQ-MAINT-009-001 | Die 7-Stufen-Pruefkette ist fuer jede VM-Aenderung verbindlich und evidenced | MUST |
-| REQ-MAINT-009-002 | VM-Inkompatibilitaet wird als M3 klassifiziert | MUST |
-| REQ-MAINT-009-003 | ABI/API-Aenderungen folgen MAINT-016/COMPAT-001 inkl. Versionierungs-Gate | MUST |
-| REQ-MAINT-009-004 | VM-Aenderungen unterliegen Separation of Duties | MUST |
+| REQ-MAINT-045 | Die 7-Stufen-Pruefkette ist fuer jede VM-Aenderung verbindlich und evidenced | MUST |
+| REQ-MAINT-046 | VM-Inkompatibilitaet wird als M3 klassifiziert | MUST |
+| REQ-MAINT-047 | ABI/API-Aenderungen folgen MAINT-016/COMPAT-001 inkl. Versionierungs-Gate | MUST |
+| REQ-MAINT-048 | VM-Aenderungen unterliegen Separation of Duties | MUST |
 
 ## Implementierungsstatus (ehrlich, SCR-0080-Doktrin)
 

@@ -47,10 +47,10 @@ Patch Latency (CVE-Fund bis Patch), MTTD/MTTR fuer Security-Findings (generiert)
 
 | REQ | Anforderung | Pflicht |
 |---|---|---|
-| REQ-MAINT-005-001 | CVEs werden als M2 klassifiziert und vorlagerbar behandelt | MUST |
-| REQ-MAINT-005-002 | Aktiv ausnutzbare CVEs: Fix vor Oeffentlichkeit (Disclosure-Vorsicht) | MUST |
-| REQ-MAINT-005-003 | Secrets duerfen nie committet werden; Rotation bei Verlust sofort (M3 bei Vertrauensbruch) | MUST |
-| REQ-MAINT-005-004 | M2-Aenderungen unterliegen Separation of Duties | MUST |
+| REQ-MAINT-032 | CVEs werden als M2 klassifiziert und vorlagerbar behandelt | MUST |
+| REQ-MAINT-033 | Aktiv ausnutzbare CVEs: Fix vor Oeffentlichkeit (Disclosure-Vorsicht) | MUST |
+| REQ-MAINT-034 | Secrets duerfen nie committet werden; Rotation bei Verlust sofort (M3 bei Vertrauensbruch) | MUST |
+| REQ-MAINT-035 | M2-Aenderungen unterliegen Separation of Duties | MUST |
 
 ## Implementierungsstatus (ehrlich, SCR-0080-Doktrin)
 

@@ -39,8 +39,8 @@ in UPDATE-001) bleibt SSOT. Dieser Standard bindet Compatibility an die MAINT-Fa
 
 | REQ | Anforderung | Pflicht |
 |---|---|---|
-| REQ-MAINT-016-001 | Compatibility folgt COMPAT-001/UPDATE-001 als SSOT | MUST |
-| REQ-MAINT-016-002 | Kompatibilitaetsbrueche werden mit M-Klasse klassifiziert und evidenced | MUST |
+| REQ-MAINT-065 | Compatibility folgt COMPAT-001/UPDATE-001 als SSOT | MUST |
+| REQ-MAINT-066 | Kompatibilitaetsbrueche werden mit M-Klasse klassifiziert und evidenced | MUST |
 
 ## Implementierungsstatus (ehrlich, SCR-0080-Doktrin)
 

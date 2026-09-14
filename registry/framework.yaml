@@ -3102,3 +3102,136 @@ framework:
       - id: ATC-STD-TUD-001
         title: "Technology Uniqueness & Differentiation Standard"
         status: BELEGT
+  - id: FAM-52
+    name: "Maintenance (MAINT)"
+    range: "ATC-STD-MAINT-000..999"
+    note: 'Maintenance-Familie: Vollstaendige normative Betriebs-Disziplin — MAINT-000 Governance- und Contract-Layer (Maintenance Capability = Release-Eigenschaft, Readiness-Gate, M0-M3, Evidence, Fail-Closed), 001 Klassifikation, 002 Lifecycle, 003-020 Spezialstandards, 021-024 fest eingeplant (Emergency/EOL/Vendor-Supply-Chain/Cross-Ecosystem), ab 025 frei via SCR (Owner-Direktiven 14.09., SCR-0120); REPO-MAINT-001 (FAM-46) bleibt spezialisierter Repository-Domain-Standard unter MAINT-Governance — Migrationspfad nach MAINT-011 nur via SCR, IDs immutable (MAINT-000 §25.1)'
+    family_refs:
+    - ATC-STD-000
+    - ATC-STD-REPO-MAINT-001
+    slots:
+    - id: ATC-STD-MAINT-000
+      title: "Maintenance Governance & Specification Standard (Parent Standard: Readiness Gate"
+      status: BELEGT
+      refs:
+      - ATC-STD-MAINT-000
+    - id: ATC-STD-MAINT-001
+      title: "Maintenance Classification Standard (M0-Routine, M1-Operational, M2-Security, M3"
+      status: BELEGT
+      refs:
+      - ATC-STD-MAINT-001
+    - id: ATC-STD-MAINT-002
+      title: "Maintenance Lifecycle Standard (DETECT..CLOSE, 13 Phasen, GSEPF-Mapping)"
+      status: BELEGT
+      refs:
+      - ATC-STD-MAINT-002
+    - id: ATC-STD-MAINT-003
+      title: "Code Maintenance Standard (Refactoring, Technical Debt, Deprecation)"
+      status: BELEGT
+      refs:
+      - ATC-STD-MAINT-003
+    - id: ATC-STD-MAINT-004
+      title: "Dependency Maintenance Standard (Dependencies, Lockfiles, SBOM, Updates, CVE-Rea"
+      status: BELEGT
+      refs:
+      - ATC-STD-MAINT-004
+    - id: ATC-STD-MAINT-005
+      title: "Security Maintenance Standard (CVEs, Hardening, Secrets, Keys, Sandbox, SoD)"
+      status: BELEGT
+      refs:
+      - ATC-STD-MAINT-005
+    - id: ATC-STD-MAINT-006
+      title: "Infrastructure Maintenance Standard (CI/CD, Runner, Build-/Release-Infrastruktur"
+      status: BELEGT
+      refs:
+      - ATC-STD-MAINT-006
+    - id: ATC-STD-MAINT-007
+      title: "OS Maintenance Standard (Kernel, Treiber, Runtime, Systemdienste, TCB-Grenzen)"
+      status: BELEGT
+      refs:
+      - ATC-STD-MAINT-007
+    - id: ATC-STD-MAINT-008
+      title: "Blockchain Maintenance Standard (Node, P2P, State, Storage, Consensus)"
+      status: BELEGT
+      refs:
+      - ATC-STD-MAINT-008
+    - id: ATC-STD-MAINT-009
+      title: "VM & Runtime Maintenance Standard (ATC-VM, ABI/API, 7-Stufen-Pruefkette)"
+      status: BELEGT
+      refs:
+      - ATC-STD-MAINT-009
+    - id: ATC-STD-MAINT-010
+      title: "AI Maintenance Standard (Modelle, Registry, Inference, Evaluation)"
+      status: BELEGT
+      refs:
+      - ATC-STD-MAINT-010
+    - id: ATC-STD-MAINT-011
+      title: "Repository Maintenance Standard (Bindung an REPO-MAINT-001-SSOT)"
+      status: BELEGT
+      refs:
+      - ATC-STD-MAINT-011
+    - id: ATC-STD-MAINT-012
+      title: "Standards Maintenance Standard (Standards, Registry, Schemas, Conformance)"
+      status: BELEGT
+      refs:
+      - ATC-STD-MAINT-012
+    - id: ATC-STD-MAINT-013
+      title: "Documentation Maintenance Standard (README, Wiki, API, Architektur)"
+      status: BELEGT
+      refs:
+      - ATC-STD-MAINT-013
+    - id: ATC-STD-MAINT-014
+      title: "Performance Maintenance Standard (CPU, RAM, I/O, Netzwerk, Latenz)"
+      status: BELEGT
+      refs:
+      - ATC-STD-MAINT-014
+    - id: ATC-STD-MAINT-015
+      title: "Reliability Maintenance Standard (Monitoring, Backup, Recovery, Regression)"
+      status: BELEGT
+      refs:
+      - ATC-STD-MAINT-015
+    - id: ATC-STD-MAINT-016
+      title: "Compatibility Maintenance Standard (Bindung an COMPAT-001-SSOT)"
+      status: BELEGT
+      refs:
+      - ATC-STD-MAINT-016
+    - id: ATC-STD-MAINT-017
+      title: "Upgrade & Migration Standard (Version Upgrades, Migrationen, Schemaaenderungen)"
+      status: BELEGT
+      refs:
+      - ATC-STD-MAINT-017
+    - id: ATC-STD-MAINT-018
+      title: "Rollback & Recovery Standard (Rollback, Restore, Failover, A/B-Prinzip)"
+      status: BELEGT
+      refs:
+      - ATC-STD-MAINT-018
+    - id: ATC-STD-MAINT-019
+      title: "Maintenance Evidence Standard (maschinenlesbares Record-Schema, No Evidence No T"
+      status: BELEGT
+      refs:
+      - ATC-STD-MAINT-019
+    - id: ATC-STD-MAINT-020
+      title: "Maintenance Automation Standard (Scanner, Maintenance Engine, M0 Auto/M1 Review/"
+      status: BELEGT
+      refs:
+      - ATC-STD-MAINT-020
+    - id: ATC-STD-MAINT-021
+      title: "Emergency Maintenance Standard (M3-Emergency-Pfad, Incident Records, Post-Mortem"
+      status: BELEGT
+      refs:
+      - ATC-STD-MAINT-021
+    - id: ATC-STD-MAINT-022
+      title: "End-of-Life & Retirement Standard (Deprecation-Sunset-Retirement, Consumer-Koord"
+      status: BELEGT
+      refs:
+      - ATC-STD-MAINT-022
+    - id: ATC-STD-MAINT-023
+      title: "Vendor & Supply-Chain Maintenance Standard (Vendor-Abhaengigkeiten, Provenance/S"
+      status: BELEGT
+      refs:
+      - ATC-STD-MAINT-023
+    - id: ATC-STD-MAINT-024
+      title: "Cross-Ecosystem Maintenance Standard (Multi-Repo-/Schicht-Koordination, konsolid"
+      status: BELEGT
+      refs:
+      - ATC-STD-MAINT-024

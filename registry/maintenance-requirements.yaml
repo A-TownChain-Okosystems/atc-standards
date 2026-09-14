@@ -10,7 +10,7 @@ maintenance_requirements:
   - ci
   - audit
   requirements:
-  - id: REQ-MAINT-000-001
+  - id: REQ-MAINT-001
     statement: 'A system MUST define its required Maintenance Capability before entering a lifecycle state that
       requires supported operation.
 
@@ -22,7 +22,7 @@ maintenance_requirements:
       - maintenance_capability
       - lifecycle_status
       - release_record
-  - id: REQ-MAINT-000-002
+  - id: REQ-MAINT-002
     statement: 'Maintenance Readiness MUST be a release gate: a release to a state requiring operational support
       MUST pass the Maintenance Readiness Gate; a failed mandatory check MUST block release.
 
@@ -34,7 +34,7 @@ maintenance_requirements:
       - maintenance_readiness
       - gate_result
       - release_record
-  - id: REQ-MAINT-000-003
+  - id: REQ-MAINT-003
     statement: 'Every maintenance activity MUST use the M0–M3 classification (Routine, Operational, Security, Critical).
 
       '
@@ -44,7 +44,7 @@ maintenance_requirements:
       required:
       - maintenance_record
       - classification
-  - id: REQ-MAINT-000-004
+  - id: REQ-MAINT-004
     statement: 'Controlled maintenance MUST produce evidence establishing what changed, why, who performed it, and
       whether the resulting state was validated; completion MUST NOT be declared from implementation claims alone.
 
@@ -55,7 +55,7 @@ maintenance_requirements:
       required:
       - maintenance_record
       - validation_results
-  - id: REQ-MAINT-000-005
+  - id: REQ-MAINT-005
     statement: 'Mandatory maintenance gates MUST fail closed: missing evidence, validation, approval, or safety
       information MUST block the affected release or operation.
 
@@ -66,7 +66,7 @@ maintenance_requirements:
       required:
       - conformance_gate_result
       - blocked_on_missing_evidence
-  - id: REQ-MAINT-000-006
+  - id: REQ-MAINT-006
     statement: 'M2 and M3 maintenance MUST enforce Separation of Duties (Implementer != Validator != Auditor); critical
       release operations MUST separate Release Authority from Implementer; exceptions MUST be explicitly authorized
       and evidenced.
@@ -78,7 +78,7 @@ maintenance_requirements:
       required:
       - role_assignment
       - approval_record
-  - id: REQ-MAINT-000-007
+  - id: REQ-MAINT-007
     statement: 'Production systems MUST define a rollback or recovery capability appropriate to their architecture;
       an unvalidated rollback strategy MUST NOT be represented as tested.
 
@@ -89,7 +89,7 @@ maintenance_requirements:
       required:
       - rollback_strategy
       - recovery_plan
-  - id: REQ-MAINT-000-008
+  - id: REQ-MAINT-008
     statement: 'Production systems MUST define a compatibility strategy; intentional compatibility breaks MUST be
       identified, documented, consumer-checked, validated, and rollback-evaluated.
 
@@ -99,7 +99,7 @@ maintenance_requirements:
       type: evidence
       required:
       - compatibility_declaration
-  - id: REQ-MAINT-000-009
+  - id: REQ-MAINT-009
     statement: 'Maintenance automation MUST operate within explicit authorization boundaries, MUST NOT bypass mandatory
       governance gates, and an AI agent MUST NOT independently authorize actions requiring human approval.
 
@@ -110,7 +110,7 @@ maintenance_requirements:
       required:
       - automation_scope
       - authorization_record
-  - id: REQ-MAINT-000-010
+  - id: REQ-MAINT-010
     statement: 'Compliance MUST be evidence-based; a system MUST NOT be declared compliant solely from documentation
       claims.
 
@@ -121,7 +121,7 @@ maintenance_requirements:
       required:
       - compliance_report
       - evidence_bundle
-  - id: REQ-MAINT-000-011
+  - id: REQ-MAINT-011
     statement: 'Maintenance records MUST be machine-readable and schema-conformant.
 
       '
@@ -130,7 +130,7 @@ maintenance_requirements:
       type: ci
       required:
       - maintenance_record_schema_valid
-  - id: REQ-MAINT-000-012
+  - id: REQ-MAINT-012
     statement: 'Maintenance conformance SHOULD be CI-enforced with automated conformance checks; a mandatory conformance
       failure MUST block the applicable gate.
 
@@ -141,7 +141,7 @@ maintenance_requirements:
       required:
       - conformance_workflow
       - conformance_result
-  - id: REQ-MAINT-000-013
+  - id: REQ-MAINT-013
     statement: 'Maintenance metrics SHOULD be collected (MTTD, MTTA, MTTR, MTBF, patch latency, rollback success
       rate, evidence completeness, recovery readiness).
 
@@ -151,7 +151,7 @@ maintenance_requirements:
       type: evidence
       required:
       - metrics_report
-  - id: REQ-MAINT-000-014
+  - id: REQ-MAINT-014
     statement: 'Maintenance crossing architectural boundaries MUST assess interface and compatibility impact; layered-system
       maintenance (e.g. ATC-VM) MUST NOT be treated as an isolated package update.
 
@@ -161,7 +161,7 @@ maintenance_requirements:
       type: evidence
       required:
       - impact_assessment
-  - id: REQ-MAINT-000-015
+  - id: REQ-MAINT-015
     statement: 'M3 (critical) maintenance MUST use the Emergency Maintenance process and MUST NOT eliminate evidence,
       validation, or post-event accountability.
 

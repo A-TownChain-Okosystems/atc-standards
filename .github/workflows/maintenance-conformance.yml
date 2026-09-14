@@ -61,7 +61,7 @@ jobs:
           # 4) REQ-Abgleich gegen normative Dokumente
           for s in conf["standards"]:
               md = open(f"standards/maintenance/{s['id']}.md", encoding="utf-8").read()
-              reqs_md = re.findall(r"\| (REQ-MAINT-\d{3}-\d{3}) \|", md)
+              reqs_md = re.findall(r"\| (REQ-MAINT-\d{3}) \|", md)
               if reqs_md != s["reqs"]:
                   fails.append(f"[C4] {s['id']}: REQ-Drift Conformance-SSOT vs. Dokument")
           print(f"  [C4] {sum(s['req_count'] for s in conf['standards'])} REQs abgeglichen")

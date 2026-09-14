@@ -72,10 +72,10 @@ DETECT → ASSESS → CLASSIFY → PLAN → APPROVE → IMPLEMENT → TEST
 
 | REQ | Anforderung | Pflicht |
 |---|---|---|
-| REQ-MAINT-002-001 | Der 13-Phasen-Lifecycle ist verbindlich | MUST |
-| REQ-MAINT-002-002 | Kein CLOSE ohne vollstaendigen Evidence-Record | MUST |
-| REQ-MAINT-002-003 | M2/M3: VALIDATE durch von IMPLEMENTER unabhaengige Rolle | MUST |
-| REQ-MAINT-002-004 | Lifecycle-Dokumentation ist maschinenlesbar (MAINT-019-Schema) | SHOULD |
+| REQ-MAINT-021 | Der 13-Phasen-Lifecycle ist verbindlich | MUST |
+| REQ-MAINT-022 | Kein CLOSE ohne vollstaendigen Evidence-Record | MUST |
+| REQ-MAINT-023 | M2/M3: VALIDATE durch von IMPLEMENTER unabhaengige Rolle | MUST |
+| REQ-MAINT-024 | Lifecycle-Dokumentation ist maschinenlesbar (MAINT-019-Schema) | SHOULD |
 
 ## Implementierungsstatus (ehrlich, SCR-0080-Doktrin)
 

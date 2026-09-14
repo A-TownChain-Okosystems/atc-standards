@@ -54,11 +54,11 @@ kommunikation, Post-Mortem-Verweis.
 
 | REQ | Anforderung | Pflicht |
 |---|---|---|
-| REQ-MAINT-021-001 | M3-Verdacht eskaliert sofort an den Owner (s32) | MUST |
-| REQ-MAINT-021-002 | Emergency durchlaeuft alle 13 Phasen beschleunigt; EVIDENCE nie ausgelassen | MUST |
-| REQ-MAINT-021-003 | SoD gilt auch im Emergency | MUST |
-| REQ-MAINT-021-004 | Jeder M3-Fall erzeugt Incident Record + Post-Mortem | MUST |
-| REQ-MAINT-021-005 | Nach Stabilisierung Rueckkehr in normale Governance | MUST |
+| REQ-MAINT-080 | M3-Verdacht eskaliert sofort an den Owner (s32) | MUST |
+| REQ-MAINT-081 | Emergency durchlaeuft alle 13 Phasen beschleunigt; EVIDENCE nie ausgelassen | MUST |
+| REQ-MAINT-082 | SoD gilt auch im Emergency | MUST |
+| REQ-MAINT-083 | Jeder M3-Fall erzeugt Incident Record + Post-Mortem | MUST |
+| REQ-MAINT-084 | Nach Stabilisierung Rueckkehr in normale Governance | MUST |
 
 ## Implementierungsstatus (ehrlich, SCR-0080-Doktrin)
 

@@ -61,7 +61,7 @@ def main():
         if not os.path.exists(md_path): sys.exit(f"FEHLER: {md_path} fehlt")
         if sid not in reg_ids: sys.exit(f"FEHLER: {sid} nicht in Registry")
         md = io.open(md_path, encoding="utf-8").read()
-        reqs = re.findall(r"\| (REQ-MAINT-\d{3}-\d{3}) \|", md)
+        reqs = re.findall(r"\| (REQ-MAINT-\d{3}) \|", md)
         group, prio, domain, role = META[nr]
         standards.append({
             "id": sid, "role": role, "group": GROUPS[group], "group_key": group,
@@ -104,8 +104,11 @@ def main():
         rid = y["requirement"]["id"]
         if rid in seen: sys.exit(f"FEHLER: REQ doppelt: {rid}")
         seen.add(rid)
+        rid = y["requirement"]["id"]
+        if not re.fullmatch(r"REQ-MAINT-\d{3}", rid):
+            sys.exit(f"FEHLER: {rid} entspricht nicht der Klasse MAINT (REQ-MAINT-NNN, Variante A)")
         reqdefs.append(y["requirement"])
-    table_ids = re.findall(r"\| (REQ-MAINT-000-\d{3}) \|", md0)
+    table_ids = re.findall(r"\| (REQ-MAINT-\d{3}) \|", md0)
     if sorted(seen) != sorted(set(table_ids)):
         sys.exit(f"FEHLER: REQ-Drift YAML-Bloecke vs Tabelle: {sorted(seen)} vs {sorted(set(table_ids))}")
     if len(reqdefs) != 15:

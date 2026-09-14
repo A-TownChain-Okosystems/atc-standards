@@ -42,9 +42,9 @@ Inference Runtime (Ressourcen, Stabilitaet) · Evaluation (Regression der Modell
 
 | REQ | Anforderung | Pflicht |
 |---|---|---|
-| REQ-MAINT-010-001 | Modell-Updates durchlaufen ein Evaluation-Gate vor Deployment | MUST |
-| REQ-MAINT-010-002 | Maintenance erweitert niemals AI-Systemrechte (Policy-Kette unberuehrt) | MUST |
-| REQ-MAINT-010-003 | Evaluation-Regressionen werden als Finding gefuehrt | SHOULD |
+| REQ-MAINT-049 | Modell-Updates durchlaufen ein Evaluation-Gate vor Deployment | MUST |
+| REQ-MAINT-050 | Maintenance erweitert niemals AI-Systemrechte (Policy-Kette unberuehrt) | MUST |
+| REQ-MAINT-051 | Evaluation-Regressionen werden als Finding gefuehrt | SHOULD |
 
 ## Implementierungsstatus (ehrlich, SCR-0080-Doktrin)
 

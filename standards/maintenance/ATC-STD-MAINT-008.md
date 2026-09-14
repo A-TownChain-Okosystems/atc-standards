@@ -44,9 +44,9 @@ PoH+PoS+PoW als SSOT).
 
 | REQ | Anforderung | Pflicht |
 |---|---|---|
-| REQ-MAINT-008-001 | Konsensfehler/State-Korruption werden als M3 eskaliert | MUST |
-| REQ-MAINT-008-002 | Node-Updates koordinieren Netz-Governance und Kompatibilitaetsnachweise | MUST |
-| REQ-MAINT-008-003 | Konsensrelevante Aenderungen weisen State-Transition-Nachweis | MUST |
+| REQ-MAINT-042 | Konsensfehler/State-Korruption werden als M3 eskaliert | MUST |
+| REQ-MAINT-043 | Node-Updates koordinieren Netz-Governance und Kompatibilitaetsnachweise | MUST |
+| REQ-MAINT-044 | Konsensrelevante Aenderungen weisen State-Transition-Nachweis | MUST |
 
 ## Implementierungsstatus (ehrlich, SCR-0080-Doktrin)
 

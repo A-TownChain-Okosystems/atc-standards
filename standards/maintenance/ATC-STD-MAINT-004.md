@@ -49,10 +49,10 @@ zwei-phasige Workspace-Logik; zero RustSec-Befunde zum Aufbauzeitpunkt.
 
 | REQ | Anforderung | Pflicht |
 |---|---|---|
-| REQ-MAINT-004-001 | Lockfile-SSOT je Manifest; Manifest-Aenderung ohne Lockfile-Update unzulaessig | MUST |
-| REQ-MAINT-004-002 | Releases erzeugen SBOM-Nachweis | MUST |
-| REQ-MAINT-004-003 | Kompromittierte Abhaengigkeit wird als M2 klassifiziert und priorisiert | MUST |
-| REQ-MAINT-004-004 | Dependency Freshness und Patch Latency werden als generierte KPIs gefuehrt | MUST |
+| REQ-MAINT-028 | Lockfile-SSOT je Manifest; Manifest-Aenderung ohne Lockfile-Update unzulaessig | MUST |
+| REQ-MAINT-029 | Releases erzeugen SBOM-Nachweis | MUST |
+| REQ-MAINT-030 | Kompromittierte Abhaengigkeit wird als M2 klassifiziert und priorisiert | MUST |
+| REQ-MAINT-031 | Dependency Freshness und Patch Latency werden als generierte KPIs gefuehrt | MUST |
 
 ## Implementierungsstatus (ehrlich, SCR-0080-Doktrin)
 

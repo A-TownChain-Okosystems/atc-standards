@@ -203,26 +203,29 @@ machine-readable inputs wherever practical.
 
 ## 6. Requirements
 
-Normative requirements carry unique, machine-identifiable IDs (REQ-MAINT-000-001..015, per §4
-and ATC-STD-000 §10/§11). Each requirement is defined by its normative statement, priority, and
+Normative requirements carry unique, machine-identifiable IDs of the requirement class MAINT
+(`REQ-MAINT-001..999`, registered as `maintRequirementId` in naming-conventions.schema.json),
+per §4 and ATC-STD-000 §10/§11. The number space is family-wide: this standard holds
+REQ-MAINT-001..015; the specialized standards continue from REQ-MAINT-016 (up to REQ-MAINT-094
+as currently specified). Each requirement is defined by its normative statement, priority, and
 verification method — CI and audit can address each requirement individually:
 
 ```yaml
 conformance:
-  REQ-MAINT-000-001: PASS
-  REQ-MAINT-000-002: PASS
-  REQ-MAINT-000-003: PASS
+  REQ-MAINT-001: PASS
+  REQ-MAINT-002: PASS
+  REQ-MAINT-003: PASS
   # ...
-  REQ-MAINT-000-015: PASS
+  REQ-MAINT-015: PASS
   MAINT-000-CONFORMANCE: PASS
 ```
 
 
-### REQ-MAINT-000-001
+### REQ-MAINT-001
 
 ```yaml
 requirement:
-  id: REQ-MAINT-000-001
+  id: REQ-MAINT-001
   statement: >
     A system MUST define its required Maintenance Capability before entering a lifecycle state that requires supported operation.
   priority: P0
@@ -236,11 +239,11 @@ requirement:
 
 Source: §7, §8.1. 
 
-### REQ-MAINT-000-002
+### REQ-MAINT-002
 
 ```yaml
 requirement:
-  id: REQ-MAINT-000-002
+  id: REQ-MAINT-002
   statement: >
     Maintenance Readiness MUST be a release gate: a release to a state requiring operational support MUST pass the Maintenance Readiness Gate; a failed mandatory check MUST block release.
   priority: P0
@@ -254,11 +257,11 @@ requirement:
 
 Source: §8, §8.1. 
 
-### REQ-MAINT-000-003
+### REQ-MAINT-003
 
 ```yaml
 requirement:
-  id: REQ-MAINT-000-003
+  id: REQ-MAINT-003
   statement: >
     Every maintenance activity MUST use the M0–M3 classification (Routine, Operational, Security, Critical).
   priority: P0
@@ -271,11 +274,11 @@ requirement:
 
 Source: §2, §9. 
 
-### REQ-MAINT-000-004
+### REQ-MAINT-004
 
 ```yaml
 requirement:
-  id: REQ-MAINT-000-004
+  id: REQ-MAINT-004
   statement: >
     Controlled maintenance MUST produce evidence establishing what changed, why, who performed it, and whether the resulting state was validated; completion MUST NOT be declared from implementation claims alone.
   priority: P0
@@ -288,11 +291,11 @@ requirement:
 
 Source: §5.2, §5.3, §12. 
 
-### REQ-MAINT-000-005
+### REQ-MAINT-005
 
 ```yaml
 requirement:
-  id: REQ-MAINT-000-005
+  id: REQ-MAINT-005
   statement: >
     Mandatory maintenance gates MUST fail closed: missing evidence, validation, approval, or safety information MUST block the affected release or operation.
   priority: P0
@@ -305,11 +308,11 @@ requirement:
 
 Source: §5.4. 
 
-### REQ-MAINT-000-006
+### REQ-MAINT-006
 
 ```yaml
 requirement:
-  id: REQ-MAINT-000-006
+  id: REQ-MAINT-006
   statement: >
     M2 and M3 maintenance MUST enforce Separation of Duties (Implementer != Validator != Auditor); critical release operations MUST separate Release Authority from Implementer; exceptions MUST be explicitly authorized and evidenced.
   priority: P0
@@ -322,11 +325,11 @@ requirement:
 
 Source: §5.6, §11. 
 
-### REQ-MAINT-000-007
+### REQ-MAINT-007
 
 ```yaml
 requirement:
-  id: REQ-MAINT-000-007
+  id: REQ-MAINT-007
   statement: >
     Production systems MUST define a rollback or recovery capability appropriate to their architecture; an unvalidated rollback strategy MUST NOT be represented as tested.
   priority: P0
@@ -339,11 +342,11 @@ requirement:
 
 Source: §16. 
 
-### REQ-MAINT-000-008
+### REQ-MAINT-008
 
 ```yaml
 requirement:
-  id: REQ-MAINT-000-008
+  id: REQ-MAINT-008
   statement: >
     Production systems MUST define a compatibility strategy; intentional compatibility breaks MUST be identified, documented, consumer-checked, validated, and rollback-evaluated.
   priority: P0
@@ -355,11 +358,11 @@ requirement:
 
 Source: §14. 
 
-### REQ-MAINT-000-009
+### REQ-MAINT-009
 
 ```yaml
 requirement:
-  id: REQ-MAINT-000-009
+  id: REQ-MAINT-009
   statement: >
     Maintenance automation MUST operate within explicit authorization boundaries, MUST NOT bypass mandatory governance gates, and an AI agent MUST NOT independently authorize actions requiring human approval.
   priority: P0
@@ -372,11 +375,11 @@ requirement:
 
 Source: §5.5, §17. 
 
-### REQ-MAINT-000-010
+### REQ-MAINT-010
 
 ```yaml
 requirement:
-  id: REQ-MAINT-000-010
+  id: REQ-MAINT-010
   statement: >
     Compliance MUST be evidence-based; a system MUST NOT be declared compliant solely from documentation claims.
   priority: P0
@@ -389,11 +392,11 @@ requirement:
 
 Source: §18. 
 
-### REQ-MAINT-000-011
+### REQ-MAINT-011
 
 ```yaml
 requirement:
-  id: REQ-MAINT-000-011
+  id: REQ-MAINT-011
   statement: >
     Maintenance records MUST be machine-readable and schema-conformant.
   priority: P1
@@ -405,11 +408,11 @@ requirement:
 
 Source: §12, §20.1. 
 
-### REQ-MAINT-000-012
+### REQ-MAINT-012
 
 ```yaml
 requirement:
-  id: REQ-MAINT-000-012
+  id: REQ-MAINT-012
   statement: >
     Maintenance conformance SHOULD be CI-enforced with automated conformance checks; a mandatory conformance failure MUST block the applicable gate.
   priority: P1
@@ -422,11 +425,11 @@ requirement:
 
 Source: §20.1, §20.2. 
 
-### REQ-MAINT-000-013
+### REQ-MAINT-013
 
 ```yaml
 requirement:
-  id: REQ-MAINT-000-013
+  id: REQ-MAINT-013
   statement: >
     Maintenance metrics SHOULD be collected (MTTD, MTTA, MTTR, MTBF, patch latency, rollback success rate, evidence completeness, recovery readiness).
   priority: P1
@@ -438,11 +441,11 @@ requirement:
 
 Source: §20.3. 
 
-### REQ-MAINT-000-014
+### REQ-MAINT-014
 
 ```yaml
 requirement:
-  id: REQ-MAINT-000-014
+  id: REQ-MAINT-014
   statement: >
     Maintenance crossing architectural boundaries MUST assess interface and compatibility impact; layered-system maintenance (e.g. ATC-VM) MUST NOT be treated as an isolated package update.
   priority: P0
@@ -454,11 +457,11 @@ requirement:
 
 Source: §13, §24. 
 
-### REQ-MAINT-000-015
+### REQ-MAINT-015
 
 ```yaml
 requirement:
-  id: REQ-MAINT-000-015
+  id: REQ-MAINT-015
   statement: >
     M3 (critical) maintenance MUST use the Emergency Maintenance process and MUST NOT eliminate evidence, validation, or post-event accountability.
   priority: P0
@@ -475,21 +478,21 @@ Compact registry view (IDs, levels, priorities):
 
 | ID | Level | Priority | Source |
 |---|---|---|---|
-| REQ-MAINT-000-001 | MUST | P0 | §7, §8.1 |
-| REQ-MAINT-000-002 | MUST | P0 | §8, §8.1 |
-| REQ-MAINT-000-003 | MUST | P0 | §2, §9 |
-| REQ-MAINT-000-004 | MUST | P0 | §5.2, §5.3, §12 |
-| REQ-MAINT-000-005 | MUST | P0 | §5.4 |
-| REQ-MAINT-000-006 | MUST | P0 | §5.6, §11 |
-| REQ-MAINT-000-007 | MUST | P0 | §16 |
-| REQ-MAINT-000-008 | MUST | P0 | §14 |
-| REQ-MAINT-000-009 | MUST | P0 | §5.5, §17 |
-| REQ-MAINT-000-010 | MUST | P0 | §18 |
-| REQ-MAINT-000-011 | MUST | P1 | §12, §20.1 |
-| REQ-MAINT-000-012 | SHOULD | P1 | §20.1, §20.2 |
-| REQ-MAINT-000-013 | SHOULD | P1 | §20.3 |
-| REQ-MAINT-000-014 | MUST | P0 | §13, §24 |
-| REQ-MAINT-000-015 | MUST | P0 | §9.4, MAINT-021 |
+| REQ-MAINT-001 | MUST | P0 | §7, §8.1 |
+| REQ-MAINT-002 | MUST | P0 | §8, §8.1 |
+| REQ-MAINT-003 | MUST | P0 | §2, §9 |
+| REQ-MAINT-004 | MUST | P0 | §5.2, §5.3, §12 |
+| REQ-MAINT-005 | MUST | P0 | §5.4 |
+| REQ-MAINT-006 | MUST | P0 | §5.6, §11 |
+| REQ-MAINT-007 | MUST | P0 | §16 |
+| REQ-MAINT-008 | MUST | P0 | §14 |
+| REQ-MAINT-009 | MUST | P0 | §5.5, §17 |
+| REQ-MAINT-010 | MUST | P0 | §18 |
+| REQ-MAINT-011 | MUST | P1 | §12, §20.1 |
+| REQ-MAINT-012 | SHOULD | P1 | §20.1, §20.2 |
+| REQ-MAINT-013 | SHOULD | P1 | §20.3 |
+| REQ-MAINT-014 | MUST | P0 | §13, §24 |
+| REQ-MAINT-015 | MUST | P0 | §9.4, MAINT-021 |
 
 Applicability: all normative ATC systems, repositories, and production-bound artifacts (§2).
 The machine-readable Requirements Registry is generated from this section into
@@ -1421,6 +1424,33 @@ ATC-STD-000
 | ATC-STD-MAINT-024 | Cross-Ecosystem Maintenance |
 
 Reserved identifiers MUST NOT be assigned to unrelated standards.
+
+### 25.1 Relationship to ATC-STD-REPO-MAINT-001 (FAM-46)
+
+ATC-STD-REPO-MAINT-001 (Repository Maintenance & Lifecycle Standard, family FAM-46) is a
+pre-existing specialized Repository Domain Standard. It is NOT replaced by this family:
+
+```
+MAINT
+                     │
+          ┌──────────┴──────────┐
+          │                     │
+   General Maintenance     Repository Domain
+          │                     │
+   MAINT-000..024        REPO-MAINT-001
+          │
+          └────── governs ──────►
+```
+
+Normative relationship:
+
+- REPO-MAINT-001 remains the repository-maintenance domain SSOT and is governed by this family
+  (FAM-52 references FAM-46 via `family_refs`).
+- A long-term consolidation into MAINT-011 (Repository Maintenance) is possible only via a
+  controlled migration path under SCR; standard identifiers are immutable (ATC-STD-000 §30) —
+  REPO-MAINT-001 MUST NOT simply be renamed.
+- Until such a migration is approved, REPO-MAINT-001 is referenced as a specialized domain
+  standard under MAINT governance (§13.2).
 
 ## References
 
