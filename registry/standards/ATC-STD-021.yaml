@@ -6,7 +6,7 @@ family_id: '000'
 file: standards/enterprise/ATC-STD-021.md
 mandate: Owner-Entwurf 11.09. (SCR-0094 Continuous Assurance)
 standard_id: ATC-STD-021
-status: candidate
+status: approved
 title: Continuous Security Monitoring Standard (11-Umfeld, 7-Zustandsmodell MONITORED..VERIFIED,
   Kontinuitaets- und Eskalationspflicht)
 version: 1.0.0

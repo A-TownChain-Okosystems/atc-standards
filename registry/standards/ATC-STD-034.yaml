@@ -7,7 +7,7 @@ file: standards/enterprise/ATC-STD-034.md
 mandate: Owner-Entwurf 11.09. (SCR-0095 Automated Assurance; Owner-Referenz 032 —
   §37 -> 034)
 standard_id: ATC-STD-034
-status: candidate
+status: approved
 title: Exploitability Assessment Standard (7 Bewertungsfaktoren Existence..Network-Reachability,
   kein Abwertungs-Fehlschluss, Re-Assessment-Pflicht)
 version: 1.0.0
