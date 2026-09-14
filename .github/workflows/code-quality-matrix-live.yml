@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
   actions: read
 
 jobs:
@@ -24,7 +24,8 @@ jobs:
         env:
           GITHUB_ACCESS_TOKEN: ${{ github.token }}
         run: python3 tools/code_quality_matrix.py
-      - name: Upload matrix evidence
+      - name: Upload matrix evidence even on findings
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: code-quality-matrix-${{ github.sha }}
