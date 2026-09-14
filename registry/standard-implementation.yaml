@@ -6,12 +6,12 @@
 # Klassifikationsregel: familienbezogen mit Evidence (SCR-0048).
 # Keine Fake-Status: Zielsystem fehlt => specification_only, nie IMPLEMENTED.
 # ============================================================================
-version: "1.1.0"
+version: "1.2.0"
 generated_from: registry/standards.yaml
-updated: "2026-09-08"
+updated: "2026-09-14"
 coverage_kpi:
-  registry_total: 431
-  matrix_entries: 478
+  registry_total: 505
+  matrix_entries: 505
   matrix_coverage: "100%"
   enforced_target: "je Wartungszyklus steigend (REQ-IMP-007)"
   hinweis: "Wertigkeit der 21 SCR-0045-Detail-Eintraege bleibt; Familien-Evidence konsolidiert"
@@ -229,14 +229,6 @@ standards:
       evidence: "atc-node R1-Skeleton (S4, AD-046); Bootstrap/Discovery-Standards warten auf Node-Rebuild"
     independence: L1
 
-  - standard: ATC-STD-NET-009
-    version: "1.0.0"
-    applicability: CONDITIONAL
-    implementation:
-      status: specification_only
-      evidence: "DRAFT (SCR-0122): Alle 3 Netzwerke status=planned, keine Genesis; maturity/version-Felder noch nicht in registry/networks.yaml"
-    independence: L1
-
   - standard: ATC-STD-NET-005
     version: "1.0.0"
     applicability: CONDITIONAL
@@ -262,6 +254,14 @@ standards:
     independence: L1
 
   - standard: ATC-STD-NET-008
+    version: "1.0.0"
+    applicability: CONDITIONAL
+    implementation:
+      status: specification_only
+      evidence: "atc-node R1-Skeleton (S4, AD-046); Bootstrap/Discovery-Standards warten auf Node-Rebuild"
+    independence: L1
+
+  - standard: ATC-STD-NET-009
     version: "1.0.0"
     applicability: CONDITIONAL
     implementation:
@@ -3617,98 +3617,98 @@ standards:
 
   - standard: ATC-AI-GOV-AGENTS-001
     version: "1.0.0"
-    applicability: REFERENCE
+    applicability: MANDATORY
     implementation:
-      status: reference
-      evidence: "Legacy-Serie (atc/): durch ATC-STD-000ff superseded; historische Referenz konserviert"
+      status: specification_only
+      evidence: "ACCESS-001 (SCR-0121): Rollenprofil-Matrix dokumentiert; PAT-Migration auf Fine-grained Stufe-2-Profil offen"
     independence: L1
 
   - standard: ATC-AI-GOV-MANIFEST-001
     version: "1.0.0"
-    applicability: REFERENCE
+    applicability: MANDATORY
     implementation:
-      status: reference
-      evidence: "Legacy-Serie (atc/): durch ATC-STD-000ff superseded; historische Referenz konserviert"
+      status: specification_only
+      evidence: "ACCESS-001 (SCR-0121): Rollenprofil-Matrix dokumentiert; PAT-Migration auf Fine-grained Stufe-2-Profil offen"
     independence: L1
 
   - standard: ATC-AI-GOV-POLICY-001
     version: "1.0.0"
-    applicability: REFERENCE
+    applicability: MANDATORY
     implementation:
-      status: reference
-      evidence: "Legacy-Serie (atc/): durch ATC-STD-000ff superseded; historische Referenz konserviert"
+      status: specification_only
+      evidence: "ACCESS-001 (SCR-0121): Rollenprofil-Matrix dokumentiert; PAT-Migration auf Fine-grained Stufe-2-Profil offen"
     independence: L1
 
   - standard: ATC-AI-GOV-CHECK-001
     version: "1.0.0"
-    applicability: REFERENCE
+    applicability: MANDATORY
     implementation:
-      status: reference
-      evidence: "Legacy-Serie (atc/): durch ATC-STD-000ff superseded; historische Referenz konserviert"
+      status: specification_only
+      evidence: "ACCESS-001 (SCR-0121): Rollenprofil-Matrix dokumentiert; PAT-Migration auf Fine-grained Stufe-2-Profil offen"
     independence: L1
 
   - standard: ATC-AI-GOV-AUDIT-001
     version: "1.0.0"
-    applicability: REFERENCE
+    applicability: MANDATORY
     implementation:
-      status: reference
-      evidence: "Legacy-Serie (atc/): durch ATC-STD-000ff superseded; historische Referenz konserviert"
+      status: specification_only
+      evidence: "ACCESS-001 (SCR-0121): Rollenprofil-Matrix dokumentiert; PAT-Migration auf Fine-grained Stufe-2-Profil offen"
     independence: L1
 
   - standard: ATC-AI-GOV-HANDOFF-001
     version: "1.0.0"
-    applicability: REFERENCE
+    applicability: MANDATORY
     implementation:
-      status: reference
-      evidence: "Legacy-Serie (atc/): durch ATC-STD-000ff superseded; historische Referenz konserviert"
+      status: specification_only
+      evidence: "ACCESS-001 (SCR-0121): Rollenprofil-Matrix dokumentiert; PAT-Migration auf Fine-grained Stufe-2-Profil offen"
     independence: L1
 
   - standard: ATC-AI-GOV-INCIDENT-001
     version: "1.0.0"
-    applicability: REFERENCE
+    applicability: MANDATORY
     implementation:
-      status: reference
-      evidence: "Legacy-Serie (atc/): durch ATC-STD-000ff superseded; historische Referenz konserviert"
+      status: specification_only
+      evidence: "ACCESS-001 (SCR-0121): Rollenprofil-Matrix dokumentiert; PAT-Migration auf Fine-grained Stufe-2-Profil offen"
     independence: L1
 
   - standard: ATC-AI-GOV-CHANGE-001
     version: "1.0.0"
-    applicability: REFERENCE
+    applicability: MANDATORY
     implementation:
-      status: reference
-      evidence: "Legacy-Serie (atc/): durch ATC-STD-000ff superseded; historische Referenz konserviert"
+      status: specification_only
+      evidence: "ACCESS-001 (SCR-0121): Rollenprofil-Matrix dokumentiert; PAT-Migration auf Fine-grained Stufe-2-Profil offen"
     independence: L1
 
   - standard: ATC-AI-GOV-001
     version: "1.0.0"
-    applicability: REFERENCE
+    applicability: MANDATORY
     implementation:
-      status: reference
-      evidence: "Legacy-Serie (atc/): durch ATC-STD-000ff superseded; historische Referenz konserviert"
+      status: specification_only
+      evidence: "ACCESS-001 (SCR-0121): Rollenprofil-Matrix dokumentiert; PAT-Migration auf Fine-grained Stufe-2-Profil offen"
     independence: L1
 
   - standard: ATC-AI-GOV-CAPABILITY-001
     version: "1.0.0"
-    applicability: REFERENCE
+    applicability: MANDATORY
     implementation:
-      status: reference
-      evidence: "Legacy-Serie (atc/): durch ATC-STD-000ff superseded; historische Referenz konserviert"
+      status: specification_only
+      evidence: "ACCESS-001 (SCR-0121): Rollenprofil-Matrix dokumentiert; PAT-Migration auf Fine-grained Stufe-2-Profil offen"
     independence: L1
 
   - standard: ATC-AI-GOV-FINDING-001
     version: "1.0.0"
-    applicability: REFERENCE
+    applicability: MANDATORY
     implementation:
-      status: reference
-      evidence: "Legacy-Serie (atc/): durch ATC-STD-000ff superseded; historische Referenz konserviert"
+      status: specification_only
+      evidence: "ACCESS-001 (SCR-0121): Rollenprofil-Matrix dokumentiert; PAT-Migration auf Fine-grained Stufe-2-Profil offen"
     independence: L1
 
   - standard: ATC-AI-GOV-ACCESS-001
     version: "1.0.0"
-    applicability: REFERENCE
+    applicability: MANDATORY
     implementation:
       status: specification_only
-      evidence: "DRAFT (SCR-0121): Rollenprofil-Matrix als Zielarchitektur; Ist-Zustand klassisches PAT dokumentiert (SCR-0121 §3)"
+      evidence: "ACCESS-001 (SCR-0121): Rollenprofil-Matrix dokumentiert; PAT-Migration auf Fine-grained Stufe-2-Profil offen"
     independence: L1
 
   - standard: ATC-STD-016
@@ -3971,8 +3971,9 @@ standards:
     version: "1.0.0"
     applicability: MANDATORY
     implementation:
-      status: specification_only
-      evidence: "SCR-0120 DRAFT (14.09.2026): Maintenance Governance (Dachstandard) — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence (cargo audit, CodeQL, Drift-Checks) referenziert"
+      status: implemented
+      evidence: "Readiness-Gate implementiert (Welle 1, SCR-0123): gen_maintenance_conformance.py + validate_maintenance_readiness.py CI-live (maintenance-conformance.yml); Readiness-Records fuer beide Released-Komponenten (atc-standards, a-townchain-os)"
+      note: "Naechste Releases bis F-ORG-002 + Rollback-Runbook geschlossen: Readiness FAIL = BLOCK (Records ehrlich)"
     independence: L1
 
   - standard: ATC-STD-MAINT-001
@@ -3980,7 +3981,8 @@ standards:
     applicability: MANDATORY
     implementation:
       status: specification_only
-      evidence: "SCR-0120 DRAFT (14.09.2026): Maintenance Classification (M0-M3) — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence (cargo audit, CodeQL, Drift-Checks) referenziert"
+      evidence: "MAINT-Familie 000..024 (SCR-0120): normative Betriebs-Disziplin; Conformance-Struktur via maintenance-conformance-Gate maschinenpruefbar; operative Umsetzung je Anwendung ausstehend"
+      note: "Readiness-Gate-Tooling Welle 1 SCR-0123: MAINT-000 implemented (Override)"
     independence: L1
 
   - standard: ATC-STD-MAINT-002
@@ -3988,7 +3990,8 @@ standards:
     applicability: MANDATORY
     implementation:
       status: specification_only
-      evidence: "SCR-0120 DRAFT (14.09.2026): Maintenance Lifecycle (13 Phasen) — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence (cargo audit, CodeQL, Drift-Checks) referenziert"
+      evidence: "MAINT-Familie 000..024 (SCR-0120): normative Betriebs-Disziplin; Conformance-Struktur via maintenance-conformance-Gate maschinenpruefbar; operative Umsetzung je Anwendung ausstehend"
+      note: "Readiness-Gate-Tooling Welle 1 SCR-0123: MAINT-000 implemented (Override)"
     independence: L1
 
   - standard: ATC-STD-MAINT-003
@@ -3996,7 +3999,8 @@ standards:
     applicability: MANDATORY
     implementation:
       status: specification_only
-      evidence: "SCR-0120 DRAFT (14.09.2026): Code Maintenance — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence (cargo audit, CodeQL, Drift-Checks) referenziert"
+      evidence: "MAINT-Familie 000..024 (SCR-0120): normative Betriebs-Disziplin; Conformance-Struktur via maintenance-conformance-Gate maschinenpruefbar; operative Umsetzung je Anwendung ausstehend"
+      note: "Readiness-Gate-Tooling Welle 1 SCR-0123: MAINT-000 implemented (Override)"
     independence: L1
 
   - standard: ATC-STD-MAINT-004
@@ -4004,7 +4008,8 @@ standards:
     applicability: MANDATORY
     implementation:
       status: specification_only
-      evidence: "SCR-0120 DRAFT (14.09.2026): Dependency Maintenance — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence (cargo audit, CodeQL, Drift-Checks) referenziert"
+      evidence: "MAINT-Familie 000..024 (SCR-0120): normative Betriebs-Disziplin; Conformance-Struktur via maintenance-conformance-Gate maschinenpruefbar; operative Umsetzung je Anwendung ausstehend"
+      note: "Readiness-Gate-Tooling Welle 1 SCR-0123: MAINT-000 implemented (Override)"
     independence: L1
 
   - standard: ATC-STD-MAINT-005
@@ -4012,7 +4017,8 @@ standards:
     applicability: MANDATORY
     implementation:
       status: specification_only
-      evidence: "SCR-0120 DRAFT (14.09.2026): Security Maintenance — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence (cargo audit, CodeQL, Drift-Checks) referenziert"
+      evidence: "MAINT-Familie 000..024 (SCR-0120): normative Betriebs-Disziplin; Conformance-Struktur via maintenance-conformance-Gate maschinenpruefbar; operative Umsetzung je Anwendung ausstehend"
+      note: "Readiness-Gate-Tooling Welle 1 SCR-0123: MAINT-000 implemented (Override)"
     independence: L1
 
   - standard: ATC-STD-MAINT-006
@@ -4020,7 +4026,8 @@ standards:
     applicability: MANDATORY
     implementation:
       status: specification_only
-      evidence: "SCR-0120 DRAFT (14.09.2026): Infrastructure Maintenance — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence (cargo audit, CodeQL, Drift-Checks) referenziert"
+      evidence: "MAINT-Familie 000..024 (SCR-0120): normative Betriebs-Disziplin; Conformance-Struktur via maintenance-conformance-Gate maschinenpruefbar; operative Umsetzung je Anwendung ausstehend"
+      note: "Readiness-Gate-Tooling Welle 1 SCR-0123: MAINT-000 implemented (Override)"
     independence: L1
 
   - standard: ATC-STD-MAINT-007
@@ -4028,7 +4035,8 @@ standards:
     applicability: MANDATORY
     implementation:
       status: specification_only
-      evidence: "SCR-0120 DRAFT (14.09.2026): OS Maintenance — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence (cargo audit, CodeQL, Drift-Checks) referenziert"
+      evidence: "MAINT-Familie 000..024 (SCR-0120): normative Betriebs-Disziplin; Conformance-Struktur via maintenance-conformance-Gate maschinenpruefbar; operative Umsetzung je Anwendung ausstehend"
+      note: "Readiness-Gate-Tooling Welle 1 SCR-0123: MAINT-000 implemented (Override)"
     independence: L1
 
   - standard: ATC-STD-MAINT-008
@@ -4036,7 +4044,8 @@ standards:
     applicability: MANDATORY
     implementation:
       status: specification_only
-      evidence: "SCR-0120 DRAFT (14.09.2026): Blockchain Maintenance — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence (cargo audit, CodeQL, Drift-Checks) referenziert"
+      evidence: "MAINT-Familie 000..024 (SCR-0120): normative Betriebs-Disziplin; Conformance-Struktur via maintenance-conformance-Gate maschinenpruefbar; operative Umsetzung je Anwendung ausstehend"
+      note: "Readiness-Gate-Tooling Welle 1 SCR-0123: MAINT-000 implemented (Override)"
     independence: L1
 
   - standard: ATC-STD-MAINT-009
@@ -4044,7 +4053,8 @@ standards:
     applicability: MANDATORY
     implementation:
       status: specification_only
-      evidence: "SCR-0120 DRAFT (14.09.2026): VM & Runtime Maintenance — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence (cargo audit, CodeQL, Drift-Checks) referenziert"
+      evidence: "MAINT-Familie 000..024 (SCR-0120): normative Betriebs-Disziplin; Conformance-Struktur via maintenance-conformance-Gate maschinenpruefbar; operative Umsetzung je Anwendung ausstehend"
+      note: "Readiness-Gate-Tooling Welle 1 SCR-0123: MAINT-000 implemented (Override)"
     independence: L1
 
   - standard: ATC-STD-MAINT-010
@@ -4052,7 +4062,8 @@ standards:
     applicability: MANDATORY
     implementation:
       status: specification_only
-      evidence: "SCR-0120 DRAFT (14.09.2026): AI Maintenance — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence (cargo audit, CodeQL, Drift-Checks) referenziert"
+      evidence: "MAINT-Familie 000..024 (SCR-0120): normative Betriebs-Disziplin; Conformance-Struktur via maintenance-conformance-Gate maschinenpruefbar; operative Umsetzung je Anwendung ausstehend"
+      note: "Readiness-Gate-Tooling Welle 1 SCR-0123: MAINT-000 implemented (Override)"
     independence: L1
 
   - standard: ATC-STD-MAINT-011
@@ -4060,7 +4071,8 @@ standards:
     applicability: MANDATORY
     implementation:
       status: specification_only
-      evidence: "SCR-0120 DRAFT (14.09.2026): Repository Maintenance — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence (cargo audit, CodeQL, Drift-Checks) referenziert"
+      evidence: "MAINT-Familie 000..024 (SCR-0120): normative Betriebs-Disziplin; Conformance-Struktur via maintenance-conformance-Gate maschinenpruefbar; operative Umsetzung je Anwendung ausstehend"
+      note: "Readiness-Gate-Tooling Welle 1 SCR-0123: MAINT-000 implemented (Override)"
     independence: L1
 
   - standard: ATC-STD-MAINT-012
@@ -4068,7 +4080,8 @@ standards:
     applicability: MANDATORY
     implementation:
       status: specification_only
-      evidence: "SCR-0120 DRAFT (14.09.2026): Standards Maintenance — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence (cargo audit, CodeQL, Drift-Checks) referenziert"
+      evidence: "MAINT-Familie 000..024 (SCR-0120): normative Betriebs-Disziplin; Conformance-Struktur via maintenance-conformance-Gate maschinenpruefbar; operative Umsetzung je Anwendung ausstehend"
+      note: "Readiness-Gate-Tooling Welle 1 SCR-0123: MAINT-000 implemented (Override)"
     independence: L1
 
   - standard: ATC-STD-MAINT-013
@@ -4076,7 +4089,8 @@ standards:
     applicability: MANDATORY
     implementation:
       status: specification_only
-      evidence: "SCR-0120 DRAFT (14.09.2026): Documentation Maintenance — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence (cargo audit, CodeQL, Drift-Checks) referenziert"
+      evidence: "MAINT-Familie 000..024 (SCR-0120): normative Betriebs-Disziplin; Conformance-Struktur via maintenance-conformance-Gate maschinenpruefbar; operative Umsetzung je Anwendung ausstehend"
+      note: "Readiness-Gate-Tooling Welle 1 SCR-0123: MAINT-000 implemented (Override)"
     independence: L1
 
   - standard: ATC-STD-MAINT-014
@@ -4084,7 +4098,8 @@ standards:
     applicability: MANDATORY
     implementation:
       status: specification_only
-      evidence: "SCR-0120 DRAFT (14.09.2026): Performance Maintenance — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence (cargo audit, CodeQL, Drift-Checks) referenziert"
+      evidence: "MAINT-Familie 000..024 (SCR-0120): normative Betriebs-Disziplin; Conformance-Struktur via maintenance-conformance-Gate maschinenpruefbar; operative Umsetzung je Anwendung ausstehend"
+      note: "Readiness-Gate-Tooling Welle 1 SCR-0123: MAINT-000 implemented (Override)"
     independence: L1
 
   - standard: ATC-STD-MAINT-015
@@ -4092,7 +4107,8 @@ standards:
     applicability: MANDATORY
     implementation:
       status: specification_only
-      evidence: "SCR-0120 DRAFT (14.09.2026): Reliability Maintenance — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence (cargo audit, CodeQL, Drift-Checks) referenziert"
+      evidence: "MAINT-Familie 000..024 (SCR-0120): normative Betriebs-Disziplin; Conformance-Struktur via maintenance-conformance-Gate maschinenpruefbar; operative Umsetzung je Anwendung ausstehend"
+      note: "Readiness-Gate-Tooling Welle 1 SCR-0123: MAINT-000 implemented (Override)"
     independence: L1
 
   - standard: ATC-STD-MAINT-016
@@ -4100,7 +4116,8 @@ standards:
     applicability: MANDATORY
     implementation:
       status: specification_only
-      evidence: "SCR-0120 DRAFT (14.09.2026): Compatibility Maintenance — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence (cargo audit, CodeQL, Drift-Checks) referenziert"
+      evidence: "MAINT-Familie 000..024 (SCR-0120): normative Betriebs-Disziplin; Conformance-Struktur via maintenance-conformance-Gate maschinenpruefbar; operative Umsetzung je Anwendung ausstehend"
+      note: "Readiness-Gate-Tooling Welle 1 SCR-0123: MAINT-000 implemented (Override)"
     independence: L1
 
   - standard: ATC-STD-MAINT-017
@@ -4108,7 +4125,8 @@ standards:
     applicability: MANDATORY
     implementation:
       status: specification_only
-      evidence: "SCR-0120 DRAFT (14.09.2026): Upgrade & Migration — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence (cargo audit, CodeQL, Drift-Checks) referenziert"
+      evidence: "MAINT-Familie 000..024 (SCR-0120): normative Betriebs-Disziplin; Conformance-Struktur via maintenance-conformance-Gate maschinenpruefbar; operative Umsetzung je Anwendung ausstehend"
+      note: "Readiness-Gate-Tooling Welle 1 SCR-0123: MAINT-000 implemented (Override)"
     independence: L1
 
   - standard: ATC-STD-MAINT-018
@@ -4116,7 +4134,8 @@ standards:
     applicability: MANDATORY
     implementation:
       status: specification_only
-      evidence: "SCR-0120 DRAFT (14.09.2026): Rollback & Recovery — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence (cargo audit, CodeQL, Drift-Checks) referenziert"
+      evidence: "MAINT-Familie 000..024 (SCR-0120): normative Betriebs-Disziplin; Conformance-Struktur via maintenance-conformance-Gate maschinenpruefbar; operative Umsetzung je Anwendung ausstehend"
+      note: "Readiness-Gate-Tooling Welle 1 SCR-0123: MAINT-000 implemented (Override)"
     independence: L1
 
   - standard: ATC-STD-MAINT-019
@@ -4124,7 +4143,8 @@ standards:
     applicability: MANDATORY
     implementation:
       status: specification_only
-      evidence: "SCR-0120 DRAFT (14.09.2026): Maintenance Evidence — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence (cargo audit, CodeQL, Drift-Checks) referenziert"
+      evidence: "MAINT-Familie 000..024 (SCR-0120): normative Betriebs-Disziplin; Conformance-Struktur via maintenance-conformance-Gate maschinenpruefbar; operative Umsetzung je Anwendung ausstehend"
+      note: "Readiness-Gate-Tooling Welle 1 SCR-0123: MAINT-000 implemented (Override)"
     independence: L1
 
   - standard: ATC-STD-MAINT-020
@@ -4132,7 +4152,8 @@ standards:
     applicability: MANDATORY
     implementation:
       status: specification_only
-      evidence: "SCR-0120 DRAFT (14.09.2026): Maintenance Automation — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence (cargo audit, CodeQL, Drift-Checks) referenziert"
+      evidence: "MAINT-Familie 000..024 (SCR-0120): normative Betriebs-Disziplin; Conformance-Struktur via maintenance-conformance-Gate maschinenpruefbar; operative Umsetzung je Anwendung ausstehend"
+      note: "Readiness-Gate-Tooling Welle 1 SCR-0123: MAINT-000 implemented (Override)"
     independence: L1
 
   - standard: ATC-STD-MAINT-021
@@ -4140,7 +4161,8 @@ standards:
     applicability: MANDATORY
     implementation:
       status: specification_only
-      evidence: "SCR-0120 v3 DRAFT (14.09.2026): Emergency Maintenance — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence referenziert"
+      evidence: "MAINT-Familie 000..024 (SCR-0120): normative Betriebs-Disziplin; Conformance-Struktur via maintenance-conformance-Gate maschinenpruefbar; operative Umsetzung je Anwendung ausstehend"
+      note: "Readiness-Gate-Tooling Welle 1 SCR-0123: MAINT-000 implemented (Override)"
     independence: L1
 
   - standard: ATC-STD-MAINT-022
@@ -4148,7 +4170,8 @@ standards:
     applicability: MANDATORY
     implementation:
       status: specification_only
-      evidence: "SCR-0120 v3 DRAFT (14.09.2026): End-of-Life & Retirement — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence referenziert"
+      evidence: "MAINT-Familie 000..024 (SCR-0120): normative Betriebs-Disziplin; Conformance-Struktur via maintenance-conformance-Gate maschinenpruefbar; operative Umsetzung je Anwendung ausstehend"
+      note: "Readiness-Gate-Tooling Welle 1 SCR-0123: MAINT-000 implemented (Override)"
     independence: L1
 
   - standard: ATC-STD-MAINT-023
@@ -4156,7 +4179,8 @@ standards:
     applicability: MANDATORY
     implementation:
       status: specification_only
-      evidence: "SCR-0120 v3 DRAFT (14.09.2026): Vendor & Supply-Chain Maintenance — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence referenziert"
+      evidence: "MAINT-Familie 000..024 (SCR-0120): normative Betriebs-Disziplin; Conformance-Struktur via maintenance-conformance-Gate maschinenpruefbar; operative Umsetzung je Anwendung ausstehend"
+      note: "Readiness-Gate-Tooling Welle 1 SCR-0123: MAINT-000 implemented (Override)"
     independence: L1
 
   - standard: ATC-STD-MAINT-024
@@ -4164,7 +4188,8 @@ standards:
     applicability: MANDATORY
     implementation:
       status: specification_only
-      evidence: "SCR-0120 v3 DRAFT (14.09.2026): Cross-Ecosystem Maintenance — wartet auf §9-Freigabe; SPECIFICATION_ONLY; bestehende CI-Evidence referenziert"
+      evidence: "MAINT-Familie 000..024 (SCR-0120): normative Betriebs-Disziplin; Conformance-Struktur via maintenance-conformance-Gate maschinenpruefbar; operative Umsetzung je Anwendung ausstehend"
+      note: "Readiness-Gate-Tooling Welle 1 SCR-0123: MAINT-000 implemented (Override)"
     independence: L1
 
   - standard: ATC-STD-ENG-001

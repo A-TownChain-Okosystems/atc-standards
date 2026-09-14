@@ -11,6 +11,14 @@ nie IMPLEMENTED ohne Evidence.
 import re, os
 from datetime import datetime
 
+# SCR-0123: Per-Standard-Overrides - evidenzbasierte Einzel-Klassifikation,
+# die Familien-Regeln uebersteuert (nie ohne Evidence setzen; Generator-SSOT).
+OVERRIDES = {
+ "ATC-STD-MAINT-000": ("MANDATORY", "implemented",
+   "Readiness-Gate implementiert (Welle 1, SCR-0123): gen_maintenance_conformance.py + validate_maintenance_readiness.py CI-live (maintenance-conformance.yml); Readiness-Records fuer beide Released-Komponenten (atc-standards, a-townchain-os)",
+   "Naechste Releases bis F-ORG-002 + Rollback-Runbook geschlossen: Readiness FAIL = BLOCK (Records ehrlich)"),
+}
+
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 RULES = {
@@ -47,6 +55,8 @@ RULES = {
  "zkp":              ("CONDITIONAL", "specification_only", "atc-zkp R1-Skeleton (7 Crates, AD-045); Implementierung G18-vor-Freeze im Rebuild", ""),
  "v2s":              ("CONDITIONAL", "specification_only", "V2S-000 Master integriert; 26 Phasen-Standards V2S-001..026 nicht gebaut (SCR-0042-DoD)", ""),
  "net":              ("CONDITIONAL", "specification_only", "atc-node R1-Skeleton (S4, AD-046); Bootstrap/Discovery-Standards warten auf Node-Rebuild", ""),
+ "maintenance":      ("MANDATORY", "specification_only", "MAINT-Familie 000..024 (SCR-0120): normative Betriebs-Disziplin; Conformance-Struktur via maintenance-conformance-Gate maschinenpruefbar; operative Umsetzung je Anwendung ausstehend", "Readiness-Gate-Tooling Welle 1 SCR-0123: MAINT-000 implemented (Override)"),
+ "ai-gov":           ("MANDATORY", "specification_only", "ACCESS-001 (SCR-0121): Rollenprofil-Matrix dokumentiert; PAT-Migration auf Fine-grained Stufe-2-Profil offen", ""),
  "os":               ("CONDITIONAL", "specification_only", "atc-shivacore Rebuild SC-001+ offen (AD-023); Kernel M2/L1 + 22 Security-Dateien vorhanden", ""),
  "protocol":         ("CONDITIONAL", "specification_only", "ATC-PROTO-P2P-001; Protokoll-Implementierung im Node-Rebuild", ""),
  "infrastructure":   ("CONDITIONAL", "specification_only", "atc-oracle/storage/compute/mining/launchpad R1-Skelette; Infra-Normen warten auf Implementierung", ""),
@@ -78,11 +88,11 @@ def main():
     out.append("# Klassifikationsregel: familienbezogen mit Evidence (SCR-0048).")
     out.append("# Keine Fake-Status: Zielsystem fehlt => specification_only, nie IMPLEMENTED.")
     out.append("# ============================================================================")
-    out.append('version: "1.1.0"')
+    out.append('version: "1.2.0"')
     out.append('generated_from: registry/standards.yaml')
-    out.append('updated: "2026-09-08"')
+    out.append('updated: "%s"' % datetime.now().strftime("%Y-%m-%d"))
     out.append("coverage_kpi:")
-    out.append("  registry_total: 431")
+    out.append("  registry_total: %d" % len(entries))
     out.append("  matrix_entries: %d" % len(entries))
     out.append('  matrix_coverage: "100%"')
     out.append('  enforced_target: "je Wartungszyklus steigend (REQ-IMP-007)"')
@@ -91,7 +101,7 @@ def main():
     out.append("standards:")
     stats = {}
     for sid, ver, fam in entries:
-        r = RULES.get(fam)
+        r = OVERRIDES.get(sid) or RULES.get(fam)
         if r is None:
             applic, impl, ev, note = "REFERENCE", "reference", "Legacy-Serie (atc/): durch ATC-STD-000ff superseded; historische Referenz konserviert", ""
         else:
