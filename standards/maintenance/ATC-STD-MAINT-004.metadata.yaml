@@ -8,7 +8,7 @@ id: ATC-STD-MAINT-004
 implementation:
   status: specification_only
 normative: true
-owner: Michael (Owner-Entwurf)
+owner: ShivaCoreDev
 source_file: standards/maintenance/ATC-STD-MAINT-004.md
 status: draft
 title: Dependency Maintenance Standard (Dependencies, Lockfiles, SBOM, Updates, CVE-Reaktion)

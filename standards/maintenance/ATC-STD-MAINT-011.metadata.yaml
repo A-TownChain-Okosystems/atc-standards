@@ -8,7 +8,7 @@ id: ATC-STD-MAINT-011
 implementation:
   status: specification_only
 normative: true
-owner: Michael (Owner-Entwurf)
+owner: ShivaCoreDev
 source_file: standards/maintenance/ATC-STD-MAINT-011.md
 status: draft
 title: Repository Maintenance Standard (Bindung an REPO-MAINT-001-SSOT)

@@ -8,7 +8,7 @@ id: ATC-STD-MAINT-024
 implementation:
   status: specification_only
 normative: true
-owner: Michael (Owner-Entwurf)
+owner: ShivaCoreDev
 source_file: standards/maintenance/ATC-STD-MAINT-024.md
 status: draft
 title: Cross-Ecosystem Maintenance Standard (Multi-Repo-/Schicht-Koordination, konsolidierte

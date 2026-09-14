@@ -6,7 +6,7 @@ standard:
   status: draft
   category: maint
   authority: A-TownChain Ecosystems
-  owner: "Michael (Owner-Entwurf)"
+  owner: ShivaCoreDev
   created: "2026-09-14"
   updated: "2026-09-14"
   normative: true
@@ -61,7 +61,7 @@ maintenance:
 1. Kein CLOSE ohne vollstaendigen Record (alle validation-Felder bearbeitet, Evidence-Referenzen gesetzt).
 2. 'Update durchgefuehrt' ist KEIN gueltiger Abschluss.
 3. Records werden maschinenlesbar im Repo (`docs/maintenance/`) oder Registry gefuehrt und sind auditierbar.
-4. Maschinenlesbare Schemas (MAINT-000 §12): `schemas/maintenance/maintenance-record.schema.json`
+4. Maschinenlesbare Schemas (MAINT-000 §20 Machine-Readable Conformance): `schemas/maintenance/maintenance-record.schema.json`
    (Record), `schemas/maintenance/maintenance-evidence.schema.json` (Evidence-Envelope).
 4. M2/M3 zusaetzlich: SoD-Vermerk (Implementer/Validator/Auditor) und Security- bzw. Emergency-Report.
 5. Evidence Completeness ist KPI (Anteil vollstaendiger Records, generiert).

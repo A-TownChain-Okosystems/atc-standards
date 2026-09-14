@@ -8,7 +8,7 @@ id: ATC-STD-MAINT-002
 implementation:
   status: specification_only
 normative: true
-owner: Michael (Owner-Entwurf)
+owner: ShivaCoreDev
 source_file: standards/maintenance/ATC-STD-MAINT-002.md
 status: draft
 title: Maintenance Lifecycle Standard (DETECT..CLOSE, 13 Phasen, GSEPF-Mapping)

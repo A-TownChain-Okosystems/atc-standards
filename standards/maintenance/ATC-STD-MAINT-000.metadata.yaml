@@ -8,9 +8,9 @@ id: ATC-STD-MAINT-000
 implementation:
   status: specification_only
 normative: true
-owner: Michael (Owner-Entwurf)
+owner: ShivaCoreDev
 source_file: standards/maintenance/ATC-STD-MAINT-000.md
 status: draft
-title: Maintenance Governance Standard (Gesamtmodell, Rollen, Lifecycle, Familienstruktur
-  000-024, SoD, KPIs)
+title: 'Maintenance Governance & Specification Standard (Parent Standard: Readiness
+  Gate, RACI, M0-M3, Evidence, Machine-Readable Conformance)'
 version: 1.0.0

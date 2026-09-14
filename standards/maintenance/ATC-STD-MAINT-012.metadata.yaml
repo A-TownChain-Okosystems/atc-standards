@@ -8,7 +8,7 @@ id: ATC-STD-MAINT-012
 implementation:
   status: specification_only
 normative: true
-owner: Michael (Owner-Entwurf)
+owner: ShivaCoreDev
 source_file: standards/maintenance/ATC-STD-MAINT-012.md
 status: draft
 title: Standards Maintenance Standard (Standards, Registry, Schemas, Conformance)

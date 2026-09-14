@@ -1,5 +1,5 @@
 maintenance_conformance:
-  standard: ATC-STD-MAINT-000 §12
+  standard: ATC-STD-MAINT-000 §20
   version: 1.0.0
   generated_note: GENERIERT aus standards/maintenance/ + registry/standards.yaml — nicht manuell pflegen (SCR-0120
     v4)
@@ -22,7 +22,7 @@ maintenance_conformance:
     priority_kai_os: P0
     parent_standard: null
     inherits_mandatory_baseline: false
-    req_count: 14
+    req_count: 17
     reqs:
     - REQ-MAINT-000-001
     - REQ-MAINT-000-002
@@ -38,6 +38,9 @@ maintenance_conformance:
     - REQ-MAINT-000-012
     - REQ-MAINT-000-013
     - REQ-MAINT-000-014
+    - REQ-MAINT-000-015
+    - REQ-MAINT-000-016
+    - REQ-MAINT-000-017
     version: 1.0.0
     status: draft
   - id: ATC-STD-MAINT-001

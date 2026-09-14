@@ -8,7 +8,7 @@ id: ATC-STD-MAINT-008
 implementation:
   status: specification_only
 normative: true
-owner: Michael (Owner-Entwurf)
+owner: ShivaCoreDev
 source_file: standards/maintenance/ATC-STD-MAINT-008.md
 status: draft
 title: Blockchain Maintenance Standard (Node, P2P, State, Storage, Consensus)

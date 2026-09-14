@@ -8,7 +8,7 @@ id: ATC-STD-MAINT-001
 implementation:
   status: specification_only
 normative: true
-owner: Michael (Owner-Entwurf)
+owner: ShivaCoreDev
 source_file: standards/maintenance/ATC-STD-MAINT-001.md
 status: draft
 title: Maintenance Classification Standard (M0-Routine, M1-Operational, M2-Security,

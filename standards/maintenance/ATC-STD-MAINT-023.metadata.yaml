@@ -8,7 +8,7 @@ id: ATC-STD-MAINT-023
 implementation:
   status: specification_only
 normative: true
-owner: Michael (Owner-Entwurf)
+owner: ShivaCoreDev
 source_file: standards/maintenance/ATC-STD-MAINT-023.md
 status: draft
 title: Vendor & Supply-Chain Maintenance Standard (Vendor-Abhaengigkeiten, Provenance/SBOM,

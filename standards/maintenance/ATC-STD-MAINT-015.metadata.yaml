@@ -8,7 +8,7 @@ id: ATC-STD-MAINT-015
 implementation:
   status: specification_only
 normative: true
-owner: Michael (Owner-Entwurf)
+owner: ShivaCoreDev
 source_file: standards/maintenance/ATC-STD-MAINT-015.md
 status: draft
 title: Reliability Maintenance Standard (Monitoring, Backup, Recovery, Regression)

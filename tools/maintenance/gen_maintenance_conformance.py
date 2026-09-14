@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """Generiert registry/maintenance-conformance.yaml (SSOT der machine-readable
-Maintenance-Conformance, ATC-STD-MAINT-000 §12, SCR-0120 v4).
+Maintenance-Conformance, ATC-STD-MAINT-000 §20, SCR-0120 v4).
 Leitet Gruppen/Prioritaeten/REQs aus den normativen Dokumenten (standards/maintenance/)
 und der Registry ab. Regenerierung nach jeder Aenderung an der MAINT-Familie."""
 import io, os, re, sys, yaml
@@ -50,7 +50,7 @@ def main():
         })
     doc = {
         "maintenance_conformance": {
-            "standard": "ATC-STD-MAINT-000 §12", "version": "1.0.0",
+            "standard": "ATC-STD-MAINT-000 §20", "version": "1.0.0",
             "generated_note": "GENERIERT aus standards/maintenance/ + registry/standards.yaml — nicht manuell pflegen (SCR-0120 v4)",
             "parent_standard": "ATC-STD-MAINT-000",
             "family_range": "ATC-STD-MAINT-000..024 (ab 025 frei via SCR)",

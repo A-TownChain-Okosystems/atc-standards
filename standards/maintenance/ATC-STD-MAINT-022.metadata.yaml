@@ -8,7 +8,7 @@ id: ATC-STD-MAINT-022
 implementation:
   status: specification_only
 normative: true
-owner: Michael (Owner-Entwurf)
+owner: ShivaCoreDev
 source_file: standards/maintenance/ATC-STD-MAINT-022.md
 status: draft
 title: End-of-Life & Retirement Standard (Deprecation-Sunset-Retirement, Consumer-Koordination,

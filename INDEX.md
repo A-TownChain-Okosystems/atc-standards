@@ -548,7 +548,7 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 | ATC-STD-LICENSE-007 | License Audit Standard | license | 1.0.0 | approved | standards/license/ATC-STD-LICENSE-007.md |
 | ATC-STD-LICENSE-008 | Trademark Separation Standard | license | 1.0.0 | approved | standards/license/ATC-STD-LICENSE-008.md |
 | ATC-STD-LICENSE-009 | License Versioning Standard | license | 1.0.0 | approved | standards/license/ATC-STD-LICENSE-009.md |
-| ATC-STD-MAINT-000 | Maintenance Governance Standard (Gesamtmodell, Rollen, Lifecycle, Familienstruktur 000-024, SoD, KPIs) | maint | 1.0.0 | draft | standards/maintenance/ATC-STD-MAINT-000.md |
+| ATC-STD-MAINT-000 | Maintenance Governance & Specification Standard (Parent Standard: Readiness Gate, RACI, M0-M3, Evidence, Machine-Readable Conformance) | maint | 1.0.0 | draft | standards/maintenance/ATC-STD-MAINT-000.md |
 | ATC-STD-MAINT-001 | Maintenance Classification Standard (M0-Routine, M1-Operational, M2-Security, M3-Critical verbindlich) | maint | 1.0.0 | draft | standards/maintenance/ATC-STD-MAINT-001.md |
 | ATC-STD-MAINT-002 | Maintenance Lifecycle Standard (DETECT..CLOSE, 13 Phasen, GSEPF-Mapping) | maint | 1.0.0 | draft | standards/maintenance/ATC-STD-MAINT-002.md |
 | ATC-STD-MAINT-003 | Code Maintenance Standard (Refactoring, Technical Debt, Deprecation) | maint | 1.0.0 | draft | standards/maintenance/ATC-STD-MAINT-003.md |

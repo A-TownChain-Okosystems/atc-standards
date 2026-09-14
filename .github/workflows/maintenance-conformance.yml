@@ -1,7 +1,7 @@
-# Maintenance Conformance — ATC-STD-MAINT-000 §12 (SCR-0120 v4)
+# Maintenance Conformance — ATC-STD-MAINT-000 §20 (SCR-0120 v4)
 # Machine-readable Conformance-Gate: prueft Schemas, Registry-Projektion,
 # Conformance-SSOT (Idempotenz) und die MAINTENANCE-READY-Checkliste.
-name: Maintenance Conformance (MAINT-000 §12)
+name: Maintenance Conformance (MAINT-000 §20)
 on:
   push:
     branches: [main]

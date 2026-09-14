@@ -6,7 +6,7 @@ standard:
   status: draft
   category: maint
   authority: A-TownChain Ecosystems
-  owner: "Michael (Owner-Entwurf)"
+  owner: ShivaCoreDev
   created: "2026-09-14"
   updated: "2026-09-14"
   normative: true

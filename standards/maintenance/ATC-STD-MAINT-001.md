@@ -6,7 +6,7 @@ standard:
   status: draft
   category: maint
   authority: A-TownChain Ecosystems
-  owner: "Michael (Owner-Entwurf)"
+  owner: ShivaCoreDev
   created: "2026-09-14"
   updated: "2026-09-14"
   normative: true
@@ -57,7 +57,7 @@ Emergency-Maintenance-Pfad (ATC-STD-000 §32) und kann normale Governance-Zyklen
    Emergency-Governance uebersteuert normale Zyklen.
 5. Reklassifizierung ist dokumentierbar (Evidence-Record, MAINT-019).
 
-## §3 Gates je Klasse (Verweis MAINT-000 §5)
+## §3 Gates je Klasse (Verweis MAINT-000 §8 Classification)
 
 M0 → Standard Review · M1 → Operational Review · M2 → Security Review (mit Separation of
 Duties) · M3 → Emergency Governance (mit Release Authority ≠ Implementer).
@@ -70,7 +70,7 @@ Duties) · M3 → Emergency Governance (mit Release Authority ≠ Implementer).
 | REQ-MAINT-001-002 | Im Zweifel gilt die hoehere Klasse | MUST |
 | REQ-MAINT-001-003 | M2 darf Release-Zyklen vorlagern | MUST |
 | REQ-MAINT-001-004 | M3 folgt dem Emergency-Pfad (ATC-STD-000 §32) und uebersteuert normale Zyklen | MUST |
-| REQ-MAINT-001-005 | M2/M3 erzeugen Separation-of-Duties-Pflicht (MAINT-000 §3) | MUST |
+| REQ-MAINT-001-005 | M2/M3 erzeugen Separation-of-Duties-Pflicht (MAINT-000 §5.6 Separation of Duties) | MUST |
 
 ## Implementierungsstatus (ehrlich, SCR-0080-Doktrin)
 

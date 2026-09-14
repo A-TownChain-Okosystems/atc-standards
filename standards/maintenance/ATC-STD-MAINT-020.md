@@ -6,7 +6,7 @@ standard:
   status: draft
   category: maint
   authority: A-TownChain Ecosystems
-  owner: "Michael (Owner-Entwurf)"
+  owner: ShivaCoreDev
   created: "2026-09-14"
   updated: "2026-09-14"
   normative: true
@@ -48,7 +48,7 @@ Repository: Dependency Scanner · Vulnerability Scanner · SBOM Generator · Lic
 1. Keine autonome M2/M3-Durchfuehrung: Eskalation an Humans (Owner/Governance), immer.
 2. Automation folgt ATC-STD-AI-DEV-001..012 (Agent-Governance) und darf Gates nicht umgehen.
 
-## §4 Systemintegritaet (Verkettung, MAINT-000 §2)
+## §4 Systemintegritaet (Verkettung, MAINT-000 §26 Relationship to GSEPF)
 
 ```
 ATC-STD-MAINT-* (normativ) → GSEPF (kontrollierter Prozess) → Maintenance Engine (CI/CD)
