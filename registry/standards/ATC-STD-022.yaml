@@ -6,7 +6,7 @@ family_id: '000'
 file: standards/enterprise/ATC-STD-022.md
 mandate: Owner-Entwurf 11.09. (SCR-0094 Continuous Assurance)
 standard_id: ATC-STD-022
-status: candidate
+status: approved
 title: Security Patch Management Standard (SLA Critical<=24h/High<=72h/Medium<=14d/Low<=30d,
   Active-Exploit-Notfallpfad, Patch-Verifikationspflicht)
 version: 1.0.0

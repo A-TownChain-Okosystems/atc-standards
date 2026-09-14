@@ -7,7 +7,7 @@ file: standards/enterprise/ATC-STD-043.md
 mandate: Owner-Entwurf 11.09. (SCR-0095 Automated Assurance; Owner-Referenz 039 —
   Slots 040/042 belegt, §37 -> 043)
 standard_id: ATC-STD-043
-status: candidate
+status: approved
 title: Artifact Integrity Standard (9-Feld-Artefakt-Record id/hash/build/sbom/provenance/signature,
   Provenance-Kette zu Reproducible Builds, Ablage evidence/releases)
 version: 1.0.0

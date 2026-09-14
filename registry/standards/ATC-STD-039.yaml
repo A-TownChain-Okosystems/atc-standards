@@ -7,7 +7,7 @@ file: standards/enterprise/ATC-STD-039.md
 mandate: Owner-Entwurf 11.09. (SCR-0095 Automated Assurance; Owner-Referenz 037 —
   §37 -> 039)
 standard_id: ATC-STD-039
-status: candidate
+status: approved
 title: Cryptographic Agility Standard (austauschbare Crypto-Interfaces Current/Alternative/Future,
   4 Wechselkriterien inkl. Quantum Threat, Eigenbau-Krypto-Verbot)
 version: 1.0.0

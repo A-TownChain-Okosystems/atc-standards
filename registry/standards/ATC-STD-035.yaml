@@ -7,7 +7,7 @@ file: standards/enterprise/ATC-STD-035.md
 mandate: Owner-Entwurf 11.09. (SCR-0095 Automated Assurance; Owner-Referenz 033 —
   §37 -> 035)
 standard_id: ATC-STD-035
-status: candidate
+status: approved
 title: Zero-Day Response Standard (9-Schritt-Kette Confirm..Recover, 8 Containment-Maßnahmen,
   erhöhte Monitoring-Pflicht bis Patch)
 version: 1.0.0

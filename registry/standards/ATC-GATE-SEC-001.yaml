@@ -6,7 +6,7 @@ family_id: LEGACY
 file: standards/enterprise/ATC-GATE-SEC-001.md
 mandate: Owner-Entwurf 11.09. (SCR-0094 Continuous Assurance Meta-Gate)
 standard_id: ATC-GATE-SEC-001
-status: candidate
+status: approved
 title: Continuous Security & Technology Assurance Gate (14 Gate-Zeilen, RELEASE-READY-Regel,
   5-Stufen-Security-Status, Evidence Store, Org-Audit-Zielarchitektur)
 version: 1.0.0
