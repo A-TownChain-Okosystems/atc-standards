@@ -4,7 +4,6 @@
 The registry is the SSOT. Generated views must carry the exact Git blob SHA of
 registry/standards.yaml. A changed registry without regenerated views fails CI.
 """
-from __future__ import annotations
 
 import argparse
 import hashlib
