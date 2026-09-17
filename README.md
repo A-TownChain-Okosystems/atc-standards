@@ -7,14 +7,14 @@
 
 ```yaml
 state:
-  id: ATC-STATE-20260914-8ff9ce3b
-  generated_at: "2026-09-14 12:54 UTC+2"
+  id: ATC-STATE-20260917-f5171f46
+  generated_at: "2026-09-17 16:47 UTC+2"
   registry_version: "1.0.0"
-  registry_sha256: "8ff9ce3b9aba170adbeb0833ad1b7f0ada86f671c036ba152b4aeb7d1f87cf27"
+  registry_sha256: "f5171f46250c6ad0e7a08b906a1657225413dbc1929e57d78cc38a138c80fcde"
   standards_total: 505
   standards_approved: 505
   standards_candidate: 0
-  standards_other: 40
+  standards_other: 0
   standard_files: 503
   families: 75
 ```
@@ -22,7 +22,7 @@ state:
 **Diese Zahlen sind die EINZIG maschinenverbindliche Auskunft** (ATC-STD-003 §2 Ein-Zahl-Regel).
 Historische Zahlenstände: ausschließlich `STATUS.md` / `CHANGELOG.md` / `audits/`.
 
-**Implementierungs-KPI:** 505 Standards normativ definiert — 65 enforced, 131 implemented, 303 specification-only. Die Aussage „505 Standards implementiert“ ist unzulässig (SCR-0048, ATC-STD-003 §8: APPROVED ≠ IMPLEMENTED).
+**Implementierungs-KPI:** 505 Standards normativ definiert — 65 enforced, 131 implemented, 303 specification-only. Die Aussage „505 Standards implementiert“ ist unzulässig (ATC-STD-003 §8: APPROVED ≠ IMPLEMENTED).
 
 **FORMALE COMPLIANCE: PASS** · **IMPLEMENTATION: PARTIAL** · **PRODUCTION READINESS: NOT_READY** — ein Zustand behauptet nie den anderen.
 
@@ -30,40 +30,40 @@ Historische Zahlenstände: ausschließlich `STATUS.md` / `CHANGELOG.md` / `audit
 
 ## Status
 
-**Status:** `release-candidate` — Governance technisch weit fortgeschritten. Aktueller normativer Bestand und Umsetzungsgrad: ausschließlich State-Block oben (SCR-0090).
+**Status:** `release-candidate` — aktueller normativer Bestand und Umsetzungsgrad ausschließlich aus dem State-Block oben.
 
 ## Purpose
 
 ATC Standards is the canonical normative governance layer of the A-TownChain ecosystem. It maintains:
 
 - **Registry:** SSOT für alle 505 Standards mit Versionierung, Dependencies (DAG) und Findings
-- **Verfassung:** ATC-STD-000 v1.3.0, APPROVED (ID-System, Lifecycle, Change Control, Immutabilität)
-- **Validator-Suite:** atc-std-validator, atc-repo-audit (R3), atc-readme-validator
-- **Governance Framework:** 75 Familien, Enterprise-Ebenen (ATC-ENT-001..015), AI-Standards (ATC-AAS-001..025)
+- **Verfassung:** ATC-STD-000 v1.3.0, APPROVED
+- **Validator-Suite:** atc-std-validator, atc-repo-audit, atc-readme-validator
+- **Governance Framework:** 75 Familien
 - **Governance-Determinismus:** ATC-STD-003 (SSOT-Matrix, State-ID, Ein-Zahl-Regel)
 
-Repository-Abdeckung wird ausschließlich aus Registry-/Profile-State und den generierten Views abgeleitet; Organisationszahlen werden hier nicht als unabhängige SSOT geführt.
+**Organisationsbestand:** 31 Repository-Einträge im Repository-Registry-SSOT. Governance-Status und Ausnahmen werden ausschließlich aus `registry/repositories.yaml` bzw. den daraus generierten Compliance-Views abgeleitet.
 
 ## Scope
 
-Governance-Root der A-TownChain-Organisation: Registry, Standards, Schemata, Validatoren, Audits und Change-Requests. In Scope: normative Standards und ihre Metadaten/Validierung. Out of Scope: Implementierung der Standards in den abhängigen Repositories; Nachweis via Implementierungs-Matrix.
+Governance-Root der A-TownChain-Organisation: Registry, Standards, Schemata, Validatoren, Audits und Change-Requests. In Scope: normative Standards (503 Dateien, 75 Familien) und ihre Metadaten/Validierung. Out of Scope: Implementierung der Standards in den Repository-Einträgen der Organisation und deren CI-Gates.
 
 ## Features
 
 - Registry-SSOT (`standards.yaml`, SHA-Lock) mit schema-validierten Metadaten
-- Validatoren: S-01..S-17, Meta-Sweep, Meta-Daten-Audit, README-Validator
+- Validatoren und Repository-Audit
 - Implementierungs-Matrix — kein Status ohne Evidence
-- Repository-Audit R1-R3 und Governance-CI
+- Governance-CI
 - Discovery-Familie für neue Inhalte
 
 ## Architecture
 
 ### Core Components
-- `registry/` — SSOT (`standards.yaml`, versions.yaml, dependencies.yaml, findings.yaml, families/)
-- `standards/` — normative Standard-Dateien
-- `profiles/` — verbindliche Standards-Profile je Repository
+- `registry/` — SSOT
+- `standards/` — 503 Standard-Dateien in 75 Familien
+- `profiles/` — 31 verbindliche Standards-Profile je Repository
 - `schemas/` — JSON/YAML-Schemata
-- `tools/` — Validatoren, Auditors, Generatoren
+- `tools/` — Validators, Auditors, Generators
 - `governance/`, `approval/`, `change-requests/` — Verfassung, Freigaben und SCR-System
 
 ### Usage
@@ -74,9 +74,7 @@ python3 tools/atc-repo-audit/atc_repo_audit.py . --level R3
 ```
 
 ## Governance Flow
-Change Request → SCR (§19–33) → Owner-Freigabe (§9) → Registry-Eintrag → CI-Validierung → APPROVED → normativ in Kraft (§30 Immutabilität).
-
----
+Change Request → SCR → Owner-Freigabe (§9) → Registry-Eintrag → CI-Validierung → APPROVED → normativ in Kraft.
 
 ## Quick Start
 
@@ -90,10 +88,10 @@ python3 -m pip install pyyaml
 
 This repository is governed according to ATC-STD-000 v1.3.0 (APPROVED):
 
-- **Changes to APPROVED Standards:** via SCR only (§30 Immutabilität)
-- **New Standards:** Registry-First
-- **AI Agents:** Executor/Auditor/Maintainer, never Approver
-- **CI Gates:** Standards-Validierung, Mutationssuite, Repo-Audit R3, Agent-Manifest-Enforcement
+- Changes to APPROVED Standards: via SCR only
+- New Standards: Registry-First
+- AI Agents: Executor/Auditor/Maintainer, never Approver
+- CI Gates: Standards-Validierung, Repo-Audit, Agent-Manifest-Enforcement
 
 See `CONTRIBUTING.md` and `governance/ATC-STD-000.md` for details.
 
@@ -101,8 +99,8 @@ See `CONTRIBUTING.md` and `governance/ATC-STD-000.md` for details.
 
 | Standard | Version | Status |
 |---|---|---|
-| ATC-STD-000 | 1.3.0 | ✅ APPROVED |
-| ATC-STD-003 | 1.0.0 | ✅ APPROVED |
+| ATC-STD-000 | 1.3.0 | ✅ APPROVED (Verfassung; par.9-freigegeben 11.09.2026 — Bootstrap-EXEMPT beendet, R11 waecht weiter) |
+| ATC-STD-003 | 1.0.0 | ✅ APPROVED (Governance Determinism & SSOT Matrix) |
 | ATC-STD-201 | 1.0.1 | ✅ APPROVED |
 | ATC-STD-202 | 1.2.0 | ✅ APPROVED |
 | ATC-STD-203 | 1.0.1 | ✅ APPROVED |
@@ -113,11 +111,9 @@ See `registry/standards.yaml` for the complete registry.
 
 ## Development
 
-Änderungen laufen über SCR. Registry-Änderungen nur via kontrolliertem Change-Request. Views (README/AGENT_MANIFEST/STATUS) sind generiert.
+Änderungen laufen über SCR. Registry-Änderungen nur via kontrolliertem Change-Request. Views sind GENERIERT.
 
 ## Testing
-
-Lokal vor Push:
 
 ```bash
 python3 tools/atc-std-validator/validate_all.py
@@ -129,17 +125,30 @@ python3 tools/atc-readme-validator/check_readme.py .
 
 Governance-Hardening: Registry-Integritäts-Gate, Discovery→Audit→SCR-Kopplung, Evidence-L3 für kritische Standards und CI-Evidence-Kopplung der Implementierungs-Matrix.
 
+## Repository Structure
+
+```text
+├── approval/
+├── audits/
+├── change-requests/
+├── governance/
+├── profiles/
+├── registry/
+├── schemas/
+├── standards/
+└── tools/
+```
+
 ## Documentation
 
-Full documentation:
-- **Governance:** `governance/`, `STATUS.md`, `ROADMAP.md`
-- **Audits:** `docs/audits/`
-- **Change History:** `change-requests/`, `CHANGELOG.md`
-- **Wiki:** `a-townchain-os-docs`
+- Governance: `governance/`, `STATUS.md`, `ROADMAP.md`
+- Audits: `docs/audits/`
+- Change History: `change-requests/`, `CHANGELOG.md`
+- Wiki: `a-townchain-os-docs`
 
 ## Security
 
-Security issues **must NOT** be disclosed via GitHub Issues. Report vulnerabilities through GitHub Private Vulnerability Reporting or the process defined in `SECURITY.md`.
+Security issues must NOT be disclosed via GitHub Issues. Use GitHub Private Vulnerability Reporting or `SECURITY.md`.
 
 ## Maintainers
 
@@ -154,11 +163,11 @@ Security issues **must NOT** be disclosed via GitHub Issues. Report vulnerabilit
 - **Project:** atc-standards
 - **Organization:** A-TownChain-Okosystems
 - **Status:** `release-candidate`
-- **Version:** 1.0.0
+- **Version:** 1.0.1
 - **Registry ID:** ATC-REPO-GOV-001
 
 Machine-readable metadata: State-Block oben; Registry-SSOT: `registry/standards.yaml`.
 
 ## Registry-vs-Dateien-Relation
 
-Regel: Jeder Registry-Eintrag besitzt eine Datei in `standards/` ODER eine dokumentierte EXEMPT-Begründung. Die Gültigkeit dieser Relation wird je Lauf geprüft; aktuelle Zahlen ausschließlich im State-Block oben. Historische Zustände gehören in `STATUS.md`, `CHANGELOG.md` und Audit-Artefakte.
+Regel: Jeder Registry-Eintrag besitzt eine Datei in `standards/` ODER eine dokumentierte EXEMPT-Begründung. Gültigkeit und Zahlen werden je Lauf aus dem Registry-SSOT geprüft.

@@ -1,8 +1,40 @@
 # AGENT_MANIFEST.md
+> **Registry-Stand (GENERIERT aus `registry/standards.yaml`):** 505 Standards — 505 APPROVED · 0 CANDIDATE · 75 Familien · Stand 2026-09-17 16:47 UTC+2 · SHA-256 `f5171f46250c…`
 
 > **Generated-state declaration:** This manifest is a governance pointer, not a second standards registry. The authoritative standards SSOT is `registry/standards.yaml`; implementation status is authoritative in `registry/standard-implementation.yaml`.
 >
 > **Registry snapshot:** 505 standards · 75 families · current registry/implementation matrix dated 2026-09-14. The manifest MUST be regenerated when the registry changes.
+
+## ⚖️ Standard-Compliance-Mandat (verbindlich — ATC-AAS-003/AAS-004, AI-DEV-001 §6)
+
+> **Der zuständige Agent MUSS sämtliche Standards dieser Registry einhalten
+> und umsetzen.** Keine Ausnahmen, keine Teilannahme.
+
+1. **Vollmandat mit Anwendbarkeit:** Registry-Standards sind für den Agenten verbindlich, gestuft nach Anwendbarkeit (ATC-STD-IMPLEMENTATION-001 §1): MANDATORY (immer), CONDITIONAL (wenn Bedingung eintritt, z.B. Domain/Sprache/Classification), REFERENCE (orientierend), NOT_APPLICABLE (mit Begründung). MANDATORY-Standards ohne Ausnahme einhalten —
+   im vollen Umfang, nicht nur im Auszug. Aktuell 103: Verfassung ATC-STD-000
+   v1.2.0, AI-DEV-001..012, ATC-AAS-001..025, ATC-ENT-001..015,
+   ATC-STD-100/201-204/300, BUG-001..004, NET-001..008, ZKP-001..010,
+   README-001, MD-001 und SC-001..020 (alle §9-APPROVED 07.09. — README-001
+   20:36, SC-Framework 21:00, MD-001 21:05 UTC+2; normativ in Kraft).
+2. **Dynamische Bindung:** Die Registry (`registry/standards.yaml`) ist SSOT
+   (ATC-STD-000 §19). Jeder neue APPROVED-Standard ist ab Freigabe automatisch
+   verbindlich — ohne dass dieses Manifest geändert werden MUSS. Die
+   maschinenlesbare Konkretisierung führt `.github/ai/agent.yaml`
+   (`required_standards`), geprüft durch CI.
+3. **Umsetzungspflicht:** Einhalten genügt nicht — der Agent setzt die
+   Standards aktiv um (Repo-Manifeste, AGENTS.md, Audit-Records, Tests,
+   CI-Gates, Findings nach BUG-001..004, Interface-Test-Suiten nach
+   ATC-STD-204 §9).
+4. **Konfliktregel:** Bei Konflikten gilt die Rangfolge der Verfassung
+   (ATC-STD-000 §9): Verfassung > ATC-ENT > ATC-AAS > AI-DEV > Domänen-
+   Standards. Konflikte MUSS der Agent als Finding (BUG-001, Severity nach
+   BUG-002) dokumentieren, nicht stillschweigend auflösen.
+5. **Nachweis:** Jede Agenten-Aktion wird über AUD-Records (AI-DEV-009,
+   `.github/ai/audit/`) und Evidenz (AAS-010) nachgewiesen. Verstöße gegen
+   dieses Mandat sind selbst findings-pflichtig (S1).
+6. **CI-Enforcement:** `check_agent_manifest.py` prüft bei jedem Push, dass
+   das Repo-Manifest alle Registry-Standards referenziert und dieses Mandat
+   vorhanden ist. Gate-Verstoß = Build-FAIL.
 
 ## 1. Normative mandate
 
