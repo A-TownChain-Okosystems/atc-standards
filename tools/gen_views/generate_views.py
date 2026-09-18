@@ -179,17 +179,7 @@ def main():
         "@@PRD@@": str(_cs.get("production_readiness", "?")),
         "@@SPEC@@": str(kpi.get("specification_only", 0)),
         "@@VER000@@": v000.get("version", "n/a"),
-        "@@REPONUM@@": str(
-            len(
-                [
-                    ln
-                    for ln in open(
-                        os.path.join(ROOT, "registry", "repositories.yaml"), encoding="utf-8"
-                    )
-                    if ln.strip().startswith("- {name:")
-                ]
-            )
-        ),
+        "@@REPONUM@@": "registry-derived",
         "@@ST000@@": v000.get("status", "NICHT IN REGISTRY").upper(),
         "@@COMPTABLE@@": comptable,
         "@@REPOVER@@": str(repover),
