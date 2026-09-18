@@ -10,7 +10,7 @@ implementation:
 normative: true
 owner: ShivaCoreDev
 source_file: standards/maintenance/ATC-STD-MAINT-022.md
-status: draft
+status: approved
 title: End-of-Life & Retirement Standard (Deprecation-Sunset-Retirement, Consumer-Koordination,
   Retirement-Evidence)
 version: 1.0.0
