@@ -2,8 +2,8 @@
 standard:
   id: ATC-STD-600
   title: "Chain Identity & Network Identification"
-  version: "1.0.0"
-  status: stable
+  version: "1.2.0"
+  status: approved
   lifecycle: frozen
   role: "Root Specification"
   category: blockchain
@@ -31,12 +31,12 @@ standard:
 
 # ATC-STD-600 — Chain Identity & Network Identification
 
-> **Version:** 1.0.0  
-> **Status:** STABLE / BASELINE  
-> **Lifecycle:** FROZEN  
+> **Version:** 1.2.0  
+> **Status:** APPROVED  
+> **Lifecycle:** APPROVED  
 > **Role:** Root Specification  
 > **Scope:** A-TownChain Core  
-> **Implementation:** AUTHORIZED
+> **Implementation:** SPECIFICATION_ONLY
 
 ## Abstract
 
