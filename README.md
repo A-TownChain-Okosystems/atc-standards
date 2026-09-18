@@ -171,3 +171,20 @@ Machine-readable metadata: State-Block oben; Registry-SSOT: `registry/standards.
 ## Registry-vs-Dateien-Relation
 
 Regel: Jeder Registry-Eintrag besitzt eine Datei in `standards/` ODER eine dokumentierte EXEMPT-Begründung. Gültigkeit und Zahlen werden je Lauf aus dem Registry-SSOT geprüft.
+
+
+## Installation
+
+```bash
+git clone https://github.com/A-TownChain-Okosystems/atc-standards.git
+cd atc-standards
+python3 -m pip install -r requirements.txt
+```
+
+## Repository Layout
+
+- `atc/` — ATC source/configuration artifacts
+- `ats/` — ATS compatibility artifacts
+- `contracts/` — contract specifications
+- `docs/` — documentation and evidence documentation
+- `evidence/` — validation evidence
