@@ -7,10 +7,10 @@ dependencies:
 - ATC-STD-000
 id: ATC-STD-600
 implementation:
-  status: implementation_authorized
+  status: specification_only
 normative: true
 owner: Standards Governance
 source_file: standards/os/ATC-STD-600.md
-status: stable
+status: approved
 title: Chain Identity & Network Identification
 version: 1.0.0
