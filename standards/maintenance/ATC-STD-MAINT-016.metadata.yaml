@@ -10,6 +10,6 @@ implementation:
 normative: true
 owner: ShivaCoreDev
 source_file: standards/maintenance/ATC-STD-MAINT-016.md
-status: draft
+status: approved
 title: Compatibility Maintenance Standard (Bindung an COMPAT-001-SSOT)
 version: 1.0.0
