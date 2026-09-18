@@ -15,7 +15,7 @@ implementation:
 normative: false
 owner: Michael (Owner-Entwurf)
 source_file: standards/improvement/ATC-STD-IMPROVEMENT-001.md
-status: draft
+status: approved
 title: 'ATC Improvement Standard — Systemverbesserungsstandard: Continuous Improvement
   Management System (Zyklus, 14 Quellen, 10 Klassen, ATC-IMP-Board, Root-Cause, Regression
   Prevention, Automatisierungsleiter, DoD, org-weite Anwendung)'
