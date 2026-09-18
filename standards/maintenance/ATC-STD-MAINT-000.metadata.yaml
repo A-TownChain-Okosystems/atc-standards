@@ -10,7 +10,7 @@ implementation:
 normative: true
 owner: ShivaCoreDev
 source_file: standards/maintenance/ATC-STD-MAINT-000.md
-status: draft
+status: approved
 title: 'Maintenance Governance & Specification Standard (Parent Standard: Readiness
   Gate, RACI, M0-M3, Evidence, Machine-Readable Conformance)'
 version: 1.0.0
