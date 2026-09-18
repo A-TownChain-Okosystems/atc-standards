@@ -10,7 +10,7 @@ implementation:
 normative: true
 owner: ShivaCoreDev
 source_file: standards/maintenance/ATC-STD-MAINT-020.md
-status: draft
+status: approved
 title: Maintenance Automation Standard (Scanner, Maintenance Engine, M0 Auto/M1 Review/M2-M3
   Escalate)
 version: 1.0.0
