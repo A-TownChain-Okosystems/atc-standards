@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with: {python-version: '3.11'}
       - name: Ruff installieren (gepinnt, ATC-STD-CI-001 CI-004)
         run: pip install ruff==0.16.7
