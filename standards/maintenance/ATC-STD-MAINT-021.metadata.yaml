@@ -10,6 +10,6 @@ implementation:
 normative: true
 owner: ShivaCoreDev
 source_file: standards/maintenance/ATC-STD-MAINT-021.md
-status: draft
+status: approved
 title: Emergency Maintenance Standard (M3-Emergency-Pfad, Incident Records, Post-Mortem-Evidence)
 version: 1.0.0
