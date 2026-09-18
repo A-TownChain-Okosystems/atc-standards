@@ -10,6 +10,6 @@ implementation:
 normative: true
 owner: ShivaCoreDev
 source_file: standards/maintenance/ATC-STD-MAINT-017.md
-status: draft
+status: approved
 title: Upgrade & Migration Standard (Version Upgrades, Migrationen, Schemaaenderungen)
 version: 1.0.0
