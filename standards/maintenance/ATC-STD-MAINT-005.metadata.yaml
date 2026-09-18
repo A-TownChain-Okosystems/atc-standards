@@ -10,6 +10,6 @@ implementation:
 normative: true
 owner: ShivaCoreDev
 source_file: standards/maintenance/ATC-STD-MAINT-005.md
-status: draft
+status: approved
 title: Security Maintenance Standard (CVEs, Hardening, Secrets, Keys, Sandbox, SoD)
 version: 1.0.0
