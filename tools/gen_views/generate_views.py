@@ -166,7 +166,7 @@ def main():
         "@@APPROVED@@": str(approved),
         "@@CANDIDATE@@": str(candidate),
         "@@OTHER@@": str(other),
-        "@@FILES@@": str(std_files),
+        "@@FILES@@": "registry-derived",
         "@@FAMS@@": str(fam_count),
         "@@ENF@@": str(kpi.get("enforced", 0)),
         "@@IMPL@@": str(kpi.get("implemented", 0)),
