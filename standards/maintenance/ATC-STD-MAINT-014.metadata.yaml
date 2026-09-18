@@ -10,6 +10,6 @@ implementation:
 normative: true
 owner: ShivaCoreDev
 source_file: standards/maintenance/ATC-STD-MAINT-014.md
-status: draft
+status: approved
 title: Performance Maintenance Standard (CPU, RAM, I/O, Netzwerk, Latenz)
 version: 1.0.0
