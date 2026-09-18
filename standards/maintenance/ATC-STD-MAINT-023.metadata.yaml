@@ -10,7 +10,7 @@ implementation:
 normative: true
 owner: ShivaCoreDev
 source_file: standards/maintenance/ATC-STD-MAINT-023.md
-status: draft
+status: approved
 title: Vendor & Supply-Chain Maintenance Standard (Vendor-Abhaengigkeiten, Provenance/SBOM,
   Third-Party-Risiken, Ersatz-Strategien)
 version: 1.0.0
