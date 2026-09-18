@@ -10,7 +10,7 @@ implementation:
 normative: true
 owner: ShivaCoreDev
 source_file: standards/maintenance/ATC-STD-MAINT-001.md
-status: draft
+status: approved
 title: Maintenance Classification Standard (M0-Routine, M1-Operational, M2-Security,
   M3-Critical verbindlich)
 version: 1.0.0
