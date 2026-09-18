@@ -54,7 +54,7 @@ RULES = {
     "governance-core": (
         "MANDATORY",
         "enforced",
-        "ATC-STD-000 v1.2.0 CANDIDATE/v1.1.0 APPROVED; Release v1.1.0; §9-Approval-Process approval/",
+        "ATC-STD-000 v1.3.0 CANDIDATE; Registry revision is canonical; §9-Approval-Process approval/",
         "",
     ),
     "md": (
