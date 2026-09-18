@@ -10,6 +10,6 @@ implementation:
 normative: true
 owner: ShivaCoreDev
 source_file: standards/maintenance/ATC-STD-MAINT-015.md
-status: draft
+status: approved
 title: Reliability Maintenance Standard (Monitoring, Backup, Recovery, Regression)
 version: 1.0.0
