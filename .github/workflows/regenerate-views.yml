@@ -41,7 +41,7 @@ jobs:
         run: |
           git config user.name "A-TownChain-Standards-Bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md AGENT_MANIFEST.md STATUS.md registry/registry.lock .github/ai/agent.yaml
+          git add README.md AGENT_MANIFEST.md STATUS.md registry/registry.lock .github/ai/agent.yaml standards
           if git diff --cached --quiet; then
             echo "Generated views already current."
             exit 0
