@@ -19,6 +19,8 @@ import urllib.request
 
 import yaml
 
+# fmt: off
+
 ORG = "A-TownChain-Okosystems"
 TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", "")
 H = {"Authorization": f"token {TOKEN}", "Accept": "application/vnd.github.v3+json"}
