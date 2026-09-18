@@ -10,6 +10,6 @@ implementation:
 normative: true
 owner: ShivaCoreDev
 source_file: standards/maintenance/ATC-STD-MAINT-008.md
-status: draft
+status: approved
 title: Blockchain Maintenance Standard (Node, P2P, State, Storage, Consensus)
 version: 1.0.0
