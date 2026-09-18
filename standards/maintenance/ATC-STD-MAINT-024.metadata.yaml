@@ -10,7 +10,7 @@ implementation:
 normative: true
 owner: ShivaCoreDev
 source_file: standards/maintenance/ATC-STD-MAINT-024.md
-status: draft
+status: approved
 title: Cross-Ecosystem Maintenance Standard (Multi-Repo-/Schicht-Koordination, konsolidierte
   Evidence, Schichtreihenfolge)
 version: 1.0.0
