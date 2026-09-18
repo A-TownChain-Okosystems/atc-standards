@@ -47,6 +47,7 @@ jobs:
             exit 0
           fi
           git commit -m "chore(standards): regenerate SSOT views"
-          git switch -c bot/regenerate-standards-views
-          git push --set-upstream origin bot/regenerate-standards-views
-          gh pr create --base main --head bot/regenerate-standards-views --title "chore(standards): regenerate SSOT views" --body "Regenerates generated standards views from registry/standards.yaml after SSOT changes." || true
+          BRANCH="bot/regenerate-standards-views-${GITHUB_RUN_ID}"
+          git switch -c "$BRANCH"
+          git push --set-upstream origin "$BRANCH"
+          gh pr create --base main --head "$BRANCH" --title "chore(standards): regenerate SSOT views" --body "Regenerates generated standards views from registry/standards.yaml after SSOT changes."
