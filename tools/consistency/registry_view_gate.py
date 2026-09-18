@@ -6,10 +6,8 @@ registry/standards.yaml. A changed registry without regenerated views fails CI.
 """
 
 import argparse
-import hashlib
 import re
 import subprocess
-import sys
 from pathlib import Path
 
 MARKER = re.compile(r"ATC-REGISTRY-BLOB-SHA256:\s*([0-9a-f]{40})")
