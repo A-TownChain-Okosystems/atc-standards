@@ -299,7 +299,7 @@ Voll-Validierung 110/110 Standards: ALL COMPLIANT (S-18 prüft alle 10 Registry-
 
 | Ebene | Umfang | Status |
 |---|---|---|
-| Verfassung ATC-STD-000 | v1.2.0 | APPROVED, normativ, eingefroren (§30) |
+| Verfassung ATC-STD-000 | v1.3.0 | CANDIDATE; Registry revision is canonical |
 | ATC-STD-AI-DEV-001..012 | AI-DEV-Familie (007: v1.0.1 per SCR-0006) | APPROVED |
 | ATC-AAS-001..025 | AI Agent Standards (P0/P1/P2) | APPROVED |
 | ATC-ENT-001..015 | Enterprise Standards Layer | APPROVED |
