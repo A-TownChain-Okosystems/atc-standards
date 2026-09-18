@@ -10,6 +10,6 @@ implementation:
 normative: true
 owner: ShivaCoreDev
 source_file: standards/maintenance/ATC-STD-MAINT-003.md
-status: draft
+status: approved
 title: Code Maintenance Standard (Refactoring, Technical Debt, Deprecation)
 version: 1.0.0
