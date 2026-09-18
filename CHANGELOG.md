@@ -1,3 +1,7 @@
+## 2026-09-18 — SSOT metadata synchronization
+
+- Synchronized generated standard metadata with the approved registry state.
+
 # Changelog
 
 ## [unreleased] - 2026-09-09
