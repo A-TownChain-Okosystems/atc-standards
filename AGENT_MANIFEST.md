@@ -12,7 +12,7 @@
 
 1. **Vollmandat mit Anwendbarkeit:** Registry-Standards sind für den Agenten verbindlich, gestuft nach Anwendbarkeit (ATC-STD-IMPLEMENTATION-001 §1): MANDATORY (immer), CONDITIONAL (wenn Bedingung eintritt, z.B. Domain/Sprache/Classification), REFERENCE (orientierend), NOT_APPLICABLE (mit Begründung). MANDATORY-Standards ohne Ausnahme einhalten —
    im vollen Umfang, nicht nur im Auszug. Aktuell 103: Verfassung ATC-STD-000
-   v1.2.0, AI-DEV-001..012, ATC-AAS-001..025, ATC-ENT-001..015,
+   v1.3.0, AI-DEV-001..012, ATC-AAS-001..025, ATC-ENT-001..015,
    ATC-STD-100/201-204/300, BUG-001..004, NET-001..008, ZKP-001..010,
    README-001, MD-001 und SC-001..020 (alle §9-APPROVED 07.09. — README-001
    20:36, SC-Framework 21:00, MD-001 21:05 UTC+2; normativ in Kraft).
