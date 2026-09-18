@@ -7,8 +7,8 @@
 
 ```yaml
 state:
-  id: ATC-STATE-20260917-f5171f46
-  generated_at: "2026-09-17 16:47 UTC+2"
+  id: ATC-STATE-20260918-f5171f46
+  generated_at: "2026-09-18 10:19 UTC+2"
   registry_version: "1.0.0"
   registry_sha256: "f5171f46250c6ad0e7a08b906a1657225413dbc1929e57d78cc38a138c80fcde"
   standards_total: 505
@@ -42,7 +42,7 @@ ATC Standards is the canonical normative governance layer of the A-TownChain eco
 - **Governance Framework:** 75 Familien
 - **Governance-Determinismus:** ATC-STD-003 (SSOT-Matrix, State-ID, Ein-Zahl-Regel)
 
-**Organisationsbestand:** 31 Repository-Einträge im Repository-Registry-SSOT. Governance-Status und Ausnahmen werden ausschließlich aus `registry/repositories.yaml` bzw. den daraus generierten Compliance-Views abgeleitet.
+**Organisationsbestand:** 32 Repository-Einträge im Repository-Registry-SSOT. Governance-Status und Ausnahmen werden ausschließlich aus `registry/repositories.yaml` bzw. den daraus generierten Compliance-Views abgeleitet.
 
 ## Scope
 
@@ -61,7 +61,7 @@ Governance-Root der A-TownChain-Organisation: Registry, Standards, Schemata, Val
 ### Core Components
 - `registry/` — SSOT
 - `standards/` — 503 Standard-Dateien in 75 Familien
-- `profiles/` — 31 verbindliche Standards-Profile je Repository
+- `profiles/` — 32 verbindliche Standards-Profile je Repository
 - `schemas/` — JSON/YAML-Schemata
 - `tools/` — Validators, Auditors, Generators
 - `governance/`, `approval/`, `change-requests/` — Verfassung, Freigaben und SCR-System
@@ -171,20 +171,3 @@ Machine-readable metadata: State-Block oben; Registry-SSOT: `registry/standards.
 ## Registry-vs-Dateien-Relation
 
 Regel: Jeder Registry-Eintrag besitzt eine Datei in `standards/` ODER eine dokumentierte EXEMPT-Begründung. Gültigkeit und Zahlen werden je Lauf aus dem Registry-SSOT geprüft.
-
-
-## Installation
-
-```bash
-git clone https://github.com/A-TownChain-Okosystems/atc-standards.git
-cd atc-standards
-python3 -m pip install -r requirements.txt
-```
-
-## Repository Layout
-
-- `atc/` — ATC source/configuration artifacts
-- `ats/` — ATS compatibility artifacts
-- `contracts/` — contract specifications
-- `docs/` — documentation and evidence documentation
-- `evidence/` — validation evidence
