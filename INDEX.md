@@ -481,7 +481,7 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 | ATC-STD-585 | UX Consistency Standard | applications | 1.2.0 | approved | standards/applications/ATC-STD-585.md |
 | ATC-STD-586 | Error UI Standard | applications | 1.2.0 | approved | standards/applications/ATC-STD-586.md |
 | ATC-STD-587 | Admin UI Standard | applications | 1.2.0 | approved | standards/applications/ATC-STD-587.md |
-| ATC-STD-600 | Platform Architecture Standard | os | 1.2.0 | approved | standards/os/ATC-STD-600.md |
+| ATC-STD-600 | Chain Identity & Network Identification | blockchain | 1.3.0 | approved | standards/os/ATC-STD-600.md |
 | ATC-STD-601 | Mobile Standard | os | 1.2.0 | approved | standards/os/ATC-STD-601.md |
 | ATC-STD-602 | Desktop Standard | os | 1.2.0 | approved | standards/os/ATC-STD-602.md |
 | ATC-STD-603 | Globus OS Standard | os | 1.2.0 | approved | standards/os/ATC-STD-603.md |
