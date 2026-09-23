@@ -76,6 +76,15 @@ python3 tools/atc-repo-audit/atc_repo_audit.py . --level R3
 ## Governance Flow
 Change Request → SCR → Owner-Freigabe (§9) → Registry-Eintrag → CI-Validierung → APPROVED → normativ in Kraft.
 
+## Installation
+
+Requirements: Python 3.11+ and PyYAML.
+
+```bash
+python3 -m pip install --disable-pip-version-check pyyaml
+python3 tools/atc-std-validator/validate_all.py
+```
+
 ## Quick Start
 
 ```bash
@@ -128,6 +137,11 @@ Governance-Hardening: Registry-Integritäts-Gate, Discovery→Audit→SCR-Kopplu
 ## Repository Structure
 
 ```text
+├── atc/
+├── ats/
+├── contracts/
+├── docs/
+├── evidence/
 ├── approval/
 ├── audits/
 ├── change-requests/
