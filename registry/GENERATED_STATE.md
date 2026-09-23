@@ -4,7 +4,7 @@
 >
 > Source: `registry/standards.yaml`
 >
-> ATC-REGISTRY-BLOB-SHA256: 2c1ae2355ee1bb5110898a3bb8839ae713e85203
+> ATC-REGISTRY-BLOB-SHA256: 12c4fbd90d3d5710d0ed96fbc22d8ffcf9001482
 >
 > Registry standard state currently anchored at **ATC-STD-000 v1.3.0 / APPROVED**.
 >
