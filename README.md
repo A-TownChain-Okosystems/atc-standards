@@ -7,15 +7,15 @@
 
 ```yaml
 state:
-  id: ATC-STATE-20260918-f5171f46
-  generated_at: "2026-09-18 10:19 UTC+2"
+  id: ATC-STATE-20260923-f5171f46
+  generated_at: "2026-09-23 11:25 UTC+2"
   registry_version: "1.0.0"
   registry_sha256: "f5171f46250c6ad0e7a08b906a1657225413dbc1929e57d78cc38a138c80fcde"
   standards_total: 505
   standards_approved: 505
   standards_candidate: 0
   standards_other: 0
-  standard_files: 503
+  standard_files: registry-derived
   families: 75
 ```
 
@@ -42,11 +42,11 @@ ATC Standards is the canonical normative governance layer of the A-TownChain eco
 - **Governance Framework:** 75 Familien
 - **Governance-Determinismus:** ATC-STD-003 (SSOT-Matrix, State-ID, Ein-Zahl-Regel)
 
-**Organisationsbestand:** 32 Repository-Einträge im Repository-Registry-SSOT. Governance-Status und Ausnahmen werden ausschließlich aus `registry/repositories.yaml` bzw. den daraus generierten Compliance-Views abgeleitet.
+**Organisationsbestand:** registry-derived Repository-Einträge im Repository-Registry-SSOT. Governance-Status und Ausnahmen werden ausschließlich aus `registry/repositories.yaml` bzw. den daraus generierten Compliance-Views abgeleitet.
 
 ## Scope
 
-Governance-Root der A-TownChain-Organisation: Registry, Standards, Schemata, Validatoren, Audits und Change-Requests. In Scope: normative Standards (503 Dateien, 75 Familien) und ihre Metadaten/Validierung. Out of Scope: Implementierung der Standards in den Repository-Einträgen der Organisation und deren CI-Gates.
+Governance-Root der A-TownChain-Organisation: Registry, Standards, Schemata, Validatoren, Audits und Change-Requests. In Scope: normative Standards (registry-derived Dateien, 75 Familien) und ihre Metadaten/Validierung. Out of Scope: Implementierung der Standards in den Repository-Einträgen der Organisation und deren CI-Gates.
 
 ## Features
 
@@ -60,8 +60,8 @@ Governance-Root der A-TownChain-Organisation: Registry, Standards, Schemata, Val
 
 ### Core Components
 - `registry/` — SSOT
-- `standards/` — 503 Standard-Dateien in 75 Familien
-- `profiles/` — 32 verbindliche Standards-Profile je Repository
+- `standards/` — registry-derived Standard-Dateien in 75 Familien
+- `profiles/` — registry-derived verbindliche Standards-Profile je Repository
 - `schemas/` — JSON/YAML-Schemata
 - `tools/` — Validators, Auditors, Generators
 - `governance/`, `approval/`, `change-requests/` — Verfassung, Freigaben und SCR-System
@@ -73,9 +73,6 @@ python3 tools/atc-std-validator/validate_all.py
 python3 tools/atc-repo-audit/atc_repo_audit.py . --level R3
 ```
 
-## Governance Flow
-Change Request → SCR → Owner-Freigabe (§9) → Registry-Eintrag → CI-Validierung → APPROVED → normativ in Kraft.
-
 ## Installation
 
 Requirements: Python 3.11+ and PyYAML.
@@ -84,6 +81,9 @@ Requirements: Python 3.11+ and PyYAML.
 python3 -m pip install --disable-pip-version-check pyyaml
 python3 tools/atc-std-validator/validate_all.py
 ```
+
+## Governance Flow
+Change Request → SCR → Owner-Freigabe (§9) → Registry-Eintrag → CI-Validierung → APPROVED → normativ in Kraft.
 
 ## Quick Start
 
@@ -137,19 +137,26 @@ Governance-Hardening: Registry-Integritäts-Gate, Discovery→Audit→SCR-Kopplu
 ## Repository Structure
 
 ```text
+├── approval/
 ├── atc/
 ├── ats/
+├── audits/
+├── change-requests/
 ├── contracts/
 ├── docs/
 ├── evidence/
-├── approval/
-├── audits/
-├── change-requests/
 ├── governance/
+├── legal/
+├── licenses/
+├── licensing/
 ├── profiles/
+├── protocols/
+├── references/
 ├── registry/
 ├── schemas/
+├── sdk/
 ├── standards/
+├── templates/
 └── tools/
 ```
 
