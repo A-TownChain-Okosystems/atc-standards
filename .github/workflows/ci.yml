@@ -84,6 +84,9 @@ jobs:
         run: |
           pip install pyyaml -q
           python3 tools/repo_registry_check.py
+
+      - name: README Gates (E-4 / ATC-STD-README-001)
+        run: python3 tools/atc-readme-validator/check_readme.py .
       - name: Views-Drift-Check (gen_views, REQ-IMP-006, SCR-0081)
         run: |
           pip install pyyaml -q
