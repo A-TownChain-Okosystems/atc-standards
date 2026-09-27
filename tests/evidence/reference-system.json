@@ -1,0 +1,17 @@
+{
+  "case_id":"ATC-TEST-EVIDENCE-SYSTEM-001",
+  "description":"Closed reference Evidence Graph plus deliberate exact-SHA failure case.",
+  "positive":{
+    "implementation_sha":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "ci_commit_sha":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "status":"CI-VERIFIED",
+    "traceability":"COMPLETE"
+  },
+  "negative":{
+    "implementation_sha":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "ci_commit_sha":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "expected_status":"NOT_PROVEN",
+    "expected_traceability":"INCOMPLETE",
+    "expected_release":"BLOCKED"
+  }
+}
