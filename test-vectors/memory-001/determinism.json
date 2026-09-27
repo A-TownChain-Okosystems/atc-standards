@@ -15,21 +15,21 @@
         "content_type": "text",
         "content": "hello",
         "provenance": {"source_node_id": "node_1234567890abcdef", "source_type": "user"},
-        "authorization": {"policy_id": "pol_001", "issuer_node_id": "node_1234567890abcdef", "subject_node_id": "node_1234567890abcdef", "capability": "memory.write", "expires_at": null}
+        "authorization": {"policy_id": "pol_001", "issuer_node_id": "node_1234567890abcdef", "subject_node_id": "node_1234567890abcdef", "capability": "memory.write", "issued_at": "2026-09-27T10:00:00Z", "expires_at": null}
       },
-      "canonical_utf8": "{\"authorization\":{\"capability\":\"memory.write\",\"expires_at\":null,\"issuer_node_id\":\"node_1234567890abcdef\",\"policy_id\":\"pol_001\",\"subject_node_id\":\"node_1234567890abcdef\"},\"content\":\"hello\",\"content_type\":\"text\",\"created_at\":\"2026-09-27T10:00:00Z\",\"namespace\":\"aurora/default\",\"provenance\":{\"source_node_id\":\"node_1234567890abcdef\",\"source_type\":\"user\"},\"record_id\":\"mem_1234567890abcdef\",\"schema_version\":\"MEMORY-001/1.0.0\",\"subject\":\"example\",\"updated_at\":\"2026-09-27T10:00:00Z\"}",
-      "canonical_utf8_hex": "7b22617574686f72697a6174696f6e223a7b226361706162696c697479223a226d656d6f72792e7772697465222c22657870697265735f6174223a6e756c6c2c226973737565725f6e6f64655f6964223a226e6f64655f31323334353637383930616263646566222c22706f6c6963795f6964223a22706f6c5f303031222c227375626a6563745f6e6f64655f6964223a226e6f64655f31323334353637383930616263646566227d2c22636f6e74656e74223a2268656c6c6f222c22636f6e74656e745f74797065223a2274657874222c22637265617465645f6174223a22323032362d30392d32375431303a30303a30305a222c226e616d657370616365223a226175726f72612f64656661756c74222c2270726f76656e616e6365223a7b22736f757263655f6e6f64655f6964223a226e6f64655f31323334353637383930616263646566222c22736f757263655f74797065223a2275736572227d2c227265636f72645f6964223a226d656d5f31323334353637383930616263646566222c22736368656d615f76657273696f6e223a224d454d4f52592d3030312f312e302e30222c227375626a656374223a226578616d706c65222c22757064617465645f6174223a22323032362d30392d32375431303a30303a30305a227d",
-      "record_hash": "sha256:915ccdea7523c7dbb64ac5de8769ab018bcccaf10a1d5f6ff5efd9bde1f94e94",
+      "canonical_utf8": "{\"authorization\":{\"capability\":\"memory.write\",\"expires_at\":null,\"issued_at\":\"2026-09-27T10:00:00Z\",\"issuer_node_id\":\"node_1234567890abcdef\",\"policy_id\":\"pol_001\",\"subject_node_id\":\"node_1234567890abcdef\"},\"content\":\"hello\",\"content_type\":\"text\",\"created_at\":\"2026-09-27T10:00:00Z\",\"namespace\":\"aurora/default\",\"provenance\":{\"source_node_id\":\"node_1234567890abcdef\",\"source_type\":\"user\"},\"record_id\":\"mem_1234567890abcdef\",\"schema_version\":\"MEMORY-001/1.0.0\",\"subject\":\"example\",\"updated_at\":\"2026-09-27T10:00:00Z\"}",
+      "canonical_utf8_hex": "7b22617574686f72697a6174696f6e223a7b226361706162696c697479223a226d656d6f72792e7772697465222c22657870697265735f6174223a6e756c6c2c226973737565645f6174223a22323032362d30392d32375431303a30303a30305a222c226973737565725f6e6f64655f6964223a226e6f64655f31323334353637383930616263646566222c22706f6c6963795f6964223a22706f6c5f303031222c227375626a6563745f6e6f64655f6964223a226e6f64655f31323334353637383930616263646566227d2c22636f6e74656e74223a2268656c6c6f222c22636f6e74656e745f74797065223a2274657874222c22637265617465645f6174223a22323032362d30392d32375431303a30303a30305a222c226e616d657370616365223a226175726f72612f64656661756c74222c2270726f76656e616e6365223a7b22736f757263655f6e6f64655f6964223a226e6f64655f31323334353637383930616263646566222c22736f757263655f74797065223a2275736572227d2c227265636f72645f6964223a226d656d5f31323334353637383930616263646566222c22736368656d615f76657273696f6e223a224d454d4f52592d3030312f312e302e30222c227375626a656374223a226578616d706c65222c22757064617465645f6174223a22323032362d30392d32375431303a30303a30305a227d",
+      "record_hash": "sha256:d8f0d1885599177dd102a091cc7732394dc0dfb307074fe0104b401db7f013eb",
       "signing_domain": "ATC-MEMORY-001",
-      "public_key": "yE5xwVFOMWKbNT4YsqiL0oRSJQfI2bha7qqFVjN3bZA",
-      "signature": "ed25519:LMGP1zmrw0SyVLF8Y_-d2gER15qDS_K5Td9otIUYhfXnFe_o6qJOLJBr2d2imhj1Ypsh7dx2S58P1OXE8bidDA",
+      "public_key": "ebVWLo_mVPlAeLES6KmLp5AfhTrmlb7X4OORC60ElmQ",
+      "signature": "ed25519:Pvan5DptjzX_5_Py3PNGoKdLI6dUjV_Cq6ws5eg9o5bw4myNciEO38H-atAig2MnxpKAgoNqybycb13pwnwjAQ",
       "expected_status": "PASS"
     },
     {
       "id": "MEM-DET-002",
       "purpose": "equivalent JSON object key order produces identical canonical bytes and hash",
       "input_equivalent_to": "MEM-DET-001",
-      "expected_record_hash": "sha256:915ccdea7523c7dbb64ac5de8769ab018bcccaf10a1d5f6ff5efd9bde1f94e94",
+      "expected_record_hash": "sha256:d8f0d1885599177dd102a091cc7732394dc0dfb307074fe0104b401db7f013eb",
       "expected_status": "PASS"
     }
   ]
