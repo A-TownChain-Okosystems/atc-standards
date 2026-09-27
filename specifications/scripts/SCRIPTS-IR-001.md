@@ -182,7 +182,7 @@ This specification does not authorize filesystem access, process execution, arbi
 |---|---|
 | IR architecture | DESIGNED |
 | Normative approval | NOT APPROVED |
-| Schema implementation | NOT IMPLEMENTED |
+| Machine-readable schema | DESIGNED / CANDIDATE ARTIFACT |
 | Parser | NOT IMPLEMENTED |
 | Verifier | NOT IMPLEMENTED |
 | Runtime | NOT IMPLEMENTED |
