@@ -396,6 +396,76 @@ ATC-STD-644 complements and does not replace:
 
 Where another standard is authoritative for a specific lifecycle or governance decision, that standard remains authoritative.
 
-## §18 Candidate Status
 
-Version 0.1.0 is a candidate specification. It is NOT APPROVED and MUST NOT be represented as an approved normative standard until the required governance/review process is completed.
+## §19 Required Machine-Checkable Function Set
+
+The following functions define the minimum machine-checkable functional surface of ATC-STD-644.
+
+### P0 — Core Evidence Graph
+
+| Function ID | Function | Purpose |
+|---|---|---|
+| ATC-FUNC-EVIDENCE-001 | Requirement Resolver | Resolve Requirement → Specification relationships. |
+| ATC-FUNC-EVIDENCE-002 | Component Resolver | Resolve Specification → Component relationships. |
+| ATC-FUNC-EVIDENCE-003 | Function Registry | Register, resolve and enforce uniqueness of ATC-FUNC-* identities. |
+| ATC-FUNC-EVIDENCE-004 | Implementation Resolver | Resolve Function → repository/path/module/symbol/commit SHA. |
+| ATC-FUNC-EVIDENCE-005 | Change Resolver | Resolve Function/Component → Change/Base SHA/Head SHA/impact. |
+| ATC-FUNC-EVIDENCE-006 | Test Resolver | Resolve Function/Implementation → applicable tests and test state. |
+| ATC-FUNC-EVIDENCE-007 | CI Evidence Resolver | Resolve Implementation SHA → Run/Job/Step/Log evidence. |
+| ATC-FUNC-EVIDENCE-011 | Function Consistency Validator | Validate Function ↔ Specification ↔ Documentation ↔ Implementation consistency. |
+| ATC-FUNC-EVIDENCE-012 | Implementation Validator | Validate repository/path/module/symbol and exact implementation SHA identity. |
+| ATC-FUNC-EVIDENCE-013 | Change Completeness Validator | Validate Base SHA → Diff → Head SHA → Impact completeness. |
+| ATC-FUNC-EVIDENCE-014 | Test Coverage Validator | Validate required Function/Implementation → Test bindings. |
+| ATC-FUNC-EVIDENCE-015 | Exact-SHA CI Validator | Require CI.commit_sha == Implementation.commit_sha for exact-SHA CI verification. |
+| ATC-FUNC-EVIDENCE-017 | Traceability Validator | Validate the complete required evidence graph and reverse traversal. |
+| ATC-FUNC-EVIDENCE-018 | Status Validator | Prevent status promotion without the evidence required for that status. |
+| ATC-FUNC-EVIDENCE-019 | Evidence Identity Validator | Require unique, stable identities for evidence records. |
+
+### P0 — Previously missing graph function
+
+| Function ID | Function | Purpose |
+|---|---|---|
+| ATC-FUNC-EVIDENCE-021 | Documentation Resolver | Resolve Function/Change → applicable Documentation records and validate documentation coverage for behavior, API and ABI changes. |
+
+ATC-FUNC-EVIDENCE-021 is mandatory because Documentation is an explicit node of the canonical evidence graph. A Change Resolver or Function Consistency Validator MUST NOT be considered a substitute for the ability to resolve documentation evidence independently.
+
+### P1 — Verification and Release Lifecycle
+
+| Function ID | Function | Purpose |
+|---|---|---|
+| ATC-FUNC-EVIDENCE-008 | E2E Evidence Resolver | Resolve Change/Implementation → E2E evidence. |
+| ATC-FUNC-EVIDENCE-009 | Audit Evidence Resolver | Resolve required evidence → Audit records and findings. |
+| ATC-FUNC-EVIDENCE-010 | Release Evidence Resolver | Resolve Audit/Traceability → Release evidence. |
+| ATC-FUNC-EVIDENCE-016 | E2E Binding Validator | Validate E2E evidence against the exact implementation/change evidence. |
+| ATC-FUNC-EVIDENCE-020 | Release Readiness Validator | Permit RELEASE-READY only when all required evidence and traceability conditions are satisfied. |
+
+### Function invariants
+
+1. Function IDs MUST remain stable when implementation commits change.
+2. Resolver output MUST identify the referenced evidence object by its canonical ID.
+3. A resolver MUST NOT infer missing evidence as PASS.
+4. A validator MUST distinguish NOT_PROVEN, FAIL, INCOMPLETE and BROKEN where applicable.
+5. Exact-SHA CI verification MUST use the implementation commit SHA as the binding identity.
+6. Documentation coverage MUST be independently resolvable for changes where §7 requires documentation impact.
+7. The function set is a minimum surface; repository-specific standards MAY define additional functions.
+
+## §20 Candidate Functional Requirements
+
+Before ATC-STD-644 can become normative, each function in §19 MUST have a corresponding ATC-REQ-* requirement and ATC-SPEC-* machine-checkable specification covering at minimum:
+
+- input schema
+- output schema
+- preconditions
+- postconditions
+- invariants
+- failure conditions
+- required evidence
+- testability
+- traceability
+- priority
+
+Positive and negative test vectors MUST be defined before implementation of the corresponding validator is considered complete.
+
+## §21 Candidate Status
+
+The function catalog in §19 is part of the ATC-STD-644 candidate specification. It does not make the standard approved or normative. Approval remains subject to the ATC-STD-000 governance lifecycle.
