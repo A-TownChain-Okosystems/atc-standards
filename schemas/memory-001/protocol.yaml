@@ -1,0 +1,42 @@
+protocol:
+  id: MEMORY-001
+  version: 1.0.0
+  replay_window_seconds: 300
+  version_negotiation:
+    rule: "intersection of supported versions MUST be computed; highest mutually supported version is selected"
+    no_intersection: VERSION_UNSUPPORTED
+  capability_negotiation:
+    rule: "effective capabilities MUST be the intersection of locally supported and peer-authorized capabilities"
+    unauthorized_capabilities: reject
+  session_states:
+    NEW:
+      allowed_in: []
+      allowed_out: [HELLO, REJECT]
+    HELLO:
+      allowed_in: [HELLO]
+      allowed_out: [NEGOTIATING, REJECT]
+    NEGOTIATING:
+      allowed_in: [NEGOTIATE]
+      allowed_out: [AUTHENTICATING, REJECT]
+    AUTHENTICATING:
+      allowed_in: [AUTHENTICATE]
+      allowed_out: [ESTABLISHED, REJECT]
+    ESTABLISHED:
+      allowed_in: [SESSION_ESTABLISHED, RECORD_PUT, RECORD_GET, RECORD_RESPONSE, RECORD_DELETE]
+      allowed_out: [RECORD_PUT, RECORD_GET, RECORD_RESPONSE, RECORD_DELETE, REJECT, CLOSE]
+    REJECTED:
+      allowed_in: [REJECT]
+      allowed_out: [CLOSE]
+    CLOSING:
+      allowed_in: [CLOSE]
+      allowed_out: [CLOSED]
+    CLOSED:
+      allowed_in: [CLOSE]
+      allowed_out: []
+  replay:
+    identity: "message_id + nonce + sender"
+    duplicate: MEMORY-NONCE-001
+    window_seconds: 300
+  close:
+    terminal: true
+    reasons: [NORMAL, PROTOCOL_ERROR, AUTH_FAILED, AUTHZ_FAILED, REPLAY_DETECTED, VERSION_UNSUPPORTED, CANONICALIZATION_FAILED, TIMEOUT]

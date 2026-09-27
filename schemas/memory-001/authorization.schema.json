@@ -1,0 +1,16 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://atc.ecosystem/schemas/memory-001/authorization.schema.json",
+  "title":"MEMORY-001 Authorization",
+  "type":"object","additionalProperties":false,
+  "required":["policy_id","issuer_node_id","subject_node_id","capability","issued_at","expires_at"],
+  "properties":{
+    "policy_id":{"type":"string","minLength":1,"maxLength":128},
+    "issuer_node_id":{"type":"string","pattern":"^node_[a-z0-9][a-z0-9_-]{15,127}$"},
+    "subject_node_id":{"type":"string","pattern":"^node_[a-z0-9][a-z0-9_-]{15,127}$"},
+    "capability":{"type":"string","enum":["memory.read","memory.write","memory.replicate","memory.delete"]},
+    "issued_at":{"type":"string","format":"date-time"},
+    "expires_at":{"type":["string","null"],"format":"date-time"},
+    "constraints":{"type":"object","additionalProperties":false,"properties":{"namespace_prefix":{"type":["string","null"]},"max_records":{"type":["integer","null"],"minimum":0}}}
+  }
+}
