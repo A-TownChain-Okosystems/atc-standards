@@ -1,0 +1,29 @@
+{
+  "vector_set":"MEMORY-001-DETERMINISM/1.0.0",
+  "cases":[
+    {
+      "id":"MEM-DET-001",
+      "purpose":"same logical record, canonical key ordering",
+      "input":{
+        "schema_version":"MEMORY-001/1.0.0",
+        "record_id":"mem_1234567890abcdef",
+        "namespace":"aurora/default",
+        "subject":"example",
+        "created_at":"2026-09-27T10:00:00Z",
+        "updated_at":"2026-09-27T10:00:00Z",
+        "content_type":"text",
+        "content":"hello",
+        "provenance":{"source_node_id":"node_1234567890abcdef","source_type":"user"},
+        "authorization":{"policy_id":"pol_001","issuer_node_id":"node_1234567890abcdef","subject_node_id":"node_1234567890abcdef","capability":"memory.write","expires_at":null}
+      },
+      "canonicalization_assertions":["keys sorted lexicographically","no insignificant whitespace","UTF-8 output"],
+      "expected_status":"VALID"
+    },
+    {
+      "id":"MEM-DET-NEG-001",
+      "purpose":"non-canonical key order must normalize to the same canonical bytes",
+      "input_equivalent_to":"MEM-DET-001",
+      "expected_status":"VALID_SAME_CANONICAL_HASH"
+    }
+  ]
+}
