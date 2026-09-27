@@ -1,0 +1,27 @@
+serialization:
+  id: MEMORY-001-CANONICAL-SERIALIZATION
+  version: 1.0.0
+  encoding: UTF-8
+  format: JSON
+  canonical_profile:
+    object_keys: lexicographic_unicode_codepoint_order
+    arrays: preserve_input_order
+    whitespace: none
+    separators: [",", ":"]
+    strings: JSON-standard-escaped
+    numbers: forbidden_except_integer_fields_defined_by_schema
+    null: literal_null
+    booleans: lowercase_json_literals
+  hashing:
+    algorithm: SHA-256
+    input: canonical_utf8_bytes
+    representation: "sha256:<lowercase-hex>"
+  identity:
+    record_id: "derived externally; MUST NOT be included in hash preimage when generated from content"
+  signing:
+    domain: "ATC-MEMORY-001"
+    preimage: "domain || 0x00 || canonical_utf8_bytes"
+    signature: Ed25519
+  determinism:
+    same_record_must_produce_identical_bytes: true
+    same_record_must_produce_identical_hash: true
