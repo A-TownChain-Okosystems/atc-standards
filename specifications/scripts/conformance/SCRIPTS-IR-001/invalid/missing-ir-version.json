@@ -1,0 +1,8 @@
+{
+  "script_id": "demo.missing-version",
+  "module": {"name": "demo", "version": "0.1.0"},
+  "metadata": {"name": "Missing ir_version"},
+  "imports": [], "types": [], "constants": [], "variables": [],
+  "functions": [], "events": [], "capabilities": [],
+  "resource_limits": {}, "target_constraints": {}, "source_map": []
+}
