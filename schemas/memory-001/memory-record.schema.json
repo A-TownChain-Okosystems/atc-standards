@@ -24,12 +24,13 @@
       }
     },
     "authorization":{
-      "type":"object","additionalProperties":false,"required":["policy_id","issuer_node_id","subject_node_id","capability","expires_at"],
+      "type":"object","additionalProperties":false,"required":["policy_id","issuer_node_id","subject_node_id","capability","issued_at","expires_at"],
       "properties":{
         "policy_id":{"type":"string","minLength":1,"maxLength":128},
         "issuer_node_id":{"$ref":"node-identity.schema.json#/$defs/nodeId"},
         "subject_node_id":{"$ref":"node-identity.schema.json#/$defs/nodeId"},
         "capability":{"type":"string","enum":["memory.read","memory.write","memory.replicate","memory.delete"]},
+        "issued_at":{"type":"string","format":"date-time"},
         "expires_at":{"type":["string","null"],"format":"date-time"}
       }
     }
