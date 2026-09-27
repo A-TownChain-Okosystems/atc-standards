@@ -1,0 +1,21 @@
+{
+  "ir_version": "0.1.0",
+  "script_id": "demo.numeric",
+  "module": {"name": "demo", "version": "0.1.0"},
+  "metadata": {"name": "Numeric narrowing case"},
+  "imports": [], "types": [], "constants": [], "variables": [],
+  "functions": [{
+    "id": "main",
+    "parameters": [{"id": "x", "type": {"kind": "unsigned_integer", "width": 64}}],
+    "return_type": {"kind": "unit"},
+    "effects": [],
+    "body": [{
+      "node_id": "narrow",
+      "kind": "Cast",
+      "type": {"kind": "unsigned_integer", "width": 8},
+      "attributes": {"source_type": {"kind": "unsigned_integer", "width": 64}, "checked": false}
+    }]
+  }],
+  "events": [], "capabilities": [], "resource_limits": {},
+  "target_constraints": {}, "source_map": []
+}
