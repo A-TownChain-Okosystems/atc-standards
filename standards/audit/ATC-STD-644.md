@@ -466,6 +466,57 @@ Before ATC-STD-644 can become normative, each function in §19 MUST have a corre
 
 Positive and negative test vectors MUST be defined before implementation of the corresponding validator is considered complete.
 
-## §21 Candidate Status
 
-The function catalog in §19 is part of the ATC-STD-644 candidate specification. It does not make the standard approved or normative. Approval remains subject to the ATC-STD-000 governance lifecycle.
+
+## §22 Machine-Readable System Artifacts
+
+The candidate MUST provide the following machine-readable artifacts:
+
+- `schemas/evidence/record.schema.json` — canonical evidence object shape and identifier constraints.
+- `schemas/evidence/traceability.schema.json` — canonical traceability edge model.
+- `tests/evidence/reference-system.json` — positive and negative system vectors.
+- `tools/validate_evidence_system.py` — fail-closed reference validator for identity, graph, exact-SHA and status gates.
+
+The artifacts form one system and MUST be evaluated together. A schema-valid object with a broken reference, an unbound CI SHA, or an unjustified status MUST NOT be considered valid system evidence.
+
+## §23 System Integrity Test
+
+The reference system test is `ATC-TEST-EVIDENCE-SYSTEM-001`.
+
+The positive vector MUST demonstrate:
+
+`Implementation SHA == CI SHA`
+→ `CI-VERIFIED`
+→ `Traceability=COMPLETE`.
+
+The negative vector MUST demonstrate:
+
+`Implementation SHA != CI SHA`
+→ `CI-VERIFIED=NOT_PROVEN`
+→ `Traceability=INCOMPLETE`
+→ `Release=BLOCKED`.
+
+The test MUST fail closed. It MUST NOT convert missing, invalid, or mismatched evidence into PASS.
+
+A future normative implementation MUST extend this reference test from the synthetic vectors to repository-backed evidence records while preserving these invariants.
+
+## §24 System Definition of Done
+
+ATC-STD-644 functional system implementation is not complete until all of the following are machine-verified:
+
+1. Canonical IDs conform to the identifier grammar.
+2. Evidence records conform to the applicable schema.
+3. Traceability edges resolve to existing evidence objects.
+4. Forward traversal REQ → RELEASE is closed where required.
+5. Reverse traversal SOURCE → FUNCTION → SPECIFICATION → REQUIREMENT is available where required.
+6. Implementation identity contains an exact source commit SHA.
+7. CI evidence contains Run, Job, Step and Result identity.
+8. Exact-SHA validation proves `CI.commit_sha == Implementation.commit_sha`.
+9. Status promotion is blocked when required evidence is missing or mismatched.
+10. The negative exact-SHA vector proves that false verification is rejected.
+11. Release readiness is blocked while required traceability is incomplete.
+12. The complete system test itself is executed by CI on the exact candidate commit.
+
+## §25 Candidate Status
+
+The machine-readable artifacts and system test are part of the ATC-STD-644 candidate specification. They do not make the standard approved or normative. Approval remains subject to the ATC-STD-000 governance lifecycle.
