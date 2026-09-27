@@ -1,0 +1,17 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://a-townchain-okosystems/standards/schemas/evidence/traceability.schema.json",
+  "title":"ATC-STD-644 Traceability Record",
+  "type":"object",
+  "required":["id","status","edges"],
+  "properties":{
+    "id":{"type":"string","pattern":"^ATC-TRACE-[A-Z0-9][A-Z0-9-]*$"},
+    "status":{"enum":["COMPLETE","PARTIAL","INCOMPLETE","BROKEN"]},
+    "edges":{"type":"array","minItems":1,"items":{"type":"object","required":["from","to","relation"],"properties":{
+      "from":{"type":"string","pattern":"^ATC-(REQ|SPEC|COMP|FUNC|IMPL|CHANGE|DOC|TEST|CI|E2E|AUDIT|REL)-[A-Z0-9][A-Z0-9-]*$"},
+      "to":{"type":"string","pattern":"^ATC-(REQ|SPEC|COMP|FUNC|IMPL|CHANGE|DOC|TEST|CI|E2E|AUDIT|REL)-[A-Z0-9][A-Z0-9-]*$"},
+      "relation":{"enum":["SPECIFIES","IMPLEMENTS","CONTAINS","DOCUMENTS","CHANGES","TESTS","VERIFIES","VALIDATES","RELEASES","SATISFIES","AFFECTS"]}
+    }}}
+  },
+  "additionalProperties":false
+}
