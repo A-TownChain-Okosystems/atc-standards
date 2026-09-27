@@ -26,7 +26,7 @@ def main():
     signature = base64.urlsafe_b64decode(case["signature"].removeprefix("ed25519:") + "==")
     public_key = base64.urlsafe_b64decode(case["public_key"] + "==")
     Ed25519PublicKey.from_public_bytes(public_key).verify(
-        signature, case["signing_domain"].encode("ascii") + b"\\x00" + actual
+        signature, case["signing_domain"].encode("ascii") + b"\x00" + actual
     )
     print("MEMORY-001 reference vector: PASS")
 
