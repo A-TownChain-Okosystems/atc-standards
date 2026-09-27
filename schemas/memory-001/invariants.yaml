@@ -1,0 +1,23 @@
+memory_001:
+  version: 1.0.0
+  invariants:
+    - id: MEM-INV-001
+      rule: "schema_version MUST equal MEMORY-001/1.0.0"
+    - id: MEM-INV-002
+      rule: "record_id MUST be globally unique within its namespace"
+    - id: MEM-INV-003
+      rule: "updated_at MUST be greater than or equal to created_at"
+    - id: MEM-INV-004
+      rule: "record_hash MUST equal SHA-256(canonical_serialization(record))"
+    - id: MEM-INV-005
+      rule: "signature MUST verify over ATC-MEMORY-001 || 0x00 || canonical_bytes"
+    - id: MEM-INV-006
+      rule: "a node MUST reject an unauthorized capability before persistence"
+    - id: MEM-INV-007
+      rule: "a node MUST reject an unknown schema/protocol version unless an explicit compatibility rule exists"
+    - id: MEM-INV-008
+      rule: "replication MUST NOT overwrite a newer record with an older updated_at"
+    - id: MEM-INV-009
+      rule: "equal record identities MUST yield byte-identical canonical representations"
+    - id: MEM-INV-010
+      rule: "replay of an accepted message_id or nonce within the replay window MUST be rejected"
