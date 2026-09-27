@@ -135,9 +135,22 @@ Runtime policy MAY impose stricter limits.
 
 ## 11. Canonical serialization
 
-The first normative version MUST define field ordering, identifier encoding, numeric encoding, string/byte encoding, absent-vs-null semantics, map ordering, enum representation and hash/digest domain if hashes are introduced.
+The candidate serialization contract is JSON-based and deterministic. The first normative version MUST preserve these rules unless explicitly superseded:
 
-A non-canonical serializer MUST NOT be used as consensus evidence.
+1. UTF-8 encoding; no BOM.
+2. Object member names are unique. Duplicate JSON member names MUST be rejected.
+3. Object members are emitted in the exact top-level and nested schema order defined by SCRIPTS-IR-001 and its machine-readable schema; implementations MUST NOT depend on incidental parser/map iteration order.
+4. Arrays preserve semantic order unless a field is explicitly declared set-like; set-like arrays MUST be canonicalized by the standard-defined identifier key before serialization.
+5. Identifiers use the exact UTF-8 string value defined by the IR; no Unicode normalization is applied implicitly.
+6. Integers are serialized as base-10 JSON integers without leading zeroes, except zero itself. Floating-point values are not permitted in the canonical form until a deterministic numeric encoding is normatively specified.
+7. Strings use JSON escaping and Unicode code points represented in UTF-8; semantically equivalent escape spellings MUST normalize to one canonical representation.
+8. Bytes MUST use the explicitly defined textual encoding of the field; raw binary is not permitted in canonical JSON.
+9. Absent fields and explicit null are distinct. A field is omitted only when the schema marks it optional; null is rejected unless the field schema explicitly permits it.
+10. Enum values use their exact string token; aliases are not canonical.
+11. No insignificant whitespace is emitted between tokens.
+12. A digest domain, if introduced, hashes the canonical UTF-8 serialization bytes and MUST identify the IR version and digest algorithm outside the hashed payload domain definition.
+
+The machine-readable schema defines structural validity; it does not by itself prove canonical ordering, semantic validity, dependency resolution, capability authorization or deterministic execution. A non-canonical serializer MUST NOT be used as consensus evidence.
 
 ## 12. Source mapping and diagnostics
 
