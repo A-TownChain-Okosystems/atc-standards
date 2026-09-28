@@ -11,20 +11,33 @@ standard:
 
 # ATC-STD-IDENTITY-001 — Canonical Identity & Trust Contract
 
-**Status:** DRAFT / CONTRACT CANDIDATE  
-**Purpose:** Establish one canonical identity/trust model for MASTER-ARCH-001.
+**Status:** DRAFT / CONTRACT CANDIDATE
+
+This contract establishes the ecosystem identity/trust model. It MUST integrate with existing identity standards and MUST NOT create a competing identity namespace or protocol.
 
 ## 1. Canonical identity object
 
 Every identity MUST have:
 
-identity_id, identity_type, status, version, owner, credential_bindings, capability_bindings, created_at, updated_at, revocation_state and audit_reference.
+identity_id, identity_type, status, version, owner, credential_bindings, capability_bindings, created_at, updated_at, revocation_state, audit_reference.
 
 Supported identity types include human, account, wallet, device, node, validator, service, agent, model, game, npc, world and organization.
 
 New identity types require governance approval and schema/version registration.
 
-## 2. Trust chain
+## 2. Existing identity relationship
+
+ATC-STD-IDENTITY-001 is the ecosystem-level identity/trust contract.
+
+It MUST reference rather than duplicate:
+
+- ATC-03 — Decentralized Identity (DID) & Zero-Trust IAM
+- ATC-PROTO-IDENTITY-001 — protocol/wire semantics
+- independently verified DID/Ed25519/RCT implementation evidence
+
+K6/K6b implementation evidence MUST NOT by itself establish global Identity State ownership.
+
+## 3. Trust chain
 
     Identity
      → Credential
@@ -37,36 +50,32 @@ New identity types require governance approval and schema/version registration.
 
 Identity alone MUST NOT grant authority.
 
-## 3. Credential binding
+## 4. Credential binding
 
-Credentials MUST be explicitly bound to an identity and MUST define credential_id, credential_type, verifier key binding, issuer, validity interval, status, revocation reference and proof/signature metadata.
+Credentials MUST be explicitly bound to an identity and define credential ID, credential type, verifier key binding, issuer, validity interval, status, revocation reference and proof/signature metadata.
 
-## 4. Key lifecycle
-
-The canonical lifecycle is:
+## 5. Key lifecycle and revocation
 
     CREATE → BIND → ACTIVATE → ROTATE → REVOKE → RETIRE
 
-Rotation MUST preserve an auditable relationship between predecessor and successor credentials where policy requires continuity.
-
-## 5. Revocation
-
-Revocation MUST be authoritative, versioned and auditable. A revoked credential MUST fail authorization after the applicable revocation boundary.
+Rotation MUST preserve an auditable predecessor/successor relationship where policy requires continuity. Revocation MUST be authoritative, versioned and auditable, and revoked credentials MUST fail authorization after the applicable revocation boundary.
 
 ## 6. Capability and policy separation
 
-Capabilities express what an identity MAY request. Policies determine whether the request is permitted in context. Authorization is the evaluated decision.
+Capability ≠ Policy ≠ Authorization.
 
-    Capability ≠ Policy ≠ Authorization
+Capabilities express what an identity MAY request; policy determines whether the request is permitted; authorization is the evaluated decision.
 
-## 7. Single-SSOT rule
+## 7. Single SSOT
 
-There MUST be one canonical Identity SSOT for the ecosystem. Domain repositories MAY cache, reference or project identity data, but MUST NOT create a competing authoritative identity namespace.
+There MUST be one canonical Identity SSOT. Domain repositories MAY cache, reference or project identity data but MUST NOT create a competing authoritative identity namespace.
 
-## 8. Audit requirements
+The repository, canonical path, schema ID, runtime owner, write authority, API ID, version and evidence location are bound in registry/p0-contract-registry.yaml.
 
-Identity lifecycle operations MUST produce auditable evidence for creation, binding, authorization, rotation, revocation and retirement.
+Unresolved ownership MUST remain UNRESOLVED until evidence establishes it.
 
-## 9. Evidence boundary
+## 8. Audit and evidence
 
-This contract does not claim that an identity implementation exists. Implementation, tests, exact-SHA CI and E2E require separate evidence.
+Identity creation, binding, authorization, rotation, revocation and retirement MUST be auditable.
+
+This contract does not claim implementation, tests, exact-SHA CI or E2E verification.
