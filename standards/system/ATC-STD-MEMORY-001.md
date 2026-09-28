@@ -11,8 +11,9 @@ standard:
 
 # ATC-STD-MEMORY-001 — Canonical Federated Memory Contract
 
-**Status:** DRAFT / CONTRACT CANDIDATE  
-**Purpose:** Define deterministic, authorized and auditable memory federation without making memory an authority plane.
+**Status:** DRAFT / CONTRACT CANDIDATE
+
+This is the system-level Memory contract. The existing machine-readable MEMORY-001 package MUST remain the single schema/protocol/vector candidate; this document MUST NOT create a competing definition.
 
 ## 1. State boundary
 
@@ -21,15 +22,31 @@ standard:
     Memory State ≠ AI Authority
     Memory State ≠ Governance Authority
 
-Memory may provide context. It MUST NOT acquire authority merely because an AI agent can read or write a memory record.
+Memory may provide context but MUST NOT acquire authority because an AI agent can read or write a memory record.
 
-## 2. Canonical memory record
+## 2. Existing machine-readable package
 
-Every record MUST define:
+The current candidate package is registered as:
 
-record_id, schema_version, namespace, owner_id, subject_id, content, content_hash, serialization_version, provenance, authorization, created_at, updated_at, retention_policy, revocation_state, record_version and audit_reference.
+- protocol: MEMORY-001/1.0.0
+- schema root: https://atc.ecosystem/schemas/memory-001/
+- path: schemas/memory-001/
+- serialization: MEMORY-001-CANONICAL-SERIALIZATION
+- verifier: tools/memory_001_reference.py
+- schema validation: tools/validate_memory_001.py
+- vectors: test-vectors/memory-001/
 
-## 3. Canonical processing pipeline
+This is contract evidence only, not runtime implementation evidence. The package and this system contract MUST be reconciled before schema freeze.
+
+## 3. Canonical memory record
+
+The system model requires:
+
+record_id, schema_version, namespace, owner_id, subject_id, content, content_hash, serialization_version, provenance, authorization, created_at, updated_at, retention_policy, revocation_state, record_version, audit_reference.
+
+The machine-readable package MUST define the exact serialized representation and hash input before freeze. A field-model mismatch is a P0 consistency failure.
+
+## 4. Processing pipeline
 
     Memory Record
      → Canonical Serialization
@@ -43,23 +60,19 @@ record_id, schema_version, namespace, owner_id, subject_id, content, content_has
      → Persistence
      → Audit
 
-A record MUST NOT be accepted into authoritative memory state unless serialization and integrity verification succeed.
+A record MUST NOT enter authoritative memory state unless serialization and integrity verification succeed.
 
-## 4. Deterministic serialization
+## 5. Determinism
 
-The canonical serialization algorithm MUST be versioned and deterministic. Equivalent records MUST serialize to identical bytes before hashing.
+Canonical serialization MUST be versioned and deterministic. Equivalent records MUST produce identical bytes.
 
-The content hash MUST be computed over the canonical serialized representation, excluding fields explicitly designated as non-canonical metadata by the schema.
+The exact hash input and signing preimage MUST come from the machine-readable serialization contract. Implementations MUST NOT introduce a second hash/signing rule.
 
-## 5. Provenance and ownership
+## 6. Provenance and ownership
 
-Every record MUST identify its provenance and owner. Provenance MUST be preserved across replication and federation.
+Provenance MUST survive replication and federation. Ownership does not itself authorize mutation; authorization MUST be evaluated independently.
 
-Ownership does not by itself authorize mutation. Authorization MUST be evaluated independently.
-
-## 6. Federation handshake
-
-A federation peer MUST establish:
+## 7. Federation
 
     IDENTITY
      → PROTOCOL VERSION
@@ -69,22 +82,30 @@ A federation peer MUST establish:
      → MEMORY SCHEMA VERSION
      → SESSION
 
-Unsupported schema versions MUST fail closed or enter an explicitly defined compatibility path.
+Unsupported versions MUST fail closed or use an explicit compatibility path.
 
-## 7. Replication and conflict resolution
+## 8. Replication and conflicts
 
-Replication MUST define replication policy, consistency model, ordering/causality, duplicate detection, conflict detection, deterministic conflict resolution and failure/retry behavior.
+Replication MUST define policy, consistency, ordering/causality, duplicate detection, conflict detection, deterministic conflict resolution and failure/retry.
 
-No conflict-resolution rule may silently overwrite a record without auditable provenance.
+The existing machine-readable replication rules/vectors are the canonical candidate. A second ordering algorithm MUST NOT be introduced here.
 
-## 8. Retention and revocation
+## 9. Retention and revocation
 
-Retention MUST be policy-controlled. Revocation MUST be versioned, authenticated and auditable. A revoked record MUST NOT be silently resurrected through replication.
+Retention MUST be policy-controlled. Revocation MUST be versioned, authenticated and auditable. Revoked records MUST NOT be silently resurrected through replication.
 
-## 9. Authorization boundary
+## 10. Authorization boundary
 
-Only an authorized Memory Runtime MAY mutate federated memory state. Aurora or another agent MUST use the canonical Memory API and required capabilities.
+Only an authorized Memory Runtime MAY mutate federated memory state. Aurora and other agents MUST use the canonical Memory API and required capabilities.
 
-## 10. Evidence boundary
+Aurora Memory is not automatically the ecosystem Memory Authority. Runtime owner and write authority remain UNRESOLVED until repository/code evidence establishes them.
 
-This contract establishes specification only. Implementation, tests, exact-SHA CI and E2E require independent evidence.
+## 11. Cross-contract binding
+
+Concrete Memory SSOT ownership is registered in registry/p0-contract-registry.yaml.
+
+The registry distinguishes standards SSOT, machine-readable contract package and runtime/evidence repositories.
+
+## 12. Evidence boundary
+
+This contract is specification only. Implementation, tests, exact-SHA CI and E2E require independent evidence.
