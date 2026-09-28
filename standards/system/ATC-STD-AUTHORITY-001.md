@@ -11,30 +11,17 @@ standard:
 
 # ATC-STD-AUTHORITY-001 — System Authority & Write Boundary Contract
 
-**Status:** DRAFT / CONTRACT CANDIDATE  
-**Purpose:** Define the machine-readable authority boundary required by MASTER-ARCH-001.
+**Status:** DRAFT / CONTRACT CANDIDATE
 
-This document is a contract candidate. It does not assert implementation or CI/E2E verification.
+This contract defines authority boundaries without inventing unresolved ownership. It does not assert implementation or CI/E2E verification.
 
 ## 1. Mandatory authority record
 
-Every authoritative state domain MUST have a record containing:
+Every authoritative state domain MUST define:
 
-| Field | Required |
-|---|---|
-| domain_id | MUST |
-| owner_id | MUST |
-| source_of_truth | MUST |
-| read_authorities | MUST |
-| write_authority | MUST |
-| direct_mutation_policy | MUST |
-| required_capabilities | MUST |
-| policy_id | MUST |
-| approval_policy | MUST |
-| audit_policy | MUST |
-| api_id | MUST |
-| state_id | MUST |
-| version | MUST |
+domain_id, owner_id, source_of_truth, read_authorities, write_authority, direct_mutation_policy, required_capabilities, policy_id, approval_policy, audit_policy, api_id, state_id, version.
+
+Concrete cross-repository bindings are maintained in registry/p0-contract-registry.yaml. Unknown ownership MUST remain explicitly UNRESOLVED until repository/code evidence establishes it.
 
 ## 2. Canonical authorization path
 
@@ -49,37 +36,43 @@ Every authoritative state domain MUST have a record containing:
      → State Mutation
      → Audit Evidence
 
-A caller MUST NOT mutate authoritative state by bypassing the canonical Domain API and its authorization path.
+A caller MUST NOT mutate authoritative state by bypassing the canonical Domain API and authorization path.
 
-## 3. Initial domain authority registry
+## 3. Domain authority registry
 
-| domain_id | owner_id | write_authority | direct_mutation | Aurora |
+| domain_id | owner_id | write_authority | direct_mutation | resolution |
 |---|---|---|---|---|
-| consensus_state | a-townchain | consensus/state-transition authority | DENY | query/propose/authorized transaction |
-| vm_state | atc-vm | VM runtime | DENY | query/authorized execution |
-| node_state | atc-node | node runtime | DENY | policy-gated node API |
-| identity_state | identity | identity authority | DENY | authorized identity API |
-| os_state | globus-os | OS-authorized services/kernel boundary | DENY | policy-gated OS API |
-| kernel_state | shivacore | kernel | DENY | no direct mutation |
-| ai_state | aurora-ai | Aurora runtime | ALLOW within Aurora authority | Aurora-owned |
-| memory_state | memory | authorized memory runtime | DENY | capability/policy-gated |
-| world_state | genesis-engine | Genesis runtime | DENY | Genesis API only |
-| player_state | genesis/application | authorized game runtime | DENY | Genesis API only |
-| lore_state | lore | canonical lore authority | DENY | read/propose via validated API |
-| economy_state | economic domain | domain economic authority | DENY | policy/capability-gated |
+| consensus_state | a-townchain | consensus/state-transition authority | DENY | repository identified; runtime/API evidence required |
+| vm_state | atc-vm | VM runtime | DENY | repository identified; runtime/API evidence required |
+| node_state | atc-node | node runtime | DENY | repository identified; runtime/API evidence required |
+| identity_state | UNRESOLVED:IDENTITY-STATE-OWNER | UNRESOLVED:IDENTITY-WRITE-AUTHORITY | DENY | P0 unresolved |
+| os_state | globus-os | OS-authorized services/kernel boundary | DENY | exact write authority evidence required |
+| kernel_state | atc-shivacore | kernel | DENY | integrated source ownership evidence required |
+| ai_state | aurora-ai | Aurora runtime | ALLOW within Aurora authority | Aurora-owned domain state only |
+| memory_state | UNRESOLVED:MEMORY-STATE-OWNER | UNRESOLVED:MEMORY-WRITE-AUTHORITY | DENY | P0 unresolved |
+| world_state | genesis-engine | Genesis runtime | DENY | repository identified; runtime/API evidence required |
+| player_state | UNRESOLVED:PLAYER-STATE-OWNER | UNRESOLVED:PLAYER-WRITE-AUTHORITY | DENY | unresolved |
+| lore_state | UNRESOLVED:LORE-STATE-OWNER | UNRESOLVED:LORE-WRITE-AUTHORITY | DENY | unresolved |
+| economy_state | UNRESOLVED:ECONOMY-STATE-OWNER | UNRESOLVED:ECONOMY-WRITE-AUTHORITY | DENY | unresolved |
 
-This registry is an architecture contract, not evidence that each authority is already implemented.
+These entries are architecture contracts, not implementation evidence.
 
-## 4. Aurora boundary
+## 4. Governance authority versus domain authority
+
+The existing governance/authority/authority-matrix.yaml is the governance decision-rights SSOT. It MUST NOT be interpreted as proof that a domain runtime owns state.
+
+Governance Authority ≠ Domain Write Authority ≠ Capability ≠ Policy ≠ Authorization.
+
+## 5. Aurora boundary
 
 Aurora MAY READ, QUERY, PLAN and PROPOSE. Aurora MAY EXECUTE only after capability and policy authorization.
 
 Aurora MUST NOT directly mutate consensus, VM, Genesis, OS, kernel, governance or federated-memory state.
 
-## 5. Enforcement requirements
+## 6. Enforcement
 
-The reference implementation MUST make unauthorized direct mutation fail closed and produce auditable evidence containing at least actor, identity, capability, policy, target domain, operation, decision and result.
+Unauthorized direct mutation MUST fail closed and produce auditable evidence containing actor, identity, capability, policy, target domain, operation, decision and result.
 
-## 6. Evidence boundary
+## 7. Evidence boundary
 
 PRESENT, SPECIFIED, IMPLEMENTED, TESTED, CI-VERIFIED and E2E-VERIFIED are independent states. Documentation alone MUST NOT advance a domain beyond PRESENT/SPECIFIED.
