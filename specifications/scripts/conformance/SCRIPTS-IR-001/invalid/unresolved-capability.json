@@ -1,0 +1,14 @@
+{
+  "ir_version": "0.1.0",
+  "script_id": "demo.capability",
+  "module": {"name": "demo", "version": "0.1.0"},
+  "metadata": {"name": "Unresolved capability case"},
+  "imports": [], "types": [], "constants": [], "variables": [],
+  "functions": [{
+    "id": "main", "parameters": [], "return_type": {"kind": "unit"},
+    "effects": ["CAP_NOT_REGISTERED"],
+    "body": [{"node_id": "action", "kind": "CallAction", "capabilities": ["CAP_NOT_REGISTERED"]}]
+  }],
+  "events": [], "capabilities": [],
+  "resource_limits": {}, "target_constraints": {}, "source_map": []
+}

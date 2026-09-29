@@ -1,0 +1,22 @@
+{
+  "ir_version": "0.1.0",
+  "script_id": "demo.hello",
+  "module": {"name": "demo", "version": "0.1.0"},
+  "metadata": {"name": "Minimal valid Script IR"},
+  "imports": [],
+  "types": [],
+  "constants": [],
+  "variables": [],
+  "functions": [{
+    "id": "main",
+    "parameters": [],
+    "return_type": {"kind": "unit"},
+    "effects": [],
+    "body": [{"node_id": "return_0", "kind": "Return"}]
+  }],
+  "events": [],
+  "capabilities": [],
+  "resource_limits": {"max_operations": 16, "max_call_depth": 4},
+  "target_constraints": {"deterministic": true},
+  "source_map": []
+}

@@ -1,0 +1,251 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://a-townchain-okosystems/standards/schemas/scripts/scripts-ir-0.1.schema.json",
+  "title": "Scripts-KI Semantic Script IR 0.1.0",
+  "description": "Machine-readable candidate schema for SCRIPTS-IR-001. Schema validation is necessary but not sufficient for semantic, capability, control-flow, resource, or canonical-serialization conformance.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "ir_version", "script_id", "module", "metadata", "imports", "types",
+    "constants", "variables", "functions", "events", "capabilities",
+    "resource_limits", "target_constraints", "source_map"
+  ],
+  "properties": {
+    "ir_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "script_id": {
+      "$ref": "#/$defs/identifier"
+    },
+    "module": {
+      "$ref": "#/$defs/module"
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1, "maxLength": 256},
+        "description": {"type": "string", "maxLength": 4096},
+        "author": {"type": "string", "maxLength": 256},
+        "tags": {"type": "array", "items": {"type": "string", "minLength": 1, "maxLength": 64}, "uniqueItems": true}
+      }
+    },
+    "imports": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/import"}
+    },
+    "types": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/typeDecl"}
+    },
+    "constants": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/binding"}
+    },
+    "variables": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/variable"}
+    },
+    "functions": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/function"}
+    },
+    "events": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/event"}
+    },
+    "capabilities": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/capabilityRequirement"}
+    },
+    "resource_limits": {
+      "$ref": "#/$defs/resourceLimits"
+    },
+    "target_constraints": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "targets": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
+        "deterministic": {"type": "boolean"},
+        "required_features": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true}
+      }
+    },
+    "source_map": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/sourceMapEntry"}
+    }
+  },
+  "$defs": {
+    "identifier": {
+      "type": "string",
+      "pattern": "^[A-Za-z_][A-Za-z0-9_.:-]{0,127}$"
+    },
+    "module": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "version"],
+      "properties": {
+        "name": {"$ref": "#/$defs/identifier"},
+        "version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"}
+      }
+    },
+    "import": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["module", "version_constraint", "symbols", "capabilities"],
+      "properties": {
+        "module": {"$ref": "#/$defs/identifier"},
+        "version_constraint": {"type": "string", "minLength": 1, "maxLength": 256},
+        "symbols": {"type": "array", "items": {"$ref": "#/$defs/identifier"}, "uniqueItems": true},
+        "capabilities": {"type": "array", "items": {"$ref": "#/$defs/identifier"}, "uniqueItems": true}
+      }
+    },
+    "typeRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind"],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": ["boolean","integer","unsigned_integer","float","string","bytes","handle","array","map","tuple","record","option","opaque","unit"]
+        },
+        "width": {"type": "integer", "enum": [8,16,32,64,128]},
+        "element": {"$ref": "#/$defs/typeRef"},
+        "key": {"$ref": "#/$defs/typeRef"},
+        "value": {"$ref": "#/$defs/typeRef"},
+        "name": {"$ref": "#/$defs/identifier"}
+      }
+    },
+    "typeDecl": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type"],
+      "properties": {
+        "id": {"$ref": "#/$defs/identifier"},
+        "type": {"$ref": "#/$defs/typeRef"}
+      }
+    },
+    "binding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "value"],
+      "properties": {
+        "id": {"$ref": "#/$defs/identifier"},
+        "type": {"$ref": "#/$defs/typeRef"},
+        "value": {}
+      }
+    },
+    "variable": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "mutability", "ownership"],
+      "properties": {
+        "id": {"$ref": "#/$defs/identifier"},
+        "type": {"$ref": "#/$defs/typeRef"},
+        "mutability": {"type": "string", "enum": ["immutable","mutable"]},
+        "ownership": {"type": "string", "enum": ["local","script_instance","world","game","external"]},
+        "initial_value": {}
+      }
+    },
+    "function": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "parameters", "return_type", "effects", "body"],
+      "properties": {
+        "id": {"$ref": "#/$defs/identifier"},
+        "parameters": {"type": "array", "items": {"$ref": "#/$defs/parameter"}},
+        "return_type": {"$ref": "#/$defs/typeRef"},
+        "effects": {"type": "array", "items": {"$ref": "#/$defs/identifier"}, "uniqueItems": true},
+        "body": {"type": "array", "items": {"$ref": "#/$defs/node"}}
+      }
+    },
+    "parameter": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type"],
+      "properties": {
+        "id": {"$ref": "#/$defs/identifier"},
+        "type": {"$ref": "#/$defs/typeRef"}
+      }
+    },
+    "event": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "payload", "producer_consumer_contract"],
+      "properties": {
+        "id": {"$ref": "#/$defs/identifier"},
+        "payload": {"type": "array", "items": {"$ref": "#/$defs/parameter"}},
+        "producer_consumer_contract": {"type": "string", "minLength": 1, "maxLength": 1024},
+        "ordering": {"type": "string", "enum": ["unspecified","source_order","deterministic"]}
+      }
+    },
+    "capabilityRequirement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["capability_id"],
+      "properties": {
+        "capability_id": {"$ref": "#/$defs/identifier"},
+        "scope": {"type": "object", "additionalProperties": true},
+        "reason": {"type": "string", "maxLength": 1024}
+      }
+    },
+    "resourceLimits": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "max_operations": {"type": "integer", "minimum": 0},
+        "max_call_depth": {"type": "integer", "minimum": 0},
+        "max_memory_bytes": {"type": "integer", "minimum": 0},
+        "max_storage_bytes": {"type": "integer", "minimum": 0},
+        "max_event_emissions": {"type": "integer", "minimum": 0},
+        "max_network_operations": {"type": "integer", "minimum": 0},
+        "max_execution_quanta": {"type": "integer", "minimum": 0}
+      }
+    },
+    "node": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["node_id", "kind"],
+      "properties": {
+        "node_id": {"$ref": "#/$defs/identifier"},
+        "kind": {
+          "type": "string",
+          "enum": ["Literal","VariableRef","BinaryOp","UnaryOp","Call","Index","FieldAccess","Cast","Await","Let","Assign","Block","If","While","ForEach","Return","EmitEvent","CallAction","Throw"]
+        },
+        "type": {"$ref": "#/$defs/typeRef"},
+        "capabilities": {"type": "array", "items": {"$ref": "#/$defs/identifier"}, "uniqueItems": true},
+        "inputs": {"type": "array", "items": {"type": "object", "additionalProperties": true}},
+        "attributes": {"type": "object", "additionalProperties": true}
+      }
+    },
+    "sourceMapEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["node_id", "source"],
+      "properties": {
+        "node_id": {"$ref": "#/$defs/identifier"},
+        "source": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["uri", "start"],
+          "properties": {
+            "uri": {"type": "string", "minLength": 1},
+            "start": {"$ref": "#/$defs/position"},
+            "end": {"$ref": "#/$defs/position"}
+          }
+        }
+      }
+    },
+    "position": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["line", "column"],
+      "properties": {
+        "line": {"type": "integer", "minimum": 1},
+        "column": {"type": "integer", "minimum": 1}
+      }
+    }
+  }
+}
