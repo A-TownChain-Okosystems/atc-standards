@@ -1,0 +1,42 @@
+{
+  "workflow_evidence": {
+    "workflow": "Maintenance Conformance",
+    "workflow_file": ".github/workflows/maintenance-conformance.yml",
+    "repository": "A-TownChain-Okosystems/atc-standards",
+    "trigger": "self-test",
+    "branch": "main",
+    "expected_sha": "0000000000000000000000000000000000000000",
+    "run": {
+      "id": 1,
+      "status": "SUCCESS",
+      "tested_sha": "0000000000000000000000000000000000000000",
+      "checkout_ref": "refs/heads/main",
+      "exact_sha": true,
+      "evidence_status": "ANALYZED"
+    },
+    "jobs": [
+      {
+        "id": 1,
+        "name": "workflow-evidence-validator",
+        "result": "PASS",
+        "exit_code": 0,
+        "runner": "ubuntu-latest",
+        "steps": [
+          {
+            "name": "validator-self-test",
+            "result": "PASS",
+            "exit_code": 0,
+            "error": null
+          }
+        ]
+      }
+    ],
+    "required_gates": [
+      {
+        "name": "workflow-evidence-validator",
+        "result": "PASS"
+      }
+    ],
+    "rerun": null
+  }
+}

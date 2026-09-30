@@ -1,0 +1,137 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://a-townchain-okosystems/standards/schemas/maintenance/workflow-evidence.schema.json",
+  "title": "ATC Workflow Job Evidence (ATC-STD-MAINT-019 / SCR-0129)",
+  "description": "Machine-readable Workflow -> Run -> Job -> Step -> Finding -> Contract -> RCA -> Fix -> Commit -> Exact-SHA Rerun -> Verification evidence.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["workflow_evidence"],
+  "properties": {
+    "workflow_evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["workflow", "repository", "expected_sha", "run", "jobs"],
+      "properties": {
+        "workflow": {"type": "string", "minLength": 1},
+        "workflow_id": {"type": "string", "minLength": 1},
+        "workflow_file": {"type": "string", "minLength": 1},
+        "repository": {"type": "string", "minLength": 1},
+        "trigger": {"type": "string", "minLength": 1},
+        "pull_request": {"type": ["integer", "null"], "minimum": 1},
+        "branch": {"type": ["string", "null"]},
+        "expected_sha": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+        "run": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["id", "status", "tested_sha", "checkout_ref", "exact_sha", "evidence_status"],
+          "properties": {
+            "id": {"type": "integer", "minimum": 1},
+            "status": {"type": "string", "enum": ["QUEUED", "IN_PROGRESS", "SUCCESS", "FAILURE", "CANCELLED", "SKIPPED"]},
+            "tested_sha": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+            "checkout_ref": {"type": "string", "minLength": 1},
+            "exact_sha": {"type": "boolean"},
+            "evidence_status": {"type": "string", "enum": ["UNANALYZED", "ANALYZED", "FIXED", "RERUNNING", "VERIFIED", "RESIDUAL"]}
+          }
+        },
+        "jobs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "name", "result", "exit_code", "steps"],
+            "properties": {
+              "id": {"type": "integer", "minimum": 1},
+              "name": {"type": "string", "minLength": 1},
+              "result": {"type": "string", "enum": ["PASS", "FAIL", "CANCELLED", "SKIPPED"]},
+              "exit_code": {"type": ["integer", "null"]},
+              "runner": {"type": ["string", "null"]},
+              "steps": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["name", "result"],
+                  "properties": {
+                    "name": {"type": "string", "minLength": 1},
+                    "result": {"type": "string", "enum": ["PASS", "FAIL", "CANCELLED", "SKIPPED"]},
+                    "exit_code": {"type": ["integer", "null"]},
+                    "error": {"type": ["string", "null"]}
+                  }
+                }
+              },
+              "findings": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["id", "component", "class", "error", "root_cause", "contract_impact", "status"],
+                  "properties": {
+                    "id": {"type": "string", "pattern": "^WF-[A-Z0-9-]+$"},
+                    "component": {"type": "string", "minLength": 1},
+                    "file": {"type": ["string", "null"]},
+                    "line": {"type": ["integer", "null"], "minimum": 1},
+                    "lines": {"type": ["string", "null"]},
+                    "symbol": {"type": ["string", "null"]},
+                    "class": {"type": "string", "minLength": 1},
+                    "error": {"type": "string", "minLength": 1},
+                    "root_cause": {"type": "string", "minLength": 1},
+                    "contract_impact": {"type": "string", "minLength": 1},
+                    "status": {"type": "string", "enum": ["UNANALYZED", "ANALYZED", "FIXED", "RERUNNING", "VERIFIED", "RESIDUAL"]}
+                  }
+                }
+              },
+              "architecture_contract": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["ssot", "expected_contract", "actual_implementation", "violation", "severity"],
+                "properties": {
+                  "ssot": {"type": "string", "minLength": 1},
+                  "expected_contract": {"type": "string", "minLength": 1},
+                  "actual_implementation": {"type": "string", "minLength": 1},
+                  "violation": {"type": "string", "minLength": 1},
+                  "severity": {"type": "string", "enum": ["P0", "P1", "P2", "P3", "P4"]}
+                }
+              },
+              "remediation": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["minimal_fix", "commit", "changed_files", "validation"],
+                "properties": {
+                  "minimal_fix": {"type": "string", "minLength": 1},
+                  "commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+                  "changed_files": {"type": "array", "items": {"type": "string"}},
+                  "validation": {"type": "string", "minLength": 1}
+                }
+              }
+            }
+          }
+        },
+        "required_gates": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["name", "result"],
+            "properties": {
+              "name": {"type": "string", "minLength": 1},
+              "result": {"type": "string", "enum": ["PASS", "FAIL", "SKIPPED", "NOT_RUN"]}
+            }
+          }
+        },
+        "rerun": {
+          "type": ["object", "null"],
+          "additionalProperties": false,
+          "required": ["run_id", "tested_sha", "exact_sha", "result", "status"],
+          "properties": {
+            "run_id": {"type": ["integer", "null"], "minimum": 1},
+            "tested_sha": {"type": ["string", "null"], "pattern": "^[0-9a-f]{40}$"},
+            "exact_sha": {"type": ["boolean", "null"]},
+            "result": {"type": ["string", "null"], "enum": ["PASS", "FAIL", "CANCELLED", "SKIPPED", null]},
+            "status": {"type": "string", "enum": ["RERUNNING", "VERIFIED", "RESIDUAL"]}
+          }
+        }
+      }
+    }
+  }
+}
