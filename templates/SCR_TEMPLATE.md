@@ -1,1 +1,206 @@
-# SCR-<NNNN> — <Change Contract Title>\n\n> **Schema:** v2 (SCR-0129)\n> **Governance state:** PROPOSED / PENDING until the applicable Owner / §9 gate is satisfied.\n> **Important:** APPROVED ≠ IMPLEMENTED ≠ VERIFIED ≠ CLOSED.\n\n## Machine-readable Change Contract\n\n```yaml\nschema_version: 2\nid: SCR-<NNNN>\naffected_standard: ATC-STD-<XXX>\nproposed_change: "<...>"\nmotivation: "<...>"\ncompatibility_impact: "<...>"\nsecurity_impact: "<...>"\nmigration_impact: "<...>"\ndecision: PENDING\ndate: YYYY-MM-DD\n\npurpose:\n  objective: "<...>"\n  problem_solved: "<...>"\n  system_benefit: "<...>"\n  user_consumer_benefit: "<...>"\n  technical_operational_benefit: "<...>"\n  expected_measurable_outcome: "<...>"\n\nnecessity:\n  required: true\n  classification: REQUIRED\n  requirement_source: "<REQ/STD/contract>"\n  blocking_consequence: "<...>"\n  affected_invariants: []\n  reason: "<...>"\n\nrationale:\n  why: "<...>"\n  why_now: "<...>"\n  root_cause: "<...>"\n  requirement_contract_reference: "<...>"\n  consequence_without_change: "<...>"\n  technical_rationale: "<...>"\n\nimprovement:\n  before: "<observable current state>"\n  after: "<expected target state>"\n  dimensions: {}\n  evidence: []\n\nsafety_security:\n  safe: false\n  security_impact: "<...>"\n  safety_impact: "<...>"\n  attack_surface_change: "<...>"\n  authorization_capability_impact: "<...>"\n  cryptography_impact: "<...>"\n  secrets_credentials_impact: "<...>"\n  data_integrity: "<...>"\n  availability_reliability: "<...>"\n  compatibility_breaking_change: "<...>"\n  new_failure_modes: "<...>"\n  rollback_recovery: "<...>"\n  residual_risk: "<...>"\n  evidence: []\n\ncompleteness:\n  matrix: []\n  residual_risk: "<...>"\n\nevidence_separation:\n  error_evidence: []\n  finding_evidence: []\n  verification_evidence: []\n  exact_sha: ""\n\nlifecycle:\n  status: ANALYZED\n  implementation_state: NOT_STARTED\n  verification_state: NOT_VERIFIED\n  closure_assessment: OPEN\n  closure_decision: OPEN\n\nexisting_first:\n  performed: true\n  ssot: "<canonical SSOT>"\n  existing_artifacts: []\n  reuse_extend_consolidate_decision: "<reuse | extend | consolidate | new>"\n```\n\n## 1. Purpose\n\n### Objective\n<...>\n\n### Problem solved\n<...>\n\n### System benefit\n<...>\n\n### Expected measurable outcome\n<...>\n\n## 2. Necessity\n\n- **Required:** true / false\n- **Classification:** MANDATORY / REQUIRED / CONDITIONAL / OPTIONAL / REJECTED\n- **Requirement source:** <...>\n- **Blocking consequence:** <...>\n- **Affected invariants:** <...>\n- **Reason:** <...>\n\n## 3. Rationale\n\n- **Why:** <...>\n- **Why now:** <...>\n- **Root cause:** <...>\n- **Requirement / contract:** <...>\n- **Consequence without change:** <...>\n- **Technical rationale:** <...>\n\nCanonical chain: `Requirement → Problem → Root Cause → Consequence → Required Change`\n\n## 4. Improvement — Before / After\n\n| Dimension | Before | After | Evidence |\n|---|---|---|---|\n| Correctness | | | |\n| Security | | | |\n| Reliability | | | |\n| Performance | | | |\n| Maintainability | | | |\n| Interoperability | | | |\n| Determinism | | | |\n| Observability | | | |\n| Operability | | | |\n| Compatibility | | | |\n\nOnly evidence-backed improvements are claims. Non-applicable dimensions are **N/A**, not PASS.\n\n## 5. Safety & Security\n\nDocument security/safety impact, attack-surface changes, authorization/capability effects, cryptography, secrets, data integrity, availability/reliability, compatibility, new failure modes, rollback/recovery and residual risk.\n\n> `safe: true` without supporting evidence is not a valid safety/security verification.\n\n## 6. Completeness Matrix\n\nThe matrix is authoritative for closure assessment. Every required area must be `DONE`; non-required areas must be explicitly `N/A`.\n\n| Area | Required | Status | Evidence |\n|---|---:|---|---|\n| Architecture / SSOT | | | |\n| Specification / Contract | | | |\n| Source Code | | | |\n| API | | | |\n| ABI / Wire Format | | | |\n| State / Storage | | | |\n| Security | | | |\n| Tests | | | |\n| Integration | | | |\n| CI/CD | | | |\n| Documentation | | | |\n| Migration | | | |\n| Compatibility | | | |\n| Release | | | |\n| Audit | | | |\n\n## 7. Evidence Separation\n\n**Error Evidence ≠ Finding Evidence ≠ Verification Evidence.**\n\n- Error Evidence: raw failure/log/observed error.\n- Finding Evidence: evidence establishing a governed finding and its scope.\n- Verification Evidence: independent evidence that the claimed fix/requirement is satisfied.\n\nFor CI-relevant changes, Verification Evidence MUST reference the exact verified SHA.\n\n## 8. Lifecycle / Closure\n\n`UNANALYZED → ANALYZED → PLANNED → IMPLEMENTING → FIXED → RERUNNING → VERIFIED → CLOSED`\n\nAlternative states: `REJECTED`, `FAILED`, `RESIDUAL`.\n\nRules:\n- `FIXED ≠ VERIFIED`\n- `PASS ≠ VERIFIED`\n- `IMPLEMENTED ≠ COMPLETE`\n- CI-relevant `VERIFIED` requires Exact-SHA Evidence.\n- `CLOSED` requires a completed Completeness Assessment.\n- `APPROVED ≠ IMPLEMENTED ≠ VERIFIED ≠ CLOSED`.\n\n## 9. Existing-First\n\nRecord existing equivalent, SSOT, dependencies, reuse/extend/consolidate decision, and why a new artifact is necessary if applicable.\n\n## 10. Acceptance / Closure Gate\n\nA SCR is closable only when Purpose, Necessity, Rationale, Impact, Improvement, Safety/Security, required Implementation, Tests, separated Evidence, Completeness, SSOT/Documentation sync, Residual Risk and required Human/Audit Gates are satisfied.\n\n## 11. Governance Decision\n\n- Decision: `PENDING / ACCEPTED / REJECTED`\n- Owner / §9 reference: `<required for normative approval>`\n- Verification reference: `<Exact-SHA / audit evidence>`\n
+# SCR-<NNNN> — <Change Contract Title>
+
+> **Schema:** v2 (SCR-0129)
+> **Governance state:** PROPOSED / PENDING until the applicable Owner / §9 gate is satisfied.
+> **Important:** APPROVED ≠ IMPLEMENTED ≠ VERIFIED ≠ CLOSED.
+
+## Machine-readable Change Contract
+
+```yaml
+schema_version: 2
+id: SCR-<NNNN>
+affected_standard: ATC-STD-<XXX>
+proposed_change: "<...>"
+motivation: "<...>"
+compatibility_impact: "<...>"
+security_impact: "<...>"
+migration_impact: "<...>"
+decision: PENDING
+date: YYYY-MM-DD
+
+purpose:
+  objective: "<...>"
+  problem_solved: "<...>"
+  system_benefit: "<...>"
+  user_consumer_benefit: "<...>"
+  technical_operational_benefit: "<...>"
+  expected_measurable_outcome: "<...>"
+
+necessity:
+  required: true
+  classification: REQUIRED
+  requirement_source: "<REQ/STD/contract>"
+  blocking_consequence: "<...>"
+  affected_invariants: []
+  reason: "<...>"
+
+rationale:
+  why: "<...>"
+  why_now: "<...>"
+  root_cause: "<...>"
+  requirement_contract_reference: "<...>"
+  consequence_without_change: "<...>"
+  technical_rationale: "<...>"
+
+improvement:
+  before: "<observable current state>"
+  after: "<expected target state>"
+  dimensions: {}
+  evidence: []
+
+safety_security:
+  safe: false
+  security_impact: "<...>"
+  safety_impact: "<...>"
+  attack_surface_change: "<...>"
+  authorization_capability_impact: "<...>"
+  cryptography_impact: "<...>"
+  secrets_credentials_impact: "<...>"
+  data_integrity: "<...>"
+  availability_reliability: "<...>"
+  compatibility_breaking_change: "<...>"
+  new_failure_modes: "<...>"
+  rollback_recovery: "<...>"
+  residual_risk: "<...>"
+  evidence: []
+
+completeness:
+  matrix: []
+  residual_risk: "<...>"
+
+evidence_separation:
+  error_evidence: []
+  finding_evidence: []
+  verification_evidence: []
+  exact_sha: ""
+
+lifecycle:
+  status: ANALYZED
+  implementation_state: NOT_STARTED
+  verification_state: NOT_VERIFIED
+  closure_assessment: OPEN
+  closure_decision: OPEN
+
+existing_first:
+  performed: true
+  ssot: "<canonical SSOT>"
+  existing_artifacts: []
+  reuse_extend_consolidate_decision: "<reuse | extend | consolidate | new>"
+```
+
+## 1. Purpose
+
+### Objective
+<...>
+
+### Problem solved
+<...>
+
+### System benefit
+<...>
+
+### Expected measurable outcome
+<...>
+
+## 2. Necessity
+
+- **Required:** true / false
+- **Classification:** MANDATORY / REQUIRED / CONDITIONAL / OPTIONAL / REJECTED
+- **Requirement source:** <...>
+- **Blocking consequence:** <...>
+- **Affected invariants:** <...>
+- **Reason:** <...>
+
+## 3. Rationale
+
+- **Why:** <...>
+- **Why now:** <...>
+- **Root cause:** <...>
+- **Requirement / contract:** <...>
+- **Consequence without change:** <...>
+- **Technical rationale:** <...>
+
+Canonical chain: `Requirement → Problem → Root Cause → Consequence → Required Change`
+
+## 4. Improvement — Before / After
+
+| Dimension | Before | After | Evidence |
+|---|---|---|---|
+| Correctness | | | |
+| Security | | | |
+| Reliability | | | |
+| Performance | | | |
+| Maintainability | | | |
+| Interoperability | | | |
+| Determinism | | | |
+| Observability | | | |
+| Operability | | | |
+| Compatibility | | | |
+
+Only evidence-backed improvements are claims. Non-applicable dimensions are **N/A**, not PASS.
+
+## 5. Safety & Security
+
+Document security/safety impact, attack-surface changes, authorization/capability effects, cryptography, secrets, data integrity, availability/reliability, compatibility, new failure modes, rollback/recovery and residual risk.
+
+> `safe: true` without supporting evidence is not a valid safety/security verification.
+
+## 6. Completeness Matrix
+
+The matrix is authoritative for closure assessment. Every required area must be `DONE`; non-required areas must be explicitly `N/A`.
+
+| Area | Required | Status | Evidence |
+|---|---:|---|---|
+| Architecture / SSOT | | | |
+| Specification / Contract | | | |
+| Source Code | | | |
+| API | | | |
+| ABI / Wire Format | | | |
+| State / Storage | | | |
+| Security | | | |
+| Tests | | | |
+| Integration | | | |
+| CI/CD | | | |
+| Documentation | | | |
+| Migration | | | |
+| Compatibility | | | |
+| Release | | | |
+| Audit | | | |
+
+## 7. Evidence Separation
+
+**Error Evidence ≠ Finding Evidence ≠ Verification Evidence.**
+
+- Error Evidence: raw failure/log/observed error.
+- Finding Evidence: evidence establishing a governed finding and its scope.
+- Verification Evidence: independent evidence that the claimed fix/requirement is satisfied.
+
+For CI-relevant changes, Verification Evidence MUST reference the exact verified SHA.
+
+## 8. Lifecycle / Closure
+
+`UNANALYZED → ANALYZED → PLANNED → IMPLEMENTING → FIXED → RERUNNING → VERIFIED → CLOSED`
+
+Alternative states: `REJECTED`, `FAILED`, `RESIDUAL`.
+
+Rules:
+- `FIXED ≠ VERIFIED`
+- `PASS ≠ VERIFIED`
+- `IMPLEMENTED ≠ COMPLETE`
+- CI-relevant `VERIFIED` requires Exact-SHA Evidence.
+- `CLOSED` requires a completed Completeness Assessment.
+- `APPROVED ≠ IMPLEMENTED ≠ VERIFIED ≠ CLOSED`.
+
+## 9. Existing-First
+
+Record existing equivalent, SSOT, dependencies, reuse/extend/consolidate decision, and why a new artifact is necessary if applicable.
+
+## 10. Acceptance / Closure Gate
+
+A SCR is closable only when Purpose, Necessity, Rationale, Impact, Improvement, Safety/Security, required Implementation, Tests, separated Evidence, Completeness, SSOT/Documentation sync, Residual Risk and required Human/Audit Gates are satisfied.
+
+## 11. Governance Decision
+
+- Decision: `PENDING / ACCEPTED / REJECTED`
+- Owner / §9 reference: `<required for normative approval>`
+- Verification reference: `<Exact-SHA / audit evidence>`
