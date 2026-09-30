@@ -1,8 +1,10 @@
-# Schema fuer Standard Change Requests (ATC-STD-000 §14)
+# Machine-readable SCR Change Contract schema.
+# SCR-0129 implementation branch: normative activation remains gated by Owner / §9.
 type: object
 required: [id, affected_standard, proposed_change, motivation, decision]
 properties:
   id: {type: string, pattern: "^SCR-[0-9]{4}$"}
+  schema_version: {type: integer, enum: [1, 2]}
   affected_standard: {type: string, pattern: "^ATC-STD-[0-9]{3,}$"}
   proposed_change: {type: string}
   motivation: {type: string}
@@ -11,3 +13,112 @@ properties:
   migration_impact: {type: string}
   decision: {enum: [ACCEPTED, REJECTED, PENDING]}
   date: {type: string, format: date}
+  purpose:
+    type: object
+    required: [objective, problem_solved, system_benefit]
+    properties:
+      objective: {type: string}
+      problem_solved: {type: string}
+      system_benefit: {type: string}
+      user_consumer_benefit: {type: string}
+      technical_operational_benefit: {type: string}
+      expected_measurable_outcome: {type: string}
+  necessity:
+    type: object
+    required: [required, classification, reason]
+    properties:
+      required: {type: boolean}
+      classification: {enum: [MANDATORY, REQUIRED, CONDITIONAL, OPTIONAL, REJECTED]}
+      requirement_source: {type: string}
+      blocking_consequence: {type: string}
+      affected_invariants: {type: array, items: {type: string}}
+      reason: {type: string}
+  rationale:
+    type: object
+    required: [why, why_now, consequence_without_change, technical_rationale]
+    properties:
+      why: {type: string}
+      why_now: {type: string}
+      root_cause: {type: string}
+      requirement_contract_reference: {type: string}
+      consequence_without_change: {type: string}
+      technical_rationale: {type: string}
+  improvement:
+    type: object
+    required: [before, after, dimensions]
+    properties:
+      before: {type: string}
+      after: {type: string}
+      dimensions:
+        type: object
+        additionalProperties:
+          type: object
+          required: [status]
+          properties:
+            status: {enum: [IMPROVED, UNCHANGED, DEGRADED, N_A]}
+            evidence: {type: string}
+            metric: {type: string}
+      evidence: {type: array, items: {type: string}}
+  safety_security:
+    type: object
+    required: [security_impact, attack_surface_change, data_integrity, availability_reliability, new_failure_modes, rollback_recovery, residual_risk]
+    properties:
+      safe: {type: boolean}
+      security_impact: {type: string}
+      safety_impact: {type: string}
+      attack_surface_change: {type: string}
+      authorization_capability_impact: {type: string}
+      cryptography_impact: {type: string}
+      secrets_credentials_impact: {type: string}
+      data_integrity: {type: string}
+      availability_reliability: {type: string}
+      compatibility_breaking_change: {type: string}
+      new_failure_modes: {type: string}
+      rollback_recovery: {type: string}
+      residual_risk: {type: string}
+      evidence: {type: array, items: {type: string}}
+  completeness:
+    type: object
+    required: [matrix]
+    properties:
+      matrix:
+        type: array
+        items:
+          type: object
+          required: [area, required, status, evidence]
+          properties:
+            area:
+              enum: [ARCHITECTURE_SSOT, SPECIFICATION_CONTRACT, SOURCE_CODE, API, ABI_WIRE_FORMAT, STATE_STORAGE, SECURITY, TESTS, INTEGRATION, CI_CD, DOCUMENTATION, MIGRATION, COMPATIBILITY, RELEASE, AUDIT]
+            required: {type: boolean}
+            status: {enum: [OPEN, DONE, N_A]}
+            evidence: {type: string}
+      residual_risk: {type: string}
+  evidence_separation:
+    type: object
+    properties:
+      error_evidence: {type: array, items: {type: string}}
+      finding_evidence: {type: array, items: {type: string}}
+      verification_evidence: {type: array, items: {type: string}}
+      exact_sha: {type: string}
+  lifecycle:
+    type: object
+    properties:
+      status: {enum: [UNANALYZED, ANALYZED, PLANNED, IMPLEMENTING, FIXED, RERUNNING, VERIFIED, CLOSED, REJECTED, FAILED, RESIDUAL]}
+      implementation_state: {enum: [NOT_STARTED, IN_PROGRESS, IMPLEMENTED]}
+      verification_state: {enum: [NOT_VERIFIED, VERIFIED]}
+      closure_assessment: {enum: [OPEN, COMPLETE, INCOMPLETE]}
+      closure_decision: {enum: [OPEN, CLOSED, REJECTED]}
+  existing_first:
+    type: object
+    properties:
+      performed: {type: boolean}
+      ssot: {type: string}
+      existing_artifacts: {type: array, items: {type: string}}
+      reuse_extend_consolidate_decision: {type: string}
+allOf:
+  - if:
+      properties:
+        schema_version: {const: 2}
+      required: [schema_version]
+    then:
+      required: [purpose, necessity, rationale, improvement, safety_security, completeness, evidence_separation, lifecycle, existing_first]
