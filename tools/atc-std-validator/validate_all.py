@@ -742,6 +742,12 @@ def main():
             [sys.executable, os.path.join(HERE, "tests", "test_ci_dependency_governance.py")],
         ),
     ]
+    # SCR-0129 v2 Change-Request enforcement
+    stages.append((
+        "E-6",
+        "SCR v2 Enforcement (SCR-0129)",
+        [sys.executable, os.path.join(ROOT, "tools", "scr-validator", "validate_scr.py")],
+    ))
     for sid, name, cmd in stages:
         try:
             r = subprocess.run(cmd, capture_output=True, text=True)
