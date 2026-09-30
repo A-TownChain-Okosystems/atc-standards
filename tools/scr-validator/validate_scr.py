@@ -64,7 +64,7 @@ def validate(p):
   for a,b in(("error_evidence","finding_evidence"),("error_evidence","verification_evidence"),("finding_evidence","verification_evidence")):
    if sets[a]&sets[b]:e.append(a+" overlaps "+b)
  l=d.get("lifecycle")
- if not isinstance(l,dict) or l.get("status") not in LIFE:e.append("lifecycle.status invalid")
+ if not isinstance(l,dict) or l.get("status") not in LIFE:e.append("lifecycle.status invalid")\n if isinstance(l,dict):\n  if l.get("implementation_state") not in {"NOT_STARTED","IN_PROGRESS","IMPLEMENTED"}:e.append("implementation_state invalid")\n  if l.get("verification_state") not in {"NOT_VERIFIED","VERIFIED"}:e.append("verification_state invalid")\n  if l.get("closure_assessment") not in {"OPEN","COMPLETE","INCOMPLETE"}:e.append("closure_assessment invalid")\n  if l.get("closure_decision") not in {"OPEN","CLOSED","REJECTED"}:e.append("closure_decision invalid")
  else:
   if l.get("status")=="VERIFIED" and l.get("verification_state")!="VERIFIED":e.append("VERIFIED requires verification_state=VERIFIED")
   if l.get("status")!="VERIFIED" and l.get("verification_state")=="VERIFIED":e.append("non-VERIFIED state cannot claim verification")
