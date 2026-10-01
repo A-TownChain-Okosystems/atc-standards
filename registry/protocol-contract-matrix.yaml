@@ -4,6 +4,9 @@ status: approved-contract
 purpose: "Canonical interface inventory for mandatory ATC protocol families."
 ssot_rule: "Specification and interface contracts live in atc-standards; implementations remain in owning component repositories."
 evidence_rule: "SPEC -> INTERFACE -> IMPLEMENTATION -> TEST -> CI -> EXACT_SHA -> E2E"
+execution_contracts:
+  vm_gas: ATC-VM-GAS-001
+  transaction_domain: ATC-STD-600@1.3.0
 families:
   - id: NETWORK_P2P
     canonical_interface: atc.protocol.network_p2p.v1
