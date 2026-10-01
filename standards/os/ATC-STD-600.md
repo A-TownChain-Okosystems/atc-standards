@@ -32,8 +32,8 @@ standard:
 # ATC-STD-600 — Chain Identity & Network Identification
 
 > **Version:** 1.4.0  
-> **Status:** PROPOSED  
- > **Lifecycle:** PROPOSED  
+ > **Status:** PROPOSED  
+> **Lifecycle:** PROPOSED  
 > **Role:** Root Specification  
 > **Scope:** A-TownChain Core  
 > **Implementation:** SPECIFICATION_ONLY
@@ -504,7 +504,7 @@ Scope: A-TownChain Core
 Implementation: PENDING APPROVAL
 ```
 
-No further semantic changes are authorized within v1.0.0. Corrections that alter semantics require a governed standard revision.
+This v1.4.0 proposal itself is the governed semantic revision; further semantic changes require a subsequent governed standard revision.
 
 ## 18. Changelog
 
