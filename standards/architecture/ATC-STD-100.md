@@ -65,9 +65,7 @@ Kette: ShivaCore → Rust → ATC Runtime → ATC-VM → A-TownChain Node → Co
   ersetzen; der ATCLang-Compiler/Toolchain selbst SOLLTE Rust-first sein (AD-021).
 - **C** DARF nur an einer nachgewiesenen Hardware-/Vendor-/ABI-Grenze eingesetzt werden. Wenn Rust die konkrete Grenze vollständig abbilden kann, MUSS Rust verwendet werden. Die Begründung MUSS technisch sein, nicht „C ist schnell“.
 - **Assembly** DARF nur verwendet werden, wenn Rust die konkrete CPU-/ABI-Operation nicht vollständig abbilden kann: Boot Entry, CPU-Initialization, Trap/Interrupt Entry, Context Switching oder unvermeidbare Registeroperationen. Assembly MUSS NICHT normale Business Logic enthalten.
-- **C++** DARF nur bei zwingend benötigten existierenden High-Performance-/
-  GPU-/Krypto-/ZKP-Libraries und externen Engines eingesetzt werden; für neue
-  ATC-Kernkomponenten MUSS Rust gewählt werden.
+- **C++** DARF nur als Boundary zu einer zwingend benötigten bestehenden externen Bibliothek/Engine eingesetzt werden. Neue ATC-Kernkomponenten MUSS Rust implementieren.
 - **Python** DARF für AI/ML-Research, Prototyping, Analyse, Testautomation und Tooling eingesetzt werden. Für produktive Runtime-, Security-, Consensus- oder deterministische Ausführung MUSS Rust verwendet werden, sofern keine dokumentierte technische Boundary dagegen spricht.
 - **TypeScript** ist die Standard-Frontend-/UI-Sprache dort, wo Browser-/JS-Interoperabilität erforderlich ist. Security-, Protocol-, SDK-Core- und Runtime-Logik MUSS außerhalb dieser UI-Grenze Rust bleiben.
 - **JavaScript** SOLLTE vermieden werden (nur Legacy-/Runtime-Zwang).
@@ -124,9 +122,9 @@ Abweichungen von der Kaskade MÜSSEN als Finding (ATC-STD-BUG-001) oder Exceptio
 | atc-interop | Rust | Adapter je Protokoll |
 | atc-wallet | Rust (Core) | TypeScript (UI), WASM (Browser) |
 | atc-indexer | Rust (Core) | SQL (Database) |
-| atc-explorer | TypeScript (Frontend) | Rust oder TypeScript (Backend) |
-| atc-marketplace | TypeScript (Frontend) | ATCLang (On-chain Logic) |
-| atc-launchpad | TypeScript + ATCLang | Rust/TypeScript (Backend) |
+| atc-explorer | Rust (Backend/Core) | TypeScript (Frontend) |
+| atc-marketplace | Rust (Core/Backend) | TypeScript (Frontend), ATCLang (On-chain Logic) |
+| atc-launchpad | Rust (Core/Backend) | TypeScript (Frontend), ATCLang (On-chain Logic) |
 | atc-contracts | ATCLang | — |
 | aurora-ai | Rust (Production Runtime/Authority) | Python (Research/Model Tooling), TypeScript (UI) |
 | globus-os | Rust (System) | TypeScript (UI); Kernel: ShivaCore; AI: Aurora |
