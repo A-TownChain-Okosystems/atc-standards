@@ -17,7 +17,11 @@ families:
     canonical_interface: atc.protocol.identity_trust.v1
     required: true
     primitives: [identity_key, authentication, trust_binding, key_rotation, revocation]
-    implementation_owner: atc-standards+identity_owner
+    implementation_owner: globus-os
+    implementation_binding:
+      paths: [system/security/src/identity.rs, system/security/src/lib.rs]
+      evidence_status: ANALYZED
+      required_followup: identity_trust_conformance_vectors
   - id: STATE_SYNC
     canonical_interface: atc.protocol.state_sync.v1
     required: true
@@ -40,6 +44,10 @@ families:
     required: true
     primitives: [capability, delegation, policy, deny_by_default, audit_binding]
     implementation_owner: globus-os
+    implementation_binding:
+      paths: [system/security/src/lib.rs, system/security/src/capability_registry.rs]
+      evidence_status: ANALYZED
+      required_followup: capability_policy_conformance_vectors
   - id: INTEROP_VERSIONING
     canonical_interface: atc.protocol.interop_versioning.v1
     required: true
