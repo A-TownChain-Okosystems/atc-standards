@@ -1,0 +1,52 @@
+schema_version: "1.0.0"
+contract: ATC-PROTOCOL-CONTRACT-MATRIX-001
+status: approved-contract
+purpose: "Canonical interface inventory for mandatory ATC protocol families."
+ssot_rule: "Specification and interface contracts live in atc-standards; implementations remain in owning component repositories."
+evidence_rule: "SPEC -> INTERFACE -> IMPLEMENTATION -> TEST -> CI -> EXACT_SHA -> E2E"
+families:
+  - id: NETWORK_P2P
+    canonical_interface: atc.protocol.network_p2p.v1
+    required: true
+    primitives: [peer_identity, handshake, discovery, transport, block_propagation, tx_propagation, replay_protection, rate_limit]
+    implementation_owner: atc-node
+  - id: IDENTITY_TRUST
+    canonical_interface: atc.protocol.identity_trust.v1
+    required: true
+    primitives: [identity_key, authentication, trust_binding, key_rotation, revocation]
+    implementation_owner: atc-standards+identity_owner
+  - id: STATE_SYNC
+    canonical_interface: atc.protocol.state_sync.v1
+    required: true
+    primitives: [state_root, snapshot, range_sync, consistency_check, finality_boundary]
+    implementation_owner: a-townchain
+  - id: TRANSACTION
+    canonical_interface: atc.protocol.transaction.v2
+    required: true
+    primitives: [canonical_encoding, domain_separator, nonce, amount_u128, signature, replay_protection]
+    implementation_owner: a-townchain
+  - id: CAPABILITY_POLICY
+    canonical_interface: atc.protocol.capability_policy.v1
+    required: true
+    primitives: [capability, delegation, policy, deny_by_default, audit_binding]
+    implementation_owner: globus-os
+  - id: INTEROP_VERSIONING
+    canonical_interface: atc.protocol.interop_versioning.v1
+    required: true
+    primitives: [protocol_version, vm_version, feature_bits, compatibility_matrix, negotiation, downgrade_policy]
+    implementation_owner: atc-standards
+  - id: FAILURE_RECOVERY
+    canonical_interface: atc.protocol.failure_recovery.v1
+    required: true
+    primitives: [error_code, rollback, restore, failover, replay, recovery_point, recovery_evidence]
+    implementation_owner: a-townchain
+  - id: AUDIT_EVIDENCE
+    canonical_interface: atc.protocol.audit_evidence.v1
+    required: true
+    primitives: [source_sha, run_id, job_id, step_id, log_ref, result, status_transition]
+    implementation_owner: a-townchain-ecosystem
+conformance:
+  minimum_level: BRONZE
+  required_categories: [canonical_serialization, positive, negative, malformed_input, compatibility, determinism, security_basis, evidence_binding]
+  release_requires_exact_sha: true
+  no_file_existence_pass: true
