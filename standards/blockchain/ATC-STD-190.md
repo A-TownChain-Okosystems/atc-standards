@@ -58,7 +58,7 @@ Dieser Standard adressiert **Block** im Katalog-Slot ATC-STD-190 der Familie Blo
 (FAM-11); die Zuordnung folgt registry/framework.yaml (S-21) und darf nur via SCR
 geändert werden.
 
-Blockchain-Kernschicht: a-townchain (L3, Chain-ID 658467), Kernel-Kopplung K14 (P2P-Consensus Foundation) und K16 (DAG+PoH+Validator+Voting+Finality).
+Blockchain-Kernschicht: a-townchain (L2, Chain-ID 658467). Das Consensus-Design bleibt SPEC-DRAFT; konkrete PoH/PoS/PoW/PoI-Kombinationen sind nicht eingefroren und dürfen nicht als finale Implementierung dargestellt werden.
 
 **Katalog-Referenz:** keine zusätzliche Katalog-Notiz; Verortung ausschließlich über Familie und Slot.
 
