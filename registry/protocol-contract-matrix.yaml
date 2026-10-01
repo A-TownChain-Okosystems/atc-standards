@@ -25,6 +25,13 @@ families:
     required: true
     primitives: [canonical_encoding, domain_separator, nonce, amount_u128, signature, replay_protection]
     implementation_owner: a-townchain
+    implementation_repositories: [a-townchain, atc-sdk, atc-wallet]
+    binding_requirements:
+      - canonical_signing_bytes
+      - amount_u128_end_to_end
+      - secp256k1_ecdsa_rfc6979_low_s
+      - compressed_public_key_33_bytes
+      - rust_typescript_wallet_golden_vectors
   - id: CAPABILITY_POLICY
     canonical_interface: atc.protocol.capability_policy.v1
     required: true
@@ -40,6 +47,11 @@ families:
     required: true
     primitives: [error_code, rollback, restore, failover, replay, recovery_point, recovery_evidence]
     implementation_owner: a-townchain
+    binding_requirements:
+      - canonical_state_transition_entrypoint
+      - state_root_validation
+      - deterministic_snapshot_or_range_sync
+      - exact_sha_conformance
   - id: AUDIT_EVIDENCE
     canonical_interface: atc.protocol.audit_evidence.v1
     required: true
