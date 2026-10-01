@@ -10,7 +10,7 @@ standard:
   authority: A-TownChain-Okosystems
   owner: "Standards Governance"
   created: "2026-09-14"
-  updated: "2026-09-21"
+  updated: "2026-10-02"
   normative: true
   classification: PUBLIC
   language: de-DE
@@ -200,11 +200,13 @@ Implementations MUST produce byte-identical signing input. Rust L1 kernel, Rust 
 
 ### 5.2 Signature algorithm
 
-The canonical L1 signature is Ed25519 over the exact V2 signing bytes.
+The canonical L1 transaction/account signature is ECDSA over secp256k1 using RFC6979 deterministic nonce generation, SHA-256, canonical low-S normalization, and a compressed 33-byte SEC1 public key.
 
-    signature = Ed25519_Sign(private_key, signing_bytes_v2)
+    signature = ECDSA_secp256k1_Sign_RFC6979_SHA256(private_key, signing_bytes_v2)
 
-Verification MUST operate on those same bytes. Hashing or field re-encoding before Ed25519 verification is not permitted unless explicitly defined by a future governed protocol revision.
+Verification MUST operate on those same bytes. Hashing or field re-encoding before verification is not permitted unless explicitly defined by a future governed protocol revision.
+
+Ed25519 remains a separate identity/P2P/DID security domain and MUST NOT be substituted for L1 transaction/account authentication.
 
 ### 5.3 Canonical transaction identity
 
