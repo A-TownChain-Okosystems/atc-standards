@@ -37,6 +37,22 @@ def scan(root):
         except Exception as e: errors.append(f"{p}: {e}")
     return out,errors
 
+def fingerprint(nodes):
+    return {key(x): x for x in nodes}
+
+def compare_nodes(base, head):
+    b, h = fingerprint(base), fingerprint(head)
+    added = sorted([h[k] for k in set(h)-set(b)], key=key)
+    removed = sorted([b[k] for k in set(b)-set(h)], key=key)
+    changed = []
+    for bk, bv in b.items():
+        candidates = [x for x in h.values() if x.get("ecosystem")==bv.get("ecosystem") and x.get("name")==bv.get("name")]
+        if candidates and not any(key(x)==bk for x in candidates):
+            for x in candidates:
+                if x.get("version") != bv.get("version"):
+                    changed.append({"from":bv,"to":x})
+    return added, removed, changed
+
 def key(x): return (x.get("ecosystem"),x.get("name"),x.get("version"))
 def graph(nodes,out):
     out.mkdir(parents=True,exist_ok=True); byname={}
