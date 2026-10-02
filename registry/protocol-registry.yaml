@@ -161,7 +161,7 @@ protocol-registry:
     status: planned
     priority: P1
     layer: L5
-    specification: Zu spezifizieren gem. ATC-STD-PROTOCOL-001 (SCR erforderlich)
+    specification: protocols/oracle/ATC-PROTO-ORACLE-001.md — Spezifikation v1.0.0: Source Identity, Observations, Attestation, Freshness, Ordering, Aggregation, Failure/Dispute Handling und Conformance; Status draft bis Exact-SHA-Conformance.
     note: Repo atc-oracle vorhanden
   - id: ATC-PROTO-ZKP-001
     name: ATC Zero Knowledge Protocol
