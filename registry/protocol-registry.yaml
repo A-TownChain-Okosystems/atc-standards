@@ -212,10 +212,10 @@ protocol-registry:
     name: ATC AI Agent Protocol
     domain: AI
     version: 1.0.0
-    status: planned
+    status: draft
     priority: P2
     layer: L2
-    specification: Zu spezifizieren gem. ATC-STD-PROTOCOL-001 (SCR erforderlich)
+    specification: protocols/ai/ATC-PROTO-AI-001.md — Spezifikation v1.0.0; bestehende ShivaCore-AI-Implementierung als Baseline; Aktivierung erst nach ABI/Determinismus/Conformance.
     note: aurora-ai (L2); Kopplung Kernel-Event-Bridge (ATC-M-003)
   - id: ATC-PROTO-AGENT-001
     name: ATC Agent-to-Agent Protocol
