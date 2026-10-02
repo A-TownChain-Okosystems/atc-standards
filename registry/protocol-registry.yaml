@@ -170,7 +170,7 @@ protocol-registry:
     status: planned
     priority: P1
     layer: L5
-    specification: Zu spezifizieren gem. ATC-STD-PROTOCOL-001 (SCR erforderlich)
+    specification: protocols/zkp/ATC-PROTO-ZKP-001.md — Spezifikation v1.0.0: Proof Envelope, Statement Binding, Verification, Replay-Schutz, Crypto-Agility, Resource Limits, Privacy und Conformance; Status draft bis Exact-SHA-Conformance.
     note: Repo atc-zkp vorhanden
   - id: ATC-PROTO-BRIDGE-001
     name: ATC Cross-Chain Bridge
