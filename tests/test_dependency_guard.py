@@ -40,6 +40,16 @@ def test_osv_advisory_exact_match():
     ad={"id":"GHSA-test","affected":[{"ecosystem":"npm","package":"foo","versions":["1.0.0"],"ranges":[]}]}
     assert dg.advisory_matches({"ecosystem":"npm","name":"foo","version":"1.0.0"},ad)==(True,"exact")
 
+def test_osv_snapshot_normalization():
+    import sys
+    sys.path.insert(0, str(ROOT / "tools"))
+    import osv_snapshot
+    raw=[{"id":"GHSA-test","aliases":["CVE-2099-0001"],"affected":[{"package":{"ecosystem":"npm","name":"foo"},"versions":["1.0.0"],"ranges":[]}]}]
+    out=osv_snapshot.normalize(raw)
+    assert out[0]["id"]=="GHSA-test"
+    assert out[0]["affected"][0]["ecosystem"]=="npm"
+    assert out[0]["affected"][0]["package"]=="foo"
+
 def test_spdx_sbom_module_imports():
     import sys
     sys.path.insert(0, str(ROOT / "tools"))
