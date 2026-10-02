@@ -14,9 +14,21 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 2
-      - name: Build dependency graph
+      - name: Build current dependency graph
         run: python3 tools/dependency_guard.py graph --out artifacts/dependency
+      - name: Build base dependency graph
+        if: github.event_name == 'pull_request'
+        shell: bash
+        run: |
+          rm -rf /tmp/atc-dependency-base
+          mkdir -p /tmp/atc-dependency-base
+          git archive HEAD^ | tar -x -C /tmp/atc-dependency-base
+          python3 tools/dependency_guard.py graph --root /tmp/atc-dependency-base --out /tmp/atc-dependency-base-artifact
+          cp /tmp/atc-dependency-base-artifact/dependency-graph.json artifacts/dependency/base-dependency-graph.json
       - name: Native dependency review
+        env:
+          ATC_DEP_BASE_REF: ${{ github.event.pull_request.base.sha }}
+          ATC_DEP_BASE_JSON: /tmp/atc-dependency-base-artifact/dependency-graph.json
         run: python3 tools/dependency_guard.py review --out artifacts/dependency
       - name: Upload dependency evidence
         if: always()
