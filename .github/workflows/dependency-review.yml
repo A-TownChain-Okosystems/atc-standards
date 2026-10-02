@@ -18,7 +18,7 @@ jobs:
         uses: actions/setup-python@v7
         with:
           python-version: "3.11"
-          check-latest: true
+          check-latest: false
       - name: Run dependency security unit tests
         run: python3 -m unittest discover -s tests -p "test_dependency_guard.py" -v
       - name: Build current dependency graph
