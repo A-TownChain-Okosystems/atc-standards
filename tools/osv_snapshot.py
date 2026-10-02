@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import argparse, hashlib, json
+import argparse, hashlib, json, re
 from pathlib import Path
 SCHEMA="ATC-DEP-ADVISORY-1"
 SEVERITIES={"critical","high","medium","low","unknown"}
@@ -38,7 +38,7 @@ def validate(payload):
     errors=[]
     if payload.get("schema")!=SCHEMA: errors.append("invalid advisory schema")
     source=payload.get("source")
-    if not isinstance(source,dict) or source.get("format")!="OSV" or not __import__("re").fullmatch(r"[0-9a-f]{64}",str(source.get("input_sha256",""))): errors.append("missing or invalid OSV snapshot provenance")
+    if not isinstance(source,dict) or source.get("format")!="OSV" or not re.fullmatch(r"[0-9a-f]{64}",str(source.get("input_sha256",""))): errors.append("missing or invalid OSV snapshot provenance")
     advisories=payload.get("advisories")
     if not isinstance(advisories,list): return errors+["advisories must be a list"]
     seen=set()
@@ -54,7 +54,12 @@ def validate(payload):
             if not x.get("package"): errors.append(f"advisory[{i}].affected[{j}] missing package")
             if not isinstance(x.get("ranges"),list) or not isinstance(x.get("versions"),list): errors.append(f"advisory[{i}].affected[{j}] invalid range/version lists")
             for k,r in enumerate(x.get("ranges") or []):
-                if not isinstance(r,dict) or not isinstance(r.get("events"),list) or not r.get("events"): errors.append(f"advisory[{i}].affected[{j}].ranges[{k}] invalid events")
+                if not isinstance(r,dict) or not isinstance(r.get("type"),str) or not r.get("type") or not isinstance(r.get("events"),list) or not r.get("events"):
+                    errors.append(f"advisory[{i}].affected[{j}].ranges[{k}] invalid type/events")
+                    continue
+                for e,ev in enumerate(r["events"]):
+                    if not isinstance(ev,dict) or not any(ev.get(name) is not None for name in ("introduced","fixed","last_affected")):
+                        errors.append(f"advisory[{i}].affected[{j}].ranges[{k}].events[{e}] invalid event")
     return errors
 
 def main():
