@@ -188,7 +188,7 @@ protocol-registry:
     status: planned
     priority: P1
     layer: L5
-    specification: Zu spezifizieren gem. ATC-STD-PROTOCOL-001 (SCR erforderlich)
+    specification: protocols/ibc/ATC-PROTO-IBC-001.md — Spezifikation v1.0.0: Channel Identity/Handshake, Packets, Commitments, Acknowledgements, Ordering, Timeouts, Capabilities, Recovery und Conformance; Status draft bis Exact-SHA-Conformance.
     note: Repo atc-interop vorhanden
   - id: ATC-PROTO-DATA-001
     name: ATC Data Layer Protocol
