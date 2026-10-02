@@ -95,14 +95,14 @@ Dabei prüfen sie:
 ### 2.2 Verschlüsselung
 | Spezifikation (docx) | Implementation (Code) | Status |
 |----------------------|----------------------|--------|
-| Noise Protocol Framework | ECDSA + SHA-256 | ⚠️ Abweichung |
+| Noise Protocol Framework | Ed25519-Nachrichtenauthentifizierung + SHA-256 | ⚠️ Abweichung |
 | Ende-zu-Ende Verschlüsselung | Signatur-basiert | ✅ Funktional äquivalent |
 
 **Implementation:**
-- `blockchain/wallet/ecdsa.py` — ECDSA-Signaturen für Nachrichten
+- P2P-Identity/Message-Auth — Ed25519-Signaturen; L1-TX-Signing bleibt separat ECDSA/secp256k1
 - `blockchain/wallet/keygen.py` — Schlüsselgenerierung
 - Jede Nachricht wird mit `signature` und `sender` Feld signiert
-- Empfänger validieren die ECDSA-Signatur vor der Verarbeitung
+- Empfänger validieren die Ed25519-Signatur vor der Verarbeitung
 
 > **Hinweis:** Das Noise Protocol Framework bietet Forward Secrecy auf
 > Verbindungsebene. Die aktuelle Implementation verwendet ECDSA-Signaturen
@@ -112,17 +112,19 @@ Dabei prüfen sie:
 ### 2.3 Node Identity
 | Spezifikation (docx) | Implementation (Code) | Status |
 |----------------------|----------------------|--------|
-| Ed25519-Schlüsselpaar | ECDSA (secp256k1) | ⚠️ Abweichung |
+| Ed25519-Schlüsselpaar | Ed25519 | ✅ Canonical P2P/DID Identity |
 | Kryptografische Identität Pflicht | Ja — ATC-Präfix Adressen | ✅ |
 
 **Implementation:**
-- `blockchain/wallet/keygen.py` — generiert Schlüsselpaare
-- Wallet-Adressen: `ATC` + 32 Zeichen (SHA-256 Derivation)
+- P2P/DID Identity-Key Provider — Ed25519
+- L1-TX-Wallet-Key — separat secp256k1/ECDSA gemäß ATC-TX-DOMAIN-V2
+- Wallet-Adressen werden ausschließlich aus dem kanonischen Wallet-Address-Vertrag abgeleitet
 - Ohne gültige Identität wird Verbindungsversuch abgelehnt
 
-> **Hinweis:** Ed25519 kann in einer zukünftigen Version als Alternative
-> unterstützt werden. Aktuell verwendet das Ökosystem ECDSA (secp256k1)
-> durchgehend für Konsistenz mit dem ATC-0002 Wallet-Standard.
+> **Krypto-Trennung:** Ed25519 ist für P2P/DID/Trust/Boot-Identität kanonisch.
+> L1-Transaktionen verwenden ausschließlich secp256k1/ECDSA gemäß
+> ATC-TX-DOMAIN-V2. Diese Schlüssel- und Signaturkontexte dürfen nicht
+> zusammengeführt werden.
 
 ---
 
@@ -167,8 +169,8 @@ definiert), um den aktuellen Netzwerkstatus zu erhalten.
 | Topology | P2P Mesh | P2P Mesh (ATCNet) | ✅ Übereinstimmung |
 | Transport | libp2p / QUIC | TCP/UDP (proprietär) | ⚠️ By design (non-POSIX) |
 | Discovery | mDNS + DHT | DNS Seeds + DHT (Kademlia) | ⚠️ mDNS noch nicht impl. |
-| Encryption | Noise Protocol | ECDSA + SHA-256 | ⚠️ Funktional äquivalent |
-| Identity | Ed25519 | ECDSA (secp256k1) | ⚠️ By design (ATC-0002) |
+| Encryption | Noise Protocol | Ed25519-Nachrichtenauthentifizierung + SHA-256 | ⚠️ Abweichung |
+| Identity | Ed25519 | Ed25519 | ✅ Canonical P2P/DID |
 | Handshake | Versions/Rolle/Genesis | HELLO/HELLO_ACK + Chain-ID | ✅ Übereinstimmung |
 | Bootstrap | Bootstrap-Nodes | DNS Seeds + Fallback | ✅ Übereinstimmung |
 
@@ -183,7 +185,8 @@ definiert), um den aktuellen Netzwerkstatus zu erhalten.
 
 - [ ] mDNS-Discovery für lokale Netzwerke ergänzen
 - [ ] ECDH Key Exchange für Forward Secrecy (Noise-Protocol-Äquivalent)
-- [ ] Ed25519 als alternative Identity-Option
+- [x] Ed25519 als kanonische P2P/DID-Identity festlegen
+- [x] L1-TX-Signaturen davon trennen: secp256k1/ECDSA + ATC-TX-DOMAIN-V2
 - [ ] QUIC-Support als Transport-Option (optional, non-blocking)
 
 ---
