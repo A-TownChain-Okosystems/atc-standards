@@ -13,16 +13,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 2
+          fetch-depth: 1
       - name: Build current dependency graph
         run: python3 tools/dependency_guard.py graph --out artifacts/dependency
-      - name: Build base dependency graph
+      - name: Build exact base dependency graph
         if: github.event_name == 'pull_request'
         shell: bash
+        env:
+          ATC_DEP_BASE_REF: ${{ github.event.pull_request.base.sha }}
         run: |
-          rm -rf /tmp/atc-dependency-base
+          set -euo pipefail
+          rm -rf /tmp/atc-dependency-base /tmp/atc-dependency-base-artifact
           mkdir -p /tmp/atc-dependency-base
-          git archive HEAD^ | tar -x -C /tmp/atc-dependency-base
+          git fetch --no-tags origin "$ATC_DEP_BASE_REF"
+          git archive "$ATC_DEP_BASE_REF" | tar -x -C /tmp/atc-dependency-base
           python3 tools/dependency_guard.py graph --root /tmp/atc-dependency-base --out /tmp/atc-dependency-base-artifact
           cp /tmp/atc-dependency-base-artifact/dependency-graph.json artifacts/dependency/base-dependency-graph.json
       - name: Native dependency review
