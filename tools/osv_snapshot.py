@@ -37,6 +37,8 @@ def normalize(raw):
 def validate(payload):
     errors=[]
     if payload.get("schema")!=SCHEMA: errors.append("invalid advisory schema")
+    source=payload.get("source")
+    if not isinstance(source,dict) or source.get("format")!="OSV" or not __import__("re").fullmatch(r"[0-9a-f]{64}",str(source.get("input_sha256",""))): errors.append("missing or invalid OSV snapshot provenance")
     advisories=payload.get("advisories")
     if not isinstance(advisories,list): return errors+["advisories must be a list"]
     seen=set()
@@ -61,7 +63,6 @@ def main():
     payload={"schema":SCHEMA,"source":{"format":"OSV","input_sha256":hashlib.sha256(p.read_bytes()).hexdigest()},"advisories":advisories}
     errors=validate(payload)
     if errors: raise SystemExit("invalid normalized advisory snapshot: "+"; ".join(errors))
-    Path(args.output).parent.mkdir(parents=True,exist_ok=True); Path(args.output).write_text(json.dumps(payload,indent=2,sort_keys=True)+"
-")
+    Path(args.output).parent.mkdir(parents=True,exist_ok=True); Path(args.output).write_text(json.dumps(payload,indent=2,sort_keys=True)+"\n")
     print(json.dumps({"schema":SCHEMA,"advisories":len(advisories),"input_sha256":payload["source"]["input_sha256"]},sort_keys=True))
 if __name__=="__main__": main()
