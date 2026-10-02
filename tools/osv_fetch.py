@@ -107,8 +107,9 @@ def main():
     Path(args.raw_output).parent.mkdir(parents=True,exist_ok=True); Path(args.raw_output).write_bytes(raw_bytes)
     advisories=[]
     for result in raw["results"]: advisories.extend(result.get("vulns",[]))
+    query_sha256=hashlib.sha256(body).hexdigest()
     payload={"schema":"ATC-DEP-ADVISORY-1",
-             "source":{"format":"OSV","endpoint":args.endpoint,"input_sha256":raw_sha,"raw_response_sha256":raw_sha},
+             "source":{"format":"OSV","endpoint":args.endpoint,"input_sha256":query_sha256,"raw_response_sha256":raw_sha},
              "advisories":normalize_snapshot(advisories)}
     errors=validate(payload)
     if errors: raise SystemExit("invalid OSV snapshot: "+"; ".join(errors))
