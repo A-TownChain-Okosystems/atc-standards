@@ -197,7 +197,7 @@ protocol-registry:
     status: planned
     priority: P2
     layer: L3/L5
-    specification: Zu spezifizieren gem. ATC-STD-PROTOCOL-001 (SCR erforderlich)
+    specification: protocols/data/ATC-PROTO-DATA-001.md — Spezifikation v1.0.0: Object Identity, Canonical Encoding/Chunking, Commitments, Availability, Retrieval, Retention, Integrity, Recovery und Conformance; Status draft bis Exact-SHA-Conformance.
     note: ''
   - id: ATC-PROTO-STORAGE-001
     name: ATC Decentralized Storage
