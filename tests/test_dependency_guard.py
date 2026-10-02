@@ -56,6 +56,21 @@ def test_osv_snapshot_validation_rejects_invalid_range_type_and_event():
     errors=osv_snapshot.validate(base)
     assert any("invalid event" in x for x in errors)
 
+def test_osv_fetch_cvss_numeric_severity_mapping():
+    import sys
+    sys.path.insert(0,str(ROOT/'tools')); import osv_fetch
+    assert osv_fetch.cvss_severity(9.8)=="critical"
+    assert osv_fetch.cvss_severity(8.1)=="high"
+    assert osv_fetch.cvss_severity(5.0)=="medium"
+    assert osv_fetch.cvss_severity(2.0)=="low"
+    assert osv_fetch.cvss_severity(11.0) is None
+
+def test_osv_fetch_preserves_explicit_osv_severity():
+    import sys
+    sys.path.insert(0,str(ROOT/'tools')); import osv_fetch
+    assert osv_fetch.normalize_severity({"database_specific":{"severity":"HIGH"}})=="high"
+    assert osv_fetch.normalize_severity({"database_specific":{"severity":"critical"}})=="critical"
+
 def test_base_head_diff_detects_add_remove_and_upgrade():
     import sys
     sys.path.insert(0,str(ROOT/'tools')); import dependency_guard as dg
