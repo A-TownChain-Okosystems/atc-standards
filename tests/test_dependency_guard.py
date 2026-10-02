@@ -129,6 +129,15 @@ def test_osv_snapshot_rejects_invalid_raw_response_provenance():
     payload={"schema":"ATC-DEP-ADVISORY-1","source":{"format":"OSV","input_sha256":"a"*64,"raw_response_sha256":"bad"},"advisories":[]}
     assert any("raw OSV response provenance" in e for e in osv_snapshot.validate(payload))
 
+def test_osv_fetch_query_provenance_is_distinct():
+    import hashlib, sys
+    sys.path.insert(0,str(ROOT/'tools')); import osv_fetch
+    body=b'{"queries":[]}'
+    query_sha=hashlib.sha256(body).hexdigest()
+    raw={"results":[]}
+    assert osv_fetch.validate_raw_response(raw,0)==[]
+    assert query_sha != hashlib.sha256((json.dumps(raw,sort_keys=True,separators=(',',':'))+'\\n').encode()).hexdigest()
+
 def test_osv_fetch_validates_response_shape():
     import sys
     sys.path.insert(0,str(ROOT/'tools')); import osv_fetch
