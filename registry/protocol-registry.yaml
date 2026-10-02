@@ -107,7 +107,7 @@ protocol-registry:
     status: planned
     priority: P1
     layer: L3
-    specification: Zu spezifizieren gem. ATC-STD-PROTOCOL-001 (SCR erforderlich)
+    specification: protocols/staking/ATC-PROTO-STAKING-001.md — Spezifikation v1.0.0: Bonding, Unbonding, Delegation, Validator-Backing, Rewards, Slashing, Replay-Schutz und deterministische State-Transitions; Status draft bis Exact-SHA-Conformance.
     note: ''
   - id: ATC-PROTO-MINING-001
     name: ATC Mining Protocol
