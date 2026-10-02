@@ -15,7 +15,7 @@ def scan(root):
                 import tomllib; data=tomllib.loads(p.read_text())
                 for x in data.get("package",[]):
                     if x.get("name") and x.get("version"):
-                        out.append({"ecosystem":"cargo","name":x["name"],"version":x["version"],"checksum":x.get("checksum"),"dependencies":[re.split(r"\\s+",d,1)[0] for d in x.get("dependencies",[])],"manifest":str(p.relative_to(root))})
+                        out.append({"ecosystem":"cargo","name":x["name"],"version":x["version"],"checksum":x.get("checksum"),"dependencies":[re.split(r"\s+",d,1)[0] for d in x.get("dependencies",[])],"manifest":str(p.relative_to(root))})
             elif eco=="npm":
                 data=json.loads(p.read_text())
                 for loc,x in (data.get("packages") or {}).items():
@@ -25,35 +25,32 @@ def scan(root):
                 for no,line in enumerate(p.read_text().splitlines(),1):
                     line=line.strip()
                     if not line or line.startswith("#"): continue
-                    m=re.match(r"([A-Za-z0-9_.-]+)\\s*==\\s*([^;\\s]+)",line)
+                    m=re.match(r"([A-Za-z0-9_.-]+)\s*==\s*([^;\s]+)",line)
                     if not m: errors.append(f"{p}:{no}: unpinned/unsupported requirement: {line}")
                     else: out.append({"ecosystem":"python","name":m.group(1).lower(),"version":m.group(2),"dependencies":[],"manifest":str(p.relative_to(root))})
             else:
                 seen=set()
                 for line in p.read_text().splitlines():
-                    m=re.match(r"([^\\s]+)\\s+(v[^\\s]+)\\s+h1:",line)
+                    m=re.match(r"([^\s]+)\s+(v[^\s]+)\s+h1:",line)
                     if m and (m.group(1),m.group(2)) not in seen:
                         seen.add((m.group(1),m.group(2))); out.append({"ecosystem":"go","name":m.group(1),"version":m.group(2),"dependencies":[],"manifest":str(p.relative_to(root))})
         except Exception as e: errors.append(f"{p}: {e}")
     return out,errors
 
-def fingerprint(nodes):
-    return {key(x): x for x in nodes}
-
-def compare_nodes(base, head):
-    b, h = fingerprint(base), fingerprint(head)
-    added = sorted([h[k] for k in set(h)-set(b)], key=key)
-    removed = sorted([b[k] for k in set(b)-set(h)], key=key)
-    changed = []
-    for bk, bv in b.items():
-        candidates = [x for x in h.values() if x.get("ecosystem")==bv.get("ecosystem") and x.get("name")==bv.get("name")]
+def key(x): return (x.get("ecosystem"),x.get("name"),x.get("version"))
+def fingerprint(nodes): return {key(x): x for x in nodes}
+def compare_nodes(base,head):
+    b,h=fingerprint(base),fingerprint(head)
+    added=sorted([h[k] for k in set(h)-set(b)],key=key)
+    removed=sorted([b[k] for k in set(b)-set(h)],key=key)
+    changed=[]
+    for bk,bv in b.items():
+        candidates=[x for x in h.values() if x.get("ecosystem")==bv.get("ecosystem") and x.get("name")==bv.get("name")]
         if candidates and not any(key(x)==bk for x in candidates):
             for x in candidates:
-                if x.get("version") != bv.get("version"):
-                    changed.append({"from":bv,"to":x})
-    return added, removed, changed
+                if x.get("version")!=bv.get("version"): changed.append({"from":bv,"to":x})
+    return added,removed,changed
 
-def key(x): return (x.get("ecosystem"),x.get("name"),x.get("version"))
 def graph(nodes,out):
     out.mkdir(parents=True,exist_ok=True); byname={}
     for n in nodes: byname.setdefault((n["ecosystem"],n["name"]),[]).append(n)
@@ -63,11 +60,22 @@ def graph(nodes,out):
         for dep in n.get("dependencies",[]):
             for (eco,name),vals in byname.items():
                 if name==dep:
-                    v=vals[0]; edges.append({"from":src,"to":f'{v["ecosystem"]}:{v["name"]}@{v["version"]}'}); break
+                    v=sorted(vals,key=key)[0]; edges.append({"from":src,"to":f'{v["ecosystem"]}:{v["name"]}@{v["version"]}'}); break
     g={"schema":"ATC-DEP-GRAPH-1","nodes":sorted(nodes,key=key),"edges":sorted(edges,key=lambda e:(e["from"],e["to"]))}
     (out/"dependency-graph.json").write_text(json.dumps(g,indent=2,sort_keys=True)+"\n")
     (out/"dependency-graph.dot").write_text("digraph dependencies {\n"+"\n".join(f'  "{e["from"]}" -> "{e["to"]}";' for e in g["edges"])+"\n}\n")
     return g
+
+def load_base():
+    raw=os.getenv("ATC_DEP_BASE_JSON"); ref=os.getenv("ATC_DEP_BASE_REF")
+    if not raw: return [],ref,[]
+    p=Path(raw)
+    if not p.exists(): return [],ref,[f"base graph not found: {p}"]
+    try:
+        d=json.loads(p.read_text())
+        if d.get("schema")!="ATC-DEP-GRAPH-1": return [],ref,["invalid base graph schema"]
+        return d.get("nodes",[]),ref,[]
+    except Exception as e: return [],ref,[f"invalid base graph: {e}"]
 
 def main():
     ap=argparse.ArgumentParser(); sub=ap.add_subparsers(dest="cmd",required=True)
@@ -76,11 +84,18 @@ def main():
     a=ap.parse_args(); root=(Path(a.root).resolve() if a.cmd=="graph" else ROOT); nodes,errors=scan(root); out=Path(a.out)
     if a.cmd=="graph":
         g=graph(nodes,out); result={"schema":"ATC-DEP-RESULT-1","status":"BLOCKED" if errors else "PASS","node_count":len(nodes),"errors":errors,"graph_sha256":hashlib.sha256(json.dumps(g,sort_keys=True).encode()).hexdigest()}; (out/"dependency-result.json").write_text(json.dumps(result,indent=2)+"\n"); print(json.dumps(result)); return int(bool(errors))
-    advis=(ROOT/a.advisories); advis=json.loads(advis.read_text()).get("advisories",[]) if advis.exists() else []; policy=json.loads((ROOT/a.policy).read_text()); findings=[]
+    advis=(ROOT/a.advisories); advis=json.loads(advis.read_text()).get("advisories",[]) if advis.exists() else []
+    policy=json.loads((ROOT/a.policy).read_text()); findings=[]
     for n in nodes:
         for ad in advis:
-            if ad.get("ecosystem")==n.get("ecosystem") and ad.get("package")==n.get("name") and n.get("version") in ad.get("versions",[]): findings.append({"severity":ad.get("severity","unknown"),"package":n["name"],"version":n["version"],"advisory":ad.get("id")})
-    bad=[f for f in findings if f["severity"].lower() in {x.lower() for x in policy.get("block_severities",["critical","high"])}]; status="BLOCKED" if errors else ("FAIL" if bad else "PASS"); out.mkdir(parents=True,exist_ok=True)
-    added,removed,changed=compare_nodes(base_nodes,nodes) if base_nodes else (nodes,[],[])
-    result={"schema":"ATC-DEP-REVIEW-1","status":status,"source_sha":os.getenv("GITHUB_SHA","unknown"),"base_ref":base_ref,"dependency_count":len(nodes),"scan_errors":errors,"added":added,"removed":removed,"changed":changed,"findings":findings,"blocking_findings":bad}; (out/"dependency-review.json").write_text(json.dumps(result,indent=2,sort_keys=True)+"\n"); print(json.dumps({"status":status,"dependencies":len(nodes),"findings":len(findings)})); return int(status!="PASS")
+            if ad.get("ecosystem")==n.get("ecosystem") and ad.get("package")==n.get("name") and n.get("version") in ad.get("versions",[]):
+                findings.append({"severity":ad.get("severity","unknown"),"package":n["name"],"version":n["version"],"advisory":ad.get("id")})
+    bad=[f for f in findings if f["severity"].lower() in {x.lower() for x in policy.get("block_severities",["critical","high"])}]
+    base_nodes,base_ref,base_errors=load_base()
+    if base_errors: errors.extend(base_errors)
+    has_base=bool(os.getenv("ATC_DEP_BASE_JSON"))
+    added,removed,changed=compare_nodes(base_nodes,nodes) if has_base and not base_errors else (nodes,[],[])
+    status="BLOCKED" if errors else ("FAIL" if bad else "PASS"); out.mkdir(parents=True,exist_ok=True)
+    result={"schema":"ATC-DEP-REVIEW-1","status":status,"source_sha":os.getenv("GITHUB_SHA","unknown"),"base_ref":base_ref,"dependency_count":len(nodes),"scan_errors":errors,"added":added,"removed":removed,"changed":changed,"findings":findings,"blocking_findings":bad}
+    (out/"dependency-review.json").write_text(json.dumps(result,indent=2,sort_keys=True)+"\n"); print(json.dumps({"status":status,"dependencies":len(nodes),"findings":len(findings)})); return int(status!="PASS")
 if __name__=="__main__": raise SystemExit(main())
