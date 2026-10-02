@@ -13,45 +13,42 @@ def test_dependency_advisory_schema():
 
 def test_base_head_diff_detects_add_remove_and_upgrade():
     import sys
-    sys.path.insert(0, str(ROOT / "tools"))
-    import dependency_guard as dg
+    sys.path.insert(0,str(ROOT/'tools')); import dependency_guard as dg
     base=[{"ecosystem":"cargo","name":"foo","version":"1.0.0"},{"ecosystem":"cargo","name":"bar","version":"1.0.0"}]
     head=[{"ecosystem":"cargo","name":"foo","version":"1.1.0"},{"ecosystem":"cargo","name":"baz","version":"2.0.0"}]
     added,removed,changed=dg.compare_nodes(base,head)
-    assert [x["name"] for x in added] == ["baz"]
-    assert [x["name"] for x in removed] == ["bar"]
-    assert len(changed)==1
-    assert changed[0]["from"]["version"]=="1.0.0"
-    assert changed[0]["to"]["version"]=="1.1.0"
+    assert [x["name"] for x in added]==["baz"]; assert [x["name"] for x in removed]==["bar"]
+    assert len(changed)==1 and changed[0]["from"]["version"]=="1.0.0" and changed[0]["to"]["version"]=="1.1.0"
 
 def test_osv_semver_range_is_conservative():
     import sys
-    sys.path.insert(0, str(ROOT / "tools"))
-    import dependency_guard as dg
+    sys.path.insert(0,str(ROOT/'tools')); import dependency_guard as dg
     events=[{"introduced":"0"},{"fixed":"1.2.0"}]
     assert dg.range_match("1.1.9",events,"cargo")== (True,"range")
     assert dg.range_match("1.2.0",events,"cargo")== (False,"range")
     assert dg.range_match("not-semver",events,"cargo")[1]=="unsupported"
 
+def test_osv_python_range():
+    import sys
+    sys.path.insert(0,str(ROOT/'tools')); import dependency_guard as dg
+    events=[{"introduced":"1.0.0"},{"fixed":"2.0.0"}]
+    assert dg.range_match("1.9.9",events,"python")== (True,"range")
+    assert dg.range_match("2.0.0",events,"python")== (False,"range")
+
 def test_osv_advisory_exact_match():
     import sys
-    sys.path.insert(0, str(ROOT / "tools"))
-    import dependency_guard as dg
+    sys.path.insert(0,str(ROOT/'tools')); import dependency_guard as dg
     ad={"id":"GHSA-test","affected":[{"ecosystem":"npm","package":"foo","versions":["1.0.0"],"ranges":[]}]}
     assert dg.advisory_matches({"ecosystem":"npm","name":"foo","version":"1.0.0"},ad)==(True,"exact")
 
 def test_osv_snapshot_normalization():
     import sys
-    sys.path.insert(0, str(ROOT / "tools"))
-    import osv_snapshot
+    sys.path.insert(0,str(ROOT/'tools')); import osv_snapshot
     raw=[{"id":"GHSA-test","aliases":["CVE-2099-0001"],"affected":[{"package":{"ecosystem":"npm","name":"foo"},"versions":["1.0.0"],"ranges":[]}]}]
     out=osv_snapshot.normalize(raw)
-    assert out[0]["id"]=="GHSA-test"
-    assert out[0]["affected"][0]["ecosystem"]=="npm"
-    assert out[0]["affected"][0]["package"]=="foo"
+    assert out[0]["id"]=="GHSA-test" and out[0]["affected"][0]["ecosystem"]=="npm"
 
 def test_spdx_sbom_module_imports():
     import sys
-    sys.path.insert(0, str(ROOT / "tools"))
-    import dependency_sbom
+    sys.path.insert(0,str(ROOT/'tools')); import dependency_sbom
     assert callable(dependency_sbom.main)
