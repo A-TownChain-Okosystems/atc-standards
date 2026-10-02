@@ -6,6 +6,17 @@ def test_dependency_policy_schema():
     p=json.loads((ROOT/'security/dependency-policy.json').read_text())
     assert p['schema']=='ATC-DEP-POLICY-1'
     assert 'critical' in p['block_severities']
+    assert p['deny_unpinned'] is True
+
+def test_dependency_policy_validation():
+    import sys
+    sys.path.insert(0,str(ROOT/'tools')); import dependency_guard as dg
+    valid={"schema":"ATC-DEP-POLICY-1","block_severities":["critical","high"],"deny_unpinned":True}
+    assert dg.validate_policy(valid)==[]
+    assert dg.validate_policy({"schema":"wrong","block_severities":["critical"],"deny_unpinned":True})
+    assert dg.validate_policy({"schema":"ATC-DEP-POLICY-1","block_severities":[],"deny_unpinned":True})
+    assert dg.validate_policy({"schema":"ATC-DEP-POLICY-1","block_severities":["urgent"],"deny_unpinned":True})
+    assert dg.validate_policy({"schema":"ATC-DEP-POLICY-1","block_severities":["critical"],"deny_unpinned":"true"})
 
 def test_dependency_advisory_schema():
     p=json.loads((ROOT/'security/advisories.json').read_text())
@@ -22,6 +33,15 @@ def test_advisory_payload_accepts_valid_provenance():
     sys.path.insert(0,str(ROOT/'tools')); import dependency_guard as dg
     payload={"schema":"ATC-DEP-ADVISORY-1","source":{"format":"OSV","input_sha256":"0"*64},"advisories":[]}
     assert dg.validate_advisory_payload(payload)==[]
+
+def test_advisory_range_structure_is_strict():
+    import sys
+    sys.path.insert(0,str(ROOT/'tools')); import dependency_guard as dg
+    payload={"schema":"ATC-DEP-ADVISORY-1","source":{"format":"OSV","input_sha256":"0"*64},
+             "advisories":[{"id":"GHSA-test","severity":"high","affected":[
+                 {"ecosystem":"npm","package":"foo","versions":[],"ranges":[{"type":"SEMVER"}]}
+             ]}]}
+    assert any("invalid events" in x for x in dg.validate_advisory_payload(payload))
 
 def test_base_head_diff_detects_add_remove_and_upgrade():
     import sys
