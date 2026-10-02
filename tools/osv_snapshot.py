@@ -39,6 +39,7 @@ def validate(payload):
     if payload.get("schema")!=SCHEMA: errors.append("invalid advisory schema")
     source=payload.get("source")
     if not isinstance(source,dict) or source.get("format")!="OSV" or not re.fullmatch(r"[0-9a-f]{64}",str(source.get("input_sha256",""))): errors.append("missing or invalid OSV snapshot provenance")
+    if isinstance(source,dict) and "raw_response_sha256" in source and not re.fullmatch(r"[0-9a-f]{64}",str(source.get("raw_response_sha256",""))): errors.append("invalid raw OSV response provenance")
     advisories=payload.get("advisories")
     if not isinstance(advisories,list): return errors+["advisories must be a list"]
     seen=set()
