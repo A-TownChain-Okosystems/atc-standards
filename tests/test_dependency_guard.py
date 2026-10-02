@@ -122,3 +122,16 @@ def test_spdx_sbom_module_imports():
     import sys
     sys.path.insert(0,str(ROOT/'tools')); import dependency_sbom
     assert callable(dependency_sbom.main)
+
+def test_osv_fetch_validates_response_shape():
+    import sys
+    sys.path.insert(0,str(ROOT/'tools')); import osv_fetch
+    assert osv_fetch.validate_raw_response({}, 1)
+    assert osv_fetch.validate_raw_response({"results":[]}, 1)
+    assert osv_fetch.validate_raw_response({"results":[{"vulns":{}}]}, 1)
+    assert osv_fetch.validate_raw_response({"results":[{"vulns":[]}]}, 1)==[]
+
+def test_osv_fetch_rejects_non_versioned_empty_query_set():
+    import sys
+    sys.path.insert(0,str(ROOT/'tools')); import osv_fetch
+    assert osv_fetch.validate_raw_response({"results":[]}, 0)==[]
