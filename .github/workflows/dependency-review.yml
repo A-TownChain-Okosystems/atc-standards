@@ -62,7 +62,6 @@ jobs:
           assert graph.get("schema")=="ATC-DEP-RESULT-1"
           event="${{ github.event_name }}"
           if event=="pull_request":
-          if event=="pull_request":
               assert review.get("base_ref")=="${{ github.event.pull_request.base.sha }}"
           elif event=="push":
               assert review.get("base_ref") in (None,"")
