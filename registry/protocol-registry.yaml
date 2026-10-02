@@ -125,8 +125,8 @@ protocol-registry:
     status: draft
     priority: P1
     layer: L3/L5
-    specification: Teilweise implementiert; formale Spezifikation gem. ATC-STD-PROTOCOL-001 nachzuziehen
-    note: Repo atc-wallet vorhanden (L5-Dev-Plattform)
+    specification: protocols/wallet/ATC-PROTO-WALLET-001.md — Spezifikation v1.0.0: Key Custody, Account Derivation, TX Construction/Signing, Nonce Management, Local Validation, Broadcast, Recovery und Conformance; Status draft bis Exact-SHA-Conformance.
+    note: 'Impl.-Spuren: atc-wallet / atc-sdk'
   - id: ATC-PROTO-IDENTITY-001
     name: ATC Identity Protocol
     domain: IDENTITY
