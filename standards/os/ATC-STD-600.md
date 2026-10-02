@@ -171,7 +171,7 @@ The canonical A-TownChain L1 transaction signing domain is:
 
     ATC-TX-DOMAIN-V2
 
-The legacy `ATC-TX-DOMAIN` format is retired and MUST NOT be used for L1 transaction signing.
+The legacy `ATC-TX-DOMAIN` format and `atc-tx.v1` are retired and MUST NOT be used for L1 transaction signing.
 
 ### 5.1 Canonical L1 signing bytes
 
@@ -182,7 +182,7 @@ The authenticated byte representation is exactly:
     + tx_type           (u8)
     + sender_did        (u32 length + UTF-8 bytes)
     + recipient_did     (presence byte + optional u32 length + UTF-8 bytes)
-    + amount            (u64, big-endian)
+    + amount            (u128, 16-byte big-endian)
     + gas_price         (u64, big-endian)
     + gas_limit         (u64, big-endian)
     + nonce              (u64, big-endian)
@@ -200,17 +200,18 @@ Implementations MUST produce byte-identical signing input. Rust L1 kernel, Rust 
 
 ### 5.2 Signature algorithm
 
-The canonical L1 signature is Ed25519 over the exact V2 signing bytes.
+The canonical L1 transaction signature is ECDSA over secp256k1 using RFC 6979 deterministic signing and canonical Low-S normalization. The serialized signature is exactly 64 bytes as compact `r||s`; the public key is exactly 33 bytes in compressed SEC1 form.
 
-    signature = Ed25519_Sign(private_key, signing_bytes_v2)
+    signing_digest = SHA-256(signing_bytes_v2)
+    signature = ECDSA_secp256k1_RFC6979_LowS(private_key, signing_digest)
 
-Verification MUST operate on those same bytes. Hashing or field re-encoding before Ed25519 verification is not permitted unless explicitly defined by a future governed protocol revision.
+Verification MUST operate on the same canonical digest and MUST reject High-S signatures, non-canonical encodings, malformed signature lengths, and invalid public-key encodings. Ed25519 is reserved for identity/P2P/trust/boot contexts and MUST NOT be accepted as an L1 transaction signature.
 
 ### 5.3 Canonical transaction identity
 
 Transaction identity is separate from the signing domain:
 
-    ATC-TX-ID-V2 + canonical transaction fields
+    SHA-256(ATC-TX-ID-V2 + canonical transaction fields without signature)
 
 The signature is not part of transaction identity.
 
@@ -337,7 +338,7 @@ A valid signature MUST NOT bypass identity, domain, runtime, or conformance vali
 ### 9.2 Transaction domain
 
 - **REQ-STD-600-006:** Transactions MUST use defined canonical encoding.
-- **REQ-STD-600-007:** The transaction validation context MUST include `chain_id`, `network_id`, `protocol_version`, and an explicit transaction domain separator. These context fields are validated before signing-byte construction; `network_id` and `protocol_version` MUST NOT be inserted into the canonical V2 signing bytes unless a governed protocol revision explicitly defines that change.
+- **REQ-STD-600-007:** The transaction validation context MUST include `chain_id`, `network_id`, `protocol_version`, and an explicit transaction domain separator. L1 transaction signing MUST use only `ATC-TX-DOMAIN-V2`; `ATC-TX-DOMAIN` and `atc-tx.v1` MUST be rejected. These context fields are validated before signing-byte construction; `network_id` and `protocol_version` MUST NOT be inserted into the canonical V2 signing bytes unless a governed protocol revision explicitly defines that change.
 - **REQ-STD-600-008:** Transaction domain validation MUST occur before state execution.
 - **REQ-STD-600-009:** Non-canonical encoding variants MUST NOT be accepted as equivalent authenticated transactions.
 
@@ -507,6 +508,7 @@ No further semantic changes are authorized within v1.0.0. Corrections that alter
 
 ## 18. Changelog
 
+- **1.3.1 — 2026-10-02:** P0 crypto-alignment correction: L1 TX uses secp256k1/ECDSA RFC6979 Low-S with 64-byte compact signatures and 33-byte compressed SEC1 public keys; `amount` is u128; `atc-tx.v1` is explicitly forbidden; Ed25519 is restricted to identity/P2P/trust/boot contexts; TX-ID is SHA-256 over V2 plus canonical unsigned fields.
 - **1.3.0 — 2026-09-21:** Retires the legacy transaction domain and defines ATC-TX-DOMAIN-V2 canonical L1 signing bytes with numeric chain_id 658467.
 - **1.0.0 — 2026-09-14:** Root specification frozen. Establishes Chain Identity, Network Identity, Genesis Identity, transaction-domain separation, runtime compatibility, canonical encoding requirements, fail-closed execution, conformance gates, and the ATC-STD-600 family model.
 
