@@ -14,8 +14,7 @@ def test_dependency_advisory_schema():
 def test_advisory_payload_requires_osv_provenance():
     import sys
     sys.path.insert(0,str(ROOT/'tools')); import dependency_guard as dg
-    payload={"schema":"ATC-DEP-ADVISORY-1","advisories":[]}
-    errors=dg.validate_advisory_payload(payload)
+    errors=dg.validate_advisory_payload({"schema":"ATC-DEP-ADVISORY-1","advisories":[]})
     assert any("provenance" in x for x in errors)
 
 def test_advisory_payload_accepts_valid_provenance():
@@ -41,6 +40,15 @@ def test_osv_semver_range_is_conservative():
     assert dg.range_match("1.2.0",events,"cargo")== (False,"range")
     assert dg.range_match("not-semver",events,"cargo")[1]=="unsupported"
 
+def test_osv_multiple_ranges_are_not_flattened():
+    import sys
+    sys.path.insert(0,str(ROOT/'tools')); import dependency_guard as dg
+    ranges=[{"type":"SEMVER","events":[{"introduced":"0"},{"fixed":"1.0.0"}]},
+            {"type":"SEMVER","events":[{"introduced":"2.0.0"},{"fixed":"3.0.0"}]}]
+    assert dg.range_match("1.5.0",ranges,"cargo")== (False,"range")
+    assert dg.range_match("2.5.0",ranges,"cargo")== (True,"range")
+    assert dg.range_match("3.0.0",ranges,"cargo")== (False,"range")
+
 def test_osv_python_range():
     import sys
     sys.path.insert(0,str(ROOT/'tools')); import dependency_guard as dg
@@ -57,9 +65,9 @@ def test_osv_advisory_exact_match():
 def test_osv_snapshot_normalization():
     import sys
     sys.path.insert(0,str(ROOT/'tools')); import osv_snapshot
-    raw=[{"id":"GHSA-test","aliases":["CVE-2099-0001"],"affected":[{"package":{"ecosystem":"npm","name":"foo"},"versions":["1.0.0"],"ranges":[]}]}]
+    raw=[{"id":"GHSA-test","aliases":["CVE-2099-0001"],"affected":[{"package":{"ecosystem":"npm","name":"foo"},"versions":["1.0.0"],"ranges":[{"type":"SEMVER","events":[{"introduced":"0"},{"fixed":"2.0.0"}]}]}]}]
     out=osv_snapshot.normalize(raw)
-    assert out[0]["id"]=="GHSA-test" and out[0]["affected"][0]["ecosystem"]=="npm"
+    assert out[0]["affected"][0]["ranges"][0]["events"][0]["introduced"]=="0"
 
 def test_spdx_sbom_module_imports():
     import sys
