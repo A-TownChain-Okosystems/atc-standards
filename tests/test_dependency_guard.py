@@ -24,6 +24,22 @@ def test_base_head_diff_detects_add_remove_and_upgrade():
     assert changed[0]["from"]["version"]=="1.0.0"
     assert changed[0]["to"]["version"]=="1.1.0"
 
+def test_osv_semver_range_is_conservative():
+    import sys
+    sys.path.insert(0, str(ROOT / "tools"))
+    import dependency_guard as dg
+    events=[{"introduced":"0"},{"fixed":"1.2.0"}]
+    assert dg.range_match("1.1.9",events,"cargo")== (True,"range")
+    assert dg.range_match("1.2.0",events,"cargo")== (False,"range")
+    assert dg.range_match("not-semver",events,"cargo")[1]=="unsupported"
+
+def test_osv_advisory_exact_match():
+    import sys
+    sys.path.insert(0, str(ROOT / "tools"))
+    import dependency_guard as dg
+    ad={"id":"GHSA-test","affected":[{"ecosystem":"npm","package":"foo","versions":["1.0.0"],"ranges":[]}]}
+    assert dg.advisory_matches({"ecosystem":"npm","name":"foo","version":"1.0.0"},ad)==(True,"exact")
+
 def test_spdx_sbom_module_imports():
     import sys
     sys.path.insert(0, str(ROOT / "tools"))
