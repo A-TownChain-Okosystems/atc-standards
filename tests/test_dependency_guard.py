@@ -41,7 +41,20 @@ def test_advisory_range_structure_is_strict():
              "advisories":[{"id":"GHSA-test","severity":"high","affected":[
                  {"ecosystem":"npm","package":"foo","versions":[],"ranges":[{"type":"SEMVER"}]}
              ]}]}
-    assert any("invalid events" in x for x in dg.validate_advisory_payload(payload))
+    assert any("invalid type/events" in x for x in dg.validate_advisory_payload(payload))
+
+def test_osv_snapshot_validation_rejects_invalid_range_type_and_event():
+    import sys
+    sys.path.insert(0,str(ROOT/'tools')); import osv_snapshot
+    base={"schema":"ATC-DEP-ADVISORY-1","source":{"format":"OSV","input_sha256":"0"*64},
+          "advisories":[{"id":"GHSA-test","severity":"high","affected":[
+              {"ecosystem":"npm","package":"foo","versions":[],"ranges":[{"type":"","events":[{"introduced":"0"}]}]}
+          ]}]}
+    errors=osv_snapshot.validate(base)
+    assert any("invalid type/events" in x for x in errors)
+    base["advisories"][0]["affected"][0]["ranges"][0]={"type":"SEMVER","events":[{}]}
+    errors=osv_snapshot.validate(base)
+    assert any("invalid event" in x for x in errors)
 
 def test_base_head_diff_detects_add_remove_and_upgrade():
     import sys
