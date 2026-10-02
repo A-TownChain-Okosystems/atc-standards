@@ -39,7 +39,7 @@ def key(x): return (x.get("ecosystem"),x.get("name"),x.get("version"))
 def fingerprint(nodes): return {key(x):x for x in nodes}
 def compare_nodes(base,head):
     b,h=fingerprint(base),fingerprint(head); added=sorted([h[k] for k in set(h)-set(b)],key=key); removed=sorted([b[k] for k in set(b)-set(h)],key=key); changed=[]
-    for bk,bv in b.items():
+    for bv in b.values():
         for x in h.values():
             if x.get("ecosystem")==bv.get("ecosystem") and x.get("name")==bv.get("name") and x.get("version")!=bv.get("version") and key(x) not in b: changed.append({"from":bv,"to":x})
     return added,removed,changed
@@ -86,31 +86,61 @@ def validate_advisory_payload(payload):
             if x.get("ecosystem") not in ECOS: errors.append(f"advisory[{i}].affected[{j}] unsupported ecosystem")
             if not x.get("package"): errors.append(f"advisory[{i}].affected[{j}] missing package")
             if not isinstance(x.get("ranges"),list) or not isinstance(x.get("versions"),list): errors.append(f"advisory[{i}].affected[{j}] invalid range/version lists")
+            for k,r in enumerate(x.get("ranges") or []):
+                if not isinstance(r,dict) or not isinstance(r.get("events"),list) or not r.get("events"): errors.append(f"advisory[{i}].affected[{j}].ranges[{k}] invalid events")
     return errors
 
 def semver(v):
-    m=re.match(r"^(\d+)\.(\d+)\.(\d+)(?:-([0-9A-Za-z.-]+))?",v.lstrip("v=")); return (int(m.group(1)),int(m.group(2)),int(m.group(3)),m.group(4) or "") if m else None
+    m=re.fullmatch(r"v?(\d+)\.(\d+)\.(\d+)(?:-([0-9A-Za-z.-]+))?",v)
+    return (int(m.group(1)),int(m.group(2)),int(m.group(3)),m.group(4) or "") if m else None
+
 def pep440(v):
-    m=re.match(r"^(\d+)(?:\.(\d+))?(?:\.(\d+))?(?:[-_.]?([A-Za-z]+)(\d+)?)?",v); return (int(m.group(1)),int(m.group(2) or 0),int(m.group(3) or 0),(m.group(4) or "").lower(),int(m.group(5) or 0)) if m else None
+    m=re.fullmatch(r"(\d+)(?:\.(\d+))?(?:\.(\d+))?(?:[-_.]?([A-Za-z]+)(\d+)?)?",v)
+    return (int(m.group(1)),int(m.group(2) or 0),int(m.group(3) or 0),(m.group(4) or "").lower(),int(m.group(5) or 0)) if m else None
+
 def version_cmp(a,b,eco):
-    x=pep440(a) if eco=="python" else semver(a); y=pep440(b) if eco=="python" else semver(b); return None if x is None or y is None else (x>y)-(x<y)
-def range_match(version,events,ecosystem):
-    if version is None or not events:return False,"unknown"
-    if ecosystem not in ECOS:return False,"unsupported"
+    x=pep440(a) if eco=="python" else semver(a); y=pep440(b) if eco=="python" else semver(b)
+    return None if x is None or y is None else (x>y)-(x<y)
+
+def event_range_match(version,events,ecosystem):
+    if not events:return False,"unknown"
     if (pep440(version) if ecosystem=="python" else semver(version)) is None:return False,"unsupported"
-    affected=False
+    active=False
     for ev in events:
-        if ev.get("introduced") not in (None,"0"):
-            c=version_cmp(version,ev["introduced"],ecosystem)
+        intro=ev.get("introduced")
+        if intro not in (None,"0"):
+            c=version_cmp(version,intro,ecosystem)
             if c is None:return False,"unsupported"
             if c<0:continue
-        for field,condition in (("fixed",lambda c:c>=0),("last_affected",lambda c:c>0)):
-            if ev.get(field):
-                c=version_cmp(version,ev[field],ecosystem)
-                if c is None:return False,"unsupported"
-                if condition(c):break
-        else: affected=True
-    return affected,"range"
+        fixed=ev.get("fixed")
+        if fixed:
+            c=version_cmp(version,fixed,ecosystem)
+            if c is None:return False,"unsupported"
+            if c>=0:continue
+        last=ev.get("last_affected")
+        if last:
+            c=version_cmp(version,last,ecosystem)
+            if c is None:return False,"unsupported"
+            if c>0:continue
+        active=True
+    return active,"range"
+
+def range_match(version,ranges,ecosystem):
+    if version is None or not ranges:return False,"unknown"
+    if ecosystem not in ECOS:return False,"unsupported"
+    if not isinstance(ranges,list):return False,"unsupported"
+    # Canonical form is [{events:[...]}]. Legacy flat event lists remain accepted for compatibility.
+    if all(isinstance(x,dict) and any(k in x for k in ("introduced","fixed","last_affected")) for x in ranges):
+        return event_range_match(version,ranges,ecosystem)
+    unsupported=False
+    for r in ranges:
+        if not isinstance(r,dict) or not isinstance(r.get("events"),list):
+            unsupported=True; continue
+        matched,mode=event_range_match(version,r["events"],ecosystem)
+        if matched:return True,mode
+        if mode=="unsupported":unsupported=True
+    return (False,"unsupported") if unsupported else (False,"range")
+
 def advisory_matches(n,ad):
     for a in ad.get("affected",[]):
         if a.get("ecosystem")!=n.get("ecosystem") or a.get("package")!=n.get("name"):continue
@@ -130,7 +160,7 @@ def main():
     apath=ROOT/a.advisories
     try: payload=json.loads(apath.read_text())
     except Exception as e: payload={};errors.append(f"invalid advisory snapshot: {e}")
-    errors.extend(validate_advisory_payload(payload));advis=payload.get("advisories",[]) if not errors or isinstance(payload.get("advisories"),list) else []
+    errors.extend(validate_advisory_payload(payload));advis=payload.get("advisories",[]) if isinstance(payload.get("advisories"),list) else []
     try:policy=json.loads((ROOT/a.policy).read_text())
     except Exception as e:policy={};errors.append(f"invalid dependency policy: {e}")
     findings=[];range_errors=[]
