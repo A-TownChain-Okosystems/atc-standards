@@ -42,21 +42,25 @@ jobs:
           python3 tools/osv_fetch.py \
             --graph artifacts/dependency/dependency-graph.json \
             --raw-output artifacts/dependency/osv-response.json \
+            --query-output artifacts/dependency/osv-query.json \
             --advisory-output artifacts/dependency/advisories.json
 
       - name: Validate OSV evidence provenance
         run: |
           set -euo pipefail
           test -s artifacts/dependency/osv-response.json
+          test -s artifacts/dependency/osv-query.json
           test -s artifacts/dependency/advisories.json
           python3 - <<'PY'
           import hashlib, json
           from pathlib import Path
           root=Path("artifacts/dependency")
           raw=(root/"osv-response.json").read_bytes()
+          query=(root/"osv-query.json").read_bytes()
           payload=json.loads((root/"advisories.json").read_text())
           expected=hashlib.sha256(raw).hexdigest()
           source=payload.get("source", {})
+          assert source.get("input_sha256")==hashlib.sha256(query).hexdigest()
           assert source.get("format")=="OSV"
           assert source.get("input_sha256")
           assert len(source.get("input_sha256"))==64
