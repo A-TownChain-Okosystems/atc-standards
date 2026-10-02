@@ -81,5 +81,6 @@ def main():
         for ad in advis:
             if ad.get("ecosystem")==n.get("ecosystem") and ad.get("package")==n.get("name") and n.get("version") in ad.get("versions",[]): findings.append({"severity":ad.get("severity","unknown"),"package":n["name"],"version":n["version"],"advisory":ad.get("id")})
     bad=[f for f in findings if f["severity"].lower() in {x.lower() for x in policy.get("block_severities",["critical","high"])}]; status="BLOCKED" if errors else ("FAIL" if bad else "PASS"); out.mkdir(parents=True,exist_ok=True)
-    result={"schema":"ATC-DEP-REVIEW-1","status":status,"source_sha":os.getenv("GITHUB_SHA","unknown"),"dependency_count":len(nodes),"scan_errors":errors,"findings":findings,"blocking_findings":bad}; (out/"dependency-review.json").write_text(json.dumps(result,indent=2,sort_keys=True)+"\n"); print(json.dumps({"status":status,"dependencies":len(nodes),"findings":len(findings)})); return int(status!="PASS")
+    added,removed,changed=compare_nodes(base_nodes,nodes) if base_nodes else (nodes,[],[])
+    result={"schema":"ATC-DEP-REVIEW-1","status":status,"source_sha":os.getenv("GITHUB_SHA","unknown"),"base_ref":base_ref,"dependency_count":len(nodes),"scan_errors":errors,"added":added,"removed":removed,"changed":changed,"findings":findings,"blocking_findings":bad}; (out/"dependency-review.json").write_text(json.dumps(result,indent=2,sort_keys=True)+"\n"); print(json.dumps({"status":status,"dependencies":len(nodes),"findings":len(findings)})); return int(status!="PASS")
 if __name__=="__main__": raise SystemExit(main())
