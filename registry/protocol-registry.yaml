@@ -98,7 +98,7 @@ protocol-registry:
     status: draft
     priority: P1
     layer: L3
-    specification: Teilweise implementiert; formale Spezifikation gem. ATC-STD-PROTOCOL-001 nachzuziehen
+    specification: protocols/validator/ATC-PROTO-VALIDATOR-001.md — Spezifikation v1.0.0: Validator Identity, Eligibility, Set-Derivation, Voting Authority, Block/Vote Validation, Weight, Quorum, Lifecycle, Key Rotation und Equivocation; Status draft bis Exact-SHA-Conformance.
     note: 'Impl.-Spuren: ShivaCore K16 Validator'
   - id: ATC-PROTO-STAKING-001
     name: ATC Staking Protocol
