@@ -2,7 +2,7 @@
 standard:
   id: ATC-STD-600
   title: "Chain Identity & Network Identification"
-  version: "1.3.0"
+  version: "1.3.1"
   status: approved
   lifecycle: frozen
   role: "Root Specification"
@@ -10,7 +10,7 @@ standard:
   authority: A-TownChain-Okosystems
   owner: "Standards Governance"
   created: "2026-09-14"
-  updated: "2026-09-21"
+  updated: "2026-10-02"
   normative: true
   classification: PUBLIC
   language: de-DE
@@ -31,7 +31,7 @@ standard:
 
 # ATC-STD-600 — Chain Identity & Network Identification
 
-> **Version:** 1.3.0  
+> **Version:** 1.3.1  
 > **Status:** APPROVED  
 > **Lifecycle:** APPROVED  
 > **Role:** Root Specification  
@@ -421,7 +421,7 @@ Genesis / Network Configuration
 
 The meanings of `chain_id`, `network_id`, and `genesis_id` are normative. A semantic change to any of these fields, to transaction-domain semantics, replay protection, or runtime compatibility MUST proceed through the ATC-STD lifecycle and MUST NOT be introduced as an implementation-only change.
 
-ATC-STD-600 v1.3.0 is the current canonical baseline for L1 transaction-domain semantics. Deployment-specific values MAY evolve through governed Genesis/network configuration without changing the semantics of this standard.
+ATC-STD-600 v1.3.1 is the current correction baseline for L1 transaction-domain semantics. Deployment-specific values MAY evolve through governed Genesis/network configuration without changing the semantics of this standard.
 
 ## 14. Reference Deployment Model
 
@@ -496,8 +496,8 @@ The dependency order is implementation guidance and MUST NOT be interpreted as p
 ## 17. Freeze Record
 
 ```text
-ATC-STD-600 v1.3.0
-Status: STABLE / BASELINE
+ATC-STD-600 v1.3.1
+Status: CORRECTION / PENDING GOVERNANCE FREEZE
 Lifecycle: FROZEN
 Role: Root Specification
 Scope: A-TownChain Core
