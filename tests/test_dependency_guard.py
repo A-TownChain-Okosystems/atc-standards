@@ -17,6 +17,7 @@ def test_dependency_policy_validation():
     assert dg.validate_policy({"schema":"ATC-DEP-POLICY-1","block_severities":[],"deny_unpinned":True})
     assert dg.validate_policy({"schema":"ATC-DEP-POLICY-1","block_severities":["urgent"],"deny_unpinned":True})
     assert dg.validate_policy({"schema":"ATC-DEP-POLICY-1","block_severities":["critical"],"deny_unpinned":"true"})
+    assert dg.validate_policy({"schema":"ATC-DEP-POLICY-1","block_severities":["critical","CRITICAL"],"deny_unpinned":True})
 
 def test_dependency_advisory_schema():
     p=json.loads((ROOT/'security/advisories.json').read_text())
