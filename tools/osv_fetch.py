@@ -101,7 +101,7 @@ def main():
     if not queries: raise SystemExit("OSV fetch blocked: dependency graph contains no supported versioned dependencies")
     body=json.dumps({"queries":queries},sort_keys=True,separators=(",",":")).encode()
     Path(args.query_output).parent.mkdir(parents=True,exist_ok=True)
-    Path(args.query_output).write_bytes(body+b"\n")
+    Path(args.query_output).write_bytes(body)
     raw=fetch_json(args.endpoint,body)
     errors=validate_raw_response(raw,len(queries))
     if errors: raise SystemExit("invalid OSV response: "+"; ".join(errors))
