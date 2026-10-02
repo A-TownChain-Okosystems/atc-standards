@@ -29,6 +29,32 @@ jobs:
           git archive "$ATC_DEP_BASE_REF" | tar -x -C /tmp/atc-dependency-base
           python3 tools/dependency_guard.py graph --root /tmp/atc-dependency-base --out /tmp/atc-dependency-base-artifact
           cp /tmp/atc-dependency-base-artifact/dependency-graph.json artifacts/dependency/base-dependency-graph.json
+      - name: Fetch authoritative OSV snapshot
+        run: |
+          set -euo pipefail
+          python3 tools/osv_fetch.py \
+            --graph artifacts/dependency/dependency-graph.json \
+            --raw-output artifacts/dependency/osv-response.json \
+            --advisory-output artifacts/dependency/advisories.json
+
+      - name: Validate OSV evidence provenance
+        run: |
+          set -euo pipefail
+          test -s artifacts/dependency/osv-response.json
+          test -s artifacts/dependency/advisories.json
+          python3 - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          root=Path("artifacts/dependency")
+          raw=(root/"osv-response.json").read_bytes()
+          payload=json.loads((root/"advisories.json").read_text())
+          expected=hashlib.sha256(raw).hexdigest()
+          source=payload.get("source", {})
+          assert source.get("format")=="OSV"
+          assert source.get("input_sha256")==expected
+          assert source.get("raw_response_sha256")==expected
+          PY
+
       - name: Native dependency review (pull request)
         if: github.event_name == 'pull_request'
         env:
