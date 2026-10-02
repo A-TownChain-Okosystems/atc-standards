@@ -29,13 +29,46 @@ jobs:
           git archive "$ATC_DEP_BASE_REF" | tar -x -C /tmp/atc-dependency-base
           python3 tools/dependency_guard.py graph --root /tmp/atc-dependency-base --out /tmp/atc-dependency-base-artifact
           cp /tmp/atc-dependency-base-artifact/dependency-graph.json artifacts/dependency/base-dependency-graph.json
-      - name: Native dependency review
+      - name: Native dependency review (pull request)
+        if: github.event_name == 'pull_request'
         env:
           ATC_DEP_BASE_REF: ${{ github.event.pull_request.base.sha }}
           ATC_DEP_BASE_JSON: /tmp/atc-dependency-base-artifact/dependency-graph.json
         run: python3 tools/dependency_guard.py review --out artifacts/dependency
+      - name: Native dependency review (main push)
+        if: github.event_name == 'push'
+        run: python3 tools/dependency_guard.py review --out artifacts/dependency
       - name: Generate deterministic SPDX SBOM
         run: python3 tools/dependency_sbom.py --out artifacts/dependency
+      - name: Validate security evidence
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s artifacts/dependency/dependency-graph.json
+          test -s artifacts/dependency/dependency-result.json
+          test -s artifacts/dependency/dependency-review.json
+          test -s artifacts/dependency/sbom.spdx.json
+          test -s artifacts/dependency/sbom-result.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path("artifacts/dependency")
+          review=json.loads((root/"dependency-review.json").read_text())
+          sbom=json.loads((root/"sbom-result.json").read_text())
+          graph=json.loads((root/"dependency-result.json").read_text())
+          assert review.get("schema")=="ATC-DEP-REVIEW-1"
+          assert sbom.get("schema")=="ATC-SPDX-RESULT-1"
+          assert graph.get("schema")=="ATC-DEP-RESULT-1"
+          event="${{ github.event_name }}"
+          if event=="pull_request":
+          if event=="pull_request":
+              assert review.get("base_ref")=="${{ github.event.pull_request.base.sha }}"
+          elif event=="push":
+              assert review.get("base_ref") in (None,"")
+          else:
+              raise SystemExit("unsupported event")
+          PY
       - name: Upload dependency evidence
         if: always()
         uses: actions/upload-artifact@v4
