@@ -142,6 +142,7 @@ PROTOCOLS = [
 SPEC_OVERRIDES = {
     "P2P": "protocols/p2p/ATC-PROTO-P2P-001.md — Spezifikation v1.0.0 APPROVED (SCR-0027) und IMPLEMENTIERT in ShivaCore K14-Upgrade (SCR-0028, p2p_secure.rs, 29 Unit-Tests, Kernel 423/423): Envelope 9+1, 13 Message-Types, 6-Phasen-Handshake, Replay-Schutz, Rate-Limiting, v0.9-Kompatibilitaetsmodus; Status draft bis Testnet-Verifikation/Activation",,
     "BLOCK": "protocols/block/ATC-PROTO-BLOCK-001.md — Spezifikation v1.0.0: kanonischer Block-Header, chain_id 658467, parent continuity, tx_root/state_root, u128 total_fees und deterministische Block-/Propagation-Bytes; Status draft bis Exact-SHA-Conformance.",
+    "CONSENSUS": "protocols/consensus/ATC-PROTO-CONSENSUS-001.md — Spezifikation v1.0.0: deterministische Proposal-, PoH-, Voting-, DAG-, Fork-Choice-, Finality-, Validator-Set- und Timeout-Regeln; Status draft bis Exact-SHA-Conformance.",
     "MEMPOOL": "protocols/mempool/ATC-PROTO-MEMPOOL-001.md — Spezifikation v1.0.0: deterministische Admission, Duplicate-/Nonce-Schutz, bounded capacity, Ordering, Replacement, Eviction und Block-Selection; Status draft bis Exact-SHA-Conformance.",
     "TX": "protocols/tx/ATC-PROTO-TX-001.md — Spezifikation v1.0.0: kanonische u128-Amounts, chain_id 658467, ATC-TX-DOMAIN-V2, secp256k1/ECDSA RFC6979 low-S, 33-Byte compressed public key, deterministische Wire-/Signing-Bytes; Status draft bis Exact-SHA-Conformance."
 }
