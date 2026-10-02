@@ -11,6 +11,19 @@ def test_dependency_advisory_schema():
     p=json.loads((ROOT/'security/advisories.json').read_text())
     assert p['schema']=='ATC-DEP-ADVISORY-1'
 
+def test_advisory_payload_requires_osv_provenance():
+    import sys
+    sys.path.insert(0,str(ROOT/'tools')); import dependency_guard as dg
+    payload={"schema":"ATC-DEP-ADVISORY-1","advisories":[]}
+    errors=dg.validate_advisory_payload(payload)
+    assert any("provenance" in x for x in errors)
+
+def test_advisory_payload_accepts_valid_provenance():
+    import sys
+    sys.path.insert(0,str(ROOT/'tools')); import dependency_guard as dg
+    payload={"schema":"ATC-DEP-ADVISORY-1","source":{"format":"OSV","input_sha256":"0"*64},"advisories":[]}
+    assert dg.validate_advisory_payload(payload)==[]
+
 def test_base_head_diff_detects_add_remove_and_upgrade():
     import sys
     sys.path.insert(0,str(ROOT/'tools')); import dependency_guard as dg
