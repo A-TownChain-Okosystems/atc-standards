@@ -116,8 +116,8 @@ protocol-registry:
     status: draft
     priority: P1
     layer: L3/L5
-    specification: Teilweise implementiert; formale Spezifikation gem. ATC-STD-PROTOCOL-001 nachzuziehen
-    note: Repo atc-mining vorhanden (L5-Dev-Plattform)
+    specification: protocols/mining/ATC-PROTO-MINING-001.md — Spezifikation v1.0.0: PoW-Domain, Proof Validation, Difficulty, Nonce, Rewards, Claims/Replay, Propagation und Conformance; Status draft bis Exact-SHA-Conformance.
+    note: 'Impl.-Spuren: a-townchain components/mining + blockchain engine'
   - id: ATC-PROTO-WALLET-001
     name: ATC Wallet Protocol
     domain: WALLET
