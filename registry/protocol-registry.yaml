@@ -134,7 +134,7 @@ protocol-registry:
     status: draft
     priority: P1
     layer: L1/L3
-    specification: Teilweise implementiert; formale Spezifikation gem. ATC-STD-PROTOCOL-001 nachzuziehen
+    specification: protocols/identity/ATC-PROTO-IDENTITY-001.md — Spezifikation v1.0.0: kanonische Identity Records, DID/RCT, Key Separation, Authentication, Rotation, Revocation, Recovery und Proof Verification; Status draft bis Exact-SHA-Conformance.
     note: 'Impl.-Spuren: ShivaCore K6 (DID+RCT) + K6b (Ed25519)'
   - id: ATC-PROTO-REPUTATION-001
     name: ATC Reputation Protocol
