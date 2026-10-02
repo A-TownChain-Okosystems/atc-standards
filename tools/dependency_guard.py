@@ -41,9 +41,7 @@ def key(x): return (x.get("ecosystem"),x.get("name"),x.get("version"))
 def fingerprint(nodes): return {key(x): x for x in nodes}
 def compare_nodes(base,head):
     b,h=fingerprint(base),fingerprint(head)
-    added=sorted([h[k] for k in set(h)-set(b)],key=key)
-    removed=sorted([b[k] for k in set(b)-set(h)],key=key)
-    changed=[]
+    added=sorted([h[k] for k in set(h)-set(b)],key=key); removed=sorted([b[k] for k in set(b)-set(h)],key=key); changed=[]
     for bk,bv in b.items():
         candidates=[x for x in h.values() if x.get("ecosystem")==bv.get("ecosystem") and x.get("name")==bv.get("name")]
         if candidates and not any(key(x)==bk for x in candidates):
@@ -77,6 +75,44 @@ def load_base():
         return d.get("nodes",[]),ref,[]
     except Exception as e: return [],ref,[f"invalid base graph: {e}"]
 
+def semver(v):
+    v=v.lstrip("v="); m=re.match(r"^(\d+)\.(\d+)\.(\d+)(?:-([0-9A-Za-z.-]+))?",v)
+    if not m: return None
+    return (int(m.group(1)),int(m.group(2)),int(m.group(3)),m.group(4) or "")
+
+def range_match(version,events,ecosystem):
+    if version is None or not events: return False,"unknown"
+    if ecosystem not in {"cargo","npm","go"}: return False,"unsupported"
+    v=semver(version)
+    if v is None: return False,"unsupported"
+    affected=False
+    for ev in events:
+        if ev.get("introduced") not in (None,"0"):
+            i=semver(ev["introduced"])
+            if i is None: return False,"unsupported"
+            if v<i: continue
+        fixed=ev.get("fixed")
+        last=ev.get("last_affected")
+        if fixed:
+            f=semver(fixed)
+            if f is None: return False,"unsupported"
+            if v>=f: continue
+        if last:
+            l=semver(last)
+            if l is None: return False,"unsupported"
+            if v>l: continue
+        affected=True
+    return affected,"range"
+
+def advisory_matches(n,ad):
+    for a in ad.get("affected",[]):
+        if a.get("ecosystem")!=n.get("ecosystem") or a.get("package")!=n.get("name"): continue
+        if n.get("version") in a.get("versions",[]): return True,"exact"
+        matched,mode=range_match(n.get("version"),a.get("ranges",[]),n.get("ecosystem"))
+        if matched: return True,mode
+        if mode=="unsupported": return False,"unsupported"
+    return False,"none"
+
 def main():
     ap=argparse.ArgumentParser(); sub=ap.add_subparsers(dest="cmd",required=True)
     g=sub.add_parser("graph"); g.add_argument("--root",default="."); g.add_argument("--out",default="artifacts/dependency")
@@ -84,17 +120,17 @@ def main():
     a=ap.parse_args(); root=(Path(a.root).resolve() if a.cmd=="graph" else ROOT); nodes,errors=scan(root); out=Path(a.out)
     if a.cmd=="graph":
         g=graph(nodes,out); result={"schema":"ATC-DEP-RESULT-1","status":"BLOCKED" if errors else "PASS","node_count":len(nodes),"errors":errors,"graph_sha256":hashlib.sha256(json.dumps(g,sort_keys=True).encode()).hexdigest()}; (out/"dependency-result.json").write_text(json.dumps(result,indent=2)+"\n"); print(json.dumps(result)); return int(bool(errors))
-    advis=(ROOT/a.advisories); advis=json.loads(advis.read_text()).get("advisories",[]) if advis.exists() else []
-    policy=json.loads((ROOT/a.policy).read_text()); findings=[]
+    advis=(ROOT/a.advisories); advis=json.loads(advis.read_text()).get("advisories",[]) if advis.exists() else []; policy=json.loads((ROOT/a.policy).read_text()); findings=[]; range_errors=[]
     for n in nodes:
         for ad in advis:
-            if ad.get("ecosystem")==n.get("ecosystem") and ad.get("package")==n.get("name") and n.get("version") in ad.get("versions",[]):
-                findings.append({"severity":ad.get("severity","unknown"),"package":n["name"],"version":n["version"],"advisory":ad.get("id")})
+            matched,mode=advisory_matches(n,ad)
+            if mode=="unsupported": range_errors.append({"advisory":ad.get("id"),"package":n.get("name"),"version":n.get("version")})
+            if matched: findings.append({"severity":ad.get("severity","unknown"),"package":n["name"],"version":n["version"],"advisory":ad.get("id"),"match_type":mode})
     bad=[f for f in findings if f["severity"].lower() in {x.lower() for x in policy.get("block_severities",["critical","high"])}]
     base_nodes,base_ref,base_errors=load_base()
     if base_errors: errors.extend(base_errors)
-    has_base=bool(os.getenv("ATC_DEP_BASE_JSON"))
-    added,removed,changed=compare_nodes(base_nodes,nodes) if has_base and not base_errors else (nodes,[],[])
+    has_base=bool(os.getenv("ATC_DEP_BASE_JSON")); added,removed,changed=compare_nodes(base_nodes,nodes) if has_base and not base_errors else (nodes,[],[])
+    if range_errors: errors.append("unsupported advisory range evaluation: "+json.dumps(range_errors,sort_keys=True))
     status="BLOCKED" if errors else ("FAIL" if bad else "PASS"); out.mkdir(parents=True,exist_ok=True)
     result={"schema":"ATC-DEP-REVIEW-1","status":status,"source_sha":os.getenv("GITHUB_SHA","unknown"),"base_ref":base_ref,"dependency_count":len(nodes),"scan_errors":errors,"added":added,"removed":removed,"changed":changed,"findings":findings,"blocking_findings":bad}
     (out/"dependency-review.json").write_text(json.dumps(result,indent=2,sort_keys=True)+"\n"); print(json.dumps({"status":status,"dependencies":len(nodes),"findings":len(findings)})); return int(status!="PASS")
