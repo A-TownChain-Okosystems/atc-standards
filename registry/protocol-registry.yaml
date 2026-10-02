@@ -179,7 +179,7 @@ protocol-registry:
     status: planned
     priority: P1
     layer: L5
-    specification: Zu spezifizieren gem. ATC-STD-PROTOCOL-001 (SCR erforderlich)
+    specification: protocols/bridge/ATC-PROTO-BRIDGE-001.md — Spezifikation v1.0.0: Cross-Domain Messages, Proof/Finality, Replay-Schutz, Ordering, Asset Accounting, Relayers, Recovery und Conformance; Status draft bis Exact-SHA-Conformance.
     note: Repo atc-interop vorhanden
   - id: ATC-PROTO-IBC-001
     name: ATC Interoperability (IBC)
