@@ -143,7 +143,7 @@ protocol-registry:
     status: draft
     priority: P2
     layer: L1/L3
-    specification: Teilweise implementiert; formale Spezifikation gem. ATC-STD-PROTOCOL-001 nachzuziehen
+    specification: protocols/reputation/ATC-PROTO-REPUTATION-001.md — Spezifikation v1.0.0: Identity Binding, Evidence, Deterministic Scoring, Decay, Sybil Resistance, Disputes, Privacy und Conformance; Status draft bis Exact-SHA-Conformance.
     note: 'Impl.-Spuren: ShivaCore K15 (Reputation)'
   - id: ATC-PROTO-GOVERNANCE-001
     name: ATC Governance Protocol
