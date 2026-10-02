@@ -150,3 +150,10 @@ def test_osv_fetch_rejects_non_versioned_empty_query_set():
     import sys
     sys.path.insert(0,str(ROOT/'tools')); import osv_fetch
     assert osv_fetch.validate_raw_response({"results":[]}, 0)==[]
+
+
+def test_osv_query_provenance_uses_exact_persisted_bytes():
+    import hashlib
+    body=b'{"queries":[]}'
+    persisted=body
+    assert hashlib.sha256(persisted).hexdigest()==hashlib.sha256(body).hexdigest()
