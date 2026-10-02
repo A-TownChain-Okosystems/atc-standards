@@ -6,7 +6,7 @@ FILES={"Cargo.lock":"cargo","package-lock.json":"npm","npm-shrinkwrap.json":"npm
 SKIP={".git","target","node_modules",".venv","venv","__pycache__"}
 ADVISORY_SCHEMA="ATC-DEP-ADVISORY-1"; POLICY_SCHEMA="ATC-DEP-POLICY-1"; SEVERITIES={"critical","high","medium","low","unknown"}; ECOS={"cargo","npm","python","go"}
 
-def scan(root):
+def scan(root, deny_unpinned=True):
     out=[]; errors=[]
     for p in root.rglob("*"):
         if not p.is_file() or p.name not in FILES or any(x in p.parts for x in SKIP): continue
@@ -25,8 +25,10 @@ def scan(root):
                     line=line.strip()
                     if not line or line.startswith("#"): continue
                     m=re.match(r"([A-Za-z0-9_.-]+)\s*==\s*([^;\s]+)",line)
-                    if not m: errors.append(f"{p}:{no}: unpinned/unsupported requirement: {line}")
-                    else: out.append({"ecosystem":"python","name":m.group(1).lower(),"version":m.group(2),"dependencies":[],"manifest":str(p.relative_to(root))})
+                    if not m:
+                        if deny_unpinned: errors.append(f"{p}:{no}: unpinned/unsupported requirement: {line}")
+                        continue
+                    out.append({"ecosystem":"python","name":m.group(1).lower(),"version":m.group(2),"dependencies":[],"manifest":str(p.relative_to(root))})
             else:
                 seen=set()
                 for line in p.read_text().splitlines():
@@ -73,6 +75,7 @@ def validate_advisory_payload(payload):
     if payload.get("schema")!=ADVISORY_SCHEMA: errors.append("invalid advisory schema")
     source=payload.get("source")
     if not isinstance(source,dict) or source.get("format")!="OSV" or not re.fullmatch(r"[0-9a-f]{64}",str(source.get("input_sha256",""))): errors.append("missing or invalid OSV snapshot provenance")
+    if isinstance(source,dict) and "raw_response_sha256" in source and not re.fullmatch(r"[0-9a-f]{64}",str(source.get("raw_response_sha256",""))): errors.append("invalid raw OSV response provenance")
     advisories=payload.get("advisories")
     if not isinstance(advisories,list): return errors+["advisories must be a list"]
     seen=set()
@@ -93,7 +96,10 @@ def validate_policy(policy):
     if policy.get("schema")!=POLICY_SCHEMA: errors.append("invalid dependency policy schema")
     blocks=policy.get("block_severities")
     if not isinstance(blocks,list) or not blocks: errors.append("block_severities must be a non-empty list")
-    elif any(str(x).lower() not in SEVERITIES for x in blocks): errors.append("block_severities contains unsupported severity")
+    else:
+        normalized=[str(x).lower() for x in blocks]
+        if any(x not in SEVERITIES for x in normalized): errors.append("block_severities contains unsupported severity")
+        if len(normalized)!=len(set(normalized)): errors.append("block_severities contains duplicates")
     if not isinstance(policy.get("deny_unpinned"),bool): errors.append("deny_unpinned must be boolean")
     return errors
 
@@ -150,16 +156,18 @@ def main():
     ap=argparse.ArgumentParser(); sub=ap.add_subparsers(dest="cmd",required=True)
     g=sub.add_parser("graph");g.add_argument("--root",default=".");g.add_argument("--out",default="artifacts/dependency")
     r=sub.add_parser("review");r.add_argument("--out",default="artifacts/dependency");r.add_argument("--advisories",default="security/advisories.json");r.add_argument("--policy",default="security/dependency-policy.json")
-    a=ap.parse_args(); root=Path(a.root).resolve() if a.cmd=="graph" else ROOT; nodes,errors=scan(root); out=Path(a.out)
+    a=ap.parse_args(); out=Path(a.out)
     if a.cmd=="graph":
-        g=graph(nodes,out); result={"schema":"ATC-DEP-RESULT-1","status":"BLOCKED" if errors else "PASS","node_count":len(nodes),"errors":errors,"graph_sha256":hashlib.sha256(json.dumps(g,sort_keys=True).encode()).hexdigest()}; (out/"dependency-result.json").write_text(json.dumps(result,indent=2)+"\n"); print(json.dumps(result)); return int(bool(errors))
+        nodes,errors=scan(Path(a.root).resolve(),True); g=graph(nodes,out); result={"schema":"ATC-DEP-RESULT-1","status":"BLOCKED" if errors else "PASS","node_count":len(nodes),"errors":errors,"graph_sha256":hashlib.sha256(json.dumps(g,sort_keys=True).encode()).hexdigest()}; (out/"dependency-result.json").write_text(json.dumps(result,indent=2)+"\n"); print(json.dumps(result)); return int(bool(errors))
+    errors=[]
     apath=ROOT/a.advisories
     try: payload=json.loads(apath.read_text())
     except Exception as e: payload={}; errors.append(f"invalid advisory snapshot: {e}")
-    errors.extend(validate_advisory_payload(payload)); advis=payload.get("advisories",[]) if isinstance(payload.get("advisories"),list) else []
     try: policy=json.loads((ROOT/a.policy).read_text())
     except Exception as e: policy={}; errors.append(f"invalid dependency policy: {e}")
-    errors.extend(validate_policy(policy))
+    errors.extend(validate_policy(policy)); deny=policy.get("deny_unpinned",True) if isinstance(policy.get("deny_unpinned",True),bool) else True
+    nodes,scan_errors=scan(ROOT,deny); errors.extend(validate_advisory_payload(payload)); errors.extend(scan_errors)
+    advis=payload.get("advisories",[]) if isinstance(payload.get("advisories"),list) else []
     findings=[]; range_errors=[]
     for n in nodes:
         for ad in advis:
