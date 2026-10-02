@@ -206,7 +206,7 @@ protocol-registry:
     status: planned
     priority: P2
     layer: L5
-    specification: Zu spezifizieren gem. ATC-STD-PROTOCOL-001 (SCR erforderlich)
+    specification: protocols/storage/ATC-PROTO-STORAGE-001.md — Spezifikation v1.0.0: Namespace/Keys, Canonical Values, Atomic State, Integrity, Snapshots, Recovery, Concurrency und Conformance; Status draft bis Exact-SHA-Conformance.
     note: Repo atc-storage vorhanden
   - id: ATC-PROTO-AI-001
     name: ATC AI Agent Protocol
