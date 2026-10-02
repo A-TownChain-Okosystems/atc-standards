@@ -123,6 +123,12 @@ def test_spdx_sbom_module_imports():
     sys.path.insert(0,str(ROOT/'tools')); import dependency_sbom
     assert callable(dependency_sbom.main)
 
+def test_osv_snapshot_rejects_invalid_raw_response_provenance():
+    import sys
+    sys.path.insert(0,str(ROOT/'tools')); import osv_snapshot
+    payload={"schema":"ATC-DEP-ADVISORY-1","source":{"format":"OSV","input_sha256":"a"*64,"raw_response_sha256":"bad"},"advisories":[]}
+    assert any("raw OSV response provenance" in e for e in osv_snapshot.validate(payload))
+
 def test_osv_fetch_validates_response_shape():
     import sys
     sys.path.insert(0,str(ROOT/'tools')); import osv_fetch
