@@ -1,6 +1,7 @@
 name: Ruff Format Patch Export
 
 on:
+  push:
   workflow_dispatch:
 
 permissions:
