@@ -17,48 +17,16 @@ HERE = pathlib.Path(__file__).resolve().parent
 ROOT = HERE.parents[2]  # tools/atc-std-validator/tests -> ROOT
 fails = []
 
-# T1 (CI-001/CI-006): jede Dritt-Import in tools/ muss in requirements.txt deklariert sein
+# T1 (CI-001/CI-006): jede Dritt-Import in tools/ muss in requirements.txt deklariert sein.
+# Die Zielruntime ist Python 3.11; sys.stdlib_module_names ist seit Python 3.10
+# verfuegbar und damit die normative Stdlib-Quelle statt einer pflegebeduerftigen Liste.
 req_text = (ROOT / "requirements.txt").read_text(encoding="utf-8")
-# Paketname -> Importname (PyPI nennt Pakete teils anders als das Modul)
 PKG_IMPORT_MAP = {"pyyaml": "yaml"}
 declared = set()
 for _n in re.findall(r"^\s*([A-Za-z0-9_\-.]+)\s*[<>=~!]", req_text, re.M):
     _n = _n.lower()
     declared.add(PKG_IMPORT_MAP.get(_n, _n))
-STDLIB_OK = {
-    "os",
-    "re",
-    "sys",
-    "json",
-    "collections",
-    "datetime",
-    "hashlib",
-    "subprocess",
-    "argparse",
-    "io",
-    "zipfile",
-    "urllib",
-    "time",
-    "shutil",
-    "unittest",
-    "tempfile",
-    "glob",
-    "textwrap",
-    "pathlib",
-    "typing",
-    "functools",
-    "itertools",
-    "math",
-    "string",
-    "random",
-    "stat",
-    "platform",
-    "contextlib",
-    "version",
-    "csv",
-    "logging",
-    "base64",
-}  # base64 nachgetragen (Drift-Fix 13.09., AUD-Followup: version_gate.py)
+STDLIB_OK = set(sys.stdlib_module_names)
 local_mods = {p.stem for p in (ROOT / "tools").rglob("*.py")}
 for py in (ROOT / "tools").rglob("*.py"):
     src = py.read_text(encoding="utf-8", errors="replace")
@@ -72,7 +40,7 @@ for py in (ROOT / "tools").rglob("*.py"):
         if finding not in fails:
             fails.append(finding)
 
-# T2 (CI-002/CI-003): Workflow, der Python-Validatoren ausfuehrt, MUSS vorher installieren
+# T2 (CI-002/CI-003): Workflow, der Python-Validatoren ausfuehrt, MUSS vorher installieren.
 for wf in (ROOT / ".github" / "workflows").glob("*.yml"):
     w = wf.read_text(encoding="utf-8")
     if re.search(r"python3?\s+tools/", w) and "pip install" not in w:
