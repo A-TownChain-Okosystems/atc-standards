@@ -203,7 +203,7 @@ if __name__ == "__main__":
     }
     with open("registry/protocol-registry.yaml", "w", encoding="utf-8") as fh:
         fh.write("# ATC Protocol Registry — ATC-STD-PROTOCOL-001 §20/§21 (SSOT)\n")
-        fh.write("# Generiert von tools/protocol/gen_protocol_registry.py — Änderungen nur via SCR.\n")
+        fh.write(\n        "# Generiert von tools/protocol/gen_protocol_registry.py — Änderungen nur via SCR.\n"\n    )
         yaml.dump(data, fh, allow_unicode=True, sort_keys=False, width=200)
 
     counts = {}
