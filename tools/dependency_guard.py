@@ -331,6 +331,28 @@ def advisory_matches(n, ad):
     return False, "none"
 
 
+
+_EXPECTED_BASE_UNPINNED_RE = re.compile(
+    r"^.+requirements(?:-[^/]+)?\.txt:\d+: "
+    r"unpinned/unsupported requirement: "
+    r"[A-Za-z0-9_.-]+(?:[<>=!~]=?[^;\s]+(?:,[<>=!~]=?[^;\s]+)*)?$"
+)
+
+
+def classify_base_graph_result(result):
+    """Return PASS, EXPECTED_BLOCKED, or UNEXPECTED_FAILURE for a base graph result."""
+    if not isinstance(result, dict):
+        return "UNEXPECTED_FAILURE"
+    status = result.get("status")
+    errors = result.get("errors")
+    if status == "PASS" and errors == []:
+        return "PASS"
+    if status == "BLOCKED" and isinstance(errors, list) and errors and all(
+        isinstance(error, str) and _EXPECTED_BASE_UNPINNED_RE.match(error) for error in errors
+    ):
+        return "EXPECTED_BLOCKED"
+    return "UNEXPECTED_FAILURE"
+
 def main():
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest="cmd", required=True)
