@@ -9,19 +9,31 @@ permissions:
 
 jobs:
   export:
-    if: github.event_name == 'workflow_dispatch' || !startsWith(github.event.head_commit.message, 'ci: apply Ruff formatting')
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Skip formatting commit
+        if: github.event_name == 'push' && startsWith(github.event.head_commit.message, 'ci: apply Ruff formatting')
+        run: echo "Formatting commit already applied; nothing to do."
+
+      - name: Checkout
+        if: github.event_name == 'workflow_dispatch' || !startsWith(github.event.head_commit.message, 'ci: apply Ruff formatting')
+        uses: actions/checkout@v4
         with:
           ref: ${{ github.ref_name }}
           fetch-depth: 0
-      - uses: actions/setup-python@v5
+
+      - name: Set up Python
+        if: github.event_name == 'workflow_dispatch' || !startsWith(github.event.head_commit.message, 'ci: apply Ruff formatting')
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+
       - name: Install pinned Ruff
+        if: github.event_name == 'workflow_dispatch' || !startsWith(github.event.head_commit.message, 'ci: apply Ruff formatting')
         run: python -m pip install --disable-pip-version-check --no-input ruff==0.16.7
+
       - name: Format measured hotspots
+        if: github.event_name == 'workflow_dispatch' || !startsWith(github.event.head_commit.message, 'ci: apply Ruff formatting')
         run: |
           ruff format \
             tools/dependency_guard.py \
@@ -31,7 +43,9 @@ jobs:
             tools/osv_snapshot.py \
             tools/protocol/gen_protocol_registry.py \
             tools/gen_views/generate_views.py
+
       - name: Commit formatted files
+        if: github.event_name == 'workflow_dispatch' || !startsWith(github.event.head_commit.message, 'ci: apply Ruff formatting')
         shell: bash
         run: |
           set -euo pipefail
