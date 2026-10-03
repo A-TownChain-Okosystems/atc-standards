@@ -25,6 +25,15 @@ jobs:
         run: python3 -m unittest discover -s tests -p "test_dependency_guard.py" -v
       - name: Build current dependency graph
         run: python3 tools/dependency_guard.py graph --out artifacts/dependency
+      - name: Fetch authoritative OSV snapshot
+        run: |
+          set -euo pipefail
+          python3 tools/osv_fetch.py \
+            --graph artifacts/dependency/dependency-graph.json \
+            --raw-output artifacts/dependency/osv-response.json \
+            --query-output artifacts/dependency/osv-query.json \
+            --advisory-output artifacts/dependency/advisories.json
+
       - name: Build exact base dependency graph
         if: github.event_name == 'pull_request'
         shell: bash
@@ -36,16 +45,35 @@ jobs:
           mkdir -p /tmp/atc-dependency-base
           git fetch --no-tags origin "$ATC_DEP_BASE_REF"
           git archive "$ATC_DEP_BASE_REF" | tar -x -C /tmp/atc-dependency-base
+          set +e
           python3 tools/dependency_guard.py graph --root /tmp/atc-dependency-base --out /tmp/atc-dependency-base-artifact
+          rc=$?
+          set -e
+          test -s /tmp/atc-dependency-base-artifact/dependency-graph.json
+          test -s /tmp/atc-dependency-base-artifact/dependency-result.json
           cp /tmp/atc-dependency-base-artifact/dependency-graph.json artifacts/dependency/base-dependency-graph.json
-      - name: Fetch authoritative OSV snapshot
-        run: |
-          set -euo pipefail
-          python3 tools/osv_fetch.py \
-            --graph artifacts/dependency/dependency-graph.json \
-            --raw-output artifacts/dependency/osv-response.json \
-            --query-output artifacts/dependency/osv-query.json \
-            --advisory-output artifacts/dependency/advisories.json
+          cp /tmp/atc-dependency-base-artifact/dependency-result.json artifacts/dependency/base-dependency-result.json
+          python3 - <<'PY'
+import json
+import sys
+from pathlib import Path
+
+sys.path.insert(0, "tools")
+from dependency_guard import classify_base_graph_result
+
+result = json.loads(Path("/tmp/atc-dependency-base-artifact/dependency-result.json").read_text())
+classification = classify_base_graph_result(result)
+
+if "$rc" == "0" and classification != "PASS":
+    raise SystemExit(f"base graph returned zero but result was {classification}: {result}")
+if "$rc" != "0" and classification != "EXPECTED_BLOCKED":
+    raise SystemExit(f"unexpected base graph failure class: {classification}: {result}")
+
+if classification == "EXPECTED_BLOCKED":
+    print("Base graph has only expected unpinned/unsupported requirement violations; retained as informational evidence.")
+else:
+    print("Base graph PASS; no historical pin violation detected.")
+PY
 
       - name: Validate OSV evidence provenance
         run: |
