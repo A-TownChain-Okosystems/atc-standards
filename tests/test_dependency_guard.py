@@ -339,6 +339,19 @@ def test_base_graph_classification_pass():
     assert dg.classify_base_graph_result({"status": "PASS", "errors": []}) == "PASS"
 
 
+def test_base_graph_classification_rejects_pass_with_errors():
+    import sys
+
+    sys.path.insert(0, str(ROOT / "tools"))
+    import dependency_guard as dg
+
+    result = {
+        "status": "PASS",
+        "errors": ["unexpected stale error"],
+    }
+    assert dg.classify_base_graph_result(result) == "UNEXPECTED_FAILURE"
+
+
 def test_base_graph_classification_expected_unpinned_blocked():
     import sys
 
