@@ -12,6 +12,6 @@ permissions:
 
 jobs:
   ruff:
-    uses: A-TownChain-Okosystems/.github/.github/workflows/reusable-ruff.yml@b2d84765eba25a0d1e67ffdf21e9fdbd37d058b6
+    uses: A-TownChain-Okosystems/.github/.github/workflows/reusable-ruff.yml@397915651a34604008b102092ce8466e848b32db
     permissions:
       contents: read
