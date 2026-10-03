@@ -19,6 +19,8 @@ jobs:
         with:
           python-version: "3.11"
           check-latest: false
+      - name: Install validator runtime dependencies
+        run: python3 -m pip install -r requirements.txt
       - name: Run dependency security unit tests
         run: python3 -m unittest discover -s tests -p "test_dependency_guard.py" -v
       - name: Build current dependency graph
