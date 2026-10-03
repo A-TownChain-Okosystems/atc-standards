@@ -25,6 +25,15 @@ jobs:
         run: python3 -m unittest discover -s tests -p "test_dependency_guard.py" -v
       - name: Build current dependency graph
         run: python3 tools/dependency_guard.py graph --out artifacts/dependency
+      - name: Fetch authoritative OSV snapshot
+        run: |
+          set -euo pipefail
+          python3 tools/osv_fetch.py \\
+            --graph artifacts/dependency/dependency-graph.json \\
+            --raw-output artifacts/dependency/osv-response.json \\
+            --query-output artifacts/dependency/osv-query.json \\
+            --advisory-output artifacts/dependency/advisories.json
+
       - name: Build exact base dependency graph
         if: github.event_name == 'pull_request'
         shell: bash
@@ -36,8 +45,24 @@ jobs:
           mkdir -p /tmp/atc-dependency-base
           git fetch --no-tags origin "$ATC_DEP_BASE_REF"
           git archive "$ATC_DEP_BASE_REF" | tar -x -C /tmp/atc-dependency-base
+          set +e
           python3 tools/dependency_guard.py graph --root /tmp/atc-dependency-base --out /tmp/atc-dependency-base-artifact
+          rc=$?
+          set -e
+          test -s /tmp/atc-dependency-base-artifact/dependency-graph.json
           cp /tmp/atc-dependency-base-artifact/dependency-graph.json artifacts/dependency/base-dependency-graph.json
+          cp /tmp/atc-dependency-base-artifact/dependency-result.json artifacts/dependency/base-dependency-result.json
+          if [ "$rc" -ne 0 ]; then
+            python3 - <<'PY'
+import json
+from pathlib import Path
+p=Path("/tmp/atc-dependency-base-artifact/dependency-result.json")
+r=json.loads(p.read_text())
+if r.get("status") != "BLOCKED":
+    raise SystemExit(f"unexpected base graph failure: {r}")
+print("Base graph is non-conformant at the comparison ref; retained as informational evidence.")
+PY
+          fi
       - name: Fetch authoritative OSV snapshot
         run: |
           set -euo pipefail
