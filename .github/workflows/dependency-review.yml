@@ -126,7 +126,7 @@ jobs:
           sbom=json.loads((root/"sbom-result.json").read_text())
           graph=json.loads((root/"dependency-result.json").read_text())
           assert review.get("schema")=="ATC-DEP-REVIEW-1"
-          assert sbom.get("schema")=="ATC-SPDX-RESULT-1"
+          assert sbom.get("schema")=="ATC-DEP-SBOM-1"
           assert graph.get("schema")=="ATC-DEP-RESULT-1"
           event="${{ github.event_name }}"
           if event=="pull_request":
