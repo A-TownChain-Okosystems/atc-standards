@@ -21,6 +21,12 @@ jobs:
       - name: Generator-Determinismus und Registry-Konsistenz (ATC-STD-PROTOCOL-001)
         run: |
           python tools/protocol/gen_protocol_registry.py
+          status_after_run1=$(git status --short)
+          if [ -n "$status_after_run1" ] && [ "$status_after_run1" != " M registry/protocol-registry.yaml" ]; then
+            echo "GENERATOR_UNEXPECTED_SIDE_EFFECTS:"
+            printf '%s\n' "$status_after_run1"
+            exit 1
+          fi
           sha1=$(sha256sum registry/protocol-registry.yaml | cut -d' ' -f1)
           git checkout -- registry/protocol-registry.yaml
           python tools/protocol/gen_protocol_registry.py
