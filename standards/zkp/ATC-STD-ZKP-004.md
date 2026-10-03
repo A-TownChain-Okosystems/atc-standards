@@ -54,10 +54,6 @@ On-Chain-Verifikation: Der ZKP Verifier verifiziert Proofs in der Chain (Verify 
 - **Metrik 3:** Abweisungsrate ungültiger Public Inputs MUSS 100% erreichen.
 - **Metrik 4:** Sicherheitsabdeckung im Verifier-Smart-Contract MUSS 100% betragen.
 
-| id: REQ-ZKP-405 | On-Chain-Verifier-Verträge MÜSSEN den Gasverbrauch pro Verifikation unter dem L1-Block-Gas-Limit halten. | §S.2 |
-| id: REQ-ZKP-406 | Öffentliche Eingaben (Public Inputs) MÜSSEN vor der Verifikation einer Wertebereichsprüfung unterzogen werden. | §S.2 |
-| id: REQ-ZKP-407 | Vertrags-Upgrades von Verifiern MÜSSEN eine 48-Stunden-Sperrfrist (Time-Lock) einhalten. | §S.3 |
-| id: REQ-ZKP-408 | Batch-Verifikationen MÜSSEN atomar fehlschlagen, wenn auch nur ein einzelner Beweis ungültig ist. | §S.3 |
 
 ## Metriken & Akzeptanzkriterien
 

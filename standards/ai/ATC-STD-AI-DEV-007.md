@@ -20,7 +20,7 @@ standard:
 
 # ATC-STD-AI-DEV-007 — AI Git Commit & Pull Request Standard (v1.1.0, APPROVED)
 
-> **Status:** APPROVED (v1.0.1) — Owner-Freigabe (SCR-0006) 07.09.2026 (ATC-STD-000 §9); normativ in Kraft · **Reihe:** ATC-STD-AI-DEV-001…012
+> **Status:** APPROVED (v1.1.0) — Owner-Freigabe (SCR-0006) 07.09.2026 (ATC-STD-000 §9); normativ in Kraft · **Reihe:** ATC-STD-AI-DEV-001…012
 > **Autoren:** Michael Wroblewski (Owner), Aurora (Superagent)
 > **Kernprinzip:** Commit und PR sind die öffentlichen, maschinenlesbaren
 > Nachweise der Agentenarbeit. GitHub-Automationen werten die Historie

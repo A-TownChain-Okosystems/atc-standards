@@ -3,7 +3,7 @@
 taxonomy:
   standard: ATC-STD-TAXONOMY-001
   version: 1.0.0
-  generated: '2026-09-14'
+  generated: '2026-10-03'
   hierarchy:
   - DOMAIN
   - FAMILY
@@ -33,10 +33,10 @@ taxonomy:
       version: 1.0.0
       status: APPROVED
     - id: ATC-STD-REGISTRY-001
-      version: 1.0.0
+      version: 1.1.0
       status: APPROVED
     - id: ATC-STD-CHANGE-001
-      version: 1.0.1
+      version: 1.1.0
       status: APPROVED
     - id: ATC-STD-AUDIT-001
       version: 1.0.0
@@ -320,7 +320,7 @@ taxonomy:
       id_range: ATC-STD-V2S-000-999
       source: named-family
       description: 'Vision-to-Software Lifecycle-Familie: End-to-End VISION bis EOL (Owner-Entwurf 08.09., SCR-0042)'
-      standards_count: 1
+      standards_count: 27
       categories:
       - id: GENERAL
         name: Allgemein (Bestand, keine Unterteilung)
@@ -421,7 +421,7 @@ taxonomy:
       id_range: ATC-STD-800–899
       source: numeric-§7
       description: OS / Runtime
-      standards_count: 8
+      standards_count: 7
       categories:
       - id: GENERAL
         name: Allgemein (Bestand, keine Unterteilung)
@@ -536,7 +536,7 @@ taxonomy:
       id_range: ATC-STD-600–699
       source: numeric-§7
       description: Blockchain
-      standards_count: 76
+      standards_count: 77
       categories:
       - id: GENERAL
         name: Allgemein (Bestand, keine Unterteilung)

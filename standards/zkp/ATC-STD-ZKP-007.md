@@ -53,10 +53,6 @@ Private Transaktionen (Alice → ZKP Prover → Proof → Chain) und GameFi-Bewe
 - **Metrik 3:** Latenz der privaten Transaktionsverarbeitung MUSS unter 250 ms liegen.
 - **Metrik 4:** Präzision der Gebührenberechnung im Circuit MUSS exakt 100% erreichen.
 
-| id: REQ-ZKP-704 | Wert-Erhaltungssummen MÜSSEN mittels homomorpher Additivität im Circuit ohne Werteoffenlegung verifiziert werden. | §S.2 |
-| id: REQ-ZKP-705 | Range-Proofs MÜSSEN sicherstellen, dass keine negativen Beträge oder Überläufe erzeugt werden. | §S.2 |
-| id: REQ-ZKP-706 | Transaktionsgebühren MÜSSEN getrennt und ohne Verletzung der Privatsphäre abgeführt werden. | §S.3 |
-| id: REQ-ZKP-707 | Spend-Proofs MÜSSEN eine gültige Verknüpfung zu bestehenden Commitments nachweisen. | §S.3 |
 
 ## Metriken & Akzeptanzkriterien
 

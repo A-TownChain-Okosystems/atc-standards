@@ -54,10 +54,6 @@ Sicherheit der ZKP-Layer: S4-Klassifikation, Trusted-Setup-Kriterien, Audit-Pfli
 - **Metrik 3:** Bearbeitungszeit kritischer Audit-Findings MUSS unter 48 Stunden betragen.
 - **Metrik 4:** Ausfallrate automatisierter Sicherheits-Checks MUSS exakt 0% sein.
 
-| id: REQ-ZKP-A05 | Setup-Ceremonies MÜSSEN eine Mindestanzahl von 10 unabhängigen Teilnehmenden aufweisen. | §S.2 |
-| id: REQ-ZKP-A06 | Continuous-Fuzzing-Pipelines MÜSSEN für alle Kryptografie-Crates rund um die Uhr laufen. | §S.2 |
-| id: REQ-ZKP-A07 | Kritische ZKP-Circuits MÜSSEN einer formalen Verifikation durch externe Auditoren unterzogen werden. | §S.3 |
-| id: REQ-ZKP-A08 | Sicherheitskritische Befunde MÜSSEN unverzüglich zu einem Notfall-Pause-Protokoll führen. | §S.3 |
 
 ## Metriken & Akzeptanzkriterien
 

@@ -53,10 +53,6 @@ ZKVM: ATCLang → ATCLang Compiler → ATC Bytecode → ZKVM → Execution Trace
 - **Metrik 3:** Decoder-Korrektheitsrate MUSS exakt 100% betragen.
 - **Metrik 4:** Speicher-Konsistenz-Prüfrate MUSS bei 100% liegen.
 
-| id: REQ-ZKP-904 | Die ZKVM MUSS die maximale Anzahl von Befehlsschritten pro Ausführungstrace strikt begrenzen. | §S.2 |
-| id: REQ-ZKP-905 | Der Instruction-Decoder MUSS mathematisch bewiesen frei von unvollständigen Opcode-Decodings sein. | §S.2 |
-| id: REQ-ZKP-906 | Execution-Trace-Chunks MÜSSEN unabhängig voneinander parallelisierbar bewiesen werden können. | §S.3 |
-| id: REQ-ZKP-907 | Speicherzugriffe innerhalb der ZKVM MÜSSEN über RAM-Consistency-Circuits verifiziert werden. | §S.3 |
 
 ## Metriken & Akzeptanzkriterien
 

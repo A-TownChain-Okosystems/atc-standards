@@ -55,10 +55,6 @@ Definiert die ZKP-Layer als eigenstaendige Protokollschicht zwischen A-TownChain
 - **Metrik 3:** Fehlerrate der Modul-Schnittstellen MUSS exakt 0% sein.
 - **Metrik 4:** Abdeckung der Architekturkomponenten durch Unit-Tests MUSS mindestens 95% betragen.
 
-| id: REQ-ZKP-106 | Die Verification Engine MUSS sämtliche eingehenden Beweise gegen die Circuit Registry validieren, bevor der Verifikationsprozess gestartet wird. | §S.2 |
-| id: REQ-ZKP-107 | Der Proof Cache MUSS verifizierte Beweise zeitlich begrenzt zwischenspeichern; abgelaufene Cache-Einträge MÜSSEN atomar gelöscht werden. | §S.2 |
-| id: REQ-ZKP-108 | Der Commitment Manager MUSS sicherstellen, dass keine ungültigen Commitments in den Zustand übernommen werden. | §S.3 |
-| id: REQ-ZKP-109 | Architekturänderungen an den sechs Kernmodulen MÜSSEN ein formales Audit nach G18-Security-Richtlinien durchlaufen. | §S.5 |
 
 ## Metriken & Akzeptanzkriterien
 

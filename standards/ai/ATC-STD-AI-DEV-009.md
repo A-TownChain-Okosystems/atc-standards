@@ -20,7 +20,7 @@ standard:
 
 # ATC-STD-AI-DEV-009 — AI Audit Trail Standard (v1.1.0, APPROVED)
 
-> **Status:** APPROVED (v1.0.0) — Owner-Freigabe 07.09.2026 (ATC-STD-000 §9); normativ in Kraft · **Reihe:** ATC-STD-AI-DEV-001…012
+> **Status:** APPROVED (v1.1.0) — Owner-Freigabe 07.09.2026 (ATC-STD-000 §9); normativ in Kraft · **Reihe:** ATC-STD-AI-DEV-001…012
 > **Autoren:** Michael Wroblewski (Owner), Aurora (Superagent)
 > **Kernprinzip:** Jede abgeschlossene Agentenarbeit hinterlässt einen
 > unveränderlichen, maschinenlesbaren Audit-Record. Der Audit Trail ist das

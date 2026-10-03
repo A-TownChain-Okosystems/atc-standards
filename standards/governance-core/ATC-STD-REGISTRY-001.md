@@ -33,7 +33,7 @@ standard:
 
 # ATC-STD-REGISTRY-001 — ATC Registry Management Standard (v1.1.0, APPROVED)
 
-> **Status:** APPROVED (v1.0.0) — §9-Freigabe Michael Wroblewski (Builder-Chat 08.09.2026, 00:36 UTC+2);
+> **Status:** APPROVED (v1.1.0) — §9-Freigabe Michael Wroblewski (Builder-Chat 08.09.2026, 00:36 UTC+2);
 > normativ in Kraft ab 08.09.2026, §30-eingefroren (ATC-STD-000). SCR-0025 akzeptiert.
 > **Familie:** Standards Governance Core (FAM-43). **Kopplungen:** TAXONOMY-001
 > (Meta-Registry), STDDEV-001 (Standard-Einträge), CHANGE-001 (Änderungskanal),

@@ -53,10 +53,6 @@ Skalierungsschicht: zkRollup (DeFi/GameFi), zkVM (General Compute), zkApp (Priva
 - **Metrik 3:** Verfügbarkeit der Data-Availability-Schicht MUSS mindestens 99.9% erreichen.
 - **Metrik 4:** Erfolgsquote bei Notfall-Abhebungen MUSS exakt 100% sein.
 
-| id: REQ-ZKP-804 | State-Root-Übergänge MÜSSEN durch kryptografische Validity-Proofs lückenlos belegt werden. | §S.2 |
-| id: REQ-ZKP-805 | Data-Availability-Garantiemodule MÜSSEN die Transaktionsdaten auf der L1 bereitstellen. | §S.2 |
-| id: REQ-ZKP-806 | Notfall-Ausstiegsmechanismen (Escape Hatches) MÜSSEN für Nutzer im Falle von Sequencer-Ausfällen bereitstehen. | §S.3 |
-| id: REQ-ZKP-807 | Erzwungene L1-Transaktionen MÜSSEN innerhalb von 24 Stunden in den Rollup-State aufgenommen werden. | §S.3 |
 
 ## Metriken & Akzeptanzkriterien
 

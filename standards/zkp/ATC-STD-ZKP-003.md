@@ -54,10 +54,6 @@ Registrierung und Versionierung zugelassener Circuits: Circuit Registry, Circuit
 - **Metrik 3:** Deterministische Reproduzierbarkeit der Kompilierung MUSS bei 100% liegen.
 - **Metrik 4:** Testabdeckung für ZK-Circuits MUSS mindestens 95% erreichen.
 
-| id: REQ-ZKP-305 | Sämtliche Circuits MÜSSEN automatisierte Tests auf Under-Constrained-Bedingungen bestehen. | §S.2 |
-| id: REQ-ZKP-306 | Die Anzahl der R1CS-Constraints pro Circuit MUSS durch Obergrenzen beschränkt sein, um DoS zu verhindern. | §S.2 |
-| id: REQ-ZKP-307 | Kompilierte Circuit-Artefakte MÜSSEN mit ihrer SHA-256-Prüfsumme in der Registry verankert werden. | §S.3 |
-| id: REQ-ZKP-308 | Circuit-Signale MÜSSEN explizit als public oder private klassifiziert sein. | §S.3 |
 
 ## Metriken & Akzeptanzkriterien
 

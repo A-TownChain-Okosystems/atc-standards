@@ -20,7 +20,7 @@ standard:
 
 # ATC-STD-AI-DEV-004 — AI Task Management Standard (v1.1.0, APPROVED)
 
-> **Status:** APPROVED (v1.0.0) — Owner-Freigabe 07.09.2026 (ATC-STD-000 §9); normativ in Kraft · **Reihe:** ATC-STD-AI-DEV-001…012
+> **Status:** APPROVED (v1.1.0) — Owner-Freigabe 07.09.2026 (ATC-STD-000 §9); normativ in Kraft · **Reihe:** ATC-STD-AI-DEV-001…012
 > **Autoren:** Michael Wroblewski (Owner), Aurora (Superagent)
 > **Kernprinzip:** Jede Agentenarbeit hat eine Task-ID, die Issue → Branch →
 > Commits → PR → Tests → Doku → Audit verbindet. Ein Task ist niemals implizit.

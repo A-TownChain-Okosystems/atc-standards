@@ -54,10 +54,6 @@ Kryptografische Commitments (private Balances: public Commitment C, private Bala
 - **Metrik 3:** Erfolgsquote der Double-Spend-Prävention MUSS exakt 100% sein.
 - **Metrik 4:** Maximale Einfügezeit in den Commitment-Baum MUSS unter 50 ms liegen.
 
-| id: REQ-ZKP-505 | Die Tiefe des Commitment-Merkle-Baums MUSS fest vorgegeben und gegen Re-Hashing-Attacken geschützt sein. | §S.2 |
-| id: REQ-ZKP-506 | Nullifier-Sets MÜSSEN performant durchsuchbar sein, um Replay-Angriffe ohne Verzögerung abzuwehren. | §S.2 |
-| id: REQ-ZKP-507 | Kollisionsfreie Hashing-Algorithmen MÜSSEN für alle Commitment-Berechnungen erzwungen werden. | §S.3 |
-| id: REQ-ZKP-508 | Die Generierung von Zero-Value-Nullifiern MUSS vom System strikt unterbunden werden. | §S.3 |
 
 ## Metriken & Akzeptanzkriterien
 

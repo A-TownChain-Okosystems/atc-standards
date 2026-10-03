@@ -20,7 +20,7 @@ standard:
 
 # ATC-STD-AI-DEV-001 — Software Development AI Agent Identity & Workflow Standard (v1.1.0, APPROVED)
 
-> **Status:** APPROVED (v1.0.0) — Owner-Freigabe 07.09.2026 (ATC-STD-000 §9); Übergangsfristen §14/§16 (30 Tage) laufen ab 07.09.2026
+> **Status:** APPROVED (v1.1.0) — Owner-Freigabe 07.09.2026 (ATC-STD-000 §9); Übergangsfristen §14/§16 (30 Tage) laufen ab 07.09.2026
 > **Reihe:** ATC-STD-AI-DEV-001…012 (AI Development Governance Family, §23) · **Autoren:** Michael Wroblewski (Owner), Aurora (Superagent)
 > **Kernprinzip:** Ein KI-Agent ist kein unsichtbarer Bot. Jede Aktion folgt der Kette
 > **Identität → Kontext → Fundstelle → Entscheidung → nächste Aktion → Ergebnis.**

@@ -34,7 +34,7 @@ standard:
 
 # ATC-STD-CHANGE-001 — ATC Change Control Dachnorm (v1.1.0, APPROVED)
 
-> **Status:** APPROVED (v1.0.1) — §9-Freigabe Michael Wroblewski (Builder-Chat 08.09.2026, 00:36 UTC+2);
+> **Status:** APPROVED (v1.1.0) — §9-Freigabe Michael Wroblewski (Builder-Chat 08.09.2026, 00:36 UTC+2);
 > normativ in Kraft ab 08.09.2026, §30-eingefroren (ATC-STD-000). SCR-0025 akzeptiert.
 > **Familie:** Standards Governance Core (FAM-43). **Rolle:** Dachnorm — ordnet ZU,
 > ersetzt NICHT: ATC-STD-000 §19–33, VERSION-001, UPDATE-001, COMPAT-001 bleiben

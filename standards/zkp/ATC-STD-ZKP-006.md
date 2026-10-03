@@ -53,10 +53,6 @@ Privacy-preserving Identity (ATC-ZK-Identity Protocol): Credentials, die Aussage
 - **Metrik 3:** Aktualisierungszeit von Widerrufslisten MUSS unter 5 Sekunden betragen.
 - **Metrik 4:** Fehlerquote bei der Attributs-Offenlegung MUSS 0% betragen.
 
-| id: REQ-ZKP-604 | Credential-Aussteller MÜSSEN gültige kryptografische Signaturen auf den Credentials anbringen. | §S.2 |
-| id: REQ-ZKP-605 | Identity-Proofs MÜSSEN ein Frische-Zeitfenster (Nonce/Timestamp) enthalten, um Replay-Attacken zu verhindern. | §S.2 |
-| id: REQ-ZKP-606 | Die Anzahl selektiv offengelegter Attribute MUSS minimiert werden (Data Minimization). | §S.3 |
-| id: REQ-ZKP-607 | Widerrufene Credentials MÜSSEN unverzüglich im On-Chain-Revocation-Tree aktualisiert werden. | §S.3 |
 
 ## Metriken & Akzeptanzkriterien
 

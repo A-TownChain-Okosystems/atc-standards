@@ -25,7 +25,7 @@ standard:
 
 # ATC-STD-LICENSE-002 — License Specification Standard (v1.1.0, APPROVED)
 
-> **Status:** APPROVED (v1.0.0, §30-eingefroren) — Standard der Familie ATC License
+> **Status:** APPROVED (v1.1.0, §30-eingefroren) — Standard der Familie ATC License
 > System (FAM-44); §9-FREIGEGEBEN 08.09.2026, 03:55 UTC+2 via Owner-Direktive
 > „ATC-Lizenzsystem als eigene Standardfamilie etablieren" (SCR-0037). Klar getrennt
 > von SPDX-Standardlizenzen (Repos behalten Apache-2.0 als Basisschicht, SCR-0036).

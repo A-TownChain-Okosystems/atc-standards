@@ -20,7 +20,7 @@ standard:
 
 # ATC-STD-SC-008 — Smart Contract Event Standard (v1.1.0, APPROVED)
 
-> **Status:** APPROVED (v1.0.0) — Owner-Freigabe 07.09.2026, 21:00 UTC+2 (ATC-STD-000 §9,
+> **Status:** APPROVED (v1.1.0) — Owner-Freigabe 07.09.2026, 21:00 UTC+2 (ATC-STD-000 §9,
 > „Freigabe"); dokumentiert in approval/APPROVAL-DECISION-2026-09-07-SC-FRAMEWORK.md.
 > Immutabilität per §30 — Änderungen nur via SCR.
 > **Familie:** ATC Smart Contract Standards Framework (ATC-STD-SC-001..020).

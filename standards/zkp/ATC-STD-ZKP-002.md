@@ -54,10 +54,6 @@ Pluggable Proof Architecture: Beweissysteme (zunaechst Groth16, PLONK, Halo2, ST
 - **Metrik 3:** Fehlertoleranz bei ungültigen Proof-Eingaben MUSS 100% kontrollierte Abbrüche garantieren.
 - **Metrik 4:** Testabdeckung aller ProofSystem-Interface-Methoden MUSS mindestens 98% betragen.
 
-| id: REQ-ZKP-205 | Das ProofSystem-Interface MUSS Timeouts für die Methoden prove() und verify() strikt erzwingen. | §S.2 |
-| id: REQ-ZKP-206 | Fehlerhafte Serialisierungsdaten MÜSSEN zu einem kontrollierten Abbruch ohne Panik im Runtime-System führen. | §S.2 |
-| id: REQ-ZKP-207 | Jedes registrierte Beweissystem MUSS eine eindeutige Versionskennung im Header der Proof-Datei mitführen. | §S.3 |
-| id: REQ-ZKP-208 | Inkompatible Interface-Versionen MÜSSEN beim Laden vom System explizit abgewiesen werden. | §S.3 |
 
 ## Metriken & Akzeptanzkriterien
 
