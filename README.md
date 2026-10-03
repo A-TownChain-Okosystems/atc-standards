@@ -154,9 +154,11 @@ Governance-Hardening: Registry-Integritäts-Gate, Discovery→Audit→SCR-Kopplu
 ├── references/
 ├── registry/
 ├── schemas/
+├── security/
 ├── sdk/
 ├── standards/
 ├── templates/
+├── tests/
 └── tools/
 ```
 
