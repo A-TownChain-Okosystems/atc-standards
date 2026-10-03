@@ -25,10 +25,10 @@ Ruff 0.16.7 reported **210** findings:
 
 ## Format result
 
-Exact formatting implementation commit:
+Dedicated formatting commit:
 `94e948cce94c6a9e050735e082dbad1c78bede97`
 
-Ruff 0.16.7 was run directly against the seven measured hotspots:
+Ruff 0.16.7 was run against the seven measured hotspots:
 
 - `tests/test_dependency_guard.py`
 - `tools/dependency_guard.py`
@@ -40,51 +40,42 @@ Ruff 0.16.7 was run directly against the seven measured hotspots:
 
 The formatter changed all seven files. This was an explicit formatting operation, not Ruff lint `--fix`.
 
-## Post-format gate baseline
+The generator was then synchronized with its canonical AI source, and the registry was regenerated deterministically. The exact generator/registry gate passed on run `37112482127`, job `111172937321`.
 
-Exact current source HEAD:
-`bafcde76a6fbcc53dec8387e26b16adc41ff2107`
+## Post-format mechanical baseline
 
-The centralized Ruff gate run:
-
-Run: `37111889812`
-Job: `111171241612`
-
-performed policy TOML syntax validation successfully, then stale detection reported:
+After formatting, the temporary E701/E702 override became stale. The central gate reported:
 
 `RUFF_OVERRIDE_STALE: base-policy failures contain none of the relaxed rules: E701, E702`
 
-This is exact evidence that **E701/E702 no longer occur in the base-policy Ruff report after formatting**. The temporary centralized override was therefore removed rather than retained.
+The override was therefore removed.
 
-The remaining current lint debt is the mechanical set:
+The remaining active Ruff debt was mechanical import hygiene. It was fixed in the dedicated mechanical cycle, with the final current head:
 
-- I001: 26
-- E401: 5
-- F401: 1
-- W292: 1
-- **Total: 32**
+`e67b9e153f96befaca5bd12faec45181deb4c6d5`
 
-Thus the two numbers have distinct meanings:
+Final exact-head Ruff verification:
 
-- **210** = historical raw pre-format baseline
-- **32** = current post-format base-policy baseline
+- Run: `37112484839`
+- Job: `111172945211`
+- Ruff lint: **PASS**
+- Ruff format: **PASS**
+- Policy TOML syntax: **PASS**
+- Ruff negative F401 test: **PASS**
 
-The former 177 E701/E702 findings were eliminated by formatting; they are not suppressed policy debt.
+The mechanical cycle removed the remaining E401/I001/F401 findings and the generator W292 issue.
 
-## Format baseline evidence
+## Final state
 
-Independent exact-head format baseline before the formatting commit:
+Current Ruff gate debt: **0**
 
-Run: `37083386248`
-Job: `111088534247`
+The historical **210** is retained as the raw pre-format baseline. It is not the current gate debt.
 
-Result: **FAIL — 7 files would be reformatted; 868 already formatted.**
-
-After commit `94e948cce94c6a9e050735e082dbad1c78bede97`, those seven files are the measured formatting scope.
+The former 177 E701/E702 findings were eliminated by formatting; they are not suppressed by an active exception.
 
 ## Policy-bundle contract
 
-The central reusable Ruff workflow now validates all policy TOML with Python 3.11 `tomllib`
+The central reusable Ruff workflow validates all policy TOML with Python 3.11 `tomllib`
 before loading configuration or evaluating overrides. Malformed policy is classified as
 `POLICY-BUNDLE-SYNTAX`, not as caller-code Ruff debt.
 
@@ -92,9 +83,16 @@ The C-1 override mechanism remains available for future temporary exceptions, in
 fail-closed allowlist, stale detection, and sunset enforcement. No atc-standards override
 is currently active.
 
-## Fix order
+## Exact supporting gates
 
-1. verify the post-format generator/registry determinism;
-2. remove I001/E401/F401/W292 mechanically;
-3. rerun the complete gate;
-4. keep the central override registry empty for atc-standards unless a new, evidenced exception is required.
+- Generator regression/determinism/registry consistency: Run `37112482127`, Job `111172937321` — **PASS**
+- Independent Ruff format baseline job after final formatting: Run `37112482127`, Job `111172937244` — **PASS**
+- Registry Consistency: Run `37112484429`, Job `111172943752` — **PASS**
+
+## Fix-cycle conclusion
+
+1. Format baseline: completed.
+2. Generator source synchronization + registry regeneration: completed and deterministic.
+3. Mechanical Ruff debt: completed.
+4. E701/E702 override: removed because it became stale.
+5. Current Ruff gate: **clean**.
