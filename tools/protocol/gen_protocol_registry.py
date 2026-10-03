@@ -166,8 +166,8 @@ assert all(s in STATUSES for _, _, _, s, _, _ in PROTOCOLS)
 assert all(p in {"P0", "P1", "P2"} for _, _, p, *_ in PROTOCOLS)
 
 if __name__ == "__main__":
-        data = {
-            "protocol-registry": {
+    data = {
+        "protocol-registry": {
             "standard": "ATC-STD-PROTOCOL-001",
             "version": "1.0.0",
             "generated": "2026-09-08",
