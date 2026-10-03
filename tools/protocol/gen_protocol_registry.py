@@ -99,7 +99,7 @@ PROTOCOLS = [
         "AI",
         "ATC AI Agent Protocol",
         "P2",
-        "planned",
+        "draft",
         "L2",
         "aurora-ai (L2); Kopplung Kernel-Event-Bridge (ATC-M-003)",
     ),
@@ -156,7 +156,8 @@ SPEC_OVERRIDES = {
     "VALIDATOR": "protocols/validator/ATC-PROTO-VALIDATOR-001.md — Spezifikation v1.0.0: Validator Identity, Eligibility, Set-Derivation, Voting Authority, Block/Vote Validation, Weight, Quorum, Lifecycle, Key Rotation und Equivocation; Status draft bis Exact-SHA-Conformance.",
     "CONSENSUS": "protocols/consensus/ATC-PROTO-CONSENSUS-001.md — Spezifikation v1.0.0: deterministische Proposal-, PoH-, Voting-, DAG-, Fork-Choice-, Finality-, Validator-Set- und Timeout-Regeln; Status draft bis Exact-SHA-Conformance.",
     "MEMPOOL": "protocols/mempool/ATC-PROTO-MEMPOOL-001.md — Spezifikation v1.0.0: deterministische Admission, Duplicate-/Nonce-Schutz, bounded capacity, Ordering, Replacement, Eviction und Block-Selection; Status draft bis Exact-SHA-Conformance.",
-    "TX": "protocols/tx/ATC-PROTO-TX-001.md — Spezifikation v1.0.0: kanonische u128-Amounts, chain_id 658467, ATC-TX-DOMAIN-V2, secp256k1/ECDSA RFC6979 low-S, 33-Byte compressed public key, deterministische Wire-/Signing-Bytes; Status draft bis Exact-SHA-Conformance."
+    "TX": "protocols/tx/ATC-PROTO-TX-001.md — Spezifikation v1.0.0: kanonische u128-Amounts, chain_id 658467, ATC-TX-DOMAIN-V2, secp256k1/ECDSA RFC6979 low-S, 33-Byte compressed public key, deterministische Wire-/Signing-Bytes; Status draft bis Exact-SHA-Conformance.",
+    "AI": "protocols/ai/ATC-PROTO-AI-001.md — Spezifikation v1.0.0; bestehende ShivaCore-AI-Implementierung als Baseline; Aktivierung erst nach ABI/Determinismus/Conformance."
 }
 
 assert len(PROTOCOLS) == 26, f"Erwartet 26 Protokollfamilien, gefunden {len(PROTOCOLS)}"
@@ -164,50 +165,51 @@ STATUSES = {"planned", "draft", "active", "experimental", "deprecated"}
 assert all(s in STATUSES for _, _, _, s, _, _ in PROTOCOLS)
 assert all(p in {"P0", "P1", "P2"} for _, _, p, *_ in PROTOCOLS)
 
-data = {
-    "protocol-registry": {
-        "standard": "ATC-STD-PROTOCOL-001",
-        "version": "1.0.0",
-        "generated": "2026-09-08",
-        "note": (
-            "ATC Protocol Registry gem. ATC-STD-PROTOCOL-001 §20/§21 — SSOT der ATC-PROTO-*-Familien. "
-            "Eintrag = Autorisierung: Ein Protokoll OHNE Registry-Eintrag ist kein ATC-Protokoll. "
-            "Status-Ehrlichkeitsregel (REQ-PROTO-021): planned = Baseline ohne Implementierung, "
-            "draft = Teilimplementierung existiert (Impl.-Spuren), active/experimental nur mit "
-            "verifizierter Implementierung, deprecated = aktiv abgelöst. Änderungen nur via SCR; "
-            "Validator S-23 prüft Integrität je CI-Lauf."
-        ),
-        "domains": [d for d, *_ in PROTOCOLS],
-        "protocols": [
-            {
-                "id": f"ATC-PROTO-{d}-001",
-                "name": n,
-                "domain": d,
-                "version": "1.0.0",
-                "status": s,
-                "priority": p,
-                "layer": lay,
-                "specification": SPEC_OVERRIDES.get(
-                    d,
-                    "Zu spezifizieren gem. ATC-STD-PROTOCOL-001 (SCR erforderlich)"
-                    if s == "planned"
-                    else "Teilweise implementiert; formale Spezifikation gem. ATC-STD-PROTOCOL-001 nachzuziehen",
-                ),
-                "note": note,
-            }
-            for d, n, p, s, lay, note in PROTOCOLS
-        ],
+if __name__ == "__main__":
+        data = {
+            "protocol-registry": {
+            "standard": "ATC-STD-PROTOCOL-001",
+            "version": "1.0.0",
+            "generated": "2026-09-08",
+            "note": (
+                "ATC Protocol Registry gem. ATC-STD-PROTOCOL-001 §20/§21 — SSOT der ATC-PROTO-*-Familien. "
+                "Eintrag = Autorisierung: Ein Protokoll OHNE Registry-Eintrag ist kein ATC-Protokoll. "
+                "Status-Ehrlichkeitsregel (REQ-PROTO-021): planned = Baseline ohne Implementierung, "
+                "draft = Teilimplementierung existiert (Impl.-Spuren), active/experimental nur mit "
+                "verifizierter Implementierung, deprecated = aktiv abgelöst. Änderungen nur via SCR; "
+                "Validator S-23 prüft Integrität je CI-Lauf."
+            ),
+            "domains": [d for d, *_ in PROTOCOLS],
+            "protocols": [
+                {
+                    "id": f"ATC-PROTO-{d}-001",
+                    "name": n,
+                    "domain": d,
+                    "version": "1.0.0",
+                    "status": s,
+                    "priority": p,
+                    "layer": lay,
+                    "specification": SPEC_OVERRIDES.get(
+                        d,
+                        "Zu spezifizieren gem. ATC-STD-PROTOCOL-001 (SCR erforderlich)"
+                        if s == "planned"
+                        else "Teilweise implementiert; formale Spezifikation gem. ATC-STD-PROTOCOL-001 nachzuziehen",
+                    ),
+                    "note": note,
+                }
+                for d, n, p, s, lay, note in PROTOCOLS
+            ],
+        }
     }
-}
-with open("registry/protocol-registry.yaml", "w", encoding="utf-8") as fh:
-    fh.write("# ATC Protocol Registry — ATC-STD-PROTOCOL-001 §20/§21 (SSOT)\n")
-    fh.write("# Generiert von tools/protocol/gen_protocol_registry.py — Änderungen nur via SCR.\n")
-    yaml.dump(data, fh, allow_unicode=True, sort_keys=False, width=200)
+    with open("registry/protocol-registry.yaml", "w", encoding="utf-8") as fh:
+        fh.write("# ATC Protocol Registry — ATC-STD-PROTOCOL-001 §20/§21 (SSOT)\n")
+        fh.write("# Generiert von tools/protocol/gen_protocol_registry.py — Änderungen nur via SCR.\n")
+        yaml.dump(data, fh, allow_unicode=True, sort_keys=False, width=200)
 
-counts = {}
-for _, _, _, s, *_ in PROTOCOLS:
-    counts[s] = counts.get(s, 0) + 1
-print(
-    f"protocol-registry.yaml: {len(PROTOCOLS)} Protokollfamilien, Status: {counts}, "
-    f"P0-Fundament = Dachstandard ATC-STD-PROTOCOL-001 selbst"
-)
+    counts = {}
+    for _, _, _, s, *_ in PROTOCOLS:
+        counts[s] = counts.get(s, 0) + 1
+    print(
+        f"protocol-registry.yaml: {len(PROTOCOLS)} Protokollfamilien, Status: {counts}, "
+        f"P0-Fundament = Dachstandard ATC-STD-PROTOCOL-001 selbst"
+    )
