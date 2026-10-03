@@ -390,4 +390,6 @@ def test_base_graph_classification_rejects_malformed_blocked_result():
     sys.path.insert(0, str(ROOT / "tools"))
     import dependency_guard as dg
 
-    assert dg.classify_base_graph_result({"status": "BLOCKED", "errors": []}) == "UNEXPECTED_FAILURE"
+    assert (
+        dg.classify_base_graph_result({"status": "BLOCKED", "errors": []}) == "UNEXPECTED_FAILURE"
+    )
