@@ -31,6 +31,9 @@ class ProtocolRegistryGeneratorTests(unittest.TestCase):
     def test_ai_status_is_draft(self) -> None:
         self.assertEqual(_protocol("AI")[3], "draft")
 
+    def test_protocol_family_count_remains_26(self) -> None:
+        self.assertEqual(len(generator.PROTOCOLS), 26)
+
     def test_ai_override_is_present(self) -> None:
         self.assertTrue(
             generator.SPEC_OVERRIDES["AI"].startswith(
