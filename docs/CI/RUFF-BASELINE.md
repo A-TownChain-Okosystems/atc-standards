@@ -3,7 +3,7 @@
 Status: VERIFIED / exact-SHA evidence
 Date: 2026-10-03
 
-## Raw baseline without centralized override
+## Raw baseline before format
 
 Exact source HEAD:
 `f870085f04dacd21faebbb88ab722537fef88164`
@@ -13,51 +13,22 @@ Job: `111087287417`
 
 Ruff 0.16.7 reported **210** findings:
 
-| Rule | Count | Classification |
+| Rule | Count | Classification at raw baseline |
 |---|---:|---|
-| E701 | 107 | temporary policy override |
-| E702 | 70 | temporary policy override |
+| E701 | 107 | formatting/mechanical debt |
+| E702 | 70 | formatting/mechanical debt |
 | I001 | 26 | mechanical |
 | E401 | 5 | mechanical |
 | F401 | 1 | mechanical |
 | W292 | 1 | mechanical |
 | **Total** | **210** | |
 
-The 177 E701/E702 findings are not fixed by the centralized exception.
+## Format result
 
-## Gate baseline with centralized override
+Exact formatting implementation commit:
+`94e948cce94c6a9e050735e082dbad1c78bede97`
 
-Exact source HEAD:
-`80c241dbc53f158e3c608d4b56a7ca0ed24313db`
-
-Run: `37083613526`
-Job: `111089221333`
-
-The central policy bundle accepted the override after TOML parsing, allowlist validation, and stale detection. The Ruff lint step then reported **32 active findings**:
-
-- I001: 26
-- E401: 5
-- F401: 1
-- W292: 1
-
-The Ruff job failed with exit code 1. Format was skipped because lint failed.
-
-Therefore:
-
-- **210 = raw baseline under the base policy**
-- **32 = active gate baseline with E701/E702 override**
-- **177 = suppressed by temporary override, not remediated**
-
-## Format baseline
-
-Independent exact-head format baseline:
-
-Run: `37083386248`
-Job: `111088534247`
-
-Result: **FAIL — 7 files would be reformatted; 868 already formatted.**
-
-Affected files:
+Ruff 0.16.7 was run directly against the seven measured hotspots:
 
 - `tests/test_dependency_guard.py`
 - `tools/dependency_guard.py`
@@ -67,21 +38,63 @@ Affected files:
 - `tools/osv_snapshot.py`
 - `tools/protocol/gen_protocol_registry.py`
 
-The generator source is deliberately included in the mechanical format cycle before the next registry regeneration.
+The formatter changed all seven files. This was an explicit formatting operation, not Ruff lint `--fix`.
+
+## Post-format gate baseline
+
+Exact current source HEAD:
+`bafcde76a6fbcc53dec8387e26b16adc41ff2107`
+
+The centralized Ruff gate run:
+
+Run: `37111889812`
+Job: `111171241612`
+
+performed policy TOML syntax validation successfully, then stale detection reported:
+
+`RUFF_OVERRIDE_STALE: base-policy failures contain none of the relaxed rules: E701, E702`
+
+This is exact evidence that **E701/E702 no longer occur in the base-policy Ruff report after formatting**. The temporary centralized override was therefore removed rather than retained.
+
+The remaining current lint debt is the mechanical set:
+
+- I001: 26
+- E401: 5
+- F401: 1
+- W292: 1
+- **Total: 32**
+
+Thus the two numbers have distinct meanings:
+
+- **210** = historical raw pre-format baseline
+- **32** = current post-format base-policy baseline
+
+The former 177 E701/E702 findings were eliminated by formatting; they are not suppressed policy debt.
+
+## Format baseline evidence
+
+Independent exact-head format baseline before the formatting commit:
+
+Run: `37083386248`
+Job: `111088534247`
+
+Result: **FAIL — 7 files would be reformatted; 868 already formatted.**
+
+After commit `94e948cce94c6a9e050735e082dbad1c78bede97`, those seven files are the measured formatting scope.
 
 ## Policy-bundle contract
 
-The centralized policy now validates all TOML syntax with Python 3.11 `tomllib` before override evaluation. Malformed policy is classified as `POLICY-BUNDLE-SYNTAX`, not as caller-code Ruff debt.
+The central reusable Ruff workflow now validates all policy TOML with Python 3.11 `tomllib`
+before loading configuration or evaluating overrides. Malformed policy is classified as
+`POLICY-BUNDLE-SYNTAX`, not as caller-code Ruff debt.
 
-The temporary E701/E702 override has:
-
-- sunset: 2027-03-31
-- tracking issue: A-TownChain-Okosystems/.github#25
+The C-1 override mechanism remains available for future temporary exceptions, including
+fail-closed allowlist, stale detection, and sunset enforcement. No atc-standards override
+is currently active.
 
 ## Fix order
 
-1. format the 7 measured files;
-2. regenerate and verify the protocol registry deterministically;
-3. remove mechanical I001/E401/F401/W292 findings;
-4. treat E701/E702 as a separate refactoring cycle;
-5. remove the centralized override after remediation and before the sunset date.
+1. verify the post-format generator/registry determinism;
+2. remove I001/E401/F401/W292 mechanically;
+3. rerun the complete gate;
+4. keep the central override registry empty for atc-standards unless a new, evidenced exception is required.
