@@ -157,7 +157,7 @@ SPEC_OVERRIDES = {
     "CONSENSUS": "protocols/consensus/ATC-PROTO-CONSENSUS-001.md — Spezifikation v1.0.0: deterministische Proposal-, PoH-, Voting-, DAG-, Fork-Choice-, Finality-, Validator-Set- und Timeout-Regeln; Status draft bis Exact-SHA-Conformance.",
     "MEMPOOL": "protocols/mempool/ATC-PROTO-MEMPOOL-001.md — Spezifikation v1.0.0: deterministische Admission, Duplicate-/Nonce-Schutz, bounded capacity, Ordering, Replacement, Eviction und Block-Selection; Status draft bis Exact-SHA-Conformance.",
     "TX": "protocols/tx/ATC-PROTO-TX-001.md — Spezifikation v1.0.0: kanonische u128-Amounts, chain_id 658467, ATC-TX-DOMAIN-V2, secp256k1/ECDSA RFC6979 low-S, 33-Byte compressed public key, deterministische Wire-/Signing-Bytes; Status draft bis Exact-SHA-Conformance.",
-    "AI": "protocols/ai/ATC-PROTO-AI-001.md — Spezifikation v1.0.0; bestehende ShivaCore-AI-Implementierung als Baseline; Aktivierung erst nach ABI/Determinismus/Conformance."
+    "AI": "protocols/ai/ATC-PROTO-AI-001.md — Spezifikation v1.0.0; bestehende ShivaCore-AI-Implementierung als Baseline; Aktivierung erst nach ABI/Determinismus/Conformance.",
 }
 
 assert len(PROTOCOLS) == 26, f"Erwartet 26 Protokollfamilien, gefunden {len(PROTOCOLS)}"
