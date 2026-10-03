@@ -54,26 +54,26 @@ jobs:
           cp /tmp/atc-dependency-base-artifact/dependency-graph.json artifacts/dependency/base-dependency-graph.json
           cp /tmp/atc-dependency-base-artifact/dependency-result.json artifacts/dependency/base-dependency-result.json
           python3 - <<'PY'
-import json
-import sys
-from pathlib import Path
+          import json
+          import sys
+          from pathlib import Path
 
-sys.path.insert(0, "tools")
-from dependency_guard import classify_base_graph_result
+          sys.path.insert(0, "tools")
+          from dependency_guard import classify_base_graph_result
 
-result = json.loads(Path("/tmp/atc-dependency-base-artifact/dependency-result.json").read_text())
-classification = classify_base_graph_result(result)
+          result = json.loads(Path("/tmp/atc-dependency-base-artifact/dependency-result.json").read_text())
+          classification = classify_base_graph_result(result)
 
-if "$rc" == "0" and classification != "PASS":
-    raise SystemExit(f"base graph returned zero but result was {classification}: {result}")
-if "$rc" != "0" and classification != "EXPECTED_BLOCKED":
-    raise SystemExit(f"unexpected base graph failure class: {classification}: {result}")
+          if "$rc" == "0" and classification != "PASS":
+              raise SystemExit(f"base graph returned zero but result was {classification}: {result}")
+          if "$rc" != "0" and classification != "EXPECTED_BLOCKED":
+              raise SystemExit(f"unexpected base graph failure class: {classification}: {result}")
 
-if classification == "EXPECTED_BLOCKED":
-    print("Base graph has only expected unpinned/unsupported requirement violations; retained as informational evidence.")
-else:
-    print("Base graph PASS; no historical pin violation detected.")
-PY
+          if classification == "EXPECTED_BLOCKED":
+              print("Base graph has only expected unpinned/unsupported requirement violations; retained as informational evidence.")
+          else:
+              print("Base graph PASS; no historical pin violation detected.")
+          PY
 
       - name: Validate OSV evidence provenance
         run: |
