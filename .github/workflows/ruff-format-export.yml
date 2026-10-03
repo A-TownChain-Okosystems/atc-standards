@@ -5,13 +5,17 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   export:
+    if: github.event_name == 'workflow_dispatch' || !startsWith(github.event.head_commit.message, 'ci: apply Ruff formatting')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
@@ -27,10 +31,16 @@ jobs:
             tools/osv_snapshot.py \
             tools/protocol/gen_protocol_registry.py \
             tools/gen_views/generate_views.py
-      - name: Export patch
-        run: git diff -- tools/dependency_guard.py tests/test_dependency_guard.py tools/dependency_sbom.py tools/osv_fetch.py tools/osv_snapshot.py tools/protocol/gen_protocol_registry.py tools/gen_views/generate_views.py > ruff-format.patch
-      - uses: actions/upload-artifact@v4
-        with:
-          name: ruff-format-patch
-          path: ruff-format.patch
-          if-no-files-found: error
+      - name: Commit formatted files
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet --             tools/dependency_guard.py             tests/test_dependency_guard.py             tools/dependency_sbom.py             tools/osv_fetch.py             tools/osv_snapshot.py             tools/protocol/gen_protocol_registry.py             tools/gen_views/generate_views.py; then
+            echo "Ruff format produced no changes."
+            exit 0
+          fi
+          git config user.name "ShivaCoreDev"
+          git config user.email "michael.worob@gmail.com"
+          git add             tools/dependency_guard.py             tests/test_dependency_guard.py             tools/dependency_sbom.py             tools/osv_fetch.py             tools/osv_snapshot.py             tools/protocol/gen_protocol_registry.py             tools/gen_views/generate_views.py
+          git commit -m "ci: apply Ruff formatting to measured hotspots"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
