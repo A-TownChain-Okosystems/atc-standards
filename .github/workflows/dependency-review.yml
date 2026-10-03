@@ -53,29 +53,27 @@ jobs:
           test -s /tmp/atc-dependency-base-artifact/dependency-result.json
           cp /tmp/atc-dependency-base-artifact/dependency-graph.json artifacts/dependency/base-dependency-graph.json
           cp /tmp/atc-dependency-base-artifact/dependency-result.json artifacts/dependency/base-dependency-result.json
-          if [ "$rc" -ne 0 ]; then
-            python3 - <<'PY'
+          python3 - <<'PY'
 import json
-import re
+import sys
 from pathlib import Path
 
-p = Path("/tmp/atc-dependency-base-artifact/dependency-result.json")
-r = json.loads(p.read_text())
-errors = r.get("errors")
-if r.get("status") != "BLOCKED" or not isinstance(errors, list) or not errors:
-    raise SystemExit(f"unexpected base graph failure: {r}")
+sys.path.insert(0, "tools")
+from dependency_guard import classify_base_graph_result
 
-allowed = re.compile(
-    r"^.+requirements(?:-[^/]+)?\\.txt:\\d+: "
-    r"unpinned/unsupported requirement: "
-    r"[A-Za-z0-9_.-]+(?:[<>=!~]=?[^;\\s]+(?:,[<>=!~]=?[^;\\s]+)*)?$"
-)
-if not all(isinstance(e, str) and allowed.match(e) for e in errors):
-    raise SystemExit(f"unexpected base graph error class: {errors}")
+result = json.loads(Path("/tmp/atc-dependency-base-artifact/dependency-result.json").read_text())
+classification = classify_base_graph_result(result)
 
-print("Base graph has only expected unpinned/unsupported requirement violations; retained as informational evidence.")
+if "$rc" == "0" and classification != "PASS":
+    raise SystemExit(f"base graph returned zero but result was {classification}: {result}")
+if "$rc" != "0" and classification != "EXPECTED_BLOCKED":
+    raise SystemExit(f"unexpected base graph failure class: {classification}: {result}")
+
+if classification == "EXPECTED_BLOCKED":
+    print("Base graph has only expected unpinned/unsupported requirement violations; retained as informational evidence.")
+else:
+    print("Base graph PASS; no historical pin violation detected.")
 PY
-          fi
 
       - name: Validate OSV evidence provenance
         run: |
