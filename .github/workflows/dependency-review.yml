@@ -56,12 +56,24 @@ jobs:
           if [ "$rc" -ne 0 ]; then
             python3 - <<'PY'
 import json
+import re
 from pathlib import Path
-p=Path("/tmp/atc-dependency-base-artifact/dependency-result.json")
-r=json.loads(p.read_text())
-if r.get("status") != "BLOCKED":
+
+p = Path("/tmp/atc-dependency-base-artifact/dependency-result.json")
+r = json.loads(p.read_text())
+errors = r.get("errors")
+if r.get("status") != "BLOCKED" or not isinstance(errors, list) or not errors:
     raise SystemExit(f"unexpected base graph failure: {r}")
-print("Base graph is non-conformant at the comparison ref; retained as informational evidence.")
+
+allowed = re.compile(
+    r"^.+requirements(?:-[^/]+)?\\.txt:\\d+: "
+    r"unpinned/unsupported requirement: "
+    r"[A-Za-z0-9_.-]+(?:[<>=!~]=?[^;\\s]+(?:,[<>=!~]=?[^;\\s]+)*)?$"
+)
+if not all(isinstance(e, str) and allowed.match(e) for e in errors):
+    raise SystemExit(f"unexpected base graph error class: {errors}")
+
+print("Base graph has only expected unpinned/unsupported requirement violations; retained as informational evidence.")
 PY
           fi
 
