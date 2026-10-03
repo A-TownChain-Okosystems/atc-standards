@@ -102,10 +102,10 @@ jobs:
         env:
           ATC_DEP_BASE_REF: ${{ github.event.pull_request.base.sha }}
           ATC_DEP_BASE_JSON: /tmp/atc-dependency-base-artifact/dependency-graph.json
-        run: python3 tools/dependency_guard.py review --out artifacts/dependency
+        run: python3 tools/dependency_guard.py review --out artifacts/dependency --advisories artifacts/dependency/advisories.json
       - name: Native dependency review (main push)
         if: github.event_name == 'push'
-        run: python3 tools/dependency_guard.py review --out artifacts/dependency
+        run: python3 tools/dependency_guard.py review --out artifacts/dependency --advisories artifacts/dependency/advisories.json
       - name: Generate deterministic SPDX SBOM
         run: python3 tools/dependency_sbom.py --out artifacts/dependency
       - name: Validate security evidence
