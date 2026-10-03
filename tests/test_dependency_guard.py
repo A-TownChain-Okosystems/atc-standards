@@ -328,3 +328,53 @@ def test_osv_query_provenance_uses_exact_persisted_bytes():
     body = b'{"queries":[]}'
     persisted = body
     assert hashlib.sha256(persisted).hexdigest() == hashlib.sha256(body).hexdigest()
+
+
+def test_base_graph_classification_pass():
+    import sys
+
+    sys.path.insert(0, str(ROOT / "tools"))
+    import dependency_guard as dg
+
+    assert dg.classify_base_graph_result({"status": "PASS", "errors": []}) == "PASS"
+
+
+def test_base_graph_classification_expected_unpinned_blocked():
+    import sys
+
+    sys.path.insert(0, str(ROOT / "tools"))
+    import dependency_guard as dg
+
+    result = {
+        "status": "BLOCKED",
+        "errors": [
+            "requirements.txt:4: unpinned/unsupported requirement: pyyaml>=6.0,<7.0",
+            "requirements.txt:5: unpinned/unsupported requirement: jsonschema>=4.0,<5.0",
+        ],
+    }
+    assert dg.classify_base_graph_result(result) == "EXPECTED_BLOCKED"
+
+
+def test_base_graph_classification_rejects_mixed_errors():
+    import sys
+
+    sys.path.insert(0, str(ROOT / "tools"))
+    import dependency_guard as dg
+
+    result = {
+        "status": "BLOCKED",
+        "errors": [
+            "requirements.txt:4: unpinned/unsupported requirement: pyyaml>=6.0,<7.0",
+            "requirements-dev.txt:2: Parser error: unexpected token",
+        ],
+    }
+    assert dg.classify_base_graph_result(result) == "UNEXPECTED_FAILURE"
+
+
+def test_base_graph_classification_rejects_malformed_blocked_result():
+    import sys
+
+    sys.path.insert(0, str(ROOT / "tools"))
+    import dependency_guard as dg
+
+    assert dg.classify_base_graph_result({"status": "BLOCKED", "errors": []}) == "UNEXPECTED_FAILURE"
