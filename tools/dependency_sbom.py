@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
-import argparse, hashlib, json
+import argparse
+import hashlib
+import json
 from pathlib import Path
-from dependency_guard import scan, graph
+
+from dependency_guard import graph, scan
 
 
 def main():

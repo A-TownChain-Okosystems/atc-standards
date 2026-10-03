@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-import argparse, hashlib, json, re
+import argparse
+import hashlib
+import json
+import re
 from pathlib import Path
 
 SCHEMA = "ATC-DEP-ADVISORY-1"

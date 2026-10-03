@@ -283,7 +283,8 @@ def test_osv_snapshot_rejects_invalid_raw_response_provenance():
 
 
 def test_osv_fetch_query_provenance_is_distinct():
-    import hashlib, sys
+    import hashlib
+    import sys
 
     sys.path.insert(0, str(ROOT / "tools"))
     import osv_fetch

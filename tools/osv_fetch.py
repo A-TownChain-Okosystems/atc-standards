@@ -1,7 +1,13 @@
 #!/usr/bin/env python3
-import argparse, hashlib, json, re, urllib.error, urllib.request
+import argparse
+import hashlib
+import json
+import urllib.error
+import urllib.request
 from pathlib import Path
-from osv_snapshot import normalize as normalize_snapshot, validate
+
+from osv_snapshot import normalize as normalize_snapshot
+from osv_snapshot import validate
 
 ECO = {"cargo": "crates.io", "npm": "npm", "python": "PyPI", "go": "Go"}
 

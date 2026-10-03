@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-import argparse, json, os, re, hashlib
+import argparse
+import hashlib
+import json
+import os
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
