@@ -14,6 +14,7 @@
 | Kanonischer Pfad | atclang/specs/bytecode/SPEC.md (§8.1 Trägerschaft) |
 | Status | FROZEN / NOT VERIFIED (Gate 0 ausstehend) |
 | Änderungen | SCR/MINOR (ATC-STD-UPDATE-001); Trägerschafts-Wechsel = SCR |
+| Normative Kraft | SCR-0129 PENDING_OWNER_APPROVAL — ATC-STD-000 §9-Freigabe erfüllt (SCR-0098); Owner-Freigabe der Setzung offen; bei Approve: Registry → Standard → Validator/CI |
 
 Begründung der Trägerschaft (atclang): evolutionäre Kopplung — ATCB ist der
 G3-Output der ATCLang-Compiler-Pipeline (AD-022); Referenzimplementierung

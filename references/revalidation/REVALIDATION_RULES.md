@@ -32,3 +32,15 @@ alle Funds klassifiziert sind.
 | a-townchain-ecosystem/components/atc-vm/… | MIRROR (Ökosystem-Spiegel) | OFFEN |
 | a-townchain/…/vm/… | ARCHIVE/MIRROR | OFFEN |
 | a-townchain-os-docs (docs/archive/, monorepo-legacy) | ARCHIVE (Vault, ohne normativen Anspruch) | OFFEN |
+
+## Rollen (Owner-Benennung 06.10.2026 — ROLE_DEFINED / HUMAN_OWNER_UNASSIGNED)
+
+### Gate-0-Executor
+ROLE: ARCHITECTURE/GOVERNANCE EXECUTOR — Authority: Existing-First, SSOT,
+Duplicate-Detection, Owner-/Layer-/Capability-Resolution. Kein persönlicher
+Name; Rollen-Inhaberschaft beim Owner, Zuweisung offen.
+
+### Mirror-Klassifikator
+ROLE: SSOT/MIRROR CLASSIFIER — Authority: Klassifikationsraum canonical |
+mirror | generated view | integration-only | duplicate | obsolete. Kein
+persönlicher Name; Rollen-Inhaberschaft beim Owner, Zuweisung offen.

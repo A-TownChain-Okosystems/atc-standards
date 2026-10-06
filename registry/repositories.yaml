@@ -18,10 +18,35 @@ layer_taxonomy_draft:
   note: 'a-townchain: blockchain_protocol.network_layer=L3, protocol_role=sovereign_chain (System-Layer != Layer-3-Protokoll)'
 
 capabilities:
-  bytecode_format:
-    canonical_repo: atclang
+  verification_tooling:
+    canonical_repo: atc-toolchain
     role: canonical
-    note: 'ATCB v1 (ATC-BC-001) — SSOT-Setzung SCR-0129 (PENDING Owner-Approve); Freeze ee265313; Konsumenten: atc-vm, atc-toolchain; Pointer: references/standards/ATCB-v1-POINTER.md'
+    note: 'Owner-Benennung 06.10. — deterministischer Toolchain-, VM-Verification-, Gas-, ABI- und Exact-SHA-Evidence-Stack (atc-engineering #6-Kontext)'
+  developer_tooling:
+    canonical_repo: atc-ide
+    role: canonical
+    note: 'Owner-Benennung 06.10. — fachliche Standards via SCR nachzureichen (Profil-Vermerk)'
+  vm_specification:
+    canonical_repo: atc-vm
+    role: canonical
+    note: 'Owner-Benennung 06.10. — NICHT vm_runtime (bleibt kanonisch a-townchain/components/vm, SCR-0127); Namensähnlichkeit darf SSOT nicht kippen'
+  consensus_algorithm:
+    canonical_repo: atc-algorithm
+    role: canonical
+    note: 'Owner-Benennung 06.10.'
+  zero_knowledge_proofs:
+    canonical_repo: atc-zkp
+    role: canonical
+    note: 'Owner-Benennung 06.10.'
+  ecosystem_integration:
+    canonical_repo: a-townchain-ecosystem
+    role: canonical
+    note: 'Owner-Benennung 06.10.'
+  genesis_content_factory:
+    canonical_repo: genesis-franchise-factory
+    role: canonical
+    note: 'Owner-Benennung 06.10.'
+# bytecode_format: zurückgezogen bis SCR-0129-Approve — keine vorgezogene normative Registry-Änderung (Owner 06.10.); Umsetzungsequenz: Registry → Standard → Validator/CI
   standards:
     canonical_repo: atc-standards
     role: canonical

@@ -8,6 +8,7 @@ on:
       - "registry/framework.yaml"
       - "registry/standard-implementation.yaml"
       - "registry/compliance_state.yaml"
+      - "registry/repositories.yaml"
       - ".atc/repository.yaml"
       - "tools/gen_views/**"
       - "tools/gen_views/README.template.md"
