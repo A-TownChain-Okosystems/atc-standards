@@ -177,9 +177,7 @@ def scan_sources(root, lang):
             for i, scan_ln in enumerate(scan_lines, 1):
                 for pat, desc in PATTERNS[lang]:
                     if re.search(pat, scan_ln):
-                        findings.append(
-                            f"{path}:{i}: {desc}: {scan_ln.strip()[:80]}"
-                        )
+                        findings.append(f"{path}:{i}: {desc}: {scan_ln.strip()[:80]}")
     return findings
 
 

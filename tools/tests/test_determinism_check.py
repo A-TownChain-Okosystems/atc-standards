@@ -66,11 +66,11 @@ class TestB_StringLiterals(unittest.TestCase):
             os.makedirs(os.path.join(tmp, "src"))
             with open(os.path.join(tmp, "src", "lit.rs"), "w") as f:
                 f.write(
-                    '//! Docs: rand::thread_rng() wird verboten\n'
-                    '/// SystemTime::now() darf nicht aufgerufen werden\n'
+                    "//! Docs: rand::thread_rng() wird verboten\n"
+                    "/// SystemTime::now() darf nicht aufgerufen werden\n"
                     'let x = "SystemTime::now()";\n'
                     'let s = String::from("rand::"); // Kommentar: thread_rng\n'
-                    '/* SystemTime::now() im Blockkommentar */\n'
+                    "/* SystemTime::now() im Blockkommentar */\n"
                 )
             self.assertEqual(scan(tmp, "rust"), [], "String-/Kommentar-FP erkannt")
 
@@ -81,7 +81,7 @@ class TestB_StringLiterals(unittest.TestCase):
                 f.write(
                     '"""Generate a new random wallet."""\n'
                     'DOC = "uuid4"\n'
-                    '# random\n'
+                    "# random\n"
                     'X = "Text mit time.time() und uuid4 innen"\n'
                 )
             self.assertEqual(scan(tmp, "python"), [], "Docstring-/String-FP erkannt")
