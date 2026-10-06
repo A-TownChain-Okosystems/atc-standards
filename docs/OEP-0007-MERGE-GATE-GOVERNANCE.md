@@ -100,9 +100,9 @@ OEP-7 verankert die VERIFIED-Pflicht im MERGE_ALLOWED-Gate des Tier-Modells
 - Der periodische Stichprobentest (bewusst negativer Run gegen ein geschütztes
   Repo) läuft im Fleet-Health-Rhythmus mit.
 - PR #92 (Gate-Methodik) wird erst nach Methodik-Review gemergt.
-- Golden Vectors werden vor den Freeze-Gates vorgezogen (M8-Reihenfolge).
-- M8 bleibt ROT bis die Freeze-Gates erfüllt sind — 53/53 grüne Tests sind
-  TESTED, nicht VERIFIED.
+- Golden Vectors werden vor den Freeze-Gates vorgezogen (ATCLang-Freeze M4.5/M4.7 im System-Meilensteinmodell, SCR-0136).
+- ATCLang-Freeze (M4 im System-Meilensteinmodell, SCR-0136) bleibt ROT bis die
+  Freeze-Gates erfüllt sind — 53/53 grüne Tests sind TESTED, nicht VERIFIED.
 
 ## 5. Entscheidungsstand
 
