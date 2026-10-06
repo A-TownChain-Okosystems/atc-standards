@@ -1176,3 +1176,10 @@ findings:
   title: 'Fleet-Audit-Run-153: poh::tests::slot_overflow_is_rejected FAILED (17 passed/1 failed; Assertion !c.verify() — Test erwartet Reject bei Slot-Overflow); geteilter Ursachenkontext mit a-townchain F-150; Owner: Repo-Owner (Test)'
   resolution: 'Fleet-Audit-Backlog Run 153 (06.10.2026, Head 7fd11b3, Artifact fleet-audit-results): Remediation mit Evidence-Gate, Wiedervorlage naechster Fleet-Lauf; Owner je Klasse (Owner-Tabelle 06.10.)'
 
+
+- id: F-160
+  priority: P1
+  status: OPEN
+  repo: atc-standards
+  title: 'Branch-Protection-Admin-Bypass atc-standards main (06.10.2026): Agent-Push 96d5f12 (Fleet-Backlog F-141..F-159, Owner-Sequenz-Direktive) lief als Admin-Bypass ueber Required-PR-Reviews und 14 Required Checks; Akteur Aurora-Superagent-Token mit Repo-Admin; Ursache strukturell: Enforce-Admins=False (GitHub-Default, kein dokumentiertes Break-Glass — unkontrollierter Pfad); alle 14 umgangenen Checks (ruff, Ruff format baseline, quality, validate, analyze, registry-consistency, Cross-Registry-Konsistenztest, atc-repo-audit, tools-smoke, version-gate, allocation-gate, matrix, dependency-security, cargo) liefen post-hoc auf 96d5f12 mit SUCCESS — Gating wurde umgangen, Verifikation nicht; Owner-Entscheidung noetig: enforce_admins aktivieren (Agent UND Owner via PR) plus dokumentiertes Break-Glass-Verfahren, oder Admin-Bypass explizit als Policy akzeptieren; Kontext: F-122 Branch-Protection-Rollout'
+  resolution: 'Dokumentiert per Owner-Anforderung 06.10. (5 Pruefpunkte: Vorgang, Akteur, umgangene Checks, Break-Glass-Status, Policy-Frage); Registrierung dieses Befunds bewusst ueber PR-Pfad statt erneutem Bypass; P1 bis Policy-Entscheidung des Owners'
