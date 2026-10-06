@@ -310,6 +310,13 @@ geführt (UPD-G04/COMPAT-001).
 | ATC-M-007 | PLANNED | M7 Spiel läuft (L6 genesis-engine + Chronicles, NFT auf Chain) | M12 Genesis Engine |
 | ATC-M-008 | PLANNED | M8 Ökosystem läuft (L7 a-townchain-os Launch-Stack) | M11 + M13 + M14 (Integration/RC/Production) |
 
+Schema-Invarianten (Owner 06.10. 18:55, besttigt): status_alt wird als
+eingefrorenes Feld gefhrt; status_neu startet separat bei null und wird
+ausschliesslich aus neuen Nachweisen gesetzt (kein impliziter bertrag
+ACCEPTED/IN_PROGRESS/PLANNED); mapping_alt ist ein Set (1 zu n), Referenz,
+kein Evidence-Feld, nicht als solches typisiert. Umgesetzt in SCR-0137
+(PR registry/system-milestones-major-001).
+
 Eintragungsform im Registry-Upgrade: die bestehenden acht Einträge bleiben
 unverändert erhalten; die System-Meilensteine M0–M14 werden als übergeordnete
 System-Ebene mit Verweis auf die Alt-IDs ergänzt (mapping_alt-Feld je
