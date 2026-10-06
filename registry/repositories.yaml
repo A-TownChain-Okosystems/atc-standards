@@ -18,6 +18,10 @@ layer_taxonomy_draft:
   note: 'a-townchain: blockchain_protocol.network_layer=L3, protocol_role=sovereign_chain (System-Layer != Layer-3-Protokoll)'
 
 capabilities:
+  bytecode_format:
+    canonical_repo: atclang
+    role: canonical
+    note: 'ATCB v1 (ATC-BC-001) — SSOT-Setzung SCR-0129 (PENDING Owner-Approve); Freeze ee265313; Konsumenten: atc-vm, atc-toolchain; Pointer: references/standards/ATCB-v1-POINTER.md'
   standards:
     canonical_repo: atc-standards
     role: canonical
