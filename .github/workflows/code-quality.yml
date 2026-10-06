@@ -12,7 +12,7 @@ jobs:
   quality:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: actions/setup-python@v5
         with: {python-version: '3.11'}
       - name: Python-Syntax P0 (alle Python-Quellen)
@@ -44,7 +44,7 @@ jobs:
     name: Ruff format baseline
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: actions/setup-python@v5
         with: {python-version: '3.11'}
       - name: Ruff installieren (gepinnt)
