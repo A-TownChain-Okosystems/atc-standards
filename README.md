@@ -7,22 +7,22 @@
 
 ```yaml
 state:
-  id: ATC-STATE-20261006-a2a86f3d
-  generated_at: "2026-10-06 08:41 UTC+2"
+  id: ATC-STATE-20261007-5c85a75d
+  generated_at: "2026-10-07 09:50 UTC+2"
   registry_version: "1.1.0"
-  registry_sha256: "a2a86f3d6600938fc700e54b78b8dbeca9fbef0800489eb3de6e76bfd96e84dd"
-  standards_total: 531
+  registry_sha256: "5c85a75d528325b95e4e5931802ebfd6869070ec5a4bda29263f25308a9be27d"
+  standards_total: 532
   standards_approved: 505
-  standards_candidate: 26
+  standards_candidate: 27
   standards_other: 0
   standard_files: registry-derived
-  families: 75
+  families: 76
 ```
 
 **Diese Zahlen sind die EINZIG maschinenverbindliche Auskunft** (ATC-STD-003 §2 Ein-Zahl-Regel).
 Historische Zahlenstände: ausschließlich `STATUS.md` / `CHANGELOG.md` / `audits/`.
 
-**Implementierungs-KPI:** 531 Standards normativ definiert — 65 enforced, 131 implemented, 329 specification-only. Die Aussage „531 Standards implementiert“ ist unzulässig (ATC-STD-003 §8: APPROVED ≠ IMPLEMENTED).
+**Implementierungs-KPI:** 532 Standards normativ definiert — 65 enforced, 131 implemented, 329 specification-only. Die Aussage „532 Standards implementiert“ ist unzulässig (ATC-STD-003 §8: APPROVED ≠ IMPLEMENTED).
 
 **FORMALE COMPLIANCE: PASS** · **IMPLEMENTATION: PARTIAL** · **PRODUCTION READINESS: NOT_READY** — ein Zustand behauptet nie den anderen.
 
@@ -36,17 +36,17 @@ Historische Zahlenstände: ausschließlich `STATUS.md` / `CHANGELOG.md` / `audit
 
 ATC Standards is the canonical normative governance layer of the A-TownChain ecosystem. It maintains:
 
-- **Registry:** SSOT für alle 531 Standards mit Versionierung, Dependencies (DAG) und Findings
+- **Registry:** SSOT für alle 532 Standards mit Versionierung, Dependencies (DAG) und Findings
 - **Verfassung:** ATC-STD-000 v1.3.0, APPROVED
 - **Validator-Suite:** atc-std-validator, atc-repo-audit, atc-readme-validator
-- **Governance Framework:** 75 Familien
+- **Governance Framework:** 76 Familien
 - **Governance-Determinismus:** ATC-STD-003 (SSOT-Matrix, State-ID, Ein-Zahl-Regel)
 
 **Organisationsbestand:** registry-derived Repository-Einträge im Repository-Registry-SSOT. Governance-Status und Ausnahmen werden ausschließlich aus `registry/repositories.yaml` bzw. den daraus generierten Compliance-Views abgeleitet.
 
 ## Scope
 
-Governance-Root der A-TownChain-Organisation: Registry, Standards, Schemata, Validatoren, Audits und Change-Requests. In Scope: normative Standards (registry-derived Dateien, 75 Familien) und ihre Metadaten/Validierung. Out of Scope: Implementierung der Standards in den Repository-Einträgen der Organisation und deren CI-Gates.
+Governance-Root der A-TownChain-Organisation: Registry, Standards, Schemata, Validatoren, Audits und Change-Requests. In Scope: normative Standards (registry-derived Dateien, 76 Familien) und ihre Metadaten/Validierung. Out of Scope: Implementierung der Standards in den Repository-Einträgen der Organisation und deren CI-Gates.
 
 ## Features
 
@@ -60,7 +60,7 @@ Governance-Root der A-TownChain-Organisation: Registry, Standards, Schemata, Val
 
 ### Core Components
 - `registry/` — SSOT
-- `standards/` — registry-derived Standard-Dateien in 75 Familien
+- `standards/` — registry-derived Standard-Dateien in 76 Familien
 - `profiles/` — registry-derived verbindliche Standards-Profile je Repository
 - `schemas/` — JSON/YAML-Schemata
 - `tools/` — Validators, Auditors, Generators
