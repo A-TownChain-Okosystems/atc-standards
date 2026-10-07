@@ -6,7 +6,7 @@ document:
   status: GENERATED
   normative: false
   owner: "A-TownChain Okosystems (Michael Wroblewski)"
-  generated: "2026-10-03"
+  generated: "2026-10-07"
   generator: "tools/index/gen_index.py (SCR-0038)"
   sources: "registry/standards.yaml + registry/framework.yaml + registry/categories.yaml + registry/taxonomy.yaml + registry/versions.yaml + registry/protocol-registry.yaml + registry/findings.yaml"
   license: "Copyright (c) 2026 Michael Wroblewski"
@@ -16,7 +16,7 @@ document:
 
 > **Nicht-normativ · generiert.** Diese Datei ist der zentrale Einstiegspunkt in
 > das ATC-Standards-System — sie enthält KEINE eigenen Fachwahrheiten. Sie wird
-> vollständig aus den SSOT-Registern generiert (2026-10-03, SCR-0038); manuelle
+> vollständig aus den SSOT-Registern generiert (2026-10-07, SCR-0038); manuelle
 > Änderungen sind verboten (Regeneration: `python3 tools/index/gen_index.py`).
 > **SSOT-Kaskade bei Konflikten:** Governance (ATC-STD-000) → Standard →
 > Registry → INDEX → Implementierung.
@@ -63,14 +63,14 @@ eines Standards liegt ausschließlich in seiner Standarddatei; die Registry
 | registry/technology-registry.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
 | registry/versions.yaml | Bestand/Status der zugehörigen Domäne | — siehe registry/standards.yaml je Eintrag |
 
-Kernregister: **standards.yaml** (Bestand, 531 Standards) · **versions.yaml**
-(Versionierung je Standard) · **framework.yaml** (Katalog: 75 Familien,
-658 Slots) · **categories.yaml**
+Kernregister: **standards.yaml** (Bestand, 532 Standards) · **versions.yaml**
+(Versionierung je Standard) · **framework.yaml** (Katalog: 76 Familien,
+659 Slots) · **categories.yaml**
 (Kategorien) · **taxonomy.yaml** (Domain/Familie/Kategorie) · **protocol-registry.yaml**
 (26 Protokollfamilien, Status {'draft': 11, 'planned': 15}) ·
-**findings.yaml** (Findings: 70 OPEN / 70 RESOLVED von 140).
+**findings.yaml** (Findings: 90 OPEN / 70 RESOLVED von 160).
 
-## 3. Standardfamilien (Katalog, 75 Familien)
+## 3. Standardfamilien (Katalog, 76 Familien)
 
 | FAM | Familie | Slots | BELEGT | VERWEIST |
 |---|---|---|---|---|
@@ -149,12 +149,13 @@ Kernregister: **standards.yaml** (Bestand, 531 Standards) · **versions.yaml**
 | FAM-73 | Legal Standards (LEGAL) | 1 | 1 | 0 |
 | FAM-74 | Governance Constitution (GOV) | 1 | 1 | 0 |
 | FAM-75 | System Architecture (ARCH) | 1 | 1 | 0 |
+| FAM-76 | Aurora Swarm Network (AURORA-SWARM) | 1 | 1 | 0 |
 
-Statusverteilung der 531 Registry-Standards: {'approved': 505, 'candidate': 26}.
-Alle 531 sind APPROVED und normativ (§30-eingefroren); Details je Standard
+Statusverteilung der 532 Registry-Standards: {'approved': 505, 'candidate': 27}.
+Alle 532 sind APPROVED und normativ (§30-eingefroren); Details je Standard
 in registry/standards.yaml und registry/versions.yaml.
 
-## 4. Master-Registry-Tabelle (531 Standards)
+## 4. Master-Registry-Tabelle (532 Standards)
 
 Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 
@@ -198,6 +199,7 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 | ATC-AI-GOV-MANIFEST-001 | ATC Agent Governance — Agent Identity & Scope (Manifest, Registry, Capabilities, Status-Modell) | ai-gov | 1.0.0 | approved | standards/ai-gov/ATC-AI-GOV-MANIFEST-001.md |
 | ATC-AI-GOV-POLICY-001 | ATC Agent Governance — Maschinenlesbare Policies (ATC-POL-001..010, MUST/SHOULD/MAY, Verdikt-Modell) | ai-gov | 1.0.0 | approved | standards/ai-gov/ATC-AI-GOV-POLICY-001.md |
 | ATC-ARCH-001 | KAI-OS System Architecture Standard | architecture | 1.0.0 | approved | standards/architecture/ATC-ARCH-001.md |
+| ATC-AURORA-SWARM-001 | Aurora Swarm Network (ASN) — Neuronales KI-Schwarmnetzwerk: Neuron-Modell, Synapse-Protokoll, Schwarm-Kognition, Evidence-getriebene Verifikation und Authority-Integration | aurora-swarm | 0.1.0 | candidate | standards/aurora-swarm/ATC-AURORA-SWARM-001.md |
 | ATC-ENT-001 | Enterprise Governance Standard (P0) | enterprise | 1.1.0 | approved | standards/enterprise/ATC-ENT-001.md |
 | ATC-ENT-002 | Rollen & Verantwortlichkeiten Standard (P0) | enterprise | 1.1.0 | approved | standards/enterprise/ATC-ENT-002.md |
 | ATC-ENT-003 | Entscheidungsmanagement Standard (P0) | enterprise | 1.1.0 | approved | standards/enterprise/ATC-ENT-003.md |
@@ -694,7 +696,7 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 
 ## 5. Statusmodell (Registry-Lifecycle)
 
-Registry-Statusverteilung (Ist): {'approved': 505, 'candidate': 26}. Lifecycle der Standards-Entwicklung
+Registry-Statusverteilung (Ist): {'approved': 505, 'candidate': 27}. Lifecycle der Standards-Entwicklung
 gemäß ATC-STD-STDDEV-001 / ATC-STD-TAXONOMY-001: Entwurf (Owner-Entwurf/SCR) →
 §9-Freigabe (Owner, Human-Gate) → APPROVED (normativ, §30-eingefroren) → ggf.
 DEPRECATED/RETIRED via Change-Control (ATC-STD-CHANGE-001). Protokolle folgen
@@ -708,7 +710,7 @@ Klassifikation (ATC-STD-REPO-AUDIT-001/002).
 
 ## 7. Offene Punkte (Auszug — Details: STATUS.md)
 
-- Findings OPEN: 70 (aktuelle Liste: registry/findings.yaml)
+- Findings OPEN: 90 (aktuelle Liste: registry/findings.yaml)
 - Org-Audit-Ableitungen: Issues #94–98 (a-townchain-os) — CI 23/26, CodeQL,
   Versions-Baseline, verwaister Tag, ATC-STD-202-Klassifizierung
 - ATC-LICENSE: 5 Lizenztypen PLANNED (SOURCE, COMMERCIAL, PROPRIETARY, DATA,
@@ -737,10 +739,10 @@ die Kennung dieses generierten Dokuments.
 
 atc-standards/ · INDEX.md (generiert) · README.md · CHANGELOG.md · STATUS.md ·
 LICENSE (Apache-2.0) · AGENT_MANIFEST.md · AGENTS.md · governance/ (ATC-STD-000) ·
-standards/<kategorie>/ (Fachstandards, 531-Bestand) · registry/ (29
+standards/<kategorie>/ (Fachstandards, 532-Bestand) · registry/ (29
 SSOT-Dateien) · licenses/ (ATC-LICENSE-System) · schemas/ · tools/ (Generatoren +
 atc-std-validator) · approval/ (§9-Freigabe-Archiv) · change-requests/ (SCR-0001…) ·
 docs/ (Audits & Analysen) · templates/ · .github/workflows (Governance-CI, 2) +
 ai/agent.yaml (Agenten-Bindung).
 
-*ATC-STD-INDEX-001 v1.0.0 · generiert 2026-10-03 · tools/index/gen_index.py · SCR-0038 · Aurora (Superagent)*
+*ATC-STD-INDEX-001 v1.0.0 · generiert 2026-10-07 · tools/index/gen_index.py · SCR-0038 · Aurora (Superagent)*
