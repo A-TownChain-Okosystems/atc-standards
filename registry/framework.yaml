@@ -4199,3 +4199,15 @@ framework:
       status: BELEGT
       refs:
       - ATC-ARCH-001
+  - id: FAM-76
+    name: "Aurora Swarm Network (AURORA-SWARM)"
+    range: "ATC-AURORA-SWARM-001..999"
+    note: 'Einzelfamilien-Allokation: ATC-AURORA-SWARM-001 (Aurora Swarm Network / ASN) — Owner-Entwurf 07.10.2026 (SCR-0138); naechster freier Slot nach FAM-75.'
+    family_refs:
+    - ATC-STD-000
+    slots:
+    - id: ATC-AURORA-SWARM-001
+      title: "Aurora Swarm Network (ASN) — Neuronales KI-Schwarmnetzwerk"
+      status: BELEGT
+      refs:
+      - ATC-AURORA-SWARM-001
