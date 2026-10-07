@@ -8,7 +8,7 @@
 ```yaml
 state:
   id: ATC-STATE-20261007-5c85a75d
-  generated_at: "2026-10-07 09:50 UTC+2"
+  generated_at: "2026-10-07 09:55 UTC+2"
   registry_version: "1.1.0"
   registry_sha256: "5c85a75d528325b95e4e5931802ebfd6869070ec5a4bda29263f25308a9be27d"
   standards_total: 532
@@ -22,7 +22,7 @@ state:
 **Diese Zahlen sind die EINZIG maschinenverbindliche Auskunft** (ATC-STD-003 §2 Ein-Zahl-Regel).
 Historische Zahlenstände: ausschließlich `STATUS.md` / `CHANGELOG.md` / `audits/`.
 
-**Implementierungs-KPI:** 532 Standards normativ definiert — 65 enforced, 131 implemented, 329 specification-only. Die Aussage „532 Standards implementiert“ ist unzulässig (ATC-STD-003 §8: APPROVED ≠ IMPLEMENTED).
+**Implementierungs-KPI:** 532 Standards normativ definiert — 65 enforced, 131 implemented, 330 specification-only. Die Aussage „532 Standards implementiert“ ist unzulässig (ATC-STD-003 §8: APPROVED ≠ IMPLEMENTED).
 
 **FORMALE COMPLIANCE: PASS** · **IMPLEMENTATION: PARTIAL** · **PRODUCTION READINESS: NOT_READY** — ein Zustand behauptet nie den anderen.
 

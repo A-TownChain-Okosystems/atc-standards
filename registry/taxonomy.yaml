@@ -3,7 +3,7 @@
 taxonomy:
   standard: ATC-STD-TAXONOMY-001
   version: 1.0.0
-  generated: '2026-10-03'
+  generated: '2026-10-07'
   hierarchy:
   - DOMAIN
   - FAMILY
@@ -675,6 +675,20 @@ taxonomy:
         status: ACTIVE
         lifecycle: ACTIVE
       fam: FAM-71
+    - id: ASW
+      name: aurora-swarm
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-AURORA-SWARM-001-999
+      source: named-family
+      description: Aurora Swarm Network — Neuronales KI-Schwarmnetzwerk (Owner-Entwurf 07.10., SCR-0138, CANDIDATE)
+      standards_count: 1
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
+      fam: FAM-76
   - id: TRUST
     name: Security & Trust
     status: ACTIVE
@@ -707,17 +721,3 @@ taxonomy:
         status: ACTIVE
         lifecycle: ACTIVE
       fam: FAM-54
-    - id: ASW
-      name: aurora-swarm
-      status: ACTIVE
-      lifecycle: ACTIVE
-      id_range: ATC-AURORA-SWARM-001-999
-      source: named-family
-      description: 'Aurora Swarm Network (ASN): Neuronales KI-Schwarmnetzwerk — Neuron-Modell, Synapse-Protokoll, Schwarm-Kognition, Evidence-Verifikation (Owner-Entwurf 07.10., SCR-0138, CANDIDATE)'
-      standards_count: 1
-      categories:
-      - id: GENERAL
-        name: Allgemein (Bestand, keine Unterteilung)
-        status: ACTIVE
-        lifecycle: ACTIVE
-      fam: FAM-76
