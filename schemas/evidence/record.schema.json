@@ -1,0 +1,16 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://a-townchain-okosystems/standards/schemas/evidence/record.schema.json",
+  "title":"ATC-STD-644 Evidence Record",
+  "type":"object",
+  "required":["id","type","version"],
+  "properties":{
+    "id":{"type":"string","pattern":"^ATC-(REQ|SPEC|COMP|FUNC|IMPL|CHANGE|DOC|TEST|CI|E2E|AUDIT|REL)-[A-Z0-9][A-Z0-9-]*$"},
+    "type":{"enum":["REQUIREMENT","SPECIFICATION","COMPONENT","FUNCTION","IMPLEMENTATION","CHANGE","DOCUMENTATION","TEST","CI","E2E","AUDIT","RELEASE"]},
+    "version":{"type":"string","minLength":1},
+    "status":{"enum":["PRESENT","SPECIFIED","DOCUMENTED","IMPLEMENTED","TESTED","CI-VERIFIED","E2E-VERIFIED","AUDITED","RELEASE-READY","NOT_PROVEN","NOT_READY","PASS","FAIL","SKIPPED","INCOMPLETE","BROKEN"]},
+    "commit_sha":{"type":"string","pattern":"^[0-9a-f]{40}$"},
+    "references":{"type":"array","items":{"type":"string","pattern":"^ATC-(REQ|SPEC|COMP|FUNC|IMPL|CHANGE|DOC|TEST|CI|E2E|AUDIT|REL)-[A-Z0-9][A-Z0-9-]*$"}}
+  },
+  "additionalProperties":true
+}

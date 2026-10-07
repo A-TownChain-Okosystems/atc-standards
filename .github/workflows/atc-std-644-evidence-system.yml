@@ -1,0 +1,31 @@
+name: ATC-STD-644 Evidence System
+
+on:
+  push:
+    paths:
+      - "standards/audit/ATC-STD-644.md"
+      - "schemas/evidence/**"
+      - "tests/evidence/**"
+      - "tools/validate_evidence_system.py"
+      - ".github/workflows/atc-std-644-evidence-system.yml"
+  pull_request:
+    paths:
+      - "standards/audit/ATC-STD-644.md"
+      - "schemas/evidence/**"
+      - "tests/evidence/**"
+      - "tools/validate_evidence_system.py"
+      - ".github/workflows/atc-std-644-evidence-system.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  evidence-system:
+    name: Evidence system integrity
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout exact source
+        uses: actions/checkout@v4
+
+      - name: Validate reference evidence system
+        run: python3 tools/validate_evidence_system.py
