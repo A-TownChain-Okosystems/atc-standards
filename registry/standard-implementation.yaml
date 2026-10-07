@@ -4407,3 +4407,11 @@ standards:
       status: reference
       evidence: "Legacy-Serie (atc/): durch ATC-STD-000ff superseded; historische Referenz konserviert"
     independence: L1
+
+  - standard: ATC-AURORA-SWARM-001
+    version: "0.1.0"
+    applicability: TARGET
+    implementation:
+      status: specification_only
+      evidence: "Aurora Swarm Network (ASN) Zielarchitektur (SCR-0138, PR #97): CANDIDATE-DRAFT, Reifeklasse RESEARCH — keine Implementierung; Umsetzungsfolge via Gates ASW-G1 (Referenz-Neuron aurora-ai) bis ASW-G3 (Authority-Integration)"
+    independence: L1
