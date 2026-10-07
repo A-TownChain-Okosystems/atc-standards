@@ -6,6 +6,6 @@ action: "F-160 Enforcement-Nachweis komplett mit Zeitstempeln: (1) 17:41:24Z enf
 files_changed: "registry/findings.yaml, registry/BREAK_GLASS.md, AGENT_MANIFEST.md, README.md, STATUS.md, registry/registry.lock, .github/ai/audit/AUD-013.yaml"
 result: COMPLETED
 tests: {validate_all: "ALL COMPLIANT (19:51 UTC+2)", cross_registry: "ALL COMPLIANT (19:51 UTC+2)", check_agent_manifest: "GATE PASS A1-A4 (19:51 UTC+2)", ci_checks: "20/20 GRUEN am f6d6c76 (19:58 UTC+2)"}
-commit: "bd57fc6 (Evidence), 0613d45 (Quote-Fix), f6d6c76 (Views) auf f-160-evidence, PR #96"
+commit: "3129a5f (Evidence), 95f93f6 (Quote-Fix), d2300a3 (Views), 50b2e42 (AUD-013) auf f-160-evidence, PR #96 — SHA-Rewrite 07.10. 10:15 UTC+2: Format-Korrektur SCR-0115 ([Ticket]-Praefix statt Doppelpunkt), Inhalte und Zeitstempel unveraendert; Alte SHAs: bd57fc6/0613d45/f6d6c76/2d35dae"
 timestamp: "2026-10-06T19:59:00+02:00"
 human_approval: "Owner-Direktive 'enforce_admins aktivieren' 06.10.2026 ~19:38 UTC+2 (Builder-Chat); PR-Merge wartet auf Owner-Approval (GitHub-Review-Gate)"
