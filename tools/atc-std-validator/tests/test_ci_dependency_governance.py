@@ -58,7 +58,8 @@ STDLIB_OK = {
     "csv",
     "logging",
     "base64",
-}  # base64 nachgetragen (Drift-Fix 13.09., AUD-Followup: version_gate.py)
+    "tomllib",
+}  # base64 (Drift-Fix 13.09.) + tomllib (Stdlib seit 3.11, dependency_guard.py, Drift-Fix 07.10.)
 local_mods = {p.stem for p in (ROOT / "tools").rglob("*.py")}
 for py in (ROOT / "tools").rglob("*.py"):
     src = py.read_text(encoding="utf-8", errors="replace")
