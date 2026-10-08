@@ -97,7 +97,7 @@ jobs:
           ts = re.compile(r"\d{4}-\d{2}-\d{2} \d{2}:\d{2}(?::\d{2})? UTC\+?2?")
           sha = re.compile(r"[0-9a-f]{40}")
           lines = [l for l in diff.splitlines() if l.startswith(("+", "-")) and not l.startswith(("+++", "---"))]
-          norm = lambda s: sha.sub("SHA", ts.sub("TS", s))
+          norm = lambda s: re.sub(r"(commit:\s*)[0-9a-f]+", r"\1COMMIT", sha.sub("SHA", ts.sub("TS", s)))
           plus = sorted(norm(l[1:]) for l in lines if l.startswith("+"))
           minus = sorted(norm(l[1:]) for l in lines if l.startswith("-"))
           if plus != minus:
