@@ -1,5 +1,7 @@
 name: Markdown Lint
 
+# Fail-closed organization policy gate; no auto-fix.
+
 on:
   push:
     branches: [main]
