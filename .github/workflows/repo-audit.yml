@@ -1,0 +1,72 @@
+name: Repository Audit
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  atc-repo-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: pip install pyyaml -q
+      - name: ATC repository audit
+        run: python3 tools/atc-repo-audit/atc_repo_audit.py . --level R3
+      - name: Registry integrity
+        run: |
+          python3 - <<'PY'
+          import yaml, sys
+          with open("registry/standards.yaml", encoding="utf-8") as f:
+              registry = yaml.safe_load(f)
+          standards = registry.get("standards", []) if registry else []
+          seen = set()
+          errors = []
+          for std in standards:
+              sid, path = std.get("id"), std.get("file")
+              if not sid: errors.append(f"missing ID: {std}")
+              elif sid in seen: errors.append(f"duplicate ID: {sid}")
+              seen.add(sid)
+              if not path: errors.append(f"{sid}: missing file reference")
+              elif not __import__("pathlib").Path(path).is_file(): errors.append(f"{sid}: missing file {path}")
+          if errors:
+              print("\n".join(errors)); sys.exit(1)
+          print(f"PASS: {len(standards)} standards registered and file-complete")
+          PY
+      - name: Validate README
+        run: python3 tools/atc-readme-validator/check_readme.py .
+      - name: Generate registry views and validate drift
+        run: |
+          python3 tools/gen_views/generate_views.py
+          python3 tools/gen_views/gen_metadata.py
+          python3 - <<'PY'
+          import subprocess, re, sys
+          paths = ["README.md", "AGENT_MANIFEST.md", "STATUS.md", "registry/registry.lock"]
+          diff = subprocess.run(
+              ["git", "diff", "-U0", "--", *paths],
+              capture_output=True, text=True, check=True
+          ).stdout
+          ts = re.compile(r"\d{4}-\d{2}-\d{2} \d{2}:\d{2}(?::\d{2})? UTC\+?2?")
+          sha = re.compile(r"[0-9a-f]{40}")
+          lines = [l for l in diff.splitlines() if l.startswith(("+", "-")) and not l.startswith(("+++", "---"))]
+          def norm(s):
+              s = sha.sub("SHA", s)
+              s = ts.sub("TS", s)
+              return s
+          plus = sorted(norm(l[1:]) for l in lines if l.startswith("+"))
+          minus = sorted(norm(l[1:]) for l in lines if l.startswith("-"))
+          if plus != minus:
+              print("VIEWS-DRIFT FAIL: generated registry views differ from committed views")
+              print(diff[:3000])
+              raise SystemExit(1)
+          print("Views-Drift-Check OK (nur generierte Zeit-/Revision-Delta)")
+          PY
