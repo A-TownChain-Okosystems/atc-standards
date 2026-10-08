@@ -4,7 +4,8 @@ protocol-registry:
   standard: ATC-STD-PROTOCOL-001
   version: 1.0.0
   generated: '2026-09-08'
-  note: 'ATC Protocol Registry gem. ATC-STD-PROTOCOL-001 §20/§21 — SSOT der ATC-PROTO-*-Familien. Eintrag = Autorisierung: Ein Protokoll OHNE Registry-Eintrag ist kein ATC-Protokoll. Status-Ehrlichkeitsregel
+  note: >-
+    'ATC Protocol Registry gem. ATC-STD-PROTOCOL-001 §20/§21 — SSOT der ATC-PROTO-*-Familien. Eintrag = Autorisierung: Ein Protokoll OHNE Registry-Eintrag ist kein ATC-Protokoll. Status-Ehrlichkeitsregel
     (REQ-PROTO-021): planned = Baseline ohne Implementierung, draft = Teilimplementierung existiert (Impl.-Spuren), active/experimental nur mit verifizierter Implementierung, deprecated = aktiv abgelöst.
     Änderungen nur via SCR; Validator S-23 prüft Integrität je CI-Lauf.'
   domains:
@@ -53,7 +54,7 @@ protocol-registry:
     status: planned
     priority: P1
     layer: L1
-    specification: Zu spezifizieren gem. ATC-STD-PROTOCOL-001 (SCR erforderlich)
+    specification: 'Zu spezifizieren gem. ATC-STD-PROTOCOL-001 (SCR erforderlich)'
     note: Node-Discovery/Management auf P2P aufbauend
   - id: ATC-PROTO-CONSENSUS-001
     name: ATC Consensus Protocol
@@ -162,7 +163,7 @@ protocol-registry:
     status: planned
     priority: P2
     layer: L3
-    specification: Zu spezifizieren gem. ATC-STD-PROTOCOL-001 (SCR erforderlich)
+    specification: 'Zu spezifizieren gem. ATC-STD-PROTOCOL-001 (SCR erforderlich)'
     note: ''
   - id: ATC-PROTO-ORACLE-001
     name: ATC Oracle Protocol
@@ -231,7 +232,7 @@ protocol-registry:
     status: draft
     priority: P2
     layer: L2
-    specification: protocols/ai/ATC-PROTO-AI-001.md — Spezifikation v1.0.0; bestehende ShivaCore-AI-Implementierung als Baseline; Aktivierung erst nach ABI/Determinismus/Conformance.
+    specification: 'protocols/ai/ATC-PROTO-AI-001.md — Spezifikation v1.0.0; bestehende ShivaCore-AI-Implementierung als Baseline; Aktivierung erst nach ABI/Determinismus/Conformance.'
     note: aurora-ai (L2); Kopplung Kernel-Event-Bridge (ATC-M-003)
   - id: ATC-PROTO-AGENT-001
     name: ATC Agent-to-Agent Protocol
@@ -240,7 +241,7 @@ protocol-registry:
     status: planned
     priority: P2
     layer: L2
-    specification: Zu spezifizieren gem. ATC-STD-PROTOCOL-001 (SCR erforderlich)
+    specification: 'Zu spezifizieren gem. ATC-STD-PROTOCOL-001 (SCR erforderlich)'
     note: AAS-Kopplung (ATC-AAS-001..025)
   - id: ATC-PROTO-API-001
     name: ATC API Protocol
@@ -249,7 +250,7 @@ protocol-registry:
     status: planned
     priority: P2
     layer: L5
-    specification: Zu spezifizieren gem. ATC-STD-PROTOCOL-001 (SCR erforderlich)
+    specification: 'Zu spezifizieren gem. ATC-STD-PROTOCOL-001 (SCR erforderlich)'
     note: Kopplung ATC-STD-202 (API-Konventionen)
   - id: ATC-PROTO-EVENT-001
     name: ATC Event Protocol
@@ -258,7 +259,7 @@ protocol-registry:
     status: planned
     priority: P2
     layer: L2/L4
-    specification: Zu spezifizieren gem. ATC-STD-PROTOCOL-001 (SCR erforderlich)
+    specification: 'Zu spezifizieren gem. ATC-STD-PROTOCOL-001 (SCR erforderlich)'
     note: Kopplung Kernel-Event-Bridge (ATC-M-003)
   - id: ATC-PROTO-AUDIT-001
     name: ATC Audit Protocol
@@ -267,7 +268,7 @@ protocol-registry:
     status: planned
     priority: P2
     layer: L3/L7
-    specification: Zu spezifizieren gem. ATC-STD-PROTOCOL-001 (SCR erforderlich)
+    specification: 'Zu spezifizieren gem. ATC-STD-PROTOCOL-001 (SCR erforderlich)'
     note: Kopplung AUDIT-001/LogChain
   - id: ATC-PROTO-UPGRADE-001
     name: ATC Protocol Upgrade
@@ -276,7 +277,7 @@ protocol-registry:
     status: planned
     priority: P1
     layer: L0-L7
-    specification: Zu spezifizieren gem. ATC-STD-PROTOCOL-001 (SCR erforderlich)
+    specification: 'Zu spezifizieren gem. ATC-STD-PROTOCOL-001 (SCR erforderlich)'
     note: Prozessnorm in ATC-STD-PROTOCOL-001 §19 verankert
   - id: ATC-PROTO-KERNEL-001
     name: ATC Kernel Interface Protocol
@@ -285,5 +286,5 @@ protocol-registry:
     status: planned
     priority: P2
     layer: L1
-    specification: Zu spezifizieren gem. ATC-STD-PROTOCOL-001 (SCR erforderlich)
+    specification: 'Zu spezifizieren gem. ATC-STD-PROTOCOL-001 (SCR erforderlich)'
     note: Syscall-Interface ATC-96 (ShivaCore K9)
