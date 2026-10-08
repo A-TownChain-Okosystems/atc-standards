@@ -7,12 +7,12 @@
 
 ```yaml
 state:
-  id: ATC-STATE-20261007-5c85a75d
-  generated_at: "2026-10-07 09:55 UTC+2"
+  id: ATC-STATE-20261007-ca5c3b44
+  generated_at: "2026-10-07 22:43 UTC+2"
   registry_version: "1.1.0"
-  registry_sha256: "5c85a75d528325b95e4e5931802ebfd6869070ec5a4bda29263f25308a9be27d"
-  standards_total: 532
-  standards_approved: 505
+  registry_sha256: "ca5c3b445fc45382417d7b3013a8229fc736aadcc6f2a3c8420736bdd316610b"
+  standards_total: 533
+  standards_approved: 506
   standards_candidate: 27
   standards_other: 0
   standard_files: registry-derived
@@ -22,7 +22,7 @@ state:
 **Diese Zahlen sind die EINZIG maschinenverbindliche Auskunft** (ATC-STD-003 §2 Ein-Zahl-Regel).
 Historische Zahlenstände: ausschließlich `STATUS.md` / `CHANGELOG.md` / `audits/`.
 
-**Implementierungs-KPI:** 532 Standards normativ definiert — 65 enforced, 131 implemented, 330 specification-only. Die Aussage „532 Standards implementiert“ ist unzulässig (ATC-STD-003 §8: APPROVED ≠ IMPLEMENTED).
+**Implementierungs-KPI:** 533 Standards normativ definiert — 65 enforced, 131 implemented, 330 specification-only. Die Aussage „533 Standards implementiert“ ist unzulässig (ATC-STD-003 §8: APPROVED ≠ IMPLEMENTED).
 
 **FORMALE COMPLIANCE: PASS** · **IMPLEMENTATION: PARTIAL** · **PRODUCTION READINESS: NOT_READY** — ein Zustand behauptet nie den anderen.
 
@@ -36,7 +36,7 @@ Historische Zahlenstände: ausschließlich `STATUS.md` / `CHANGELOG.md` / `audit
 
 ATC Standards is the canonical normative governance layer of the A-TownChain ecosystem. It maintains:
 
-- **Registry:** SSOT für alle 532 Standards mit Versionierung, Dependencies (DAG) und Findings
+- **Registry:** SSOT für alle 533 Standards mit Versionierung, Dependencies (DAG) und Findings
 - **Verfassung:** ATC-STD-000 v1.3.0, APPROVED
 - **Validator-Suite:** atc-std-validator, atc-repo-audit, atc-readme-validator
 - **Governance Framework:** 76 Familien
