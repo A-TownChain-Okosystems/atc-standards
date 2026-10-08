@@ -11,6 +11,6 @@ permissions:
 
 jobs:
   markdownlint:
-    uses: A-TownChain-Okosystems/.github/.github/workflows/reusable-markdownlint.yml@f7656d5bb9afc0712a9c7d8495a86a46017eafb5
+    uses: A-TownChain-Okosystems/.github/.github/workflows/reusable-markdownlint.yml@d04ec8818484a2ba506e7832c964f8e5fe4393d3
     permissions:
       contents: read
