@@ -75,7 +75,7 @@ def main():
         ("├── " if i < len(repo_dirs) - 1 else "└── ") + x + "/" for i, x in enumerate(repo_dirs)
     )
     sha = hashlib.sha256(open(REG, "rb").read()).hexdigest()
-    now = datetime.now(timezone(timedelta(hours=2))).strftime("%Y-%m-%d %H:%M UTC+2")
+    now = datetime.now(timezone(timedelta(hours=2))).strftime(\n        "%Y-%m-%d %H:%M UTC+2"\n    )
 
     sidx = std_index()
     regver = sidx.get("ATC-STD-REGISTRY-001", {}).get("version", "n/a (Identitaet: SHA-256)")
