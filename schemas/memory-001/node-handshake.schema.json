@@ -1,0 +1,17 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://atc.ecosystem/schemas/memory-001/node-handshake.schema.json",
+  "title":"MEMORY-001 Node Handshake",
+  "type":"object","additionalProperties":false,
+  "required":["protocol","version","message_type","message_id","sender","nonce","capabilities","signature"],
+  "properties":{
+    "protocol":{"const":"MEMORY-001"},
+    "version":{"const":"1.0.0"},
+    "message_type":{"enum":["HELLO","NEGOTIATE","AUTHENTICATE","SESSION_ESTABLISHED","REJECT"]},
+    "message_id":{"type":"string","pattern":"^msg_[a-z0-9][a-z0-9_-]{15,127}$"},
+    "sender":{"type":"string","pattern":"^node_[a-z0-9][a-z0-9_-]{15,127}$"},
+    "nonce":{"type":"string","pattern":"^[A-Za-z0-9_-]{16,128}$"},
+    "capabilities":{"type":"array","uniqueItems":true,"items":{"type":"string","enum":["memory.read","memory.write","memory.replicate","memory.delete","canonical-v1"]}},
+    "signature":{"type":"string","pattern":"^ed25519:[A-Za-z0-9_-]{20,}$"}
+  }
+}
