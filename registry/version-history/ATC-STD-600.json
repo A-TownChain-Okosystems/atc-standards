@@ -1,0 +1,114 @@
+{
+  "schema_version": "1.0.0",
+  "standard_id": "ATC-STD-600",
+  "canonical_source": "standards/os/ATC-STD-600.md",
+  "history": [
+    {
+      "version": "1.3.1",
+      "date": "2026-10-02",
+      "normative_status": "approved",
+      "publication_status": "proposed_in_open_pr",
+      "change_type": "crypto",
+      "summary": "P0-Korrektur der kryptografischen Kontexttrennung und des kanonischen L1-TX-V2-Vertrags.",
+      "changes": [
+        "L1-TX-Signaturen: secp256k1/ECDSA mit RFC6979 und Low-S.",
+        "Signaturkodierung: kompaktes 64-Byte-r||s-Format; öffentlicher Schlüssel: komprimierter 33-Byte-SEC1.",
+        "Amount: u128, kodiert als feste 16 Byte Big-Endian.",
+        "Ausschließlich ATC-TX-DOMAIN-V2 für L1-TX-Signaturen; ATC-TX-DOMAIN und atc-tx.v1 sind verboten.",
+        "TX-ID: SHA-256(ATC-TX-ID-V2 || kanonische unsigned Transaction-Felder).",
+        "Ed25519 ist auf Identity/DID, P2P, Trust, Boot und Attestation beschränkt; nicht für L1-TX-Signaturen."
+      ],
+      "compatibility": "unknown",
+      "change_request_ids": [],
+      "references": [
+        "https://github.com/A-TownChain-Okosystems/atc-standards/pull/64"
+      ],
+      "source": {
+        "file": "standards/os/ATC-STD-600.md",
+        "pull_request": 64
+      }
+    },
+    {
+      "version": "1.2.0",
+      "date": "2026-09-08",
+      "normative_status": "unknown",
+      "publication_status": "published",
+      "change_type": "minor",
+      "summary": "Slot-Fertigbau mit slot-spezifischen Prüfkriterien und Abdeckungsmetrik.",
+      "changes": [
+        "Slot-spezifische Prüfkriterien in §6, jeweils mit Nachweisangabe.",
+        "Eigene REQ-STD-011..0N-Menge je Gegenstand.",
+        "M4-Abdeckungsmetrik."
+      ],
+      "compatibility": "backward_compatible",
+      "change_request_ids": [
+        "SCR-0034"
+      ],
+      "references": [],
+      "source": {
+        "file": "registry/versions.yaml"
+      }
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-09-08",
+      "normative_status": "unknown",
+      "publication_status": "published",
+      "change_type": "minor",
+      "summary": "Struktur-Elaboration für Regeln, Ökosystem-Verortung, Schnittstellen, Metriken und Security-Bedrohungen.",
+      "changes": [
+        "Familien-spezifische Kernregeln KR-1 bis KR-6.",
+        "Ökosystem-Verortung und Schnittstellen/Kopplungen.",
+        "Metriken/Akzeptanzkriterien M-1 bis M-3.",
+        "Security-Bedrohungen ergänzt und REQ-STD-006..010 erweitert."
+      ],
+      "compatibility": "backward_compatible",
+      "change_request_ids": [
+        "SCR-0031"
+      ],
+      "references": [],
+      "source": {
+        "file": "registry/versions.yaml"
+      }
+    },
+    {
+      "version": "1.0.0-Approval",
+      "date": "2026-09-08",
+      "normative_status": "approved",
+      "publication_status": "published",
+      "change_type": "approval",
+      "summary": "Owner-Freigabe des Grundgerüsts; normative Gültigkeit bestätigt.",
+      "changes": [
+        "Statusübergang DRAFT zu APPROVED.",
+        "Pflichtrahmen umfasst Definition, Katalog-Verortung, REQ-Deklaration, Compliance, Change-Control und Security-Dokumentation."
+      ],
+      "compatibility": "not_applicable",
+      "change_request_ids": [
+        "SCR-0030"
+      ],
+      "references": [],
+      "source": {
+        "file": "registry/versions.yaml"
+      }
+    },
+    {
+      "version": "1.0.0",
+      "date": "2026-09-08",
+      "normative_status": "draft",
+      "publication_status": "published",
+      "change_type": "initial",
+      "summary": "Initiale DRAFT-Fassung als Grundgerüst-Standard aus dem Katalog-Slot.",
+      "changes": [
+        "Grundgerüst aus SCR-0030; fachliche Ausarbeitung und §9-Freigabe waren zu diesem Zeitpunkt ausstehend."
+      ],
+      "compatibility": "not_applicable",
+      "change_request_ids": [
+        "SCR-0030"
+      ],
+      "references": [],
+      "source": {
+        "file": "registry/versions.yaml"
+      }
+    }
+  ]
+}
