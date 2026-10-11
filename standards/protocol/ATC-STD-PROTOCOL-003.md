@@ -107,9 +107,12 @@ Registry-Eintrag und keine M1/M2/M3-MISSINGS (REQ-PTS-004).
 ## §6 Crypto-Abstraction-Layer-Disziplin
 
 Der Cryptographic Abstraction Layer (PROTOCOL-001 §12) MUSS genutzt werden:
-Algorithmenwechsel ist Backend-Wechsel, kein Protokoll-Bruch. Der produktive
-Ed25519-Backend MUSS vor Mainnet-Aktivierung jeder Wert-transportierenden
-Familie vorhanden und verifiziert sein (REQ-PTS-006).
+Algorithmenwechsel ist Backend-Wechsel, kein Protokoll-Bruch. Ed25519 ist im
+Ökosystem für Identity/P2P/Trust/Boot-Kontexte vorgesehen und MUSS dort über
+den Crypto-HAL bereitgestellt und verifiziert werden. Ed25519 DARF NICHT als
+L1-Transaktionssignatur verwendet oder als alternative L1-TX-Verifikation
+akzeptiert werden. L1-TX-Signaturen sind ausschließlich secp256k1/ECDSA gemäß
+ATC-TX-DOMAIN-V2 und dem kanonischen TX-Vertrag.
 
 ## §7 Findings & Eskalation
 
@@ -126,7 +129,7 @@ Bruch. Rotation- und Mitigations-Pfade MÜSSEN im Finding stehen (REPO-AUDIT-001
 - **REQ-PTS-004** (§3): Kein `active` ohne Threat-Registry-Eintrag und ohne
   M1/M2/M3-MISSINGS.
 - **REQ-PTS-005** (§5): Automatisierte Checks je Release-Kandidat.
-- **REQ-PTS-006** (§6): Ed25519-Backend-Pflicht vor Wert-Transport über Mainnet.
+- **REQ-PTS-006** (§6): Ed25519-Backend-Pflicht für Identity/P2P/Trust/Boot-Kontexte vor Mainnet-Aktivierung; Ed25519 ist ausdrücklich kein L1-TX-Signaturverfahren.
 
 ## Security Considerations
 
