@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/A-TownChain-Okosystems/atc-standards/blob/main/schemas/version-history.schema.json",
-  "title": "ATC Machine-Readable Standard Version History",
+  "title": "ATC Machine-Readable Version History",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -12,11 +12,11 @@
   ],
   "properties": {
     "schema_version": {
-      "const": "1.0.0"
+      "const": "1.1.0"
     },
     "standard_id": {
       "type": "string",
-      "pattern": "^ATC-STD-[A-Z0-9-]+$"
+      "pattern": "^ATC-[A-Z0-9-]+$"
     },
     "canonical_source": {
       "type": "string",
@@ -37,7 +37,8 @@
           "summary",
           "changes",
           "compatibility",
-          "source"
+          "source",
+          "evidence"
         ],
         "properties": {
           "version": {
@@ -116,22 +117,102 @@
             "type": "object",
             "additionalProperties": false,
             "required": [
-              "file"
+              "file",
+              "commit_sha",
+              "pull_request"
             ],
             "properties": {
               "file": {
                 "type": "string",
                 "minLength": 1
               },
-              "pull_request": {
-                "type": "integer",
-                "minimum": 1
+              "commit_sha": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^[0-9a-f]{40}$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
               },
-              "commit": {
-                "type": "string",
-                "pattern": "^[0-9a-f]{40}$"
+              "pull_request": {
+                "oneOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
               }
             }
+          },
+          "evidence": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "status"
+            ],
+            "properties": {
+              "status": {
+                "enum": [
+                  "verified",
+                  "not_verified",
+                  "residual",
+                  "unknown"
+                ]
+              },
+              "verified_commit_sha": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "pattern": "^([0-9a-f]{40})?$"
+              },
+              "workflow_run_url": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "uri"
+              },
+              "notes": {
+                "type": "string"
+              }
+            },
+            "allOf": [
+              {
+                "if": {
+                  "properties": {
+                    "status": {
+                      "const": "verified"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ]
+                },
+                "then": {
+                  "required": [
+                    "verified_commit_sha",
+                    "workflow_run_url"
+                  ],
+                  "properties": {
+                    "verified_commit_sha": {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{40}$"
+                    },
+                    "workflow_run_url": {
+                      "type": "string",
+                      "format": "uri"
+                    }
+                  }
+                }
+              }
+            ]
           }
         }
       }
