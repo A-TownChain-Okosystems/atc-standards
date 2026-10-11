@@ -1,0 +1,46 @@
+name: Version History Validation
+
+on:
+  pull_request:
+    paths:
+      - "schemas/version-history.schema.json"
+      - "registry/version-history/**"
+      - "registry/standards.yaml"
+      - "standards/**"
+      - "tools/validate_version_history.py"
+      - ".github/workflows/version-history-validation.yml"
+  push:
+    branches: [main]
+    paths:
+      - "schemas/version-history.schema.json"
+      - "registry/version-history/**"
+      - "registry/standards.yaml"
+      - "standards/**"
+      - "tools/validate_version_history.py"
+      - ".github/workflows/version-history-validation.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: version-history-validation-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate-version-history:
+    name: Schema, order and SSOT consistency
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout exact workflow SHA
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install validator
+        run: python -m pip install "jsonschema==4.23.0"
+      - name: Validate machine-readable histories
+        run: python tools/validate_version_history.py
