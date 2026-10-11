@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "program": "ATC organization-wide machine-readable version history",
+  "scope": {
+    "repository_count_expected": 33,
+    "rollout_status": "pilot",
+    "pilot_repository": "atc-standards",
+    "pilot_artifact": "registry/version-history/ATC-STD-600.json"
+  },
+  "gates": [
+    {"id":"VH-001","name":"JSON Schema","status":"implemented","required":true},
+    {"id":"VH-002","name":"SemVer uniqueness and descending order","status":"implemented","required":true},
+    {"id":"VH-003","name":"Canonical specification version agreement","status":"implemented","required":true},
+    {"id":"VH-004","name":"Registry version agreement","status":"implemented","required":true},
+    {"id":"VH-005","name":"VERIFIED requires exact commit SHA and workflow run URL","status":"implemented","required":true},
+    {"id":"VH-006","name":"Generated-view reconciliation","status":"planned","required":true},
+    {"id":"VH-007","name":"Full Git-history provenance and missing-entry detection","status":"planned","required":true},
+    {"id":"VH-008","name":"All 33 repositories onboarded","status":"planned","required":true}
+  ],
+  "phases": [
+    {"id":"M0","name":"Contract and pilot schema","status":"in_progress","acceptance":["schema validates history records","unknown provenance remains explicit","VERIFIED is evidence-gated"]},
+    {"id":"M1","name":"ATC-STD-600 pilot CI","status":"in_progress","acceptance":["CI passes on exact PR head","canonical and registry versions agree","history order is valid"]},
+    {"id":"M2","name":"Generated views and Git history","status":"planned","acceptance":["generated views are regenerated or verified","version records are reconciled with Git tags/commits/PRs"]},
+    {"id":"M3","name":"Repository archetype rollout","status":"planned","acceptance":["schemas adapted by artifact type","CI gate enabled in each active repository","exceptions recorded with owner and expiry"]},
+    {"id":"M4","name":"Organization-wide audit","status":"planned","acceptance":["33/33 repositories inventoried","26 active and 7 archived classified against current manifest","residuals published and not silently waived"]}
+  ],
+  "evidence_policy": {
+    "verified_requires": ["exact_commit_sha","successful_required_checks","workflow_run_url","job_and_step_evidence"],
+    "fail_closed": true,
+    "auto_merge": false,
+    "ci_weakening": false
+  }
+}
