@@ -8,10 +8,10 @@
 # ============================================================================
 version: "1.2.0"
 generated_from: registry/standards.yaml
-updated: "2026-10-03"
+updated: "2026-10-07"
 coverage_kpi:
-  registry_total: 531
-  matrix_entries: 531
+  registry_total: 533
+  matrix_entries: 533
   matrix_coverage: "100%"
   enforced_target: "je Wartungszyklus steigend (REQ-IMP-007)"
   hinweis: "Wertigkeit der 21 SCR-0045-Detail-Eintraege bleibt; Familien-Evidence konsolidiert"
@@ -1206,6 +1206,14 @@ standards:
     implementation:
       status: implemented
       evidence: "tools/discovery/scan.py DISC-2026-09-08-001/002; Ausbaustufen RD-004..009 dokumentiert"
+    independence: L1
+
+  - standard: ATC-AURORA-SWARM-001
+    version: "0.1.0"
+    applicability: REFERENCE
+    implementation:
+      status: reference
+      evidence: "Legacy-Serie (atc/): durch ATC-STD-000ff superseded; historische Referenz konserviert"
     independence: L1
 
   - standard: ATC-STD-README-001
@@ -3887,6 +3895,14 @@ standards:
       evidence: "ACCESS-001 (SCR-0121): Rollenprofil-Matrix dokumentiert; PAT-Migration auf Fine-grained Stufe-2-Profil offen"
     independence: L1
 
+  - standard: ATC-AI-GOV-AUTH-001
+    version: "1.0.0"
+    applicability: MANDATORY
+    implementation:
+      status: specification_only
+      evidence: "ACCESS-001 (SCR-0121): Rollenprofil-Matrix dokumentiert; PAT-Migration auf Fine-grained Stufe-2-Profil offen"
+    independence: L1
+
   - standard: ATC-AI-GOV-001
     version: "1.0.0"
     applicability: MANDATORY
@@ -4406,12 +4422,4 @@ standards:
     implementation:
       status: reference
       evidence: "Legacy-Serie (atc/): durch ATC-STD-000ff superseded; historische Referenz konserviert"
-    independence: L1
-
-  - standard: ATC-AURORA-SWARM-001
-    version: "0.1.0"
-    applicability: TARGET
-    implementation:
-      status: specification_only
-      evidence: "Aurora Swarm Network (ASN) Zielarchitektur (SCR-0138, PR #97): CANDIDATE-DRAFT, Reifeklasse RESEARCH — keine Implementierung; Umsetzungsfolge via Gates ASW-G1 (Referenz-Neuron aurora-ai) bis ASW-G3 (Authority-Integration)"
     independence: L1
