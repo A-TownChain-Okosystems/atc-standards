@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "standard_id": "ATC-STD-600",
   "canonical_source": "standards/os/ATC-STD-600.md",
   "history": [
@@ -25,7 +25,12 @@
       ],
       "source": {
         "file": "standards/os/ATC-STD-600.md",
-        "pull_request": 64
+        "pull_request": 64,
+        "commit_sha": null
+      },
+      "evidence": {
+        "status": "not_verified",
+        "notes": "PR #64 is open; no exact-HEAD CI evidence is recorded here."
       }
     },
     {
@@ -46,7 +51,13 @@
       ],
       "references": [],
       "source": {
-        "file": "registry/versions.yaml"
+        "file": "registry/versions.yaml",
+        "commit_sha": null,
+        "pull_request": null
+      },
+      "evidence": {
+        "status": "unknown",
+        "notes": "Historical source commit/PR evidence has not yet been reconciled."
       }
     },
     {
@@ -68,7 +79,38 @@
       ],
       "references": [],
       "source": {
-        "file": "registry/versions.yaml"
+        "file": "registry/versions.yaml",
+        "commit_sha": null,
+        "pull_request": null
+      },
+      "evidence": {
+        "status": "unknown",
+        "notes": "Historical source commit/PR evidence has not yet been reconciled."
+      }
+    },
+    {
+      "version": "1.0.0",
+      "date": "2026-09-08",
+      "normative_status": "draft",
+      "publication_status": "published",
+      "change_type": "initial",
+      "summary": "Initiale DRAFT-Fassung als Grundgerüst-Standard aus dem Katalog-Slot.",
+      "changes": [
+        "Grundgerüst aus SCR-0030; fachliche Ausarbeitung und §9-Freigabe waren zu diesem Zeitpunkt ausstehend."
+      ],
+      "compatibility": "not_applicable",
+      "change_request_ids": [
+        "SCR-0030"
+      ],
+      "references": [],
+      "source": {
+        "file": "registry/versions.yaml",
+        "commit_sha": null,
+        "pull_request": null
+      },
+      "evidence": {
+        "status": "unknown",
+        "notes": "Historical source commit/PR evidence has not yet been reconciled."
       }
     },
     {
@@ -88,26 +130,13 @@
       ],
       "references": [],
       "source": {
-        "file": "registry/versions.yaml"
-      }
-    },
-    {
-      "version": "1.0.0",
-      "date": "2026-09-08",
-      "normative_status": "draft",
-      "publication_status": "published",
-      "change_type": "initial",
-      "summary": "Initiale DRAFT-Fassung als Grundgerüst-Standard aus dem Katalog-Slot.",
-      "changes": [
-        "Grundgerüst aus SCR-0030; fachliche Ausarbeitung und §9-Freigabe waren zu diesem Zeitpunkt ausstehend."
-      ],
-      "compatibility": "not_applicable",
-      "change_request_ids": [
-        "SCR-0030"
-      ],
-      "references": [],
-      "source": {
-        "file": "registry/versions.yaml"
+        "file": "registry/versions.yaml",
+        "commit_sha": null,
+        "pull_request": null
+      },
+      "evidence": {
+        "status": "unknown",
+        "notes": "Historical source commit/PR evidence has not yet been reconciled."
       }
     }
   ]
