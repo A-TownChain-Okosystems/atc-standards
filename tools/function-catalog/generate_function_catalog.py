@@ -113,7 +113,17 @@ def main() -> int:
     args = parser.parse_args()
     rendered = json.dumps(build_catalog(), ensure_ascii=False, indent=2) + "\n"
     if args.check:
-        if not args.output.exists() or args.output.read_text(encoding="utf-8") != rendered:
+        if not args.output.exists():
+            print("FAIL: function catalog is missing; generate it first")
+            return 1
+        current = json.loads(args.output.read_text(encoding="utf-8"))
+        expected = json.loads(rendered)
+        # These fields are intentionally volatile and do not indicate catalog drift.
+        for payload in (current, expected):
+            payload.pop("generated_at", None)
+            payload.pop("source_revision", None)
+            payload.pop("working_tree", None)
+        if current != expected:
             print("FAIL: function catalog is stale; regenerate it")
             return 1
         print("PASS: function catalog is current")
