@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/A-TownChain-Okosystems/atc-standards/blob/main/schemas/function-catalog.schema.json",
+  "title": "ATC Python Function Catalog",
+  "type": "object",
+  "required": ["catalog_id", "catalog_version", "catalog_status", "normative", "generated_at", "repository", "source_revision", "working_tree", "scope", "summary", "source_errors", "functions"],
+  "properties": {
+    "catalog_id": {"const": "ATC-FUNCTION-CATALOG-001"},
+    "catalog_version": {"type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$"},
+    "catalog_status": {"enum": ["GENERATED_AUDIT_BASELINE", "BLOCKED_SOURCE_PARSE_ERRORS"]},
+    "normative": {"const": false},
+    "generated_at": {"type": "string", "format": "date-time"},
+    "repository": {"const": "A-TownChain-Okosystems/atc-standards"},
+    "source_revision": {"type": ["string", "null"]},
+    "working_tree": {"enum": ["CLEAN", "DIRTY_OR_UNAVAILABLE"]},
+    "scope": {
+      "type": "object",
+      "required": ["language", "include", "limitations"],
+      "properties": {
+        "language": {"const": "Python"},
+        "include": {"type": "string"},
+        "limitations": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
+    "summary": {
+      "type": "object",
+      "required": ["python_files_discovered", "functions_discovered", "source_parse_errors", "functions_with_complete_signature_and_docstring", "functions_with_partial_source_contract"],
+      "properties": {
+        "python_files_discovered": {"type": "integer", "minimum": 0},
+        "functions_discovered": {"type": "integer", "minimum": 0},
+        "source_parse_errors": {"type": "integer", "minimum": 0},
+        "functions_with_complete_signature_and_docstring": {"type": "integer", "minimum": 0},
+        "functions_with_partial_source_contract": {"type": "integer", "minimum": 0}
+      },
+      "additionalProperties": false
+    },
+    "source_errors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path", "error_type", "message"],
+        "properties": {"path": {"type": "string"}, "error_type": {"type": "string"}, "message": {"type": "string"}},
+        "additionalProperties": false
+      }
+    },
+    "functions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["qualified_name", "name", "kind", "source", "signature", "docstring", "contract_status", "contract_gaps", "semantic_contract"],
+        "properties": {
+          "qualified_name": {"type": "string"},
+          "name": {"type": "string"},
+          "kind": {"enum": ["function", "method", "async_function"]},
+          "source": {
+            "type": "object",
+            "required": ["path", "line_start", "line_end", "sha256"],
+            "properties": {
+              "path": {"type": "string"},
+              "line_start": {"type": "integer", "minimum": 1},
+              "line_end": {"type": "integer", "minimum": 1},
+              "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+            },
+            "additionalProperties": false
+          },
+          "signature": {
+            "type": "object",
+            "required": ["parameters", "return_annotation", "decorators"],
+            "properties": {
+              "parameters": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["name", "kind", "annotation", "default"],
+                  "properties": {
+                    "name": {"type": "string"},
+                    "kind": {"enum": ["positional_only", "positional_or_keyword", "var_positional", "keyword_only", "var_keyword"]},
+                    "annotation": {"type": ["string", "null"]},
+                    "default": {"type": ["string", "null"]}
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "return_annotation": {"type": ["string", "null"]},
+              "decorators": {"type": "array", "items": {"type": "string"}}
+            },
+            "additionalProperties": false
+          },
+          "docstring": {"type": ["string", "null"]},
+          "contract_status": {"enum": ["SIGNATURE_AND_DOCSTRING_PRESENT", "PARTIAL_SOURCE_CONTRACT"]},
+          "contract_gaps": {"type": "array", "items": {"enum": ["missing_docstring", "missing_parameter_annotations", "missing_return_annotation"]}},
+          "semantic_contract": {
+            "type": "object",
+            "required": ["preconditions", "postconditions", "errors", "side_effects", "determinism", "security_invariants", "evidence"],
+            "properties": {
+              "preconditions": {"const": "UNSPECIFIED"},
+              "postconditions": {"const": "UNSPECIFIED"},
+              "errors": {"const": "UNSPECIFIED"},
+              "side_effects": {"const": "UNSPECIFIED"},
+              "determinism": {"const": "UNSPECIFIED"},
+              "security_invariants": {"const": "UNSPECIFIED"},
+              "evidence": {"const": "NOT_ASSERTED_BY_INVENTORY"}
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
