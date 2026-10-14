@@ -13,13 +13,11 @@ werden ueber ihre Aufrufer ausgeuebt und sind hier referenziert,
 weil der Suite-Lauf genau diese Pfade triggert.
 """
 
-import glob
 import importlib.util
 import os
 import subprocess
 import sys
 
-import pytest
 
 REPO = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 
@@ -109,12 +107,22 @@ class TestReadmeGates:
     def test_gates_valid_readme(self):
         m = load("tools/atc-readme-validator/check_readme.py")
         for gate in (
-            m.gate_01, m.gate_02, m.gate_03, m.gate_04, m.gate_05,
-            m.gate_06, m.gate_07, m.gate_08, m.gate_09, m.gate_10,
-            m.gate_11, m.gate_12,
+            m.gate_01,
+            m.gate_02,
+            m.gate_03,
+            m.gate_04,
+            m.gate_05,
+            m.gate_06,
+            m.gate_07,
+            m.gate_08,
+            m.gate_09,
+            m.gate_10,
+            m.gate_11,
+            m.gate_12,
         ):
             ok, _ = gate(VALID_README)
             assert ok, gate.__name__
+
     def test_gate13_structure_alignment(self, tmp_path):
         m = load("tools/atc-readme-validator/check_readme.py")
         (tmp_path / "README.md").write_text(VALID_README, encoding="utf-8")
@@ -133,8 +141,13 @@ class TestReadmeGates:
     def test_main_smoke_fixture_repo(self, tmp_path):
         (tmp_path / "README.md").write_text(VALID_README, encoding="utf-8")
         proc = subprocess.run(
-            [sys.executable, os.path.join(REPO, "tools/atc-readme-validator/check_readme.py"), str(tmp_path)],
-            capture_output=True, text=True,
+            [
+                sys.executable,
+                os.path.join(REPO, "tools/atc-readme-validator/check_readme.py"),
+                str(tmp_path),
+            ],
+            capture_output=True,
+            text=True,
         )
         assert proc.returncode in (0, 1), proc.stdout + proc.stderr
 
@@ -161,8 +174,13 @@ class TestAllocationValidator:
 
     def test_main_smoke(self):
         proc = subprocess.run(
-            [sys.executable, os.path.join(REPO, "tools/allocation-validator/atc_allocation_validator.py")],
-            capture_output=True, text=True, cwd=REPO,
+            [
+                sys.executable,
+                os.path.join(REPO, "tools/allocation-validator/atc_allocation_validator.py"),
+            ],
+            capture_output=True,
+            text=True,
+            cwd=REPO,
         )
         assert proc.returncode in (0, 1), proc.stdout + proc.stderr
 
@@ -192,8 +210,15 @@ class TestRepoAudit:
 
     def test_main_smoke(self):
         proc = subprocess.run(
-            [sys.executable, os.path.join(REPO, "tools/atc-repo-audit/atc_repo_audit.py"), REPO, "--level", "R1"],
-            capture_output=True, text=True,
+            [
+                sys.executable,
+                os.path.join(REPO, "tools/atc-repo-audit/atc_repo_audit.py"),
+                REPO,
+                "--level",
+                "R1",
+            ],
+            capture_output=True,
+            text=True,
         )
         assert proc.returncode in (0, 1), proc.stdout + proc.stderr
 
@@ -203,15 +228,19 @@ class TestRepoAudit:
 class TestDependencyGuard:
     def test_key_fingerprint_compare_nodes(self):
         m = load("tools/dependency_guard.py")
-        base = [{"ecosystem": "cargo", "name": "a", "version": "1.0.0"},
-                {"ecosystem": "cargo", "name": "b", "version": "2.0.0"}]
-        head = [{"ecosystem": "cargo", "name": "a", "version": "1.1.0"},
-                {"ecosystem": "cargo", "name": "c", "version": "0.1.0"}]
+        base = [
+            {"ecosystem": "cargo", "name": "a", "version": "1.0.0"},
+            {"ecosystem": "cargo", "name": "b", "version": "2.0.0"},
+        ]
+        head = [
+            {"ecosystem": "cargo", "name": "a", "version": "1.1.0"},
+            {"ecosystem": "cargo", "name": "c", "version": "0.1.0"},
+        ]
         assert m.key(base[0]) == ("cargo", "a", "1.0.0")
         assert set(m.fingerprint(base)) == {("cargo", "a", "1.0.0"), ("cargo", "b", "2.0.0")}
         added, removed, changed = m.compare_nodes(base, head)
-        assert {n["name"] for n in added} == {"a", "c"}   # a: neue Version = neuer Key
-        assert {n["name"] for n in removed} == {"a", "b"}   # a@1.0.0-Key entfaellt
+        assert {n["name"] for n in added} == {"a", "c"}  # a: neue Version = neuer Key
+        assert {n["name"] for n in removed} == {"a", "b"}  # a@1.0.0-Key entfaellt
         assert any(c["to"]["name"] == "a" for c in changed)
 
     def test_semver_pep440_version_cmp(self):
@@ -236,9 +265,15 @@ class TestDependencyGuard:
 
     def test_graph_writes_output(self, tmp_path):
         m = load("tools/dependency_guard.py")
-        nodes = [{"ecosystem": "cargo", "name": "a", "version": "1.0.0"},
-                 {"ecosystem": "cargo", "name": "b", "version": "1.0.0",
-                  "deps": [{"name": "a", "ecosystem": "cargo"}]}]
+        nodes = [
+            {"ecosystem": "cargo", "name": "a", "version": "1.0.0"},
+            {
+                "ecosystem": "cargo",
+                "name": "b",
+                "version": "1.0.0",
+                "deps": [{"name": "a", "ecosystem": "cargo"}],
+            },
+        ]
         m.graph(nodes, tmp_path)
         assert any(tmp_path.iterdir())
 
@@ -248,7 +283,9 @@ class TestDependencyGuard:
 class TestStdValidator:
     def test_parse_meta(self):
         m = load("tools/atc-std-validator/atc_std_validator.py")
-        content = "---\nstandard:\n  id: ATC-STD-999\n  title: Fixture\n  status: APPROVED\n---\nbody"
+        content = (
+            "---\nstandard:\n  id: ATC-STD-999\n  title: Fixture\n  status: APPROVED\n---\nbody"
+        )
         meta = m.parse_meta(content)
         assert meta is not None
         assert meta["id"] == "ATC-STD-999"
@@ -316,13 +353,17 @@ class TestConsistencyTools:
         assert reg and all(isinstance(v, str) for v in reg.values())
         # repo_list erwartet eine repositories:-Registry — Fixture genuegt als echter Aufruf
         fixture = tmp_path / "repositories.yaml"
-        fixture.write_text("repositories:\n  - name: a-townchain-os\n  - name: atc-vm\n", encoding="utf-8")
+        fixture.write_text(
+            "repositories:\n  - name: a-townchain-os\n  - name: atc-vm\n", encoding="utf-8"
+        )
         assert m.repo_list(str(fixture)) == ["a-townchain-os", "atc-vm"]
 
     def test_cross_registry_main_smoke(self):
         proc = subprocess.run(
             [sys.executable, os.path.join(REPO, "tools/consistency/check_cross_registry.py")],
-            capture_output=True, text=True, cwd=REPO,
+            capture_output=True,
+            text=True,
+            cwd=REPO,
         )
         assert proc.returncode in (0, 1), proc.stdout + proc.stderr
 
@@ -332,7 +373,10 @@ class TestConsistencyTools:
         nodes, ref, errs = m.load_base()
         assert nodes == [] and errs == []
         base = tmp_path / "base.json"
-        base.write_text('{"schema": "ATC-DEP-GRAPH-1", "nodes": [{"ecosystem": "cargo", "name": "a", "version": "1.0.0"}]}', encoding="utf-8")
+        base.write_text(
+            '{"schema": "ATC-DEP-GRAPH-1", "nodes": [{"ecosystem": "cargo", "name": "a", "version": "1.0.0"}]}',
+            encoding="utf-8",
+        )
         monkeypatch.setenv("ATC_DEP_BASE_JSON", str(base))
         monkeypatch.setenv("ATC_DEP_BASE_REF", "main~1")
         nodes, ref, errs = m.load_base()
@@ -342,11 +386,19 @@ class TestConsistencyTools:
         assert errs  # invalid base graph schema wird fail-closed gemeldet
 
     def test_main_smoke_graph(self, tmp_path):
-        import shutil
         out = tmp_path / "dep-out"
         proc = subprocess.run(
-            [sys.executable, os.path.join(REPO, "tools/dependency_guard.py"), "graph",
-             "--root", REPO, "--out", str(out)],
-            capture_output=True, text=True, cwd=REPO,
+            [
+                sys.executable,
+                os.path.join(REPO, "tools/dependency_guard.py"),
+                "graph",
+                "--root",
+                REPO,
+                "--out",
+                str(out),
+            ],
+            capture_output=True,
+            text=True,
+            cwd=REPO,
         )
         assert proc.returncode in (0, 1), proc.stdout + proc.stderr
