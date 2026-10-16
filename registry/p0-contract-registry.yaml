@@ -1,0 +1,87 @@
+version: "0.1.0"
+status: draft
+normative: false
+registry_id: ATC-P0-CONTRACT-REGISTRY-001
+purpose: "Cross-contract binding for IDENTITY-001, AUTHORITY-001 and MEMORY-001."
+
+resolution_states:
+  - RESOLVED
+  - UNRESOLVED
+  - CANDIDATE
+  - EVIDENCE_REQUIRED
+
+contracts:
+  identity:
+    contract_id: ATC-STD-IDENTITY-001
+    schema_id: UNRESOLVED:IDENTITY-SCHEMA
+    protocol_id: ATC-PROTO-IDENTITY-001
+    protocol_version: "1.0.0"
+    ssot_repository: atc-standards
+    canonical_path: standards/system/ATC-STD-IDENTITY-001.md
+    runtime_owner: UNRESOLVED:IDENTITY-RUNTIME
+    write_authority: UNRESOLVED:IDENTITY-WRITE-AUTHORITY
+    api_id: UNRESOLVED:IDENTITY-API
+    version: "0.1.0"
+    evidence_location: UNRESOLVED:IDENTITY-EVIDENCE
+    existing_contract_relationship:
+      standard: "ATC-03 — Decentralized Identity (DID) & Zero-Trust IAM"
+      protocol: "ATC-PROTO-IDENTITY-001"
+      implementation_hints: "ShivaCore K6/K6b and wallet/key-management evidence require independent verification."
+    resolution: UNRESOLVED
+
+  authority:
+    contract_id: ATC-STD-AUTHORITY-001
+    schema_id: UNRESOLVED:AUTHORITY-SCHEMA
+    protocol_id: UNRESOLVED:AUTHORITY-PROTOCOL
+    ssot_repository: atc-standards
+    canonical_path: standards/system/ATC-STD-AUTHORITY-001.md
+    runtime_owner: UNRESOLVED:AUTHORITY-RUNTIME
+    write_authority: UNRESOLVED:AUTHORITY-WRITE-AUTHORITY
+    api_id: UNRESOLVED:AUTHORITY-API
+    version: "0.1.0"
+    evidence_location: governance/authority/authority-matrix.yaml
+    governance_ssot: governance/authority/authority-matrix.yaml
+    resolution: CANDIDATE
+
+  memory:
+    contract_id: ATC-STD-MEMORY-001
+    schema_id: https://atc.ecosystem/schemas/memory-001/memory-record.schema.json
+    protocol_id: MEMORY-001
+    protocol_version: "1.0.0"
+    ssot_repository: atc-standards
+    canonical_path: schemas/memory-001/
+    runtime_owner: UNRESOLVED:MEMORY-RUNTIME
+    write_authority: UNRESOLVED:MEMORY-WRITE-AUTHORITY
+    api_id: UNRESOLVED:MEMORY-API
+    version: "0.1.0"
+    machine_contract_version: "1.0.0"
+    serialization_id: MEMORY-001-CANONICAL-SERIALIZATION
+    verifier_path: tools/memory_001_reference.py
+    validator_path: tools/validate_memory_001.py
+    evidence_location: test-vectors/memory-001/
+    source_candidate: "MEMORY-001 candidate package from PR #49; not yet merged/verified as runtime."
+    resolution: CANDIDATE
+
+domain_authority_resolution:
+  identity_state:
+    owner_id: UNRESOLVED:IDENTITY-STATE-OWNER
+    write_authority: UNRESOLVED:IDENTITY-WRITE-AUTHORITY
+    state_id: identity_state
+    source_of_truth: UNRESOLVED:IDENTITY-STATE-SSOT
+    resolution: UNRESOLVED
+
+  memory_state:
+    owner_id: UNRESOLVED:MEMORY-STATE-OWNER
+    write_authority: UNRESOLVED:MEMORY-WRITE-AUTHORITY
+    state_id: memory_state
+    source_of_truth: UNRESOLVED:MEMORY-STATE-SSOT
+    resolution: UNRESOLVED
+
+rules:
+  - "No UNRESOLVED field may be converted to a concrete owner by assumption."
+  - "Identity protocol semantics and ecosystem identity model must not become competing SSOTs."
+  - "The MEMORY-001 machine-readable package is the single schema/protocol/vector candidate; ATC-STD-MEMORY-001 must not duplicate it."
+  - "Aurora Memory is not global Memory Authority unless repository/code evidence proves ownership."
+  - "K6/K6b or wallet implementation evidence is not by itself proof of global Identity State ownership."
+  - "Schema freeze is blocked while required identity or memory ownership fields remain UNRESOLVED."
+  - "API-001 and EVENT-001 are blocked until this registry reaches the required resolution state."
