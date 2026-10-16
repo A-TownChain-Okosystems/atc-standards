@@ -1,0 +1,17 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://atc.ecosystem/schemas/memory-001/evidence.schema.json",
+  "title":"MEMORY-001 Evidence Record",
+  "type":"object","additionalProperties":false,
+  "required":["evidence_version","canonical_repo","commit_sha","contract_version","tests","ci","e2e","federation"],
+  "properties":{
+    "evidence_version":{"const":"MEMORY-EVIDENCE/1.0.0"},
+    "canonical_repo":{"type":"string","pattern":"^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$"},
+    "commit_sha":{"type":"string","pattern":"^[0-9a-f]{40}$"},
+    "contract_version":{"const":"MEMORY-001/1.0.0"},
+    "tests":{"type":"array","items":{"type":"object","additionalProperties":false,"required":["name","status"],"properties":{"name":{"type":"string"},"status":{"enum":["PASS","FAIL","SKIP"]},"artifact":{"type":["string","null"]}}}},
+    "ci":{"type":"object","additionalProperties":false,"required":["workflow","run_id","status"],"properties":{"workflow":{"type":"string"},"run_id":{"type":"integer","minimum":1},"status":{"enum":["PASS","FAIL","UNKNOWN"]}}},
+    "e2e":{"type":"object","additionalProperties":false,"required":["scenario","status"],"properties":{"scenario":{"type":"string"},"status":{"enum":["PASS","FAIL","NOT_RUN"]}}},
+    "federation":{"type":"object","additionalProperties":false,"required":["node_a","node_b","status"],"properties":{"node_a":{"type":"string"},"node_b":{"type":"string"},"status":{"enum":["VERIFIED","FAILED","NOT_RUN"]}}}
+  }
+}

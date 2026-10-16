@@ -1,0 +1,15 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://atc.ecosystem/schemas/memory-001/node-identity.schema.json",
+  "title":"MEMORY-001 Node Identity",
+  "type":"object","additionalProperties":false,
+  "required":["node_id","identity_version","key_id","public_key","algorithm"],
+  "properties":{
+    "node_id":{"$ref":"#/$defs/nodeId"},
+    "identity_version":{"const":"MEMORY-001-NODE/1.0.0"},
+    "key_id":{"type":"string","minLength":1,"maxLength":128},
+    "public_key":{"type":"string","pattern":"^[A-Za-z0-9_-]{20,}$"},
+    "algorithm":{"type":"string","enum":["ed25519"]}
+  },
+  "$defs":{"nodeId":{"type":"string","pattern":"^node_[a-z0-9][a-z0-9_-]{15,127}$"}}
+}
