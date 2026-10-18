@@ -19,7 +19,6 @@ import subprocess
 import sys
 from importlib import util
 
-
 REPO = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 
 
