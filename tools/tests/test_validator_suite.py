@@ -230,7 +230,7 @@ class TestRepoAudit:
             capture_output=True,
             text=True,
         )
-        assert_cli_result(proc, "GATE: PASS", "GATE: FAIL")
+        assert_cli_result(proc, "GATE: PASS", "GATE: NO-GO")
 
 
 # -------------------------------------------------------- Dependency-Guard
