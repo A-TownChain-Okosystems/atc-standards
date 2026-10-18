@@ -32,7 +32,6 @@ def load(rel):
     return mod
 
 
-
 def assert_cli_result(proc, success_marker, failure_marker):
     success = success_marker in proc.stdout
     failure = failure_marker in proc.stdout
@@ -111,6 +110,7 @@ Siehe Maintainers.
 ```
 """
 
+
 class TestReadmeGates:
     def test_gates_valid_readme(self):
         m = load("tools/atc-readme-validator/check_readme.py")
@@ -163,6 +163,7 @@ class TestReadmeGates:
 
 # ------------------------------------------------------- Allocation-Validator
 
+
 class TestAllocationValidator:
     def test_fail_returns_error_code(self):
         m = load("tools/allocation-validator/atc_allocation_validator.py")
@@ -195,6 +196,7 @@ class TestAllocationValidator:
 
 
 # ------------------------------------------------------------- Repo-Audit
+
 
 class TestRepoAudit:
     def test_lvl_ge(self):
@@ -233,6 +235,7 @@ class TestRepoAudit:
 
 
 # -------------------------------------------------------- Dependency-Guard
+
 
 class TestDependencyGuard:
     def test_key_fingerprint_compare_nodes(self):
@@ -288,6 +291,7 @@ class TestDependencyGuard:
 
 
 # ----------------------------------------------------------- Std-Validator
+
 
 class TestStdValidator:
     def test_parse_meta(self):
@@ -349,6 +353,7 @@ class TestStdValidator:
 
 
 # ------------------------------------------------------- Cross-Registry-Gate
+
 
 class TestConsistencyTools:
     def test_git_blob_sha(self):
@@ -417,4 +422,6 @@ class TestConsistencyTools:
         result = json.loads(proc.stdout)
         assert result.get("schema") == "ATC-DEP-RESULT-1", proc.stdout + proc.stderr
         assert result.get("status") in ("PASS", "BLOCKED"), proc.stdout + proc.stderr
-        assert proc.returncode == (0 if result["status"] == "PASS" else 1), proc.stdout + proc.stderr
+        assert proc.returncode == (0 if result["status"] == "PASS" else 1), (
+            proc.stdout + proc.stderr
+        )
