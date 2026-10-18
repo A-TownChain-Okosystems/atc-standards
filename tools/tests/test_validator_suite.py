@@ -13,10 +13,11 @@ werden ueber ihre Aufrufer ausgeuebt und sind hier referenziert,
 weil der Suite-Lauf genau diese Pfade triggert.
 """
 
-import importlib.util
+import json
 import os
 import subprocess
 import sys
+from importlib import util
 
 
 REPO = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
@@ -24,12 +25,21 @@ REPO = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 
 def load(rel):
     path = os.path.join(REPO, rel)
-    spec = importlib.util.spec_from_file_location(
+    spec = util.spec_from_file_location(
         os.path.basename(rel).replace("/", "_").replace(".py", ""), path
     )
-    mod = importlib.util.module_from_spec(spec)
+    mod = util.module_from_spec(spec)
     spec.loader.exec_module(mod)
     return mod
+
+
+
+def assert_cli_result(proc, success_marker, failure_marker):
+    success = success_marker in proc.stdout
+    failure = failure_marker in proc.stdout
+    assert success != failure, proc.stdout + proc.stderr
+    expected_code = 0 if success else 1
+    assert proc.returncode == expected_code, proc.stdout + proc.stderr
 
 
 # ---------------------------------------------------------------- README-Gates
@@ -102,7 +112,6 @@ Siehe Maintainers.
 ```
 """
 
-
 class TestReadmeGates:
     def test_gates_valid_readme(self):
         m = load("tools/atc-readme-validator/check_readme.py")
@@ -149,7 +158,8 @@ class TestReadmeGates:
             capture_output=True,
             text=True,
         )
-        assert proc.returncode in (0, 1), proc.stdout + proc.stderr
+        assert proc.returncode == 0, proc.stdout + proc.stderr
+        assert "RESULT: CONFORM — alle 13 Gates bestanden" in proc.stdout
 
 
 # ------------------------------------------------------- Allocation-Validator
@@ -182,7 +192,7 @@ class TestAllocationValidator:
             text=True,
             cwd=REPO,
         )
-        assert proc.returncode in (0, 1), proc.stdout + proc.stderr
+        assert_cli_result(proc, "Ergebnis: PASS — allocation-status konsistent", "Ergebnis: FAIL —")
 
 
 # ------------------------------------------------------------- Repo-Audit
@@ -220,7 +230,7 @@ class TestRepoAudit:
             capture_output=True,
             text=True,
         )
-        assert proc.returncode in (0, 1), proc.stdout + proc.stderr
+        assert_cli_result(proc, "GATE: PASS", "GATE: FAIL")
 
 
 # -------------------------------------------------------- Dependency-Guard
@@ -365,7 +375,11 @@ class TestConsistencyTools:
             text=True,
             cwd=REPO,
         )
-        assert proc.returncode in (0, 1), proc.stdout + proc.stderr
+        assert_cli_result(
+            proc,
+            "RESULT: CROSS-REGISTRY ALL COMPLIANT",
+            "RESULT: CROSS-REGISTRY NON-COMPLIANT",
+        )
 
     def test_load_base_env_fixture(self, tmp_path, monkeypatch):
         m = load("tools/dependency_guard.py")
@@ -401,4 +415,7 @@ class TestConsistencyTools:
             text=True,
             cwd=REPO,
         )
-        assert proc.returncode in (0, 1), proc.stdout + proc.stderr
+        result = json.loads(proc.stdout)
+        assert result.get("schema") == "ATC-DEP-RESULT-1", proc.stdout + proc.stderr
+        assert result.get("status") in ("PASS", "BLOCKED"), proc.stdout + proc.stderr
+        assert proc.returncode == (0 if result["status"] == "PASS" else 1), proc.stdout + proc.stderr
