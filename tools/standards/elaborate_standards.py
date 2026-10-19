@@ -245,7 +245,7 @@ FAM = {
     ),
     "FAM-11": dict(
         eco=(
-            "Blockchain-Kernschicht: a-townchain (L3, Chain-ID 658467), Kernel-Kopplung K14 "
+            "Blockchain-Kernschicht: a-townchain (L2, Chain-ID 658467), Kernel-Kopplung K14 "
             "(P2P-Consensus Foundation) und K16 (DAG+PoH+Validator+Voting+Finality)."
         ),
         rules=[
@@ -255,7 +255,7 @@ FAM = {
             "(Replay-Schutz).",
             "Konsens-Entscheidungen MÜSSEN nachvollziehbar (DAG-Referenzen, Voting-"
             "Nachweise) protokolliert werden.",
-            "Mainnet-Wert-Transport erfordert Ed25519-Backend (REQ-PTS-006, Crypto-HAL).",
+            "Transaction-/Account-Signaturen folgen dem kanonischen TX-V2-Vertrag: secp256k1 ECDSA mit RFC6979, SHA-256, low-S und komprimiertem Public Key. Ed25519 bleibt der separate Identity-/P2P-/DID-Sicherheitsbereich.",
             "Protokoll-Status MUSS der Protocol-Registry entsprechen (draft→active nur "
             "mit CONF-BRONZE).",
             "Konsens-Kernregeln DÜRFEN nur via MAJOR-Kette (COMPAT-001-Gate) geändert werden.",
