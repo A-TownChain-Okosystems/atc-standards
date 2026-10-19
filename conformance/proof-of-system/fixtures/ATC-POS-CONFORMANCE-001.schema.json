@@ -1,0 +1,170 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ATC-POS-CONFORMANCE-001.schema.json",
+  "title": "ATC Proof-of-System Conformance Contract",
+  "type": "object",
+  "required": [
+    "contract_id",
+    "contract_version",
+    "status",
+    "chain_id",
+    "execution_semantics",
+    "case_count",
+    "cases"
+  ],
+  "properties": {
+    "contract_id": {
+      "const": "ATC-POS-CONFORMANCE-001"
+    },
+    "contract_version": {
+      "type": "string"
+    },
+    "status": {
+      "const": "PROPOSED_NOT_NORMATIVE"
+    },
+    "chain_id": {
+      "const": 658467
+    },
+    "execution_semantics": {
+      "const": "CONTRACT_VALIDATION_ONLY_UNTIL_FIXTURES_AND_PROTOCOL_PARAMETERS_ARE_FROZEN"
+    },
+    "case_count": {
+      "const": 19
+    },
+    "cases": {
+      "type": "array",
+      "minItems": 19,
+      "maxItems": 19,
+      "items": {
+        "$ref": "#/$defs/case"
+      }
+    }
+  },
+  "$defs": {
+    "case": {
+      "type": "object",
+      "required": [
+        "case_id",
+        "kind",
+        "title",
+        "contract_status",
+        "blocked_by_parameters",
+        "input",
+        "expected",
+        "fixture_status",
+        "notes"
+      ],
+      "properties": {
+        "case_id": {
+          "type": "string",
+          "pattern": "^POS-(V|N)-[0-9]{3}$"
+        },
+        "kind": {
+          "enum": [
+            "positive",
+            "negative"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "contract_status": {
+          "const": "BLOCKED"
+        },
+        "blocked_by_parameters": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^PARAM-[0-9]{2}$"
+          },
+          "minItems": 1
+        },
+        "input": {
+          "type": "object",
+          "required": [
+            "contract_id",
+            "chain_id",
+            "protocol_version",
+            "epoch",
+            "height",
+            "round",
+            "validator_set_hash",
+            "parent_block_id",
+            "scenario"
+          ],
+          "properties": {
+            "contract_id": {
+              "const": "ATC-POS-CONFORMANCE-001"
+            },
+            "chain_id": {
+              "const": 658467
+            },
+            "protocol_version": {
+              "type": "string"
+            },
+            "epoch": {
+              "type": "string"
+            },
+            "height": {
+              "type": "string"
+            },
+            "round": {
+              "type": "string"
+            },
+            "validator_set_hash": {
+              "type": "string"
+            },
+            "parent_block_id": {
+              "type": "string"
+            },
+            "scenario": {
+              "type": "object"
+            }
+          },
+          "additionalProperties": false
+        },
+        "expected": {
+          "type": "object",
+          "required": [
+            "decision",
+            "error_code",
+            "decision_is_normative",
+            "error_code_is_normative"
+          ],
+          "properties": {
+            "decision": {
+              "enum": [
+                "ACCEPT",
+                "REJECT",
+                "FINALIZE",
+                "NOT_FINALIZED",
+                "SECURITY_STOP"
+              ]
+            },
+            "error_code": {
+              "type": "string",
+              "pattern": "^E_[A-Z0-9_]+$"
+            },
+            "decision_is_normative": {
+              "const": false
+            },
+            "error_code_is_normative": {
+              "const": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "fixture_status": {
+          "const": "PLACEHOLDERS_UNRESOLVED"
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
