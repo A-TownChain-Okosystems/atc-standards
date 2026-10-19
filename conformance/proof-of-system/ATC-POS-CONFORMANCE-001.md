@@ -6,13 +6,20 @@ Status: **PROPOSED / NOT NORMATIVE**. This contract makes the requested cases ma
 
 - Contract ID: `ATC-POS-CONFORMANCE-001`
 - Chain ID: `658467`
-- Format: UTF-8 JSON input; canonical serialization rules remain **BLOCKED** pending protocol freeze.
-- Test runner output: JSON object with `case_id`, `input_sha256`, `oracle_version`, `actual_decision`, `actual_error_code`, `exit_code`, `evidence_refs`.
+- Machine-readable case catalogue: [`fixtures/vectors.json`](fixtures/vectors.json)
+- JSON Schema: [`fixtures/ATC-POS-CONFORMANCE-001.schema.json`](fixtures/ATC-POS-CONFORMANCE-001.schema.json)
+- Contract-only validator: [`tools/atc-pos-conformance/check_vectors.py`](../../tools/atc-pos-conformance/check_vectors.py)
+- Reproducible command from repository root: `python3 tools/atc-pos-conformance/check_vectors.py`
+- Format: UTF-8 JSON input; canonical protocol serialization remains **BLOCKED** pending protocol freeze.
+- Harness output contract: `case_id`, `input_sha256`, `oracle_version`, `actual_decision`, `actual_error_code`, `exit_code`, `evidence_refs`.
 - Decision vocabulary: `ACCEPT`, `REJECT`, `FINALIZE`, `NOT_FINALIZED`, `SECURITY_STOP`, `BLOCKED`.
-- Error codes below are **provisional harness identifiers**, not normative wire-protocol error codes.
-- Fixture names are stable references that must resolve to checked-in, hashed fixture files before execution. No placeholder fixture may be silently substituted.
-- A vector is reproducible only when input bytes, fixture manifest, oracle version, implementation commit, runner/toolchain, command, output, and artifact SHA-256 are recorded.
+- Error codes are **provisional harness identifiers**, not normative wire-protocol error codes.
+- Fixture names are stable references that must resolve to checked-in, hashed fixture files before protocol execution. No placeholder fixture may be silently substituted.
 - Golden expected outputs must be authored/reviewed independently of the production implementation.
+
+### Validator scope boundary
+
+`check_vectors.py` checks the completeness and guardrails of the contract records only: 19 unique IDs, expected ordering, envelope constants, parameter blockers, and explicit `BLOCKED`/non-normative markers. A successful result means **contract metadata validation only**. It does not run consensus logic, cryptographic checks, finality, fork choice, multi-node, partition or recovery tests, and must not be reported as `TESTED`, `CI_VERIFIED` for protocol behavior, `E2E_VERIFIED` or `VERIFIED`.
 
 ## Shared JSON input envelope
 
@@ -37,111 +44,111 @@ Each vector uses this envelope; case-specific data is in `scenario`.
 }
 ```
 
-`UNFROZEN` and `FIXTURE:* ` are contract placeholders, not valid production wire values. A runnable vector must resolve them to exact bytes/numbers from the fixture manifest. While any required value is unresolved, expected harness result is `BLOCKED / SPEC_NOT_FROZEN`, not a pass.
+`UNFROZEN` and `FIXTURE:*` are contract placeholders, not valid production wire values. Until placeholders are resolved to exact bytes/numbers with hashes and the relevant parameters are frozen, expected harness status is `BLOCKED / SPEC_NOT_FROZEN`, not a pass.
 
 ## Positive vectors
 
 ### POS-V-001 — Valid proposal
-Input: shared envelope with `scenario = {"proposal":"FIXTURE:valid_proposal_A","proposer":"FIXTURE:eligible_leader_A","signature":"FIXTURE:valid_proposal_signature_A","parent":"FIXTURE:parent_A","body":"FIXTURE:valid_body_A"}`.
-Expected: `ACCEPT`; provisional failure code if rejected: `E_PROPOSAL_INVALID`.
-Preconditions: leader-selection and proposal-encoding rules frozen; proposal signature fixture independently verified.
-Status: **BLOCKED** pending protocol version, leader rule, encoding, and fixture hashes.
+Input scenario: proposal, eligible proposer, signature, parent and body fixture references.
+Expected protocol behavior: `ACCEPT`; provisional failure code: `E_PROPOSAL_INVALID`.
+Preconditions: leader-selection and proposal-encoding rules frozen; signature fixture independently verified.
+Status: **BLOCKED** pending protocol version, leader rule, encoding and fixture hashes.
 
 ### POS-V-002 — Valid vote scope
-Input: `scenario = {"vote":"FIXTURE:valid_vote_A","vote_type":"PREVOTE","signer":"FIXTURE:validator_A","signature":"FIXTURE:valid_vote_signature_A"}`; vote binds chain/version/epoch/height/round/block/set hash.
-Expected: `ACCEPT`; provisional failure code: `E_VOTE_SCOPE_INVALID`.
+Input scenario: signed vote with chain/version/epoch/height/round/block/validator-set scope.
+Expected protocol behavior: `ACCEPT`; provisional failure code: `E_VOTE_SCOPE_INVALID`.
 Status: **BLOCKED** pending vote schema, signature domain and validator-snapshot freeze.
 
 ### POS-V-003 — Quorum finalizes
-Input: `scenario = {"votes":"FIXTURE:quorum_exactly_at_approved_threshold","target_block":"FIXTURE:block_A","validator_set":"FIXTURE:validator_set_0"}`.
-Expected: `FINALIZE`; provisional failure code: `E_QUORUM_INSUFFICIENT`.
-Status: **BLOCKED** until owner chooses the threshold (including >2/3 versus >=2/3), integer width, eligible voting stake, rounding and duplicate handling. The fixture must be generated only after that decision.
+Input scenario: vote set exactly at the subsequently approved threshold.
+Expected protocol behavior: `FINALIZE`; provisional failure code: `E_QUORUM_INSUFFICIENT`.
+Status: **BLOCKED** until the owner decides >2/3 versus >=2/3, eligible stake, integer width, rounding and duplicate handling. Fixture generation must follow that decision.
 
 ### POS-V-004 — Deterministic fork choice
-Input: `scenario = {"valid_candidates":["FIXTURE:block_A","FIXTURE:block_B"],"delivery_order":"FIXTURE:order_AB","oracle_replay_order":"FIXTURE:order_BA"}`.
-Expected: both independent oracle executions return identical selected block and state hash; decision `ACCEPT`; provisional mismatch code: `E_FORK_CHOICE_NONDETERMINISTIC`.
+Input scenario: same valid candidate set delivered in orders A→B and B→A.
+Expected protocol behavior: both independent executions return identical selected block and state hash; provisional mismatch code: `E_FORK_CHOICE_NONDETERMINISTIC`.
 Status: **BLOCKED** pending fork ranking, tie-break, serialization and independent oracle.
 
 ### POS-V-005 — Validator snapshot transition
-Input: `scenario = {"state_before":"FIXTURE:state_epoch_0","stake_changes":"FIXTURE:stake_delta_epoch_1","activation_boundary":"FIXTURE:approved_epoch_boundary"}`.
-Expected: exact approved validator-set hash and eligibility result; decision `ACCEPT`; provisional mismatch code: `E_VALIDATOR_SNAPSHOT_MISMATCH`.
+Input scenario: state before epoch boundary, stake changes and approved activation boundary.
+Expected protocol behavior: exact approved validator-set hash and eligibility; provisional mismatch code: `E_VALIDATOR_SNAPSHOT_MISMATCH`.
 Status: **BLOCKED** pending epoch boundary, unbonding/slashing interaction, activation delay and integer rules.
 
 ### POS-V-006 — Valid round change
-Input: `scenario = {"round_change":"FIXTURE:valid_round_change_A","highest_qc":"FIXTURE:valid_qc_A","signers":"FIXTURE:round_change_quorum_signers"}`.
-Expected: deterministic next-round state; decision `ACCEPT`; provisional failure code: `E_ROUND_CHANGE_INVALID`.
+Input scenario: authenticated round-change message, highest valid QC and signer set.
+Expected protocol behavior: deterministic next-round state; provisional failure code: `E_ROUND_CHANGE_INVALID`.
 Status: **BLOCKED** pending round-change state machine, timeout semantics and QC/vote encoding.
 
 ### POS-V-007 — Recovery without finality regression
-Input: `scenario = {"pre_partition_finality":"FIXTURE:finalized_block_A","partition_messages":"FIXTURE:partition_messages_valid","rejoin_messages":"FIXTURE:rejoin_messages_valid","certificate":"FIXTURE:valid_finality_certificate_A"}`.
-Expected: recovery reaches the deterministic valid state; finalized block A remains finalized; decision `ACCEPT`; provisional failure code: `E_FINALITY_REGRESSION`.
-Status: **BLOCKED** pending finality certificate, recovery protocol and network/liveness assumptions.
+Input scenario: pre-partition finalized block, partition/rejoin messages and valid certificate.
+Expected protocol behavior: deterministic recovery while preserving prior finality; provisional failure code: `E_FINALITY_REGRESSION`.
+Status: **BLOCKED** pending certificate, recovery protocol and network/liveness assumptions.
 
 ## Negative vectors
 
 ### POS-N-001 — Wrong domain / replay
-Input: `scenario = {"message":"FIXTURE:valid_vote_A","mutation":{"field":"epoch","value":"FIXTURE:previous_epoch"}}`.
-Expected: `REJECT`; provisional code: `E_DOMAIN_MISMATCH`.
+Input scenario: valid vote mutated to a previous epoch.
+Expected protocol behavior: `REJECT`; provisional code: `E_DOMAIN_MISMATCH`.
 Status: **BLOCKED** pending canonical signed fields and replay-window rules.
 
 ### POS-N-002 — Equivocation
-Input: `scenario = {"vote_A":"FIXTURE:valid_vote_block_A","vote_B":"FIXTURE:valid_vote_block_B","same_signer":"FIXTURE:validator_A","same_scope":true,"blocks_conflict":true}`.
-Expected: both signatures individually verify; second incompatible vote is rejected and evidence emitted; no second finality; decision `REJECT`; provisional code: `E_EQUIVOCATION`.
-Status: **BLOCKED** pending exact conflict scope, evidence encoding, retention and slashing policy.
+Input scenario: two individually valid incompatible votes from one signer in the same approved scope.
+Expected protocol behavior: reject incompatible second vote, emit evidence, no second finality; provisional code: `E_EQUIVOCATION`.
+Status: **BLOCKED** pending conflict scope, evidence encoding, retention and slashing policy.
 
 ### POS-N-003 — Quorum below threshold
-Input: `scenario = {"votes":"FIXTURE:quorum_one_unit_below_approved_threshold","target_block":"FIXTURE:block_A"}`.
-Expected: `NOT_FINALIZED`; provisional code: `E_QUORUM_INSUFFICIENT`.
-Status: **BLOCKED** pending quorum threshold and smallest stake unit definition.
+Input scenario: vote set one smallest stake unit below the approved threshold.
+Expected protocol behavior: `NOT_FINALIZED`; provisional code: `E_QUORUM_INSUFFICIENT`.
+Status: **BLOCKED** pending quorum threshold and smallest stake unit.
 
 ### POS-N-004 — Duplicate signer / noncanonical vote set
-Input: `scenario = {"votes":["FIXTURE:vote_validator_A","FIXTURE:vote_validator_A_duplicate"],"encoding":"FIXTURE:noncanonical_vote_order"}`.
-Expected: `REJECT`; provisional code: `E_DUPLICATE_OR_NONCANONICAL_VOTE`.
+Input scenario: duplicate validator vote or noncanonical vote-set ordering.
+Expected protocol behavior: `REJECT`; provisional code: `E_DUPLICATE_OR_NONCANONICAL_VOTE`.
 Status: **BLOCKED** pending canonical sort key, duplicate policy and vote-set encoding.
 
 ### POS-N-005 — Invalid parent / noncanonical bytes
-Input: `scenario = {"proposal":"FIXTURE:proposal_A","parent":"FIXTURE:unknown_parent","encoding":"FIXTURE:noncanonical_proposal_bytes"}`.
-Expected: `REJECT`; provisional code: `E_PARENT_OR_ENCODING_INVALID`.
-Status: **BLOCKED** pending block serialization, parent-validity and validation-order rules.
+Input scenario: unknown parent and/or noncanonical proposal encoding.
+Expected protocol behavior: `REJECT`; provisional code: `E_PARENT_OR_ENCODING_INVALID`.
+Status: **BLOCKED** pending serialization, parent-validity and validation-order rules.
 
 ### POS-N-006 — Conflicting finality certificates
-Input: `scenario = {"certificate_A":"FIXTURE:valid_certificate_block_A","certificate_B":"FIXTURE:valid_certificate_conflicting_block_B","same_height":true,"same_domain":true}`.
-Expected: `SECURITY_STOP`; provisional code: `E_CONFLICTING_FINALITY_CERTIFICATES`; no state rollback or silent overwrite; emit incident evidence.
-Status: **BLOCKED** pending finality certificate semantics and mandated node/operator response.
+Input scenario: two conflicting certificates at the same height and domain.
+Expected protocol behavior: security stop, no rollback or silent overwrite, emit incident evidence; provisional code: `E_CONFLICTING_FINALITY_CERTIFICATES`.
+Status: **BLOCKED** pending certificate semantics and operator response.
 
 ### POS-N-007 — Stake arithmetic overflow
-Input: `scenario = {"weights":["FIXTURE:weight_max","FIXTURE:weight_one"],"operation":"SUM_EFFECTIVE_VOTING_STAKE"}`.
-Expected: `REJECT`; provisional code: `E_STAKE_ARITHMETIC_OVERFLOW`; wraparound forbidden.
-Status: **BLOCKED** pending exact integer width and maximum valid stake.
+Input scenario: maximum allowed weight plus one unit.
+Expected protocol behavior: `REJECT`; provisional code: `E_STAKE_ARITHMETIC_OVERFLOW`; wraparound forbidden.
+Status: **BLOCKED** pending integer width and maximum valid stake.
 
 ### POS-N-008 — Invalid signature / unauthorized leader
-Input: `scenario = {"proposal":"FIXTURE:proposal_A","signature":"FIXTURE:invalid_signature_A","proposer":"FIXTURE:not_eligible_validator"}`.
-Expected: `REJECT`; provisional code: `E_SIGNATURE_OR_LEADER_INVALID`.
+Input scenario: invalid signature and/or ineligible proposer.
+Expected protocol behavior: `REJECT`; provisional code: `E_SIGNATURE_OR_LEADER_INVALID`.
 Status: **BLOCKED** pending signature scheme, leader eligibility and validation order.
 
 ### POS-N-009 — Partition without quorum
-Input: `scenario = {"partition_A":"FIXTURE:validators_A_below_quorum","partition_B":"FIXTURE:validators_B_below_quorum","cross_partition_messages":false}`.
-Expected: neither partition finalizes; after rejoin, only approved deterministic recovery may proceed; provisional code for attempted finalization: `E_QUORUM_INSUFFICIENT`.
+Input scenario: each isolated partition has less than the approved quorum and no cross-partition messages.
+Expected protocol behavior: neither partition finalizes; recovery only follows approved deterministic rules; provisional code: `E_QUORUM_INSUFFICIENT`.
 Status: **BLOCKED** pending quorum and recovery/liveness rules.
 
-### POS-N-010 — Arrival-order influence
-Input: `scenario = {"candidate_set":"FIXTURE:same_valid_candidate_set","delivery_orders":["FIXTURE:order_AB","FIXTURE:order_BA"]}`.
-Expected: selected block and resulting state hash are identical for both delivery orders; differing outputs fail with `E_FORK_CHOICE_NONDETERMINISTIC`.
+### POS-N-010 — Arrival-order invariance
+Input scenario: identical candidate set replayed in two delivery orders.
+Expected protocol behavior: `ACCEPT` if both executions select the same block/state hash; differing results fail with `E_FORK_CHOICE_NONDETERMINISTIC`.
 Status: **BLOCKED** pending fork-choice rule and independent oracle.
 
 ### POS-N-011 — Mining/PoH proof presented as finality
-Input: `scenario = {"work_proof":"FIXTURE:valid_work_proof_A","poh_proof":"FIXTURE:valid_poh_proof_A","validator_votes":[],"requested_action":"FINALIZE"}`.
-Expected: `REJECT`; provisional code: `E_FINALITY_REQUIRES_VALIDATOR_QUORUM`.
-Status: **BLOCKED** pending separation of work proofs and finality message schema; intended invariant is that work/PoH alone cannot finalize.
+Input scenario: valid work/PoH proofs but no validator votes, with finalization requested.
+Expected protocol behavior: `REJECT`; provisional code: `E_FINALITY_REQUIRES_VALIDATOR_QUORUM`.
+Status: **BLOCKED** pending separation of work proofs and finality schema.
 
 ### POS-N-012 — Finality regression attempt
-Input: `scenario = {"existing_finalized":"FIXTURE:block_A","new_certificate":"FIXTURE:certificate_block_B_same_height","same_domain":true}`.
-Expected: `SECURITY_STOP` or deterministic rejection per approved operator-response policy; never overwrite block A; provisional code: `E_FINALITY_REGRESSION`.
+Input scenario: conflicting certificate after an existing finalized block.
+Expected protocol behavior: approved security-stop/reject response; never overwrite finalized state; provisional code: `E_FINALITY_REGRESSION`.
 Status: **BLOCKED** pending conflict-response semantics and incident-evidence format.
 
 ## Parameter decision register
 
-No defaults are implied. Each row needs an owner decision, exact normative value/formula, versioning rule, independent review, and boundary vectors.
+No defaults are implied. Every row requires an accountable owner decision, exact normative value/formula, versioning rule, independent review and boundary vectors.
 
 | ID | Open decision | Current status |
 |---|---|---|
@@ -157,7 +164,7 @@ No defaults are implied. Each row needs an owner decision, exact normative value
 | PARAM-10 | Fork-choice precedence, QC/round/height ordering, deterministic tie-break | BLOCKED |
 | PARAM-11 | Partition assumptions, liveness conditions, rejoin/state-sync and operator incident response | BLOCKED |
 
-## Evidence manifest required for every run
+## Evidence manifest required for every protocol run
 
 ```json
 {
@@ -181,4 +188,4 @@ No defaults are implied. Each row needs an owner decision, exact normative value
 }
 ```
 
-A successful documentation/build workflow does not satisfy any protocol-vector, negative-test, multi-node, partition/recovery, cryptographic-review or production-readiness gate.
+A successful contract validator, documentation build or generic CI workflow does not satisfy protocol-vector, negative-test, multi-node, partition/recovery, cryptographic-review or production-readiness gates.
