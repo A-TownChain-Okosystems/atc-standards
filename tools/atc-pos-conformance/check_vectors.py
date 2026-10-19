@@ -8,9 +8,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 FIXTURE = ROOT / "conformance/proof-of-system/fixtures/vectors.json"
-EXPECTED_IDS = [f"POS-V-{i:03d}" for i in range(1, 8)] + [
-    f"POS-N-{i:03d}" for i in range(1, 13)
-]
+EXPECTED_IDS = [f"POS-V-{i:03d}" for i in range(1, 8)] + [f"POS-N-{i:03d}" for i in range(1, 13)]
 ALLOWED_DECISIONS = {
     "ACCEPT",
     "REJECT",
@@ -60,10 +58,7 @@ def main():
             fail(f"{cid}: no parameter blockers listed")
 
         inp = case.get("input", {})
-        if (
-            inp.get("contract_id") != data.get("contract_id")
-            or inp.get("chain_id") != 658467
-        ):
+        if inp.get("contract_id") != data.get("contract_id") or inp.get("chain_id") != 658467:
             fail(f"{cid}: input envelope mismatch")
 
         exp = case.get("expected", {})
@@ -88,10 +83,7 @@ def main():
             print(f"- {item}")
         return 1
 
-    print(
-        "PASS: 19 contract records, unique IDs, contract invariants "
-        "and BLOCKED guard verified."
-    )
+    print("PASS: 19 contract records, unique IDs, contract invariants and BLOCKED guard verified.")
     print(
         "NOT RUN: consensus behavior, cryptographic verification, finality, "
         "fork choice, multi-node or recovery."
