@@ -58,7 +58,7 @@ Dieser Standard adressiert **Node Standard** im Katalog-Slot ATC-STD-181 der Fam
 (FAM-11); die Zuordnung folgt registry/framework.yaml (S-21) und darf nur via SCR
 geändert werden.
 
-Blockchain-Kernschicht: a-townchain (L3, Chain-ID 658467), Kernel-Kopplung K14 (P2P-Consensus Foundation) und K16 (DAG+PoH+Validator+Voting+Finality).
+Blockchain-Kernschicht: a-townchain (L2, Chain-ID 658467). Das Consensus-Design bleibt SPEC-DRAFT; konkrete PoH/PoS/PoW/PoI-Kombinationen sind nicht eingefroren und dürfen nicht als finale Implementierung dargestellt werden.
 
 **Katalog-Referenz:** keine zusätzliche Katalog-Notiz; Verortung ausschließlich über Familie und Slot.
 
@@ -67,7 +67,7 @@ Blockchain-Kernschicht: a-townchain (L3, Chain-ID 658467), Kernel-Kopplung K14 (
 1. **KR-1:** Blockchain-Datenformate MÜSSEN deterministisch serialisierbar sein (kanonische Kodierung).
 2. **KR-2:** Chain-ID (658467) MUSS in allen werttragenden Nachrichten verankert sein (Replay-Schutz).
 3. **KR-3:** Konsens-Entscheidungen MÜSSEN nachvollziehbar (DAG-Referenzen, Voting-Nachweise) protokolliert werden.
-4. **KR-4:** Mainnet-Wert-Transport erfordert Ed25519-Backend (REQ-PTS-006, Crypto-HAL).
+4. **KR-4:** Transaction-/Account-Signaturen folgen dem kanonischen TX-V2-Vertrag: secp256k1 ECDSA mit RFC6979, SHA-256, low-S und komprimiertem Public Key. Ed25519 bleibt der separate Identity-/P2P-/DID-Sicherheitsbereich.
 5. **KR-5:** Protokoll-Status MUSS der Protocol-Registry entsprechen (draft→active nur mit CONF-BRONZE).
 6. **KR-6:** Konsens-Kernregeln DÜRFEN nur via MAJOR-Kette (COMPAT-001-Gate) geändert werden.
 
