@@ -1,0 +1,34 @@
+{
+  "vector_set": "MEMORY-001-CONFLICT/1.0.0",
+  "ordering": ["updated_at", "record_hash", "record_id"],
+  "cases": [
+    {
+      "id": "MEM-CONFLICT-001",
+      "purpose": "newer timestamp wins",
+      "stored": {"updated_at": "2026-09-27T10:00:00Z", "record_hash": "sha256:1111111111111111111111111111111111111111111111111111111111111111", "record_id": "mem_1234567890abcdef"},
+      "incoming": {"updated_at": "2026-09-27T10:01:00Z", "record_hash": "sha256:2222222222222222222222222222222222222222222222222222222222222222", "record_id": "mem_1234567890abcdef"},
+      "expected": "ACCEPT_INCOMING"
+    },
+    {
+      "id": "MEM-CONFLICT-002",
+      "purpose": "equal timestamp uses record hash tie-break",
+      "stored": {"updated_at": "2026-09-27T10:00:00Z", "record_hash": "sha256:1111111111111111111111111111111111111111111111111111111111111111", "record_id": "mem_1234567890abcdef"},
+      "incoming": {"updated_at": "2026-09-27T10:00:00Z", "record_hash": "sha256:2222222222222222222222222222222222222222222222222222222222222222", "record_id": "mem_1234567890abcdef"},
+      "expected": "ACCEPT_INCOMING"
+    },
+    {
+      "id": "MEM-CONFLICT-003",
+      "purpose": "older tuple is rejected",
+      "stored": {"updated_at": "2026-09-27T10:02:00Z", "record_hash": "sha256:3333333333333333333333333333333333333333333333333333333333333333", "record_id": "mem_1234567890abcdef"},
+      "incoming": {"updated_at": "2026-09-27T10:01:00Z", "record_hash": "sha256:4444444444444444444444444444444444444444444444444444444444444444", "record_id": "mem_1234567890abcdef"},
+      "expected": "REJECT_STALE"
+    },
+    {
+      "id": "MEM-CONFLICT-004",
+      "purpose": "equal tuple requires byte identity",
+      "stored": {"updated_at": "2026-09-27T10:00:00Z", "record_hash": "sha256:1111111111111111111111111111111111111111111111111111111111111111", "record_id": "mem_1234567890abcdef"},
+      "incoming": {"updated_at": "2026-09-27T10:00:00Z", "record_hash": "sha256:1111111111111111111111111111111111111111111111111111111111111111", "record_id": "mem_1234567890abcdef"},
+      "expected": "ACCEPT_IF_BYTE_IDENTICAL"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://atc.ecosystem/schemas/memory-001/federation-protocol.schema.json",
+  "title": "MEMORY-001 Federation Protocol Session",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["protocol", "version", "session_state", "replay_window_seconds", "supported_versions", "capabilities", "message_order", "close"],
+  "properties": {
+    "protocol": {"const": "MEMORY-001"},
+    "version": {"const": "1.0.0"},
+    "session_state": {"enum": ["NEW", "HELLO", "NEGOTIATING", "AUTHENTICATING", "ESTABLISHED", "REJECTED", "CLOSING", "CLOSED"]},
+    "replay_window_seconds": {"type": "integer", "minimum": 1, "maximum": 86400},
+    "supported_versions": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"}},
+    "selected_version": {"type": ["string", "null"], "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "capabilities": {"type": "array", "uniqueItems": true, "items": {"type": "string", "enum": ["memory.read", "memory.write", "memory.replicate", "memory.delete", "canonical-v1"]}},
+    "message_order": {"type": "array", "uniqueItems": true, "items": {"enum": ["HELLO", "NEGOTIATE", "AUTHENTICATE", "SESSION_ESTABLISHED", "RECORD_PUT", "RECORD_GET", "RECORD_RESPONSE", "RECORD_DELETE", "REJECT", "CLOSE"]}},
+    "close": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["allowed", "reasons"],
+      "properties": {
+        "allowed": {"type": "boolean"},
+        "reasons": {"type": "array", "uniqueItems": true, "items": {"type": "string", "enum": ["NORMAL", "PROTOCOL_ERROR", "AUTH_FAILED", "AUTHZ_FAILED", "REPLAY_DETECTED", "VERSION_UNSUPPORTED", "CANONICALIZATION_FAILED", "TIMEOUT"]}}
+      }
+    }
+  }
+}

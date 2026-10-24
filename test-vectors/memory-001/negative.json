@@ -1,0 +1,12 @@
+{
+  "vector_set": "MEMORY-001-NEGATIVE/1.0.0",
+  "cases": [
+    {"id": "MEM-NEG-AUTH-001", "class": "authorization", "mutation": "capability memory.write changed to memory.delete", "expected_error": "MEMORY-AUTHZ-001"},
+    {"id": "MEM-NEG-AUTH-002", "class": "authorization", "mutation": "expires_at precedes verification time", "expected_error": "MEMORY-AUTHZ-001"},
+    {"id": "MEM-NEG-REPLAY-001", "class": "replay", "mutation": "reuse accepted message_id nonce sender within replay window", "expected_error": "MEMORY-NONCE-001"},
+    {"id": "MEM-NEG-SIG-001", "class": "signature", "mutation": "alter one canonical byte without recomputing signature", "expected_error": "MEMORY-AUTH-001"},
+    {"id": "MEM-NEG-VERSION-001", "class": "version", "mutation": "protocol version 9.9.9", "expected_error": "MEMORY-VERSION-001"},
+    {"id": "MEM-NEG-CANON-001", "class": "canonicalization", "mutation": "verify hash against non-canonical bytes", "expected_error": "MEMORY-CANON-001"},
+    {"id": "MEM-NEG-CONFLICT-001", "class": "replication", "mutation": "incoming ordering tuple older than stored tuple", "expected_error": "MEMORY-CONFLICT-001"}
+  ]
+}
