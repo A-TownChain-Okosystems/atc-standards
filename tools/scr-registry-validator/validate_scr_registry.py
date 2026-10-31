@@ -7,6 +7,7 @@ import argparse
 import hashlib
 import json
 import re
+import subprocess
 from pathlib import Path
 
 import yaml
@@ -54,6 +55,7 @@ def validate_source(
     root: Path,
     id_match: re.Match[str],
     errors: list[str],
+    registry_commit: str,
 ) -> None:
     """Validate one primary or related source binding."""
     if not isinstance(source, dict):
@@ -62,8 +64,8 @@ def validate_source(
 
     source_kind = source.get("kind")
     allowed_source_fields = {
-        "FILE": {"kind", "path", "blob_sha", "attestation"},
-        "PULL_REQUEST": {"kind", "pr", "branch", "url", "attestation"},
+        "FILE": {"kind", "path", "commit", "blob_sha", "identity_sha256", "attestation"},
+        "PULL_REQUEST": {"kind", "pr", "branch", "url", "commit", "identity_sha256", "attestation"},
         "HISTORICAL_REFERENCE": {
             "kind",
             "path",
@@ -72,6 +74,7 @@ def validate_source(
             "repository",
             "commit",
             "blob_sha",
+            "identity_sha256",
             "attestation",
         },
     }
@@ -81,6 +84,47 @@ def validate_source(
             f"{entry_id}: {label} fields invalid for {source_kind}: "
             f"{', '.join(sorted(unexpected_source_fields))}"
         )
+
+    if source_kind == "FILE" and source.get("commit") and source["commit"] != registry_commit:
+        errors.append(
+            f"{entry_id}: {label} file commit does not match registry source_commit"
+        )
+
+    attestation = source.get("attestation", {})
+    if isinstance(attestation, dict) and attestation.get("signature_status") == "VERIFIED":
+        commit_sha = source.get("commit")
+        signer_identity = attestation.get("signer_identity", "")
+        if not commit_sha:
+            errors.append(f"{entry_id}: {label} VERIFIED signature requires a commit SHA")
+        elif signer_identity:
+            verify_result = subprocess.run(
+                ["git", "verify-commit", commit_sha],
+                cwd=root,
+                capture_output=True,
+                text=True,
+                check=False,
+            )
+            if verify_result.returncode != 0:
+                errors.append(
+                    f"{entry_id}: {label} commit signature verification failed for {commit_sha}"
+                )
+            else:
+                fingerprint_result = subprocess.run(
+                    ["git", "show", "-s", "--format=%GF", commit_sha],
+                    cwd=root,
+                    capture_output=True,
+                    text=True,
+                    check=False,
+                )
+                fingerprint = fingerprint_result.stdout.strip()
+                if fingerprint_result.returncode != 0 or not fingerprint:
+                    errors.append(
+                        f"{entry_id}: {label} verified commit has no extractable signer fingerprint"
+                    )
+                elif fingerprint.casefold() != signer_identity.casefold():
+                    errors.append(
+                        f"{entry_id}: {label} signer fingerprint does not match signer_identity"
+                    )
 
     if source_kind == "PULL_REQUEST":
         pr_number = source.get("pr")
@@ -185,26 +229,42 @@ def validate_source(
                 )
 
 
-def derive_source_identity(source: dict, root: Path, repository: str) -> str:
-    """Derive a stable SHA-256 identity from immutable source coordinates."""
+def derive_source_identity(
+    source: dict, root: Path, repository: str, registry_commit: str = ""
+) -> str:
+    """Derive a stable SHA-256 identity without reading outside the repository."""
     identity = {"repository": repository, "kind": str(source.get("kind", ""))}
-    if source.get("commit"):
-        identity["repository"] = str(source.get("repository", repository))
-        identity["commit"] = str(source["commit"])
-        if source.get("path"):
-            identity["path"] = str(source["path"])
-    elif source.get("pr"):
-        identity["repository"] = str(source.get("repository", repository))
-        identity["pr"] = str(source["pr"])
-    elif source.get("path"):
-        path = Path(str(source["path"]))
-        target = root / path
-        content = target.read_bytes() if target.is_file() else b""
-        identity["path"] = path.as_posix()
-        identity["blob_sha"] = hashlib.sha1(
-            f"blob {len(content)}\0".encode("ascii") + content
-        ).hexdigest()
-    elif source.get("url"):
+    source_repository = source.get("repository", repository)
+    if source_repository:
+        identity["repository"] = str(source_repository)
+    commit = source.get("commit") or (
+        registry_commit if source.get("kind") == "FILE" else ""
+    )
+    if commit:
+        identity["commit"] = str(commit)
+    if source.get("pr"):
+        identity["pr"] = int(source["pr"])
+    if source.get("path"):
+        relative = Path(str(source["path"]))
+        identity["path"] = relative.as_posix()
+        if not relative.is_absolute() and ".." not in relative.parts:
+            target = root / relative
+            try:
+                resolved = target.resolve()
+                resolved.relative_to(root.resolve())
+                if resolved.is_file():
+                    content = resolved.read_bytes()
+                    actual_blob = hashlib.sha1(
+                        f"blob {len(content)}\\0".encode("ascii") + content
+                    ).hexdigest()
+                    identity["blob_sha"] = source.get("blob_sha") or actual_blob
+            except (OSError, RuntimeError, ValueError):
+                pass
+        if source.get("blob_sha"):
+            identity["blob_sha"] = source["blob_sha"]
+    elif source.get("blob_sha"):
+        identity["blob_sha"] = source["blob_sha"]
+    if source.get("url"):
         identity["url"] = str(source["url"])
     canonical = json.dumps(identity, sort_keys=True, separators=(",", ":"))
     return hashlib.sha256(canonical.encode("utf-8")).hexdigest()
@@ -222,9 +282,9 @@ def find_status_contradictions(root: Path) -> list[str]:
             content = path.read_text(encoding="utf-8")
         except (OSError, UnicodeError):
             continue
-        if not content.startswith("---\\n"):
+        if not content.startswith("---\n"):
             continue
-        end = content.find("\\n---", 4)
+        end = content.find("\n---", 4)
         if end < 0:
             continue
         try:
@@ -298,12 +358,23 @@ def validate(
                     )
         seen_relationship_sources: set[tuple[str, str]] = set()
         repository = str(data.get("repository", ""))
+        registry_commit = str(data.get("source_commit", ""))
         for label, source in source_bindings:
-            validate_source(entry["id"], source, label, root, match, errors)
+            validate_source(
+                entry["id"], source, label, root, match, errors, registry_commit
+            )
             if isinstance(source, dict) and label.startswith("related_sources["):
                 index = int(label.split("[", 1)[1].split("]", 1)[0])
                 relation = related_sources[index].get("relationship", "")
-                source_id = derive_source_identity(source, root, repository)
+                source_id = derive_source_identity(
+                    source, root, repository, registry_commit
+                )
+                declared_identity = source.get("identity_sha256")
+                if declared_identity and declared_identity != source_id:
+                    errors.append(
+                        f"{entry['id']}: related source identity_sha256 does not match "
+                        "its immutable source coordinates"
+                    )
                 key = (str(relation), source_id)
                 if key in seen_relationship_sources:
                     errors.append(
@@ -351,6 +422,28 @@ def validate(
         if isinstance(entry, dict)
     ):
         errors.append("FREE is forbidden: missing/unresolved evidence must remain blocked")
+    for entry in entries:
+        if not isinstance(entry, dict):
+            continue
+        sources = [entry.get("source", {})]
+        sources.extend(
+            related.get("source", {})
+            for related in entry.get("related_sources", [])
+            if isinstance(related, dict)
+        )
+        for source in sources:
+            if isinstance(source, dict) and source.get("identity_sha256"):
+                expected = derive_source_identity(
+                    source,
+                    root,
+                    str(data.get("repository", "")),
+                    str(data.get("source_commit", "")),
+                )
+                if source["identity_sha256"] != expected:
+                    errors.append(
+                        f"{entry.get('id', 'UNKNOWN')}: source identity_sha256 does not "
+                        "match immutable source coordinates"
+                    )
     return errors
 
 
