@@ -15,6 +15,36 @@ ROOT = Path(__file__).resolve().parents[2]
 ID_RE = re.compile(r"^SCR-(\d{4})$")
 FILE_RE = re.compile(r"^SCR-(\d{4})(?:[-.]|$)")
 
+class UniqueKeySafeLoader(yaml.SafeLoader):
+    """Safe YAML loader that rejects duplicate mapping keys."""
+
+    def construct_mapping(self, node, deep=False):
+        if not isinstance(node, yaml.MappingNode):
+            return super().construct_mapping(node, deep=deep)
+        self.flatten_mapping(node)
+        mapping = {}
+        for key_node, value_node in node.value:
+            key = self.construct_object(key_node, deep=deep)
+            try:
+                duplicate = key in mapping
+            except TypeError as exc:
+                raise yaml.constructor.ConstructorError(
+                    "while constructing a mapping",
+                    node.start_mark,
+                    "found an unhashable mapping key",
+                    key_node.start_mark,
+                ) from exc
+            if duplicate:
+                raise yaml.constructor.ConstructorError(
+                    "while constructing a mapping",
+                    node.start_mark,
+                    f"found duplicate key {key!r}",
+                    key_node.start_mark,
+                )
+            mapping[key] = self.construct_object(value_node, deep=deep)
+        return mapping
+
+
 
 def validate(
     root: Path = ROOT, registry_path: Path | None = None, schema_path: Path | None = None
@@ -22,7 +52,9 @@ def validate(
     registry_path = registry_path or root / "registry" / "scr-registry.yaml"
     schema_path = schema_path or root / "schemas" / "scr-registry.schema.json"
     try:
-        data = yaml.safe_load(registry_path.read_text(encoding="utf-8"))
+        data = yaml.load(
+            registry_path.read_text(encoding="utf-8"), Loader=UniqueKeySafeLoader
+        )
         schema = json.loads(schema_path.read_text(encoding="utf-8"))
     except (OSError, ValueError, yaml.YAMLError) as exc:
         return [f"cannot load registry/schema: {exc}"]
