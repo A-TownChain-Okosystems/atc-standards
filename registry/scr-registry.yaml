@@ -1177,7 +1177,9 @@ entries:
     source:
       kind: HISTORICAL_REFERENCE
       path: "docs/SPEC-ATC-GATE-METHODOLOGY-001.md"
-    notes: "Gate Methodology Draft 0.1.0 reference; document remains draft. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+      pr: 92
+      url: "https://github.com/A-TownChain-Okosystems/atc-standards/pull/92"
+    notes: "Gate Methodology Draft 0.1.0 reference; PR #92 merged, but the document remains draft. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
   - id: SCR-0135
     allocation_status: UNRESOLVED
     metadata_status: UNRECONCILED
@@ -1186,7 +1188,9 @@ entries:
     source:
       kind: HISTORICAL_REFERENCE
       path: "docs/OEP-0007-MERGE-GATE-GOVERNANCE.md"
-    notes: "OEP-0007 Merge/Gate Governance Draft reference. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+      pr: 93
+      url: "https://github.com/A-TownChain-Okosystems/atc-standards/pull/93"
+    notes: "OEP-0007 Merge/Gate Governance Draft reference; PR #93 merged, but the document remains draft. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
   - id: SCR-0136
     allocation_status: UNRESOLVED
     metadata_status: UNRECONCILED
@@ -1195,7 +1199,9 @@ entries:
     source:
       kind: HISTORICAL_REFERENCE
       path: "docs/ATC-SYSTEM-ROADMAP-001.md"
-    notes: "System Milestone Model Draft reference. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+      pr: 94
+      url: "https://github.com/A-TownChain-Okosystems/atc-standards/pull/94"
+    notes: "System Milestone Model Draft reference; PR #94 merged, but the document remains draft. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
   - id: SCR-0137
     allocation_status: UNRESOLVED
     metadata_status: UNRECONCILED
@@ -1204,7 +1210,9 @@ entries:
     source:
       kind: HISTORICAL_REFERENCE
       path: "docs/ATC-SYSTEM-ROADMAP-001.md"
-    notes: "Major reconciliation of the milestone model is referenced in the roadmap; standalone SCR file absent. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+      pr: 95
+      url: "https://github.com/A-TownChain-Okosystems/atc-standards/pull/95"
+    notes: "Major reconciliation of the milestone model; PR #95 merged. The roadmap remains a draft and standalone SCR file is absent. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
   - id: SCR-0138
     allocation_status: UNRESOLVED
     metadata_status: UNRECONCILED
