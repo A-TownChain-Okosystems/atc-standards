@@ -168,5 +168,26 @@ class ScrRegistryTests(unittest.TestCase):
             self.assertEqual(errors, ["registry root must be an object"])
 
 
+    def test_external_reference_url_must_bind_commit(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            entry = {
+                "id": "SCR-0001",
+                "allocation_status": "UNRESOLVED",
+                "metadata_status": "UNRECONCILED",
+                "lifecycle_status": "UNKNOWN",
+                "decision": "UNKNOWN",
+                "source": {
+                    "kind": "HISTORICAL_REFERENCE",
+                    "repository": "A-TownChain-Okosystems/example",
+                    "commit": "a" * 40,
+                    "url": "https://github.com/A-TownChain-Okosystems/example/commit/" + "b" * 40,
+                },
+                "notes": "fixture",
+            }
+            errors = self._fixture(root, [entry])
+            self.assertIn("external source URL does not bind", "\n".join(errors))
+
+
 if __name__ == "__main__":
     unittest.main()
