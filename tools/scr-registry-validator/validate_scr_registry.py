@@ -27,18 +27,28 @@ def validate(
     except (OSError, ValueError, yaml.YAMLError) as exc:
         return [f"cannot load registry/schema: {exc}"]
 
+    if not isinstance(data, dict):
+        return ["registry root must be an object"]
+
     errors = [
         f"schema: {error.message} at {list(error.absolute_path)}"
         for error in Draft202012Validator(schema).iter_errors(data)
     ]
-    entries = data.get("entries", []) if isinstance(data, dict) else []
-    ids = [entry.get("id") for entry in entries if isinstance(entry, dict)]
+    raw_entries = data.get("entries", [])
+    entries = raw_entries if isinstance(raw_entries, list) else []
+    ids = [
+        str(entry["id"])
+        for entry in entries
+        if isinstance(entry, dict) and entry.get("id") is not None
+    ]
     duplicates = sorted({item for item in ids if ids.count(item) > 1})
     if duplicates:
         errors.append("duplicate SCR IDs: " + ", ".join(duplicates))
 
     covered: set[int] = set()
     for entry in entries:
+        if not isinstance(entry, dict):
+            continue
         match = ID_RE.fullmatch(str(entry.get("id", "")))
         if not match:
             continue
@@ -48,12 +58,27 @@ def validate(
         covered.add(number)
 
         source = entry.get("source", {})
-        if source.get("kind") == "FILE":
+        if not isinstance(source, dict):
+            continue
+        source_kind = source.get("kind")
+        if source_kind in {"FILE", "HISTORICAL_REFERENCE"}:
             relative_path = source.get("path", "")
-            target = root / relative_path
-            if not relative_path or not target.is_file():
-                errors.append(f"{entry['id']}: referenced SCR file missing: {relative_path}")
-            elif not FILE_RE.match(Path(relative_path).name):
+            if not isinstance(relative_path, str) or not relative_path:
+                errors.append(f"{entry['id']}: {source_kind} source requires a path")
+                continue
+            candidate = Path(relative_path)
+            if candidate.is_absolute() or ".." in candidate.parts:
+                errors.append(f"{entry['id']}: source path escapes repository root")
+                continue
+            target = root / candidate
+            try:
+                target.resolve().relative_to(root.resolve())
+            except ValueError:
+                errors.append(f"{entry['id']}: source path escapes repository root")
+                continue
+            if not target.is_file():
+                errors.append(f"{entry['id']}: referenced source file missing: {relative_path}")
+            elif source_kind == "FILE" and not FILE_RE.match(candidate.name):
                 errors.append(f"{entry['id']}: source path does not encode SCR ID: {relative_path}")
 
         if (
@@ -65,7 +90,11 @@ def validate(
                     f"{entry['id']}: reconciled metadata cannot contain UNKNOWN lifecycle/decision"
                 )
 
-    for item in data.get("unresolved_ranges", []):
+    raw_ranges = data.get("unresolved_ranges", [])
+    ranges = raw_ranges if isinstance(raw_ranges, list) else []
+    for item in ranges:
+        if not isinstance(item, dict):
+            continue
         start_match = ID_RE.fullmatch(str(item.get("start", "")))
         end_match = ID_RE.fullmatch(str(item.get("end", "")))
         if not start_match or not end_match:
@@ -76,13 +105,15 @@ def validate(
             continue
         for number in range(lower, upper + 1):
             if number in covered:
-                errors.append(f"SCR-{number:04d}: overlaps explicit entry and unresolved range")
+                errors.append(
+                    f"SCR-{number:04d}: overlaps explicit entry and unresolved range"
+                )
             covered.add(number)
 
     observed: dict[int, list[str]] = {}
     folder = root / "change-requests"
     if folder.is_dir():
-        for path in folder.iterdir():
+        for path in folder.rglob("*"):
             if path.is_file():
                 match = FILE_RE.match(path.name)
                 if match:
@@ -92,9 +123,15 @@ def validate(
 
     for number, found in sorted(observed.items()):
         if number not in covered:
-            errors.append(f"unregistered observed SCR-{number:04d}: {', '.join(found)}")
+            errors.append(
+                f"unregistered observed SCR-{number:04d}: {', '.join(found)}"
+            )
 
-    if any(str(entry.get("allocation_status", "")).upper() == "FREE" for entry in entries):
+    if any(
+        str(entry.get("allocation_status", "")).upper() == "FREE"
+        for entry in entries
+        if isinstance(entry, dict)
+    ):
         errors.append("FREE is forbidden: missing/unresolved evidence must remain blocked")
     return errors
 
