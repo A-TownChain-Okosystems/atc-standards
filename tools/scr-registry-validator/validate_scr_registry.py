@@ -169,7 +169,9 @@ def validate_source(
             errors.append(f"{entry_id}: {label} referenced source file missing: {relative_path}")
         elif source.get("blob_sha"):
             content = target.read_bytes()
-            actual_blob_sha = hashlib.sha1(f"blob {len(content)}\\0".encode("ascii") + content).hexdigest()
+            actual_blob_sha = hashlib.sha1(
+                f"blob {len(content)}\\0".encode("ascii") + content
+            ).hexdigest()
             if actual_blob_sha != source["blob_sha"]:
                 errors.append(f"{entry_id}: {label} blob SHA mismatch for {relative_path}")
         if target.is_file() and source_kind == "FILE":
@@ -232,7 +234,7 @@ def find_status_contradictions(root: Path) -> list[str]:
             continue
         if not isinstance(metadata, dict):
             continue
-        body = content[end + 4:].lower()
+        body = content[end + 4 :].lower()
         if (
             str(metadata.get("status", "")).lower() == "approved"
             and metadata.get("normative") is True
