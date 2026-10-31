@@ -85,7 +85,6 @@ class ScrRegistryTests(unittest.TestCase):
             errors = self._fixture(root, [entry], [blocked])
             self.assertTrue(any("overlaps explicit entry" in error for error in errors))
 
-
     def test_missing_referenced_file_fails(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -102,9 +101,7 @@ class ScrRegistryTests(unittest.TestCase):
                 "notes": "fixture",
             }
             errors = self._fixture(root, [entry])
-            self.assertTrue(
-                any("referenced SCR file missing" in error for error in errors)
-            )
+            self.assertTrue(any("referenced SCR file missing" in error for error in errors))
 
     def test_free_identifier_fails_closed(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -119,11 +116,7 @@ class ScrRegistryTests(unittest.TestCase):
                 "notes": "fixture",
             }
             errors = self._fixture(root, [entry])
-            self.assertTrue(
-                any("FREE is forbidden" in error for error in errors)
-            )
-
-
+            self.assertTrue(any("FREE is forbidden" in error for error in errors))
 
 if __name__ == "__main__":
     unittest.main()
