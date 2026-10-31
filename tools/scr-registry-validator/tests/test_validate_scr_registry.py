@@ -571,11 +571,17 @@ class ScrRegistryTests(unittest.TestCase):
             folder.mkdir()
             (folder / "SCR-0001.md").write_text("# SCR-0001\\n", encoding="utf-8")
             entry = {
-                "id": "SCR-0001", "allocation_status": "ASSIGNED",
-                "metadata_status": "RECONCILED", "lifecycle_status": "UNKNOWN",
+                "id": "SCR-0001",
+                "allocation_status": "ASSIGNED",
+                "metadata_status": "RECONCILED",
+                "lifecycle_status": "UNKNOWN",
                 "decision": "UNKNOWN",
-                "source": {"kind": "FILE", "path": "change-requests/SCR-0001.md", "blob_sha": "0" * 40},
-                "notes": "Fixture for immutable Git blob verification."
+                "source": {
+                    "kind": "FILE",
+                    "path": "change-requests/SCR-0001.md",
+                    "blob_sha": "0" * 40,
+                },
+                "notes": "Fixture for immutable Git blob verification.",
             }
             errors = self._fixture(root, [entry])
             self.assertTrue(any("blob SHA mismatch" in error for error in errors), errors)
@@ -587,13 +593,20 @@ class ScrRegistryTests(unittest.TestCase):
             folder.mkdir()
             (folder / "SCR-0001.md").write_text("# SCR-0001", encoding="utf-8")
             entry = {
-                "id": "SCR-0001", "allocation_status": "ASSIGNED",
-                "metadata_status": "RECONCILED", "lifecycle_status": "UNKNOWN",
+                "id": "SCR-0001",
+                "allocation_status": "ASSIGNED",
+                "metadata_status": "RECONCILED",
+                "lifecycle_status": "UNKNOWN",
                 "decision": "UNKNOWN",
-                "source": {"kind": "FILE", "path": "change-requests/SCR-0001.md",
-                    "attestation": {"signature_status": "VERIFIED",
-                        "authority_status": "NOT_ESTABLISHED"}},
-                "notes": "A valid signature is not an authority decision."
+                "source": {
+                    "kind": "FILE",
+                    "path": "change-requests/SCR-0001.md",
+                    "attestation": {
+                        "signature_status": "VERIFIED",
+                        "authority_status": "NOT_ESTABLISHED",
+                    },
+                },
+                "notes": "A valid signature is not an authority decision.",
             }
             self.assertEqual(self._fixture(root, [entry]), [])
 
@@ -604,13 +617,20 @@ class ScrRegistryTests(unittest.TestCase):
             folder.mkdir()
             (folder / "SCR-0001.md").write_text("# SCR-0001", encoding="utf-8")
             entry = {
-                "id": "SCR-0001", "allocation_status": "ASSIGNED",
-                "metadata_status": "RECONCILED", "lifecycle_status": "UNKNOWN",
+                "id": "SCR-0001",
+                "allocation_status": "ASSIGNED",
+                "metadata_status": "RECONCILED",
+                "lifecycle_status": "UNKNOWN",
                 "decision": "UNKNOWN",
-                "source": {"kind": "FILE", "path": "change-requests/SCR-0001.md",
-                    "attestation": {"signature_status": "UNSIGNED",
-                        "authority_status": "ESTABLISHED"}},
-                "notes": "Authority needs its own evidence."
+                "source": {
+                    "kind": "FILE",
+                    "path": "change-requests/SCR-0001.md",
+                    "attestation": {
+                        "signature_status": "UNSIGNED",
+                        "authority_status": "ESTABLISHED",
+                    },
+                },
+                "notes": "Authority needs its own evidence.",
             }
             errors = self._fixture(root, [entry])
             self.assertTrue(any("authority_evidence" in error for error in errors), errors)
