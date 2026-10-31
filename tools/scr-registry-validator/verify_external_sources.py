@@ -44,7 +44,9 @@ def load_manifest(path: Path = MANIFEST) -> dict:
         path = source["path"]
         blob_sha = source["blob_sha"]
         if not isinstance(repository, str) or not REPO_RE.fullmatch(repository):
-            raise VerificationError(f"sources[{index}] repository is outside the allowed organization")
+            raise VerificationError(
+                f"sources[{index}] repository is outside the allowed organization"
+            )
         if not isinstance(commit, str) or not SHA_RE.fullmatch(commit):
             raise VerificationError(f"sources[{index}] commit must be a lowercase 40-hex SHA")
         if not isinstance(blob_sha, str) or not SHA_RE.fullmatch(blob_sha):
@@ -59,7 +61,9 @@ def load_manifest(path: Path = MANIFEST) -> dict:
             raise VerificationError(f"sources[{index}] path is not a safe repository-relative path")
         key = (repository, commit, path)
         if key in seen:
-            raise VerificationError(f"sources[{index}] duplicates an existing repository/commit/path pin")
+            raise VerificationError(
+                f"sources[{index}] duplicates an existing repository/commit/path pin"
+            )
         seen.add(key)
     return data
 
@@ -119,7 +123,9 @@ def verify_manifest(data: dict, runner=subprocess.run) -> dict:
                 raise VerificationError(f"{repository}@{commit}:{path}: invalid blob object")
             object_type = git(repo_dir, ["cat-file", "-t", actual_blob], runner)
             if object_type != "blob":
-                raise VerificationError(f"{repository}@{commit}:{path}: expected blob, got {object_type}")
+                raise VerificationError(
+                    f"{repository}@{commit}:{path}: expected blob, got {object_type}"
+                )
             if actual_blob != expected_blob:
                 raise VerificationError(
                     f"{repository}@{commit}:{path}: blob mismatch "
