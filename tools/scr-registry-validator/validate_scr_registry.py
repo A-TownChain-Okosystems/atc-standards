@@ -61,7 +61,9 @@ def validate(
         if not isinstance(source, dict):
             continue
         source_kind = source.get("kind")
-        if source_kind in {"FILE", "HISTORICAL_REFERENCE"}:
+        if source_kind == "FILE" or (
+            source_kind == "HISTORICAL_REFERENCE" and source.get("path")
+        ):
             relative_path = source.get("path", "")
             if not isinstance(relative_path, str) or not relative_path:
                 errors.append(f"{entry['id']}: {source_kind} source requires a path")
@@ -80,6 +82,17 @@ def validate(
                 errors.append(f"{entry['id']}: referenced source file missing: {relative_path}")
             elif source_kind == "FILE" and not FILE_RE.match(candidate.name):
                 errors.append(f"{entry['id']}: source path does not encode SCR ID: {relative_path}")
+        elif source_kind == "HISTORICAL_REFERENCE":
+            repository = source.get("repository", "")
+            commit = source.get("commit", "")
+            url = source.get("url", "")
+            expected_url = f"https://github.com/{repository}/commit/{commit}"
+            if not re.fullmatch(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+", repository):
+                errors.append(f"{entry['id']}: invalid external source repository")
+            elif not re.fullmatch(r"[0-9a-f]{40}", commit):
+                errors.append(f"{entry['id']}: invalid external source commit SHA")
+            elif url != expected_url:
+                errors.append(f"{entry['id']}: external source URL does not bind repository and commit")
 
         if (
             entry.get("allocation_status") == "ASSIGNED"
