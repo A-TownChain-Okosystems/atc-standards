@@ -324,13 +324,15 @@ def audit_repo(repo, level, registry_path=None):
     # flache Historie <= 2 Commits ist fuer die 20-Commit-Bewertung unzureichend
     # und darf kein MUST-FAIL erzeugen, nur WARN mit Reparaturhinweis.)
     if lvl_ge("R2", level):
+        # Exclude merge commits before applying the 20-commit sample window.
+        # Filtering after `-20` would leave only 19 commits on PR merge refs.
         log = subprocess.run(
-            ["git", "log", "--oneline", "-20"], cwd=repo, capture_output=True, text=True
+            ["git", "log", "--oneline", "--no-merges", "-20"],
+            cwd=repo,
+            capture_output=True,
+            text=True,
         ).stdout.splitlines()
         subs = [ln.split(" ", 1)[-1].strip() for ln in log if ln.strip()]
-        # SCR-0115: Merge-Commits unterliegen nicht dem Conventional-Commits-Format
-        # und werden aus der Stichprobe ausgenommen (Spec: Merge-Commits ausgenommen).
-        subs = [s for s in subs if not s.startswith("Merge ")]
         if len(subs) <= 2:
             a.add(
                 "V-16",
@@ -351,7 +353,7 @@ def audit_repo(repo, level, registry_path=None):
             else:
                 a.add(
                     "V-16",
-                    "WARN" if frac >= 0.5 else "FAIL",
+                    "FAIL",
                     "CI/CD",
                     "Conventional Commits nur %d%% (<80%%)" % (frac * 100),
                 )
