@@ -45,7 +45,6 @@ class UniqueKeySafeLoader(yaml.SafeLoader):
         return mapping
 
 
-
 def validate(
     root: Path = ROOT, registry_path: Path | None = None, schema_path: Path | None = None
 ) -> list[str]:
