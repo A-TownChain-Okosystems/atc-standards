@@ -91,7 +91,8 @@ def validate_source(
         has_pr_binding = "pr" in source
         if has_commit_binding and has_pr_binding:
             errors.append(
-                f"{entry_id}: {label} historical commit and pull-request bindings are mutually exclusive"
+                f"{entry_id}: {label} historical source bindings are mutually exclusive "
+                "for commit and pull-request references"
             )
         elif has_commit_binding:
             repository = source.get("repository", "")
@@ -100,7 +101,7 @@ def validate_source(
             expected_url = f"https://github.com/{repository}/commit/{commit}"
             if not all((repository, commit, url)):
                 errors.append(
-                    f"{entry_id}: {label} external historical commit requires repository, commit and URL"
+                    f"{entry_id}: {label} external historical source requires repository, commit and URL"
                 )
             elif not re.fullmatch(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+", repository):
                 errors.append(f"{entry_id}: {label} invalid external source repository")
@@ -124,8 +125,14 @@ def validate_source(
                 errors.append(
                     f"{entry_id}: {label} historical pull-request URL does not bind repository and PR number"
                 )
-        elif "url" in source or "repository" in source:
-            errors.append(f"{entry_id}: {label} historical URL/repository requires a commit or PR binding")
+        elif "url" in source:
+            errors.append(
+                f"{entry_id}: {label} historical pull-request URL does not bind repository and PR number"
+            )
+        elif "repository" in source:
+            errors.append(
+                f"{entry_id}: {label} external historical source requires repository, commit and URL"
+            )
         elif not source.get("path"):
             errors.append(f"{entry_id}: {label} historical reference requires a path, commit or PR")
 
