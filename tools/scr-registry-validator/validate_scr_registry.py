@@ -159,9 +159,16 @@ def main() -> int:
     data = yaml.safe_load(
         (args.root / "registry" / "scr-registry.yaml").read_text(encoding="utf-8")
     )
+    unresolved_entries = sum(
+        entry.get("allocation_status") == "UNRESOLVED"
+        for entry in data["entries"]
+        if isinstance(entry, dict)
+    )
     print(
         f"SCR REGISTRY: PASS — {len(data['entries'])} entries, "
-        f"{len(data['unresolved_ranges'])} blocked ranges; no ID auto-allocation"
+        f"{unresolved_entries} unresolved entries, "
+        f"{len(data['unresolved_ranges'])} unresolved ranges; "
+        "no ID auto-allocation"
     )
     return 0
 
