@@ -170,7 +170,7 @@ def validate_source(
         elif source.get("blob_sha"):
             content = target.read_bytes()
             actual_blob_sha = hashlib.sha1(
-                f"blob {len(content)}\\0".encode("ascii") + content
+                f"blob {len(content)}\0".encode("ascii") + content
             ).hexdigest()
             if actual_blob_sha != source["blob_sha"]:
                 errors.append(f"{entry_id}: {label} blob SHA mismatch for {relative_path}")
@@ -203,7 +203,7 @@ def derive_source_identity(source: dict, root: Path, repository: str) -> str:
         content = target.read_bytes() if target.is_file() else b""
         identity["path"] = path.as_posix()
         identity["blob_sha"] = hashlib.sha1(
-            f"blob {len(content)}\\0".encode("ascii") + content
+            f"blob {len(content)}\0".encode("ascii") + content
         ).hexdigest()
     elif source.get("url"):
         identity["url"] = str(source["url"])
