@@ -61,6 +61,91 @@ class ScrRegistryTests(unittest.TestCase):
             errors = self._fixture(root, [entry])
             self.assertEqual(errors, [])
 
+    def test_related_sources_support_external_pull_request_bindings(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            requests = root / "change-requests"
+            requests.mkdir()
+            (requests / "SCR-0001.md").write_text("# SCR-0001", encoding="utf-8")
+            entry = {
+                "id": "SCR-0001",
+                "allocation_status": "UNRESOLVED",
+                "metadata_status": "UNRECONCILED",
+                "lifecycle_status": "UNKNOWN",
+                "decision": "UNKNOWN",
+                "source": {
+                    "kind": "HISTORICAL_REFERENCE",
+                    "path": "change-requests/SCR-0001.md",
+                },
+                "related_sources": [
+                    {
+                        "relationship": "IMPLEMENTATION_EVIDENCE",
+                        "scope": "External organization hub implementation",
+                        "source": {
+                            "kind": "HISTORICAL_REFERENCE",
+                            "repository": "A-TownChain-Okosystems/.github",
+                            "pr": 8,
+                            "url": "https://github.com/A-TownChain-Okosystems/.github/pull/8",
+                        },
+                    }
+                ],
+                "notes": "Primary and related evidence are separate bindings.",
+            }
+            self.assertEqual(self._fixture(root, [entry]), [])
+
+    def test_related_external_pull_request_url_must_bind_repository_and_number(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            entry = {
+                "id": "SCR-0001",
+                "allocation_status": "UNRESOLVED",
+                "metadata_status": "UNRECONCILED",
+                "lifecycle_status": "UNKNOWN",
+                "decision": "UNKNOWN",
+                "source": {"kind": "HISTORICAL_REFERENCE"},
+                "related_sources": [
+                    {
+                        "relationship": "IMPLEMENTATION_EVIDENCE",
+                        "scope": "External organization hub implementation",
+                        "source": {
+                            "kind": "HISTORICAL_REFERENCE",
+                            "repository": "A-TownChain-Okosystems/.github",
+                            "pr": 8,
+                            "url": "https://github.com/A-TownChain-Okosystems/atc-standards/pull/8",
+                        },
+                    }
+                ],
+                "notes": "Mismatched repository binding must fail.",
+            }
+            errors = self._fixture(root, [entry])
+            self.assertTrue(
+                any("historical pull-request URL does not bind repository and PR number" in e
+                    for e in errors),
+                errors,
+            )
+
+    def test_related_source_relationship_must_be_known(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            entry = {
+                "id": "SCR-0001",
+                "allocation_status": "UNRESOLVED",
+                "metadata_status": "UNRECONCILED",
+                "lifecycle_status": "UNKNOWN",
+                "decision": "UNKNOWN",
+                "source": {"kind": "HISTORICAL_REFERENCE"},
+                "related_sources": [
+                    {
+                        "relationship": "OWNER_APPROVED_AND_CLOSED",
+                        "scope": "Unverified assertion",
+                        "source": {"kind": "HISTORICAL_REFERENCE"},
+                    }
+                ],
+                "notes": "Unknown relationship must fail schema validation.",
+            }
+            errors = self._fixture(root, [entry])
+            self.assertTrue(any("OWNER_APPROVED_AND_CLOSED" in e for e in errors), errors)
+
     def test_duplicate_ids_fail(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
