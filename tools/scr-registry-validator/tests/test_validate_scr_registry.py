@@ -563,5 +563,57 @@ class ScrRegistryTests(unittest.TestCase):
             self.assertIn("external source URL does not bind", "\n".join(errors))
 
 
+
+    def test_file_blob_sha_rejects_changed_source_bytes(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            folder = root / "change-requests"
+            folder.mkdir()
+            (folder / "SCR-0001.md").write_text("# SCR-0001\\n", encoding="utf-8")
+            entry = {
+                "id": "SCR-0001", "allocation_status": "ASSIGNED",
+                "metadata_status": "RECONCILED", "lifecycle_status": "UNKNOWN",
+                "decision": "UNKNOWN",
+                "source": {"kind": "FILE", "path": "change-requests/SCR-0001.md", "blob_sha": "0" * 40},
+                "notes": "Fixture for immutable Git blob verification."
+            }
+            errors = self._fixture(root, [entry])
+            self.assertTrue(any("blob SHA mismatch" in error for error in errors), errors)
+
+    def test_signature_validity_does_not_imply_decision_authority(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            folder = root / "change-requests"
+            folder.mkdir()
+            (folder / "SCR-0001.md").write_text("# SCR-0001", encoding="utf-8")
+            entry = {
+                "id": "SCR-0001", "allocation_status": "ASSIGNED",
+                "metadata_status": "RECONCILED", "lifecycle_status": "UNKNOWN",
+                "decision": "UNKNOWN",
+                "source": {"kind": "FILE", "path": "change-requests/SCR-0001.md",
+                    "attestation": {"signature_status": "VERIFIED",
+                        "authority_status": "NOT_ESTABLISHED"}},
+                "notes": "A valid signature is not an authority decision."
+            }
+            self.assertEqual(self._fixture(root, [entry]), [])
+
+    def test_established_authority_requires_authority_evidence(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            folder = root / "change-requests"
+            folder.mkdir()
+            (folder / "SCR-0001.md").write_text("# SCR-0001", encoding="utf-8")
+            entry = {
+                "id": "SCR-0001", "allocation_status": "ASSIGNED",
+                "metadata_status": "RECONCILED", "lifecycle_status": "UNKNOWN",
+                "decision": "UNKNOWN",
+                "source": {"kind": "FILE", "path": "change-requests/SCR-0001.md",
+                    "attestation": {"signature_status": "UNSIGNED",
+                        "authority_status": "ESTABLISHED"}},
+                "notes": "Authority needs its own evidence."
+            }
+            errors = self._fixture(root, [entry])
+            self.assertTrue(any("authority_evidence" in error for error in errors), errors)
+
 if __name__ == "__main__":
     unittest.main()
