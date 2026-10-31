@@ -183,6 +183,69 @@ def validate_source(
                 )
 
 
+
+def derive_source_identity(source: dict, root: Path, repository: str) -> str:
+    """Derive a stable SHA-256 identity from immutable source coordinates."""
+    identity = {"repository": repository, "kind": str(source.get("kind", ""))}
+    if source.get("commit"):
+        identity["repository"] = str(source.get("repository", repository))
+        identity["commit"] = str(source["commit"])
+        if source.get("path"):
+            identity["path"] = str(source["path"])
+    elif source.get("pr"):
+        identity["repository"] = str(source.get("repository", repository))
+        identity["pr"] = str(source["pr"])
+    elif source.get("path"):
+        path = Path(str(source["path"]))
+        target = root / path
+        content = target.read_bytes() if target.is_file() else b""
+        identity["path"] = path.as_posix()
+        identity["blob_sha"] = hashlib.sha1(
+            f"blob {len(content)}\\0".encode("ascii") + content
+        ).hexdigest()
+    elif source.get("url"):
+        identity["url"] = str(source["url"])
+    canonical = json.dumps(identity, sort_keys=True, separators=(",", ":"))
+    return hashlib.sha256(canonical.encode("utf-8")).hexdigest()
+
+
+def find_status_contradictions(root: Path) -> list[str]:
+    """Find explicit non-effective wording that conflicts with approved normative metadata."""
+    residuals = []
+    standards = root / "standards"
+    if not standards.is_dir():
+        return residuals
+    markers = ("not effective until", "not yet effective", "remains a candidate")
+    for path in sorted(standards.rglob("*.md")):
+        try:
+            content = path.read_text(encoding="utf-8")
+        except (OSError, UnicodeError):
+            continue
+        if not content.startswith("---\\n"):
+            continue
+        end = content.find("\\n---", 4)
+        if end < 0:
+            continue
+        try:
+            metadata = yaml.safe_load(content[4:end])
+        except yaml.YAMLError:
+            continue
+        if not isinstance(metadata, dict):
+            continue
+        body = content[end + 4:].lower()
+        if (
+            str(metadata.get("status", "")).lower() == "approved"
+            and metadata.get("normative") is True
+            and metadata.get("effective_date") is None
+            and any(marker in body for marker in markers)
+        ):
+            residuals.append(
+                f"{path.relative_to(root).as_posix()}: approved normative metadata "
+                "conflicts with explicit non-effective/candidate wording"
+            )
+    return residuals
+
+
 def validate(
     root: Path = ROOT, registry_path: Path | None = None, schema_path: Path | None = None
 ) -> list[str]:
@@ -232,8 +295,21 @@ def validate(
                     source_bindings.append(
                         (f"related_sources[{index}].source", related.get("source", {}))
                     )
+        seen_relationship_sources: set[tuple[str, str]] = set()
+        repository = str(data.get("repository", ""))
         for label, source in source_bindings:
             validate_source(entry["id"], source, label, root, match, errors)
+            if isinstance(source, dict) and label.startswith("related_sources["):
+                index = int(label.split("[", 1)[1].split("]", 1)[0])
+                relation = related_sources[index].get("relationship", "")
+                source_id = derive_source_identity(source, root, repository)
+                key = (str(relation), source_id)
+                if key in seen_relationship_sources:
+                    errors.append(
+                        f"{entry['id']}: duplicate related source identity "
+                        f"for relationship {relation}"
+                    )
+                seen_relationship_sources.add(key)
 
     raw_ranges = data.get("unresolved_ranges", [])
     ranges = raw_ranges if isinstance(raw_ranges, list) else []
@@ -302,6 +378,20 @@ def main() -> int:
         f"{len(data['unresolved_ranges'])} unresolved ranges; "
         "no ID auto-allocation"
     )
+    identities = 0
+    for entry in data["entries"]:
+        if not isinstance(entry, dict):
+            continue
+        sources = [entry.get("source", {})]
+        sources.extend(
+            item.get("source", {})
+            for item in entry.get("related_sources", [])
+            if isinstance(item, dict)
+        )
+        identities += sum(isinstance(source, dict) for source in sources)
+    print(f"SCR EVIDENCE: {identities} source identities are deterministically derivable")
+    for residual in find_status_contradictions(args.root):
+        print(f"RESIDUAL: {residual}")
     return 0
 
 
