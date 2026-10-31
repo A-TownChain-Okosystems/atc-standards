@@ -232,3 +232,18 @@ The agent may update the registry or source mapping only after the Owner decisio
 | SCR-0139 | ATC-AI-GOV-AUTH-001 frontmatter/body; commit bceec03 | approved / normative=false semantic mismatch; SCR lifecycle not separately evidenced | PENDING | NONE — BLOCKED |
 
 No decision has been made by this report. All three entries remain unresolved until a human Owner supplies explicit, attributable decisions.
+
+
+
+## Technical evidence update — 2026-10-31
+
+The registry now contains multiple typed evidence relationships for SCR-0095, SCR-0096 and SCR-0139. This materially improves the decision basis and means further technical analysis does not need to wait for an Owner decision.
+
+The new evidence map distinguishes:
+- SCR-0095: Automated Assurance source commit; merged .github PR #8 for Hub repository files; signed REALITY_STATUS corroboration; bounded approval context for ATC-STD-041; and the ATC-STD-041 frontmatter/body effectiveness conflict.
+- SCR-0096: scanner badge correction documented in signed REALITY_STATUS §41; two unsigned commits describing ATC-STD-002 family architecture; bounded approval context for ATC-STD-002.
+- SCR-0139: Automation Authority standard; machine-readable .github configuration commit; naming/generator provenance commit; approved-versus-normative=false distinction.
+
+These evidence relationships do not predetermine the Owner's final lifecycle or scope decision. They also do not create a blanket Owner dependency for technical work. The registry continues to preserve UNKNOWN lifecycle and decision values and UNRESOLVED allocation status. No identifier was allocated, no standard status was modified, and no SCR was closed or rejected.
+
+The prior decision options remain available as one possible governance resolution, but they are not prerequisites for continued evidence reconciliation, technical recommendations or non-normative improvements. Any eventual formal lifecycle, allocation, normative or supersession change must still be supported by attributable evidence and the applicable authorization.
