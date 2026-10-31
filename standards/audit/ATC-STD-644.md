@@ -34,7 +34,7 @@ standard:
 
 # ATC-STD-644 — Function & Change Evidence Standard
 
-> **Status:** DRAFT / CANDIDATE (v0.1.0) — SCR-0130. Nicht APPROVED und nicht normativ.
+> **Status:** CANDIDATE (v0.1.0) — SCR-0130. Nicht APPROVED und nicht normativ.
 
 ## Abstract
 
