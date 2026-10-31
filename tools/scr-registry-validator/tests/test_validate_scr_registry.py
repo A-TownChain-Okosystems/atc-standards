@@ -643,8 +643,6 @@ class ScrRegistryTests(unittest.TestCase):
             errors = self._fixture(root, [entry])
             self.assertTrue(any("authority_evidence" in error for error in errors), errors)
 
-
-
     def test_status_contradiction_detector_parses_frontmatter_newlines(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -715,9 +713,6 @@ class ScrRegistryTests(unittest.TestCase):
             }
             errors = self._fixture(root, [entry])
             self.assertTrue(any("requires a commit SHA" in error for error in errors), errors)
-
-
-
 
     def test_identity_sha256_mismatch_fails_closed(self):
         with tempfile.TemporaryDirectory() as tmp:
