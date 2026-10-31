@@ -103,9 +103,7 @@ def validate(
                 "commit",
             },
         }
-        unexpected_source_fields = set(source) - allowed_source_fields.get(
-            source_kind, {"kind"}
-        )
+        unexpected_source_fields = set(source) - allowed_source_fields.get(source_kind, {"kind"})
         if unexpected_source_fields:
             errors.append(
                 f"{entry.get('id', 'unknown SCR')}: source fields invalid for "
