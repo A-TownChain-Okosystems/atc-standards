@@ -40,6 +40,27 @@ class ScrRegistryTests(unittest.TestCase):
         path.write_text(yaml.safe_dump(payload), encoding="utf-8")
         return module.validate(root, path, root / "schemas" / "scr-registry.schema.json")
 
+    def test_reconciled_metadata_can_have_unknown_lifecycle(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            requests = root / "change-requests"
+            requests.mkdir()
+            (requests / "SCR-0001.md").write_text("# SCR-0001", encoding="utf-8")
+            entry = {
+                "id": "SCR-0001",
+                "allocation_status": "ASSIGNED",
+                "metadata_status": "RECONCILED",
+                "lifecycle_status": "UNKNOWN",
+                "decision": "UNKNOWN",
+                "source": {
+                    "kind": "FILE",
+                    "path": "change-requests/SCR-0001.md",
+                },
+                "notes": "Metadata is reconciled; lifecycle decision remains independent.",
+            }
+            errors = self._fixture(root, [entry])
+            self.assertEqual(errors, [])
+
     def test_duplicate_ids_fail(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
