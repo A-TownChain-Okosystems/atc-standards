@@ -969,6 +969,8 @@ class ScrRegistryTests(unittest.TestCase):
             folder = root / "evidence"
             folder.mkdir()
             (folder / "implementation.md").write_text("implementation evidence", encoding="utf-8")
+            entry = {
+                "id": "SCR-0001",
                 "allocation_status": "UNRESOLVED",
                 "metadata_status": "UNRECONCILED",
                 "lifecycle_status": "UNKNOWN",
