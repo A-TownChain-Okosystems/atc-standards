@@ -227,6 +227,62 @@
         "commit": {
           "type": "string",
           "pattern": "^[0-9a-f]{40}$"
+        },
+        "blob_sha": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "attestation": {
+          "type": "object",
+          "required": [
+            "signature_status",
+            "authority_status"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "signature_status": {
+              "enum": [
+                "VERIFIED",
+                "UNSIGNED",
+                "UNKNOWN"
+              ]
+            },
+            "signer_identity": {
+              "type": "string",
+              "minLength": 1
+            },
+            "authority_status": {
+              "enum": [
+                "ESTABLISHED",
+                "NOT_ESTABLISHED",
+                "UNKNOWN",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "authority_evidence": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "authority_status": {
+                    "const": "ESTABLISHED"
+                  }
+                },
+                "required": [
+                  "authority_status"
+                ]
+              },
+              "then": {
+                "required": [
+                  "authority_evidence"
+                ]
+              }
+            }
+          ]
         }
       },
       "allOf": [
