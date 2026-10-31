@@ -215,7 +215,7 @@ class ScrRegistryTests(unittest.TestCase):
             schema_path.write_text(schema_src.read_text(encoding="utf-8"), encoding="utf-8")
             registry_path = root / "registry" / "scr-registry.yaml"
             registry_path.write_text(
-                "registry_version: 1\\nregistry_version: 1\\n",
+                "registry_version: 1\nregistry_version: 1\n",
                 encoding="utf-8",
             )
             errors = module.validate(root, registry_path, schema_path)
