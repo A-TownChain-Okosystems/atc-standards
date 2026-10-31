@@ -1,17 +1,214 @@
 {
-  "case_id":"ATC-TEST-EVIDENCE-SYSTEM-001",
-  "description":"Closed reference Evidence Graph plus deliberate exact-SHA failure case.",
-  "positive":{
-    "implementation_sha":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-    "ci_commit_sha":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-    "status":"CI-VERIFIED",
-    "traceability":"COMPLETE"
+  "case_id": "ATC-TEST-EVIDENCE-SYSTEM-001",
+  "description": "Conformance fixtures for JSON Schema, graph closure, reverse traversal and exact-SHA gates. Fixture identities are not live attestations.",
+  "positive": {
+    "records": [
+      {
+        "id": "ATC-REQ-EVIDENCE-001",
+        "type": "REQUIREMENT",
+        "version": "1.0",
+        "status": "SPECIFIED"
+      },
+      {
+        "id": "ATC-SPEC-EVIDENCE-001",
+        "type": "SPECIFICATION",
+        "version": "1.0",
+        "status": "SPECIFIED",
+        "references": [
+          "ATC-REQ-EVIDENCE-001"
+        ]
+      },
+      {
+        "id": "ATC-COMP-EVIDENCE-001",
+        "type": "COMPONENT",
+        "version": "1.0",
+        "status": "PRESENT",
+        "references": [
+          "ATC-SPEC-EVIDENCE-001"
+        ]
+      },
+      {
+        "id": "ATC-FUNC-EVIDENCE-001",
+        "type": "FUNCTION",
+        "version": "1.0",
+        "status": "DOCUMENTED",
+        "references": [
+          "ATC-COMP-EVIDENCE-001",
+          "ATC-SPEC-EVIDENCE-001"
+        ]
+      },
+      {
+        "id": "ATC-IMPL-EVIDENCE-001",
+        "type": "IMPLEMENTATION",
+        "version": "1.0",
+        "status": "IMPLEMENTED",
+        "repository": "A-TownChain-Okosystems/atc-standards",
+        "path": "tools/validate_evidence_system.py",
+        "module": "validate_evidence_system",
+        "symbol": "validate_repository_head",
+        "commit_sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "references": [
+          "ATC-FUNC-EVIDENCE-001"
+        ]
+      },
+      {
+        "id": "ATC-CHANGE-EVIDENCE-001",
+        "type": "CHANGE",
+        "version": "1.0",
+        "status": "TESTED",
+        "base_sha": "cccccccccccccccccccccccccccccccccccccccc",
+        "head_sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "classification": [
+          "MODIFY"
+        ],
+        "references": [
+          "ATC-IMPL-EVIDENCE-001",
+          "ATC-FUNC-EVIDENCE-001"
+        ]
+      },
+      {
+        "id": "ATC-DOC-EVIDENCE-001",
+        "type": "DOCUMENTATION",
+        "version": "1.0",
+        "status": "DOCUMENTED",
+        "path": "standards/audit/ATC-STD-644.md",
+        "references": [
+          "ATC-CHANGE-EVIDENCE-001"
+        ]
+      },
+      {
+        "id": "ATC-TEST-EVIDENCE-001",
+        "type": "TEST",
+        "version": "1.0",
+        "status": "TESTED",
+        "test_kind": "positive",
+        "path": "tests/evidence/test_validate_evidence_system.py",
+        "references": [
+          "ATC-FUNC-EVIDENCE-001",
+          "ATC-IMPL-EVIDENCE-001"
+        ]
+      },
+      {
+        "id": "ATC-CI-EVIDENCE-001",
+        "type": "CI",
+        "version": "1.0",
+        "status": "PASS",
+        "commit_sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "run_id": "fixture-run-001",
+        "job_id": "fixture-job-001",
+        "step_name": "fixture validation step",
+        "step_number": 1,
+        "result": "PASS",
+        "references": [
+          "ATC-TEST-EVIDENCE-001",
+          "ATC-IMPL-EVIDENCE-001"
+        ]
+      },
+      {
+        "id": "ATC-E2E-EVIDENCE-001",
+        "type": "E2E",
+        "version": "1.0",
+        "status": "PASS",
+        "references": [
+          "ATC-CI-EVIDENCE-001"
+        ]
+      },
+      {
+        "id": "ATC-AUDIT-EVIDENCE-001",
+        "type": "AUDIT",
+        "version": "1.0",
+        "status": "PASS",
+        "references": [
+          "ATC-E2E-EVIDENCE-001"
+        ]
+      },
+      {
+        "id": "ATC-REL-EVIDENCE-001",
+        "type": "RELEASE",
+        "version": "1.0",
+        "status": "RELEASE-READY",
+        "references": [
+          "ATC-AUDIT-EVIDENCE-001"
+        ]
+      }
+    ],
+    "traceability": {
+      "id": "ATC-TRACE-EVIDENCE-001",
+      "status": "COMPLETE",
+      "edges": [
+        {
+          "from": "ATC-REQ-EVIDENCE-001",
+          "to": "ATC-SPEC-EVIDENCE-001",
+          "relation": "SPECIFIES"
+        },
+        {
+          "from": "ATC-SPEC-EVIDENCE-001",
+          "to": "ATC-COMP-EVIDENCE-001",
+          "relation": "CONTAINS"
+        },
+        {
+          "from": "ATC-COMP-EVIDENCE-001",
+          "to": "ATC-FUNC-EVIDENCE-001",
+          "relation": "CONTAINS"
+        },
+        {
+          "from": "ATC-FUNC-EVIDENCE-001",
+          "to": "ATC-IMPL-EVIDENCE-001",
+          "relation": "IMPLEMENTS"
+        },
+        {
+          "from": "ATC-IMPL-EVIDENCE-001",
+          "to": "ATC-CHANGE-EVIDENCE-001",
+          "relation": "CHANGES"
+        },
+        {
+          "from": "ATC-CHANGE-EVIDENCE-001",
+          "to": "ATC-DOC-EVIDENCE-001",
+          "relation": "DOCUMENTS"
+        },
+        {
+          "from": "ATC-CHANGE-EVIDENCE-001",
+          "to": "ATC-TEST-EVIDENCE-001",
+          "relation": "TESTS"
+        },
+        {
+          "from": "ATC-TEST-EVIDENCE-001",
+          "to": "ATC-CI-EVIDENCE-001",
+          "relation": "VERIFIES"
+        },
+        {
+          "from": "ATC-CI-EVIDENCE-001",
+          "to": "ATC-E2E-EVIDENCE-001",
+          "relation": "VALIDATES"
+        },
+        {
+          "from": "ATC-E2E-EVIDENCE-001",
+          "to": "ATC-AUDIT-EVIDENCE-001",
+          "relation": "VALIDATES"
+        },
+        {
+          "from": "ATC-AUDIT-EVIDENCE-001",
+          "to": "ATC-REL-EVIDENCE-001",
+          "relation": "RELEASES"
+        }
+      ]
+    },
+    "expected": {
+      "status": "RELEASE-READY",
+      "traceability": "COMPLETE",
+      "release": "READY"
+    }
   },
-  "negative":{
-    "implementation_sha":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-    "ci_commit_sha":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
-    "expected_status":"NOT_PROVEN",
-    "expected_traceability":"INCOMPLETE",
-    "expected_release":"BLOCKED"
+  "negative": {
+    "mutation": {
+      "record_id": "ATC-CI-EVIDENCE-001",
+      "field": "commit_sha",
+      "value": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    },
+    "expected": {
+      "status": "NOT_PROVEN",
+      "traceability": "INCOMPLETE",
+      "release": "BLOCKED"
+    }
   }
 }
