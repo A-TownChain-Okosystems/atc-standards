@@ -48,6 +48,24 @@ class UniqueKeySafeLoader(yaml.SafeLoader):
         return mapping
 
 
+def load_trusted_signers(root: Path) -> set[str]:
+    """Load explicit signer fingerprints; an empty trust store trusts nobody."""
+    trust_path = root / "schemas" / "scr-registry-trust.json"
+    if not trust_path.is_file():
+        return set()
+    data = json.loads(trust_path.read_text(encoding="utf-8"))
+    if not isinstance(data, dict) or data.get("schema_version") != 1:
+        raise ValueError("invalid SCR registry trust-store document")
+    fingerprints = data.get("trusted_signer_fingerprints")
+    if not isinstance(fingerprints, list) or any(
+        not isinstance(item, str)
+        or not re.fullmatch(r"(?:[0-9A-Fa-f]{40}|[0-9A-Fa-f]{64})", item)
+        for item in fingerprints
+    ):
+        raise ValueError("trusted_signer_fingerprints must contain 40- or 64-hex fingerprints")
+    return {item.casefold() for item in fingerprints}
+
+
 def validate_source(
     entry_id: str,
     source: object,
@@ -56,6 +74,7 @@ def validate_source(
     id_match: re.Match[str],
     errors: list[str],
     registry_commit: str,
+    trusted_signers: set[str],
 ) -> None:
     """Validate one primary or related source binding."""
     if not isinstance(source, dict):
@@ -119,6 +138,10 @@ def validate_source(
                 elif fingerprint.casefold() != signer_identity.casefold():
                     errors.append(
                         f"{entry_id}: {label} signer fingerprint does not match signer_identity"
+                    )
+                elif fingerprint.casefold() not in trusted_signers:
+                    errors.append(
+                        f"{entry_id}: {label} signer fingerprint is not in the trusted signer allowlist"
                     )
 
     if source_kind == "PULL_REQUEST":
@@ -341,6 +364,12 @@ def validate(
         f"schema: {error.message} at {list(error.absolute_path)}"
         for error in Draft202012Validator(schema).iter_errors(data)
     ]
+    try:
+        trusted_signers = load_trusted_signers(root)
+    except (OSError, ValueError) as exc:
+        errors.append(f"trust store: {exc}")
+        trusted_signers = set()
+
     raw_entries = data.get("entries", [])
     entries = raw_entries if isinstance(raw_entries, list) else []
     ids = [
@@ -382,7 +411,9 @@ def validate(
             else None
         )
         for label, source in source_bindings:
-            validate_source(entry["id"], source, label, root, match, errors, registry_commit)
+            validate_source(
+                entry["id"], source, label, root, match, errors, registry_commit, trusted_signers
+            )
             if isinstance(source, dict) and label.startswith("related_sources["):
                 index = int(label.split("[", 1)[1].split("]", 1)[0])
                 relation = related_sources[index].get("relationship", "")
