@@ -105,9 +105,7 @@ def validate(
             continue
         for number in range(lower, upper + 1):
             if number in covered:
-                errors.append(
-                    f"SCR-{number:04d}: overlaps explicit entry and unresolved range"
-                )
+                errors.append(f"SCR-{number:04d}: overlaps explicit entry and unresolved range")
             covered.add(number)
 
     observed: dict[int, list[str]] = {}
@@ -123,9 +121,7 @@ def validate(
 
     for number, found in sorted(observed.items()):
         if number not in covered:
-            errors.append(
-                f"unregistered observed SCR-{number:04d}: {', '.join(found)}"
-            )
+            errors.append(f"unregistered observed SCR-{number:04d}: {', '.join(found)}")
 
     if any(
         str(entry.get("allocation_status", "")).upper() == "FREE"
