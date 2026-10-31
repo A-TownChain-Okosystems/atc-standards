@@ -72,11 +72,14 @@ def git(repo_dir: Path, args: list[str], runner=subprocess.run) -> str:
     result = runner(
         ["git", *args],
         cwd=repo_dir,
-        check=True,
+        check=False,
         capture_output=True,
         text=True,
         timeout=180,
     )
+    if result.returncode != 0:
+        detail = (result.stderr or result.stdout or "no diagnostic output").strip()
+        raise VerificationError(f"git {' '.join(args)} failed: {detail}")
     return result.stdout.strip()
 
 
@@ -101,17 +104,48 @@ def verify_manifest(data: dict, runner=subprocess.run) -> dict:
 
             fetch_key = (repository, commit)
             if fetch_key not in fetched:
-                git(
-                    repo_dir,
-                    [
-                        "fetch",
-                        "--no-tags",
-                        "--depth=1",
-                        f"https://github.com/{repository}.git",
-                        commit,
-                    ],
-                    runner,
-                )
+                remote = f"https://github.com/{repository}.git"
+                try:
+                    git(
+                        repo_dir,
+                        ["fetch", "--no-tags", "--depth=1", remote, commit],
+                        runner,
+                    )
+                except VerificationError as exact_fetch_error:
+                    # Some GitHub upload-pack endpoints reject a direct SHA request
+                    # even when the commit is reachable from an advertised ref.
+                    try:
+                        git(
+                            repo_dir,
+                            [
+                                "fetch",
+                                "--no-tags",
+                                "--filter=blob:limit=1m",
+                                remote,
+                                "HEAD",
+                            ],
+                            runner,
+                        )
+                        git(repo_dir, ["cat-file", "-e", f"{commit}^{{commit}}"], runner)
+                    except VerificationError:
+                        try:
+                            git(
+                                repo_dir,
+                                [
+                                    "fetch",
+                                    "--no-tags",
+                                    "--filter=blob:limit=1m",
+                                    remote,
+                                    "+refs/heads/*:refs/remotes/origin/*",
+                                ],
+                                runner,
+                            )
+                            git(repo_dir, ["cat-file", "-e", f"{commit}^{{commit}}"], runner)
+                        except VerificationError as fallback_error:
+                            raise VerificationError(
+                                f"exact commit fetch failed ({exact_fetch_error}); "
+                                f"branch-history fallback failed ({fallback_error})"
+                            ) from fallback_error
                 fetched.add(fetch_key)
 
             git(repo_dir, ["cat-file", "-e", f"{commit}^{{commit}}"], runner)
