@@ -132,6 +132,53 @@ class EvidenceSystemTests(unittest.TestCase):
                 run,
             )
 
+    def test_push_event_resolves_exact_commit_and_associated_pr(self):
+        head = "a" * 40
+        base = "b" * 40
+        event = {"after": head, "ref": "refs/heads/evidence/function-change-graph-2026-09-27"}
+        run = {
+            "head_branch": "evidence/function-change-graph-2026-09-27",
+            "pull_requests": [{
+                "number": 48,
+                "head": {"ref": "evidence/function-change-graph-2026-09-27"},
+                "base": {"sha": base},
+            }],
+        }
+        self.assertEqual(evidence.resolve_event_binding(event, run), (head, base, 48))
+
+    def test_pull_request_event_resolves_exact_head_and_base(self):
+        head = "a" * 40
+        base = "b" * 40
+        event = {
+            "pull_request": {
+                "number": 48,
+                "head": {"sha": head, "ref": "evidence/function-change-graph-2026-09-27"},
+                "base": {"sha": base},
+            }
+        }
+        run = {
+            "head_branch": "evidence/function-change-graph-2026-09-27",
+            "pull_requests": [{
+                "number": 48,
+                "head": {"ref": "evidence/function-change-graph-2026-09-27"},
+                "base": {"sha": base},
+            }],
+        }
+        self.assertEqual(evidence.resolve_event_binding(event, run), (head, base, 48))
+
+    def test_push_event_rejects_branch_mismatch(self):
+        event = {"after": "a" * 40, "ref": "refs/heads/other"}
+        run = {
+            "head_branch": "evidence/function-change-graph-2026-09-27",
+            "pull_requests": [{
+                "number": 48,
+                "head": {"ref": "evidence/function-change-graph-2026-09-27"},
+                "base": {"sha": "b" * 40},
+            }],
+        }
+        with self.assertRaisesRegex(evidence.EvidenceError, "branch"):
+            evidence.resolve_event_binding(event, run)
+
 
 if __name__ == "__main__":
     unittest.main()
