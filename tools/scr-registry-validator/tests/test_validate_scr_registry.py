@@ -205,6 +205,60 @@ class ScrRegistryTests(unittest.TestCase):
                 "\\n".join(errors),
             )
 
+    def test_source_kind_rejects_unrelated_or_conflicting_fields(self):
+        cases = [
+            (
+                "FILE",
+                {
+                    "kind": "FILE",
+                    "path": "change-requests/SCR-0001.md",
+                    "pr": 92,
+                    "url": "https://github.com/A-TownChain-Okosystems/atc-standards/pull/92",
+                },
+                "source fields invalid for FILE",
+            ),
+            (
+                "PULL_REQUEST",
+                {
+                    "kind": "PULL_REQUEST",
+                    "pr": 92,
+                    "url": "https://github.com/A-TownChain-Okosystems/atc-standards/pull/92",
+                    "path": "change-requests/SCR-0001.md",
+                },
+                "source fields invalid for PULL_REQUEST",
+            ),
+            (
+                "HISTORICAL_REFERENCE",
+                {
+                    "kind": "HISTORICAL_REFERENCE",
+                    "path": "evidence.md",
+                    "pr": 92,
+                    "repository": "A-TownChain-Okosystems/example",
+                    "commit": "a" * 40,
+                    "url": "https://github.com/A-TownChain-Okosystems/example/commit/" + "a" * 40,
+                },
+                "source bindings are mutually exclusive",
+            ),
+        ]
+        for kind, source, expected in cases:
+            with self.subTest(kind=kind), tempfile.TemporaryDirectory() as tmp:
+                root = Path(tmp)
+                if kind == "HISTORICAL_REFERENCE":
+                    (root / "evidence.md").write_text("# fixture", encoding="utf-8")
+                entry = {
+                    "id": "SCR-0001",
+                    "allocation_status": "RESERVED" if kind == "PULL_REQUEST" else (
+                        "ASSIGNED" if kind == "FILE" else "UNRESOLVED"
+                    ),
+                    "metadata_status": "UNRECONCILED",
+                    "lifecycle_status": "REVIEW" if kind == "PULL_REQUEST" else "UNKNOWN",
+                    "decision": "PENDING" if kind == "PULL_REQUEST" else "UNKNOWN",
+                    "source": source,
+                    "notes": "fixture",
+                }
+                errors = self._fixture(root, [entry])
+                self.assertTrue(any(expected in error for error in errors), errors)
+
     def test_duplicate_yaml_mapping_keys_fail_closed(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
