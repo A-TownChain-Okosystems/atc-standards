@@ -1,11 +1,10 @@
 import json
-import sys
 import unittest
 from pathlib import Path
 
+from tools import validate_evidence_system as evidence
+
 ROOT = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(ROOT / "tools"))
-import validate_evidence_system as evidence
 
 
 class EvidenceSystemTests(unittest.TestCase):
