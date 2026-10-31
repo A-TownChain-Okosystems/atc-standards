@@ -1180,6 +1180,28 @@ entries:
       pr: 92
       url: "https://github.com/A-TownChain-Okosystems/atc-standards/pull/92"
     notes: "Gate Methodology Draft 0.1.0 reference; PR #92 merged, but the document remains draft. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0133
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      repository: "A-TownChain-Okosystems/aurora-ai"
+      commit: "15f328faf735d2a4d9abd3b0fec547fa14897335"
+      url: "https://github.com/A-TownChain-Okosystems/aurora-ai/commit/15f328faf735d2a4d9abd3b0fec547fa14897335"
+    notes: "Cross-repository dependency/security remediation reference. Additional observed SCR-0133 commits include a-townchain-os-docs 8acd969e0467a3d770595c2946573cff7ca0e6ea, a-townchain-ecosystem ecdba9ec478737d4f7b25e80c8ed7c31d96d7a83, and a-townchain-os-docs 68478c45bf3a2d555f4c6a5d9c06e5c3bbd1e8fe. The primary commit is unsigned/Owner lifecycle not independently established; canonical SCR record absent."
+  - id: SCR-0134
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      repository: "A-TownChain-Okosystems/a-townchain-os-docs"
+      commit: "ae2fea101b5d2ccb6a5fa6fcb00f3b6f52004953"
+      url: "https://github.com/A-TownChain-Okosystems/a-townchain-os-docs/commit/ae2fea101b5d2ccb6a5fa6fcb00f3b6f52004953"
+    notes: "Exact-SHA File Census across 33 repositories; commit message explicitly cites SCR-0134. Additional observed SCR-0134 reference: atc-zkp commit 9771ffed3ac5b3761c4d81e9c4d63cd4d2070108. Canonical SCR record and Owner lifecycle decision remain unverified."
   - id: SCR-0135
     allocation_status: UNRESOLVED
     metadata_status: UNRECONCILED
@@ -1261,8 +1283,3 @@ entries:
       path: "change-requests/SCR-0142.md"
     notes: "New Draft governance change request; Owner decision and review chain remain pending."
 unresolved_ranges:
-  - start: SCR-0133
-    end: SCR-0134
-    allocation_status: UNRESOLVED
-    evidence: "No direct source reference was recovered in the current repository search; absence of a hit is not proof of availability."
-    required_action: "Continue historical commit, PR, issue and Owner-evidence reconstruction; keep blocked."
