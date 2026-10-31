@@ -1,0 +1,426 @@
+{
+  "title": "ATC SCR Registry",
+  "type": "object",
+  "required": [
+    "registry_version",
+    "repository",
+    "source_ref",
+    "source_commit",
+    "allocation_policy",
+    "entries",
+    "unresolved_ranges"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "registry_version": {
+      "const": 1
+    },
+    "repository": {
+      "const": "A-TownChain-Okosystems/atc-standards"
+    },
+    "source_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_commit": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "allocation_policy": {
+      "type": "object",
+      "required": [
+        "unknown_is_blocked",
+        "missing_file_is_not_free",
+        "automatic_number_assignment",
+        "reuse_permitted"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "unknown_is_blocked": {
+          "const": true
+        },
+        "missing_file_is_not_free": {
+          "const": true
+        },
+        "automatic_number_assignment": {
+          "const": false
+        },
+        "reuse_permitted": {
+          "const": false
+        }
+      }
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/entry"
+      }
+    },
+    "unresolved_ranges": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/range"
+      }
+    }
+  },
+  "$defs": {
+    "entry": {
+      "type": "object",
+      "required": [
+        "id",
+        "allocation_status",
+        "metadata_status",
+        "lifecycle_status",
+        "decision",
+        "source",
+        "notes"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^SCR-[0-9]{4}$"
+        },
+        "allocation_status": {
+          "enum": [
+            "ASSIGNED",
+            "RESERVED",
+            "CONFLICT",
+            "UNRESOLVED"
+          ]
+        },
+        "metadata_status": {
+          "enum": [
+            "RECONCILED",
+            "UNRECONCILED",
+            "PROVISIONAL"
+          ]
+        },
+        "lifecycle_status": {
+          "enum": [
+            "PROPOSED",
+            "REVIEW",
+            "DECIDED",
+            "IMPLEMENTED",
+            "CLOSED",
+            "UNKNOWN"
+          ]
+        },
+        "decision": {
+          "enum": [
+            "ACCEPTED",
+            "REJECTED",
+            "OBSOLETE",
+            "PENDING",
+            "UNKNOWN"
+          ]
+        },
+        "source": {
+          "$ref": "#/$defs/source"
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1
+        },
+        "related_sources": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "relationship",
+              "scope",
+              "source"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "relationship": {
+                "enum": [
+                  "CORROBORATES",
+                  "SCOPE_REFERENCE",
+                  "IMPLEMENTATION_EVIDENCE",
+                  "APPROVAL_CONTEXT",
+                  "NORMATIVE_CONTEXT",
+                  "CHANGE_PROVENANCE",
+                  "CONFLICTING_REFERENCE"
+                ]
+              },
+              "scope": {
+                "type": "string",
+                "minLength": 1
+              },
+              "source": {
+                "$ref": "#/$defs/source"
+              }
+            }
+          }
+        }
+      }
+    },
+    "range": {
+      "type": "object",
+      "required": [
+        "start",
+        "end",
+        "allocation_status",
+        "evidence",
+        "required_action"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "start": {
+          "type": "string",
+          "pattern": "^SCR-[0-9]{4}$"
+        },
+        "end": {
+          "type": "string",
+          "pattern": "^SCR-[0-9]{4}$"
+        },
+        "allocation_status": {
+          "enum": [
+            "CONFLICT",
+            "UNRESOLVED"
+          ]
+        },
+        "evidence": {
+          "type": "string",
+          "minLength": 1
+        },
+        "required_action": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "kind"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "FILE",
+            "PULL_REQUEST",
+            "HISTORICAL_REFERENCE"
+          ]
+        },
+        "path": {
+          "type": "string"
+        },
+        "pr": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "branch": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "repository": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$"
+        },
+        "commit": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "blob_sha": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "attestation": {
+          "type": "object",
+          "required": [
+            "signature_status",
+            "authority_status"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "signature_status": {
+              "enum": [
+                "VERIFIED",
+                "UNSIGNED",
+                "UNKNOWN"
+              ]
+            },
+            "signer_identity": {
+              "type": "string",
+              "minLength": 1
+            },
+            "authority_status": {
+              "enum": [
+                "ESTABLISHED",
+                "NOT_ESTABLISHED",
+                "UNKNOWN",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "authority_evidence": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "authority_status": {
+                    "const": "ESTABLISHED"
+                  }
+                },
+                "required": [
+                  "authority_status"
+                ]
+              },
+              "then": {
+                "required": [
+                  "authority_evidence"
+                ]
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "signature_status": {
+                    "const": "VERIFIED"
+                  }
+                },
+                "required": [
+                  "signature_status"
+                ]
+              },
+              "then": {
+                "required": [
+                  "signer_identity"
+                ]
+              }
+            }
+          ]
+        },
+        "identity_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "FILE"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "required": [
+              "path"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "HISTORICAL_REFERENCE"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "anyOf": [
+              {
+                "required": [
+                  "path"
+                ]
+              },
+              {
+                "required": [
+                  "repository",
+                  "commit",
+                  "url"
+                ]
+              },
+              {
+                "required": [
+                  "pr",
+                  "url"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "PULL_REQUEST"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "required": [
+              "pr",
+              "url"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "HISTORICAL_REFERENCE"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "not": {
+              "required": [
+                "commit",
+                "pr"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "attestation": {
+                "properties": {
+                  "signature_status": {
+                    "const": "VERIFIED"
+                  }
+                },
+                "required": [
+                  "signature_status"
+                ]
+              }
+            },
+            "required": [
+              "attestation"
+            ]
+          },
+          "then": {
+            "required": [
+              "commit"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
