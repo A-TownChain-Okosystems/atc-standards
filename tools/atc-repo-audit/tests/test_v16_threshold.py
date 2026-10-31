@@ -31,7 +31,7 @@ class ConventionalCommitThresholdTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             with patch.object(MODULE.subprocess, "run", side_effect=fake_run):
                 audit = MODULE.audit_repo(tmp, "R3")
-        return next(status for rule, status, _, _ in audit.results if rule == "V-16")
+        return next(status for rule, status, *_ in audit.results if rule == "V-16")
 
     def test_79_percent_is_a_must_fail(self):
         self.assertEqual(self._status(15), "FAIL")
