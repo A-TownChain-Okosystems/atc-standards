@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 from pathlib import Path
@@ -61,8 +62,8 @@ def validate_source(
 
     source_kind = source.get("kind")
     allowed_source_fields = {
-        "FILE": {"kind", "path"},
-        "PULL_REQUEST": {"kind", "pr", "branch", "url"},
+        "FILE": {"kind", "path", "blob_sha", "attestation"},
+        "PULL_REQUEST": {"kind", "pr", "branch", "url", "attestation"},
         "HISTORICAL_REFERENCE": {
             "kind",
             "path",
@@ -70,6 +71,8 @@ def validate_source(
             "url",
             "repository",
             "commit",
+            "blob_sha",
+            "attestation",
         },
     }
     unexpected_source_fields = set(source) - allowed_source_fields.get(source_kind, {"kind"})
@@ -164,7 +167,12 @@ def validate_source(
             return
         if not target.is_file():
             errors.append(f"{entry_id}: {label} referenced source file missing: {relative_path}")
-        elif source_kind == "FILE":
+        elif source.get("blob_sha"):
+            content = target.read_bytes()
+            actual_blob_sha = hashlib.sha1(f"blob {len(content)}\\0".encode("ascii") + content).hexdigest()
+            if actual_blob_sha != source["blob_sha"]:
+                errors.append(f"{entry_id}: {label} blob SHA mismatch for {relative_path}")
+        if target.is_file() and source_kind == "FILE":
             file_match = FILE_RE.match(candidate.name)
             if not file_match:
                 errors.append(f"{entry_id}: source path does not encode SCR ID: {relative_path}")
