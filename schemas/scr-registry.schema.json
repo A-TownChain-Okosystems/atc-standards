@@ -137,7 +137,7 @@
               "relationship": {
                 "enum": [
                   "CORROBORATES",
-                  "DISTINCT_SCOPE",
+                  "SCOPE_REFERENCE",
                   "IMPLEMENTATION_EVIDENCE",
                   "APPROVAL_CONTEXT",
                   "NORMATIVE_CONTEXT",
