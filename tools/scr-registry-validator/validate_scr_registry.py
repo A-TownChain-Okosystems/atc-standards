@@ -66,7 +66,11 @@ def validate(
             expected_url = (
                 f"https://github.com/A-TownChain-Okosystems/atc-standards/pull/{pr_number}"
             )
-            if not isinstance(pr_number, int) or isinstance(pr_number, bool) or source.get("url") != expected_url:
+            if (
+                not isinstance(pr_number, int)
+                or isinstance(pr_number, bool)
+                or source.get("url") != expected_url
+            ):
                 errors.append(
                     f"{entry['id']}: pull-request URL does not bind repository and PR number"
                 )
