@@ -240,6 +240,55 @@ class ScrRegistryTests(unittest.TestCase):
                 "\\n".join(errors),
             )
 
+    def test_historical_pull_request_url_must_bind_number(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            evidence = root / "evidence.md"
+            evidence.write_text("# fixture", encoding="utf-8")
+            entry = {
+                "id": "SCR-0001",
+                "allocation_status": "UNRESOLVED",
+                "metadata_status": "UNRECONCILED",
+                "lifecycle_status": "UNKNOWN",
+                "decision": "UNKNOWN",
+                "source": {
+                    "kind": "HISTORICAL_REFERENCE",
+                    "path": "evidence.md",
+                    "pr": 92,
+                    "url": "https://github.com/A-TownChain-Okosystems/atc-standards/pull/999",
+                },
+                "notes": "fixture",
+            }
+            errors = self._fixture(root, [entry])
+            self.assertIn(
+                "historical pull-request URL does not bind repository and PR number",
+                "\\n".join(errors),
+            )
+
+    def test_partial_historical_pull_request_binding_fails(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            evidence = root / "evidence.md"
+            evidence.write_text("# fixture", encoding="utf-8")
+            entry = {
+                "id": "SCR-0001",
+                "allocation_status": "UNRESOLVED",
+                "metadata_status": "UNRECONCILED",
+                "lifecycle_status": "UNKNOWN",
+                "decision": "UNKNOWN",
+                "source": {
+                    "kind": "HISTORICAL_REFERENCE",
+                    "path": "evidence.md",
+                    "url": "https://github.com/A-TownChain-Okosystems/atc-standards/pull/92",
+                },
+                "notes": "fixture",
+            }
+            errors = self._fixture(root, [entry])
+            self.assertIn(
+                "historical pull-request URL does not bind repository and PR number",
+                "\\n".join(errors),
+            )
+
     def test_mixed_historical_source_validates_external_binding(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
