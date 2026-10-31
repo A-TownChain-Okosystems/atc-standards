@@ -119,8 +119,10 @@ class ScrRegistryTests(unittest.TestCase):
             }
             errors = self._fixture(root, [entry])
             self.assertTrue(
-                any("historical pull-request URL does not bind repository and PR number" in e
-                    for e in errors),
+                any(
+                    "historical pull-request URL does not bind repository and PR number" in e
+                    for e in errors
+                ),
                 errors,
             )
 
