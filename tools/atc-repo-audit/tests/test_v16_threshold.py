@@ -34,6 +34,12 @@ class ConventionalCommitThresholdTests(unittest.TestCase):
     def test_80_percent_is_pass(self):
         self.assertEqual(self._status(16), "PASS")
 
+    def test_insufficient_history_is_a_must_fail(self):
+        self.assertEqual(self._status(2, total=2), "FAIL")
+
+    def test_empty_history_is_a_must_fail(self):
+        self.assertEqual(self._status(0, total=0), "FAIL")
+
 
 if __name__ == "__main__":
     unittest.main()
