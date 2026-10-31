@@ -4,28 +4,77 @@ on:
   push:
     paths:
       - "standards/audit/ATC-STD-644.md"
+      - "registry/standards.yaml"
+      - "change-requests/SCR-0130.md"
       - "schemas/evidence/**"
       - "tests/evidence/**"
       - "tools/validate_evidence_system.py"
+      - "tools/gen_views/generate_views.py"
+      - "tools/gen_views/README.template.md"
+      - "requirements.txt"
       - ".github/workflows/atc-std-644-evidence-system.yml"
   pull_request:
     paths:
       - "standards/audit/ATC-STD-644.md"
+      - "registry/standards.yaml"
+      - "change-requests/SCR-0130.md"
       - "schemas/evidence/**"
       - "tests/evidence/**"
       - "tools/validate_evidence_system.py"
+      - "tools/gen_views/generate_views.py"
+      - "tools/gen_views/README.template.md"
+      - "requirements.txt"
       - ".github/workflows/atc-std-644-evidence-system.yml"
 
 permissions:
   contents: read
+  actions: read
 
 jobs:
-  evidence-system:
-    name: Evidence system integrity
+  evidence-validation:
+    name: Evidence graph validation
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout exact source
+      - name: Checkout exact PR head
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install declared validator dependencies
+        run: python3 -m pip install --disable-pip-version-check -r requirements.txt
+      - name: Validate repository evidence graph
+        env:
+          ATC_EXPECTED_HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: python3 tools/validate_evidence_system.py --check-repository
+      - name: Run positive and negative evidence tests
+        run: python3 -m unittest discover -s tests/evidence -p "test_*.py" -v
 
-      - name: Validate reference evidence system
-        run: python3 tools/validate_evidence_system.py
+  evidence-attestation:
+    name: Exact SHA evidence attestation
+    runs-on: ubuntu-latest
+    needs: evidence-validation
+    steps:
+      - name: Checkout exact PR head
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install declared validator dependencies
+        run: python3 -m pip install --disable-pip-version-check -r requirements.txt
+      - name: Resolve live Run Job Step evidence
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ATC_EXPECTED_HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: python3 tools/validate_evidence_system.py --attest-github-run
+      - name: Upload exact-SHA evidence record
+        uses: actions/upload-artifact@v4
+        with:
+          name: atc-std-644-evidence-${{ github.run_id }}
+          path: atc-std-644-evidence.json
+          if-no-files-found: error
