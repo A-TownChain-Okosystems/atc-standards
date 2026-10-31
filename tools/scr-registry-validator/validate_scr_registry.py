@@ -74,6 +74,26 @@ def validate(
                 errors.append(
                     f"{entry['id']}: pull-request URL does not bind repository and PR number"
                 )
+        if source_kind == "HISTORICAL_REFERENCE" and any(
+            key in source for key in ("repository", "commit", "url")
+        ):
+            repository = source.get("repository", "")
+            commit = source.get("commit", "")
+            url = source.get("url", "")
+            expected_url = f"https://github.com/{repository}/commit/{commit}"
+            if not all((repository, commit, url)):
+                errors.append(
+                    f"{entry['id']}: external historical source requires repository, commit and URL"
+                )
+            elif not re.fullmatch(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+", repository):
+                errors.append(f"{entry['id']}: invalid external source repository")
+            elif not re.fullmatch(r"[0-9a-f]{40}", commit):
+                errors.append(f"{entry['id']}: invalid external source commit SHA")
+            elif url != expected_url:
+                errors.append(
+                    f"{entry['id']}: external source URL does not bind repository and commit"
+                )
+
         if source_kind == "FILE" or (source_kind == "HISTORICAL_REFERENCE" and source.get("path")):
             relative_path = source.get("path", "")
             if not isinstance(relative_path, str) or not relative_path:
@@ -102,19 +122,6 @@ def validate(
                         f"{entry['id']}: source filename SCR ID does not match registry entry: "
                         f"{relative_path}"
                     )
-        elif source_kind == "HISTORICAL_REFERENCE":
-            repository = source.get("repository", "")
-            commit = source.get("commit", "")
-            url = source.get("url", "")
-            expected_url = f"https://github.com/{repository}/commit/{commit}"
-            if not re.fullmatch(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+", repository):
-                errors.append(f"{entry['id']}: invalid external source repository")
-            elif not re.fullmatch(r"[0-9a-f]{40}", commit):
-                errors.append(f"{entry['id']}: invalid external source commit SHA")
-            elif url != expected_url:
-                errors.append(
-                    f"{entry['id']}: external source URL does not bind repository and commit"
-                )
 
         if (
             entry.get("allocation_status") == "ASSIGNED"
