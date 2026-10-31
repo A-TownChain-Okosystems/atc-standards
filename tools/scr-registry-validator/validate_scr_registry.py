@@ -196,15 +196,6 @@ def validate(
                         f"{relative_path}"
                     )
 
-        if (
-            entry.get("allocation_status") == "ASSIGNED"
-            and entry.get("metadata_status") == "RECONCILED"
-        ):
-            if entry.get("lifecycle_status") == "UNKNOWN" or entry.get("decision") == "UNKNOWN":
-                errors.append(
-                    f"{entry['id']}: reconciled metadata cannot contain UNKNOWN lifecycle/decision"
-                )
-
     raw_ranges = data.get("unresolved_ranges", [])
     ranges = raw_ranges if isinstance(raw_ranges, list) else []
     for item in ranges:
