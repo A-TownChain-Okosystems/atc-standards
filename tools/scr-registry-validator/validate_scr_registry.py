@@ -91,6 +91,33 @@ def validate(
         if not isinstance(source, dict):
             continue
         source_kind = source.get("kind")
+        allowed_source_fields = {
+            "FILE": {"kind", "path"},
+            "PULL_REQUEST": {"kind", "pr", "branch", "url"},
+            "HISTORICAL_REFERENCE": {
+                "kind",
+                "path",
+                "pr",
+                "url",
+                "repository",
+                "commit",
+            },
+        }
+        unexpected_source_fields = set(source) - allowed_source_fields.get(
+            source_kind, {"kind"}
+        )
+        if unexpected_source_fields:
+            errors.append(
+                f"{entry.get('id', 'unknown SCR')}: source fields invalid for "
+                f"{source_kind}: {', '.join(sorted(unexpected_source_fields))}"
+            )
+        if source_kind == "HISTORICAL_REFERENCE" and (
+            ("repository" in source or "commit" in source) and "pr" in source
+        ):
+            errors.append(
+                f"{entry.get('id', 'unknown SCR')}: historical commit and pull-request "
+                "source bindings are mutually exclusive"
+            )
         if source_kind == "PULL_REQUEST":
             pr_number = source.get("pr")
             expected_url = (
