@@ -193,6 +193,36 @@ def validate_repository_head(expected_head):
     return actual
 
 
+def resolve_event_binding(event, run):
+    """Resolve the exact commit and PR identity for pull_request and push events."""
+    pull_request = event.get("pull_request")
+    if pull_request:
+        pr_number = pull_request.get("number")
+        base_sha = pull_request.get("base", {}).get("sha")
+        event_head_sha = pull_request.get("head", {}).get("sha")
+        event_branch = pull_request.get("head", {}).get("ref")
+    elif event.get("after"):
+        event_head_sha = event.get("after")
+        event_branch = event.get("ref", "").removeprefix("refs/heads/")
+        run_prs = run.get("pull_requests", [])
+        if len(run_prs) != 1:
+            raise EvidenceError("push workflow run does not resolve to exactly one pull request")
+        pr_number = run_prs[0].get("number")
+        base_sha = run_prs[0].get("base", {}).get("sha")
+        if event_branch != run.get("head_branch"):
+            raise EvidenceError("push event branch does not match workflow run branch")
+    else:
+        raise EvidenceError("unsupported event: expected pull_request or push")
+    if not isinstance(pr_number, int) or not SHA_RE.fullmatch(base_sha or ""):
+        raise EvidenceError("event does not contain a valid PR number and base SHA")
+    run_prs = run.get("pull_requests", [])
+    if len(run_prs) != 1 or run_prs[0].get("number") != pr_number:
+        raise EvidenceError("GitHub workflow run is not bound to the event pull request")
+    if run_prs[0].get("head", {}).get("ref") != event_branch:
+        raise EvidenceError("event branch does not match associated pull request head branch")
+    return event_head_sha, base_sha, pr_number
+
+
 def validate_live_run_identity(repo, run_id, expected_head, event_head_sha, pr_number, run):
     """Fail closed unless event, workflow run, repository and PR identities agree."""
     if event_head_sha != expected_head:
@@ -333,9 +363,6 @@ def attest_github_run(expected_head):
         event = load_json(event_path)
     except EvidenceError:
         raise
-    pull_request = event.get("pull_request", {})
-    base_sha = pull_request.get("base", {}).get("sha")
-    event_head_sha = pull_request.get("head", {}).get("sha")
     headers = {
         "Authorization": f"Bearer {token}",
         "Accept": "application/vnd.github+json",
@@ -347,8 +374,9 @@ def attest_github_run(expected_head):
     )
     run_response.raise_for_status()
     run = run_response.json()
+    event_head_sha, base_sha, pr_number = resolve_event_binding(event, run)
     validate_live_run_identity(
-        repo, run_id, checked_out_sha, event_head_sha, pull_request.get("number"), run
+        repo, run_id, checked_out_sha, event_head_sha, pr_number, run
     )
 
     jobs_response = requests.get(
@@ -404,7 +432,7 @@ def attest_github_run(expected_head):
         "repository": repo,
         "source_commit_sha": checked_out_sha,
         "base_commit_sha": base_sha,
-        "pull_request_number": pull_request["number"],
+        "pull_request_number": pr_number,
         "workflow_run_id": str(run_id),
         "workflow_run_url": run.get("html_url"),
         "run_head_sha": run.get("head_sha"),
