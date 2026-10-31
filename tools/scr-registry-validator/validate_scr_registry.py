@@ -255,7 +255,7 @@ def derive_source_identity(
                 if resolved.is_file():
                     content = resolved.read_bytes()
                     actual_blob = hashlib.sha1(
-                        f"blob {len(content)}\\0".encode("ascii") + content
+                        f"blob {len(content)}\0".encode("ascii") + content
                     ).hexdigest()
                     identity["blob_sha"] = source.get("blob_sha") or actual_blob
             except (OSError, RuntimeError, ValueError):
