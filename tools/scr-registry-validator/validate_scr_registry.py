@@ -280,8 +280,8 @@ def derive_source_identity(
 
 
 def find_status_contradictions(root: Path) -> list[str]:
-    """Find explicit non-effective wording that conflicts with approved normative metadata."""
-    residuals = []
+    """Find approved normative metadata that conflicts with explicit body wording."""
+    residuals: list[str] = []
     standards = root / "standards"
     if not standards.is_dir():
         return residuals
@@ -291,9 +291,9 @@ def find_status_contradictions(root: Path) -> list[str]:
             content = path.read_text(encoding="utf-8")
         except (OSError, UnicodeError):
             continue
-        if not content.startswith("---\n"):
+        if not content.startswith("---\\n"):
             continue
-        end = content.find("\n---", 4)
+        end = content.find("\\n---", 4)
         if end < 0:
             continue
         try:
@@ -302,19 +302,18 @@ def find_status_contradictions(root: Path) -> list[str]:
             continue
         if not isinstance(metadata, dict):
             continue
+        status = str(metadata.get("status", "")).strip().lower()
+        if status not in {"approved", "active", "effective"} or metadata.get("normative") is not True:
+            continue
         body = content[end + 4 :].lower()
-        if (
-            str(metadata.get("status", "")).lower() == "approved"
-            and metadata.get("normative") is True
-            and metadata.get("effective_date") is None
-            and any(marker in body for marker in markers)
-        ):
+        conflicts = [marker for marker in markers if marker in body]
+        if conflicts:
             residuals.append(
-                f"{path.relative_to(root).as_posix()}: approved normative metadata "
-                "conflicts with explicit non-effective/candidate wording"
+                f"{path.relative_to(root).as_posix()}: status={status}, normative=true, "
+                f"effective_date={metadata.get('effective_date')!r} conflicts with "
+                f"body marker(s): {', '.join(conflicts)}"
             )
     return residuals
-
 
 def validate(
     root: Path = ROOT, registry_path: Path | None = None, schema_path: Path | None = None
@@ -368,12 +367,22 @@ def validate(
         seen_relationship_sources: set[tuple[str, str]] = set()
         repository = str(data.get("repository", ""))
         registry_commit = str(data.get("source_commit", ""))
+        primary_source = entry.get("source", {})
+        primary_source_id = (
+            derive_source_identity(primary_source, root, repository, registry_commit)
+            if isinstance(primary_source, dict)
+            else None
+        )
         for label, source in source_bindings:
             validate_source(entry["id"], source, label, root, match, errors, registry_commit)
             if isinstance(source, dict) and label.startswith("related_sources["):
                 index = int(label.split("[", 1)[1].split("]", 1)[0])
                 relation = related_sources[index].get("relationship", "")
                 source_id = derive_source_identity(source, root, repository, registry_commit)
+                if source_id == primary_source_id:
+                    errors.append(
+                        f"{entry['id']}: related source duplicates primary source identity"
+                    )
                 key = (str(relation), source_id)
                 if key in seen_relationship_sources:
                     errors.append(

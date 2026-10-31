@@ -930,5 +930,126 @@ class ScrRegistryTests(unittest.TestCase):
             )
 
 
+    def test_related_source_cannot_duplicate_primary_source_identity(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            folder = root / "evidence"
+            folder.mkdir()
+            (folder / "same.md").write_text("same evidence", encoding="utf-8")
+            entry = {
+                "id": "SCR-0001",
+                "allocation_status": "UNRESOLVED",
+                "metadata_status": "UNRECONCILED",
+                "lifecycle_status": "UNKNOWN",
+                "decision": "UNKNOWN",
+                "source": {
+                    "kind": "HISTORICAL_REFERENCE",
+                    "path": "evidence/same.md",
+                },
+                "related_sources": [
+                    {
+                        "relationship": "CORROBORATES",
+                        "scope": "Must not self-corroborate the primary source",
+                        "source": {
+                            "kind": "HISTORICAL_REFERENCE",
+                            "path": "evidence/same.md",
+                        },
+                    }
+                ],
+                "notes": "A source cannot corroborate itself.",
+            }
+            errors = self._fixture(root, [entry])
+            self.assertTrue(
+                any("duplicates primary source identity" in error for error in errors),
+                errors,
+            )
+
+    def test_duplicate_related_source_identity_for_same_relationship_fails(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            folder = root / "evidence"
+            folder.mkdir()
+            (folder / "implementation.md").write_text(
+                "implementation evidence", encoding="utf-8"
+            )
+            entry = {
+                "id": "SCR-0001",
+                "allocation_status": "UNRESOLVED",
+                "metadata_status": "UNRECONCILED",
+                "lifecycle_status": "UNKNOWN",
+                "decision": "UNKNOWN",
+                "source": {"kind": "HISTORICAL_REFERENCE", "path": "evidence/primary.md"},
+                "related_sources": [
+                    {
+                        "relationship": "IMPLEMENTATION_EVIDENCE",
+                        "scope": "First scope",
+                        "source": {
+                            "kind": "HISTORICAL_REFERENCE",
+                            "path": "evidence/implementation.md",
+                        },
+                    },
+                    {
+                        "relationship": "IMPLEMENTATION_EVIDENCE",
+                        "scope": "Second scope",
+                        "source": {
+                            "kind": "HISTORICAL_REFERENCE",
+                            "path": "evidence/implementation.md",
+                        },
+                    },
+                ],
+                "notes": "Duplicate relation/source tuples must fail.",
+            }
+            (folder / "primary.md").write_text("primary", encoding="utf-8")
+            errors = self._fixture(root, [entry])
+            self.assertTrue(
+                any("duplicate related source identity" in error for error in errors),
+                errors,
+            )
+
+    def test_path_source_requires_persisted_blob_sha_and_identity(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            folder = root / "change-requests"
+            folder.mkdir()
+            (folder / "SCR-0001.md").write_text("# SCR-0001", encoding="utf-8")
+            entry = {
+                "id": "SCR-0001",
+                "allocation_status": "ASSIGNED",
+                "metadata_status": "RECONCILED",
+                "lifecycle_status": "UNKNOWN",
+                "decision": "UNKNOWN",
+                "source": {
+                    "kind": "FILE",
+                    "path": "change-requests/SCR-0001.md",
+                },
+                "notes": "Both immutable blob and identity pins are mandatory.",
+            }
+            self.assertEqual(self._fixture(root, [entry]), [])
+            registry_path = root / "registry" / "scr-registry.yaml"
+            payload = yaml.safe_load(registry_path.read_text(encoding="utf-8"))
+            del payload["entries"][0]["source"]["blob_sha"]
+            del payload["entries"][0]["source"]["identity_sha256"]
+            registry_path.write_text(yaml.safe_dump(payload), encoding="utf-8")
+            errors = module.validate(
+                root, registry_path, root / "schemas" / "scr-registry.schema.json"
+            )
+            self.assertTrue(any("blob_sha" in error for error in errors), errors)
+            self.assertTrue(any("identity_sha256" in error for error in errors), errors)
+
+    def test_status_contradiction_detector_detects_conflict_with_effective_date(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            standards = root / "standards"
+            standards.mkdir()
+            (standards / "ATC-STD-042.md").write_text(
+                "---\\nstatus: approved\\nnormative: true\\n"
+                "effective_date: 2026-10-01\\n---\\n"
+                "This standard is not yet effective.\\n",
+                encoding="utf-8",
+            )
+            residuals = module.find_status_contradictions(root)
+            self.assertEqual(len(residuals), 1, residuals)
+            self.assertIn("effective_date='2026-10-01'", residuals[0])
+
 if __name__ == "__main__":
     unittest.main()
