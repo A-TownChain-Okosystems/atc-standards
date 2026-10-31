@@ -106,3 +106,38 @@ Until those actions are recorded, all 31 historical entries remain UNRESOLVED / 
 This report is evidence-only. It does not change normative standards, product implementations, allocation decisions, Owner authority, or the P1-A6 status on base main. It does not merge PR #120 or convert it from Draft.
 
 The SCR registry, validator, tests, and CI gate on PR #120 must continue to fail closed for missing, contradictory, or unapproved evidence. P1-A6 remains OPEN pending the Owner actions above and subsequent exact-SHA revalidation.
+
+
+
+## Multi-source evidence reconciliation addendum — 2026-10-31
+
+This addendum supersedes the earlier single-source presentation for SCR-0095, SCR-0096 and SCR-0139. The registry now records a primary source plus separately typed related sources. Relationship labels describe the evidentiary role; they do not assert SCR acceptance, rejection, allocation, closure or normative force.
+
+### SCR-0095 — Automated Assurance and Hub repository-file completion
+
+- Primary source: `standards/enterprise/ATC-STD-041.md`.
+- Related scope reference: commit `3eba30ef3253205de24e617389018b954672ee4e`, whose message describes Automated Repository Assurance and attributes the work to SCR-0095. GitHub reports this commit unsigned.
+- Implementation evidence: `.github` PR #8, merged 2026-09-11, merge commit `caefa8c7315daceecb4ec8d02c47eb4df78e4027`. The PR adds SECURITY.md, CONTRIBUTING.md, CODEOWNERS and STATUS.md. GitHub reports merged_by as the A-TownChain bot account; the signed REALITY_STATUS narrative sections 39–40 attributes the merge to the Owner.
+- Corroborating source: signed `a-townchain-os-docs/REALITY_STATUS.md` commit `77ed5ed14cbed7375346211c2c9faa1a7299aa11`, sections 39–40.
+- Bounded approval context: the 2026-09-11 approval record includes ATC-STD-041 among 25 standards; it does not independently decide SCR-0095 closure or settle the two scopes.
+- Material document inconsistency: ATC-STD-041 frontmatter says `status: approved`, `normative: true`, and `effective_date: null`; its body says it is not effective until §9 release. This conflict is preserved, not silently resolved.
+
+### SCR-0096 — Scanner badge correction and Standards Family ID architecture
+
+- Primary source: `governance/ATC-STD-002.md`.
+- Separate scope reference: signed REALITY_STATUS commit `77ed5ed14cbed7375346211c2c9faa1a7299aa11`, section 41, explicitly attributes the ATC-COMPLIANCE badge/template correction to SCR-0096.
+- Change provenance: commits `49beb5c825876c01f8c69247b6e1c236a49cab15` and `ea9050a39570deab79cd8eeac46d419a4abb80ec` describe the Standards Family ID / Artifact Identifier architecture. Both are unsigned.
+- Bounded approval context: the 2026-09-11 approval record includes ATC-STD-002 among 25 approved standards. This supports approval of that standard, not a blanket SCR-0096 lifecycle decision and not a conclusion that the badge correction is the same work scope.
+
+### SCR-0139 — Automation Authority document and machine-readable configuration
+
+- Primary source: `standards/ai-gov/ATC-AI-GOV-AUTH-001.md`, frontmatter `status: approved`, `normative: false`.
+- Implementation evidence: `.github/ai/automation-authority.yaml`, immutable commit `750d920292149d16f327d8e33260d727599d873a`. The configuration declares an ACTIVE authority record and attributes issuance to the Owner; GitHub reports the commit unsigned, so the commit itself is not a cryptographic Owner attestation.
+- Change provenance: `atc-standards` commit `bceec03d7acd5bbaad42da10bbc2c75affd39f2f` explicitly references SCR-0139 and naming/generator conformance. GitHub reports it unsigned.
+- The semantic distinction between document approval, normative force and SCR lifecycle remains unresolved; no status or lifecycle field was changed.
+
+### Registry model and disposition
+
+The validator/schema now support `related_sources[]` records with an explicit relationship, scope description and independently validated source binding. Historical pull-request bindings can identify an external repository as well as a PR number and canonical URL. The legacy single `source` field remains supported for compatibility.
+
+All three entries remain `allocation_status: UNRESOLVED`, `metadata_status: UNRECONCILED`, `lifecycle_status: UNKNOWN`, `decision: UNKNOWN`. This is intentional: the evidence graph is materially richer, but the canonical scope and formal lifecycle are not yet proven. Technical evidence reconciliation is not blocked by the absence of an Owner decision; no Owner authority, normative force, allocation, or closure has been inferred.
