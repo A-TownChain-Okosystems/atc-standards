@@ -91,8 +91,17 @@ def validate(
                 continue
             if not target.is_file():
                 errors.append(f"{entry['id']}: referenced source file missing: {relative_path}")
-            elif source_kind == "FILE" and not FILE_RE.match(candidate.name):
-                errors.append(f"{entry['id']}: source path does not encode SCR ID: {relative_path}")
+            elif source_kind == "FILE":
+                file_match = FILE_RE.match(candidate.name)
+                if not file_match:
+                    errors.append(
+                        f"{entry['id']}: source path does not encode SCR ID: {relative_path}"
+                    )
+                elif file_match.group(1) != match.group(1):
+                    errors.append(
+                        f"{entry['id']}: source filename SCR ID does not match registry entry: "
+                        f"{relative_path}"
+                    )
         elif source_kind == "HISTORICAL_REFERENCE":
             repository = source.get("repository", "")
             commit = source.get("commit", "")
