@@ -708,5 +708,57 @@ class ScrRegistryTests(unittest.TestCase):
 
 
 
+
+    def test_identity_sha256_mismatch_fails_closed(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            folder = root / "change-requests"
+            folder.mkdir()
+            (folder / "SCR-0001.md").write_text("# SCR-0001", encoding="utf-8")
+            entry = {
+                "id": "SCR-0001",
+                "allocation_status": "ASSIGNED",
+                "metadata_status": "RECONCILED",
+                "lifecycle_status": "UNKNOWN",
+                "decision": "UNKNOWN",
+                "source": {
+                    "kind": "FILE",
+                    "path": "change-requests/SCR-0001.md",
+                    "identity_sha256": "0" * 64,
+                },
+                "notes": "Declared identity must match immutable coordinates.",
+            }
+            errors = self._fixture(root, [entry])
+            self.assertTrue(any("identity_sha256 does not match" in error for error in errors), errors)
+
+    def test_verified_attestation_runs_git_signature_verification(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            folder = root / "change-requests"
+            folder.mkdir()
+            (folder / "SCR-0001.md").write_text("# SCR-0001", encoding="utf-8")
+            entry = {
+                "id": "SCR-0001",
+                "allocation_status": "ASSIGNED",
+                "metadata_status": "RECONCILED",
+                "lifecycle_status": "UNKNOWN",
+                "decision": "UNKNOWN",
+                "source": {
+                    "kind": "FILE",
+                    "path": "change-requests/SCR-0001.md",
+                    "commit": "b" * 40,
+                    "attestation": {
+                        "signature_status": "VERIFIED",
+                        "signer_identity": "AA:BB",
+                        "authority_status": "NOT_ESTABLISHED",
+                    },
+                },
+                "notes": "A VERIFIED claim must pass git verify-commit.",
+            }
+            errors = self._fixture(root, [entry])
+            self.assertTrue(any("commit signature verification failed" in error for error in errors), errors)
+
+
+
 if __name__ == "__main__":
     unittest.main()
