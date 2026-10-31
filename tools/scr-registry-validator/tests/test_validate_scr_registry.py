@@ -205,6 +205,22 @@ class ScrRegistryTests(unittest.TestCase):
                 "\\n".join(errors),
             )
 
+    def test_duplicate_yaml_mapping_keys_fail_closed(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "registry").mkdir()
+            (root / "schemas").mkdir()
+            schema_src = SCRIPT.parents[2] / "schemas" / "scr-registry.schema.json"
+            schema_path = root / "schemas" / "scr-registry.schema.json"
+            schema_path.write_text(schema_src.read_text(encoding="utf-8"), encoding="utf-8")
+            registry_path = root / "registry" / "scr-registry.yaml"
+            registry_path.write_text(
+                "registry_version: 1\\nregistry_version: 1\\n",
+                encoding="utf-8",
+            )
+            errors = module.validate(root, registry_path, schema_path)
+            self.assertTrue(any("duplicate key" in error for error in errors))
+
     def test_non_object_registry_fails_without_crashing(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
