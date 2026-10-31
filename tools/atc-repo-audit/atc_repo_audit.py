@@ -336,10 +336,10 @@ def audit_repo(repo, level, registry_path=None):
         if len(subs) <= 2:
             a.add(
                 "V-16",
-                "WARN",
+                "FAIL",
                 "CI/CD",
-                "Historie zu flach (%d Commit(s)) — fetch-depth: 0 im Workflow verwenden (F-048/SCR-0039)"
-                % len(subs),
+                "Unzureichende Commit-Historie fuer die V-16-Bewertung (%d Commit(s)); "
+                "vollstaendige Historie erforderlich (fetch-depth: 0)" % len(subs),
             )
         else:
             frac = sum(1 for s in subs if CC_RE.match(s)) / max(1, len(subs)) if subs else 0
