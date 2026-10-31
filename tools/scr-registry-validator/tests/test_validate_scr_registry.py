@@ -167,6 +167,28 @@ class ScrRegistryTests(unittest.TestCase):
             errors = module.validate(root, registry_path, schema_path)
             self.assertEqual(errors, ["registry root must be an object"])
 
+    def test_pull_request_url_must_bind_repository_and_number(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            entry = {
+                "id": "SCR-0001",
+                "allocation_status": "RESERVED",
+                "metadata_status": "UNRECONCILED",
+                "lifecycle_status": "REVIEW",
+                "decision": "PENDING",
+                "source": {
+                    "kind": "PULL_REQUEST",
+                    "pr": 116,
+                    "url": "https://github.com/attacker/other-repo/pull/999",
+                },
+                "notes": "fixture",
+            }
+            errors = self._fixture(root, [entry])
+            self.assertIn(
+                "pull-request URL does not bind repository and PR number",
+                "\\n".join(errors),
+            )
+
     def test_external_reference_url_must_bind_commit(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
