@@ -86,5 +86,44 @@ class ScrRegistryTests(unittest.TestCase):
             self.assertTrue(any("overlaps explicit entry" in error for error in errors))
 
 
+    def test_missing_referenced_file_fails(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            entry = {
+                "id": "SCR-0001",
+                "allocation_status": "ASSIGNED",
+                "metadata_status": "UNRECONCILED",
+                "lifecycle_status": "UNKNOWN",
+                "decision": "UNKNOWN",
+                "source": {
+                    "kind": "FILE",
+                    "path": "change-requests/SCR-0001.md",
+                },
+                "notes": "fixture",
+            }
+            errors = self._fixture(root, [entry])
+            self.assertTrue(
+                any("referenced SCR file missing" in error for error in errors)
+            )
+
+    def test_free_identifier_fails_closed(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            entry = {
+                "id": "SCR-0001",
+                "allocation_status": "FREE",
+                "metadata_status": "UNRECONCILED",
+                "lifecycle_status": "UNKNOWN",
+                "decision": "UNKNOWN",
+                "source": {"kind": "HISTORICAL_REFERENCE"},
+                "notes": "fixture",
+            }
+            errors = self._fixture(root, [entry])
+            self.assertTrue(
+                any("FREE is forbidden" in error for error in errors)
+            )
+
+
+
 if __name__ == "__main__":
     unittest.main()
