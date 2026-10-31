@@ -1,8 +1,10 @@
 import importlib.util
+import os
+import shutil
+import subprocess
 import tempfile
 import unittest
 from pathlib import Path
-from unittest.mock import patch
 
 import yaml
 
@@ -38,6 +40,55 @@ class ScrRegistryTests(unittest.TestCase):
             "unresolved_ranges": ranges or [],
         }
         path = root / "registry" / "scr-registry.yaml"
+        path.write_text(yaml.safe_dump(payload), encoding="utf-8")
+        subprocess.run(["git", "init", "-q"], cwd=root, check=True)
+        subprocess.run(["git", "config", "user.name", "SCR Registry Tests"], cwd=root, check=True)
+        subprocess.run(
+            ["git", "config", "user.email", "scr-registry-tests@example.invalid"],
+            cwd=root,
+            check=True,
+        )
+        subprocess.run(["git", "add", "--all"], cwd=root, check=True)
+        subprocess.run(
+            ["git", "commit", "-m", "test: create registry fixture"],
+            cwd=root,
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        commit = subprocess.run(
+            ["git", "rev-parse", "HEAD"], cwd=root, check=True, capture_output=True, text=True
+        ).stdout.strip()
+        payload["source_commit"] = commit
+        for entry in entries:
+            if not isinstance(entry, dict):
+                continue
+            sources = [entry.get("source", {})]
+            sources.extend(
+                related.get("source", {})
+                for related in entry.get("related_sources", [])
+                if isinstance(related, dict)
+            )
+            for source in sources:
+                if not isinstance(source, dict):
+                    continue
+                relative_path = source.get("path")
+                if relative_path and "blob_sha" not in source:
+                    candidate = Path(relative_path)
+                    if not candidate.is_absolute() and ".." not in candidate.parts:
+                        blob_result = subprocess.run(
+                            ["git", "rev-parse", "--verify", f"HEAD:{relative_path}"],
+                            cwd=root,
+                            capture_output=True,
+                            text=True,
+                            check=False,
+                        )
+                        if blob_result.returncode == 0:
+                            source["blob_sha"] = blob_result.stdout.strip()
+                if "identity_sha256" not in source:
+                    source["identity_sha256"] = module.derive_source_identity(
+                        source, root, payload["repository"], commit
+                    )
         path.write_text(yaml.safe_dump(payload), encoding="utf-8")
         return module.validate(root, path, root / "schemas" / "scr-registry.schema.json")
 
@@ -586,38 +637,150 @@ class ScrRegistryTests(unittest.TestCase):
             self.assertTrue(any("blob SHA mismatch" in error for error in errors), errors)
 
     def test_signature_validity_does_not_imply_decision_authority(self):
+        gpg = shutil.which("gpg")
+        if not gpg:
+            self.skipTest("GnuPG is required for the cryptographic signature integration test")
         with tempfile.TemporaryDirectory() as tmp:
-            root = Path(tmp)
-            folder = root / "change-requests"
-            folder.mkdir()
-            (folder / "SCR-0001.md").write_text("# SCR-0001", encoding="utf-8")
-            entry = {
-                "id": "SCR-0001",
-                "allocation_status": "ASSIGNED",
-                "metadata_status": "RECONCILED",
-                "lifecycle_status": "UNKNOWN",
-                "decision": "UNKNOWN",
-                "source": {
-                    "kind": "FILE",
-                    "path": "change-requests/SCR-0001.md",
-                    "commit": "a" * 40,
-                    "attestation": {
-                        "signature_status": "VERIFIED",
-                        "signer_identity": "AA:BB",
-                        "authority_status": "NOT_ESTABLISHED",
-                    },
-                },
-                "notes": "A valid signature is not an authority decision.",
-            }
-            with patch.object(
-                module.subprocess,
-                "run",
-                side_effect=[
-                    type("Result", (), {"returncode": 0, "stdout": "", "stderr": ""})(),
-                    type("Result", (), {"returncode": 0, "stdout": "AA:BB", "stderr": ""})(),
+            temporary_root = Path(tmp)
+            root = temporary_root / "repo"
+            root.mkdir()
+            gnupg_home = temporary_root / "gnupg"
+            gnupg_home.mkdir(mode=0o700)
+            env = os.environ.copy()
+            env["GNUPGHOME"] = str(gnupg_home)
+            subprocess.run(
+                [
+                    gpg,
+                    "--batch",
+                    "--pinentry-mode",
+                    "loopback",
+                    "--passphrase",
+                    "",
+                    "--quick-generate-key",
+                    "SCR Registry Test <scr-registry-test@example.invalid>",
+                    "ed25519",
+                    "sign",
+                    "1d",
                 ],
-            ):
-                self.assertEqual(self._fixture(root, [entry]), [])
+                env=env,
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+            key_listing = subprocess.run(
+                [gpg, "--batch", "--with-colons", "--list-secret-keys"],
+                env=env,
+                check=True,
+                capture_output=True,
+                text=True,
+            ).stdout
+            key_fingerprint = next(
+                line.split(":")[9]
+                for line in key_listing.splitlines()
+                if line.startswith("fpr:")
+            )
+            (root / "registry").mkdir()
+            (root / "schemas").mkdir()
+            source_path = "change-requests/SCR-0001.md"
+            (root / "change-requests").mkdir()
+            (root / source_path).write_text("# SCR-0001", encoding="utf-8")
+            schema_src = SCRIPT.parents[2] / "schemas" / "scr-registry.schema.json"
+            schema_path = root / "schemas" / "scr-registry.schema.json"
+            schema_path.write_text(schema_src.read_text(encoding="utf-8"), encoding="utf-8")
+            git_config = [
+                ["git", "init", "-q"],
+                ["git", "config", "user.name", "SCR Registry Test"],
+                ["git", "config", "user.email", "scr-registry-test@example.invalid"],
+                ["git", "config", "gpg.program", gpg],
+                ["git", "config", "user.signingkey", key_fingerprint],
+                ["git", "config", "commit.gpgsign", "true"],
+            ]
+            for command in git_config:
+                subprocess.run(command, cwd=root, env=env, check=True)
+            subprocess.run(["git", "add", "--all"], cwd=root, env=env, check=True)
+            subprocess.run(
+                ["git", "commit", "-S", "-m", "test: signed source evidence"],
+                cwd=root,
+                env=env,
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+            commit = subprocess.run(
+                ["git", "rev-parse", "HEAD"],
+                cwd=root,
+                env=env,
+                check=True,
+                capture_output=True,
+                text=True,
+            ).stdout.strip()
+            signer_fingerprint = subprocess.run(
+                ["git", "show", "-s", "--format=%GF", "HEAD"],
+                cwd=root,
+                env=env,
+                check=True,
+                capture_output=True,
+                text=True,
+            ).stdout.strip()
+            self.assertEqual(signer_fingerprint.casefold(), key_fingerprint.casefold())
+            blob_sha = subprocess.run(
+                ["git", "rev-parse", "--verify", f"HEAD:{source_path}"],
+                cwd=root,
+                env=env,
+                check=True,
+                capture_output=True,
+                text=True,
+            ).stdout.strip()
+            source = {
+                "kind": "FILE",
+                "path": source_path,
+                "commit": commit,
+                "blob_sha": blob_sha,
+                "attestation": {
+                    "signature_status": "VERIFIED",
+                    "signer_identity": signer_fingerprint,
+                    "authority_status": "NOT_ESTABLISHED",
+                },
+            }
+            source["identity_sha256"] = module.derive_source_identity(
+                source, root, "A-TownChain-Okosystems/atc-standards", commit
+            )
+            payload = {
+                "registry_version": 1,
+                "repository": "A-TownChain-Okosystems/atc-standards",
+                "source_ref": "test",
+                "source_commit": commit,
+                "allocation_policy": {
+                    "unknown_is_blocked": True,
+                    "missing_file_is_not_free": True,
+                    "automatic_number_assignment": False,
+                    "reuse_permitted": False,
+                },
+                "entries": [
+                    {
+                        "id": "SCR-0001",
+                        "allocation_status": "ASSIGNED",
+                        "metadata_status": "RECONCILED",
+                        "lifecycle_status": "UNKNOWN",
+                        "decision": "UNKNOWN",
+                        "source": source,
+                        "notes": "A valid signature is not an authority decision.",
+                    }
+                ],
+                "unresolved_ranges": [],
+            }
+            registry_path = root / "registry" / "scr-registry.yaml"
+            registry_path.write_text(yaml.safe_dump(payload), encoding="utf-8")
+            previous_home = os.environ.get("GNUPGHOME")
+            os.environ["GNUPGHOME"] = str(gnupg_home)
+            try:
+                errors = module.validate(root, registry_path, schema_path)
+            finally:
+                if previous_home is None:
+                    os.environ.pop("GNUPGHOME", None)
+                else:
+                    os.environ["GNUPGHOME"] = previous_home
+            self.assertEqual(errors, [])
 
     def test_established_authority_requires_authority_evidence(self):
         with tempfile.TemporaryDirectory() as tmp:
