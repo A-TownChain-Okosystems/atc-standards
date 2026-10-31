@@ -167,7 +167,6 @@ class ScrRegistryTests(unittest.TestCase):
             errors = module.validate(root, registry_path, schema_path)
             self.assertEqual(errors, ["registry root must be an object"])
 
-
     def test_external_reference_url_must_bind_commit(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
