@@ -944,6 +944,15 @@ entries:
       kind: HISTORICAL_REFERENCE
       path: "registry/findings.yaml"
     notes: "Devnet/Testnet infrastructure reference; grouped findings evidence only. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0107
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "registry/findings.yaml"
+    notes: "Commit 3e80498475da8d69b2fad171a7a1c5393f68ead5 explicitly labels the findings-schema normalization as SCR-0107. Commit signature is unsigned; this proves a historical identifier reference, not Owner approval, final allocation, implementation completion or closure."
   - id: SCR-0108
     allocation_status: UNRESOLVED
     metadata_status: UNRECONCILED
@@ -1244,11 +1253,6 @@ entries:
       path: "change-requests/SCR-0142.md"
     notes: "New Draft governance change request; Owner decision and review chain remain pending."
 unresolved_ranges:
-  - start: SCR-0107
-    end: SCR-0107
-    allocation_status: UNRESOLVED
-    evidence: "No direct source reference was recovered in the current repository search; absence of a hit is not proof of availability."
-    required_action: "Continue historical commit, PR, issue and Owner-evidence reconstruction; keep blocked."
   - start: SCR-0133
     end: SCR-0134
     allocation_status: UNRESOLVED
