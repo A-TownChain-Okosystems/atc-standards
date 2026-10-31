@@ -991,14 +991,266 @@ entries:
       kind: FILE
       path: "change-requests/SCR-0142.md"
     notes: "New Draft governance change request; Owner decision and review chain remain pending."
-unresolved_ranges:
-  - start: SCR-0093
-    end: SCR-0115
-    allocation_status: CONFLICT
-    evidence: "registry/allocation/conflicts.yaml P1-A6 records references to this range while canonical change-request files are absent from main."
-    required_action: "Reconstruct each identifier from commit, PR, issue and Owner evidence; do not infer title, decision or lifecycle."
-  - start: SCR-0132
-    end: SCR-0139
+  - id: SCR-0093
     allocation_status: UNRESOLVED
-    evidence: "No corresponding canonical change-request files were observed in the source tree snapshot."
-    required_action: "Search historical refs and Owner allocations before any availability decision."
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "standards/architecture/ATC-STD-100.md"
+    notes: "Language Architecture L0-L8 reference; the canonical SCR file is absent. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0094
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "evidence/README.md"
+    notes: "Continuous Assurance reference; related standards also cite this identifier, but lifecycle and decision are not reconciled. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0095
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "standards/enterprise/ATC-STD-041.md"
+    notes: "Automated Assurance reference; canonical SCR file absent. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0096
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "governance/ATC-STD-002.md"
+    notes: "Standards Family ID and artifact identifier architecture reference; canonical SCR file absent. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0097
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "governance/constitution/ATC-GOV-001.md"
+    notes: "Governance Constitution reference; canonical SCR file absent. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0098
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "approval/APPROVAL-DECISION-2026-09-11-000-v1.3.0.md"
+    notes: "ATC-STD-000 v1.3.0 approval record cites SCR-0098; SCR lifecycle metadata remains unreconciled. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0099
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "audits/file-admission/2026-09-11-atc-standards.md"
+    notes: "File Admission pilot audit reference; canonical SCR file absent. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0100
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "tools/gen_views/gen_metadata.py"
+    notes: "Per-standard metadata generator reference; canonical SCR file absent. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0101
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: ".atc/standards.yaml"
+    notes: "Repository standards-profile binding reference; canonical SCR file absent. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0102
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "approval/APPROVAL-DECISION-2026-09-11-001-Legacy-Restaurierung-25.md"
+    notes: "Owner approval record for legacy restoration; individual SCR lifecycle and decision fields remain unreconciled. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0103
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "standards/enterprise/ATC-ORG-BASELINE-001.md"
+    notes: "Organization Engineering Baseline reference; canonical SCR file absent. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0104
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "registry/findings.yaml"
+    notes: "Contract execution MVP reference; findings record describes partial resolution, not SCR closure. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0105
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "registry/findings.yaml"
+    notes: "Security automation/CodeQL and Dependabot rollout reference; grouped findings evidence only. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0106
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "registry/findings.yaml"
+    notes: "Devnet/Testnet infrastructure reference; grouped findings evidence only. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0108
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "registry/findings.yaml"
+    notes: "Chain-Access-Layer reference; grouped findings evidence only. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0109
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "registry/findings.yaml"
+    notes: "Referenced in grouped Chain-Access integration evidence; individual scope not reconstructed. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0110
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "registry/findings.yaml"
+    notes: "Referenced in grouped Chain-Access integration evidence; individual scope not reconstructed. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0111
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "registry/findings.yaml"
+    notes: "Referenced in grouped Chain-Access integration evidence; individual scope not reconstructed. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0112
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "registry/findings.yaml"
+    notes: "Referenced in grouped Devnet/Testnet evidence; individual scope not reconstructed. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0113
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "registry/findings.yaml"
+    notes: "Referenced in grouped Devnet/Testnet evidence; individual scope not reconstructed. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0114
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "registry/code-quality-matrix.yaml"
+    notes: "Genesis Engine determinism reference; canonical SCR file absent. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0115
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "tools/atc-repo-audit/atc_repo_audit.py"
+    notes: "ATC repository audit tool explicitly labels SCR-0115; SCR-0116 independently identifies it as the highest known referenced number. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0132
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "docs/SPEC-ATC-GATE-METHODOLOGY-001.md"
+    notes: "Gate Methodology Draft 0.1.0 reference; document remains draft. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0135
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "docs/OEP-0007-MERGE-GATE-GOVERNANCE.md"
+    notes: "OEP-0007 Merge/Gate Governance Draft reference. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0136
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "docs/ATC-SYSTEM-ROADMAP-001.md"
+    notes: "System Milestone Model Draft reference. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0137
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "docs/ATC-SYSTEM-ROADMAP-001.md"
+    notes: "Major reconciliation of the milestone model is referenced in the roadmap; standalone SCR file absent. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0138
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "standards/aurora-swarm/ATC-AURORA-SWARM-001.md"
+    notes: "Aurora Swarm Network candidate standard reference; not normative. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0139
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "standards/ai-gov/ATC-AI-GOV-AUTH-001.md"
+    notes: "Automation Authority specification reference; normative status is described in the standard, SCR file absent. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+unresolved_ranges:
+  - start: SCR-0107
+    end: SCR-0107
+    allocation_status: UNRESOLVED
+    evidence: "No direct source reference was recovered in the current repository search; absence of a hit is not proof of availability."
+    required_action: "Continue historical commit, PR, issue and Owner-evidence reconstruction; keep blocked."
+  - start: SCR-0133
+    end: SCR-0134
+    allocation_status: UNRESOLVED
+    evidence: "No direct source reference was recovered in the current repository search; absence of a hit is not proof of availability."
+    required_action: "Continue historical commit, PR, issue and Owner-evidence reconstruction; keep blocked."
