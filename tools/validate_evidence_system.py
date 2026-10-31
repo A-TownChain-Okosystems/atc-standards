@@ -9,8 +9,8 @@ import subprocess
 import sys
 from pathlib import Path
 
-import requests
 from jsonschema import Draft202012Validator
+import requests
 
 ROOT = Path(__file__).resolve().parents[1]
 RECORD_SCHEMA_PATH = ROOT / "schemas/evidence/record.schema.json"
