@@ -562,8 +562,6 @@ class ScrRegistryTests(unittest.TestCase):
             errors = self._fixture(root, [entry])
             self.assertIn("external source URL does not bind", "\n".join(errors))
 
-
-
     def test_file_blob_sha_rejects_changed_source_bytes(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
