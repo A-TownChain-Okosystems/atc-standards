@@ -85,9 +85,6 @@ def validate_source(
             f"{', '.join(sorted(unexpected_source_fields))}"
         )
 
-    if source_kind == "FILE" and source.get("commit") and source["commit"] != registry_commit:
-        errors.append(f"{entry_id}: {label} file commit does not match registry source_commit")
-
     attestation = source.get("attestation", {})
     if isinstance(attestation, dict) and attestation.get("signature_status") == "VERIFIED":
         commit_sha = source.get("commit")
@@ -209,13 +206,29 @@ def validate_source(
             return
         if not target.is_file():
             errors.append(f"{entry_id}: {label} referenced source file missing: {relative_path}")
-        elif source.get("blob_sha"):
-            content = target.read_bytes()
-            actual_blob_sha = hashlib.sha1(
-                f"blob {len(content)}\0".encode("ascii") + content
-            ).hexdigest()
-            if actual_blob_sha != source["blob_sha"]:
-                errors.append(f"{entry_id}: {label} blob SHA mismatch for {relative_path}")
+        else:
+            blob_sha = source.get("blob_sha")
+            source_commit = source.get("commit") or registry_commit
+            if not blob_sha:
+                errors.append(f"{entry_id}: {label} path source requires blob_sha")
+            elif not source_commit:
+                errors.append(f"{entry_id}: {label} path source requires an immutable commit SHA")
+            else:
+                blob_result = subprocess.run(
+                    ["git", "rev-parse", "--verify", f"{source_commit}:{relative_path}"],
+                    cwd=root,
+                    capture_output=True,
+                    text=True,
+                    check=False,
+                )
+                if blob_result.returncode != 0:
+                    errors.append(
+                        f"{entry_id}: {label} cannot resolve source blob at commit {source_commit}"
+                    )
+                elif blob_result.stdout.strip() != blob_sha:
+                    errors.append(
+                        f"{entry_id}: {label} blob SHA mismatch for {relative_path} at {source_commit}"
+                    )
         if target.is_file() and source_kind == "FILE":
             file_match = FILE_RE.match(candidate.name)
             if not file_match:

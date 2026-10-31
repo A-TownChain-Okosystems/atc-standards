@@ -195,7 +195,8 @@
     "source": {
       "type": "object",
       "required": [
-        "kind"
+        "kind",
+        "identity_sha256"
       ],
       "additionalProperties": false,
       "properties": {
@@ -320,7 +321,8 @@
           },
           "then": {
             "required": [
-              "path"
+              "path",
+              "blob_sha"
             ]
           }
         },
@@ -339,7 +341,8 @@
             "anyOf": [
               {
                 "required": [
-                  "path"
+                  "path",
+                  "blob_sha"
                 ]
               },
               {
