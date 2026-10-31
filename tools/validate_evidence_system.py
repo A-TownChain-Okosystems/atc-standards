@@ -9,8 +9,8 @@ import subprocess
 import sys
 from pathlib import Path
 
-from jsonschema import Draft202012Validator
 import requests
+from jsonschema import Draft202012Validator
 
 ROOT = Path(__file__).resolve().parents[1]
 RECORD_SCHEMA_PATH = ROOT / "schemas/evidence/record.schema.json"
@@ -193,15 +193,137 @@ def validate_repository_head(expected_head):
     return actual
 
 
+def build_live_evidence_graph(repo, expected_head, base_sha, run_id, run, job, successful_steps):
+    """Build a run-specific graph; unexecuted E2E/audit/release remain explicitly unproven."""
+    if not SHA_RE.fullmatch(base_sha or ""):
+        raise EvidenceError("PR base SHA is missing or malformed")
+    pr_numbers = [item.get("number") for item in run.get("pull_requests", [])]
+    if len(pr_numbers) != 1 or not isinstance(pr_numbers[0], int):
+        raise EvidenceError("workflow run does not resolve to exactly one pull request")
+    pr_number = pr_numbers[0]
+    ids = {
+        "requirement": "ATC-REQ-STD644-001",
+        "specification": "ATC-SPEC-STD644-001",
+        "component": "ATC-COMP-STD644-VALIDATOR",
+        "function": "ATC-FUNC-STD644-GRAPH-VALIDATOR",
+        "implementation": "ATC-IMPL-STD644-GRAPH-VALIDATOR",
+        "change": f"ATC-CHANGE-PR-{pr_number}",
+        "documentation": "ATC-DOC-STD644-CANDIDATE",
+        "test": "ATC-TEST-STD644-EVIDENCE-SUITE",
+        "ci": f"ATC-CI-RUN-{run_id}",
+        "e2e": f"ATC-E2E-PR-{pr_number}",
+        "audit": f"ATC-AUDIT-PR-{pr_number}",
+        "release": f"ATC-REL-PR-{pr_number}",
+    }
+    validation_step = next(
+        step for step in successful_steps
+        if step["name"] == "Validate repository evidence graph"
+    )
+    records = [
+        {"id": ids["requirement"], "type": "REQUIREMENT", "version": "1.0", "status": "SPECIFIED"},
+        {"id": ids["specification"], "type": "SPECIFICATION", "version": "1.0", "status": "SPECIFIED", "references": [ids["requirement"]]},
+        {"id": ids["component"], "type": "COMPONENT", "version": "1.0", "status": "PRESENT", "references": [ids["specification"]]},
+        {"id": ids["function"], "type": "FUNCTION", "version": "1.0", "status": "IMPLEMENTED", "references": [ids["component"], ids["specification"]]},
+        {
+            "id": ids["implementation"],
+            "type": "IMPLEMENTATION",
+            "version": "1.0",
+            "status": "IMPLEMENTED",
+            "repository": repo,
+            "path": "tools/validate_evidence_system.py",
+            "module": "validate_evidence_system",
+            "symbol": "validate_graph",
+            "commit_sha": expected_head,
+            "references": [ids["function"]],
+        },
+        {
+            "id": ids["change"],
+            "type": "CHANGE",
+            "version": "1.0",
+            "status": "TESTED",
+            "base_sha": base_sha,
+            "head_sha": expected_head,
+            "classification": ["MODIFY"],
+            "references": [ids["implementation"], ids["function"]],
+        },
+        {
+            "id": ids["documentation"],
+            "type": "DOCUMENTATION",
+            "version": "1.0",
+            "status": "DOCUMENTED",
+            "path": "standards/audit/ATC-STD-644.md",
+            "references": [ids["change"]],
+        },
+        {
+            "id": ids["test"],
+            "type": "TEST",
+            "version": "1.0",
+            "status": "TESTED",
+            "test_kind": "regression",
+            "path": "tests/evidence/test_validate_evidence_system.py",
+            "references": [ids["function"], ids["implementation"]],
+        },
+        {
+            "id": ids["ci"],
+            "type": "CI",
+            "version": "1.0",
+            "status": "PASS",
+            "commit_sha": expected_head,
+            "run_id": str(run_id),
+            "job_id": str(job["id"]),
+            "step_name": validation_step["name"],
+            "step_number": validation_step["number"],
+            "result": "PASS",
+            "references": [ids["test"], ids["implementation"]],
+        },
+        {"id": ids["e2e"], "type": "E2E", "version": "1.0", "status": "NOT_PROVEN", "references": [ids["ci"]]},
+        {"id": ids["audit"], "type": "AUDIT", "version": "1.0", "status": "NOT_PROVEN", "references": [ids["e2e"]]},
+        {"id": ids["release"], "type": "RELEASE", "version": "1.0", "status": "NOT_READY", "references": [ids["audit"]]},
+    ]
+    edges = [
+        ("requirement", "specification", "SPECIFIES"),
+        ("specification", "component", "CONTAINS"),
+        ("component", "function", "CONTAINS"),
+        ("function", "implementation", "IMPLEMENTS"),
+        ("implementation", "change", "CHANGES"),
+        ("change", "documentation", "DOCUMENTS"),
+        ("change", "test", "TESTS"),
+        ("test", "ci", "VERIFIES"),
+        ("ci", "e2e", "VALIDATES"),
+        ("e2e", "audit", "VALIDATES"),
+        ("audit", "release", "RELEASES"),
+    ]
+    traceability = {
+        "id": f"ATC-TRACE-PR-{pr_number}",
+        "status": "INCOMPLETE",
+        "edges": [
+            {"from": ids[source], "to": ids[target], "relation": relation}
+            for source, target, relation in edges
+        ],
+    }
+    return records, traceability
+
+
 def attest_github_run(expected_head):
     repo = os.environ.get("GITHUB_REPOSITORY", "")
     run_id = os.environ.get("GITHUB_RUN_ID", "")
     token = os.environ.get("GITHUB_TOKEN", "")
-    if not repo or not run_id or not token:
+    event_path = os.environ.get("GITHUB_EVENT_PATH", "")
+    if not repo or not run_id or not token or not event_path:
         raise EvidenceError(
-            "GITHUB_REPOSITORY, GITHUB_RUN_ID and GITHUB_TOKEN are required for live attestation"
+            "GITHUB_REPOSITORY, GITHUB_RUN_ID, GITHUB_TOKEN and GITHUB_EVENT_PATH are required"
         )
     checked_out_sha = validate_repository_head(expected_head)
+    try:
+        event = load_json(event_path)
+    except EvidenceError:
+        raise
+    pull_request = event.get("pull_request", {})
+    base_sha = pull_request.get("base", {}).get("sha")
+    event_head_sha = pull_request.get("head", {}).get("sha")
+    if event_head_sha != checked_out_sha:
+        raise EvidenceError("pull_request event head SHA does not match exact checkout SHA")
+
     headers = {
         "Authorization": f"Bearer {token}",
         "Accept": "application/vnd.github+json",
@@ -215,6 +337,14 @@ def attest_github_run(expected_head):
     run = run_response.json()
     if str(run.get("id")) != run_id:
         raise EvidenceError("GitHub workflow run identity does not match this run")
+    if run.get("head_sha") != checked_out_sha:
+        raise EvidenceError("GitHub workflow run head SHA does not match exact checkout SHA")
+    if run.get("repository", {}).get("full_name") != repo:
+        raise EvidenceError("GitHub workflow run repository identity mismatch")
+    run_prs = run.get("pull_requests", [])
+    if len(run_prs) != 1 or run_prs[0].get("number") != pull_request.get("number"):
+        raise EvidenceError("GitHub workflow run is not bound to the event pull request")
+
     jobs_response = requests.get(
         f"{base}/actions/runs/{run_id}/jobs?per_page=100",
         headers=headers,
@@ -223,11 +353,15 @@ def attest_github_run(expected_head):
     jobs_response.raise_for_status()
     jobs = jobs_response.json().get("jobs", [])
     validation_jobs = [
-        job for job in jobs if job.get("name") == "Evidence graph validation"
+        item for item in jobs if item.get("name") == "Evidence graph validation"
     ]
     if len(validation_jobs) != 1:
         raise EvidenceError("cannot uniquely resolve Evidence graph validation job")
     job = validation_jobs[0]
+    if str(job.get("run_id")) != run_id:
+        raise EvidenceError("validation job belongs to a different workflow run")
+    if job.get("head_sha") and job.get("head_sha") != checked_out_sha:
+        raise EvidenceError("validation job head SHA does not match exact checkout SHA")
     if job.get("status") != "completed" or job.get("conclusion") != "success":
         raise EvidenceError("evidence validation job is not completed successfully")
     required_steps = {
@@ -244,10 +378,27 @@ def attest_github_run(expected_head):
     if {step["name"] for step in successful_steps} != required_steps:
         raise EvidenceError("required validation steps are missing, skipped, or failed")
 
+    record_schema = load_json(RECORD_SCHEMA_PATH)
+    trace_schema = load_json(TRACE_SCHEMA_PATH)
+    records, traceability = build_live_evidence_graph(
+        repo, checked_out_sha, base_sha, run_id, run, job, successful_steps
+    )
+    validate_graph(records, traceability, record_schema, trace_schema)
+    evaluation = evaluate(records, traceability)
+    expected_evaluation = {
+        "status": "CI-VERIFIED",
+        "traceability": "INCOMPLETE",
+        "release": "BLOCKED",
+    }
+    if evaluation != expected_evaluation:
+        raise EvidenceError(f"live evidence graph status mismatch: {evaluation}")
+
     evidence = {
-        "schema": "ATC-STD-644-LIVE-CI-EVIDENCE-v1",
+        "schema": "ATC-STD-644-LIVE-CI-EVIDENCE-v2",
         "repository": repo,
         "source_commit_sha": checked_out_sha,
+        "base_commit_sha": base_sha,
+        "pull_request_number": pull_request["number"],
         "workflow_run_id": str(run_id),
         "workflow_run_url": run.get("html_url"),
         "run_head_sha": run.get("head_sha"),
@@ -262,6 +413,9 @@ def attest_github_run(expected_head):
             }
             for step in sorted(successful_steps, key=lambda item: item["number"])
         ],
+        "records": records,
+        "traceability": traceability,
+        "evaluation": evaluation,
     }
     output = ROOT / "atc-std-644-evidence.json"
     output.write_text(json.dumps(evidence, indent=2, sort_keys=True) + "\n", encoding="utf-8")
@@ -272,10 +426,10 @@ def attest_github_run(expected_head):
         print(
             f"PASS: Step {step['step_number']} {step['step_name']} — {step['result']}"
         )
+    print(f"PASS: live evidence graph => {evaluation}")
     print(f"EVIDENCE_ARTIFACT: {output.name}")
     print(f"EVIDENCE_SHA256: {digest}")
     return 0
-
 
 def main():
     parser = argparse.ArgumentParser()
