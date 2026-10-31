@@ -28,26 +28,26 @@ jobs:
         shell: bash
         run: |
           set +e
-          mkdir -p .scr-registry-evidence
-          python tools/scr-registry-validator/validate_scr_registry.py > .scr-registry-evidence/validator.log 2>&1
+          mkdir -p scr-registry-evidence
+          python tools/scr-registry-validator/validate_scr_registry.py > scr-registry-evidence/validator.log 2>&1
           validator_status=$?
-          python -m unittest discover -s tools/scr-registry-validator/tests -v > .scr-registry-evidence/tests.log 2>&1
+          python -m unittest discover -s tools/scr-registry-validator/tests -v > scr-registry-evidence/tests.log 2>&1
           tests_status=$?
           set -e
           {
-            printf 'pr_head_sha=%s\\n' "${{ github.event.pull_request.head.sha || github.sha }}"
-            printf 'workflow_sha=%s\\n' "$GITHUB_SHA"
-            printf 'run_id=%s\\n' "$GITHUB_RUN_ID"
-            printf 'run_attempt=%s\\n' "$GITHUB_RUN_ATTEMPT"
-            printf 'validator_exit=%s\\n' "$validator_status"
-            printf 'tests_exit=%s\\n' "$tests_status"
-          } > .scr-registry-evidence/summary.txt
-          sha256sum .scr-registry-evidence/validator.log .scr-registry-evidence/tests.log .scr-registry-evidence/summary.txt > .scr-registry-evidence/SHA256SUMS
+            printf 'pr_head_sha=%s\n' "${{ github.event.pull_request.head.sha || github.sha }}"
+            printf 'workflow_sha=%s\n' "$GITHUB_SHA"
+            printf 'run_id=%s\n' "$GITHUB_RUN_ID"
+            printf 'run_attempt=%s\n' "$GITHUB_RUN_ATTEMPT"
+            printf 'validator_exit=%s\n' "$validator_status"
+            printf 'tests_exit=%s\n' "$tests_status"
+          } > scr-registry-evidence/summary.txt
+          sha256sum scr-registry-evidence/validator.log scr-registry-evidence/tests.log scr-registry-evidence/summary.txt > scr-registry-evidence/SHA256SUMS
       - name: Upload SCR validation evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: scr-registry-evidence-${{ github.run_id }}-${{ github.run_attempt }}
-          path: .scr-registry-evidence/
+          path: scr-registry-evidence/
           if-no-files-found: error
           retention-days: 90
