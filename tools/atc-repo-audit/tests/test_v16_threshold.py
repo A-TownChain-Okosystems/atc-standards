@@ -13,13 +13,8 @@ SPEC.loader.exec_module(MODULE)
 
 class ConventionalCommitThresholdTests(unittest.TestCase):
     def _status(self, conventional_count: int, total: int = 20) -> str:
-        subjects = [
-            f"feat(scope): valid commit {index}"
-            for index in range(conventional_count)
-        ]
-        subjects.extend(
-            f"legacy commit {index}" for index in range(total - conventional_count)
-        )
+        subjects = [f"feat(scope): valid commit {index}" for index in range(conventional_count)]
+        subjects.extend(f"legacy commit {index}" for index in range(total - conventional_count))
         output = "\n".join(f"{index:040x} {subject}" for index, subject in enumerate(subjects))
         original_run = subprocess.run
 
