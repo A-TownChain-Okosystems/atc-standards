@@ -1066,9 +1066,7 @@ class ScrRegistryTests(unittest.TestCase):
             trust.parent.mkdir()
             fingerprint = "A" * 40
             trust.write_text(
-                yaml.safe_dump(
-                    {"schema_version": 1, "trusted_signer_fingerprints": [fingerprint]}
-                ),
+                yaml.safe_dump({"schema_version": 1, "trusted_signer_fingerprints": [fingerprint]}),
                 encoding="utf-8",
             )
             self.assertEqual(module.load_trusted_signers(root), {fingerprint.casefold()})
