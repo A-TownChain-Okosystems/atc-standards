@@ -8,10 +8,9 @@ Base main: af98f5e3766db99f33497c1044b0521dea8c7593
 
 ## 0. Decision status and guardrails
 
-This package requests explicit human Owner decisions. It is not itself an approval, does not record an Owner decision, does not allocate or reassign an SCR identifier, and does not modify normative standard metadata.
+This package records the available evidence and possible formal dispositions. A new Owner decision is not a prerequisite for technical evidence reconciliation, source mapping, or non-normative engineering improvements. This package does not itself record an Owner decision, allocate or reassign an SCR identifier, or modify normative standard metadata.
 
-Decision state for all three cases: BLOCKED — OWNER_DECISION_REQUIRED.
-Owner decision fields below are intentionally blank.
+Evidence state for all three cases: historical scope/lifecycle remains unresolved. Technical reconciliation may continue; formal allocation, normative force, and SCR lifecycle remain unchanged until separately evidenced.
 
 No SCR identity is marked ACCEPTED, CLOSED, REJECTED, SUPERSEDED, OBSOLETE, or FREE by this package. No ID is auto-allocated or recycled. No change-request file is fabricated. No normative flag or standard status is changed. PR #120 remains Draft; no merge is requested or performed.
 
@@ -61,14 +60,14 @@ The source record associates SCR-0095 with at least two distinct work scopes:
 A. repository-file/Hub artifact completion; and
 B. Automated Repository Assurance / standards and gate changes.
 
-Owner must select and document one disposition:
+Possible formal dispositions, only if a future lifecycle or allocation change is required:
 
 - [ ] D1 — One umbrella SCR-0095 intentionally covered both scopes. Confirm the authoritative title, scope, acceptance criteria, and evidence set.
 - [ ] D2 — SCR-0095 belongs to only one scope. Identify the authoritative scope and explicitly classify the other historical reference as misattributed; do not silently rewrite history.
 - [ ] D3 — The work should have been split into separate SCRs. Owner must identify the historically valid identity for each part and authorize any required registry correction through the formal allocation process. The agent must not invent a new identifier.
 - [ ] D4 — Other disposition, described by Owner: ______________________________
 
-Owner must also confirm whether the merge of .github PR #8 is accepted as the implementation/closure evidence for the Hub-file scope and provide/identify the actual review approval record if required.
+The PR review record is now directly verified: review ID 5178534325 is APPROVED by GitHub account A-TownChain; PR #8 was merged by that account, with signed merge commit caefa8c7315daceecb4ec8d02c47eb4df78e4027. This establishes implementation and review events for the Hub-file scope. It does not automatically close SCR-0095.
 
 ### 1.5 Owner decision record — intentionally blank
 
@@ -81,7 +80,7 @@ Owner must also confirm whether the merge of .github PR #8 is accepted as the im
 - Lifecycle state authorized: ______________________________
 - Conditions / residuals: ______________________________
 
-Until completed and independently checked: SCR-0095 = BLOCKED.
+Technical source mapping may proceed. SCR-0095 allocation remains UNRESOLVED; lifecycle and decision remain UNKNOWN.
 
 ## 2. SCR-0096 — scanner badge correction vs Standards Family ID architecture
 
@@ -146,7 +145,7 @@ Owner must confirm whether ATC-STD-002's approval under SCR-0102 is the controll
 - Lifecycle state authorized: ______________________________
 - Conditions / residuals: ______________________________
 
-Until completed and independently checked: SCR-0096 = BLOCKED.
+Technical source mapping may proceed. SCR-0096 allocation remains UNRESOLVED; lifecycle and decision remain UNKNOWN.
 
 ## 3. SCR-0139 — status=approved while normative=false
 
@@ -184,7 +183,7 @@ The fields may represent different dimensions:
 
 That interpretation is plausible but is not assumed to be true without Owner confirmation. Conversely, changing normative to true based only on the word APPROVED would be unsafe.
 
-### 3.3 Owner decision required
+### 3.3 Evidence-led technical interpretation and optional formal dispositions
 
 Owner must select and document one disposition:
 
@@ -193,7 +192,7 @@ Owner must select and document one disposition:
 - [ ] D3 — "approved" is an incorrect lifecycle label. Specify the correct status (e.g. candidate/draft) and the evidence required for a later approval.
 - [ ] D4 — Other disposition, described by Owner: ______________________________
 
-Owner must explicitly confirm whether SCR-0139 is closed as a change request, remains open, or has another lifecycle state. Standard status and SCR lifecycle status must be recorded separately.
+The current fields can be read consistently without changing them: `status: approved` describes the document's editorial/acceptance state, while `normative: false` means it is not an enforceable normative standard. This is the recommended technical interpretation, not a new formal lifecycle decision. Standard status and SCR lifecycle remain separate.
 
 ### 3.4 Owner decision record — intentionally blank
 
@@ -208,7 +207,7 @@ Owner must explicitly confirm whether SCR-0139 is closed as a change request, re
 - Decision timestamp (UTC): ______________________________
 - Conditions / residuals: ______________________________
 
-Until completed and independently checked: SCR-0139 = BLOCKED.
+Technical use of the existing non-normative specification and its machine-readable configuration may continue within existing authority boundaries. SCR-0139 lifecycle remains UNKNOWN.
 
 ## 4. Cross-case decision protocol
 
@@ -221,17 +220,17 @@ For each case, the Owner decision must:
 6. State effective date and residual conditions where applicable.
 7. Be preserved as a human-authored approval record with traceable identity and timestamp.
 
-The agent may update the registry or source mapping only after the Owner decision is present and the exact change is authorized. Any registry change must preserve the original evidence and must pass the relevant positive and negative tests and CI gates.
+The agent may update technical source mappings when the source evidence is directly verified and the change does not assert new allocation, Owner authority, normative force, acceptance/rejection, supersession, or closure. Those formal state transitions require attributable authorization. Every registry change must preserve original evidence and pass relevant positive/negative tests and CI gates.
 
 ## 5. Current disposition
 
 | Identity | Source evidence | Conflict status | Owner decision | Registry action |
 |---|---|---|---|---|
-| SCR-0095 | REALITY_STATUS §§39–40; .github PR #8; atc-standards commit 3eba30e; ATC-STD-041; SCR-0102 approval record | Multiple work scopes associated with one ID | PENDING | NONE — BLOCKED |
-| SCR-0096 | REALITY_STATUS §41; atc-standards commits 49beb5c and ea9050a; ATC-STD-002; SCR-0102 approval record | Multiple work scopes associated with one ID | PENDING | NONE — BLOCKED |
-| SCR-0139 | ATC-AI-GOV-AUTH-001 frontmatter/body; commit bceec03 | approved / normative=false semantic mismatch; SCR lifecycle not separately evidenced | PENDING | NONE — BLOCKED |
+| SCR-0095 | REALITY_STATUS §§39–40; approved/merged .github PR #8; signed merge commit; unsigned Automated Assurance commit; ATC-STD-041; bounded SCR-0102 approval context | Two work scopes; ATC-STD-041 effectiveness conflict | Not required for technical mapping | Preserve separate evidence relationships; no lifecycle change |
+| SCR-0096 | REALITY_STATUS §41; two unsigned ATC-STD-002 architecture commits; bounded SCR-0102 approval context | Badge correction and family architecture remain distinct scopes | Not required for technical mapping | Preserve separate evidence relationships; no lifecycle change |
+| SCR-0139 | ATC-AI-GOV-AUTH-001; unsigned machine-readable config and naming commits | approved + normative=false is technically coherent; SCR lifecycle not evidenced | Not required for technical mapping | Preserve normative=false; lifecycle UNKNOWN |
 
-No decision has been made by this report. All three entries remain unresolved until a human Owner supplies explicit, attributable decisions.
+No formal lifecycle decision is made by this report. The three entries remain unresolved in allocation/lifecycle fields, while technical evidence mapping and non-normative improvements can proceed independently.
 
 
 
@@ -247,3 +246,29 @@ The new evidence map distinguishes:
 These evidence relationships do not predetermine the Owner's final lifecycle or scope decision. They also do not create a blanket Owner dependency for technical work. The registry continues to preserve UNKNOWN lifecycle and decision values and UNRESOLVED allocation status. No identifier was allocated, no standard status was modified, and no SCR was closed or rejected.
 
 The prior decision options remain available as one possible governance resolution, but they are not prerequisites for continued evidence reconciliation, technical recommendations or non-normative improvements. Any eventual formal lifecycle, allocation, normative or supersession change must still be supported by attributable evidence and the applicable authorization.
+
+
+## 6. Evidence-led recommended dispositions — 2026-10-31
+
+These are technical recommendations, not Owner decisions and not SCR lifecycle transitions.
+
+### SCR-0095
+- Preserve the Hub-file sweep and Automated Repository Assurance as two separately typed historical work scopes under the existing SCR-0095 identity.
+- Treat PR #8 as verified implementation evidence for the Hub-file scope: review ID `5178534325` is APPROVED by GitHub account `A-TownChain`; the PR merged at `2026-09-11T12:27:40Z`; merge commit `caefa8c7315daceecb4ec8d02c47eb4df78e4027` has a valid GitHub signature.
+- Do not infer SCR closure from the PR merge. Keep Automated Assurance commit `3eba30e...` classified as unsigned historical provenance.
+- Preserve the ATC-STD-041 status/effectiveness discrepancy: frontmatter `approved` / `normative: true` / `effective_date: null`, while the body says it is not effective until §9 release.
+
+### SCR-0096
+- Preserve scanner badge correction and Standards Family ID architecture as separate evidence scopes.
+- Keep the two ATC-STD-002 architecture commits explicitly unsigned; the approval record's inclusion of ATC-STD-002 is bounded standard-approval context, not SCR-0096 lifecycle closure.
+- Do not split or reallocate the historical identity without direct allocation evidence.
+
+### SCR-0139
+- Preserve `status: approved` and `normative: false` as separate dimensions. Recommended reading: accepted specification document, not an enforceable normative standard.
+- Continue technical use of the machine-readable configuration only within already-established authority and security boundaries.
+- Do not promote normative status or close SCR-0139 based on unsigned commits or the document heading.
+
+### Common disposition
+- Keep `allocation_status: UNRESOLVED`, `lifecycle_status: UNKNOWN`, and `decision: UNKNOWN` where the historical allocation/lifecycle is not proven.
+- Do not let the absence of those formal decisions block source reconciliation, evidence-quality improvements, tests, or non-normative technical work.
+- Revisit formal status only if new attributable evidence or a concrete product/governance need warrants it.
