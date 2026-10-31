@@ -154,6 +154,33 @@ class ScrRegistryTests(unittest.TestCase):
             errors = self._fixture(root, [entry])
             self.assertIn("source path escapes repository root", "\n".join(errors))
 
+    def test_symlink_source_path_cannot_escape_repository(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp) / "repo"
+            root.mkdir()
+            outside = Path(tmp) / "outside.md"
+            outside.write_text("# outside", encoding="utf-8")
+            requests = root / "change-requests"
+            requests.mkdir()
+            (requests / "SCR-0001.md").symlink_to(outside)
+            entry = {
+                "id": "SCR-0001",
+                "allocation_status": "UNRESOLVED",
+                "metadata_status": "UNRECONCILED",
+                "lifecycle_status": "UNKNOWN",
+                "decision": "UNKNOWN",
+                "source": {
+                    "kind": "HISTORICAL_REFERENCE",
+                    "path": "change-requests/SCR-0001.md",
+                },
+                "notes": "fixture",
+            }
+            errors = self._fixture(root, [entry])
+            self.assertIn(
+                "source path escapes repository root",
+                "\\n".join(errors),
+            )
+
     def test_non_object_registry_fails_without_crashing(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
