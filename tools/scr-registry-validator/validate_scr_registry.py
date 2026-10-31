@@ -291,9 +291,9 @@ def find_status_contradictions(root: Path) -> list[str]:
             content = path.read_text(encoding="utf-8")
         except (OSError, UnicodeError):
             continue
-        if not content.startswith("---\\n"):
+        if not content.startswith("---\n"):
             continue
-        end = content.find("\\n---", 4)
+        end = content.find("\n---", 4)
         if end < 0:
             continue
         try:
@@ -303,7 +303,10 @@ def find_status_contradictions(root: Path) -> list[str]:
         if not isinstance(metadata, dict):
             continue
         status = str(metadata.get("status", "")).strip().lower()
-        if status not in {"approved", "active", "effective"} or metadata.get("normative") is not True:
+        if (
+            status not in {"approved", "active", "effective"}
+            or metadata.get("normative") is not True
+        ):
             continue
         body = content[end + 4 :].lower()
         conflicts = [marker for marker in markers if marker in body]
@@ -314,6 +317,7 @@ def find_status_contradictions(root: Path) -> list[str]:
                 f"body marker(s): {', '.join(conflicts)}"
             )
     return residuals
+
 
 def validate(
     root: Path = ROOT, registry_path: Path | None = None, schema_path: Path | None = None
