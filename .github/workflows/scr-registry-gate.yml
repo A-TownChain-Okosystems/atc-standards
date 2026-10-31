@@ -2,10 +2,10 @@ name: SCR Registry Gate
 on:
   pull_request:
     branches: [main]
-    paths: ['registry/scr-registry.yaml','schemas/scr-registry.schema.json','tools/scr-registry-validator/**','change-requests/**','.github/workflows/scr-registry-gate.yml']
+    paths: ['registry/scr-registry.yaml','schemas/scr-registry.schema.json','tools/scr-registry-validator/**','change-requests/**','evidence/scr-reconciliation/**','.github/workflows/scr-registry-gate.yml']
   push:
     branches: [main]
-    paths: ['registry/scr-registry.yaml','schemas/scr-registry.schema.json','tools/scr-registry-validator/**','change-requests/**','.github/workflows/scr-registry-gate.yml']
+    paths: ['registry/scr-registry.yaml','schemas/scr-registry.schema.json','tools/scr-registry-validator/**','change-requests/**','evidence/scr-reconciliation/**','.github/workflows/scr-registry-gate.yml']
 permissions:
   contents: read
 jobs:
@@ -22,6 +22,10 @@ jobs:
         run: python -m pip install -r requirements.txt
       - name: Validate SCR registry and repository coverage
         run: python tools/scr-registry-validator/validate_scr_registry.py
+      - name: Verify external historical source commit trees and blobs
+        run: |
+          python tools/scr-registry-validator/verify_external_sources.py \
+            --output scr-registry-evidence/external-source-verification.json
       - name: Run positive and negative tests
         run: python -m unittest discover -s tools/scr-registry-validator/tests -v
 
@@ -33,6 +37,8 @@ jobs:
           mkdir -p scr-registry-evidence
           python tools/scr-registry-validator/validate_scr_registry.py > scr-registry-evidence/validator.log 2>&1
           validator_status=$?
+          python tools/scr-registry-validator/verify_external_sources.py --output scr-registry-evidence/external-source-verification.json > scr-registry-evidence/external-source-verification.log 2>&1
+          external_status=$?
           python -m unittest discover -s tools/scr-registry-validator/tests -v > scr-registry-evidence/tests.log 2>&1
           tests_status=$?
           set -e
@@ -42,9 +48,10 @@ jobs:
             printf 'run_id=%s\n' "$GITHUB_RUN_ID"
             printf 'run_attempt=%s\n' "$GITHUB_RUN_ATTEMPT"
             printf 'validator_exit=%s\n' "$validator_status"
+            printf 'external_verifier_exit=%s\n' "$external_status"
             printf 'tests_exit=%s\n' "$tests_status"
           } > scr-registry-evidence/summary.txt
-          sha256sum scr-registry-evidence/validator.log scr-registry-evidence/tests.log scr-registry-evidence/summary.txt > scr-registry-evidence/SHA256SUMS
+          find scr-registry-evidence -maxdepth 1 -type f ! -name SHA256SUMS -print0 | sort -z | xargs -0 sha256sum > scr-registry-evidence/SHA256SUMS
       - name: Upload SCR validation evidence
         if: always()
         uses: actions/upload-artifact@v4
