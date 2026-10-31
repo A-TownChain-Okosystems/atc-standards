@@ -982,6 +982,15 @@ entries:
       kind: FILE
       path: "change-requests/SCR-0141.md"
     notes: "Identity explicitly provisional pending Owner validation."
+  - id: SCR-0142
+    allocation_status: RESERVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: REVIEW
+    decision: PENDING
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0142.md"
+    notes: "New Draft governance change request; Owner decision and review chain remain pending."
 unresolved_ranges:
   - start: SCR-0093
     end: SCR-0115
