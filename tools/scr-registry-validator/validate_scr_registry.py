@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[2]
 ID_RE = re.compile(r"^SCR-(\d{4})$")
 FILE_RE = re.compile(r"^SCR-(\d{4})(?:[-.]|$)")
 
+
 class UniqueKeySafeLoader(yaml.SafeLoader):
     """Safe YAML loader that rejects duplicate mapping keys."""
 
