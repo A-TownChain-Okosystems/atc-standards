@@ -61,9 +61,7 @@ def validate(
         if not isinstance(source, dict):
             continue
         source_kind = source.get("kind")
-        if source_kind == "FILE" or (
-            source_kind == "HISTORICAL_REFERENCE" and source.get("path")
-        ):
+        if source_kind == "FILE" or (source_kind == "HISTORICAL_REFERENCE" and source.get("path")):
             relative_path = source.get("path", "")
             if not isinstance(relative_path, str) or not relative_path:
                 errors.append(f"{entry['id']}: {source_kind} source requires a path")
@@ -92,7 +90,9 @@ def validate(
             elif not re.fullmatch(r"[0-9a-f]{40}", commit):
                 errors.append(f"{entry['id']}: invalid external source commit SHA")
             elif url != expected_url:
-                errors.append(f"{entry['id']}: external source URL does not bind repository and commit")
+                errors.append(
+                    f"{entry['id']}: external source URL does not bind repository and commit"
+                )
 
         if (
             entry.get("allocation_status") == "ASSIGNED"
