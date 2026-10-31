@@ -185,7 +185,6 @@ def validate_source(
                 )
 
 
-
 def derive_source_identity(source: dict, root: Path, repository: str) -> str:
     """Derive a stable SHA-256 identity from immutable source coordinates."""
     identity = {"repository": repository, "kind": str(source.get("kind", ""))}
