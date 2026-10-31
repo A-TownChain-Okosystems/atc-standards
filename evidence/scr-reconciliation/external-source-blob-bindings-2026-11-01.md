@@ -4,9 +4,21 @@
 
 This report records direct GitHub source-file retrievals at the exact historical commit refs listed below. For each row, the GitHub file-content endpoint returned the listed Git blob SHA for the path at that commit.
 
-This is stronger than a commit-message-only reference: it binds a repository, immutable commit, path, and returned blob object ID. It is **not** represented as a completed independent Git object acquisition or a local `git cat-file` / `git rev-parse <commit>:<path>` verification inside the SCR Registry Gate. External commit-tree/blob verification therefore remains **PARTIAL / RESIDUAL** until a controlled acquisition verifier checks the fetched commit, tree, and path-level blob in CI.
+This is stronger than a commit-message-only reference: it binds a repository, immutable commit, path, and returned blob object ID. The controlled verifier added to this PR now independently acquires each pinned external commit and checks the commit object, tree object, and path-level blob using Git object operations. The exact-head SCR Registry Gate completed this verification successfully (details below).
 
 GitHub file retrieval confirms the object identifiers exposed by the source API. It does not establish signer trust, Owner authority, SCR allocation, normative force, or lifecycle closure.
+
+## Exact-head CI verification — 2026-11-01
+
+- PR head tested: `86a5f1db7bb1049d82ad7568ed60068147b201cf`
+- SCR Registry Gate: run `41254589687`, job `124694951819` — PASS
+- External verifier: `EXTERNAL SOURCE VERIFICATION: PASS — 15 path/blob bindings across exact commit trees`
+- Regression suite: `46/46` passed, including four external-verifier tests
+- Registry validator: `SCR REGISTRY: PASS — 140 entries, 31 unresolved entries, 0 unresolved ranges; no ID auto-allocation`
+- Evidence artifact: `scr-registry-evidence-41254589687-1`, artifact ID `13062284090`
+- Artifact ZIP SHA-256: `3b74ef7e6566b9601cddcfa06852826398cbd9aa98ca4de88785bc58e38a20d8`
+
+The 15 external pins cover all cross-repository commit/path bindings in the machine-readable manifest. The additional SCR-0139 standards-file path in this report is in the current `atc-standards` repository and is checked by the existing local blob-binding validator. This verifies source object identity; it does not establish signer trust or decision authority.
 
 ## SCR-0133 — dependency/security remediation
 
@@ -49,7 +61,7 @@ The organization `.github` commit is implementation/configuration provenance. Th
 
 | Gap | Current state | Required closure evidence |
 |---|---|---|
-| External commit/path/blob | PARTIAL | CI-controlled acquisition of exact external commit objects, verification of commit/tree object identity, and path-level blob comparison against the pins above |
+| External commit/path/blob | CI_VERIFIED for all 15 manifest pins | Exact-head SCR Registry Gate run `41254589687`, job `124694951819`; 15/15 external commit/tree/path/blob bindings verified. The local SCR-0139 standards path is checked by the existing registry blob validator. |
 | Production signer trust | BLOCKED | Attributable authoritative public-key fingerprint and trust-root/rotation record; do not populate the allowlist from commit author names or unsigned provenance |
 | Relationship graph integrity | BLOCKED | Normative definition of cross-entry target IDs, edge semantics, allowed cardinality and cycle policy before graph validation is implemented |
 | Contradictory status metadata | RESIDUAL, surfaced | Separate authorized resolution of each contradiction; validator must continue reporting conflicts without rewriting standards or lifecycle state |
