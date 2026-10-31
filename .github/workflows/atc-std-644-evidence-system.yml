@@ -1,10 +1,14 @@
 name: ATC-STD-644 Evidence System
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - "standards/audit/ATC-STD-644.md"
       - "registry/standards.yaml"
+      - "registry/GENERATED_STATE.md"
+      - ".github/ai/agent.yaml"
+      - "README.md"
       - "change-requests/SCR-0130.md"
       - "schemas/evidence/**"
       - "tests/evidence/**"
