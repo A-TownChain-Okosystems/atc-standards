@@ -844,7 +844,34 @@ entries:
     source:
       kind: HISTORICAL_REFERENCE
       path: "standards/enterprise/ATC-STD-041.md"
-    notes: "Automated Assurance reference; canonical SCR file absent. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+    related_sources:
+      - relationship: DISTINCT_SCOPE
+        scope: "Automated Repository Assurance standards and GATE-SEC-001 work scope; the commit message attributes this work to SCR-0095 but is unsigned."
+        source:
+          kind: HISTORICAL_REFERENCE
+          repository: A-TownChain-Okosystems/atc-standards
+          commit: 3eba30ef3253205de24e617389018b954672ee4e
+          url: "https://github.com/A-TownChain-Okosystems/atc-standards/commit/3eba30ef3253205de24e617389018b954672ee4e"
+      - relationship: IMPLEMENTATION_EVIDENCE
+        scope: "Hub repository-file completion: SECURITY.md, CONTRIBUTING.md, CODEOWNERS and STATUS.md were added by merged PR #8."
+        source:
+          kind: HISTORICAL_REFERENCE
+          repository: A-TownChain-Okosystems/.github
+          pr: 8
+          url: "https://github.com/A-TownChain-Okosystems/.github/pull/8"
+      - relationship: CORROBORATES
+        scope: "Signed historical REALITY_STATUS narrative sections 39–40 describe the file sweep and Owner merge of Hub PR #8; this does not decide SCR lifecycle."
+        source:
+          kind: HISTORICAL_REFERENCE
+          repository: A-TownChain-Okosystems/a-townchain-os-docs
+          commit: 77ed5ed14cbed7375346211c2c9faa1a7299aa11
+          url: "https://github.com/A-TownChain-Okosystems/a-townchain-os-docs/commit/77ed5ed14cbed7375346211c2c9faa1a7299aa11"
+      - relationship: APPROVAL_CONTEXT
+        scope: "The approval record includes ATC-STD-041 among 25 approved standards; it does not establish SCR-0095 lifecycle closure or settle its multiple scopes."
+        source:
+          kind: HISTORICAL_REFERENCE
+          path: "approval/APPROVAL-DECISION-2026-09-11-001-Legacy-Restaurierung-25.md"
+    notes: "Automated Assurance is one evidenced scope; ATC-STD-041 labels itself APPROVED but says it is not effective until §9 release. Hub file-completion is a second evidenced scope. Canonical SCR scope and lifecycle remain unresolved."
   - id: SCR-0096
     allocation_status: UNRESOLVED
     metadata_status: UNRECONCILED
@@ -853,7 +880,34 @@ entries:
     source:
       kind: HISTORICAL_REFERENCE
       path: "governance/ATC-STD-002.md"
-    notes: "Standards Family ID and artifact identifier architecture reference; canonical SCR file absent. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+    related_sources:
+      - relationship: DISTINCT_SCOPE
+        scope: "Compliance scanner badge/template correction in a-townchain-os-docs REALITY_STATUS §41, explicitly attributed there to SCR-0096."
+        source:
+          kind: HISTORICAL_REFERENCE
+          repository: A-TownChain-Okosystems/a-townchain-os-docs
+          commit: 77ed5ed14cbed7375346211c2c9faa1a7299aa11
+          url: "https://github.com/A-TownChain-Okosystems/a-townchain-os-docs/commit/77ed5ed14cbed7375346211c2c9faa1a7299aa11"
+      - relationship: CHANGE_PROVENANCE
+        scope: "Historical commit introducing the ATC-STD-002 family and artifact identifier architecture; unsigned and therefore not a cryptographic Owner attestation."
+        source:
+          kind: HISTORICAL_REFERENCE
+          repository: A-TownChain-Okosystems/atc-standards
+          commit: 49beb5c825876c01f8c69247b6e1c236a49cab15
+          url: "https://github.com/A-TownChain-Okosystems/atc-standards/commit/49beb5c825876c01f8c69247b6e1c236a49cab15"
+      - relationship: CHANGE_PROVENANCE
+        scope: "Subsequent ATC-STD-002 registry architecture and Owner-hardening commit; unsigned and not independent proof of Owner attestation."
+        source:
+          kind: HISTORICAL_REFERENCE
+          repository: A-TownChain-Okosystems/atc-standards
+          commit: ea9050a39570deab79cd8eeac46d419a4abb80ec
+          url: "https://github.com/A-TownChain-Okosystems/atc-standards/commit/ea9050a39570deab79cd8eeac46d419a4abb80ec"
+      - relationship: APPROVAL_CONTEXT
+        scope: "The approval record includes ATC-STD-002 among 25 approved standards; it does not resolve whether the scanner badge work and family architecture share one SCR scope."
+        source:
+          kind: HISTORICAL_REFERENCE
+          path: "approval/APPROVAL-DECISION-2026-09-11-001-Legacy-Restaurierung-25.md"
+    notes: "Two distinct work scopes are evidenced: scanner badge correction and Standards Family ID architecture. Existing standard approval evidence is bounded to ATC-STD-002; SCR-0096 scope and lifecycle remain unresolved."
   - id: SCR-0097
     allocation_status: UNRESOLVED
     metadata_status: UNRECONCILED
@@ -1252,7 +1306,22 @@ entries:
     source:
       kind: HISTORICAL_REFERENCE
       path: "standards/ai-gov/ATC-AI-GOV-AUTH-001.md"
-    notes: "Automation Authority specification reference; normative status is described in the standard, SCR file absent. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+    related_sources:
+      - relationship: IMPLEMENTATION_EVIDENCE
+        scope: "Machine-readable Automation Authority configuration in the organization .github repository; its content attributes issuance to the Owner, but the commit is provenance rather than a cryptographic signature."
+        source:
+          kind: HISTORICAL_REFERENCE
+          repository: A-TownChain-Okosystems/.github
+          commit: 750d920292149d16f327d8e33260d727599d873a
+          url: "https://github.com/A-TownChain-Okosystems/.github/commit/750d920292149d16f327d8e33260d727599d873a"
+      - relationship: CHANGE_PROVENANCE
+        scope: "Historical naming-conformance and generator-chain commit explicitly referencing SCR-0139; unsigned and not proof of lifecycle closure."
+        source:
+          kind: HISTORICAL_REFERENCE
+          repository: A-TownChain-Okosystems/atc-standards
+          commit: bceec03d7acd5bbaad42da10bbc2c75affd39f2f
+          url: "https://github.com/A-TownChain-Okosystems/atc-standards/commit/bceec03d7acd5bbaad42da10bbc2c75affd39f2f"
+    notes: "The source standard says APPROVED while frontmatter normative=false. The machine-readable .github configuration exists, but no signed decision resolving normative force or SCR lifecycle was identified."
   - id: SCR-0140
     allocation_status: RESERVED
     metadata_status: UNRECONCILED
