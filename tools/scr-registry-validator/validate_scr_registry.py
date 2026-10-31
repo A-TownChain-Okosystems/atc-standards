@@ -52,26 +52,16 @@ def validate(
             relative_path = source.get("path", "")
             target = root / relative_path
             if not relative_path or not target.is_file():
-                errors.append(
-                    f"{entry['id']}: referenced SCR file missing: {relative_path}"
-                )
+                errors.append(f"{entry['id']}: referenced SCR file missing: {relative_path}")
             elif not FILE_RE.match(Path(relative_path).name):
-                errors.append(
-                    f"{entry['id']}: source path does not encode SCR ID: {relative_path}"
-                )
+                errors.append(f"{entry['id']}: source path does not encode SCR ID: {relative_path}")
 
         if (
             entry.get("allocation_status") == "ASSIGNED"
             and entry.get("metadata_status") == "RECONCILED"
         ):
-            if (
-                entry.get("lifecycle_status") == "UNKNOWN"
-                or entry.get("decision") == "UNKNOWN"
-            ):
-                errors.append(
-                    f"{entry['id']}: reconciled metadata cannot contain "
-                    "UNKNOWN lifecycle/decision"
-                )
+            if entry.get("lifecycle_status") == "UNKNOWN" or entry.get("decision") == "UNKNOWN":
+                errors.append(f"{entry['id']}: reconciled metadata cannot contain UNKNOWN lifecycle/decision")
 
     for item in data.get("unresolved_ranges", []):
         start_match = ID_RE.fullmatch(str(item.get("start", "")))
@@ -84,9 +74,7 @@ def validate(
             continue
         for number in range(lower, upper + 1):
             if number in covered:
-                errors.append(
-                    f"SCR-{number:04d}: overlaps explicit entry and unresolved range"
-                )
+                errors.append(f"SCR-{number:04d}: overlaps explicit entry and unresolved range")
             covered.add(number)
 
     observed: dict[int, list[str]] = {}
@@ -102,14 +90,9 @@ def validate(
 
     for number, found in sorted(observed.items()):
         if number not in covered:
-            errors.append(
-                f"unregistered observed SCR-{number:04d}: {', '.join(found)}"
-            )
+            errors.append(f"unregistered observed SCR-{number:04d}: {', '.join(found)}")
 
-    if any(
-        str(entry.get("allocation_status", "")).upper() == "FREE"
-        for entry in entries
-    ):
+    if any(str(entry.get("allocation_status", "")).upper() == "FREE" for entry in entries):
         errors.append("FREE is forbidden: missing/unresolved evidence must remain blocked")
     return errors
 
