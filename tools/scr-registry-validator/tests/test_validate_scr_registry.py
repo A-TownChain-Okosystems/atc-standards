@@ -1,4 +1,5 @@
 import importlib.util
+import json
 import os
 import shutil
 import subprocess
@@ -767,6 +768,16 @@ class ScrRegistryTests(unittest.TestCase):
                 ],
                 "unresolved_ranges": [],
             }
+            trust_path = root / "schemas" / "scr-registry-trust.json"
+            trust_path.write_text(
+                json.dumps(
+                    {
+                        "schema_version": 1,
+                        "trusted_signer_fingerprints": [signer_fingerprint],
+                    }
+                ),
+                encoding="utf-8",
+            )
             registry_path = root / "registry" / "scr-registry.yaml"
             registry_path.write_text(yaml.safe_dump(payload), encoding="utf-8")
             previous_home = os.environ.get("GNUPGHOME")
@@ -1066,7 +1077,7 @@ class ScrRegistryTests(unittest.TestCase):
             trust.parent.mkdir()
             fingerprint = "A" * 40
             trust.write_text(
-                yaml.safe_dump({"schema_version": 1, "trusted_signer_fingerprints": [fingerprint]}),
+                json.dumps({"schema_version": 1, "trusted_signer_fingerprints": [fingerprint]}),
                 encoding="utf-8",
             )
             self.assertEqual(module.load_trusted_signers(root), {fingerprint.casefold()})
