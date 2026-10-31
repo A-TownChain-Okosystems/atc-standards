@@ -86,9 +86,7 @@ def validate_source(
         )
 
     if source_kind == "FILE" and source.get("commit") and source["commit"] != registry_commit:
-        errors.append(
-            f"{entry_id}: {label} file commit does not match registry source_commit"
-        )
+        errors.append(f"{entry_id}: {label} file commit does not match registry source_commit")
 
     attestation = source.get("attestation", {})
     if isinstance(attestation, dict) and attestation.get("signature_status") == "VERIFIED":
@@ -237,9 +235,7 @@ def derive_source_identity(
     source_repository = source.get("repository", repository)
     if source_repository:
         identity["repository"] = str(source_repository)
-    commit = source.get("commit") or (
-        registry_commit if source.get("kind") == "FILE" else ""
-    )
+    commit = source.get("commit") or (registry_commit if source.get("kind") == "FILE" else "")
     if commit:
         identity["commit"] = str(commit)
     if source.get("pr"):
@@ -360,15 +356,11 @@ def validate(
         repository = str(data.get("repository", ""))
         registry_commit = str(data.get("source_commit", ""))
         for label, source in source_bindings:
-            validate_source(
-                entry["id"], source, label, root, match, errors, registry_commit
-            )
+            validate_source(entry["id"], source, label, root, match, errors, registry_commit)
             if isinstance(source, dict) and label.startswith("related_sources["):
                 index = int(label.split("[", 1)[1].split("]", 1)[0])
                 relation = related_sources[index].get("relationship", "")
-                source_id = derive_source_identity(
-                    source, root, repository, registry_commit
-                )
+                source_id = derive_source_identity(source, root, repository, registry_commit)
                 key = (str(relation), source_id)
                 if key in seen_relationship_sources:
                     errors.append(
