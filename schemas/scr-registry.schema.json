@@ -1,22 +1,263 @@
 {
-  "title":"ATC SCR Registry","type":"object",
-  "required":["registry_version","repository","source_ref","source_commit","allocation_policy","entries","unresolved_ranges"],
-  "additionalProperties":false,
-  "properties":{
-    "registry_version":{"const":1},"repository":{"const":"A-TownChain-Okosystems/atc-standards"},
-    "source_ref":{"type":"string","minLength":1},"source_commit":{"type":"string","pattern":"^[0-9a-f]{40}$"},
-    "allocation_policy":{"type":"object","required":["unknown_is_blocked","missing_file_is_not_free","automatic_number_assignment","reuse_permitted"],"additionalProperties":false,"properties":{"unknown_is_blocked":{"const":true},"missing_file_is_not_free":{"const":true},"automatic_number_assignment":{"const":false},"reuse_permitted":{"const":false}}},
-    "entries":{"type":"array","items":{"$ref":"#/$defs/entry"}},
-    "unresolved_ranges":{"type":"array","items":{"$ref":"#/$defs/range"}}
+  "title": "ATC SCR Registry",
+  "type": "object",
+  "required": [
+    "registry_version",
+    "repository",
+    "source_ref",
+    "source_commit",
+    "allocation_policy",
+    "entries",
+    "unresolved_ranges"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "registry_version": {
+      "const": 1
+    },
+    "repository": {
+      "const": "A-TownChain-Okosystems/atc-standards"
+    },
+    "source_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_commit": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "allocation_policy": {
+      "type": "object",
+      "required": [
+        "unknown_is_blocked",
+        "missing_file_is_not_free",
+        "automatic_number_assignment",
+        "reuse_permitted"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "unknown_is_blocked": {
+          "const": true
+        },
+        "missing_file_is_not_free": {
+          "const": true
+        },
+        "automatic_number_assignment": {
+          "const": false
+        },
+        "reuse_permitted": {
+          "const": false
+        }
+      }
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/entry"
+      }
+    },
+    "unresolved_ranges": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/range"
+      }
+    }
   },
-  "$defs":{
-    "entry":{"type":"object","required":["id","allocation_status","metadata_status","lifecycle_status","decision","source","notes"],"additionalProperties":false,"properties":{
-      "id":{"type":"string","pattern":"^SCR-[0-9]{4}$"},"allocation_status":{"enum":["ASSIGNED","RESERVED","CONFLICT","UNRESOLVED"]},
-      "metadata_status":{"enum":["RECONCILED","UNRECONCILED","PROVISIONAL"]},"lifecycle_status":{"enum":["PROPOSED","REVIEW","DECIDED","IMPLEMENTED","CLOSED","UNKNOWN"]},
-      "decision":{"enum":["ACCEPTED","REJECTED","OBSOLETE","PENDING","UNKNOWN"]},
-      "source":{"type":"object","required":["kind"],"additionalProperties":false,"properties":{"kind":{"enum":["FILE","PULL_REQUEST","HISTORICAL_REFERENCE"]},"path":{"type":"string"},"pr":{"type":"integer","minimum":1},"branch":{"type":"string"},"url":{"type":"string","format":"uri"}}},
-      "notes":{"type":"string","minLength":1}}},
-    "range":{"type":"object","required":["start","end","allocation_status","evidence","required_action"],"additionalProperties":false,"properties":{
-      "start":{"type":"string","pattern":"^SCR-[0-9]{4}$"},"end":{"type":"string","pattern":"^SCR-[0-9]{4}$"},"allocation_status":{"enum":["CONFLICT","UNRESOLVED"]},"evidence":{"type":"string","minLength":1},"required_action":{"type":"string","minLength":1}}}
+  "$defs": {
+    "entry": {
+      "type": "object",
+      "required": [
+        "id",
+        "allocation_status",
+        "metadata_status",
+        "lifecycle_status",
+        "decision",
+        "source",
+        "notes"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^SCR-[0-9]{4}$"
+        },
+        "allocation_status": {
+          "enum": [
+            "ASSIGNED",
+            "RESERVED",
+            "CONFLICT",
+            "UNRESOLVED"
+          ]
+        },
+        "metadata_status": {
+          "enum": [
+            "RECONCILED",
+            "UNRECONCILED",
+            "PROVISIONAL"
+          ]
+        },
+        "lifecycle_status": {
+          "enum": [
+            "PROPOSED",
+            "REVIEW",
+            "DECIDED",
+            "IMPLEMENTED",
+            "CLOSED",
+            "UNKNOWN"
+          ]
+        },
+        "decision": {
+          "enum": [
+            "ACCEPTED",
+            "REJECTED",
+            "OBSOLETE",
+            "PENDING",
+            "UNKNOWN"
+          ]
+        },
+        "source": {
+          "type": "object",
+          "required": [
+            "kind"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "enum": [
+                "FILE",
+                "PULL_REQUEST",
+                "HISTORICAL_REFERENCE"
+              ]
+            },
+            "path": {
+              "type": "string"
+            },
+            "pr": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "branch": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string",
+              "format": "uri"
+            },
+            "repository": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$"
+            },
+            "commit": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{40}$"
+            }
+          },
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "kind": {
+                    "const": "FILE"
+                  }
+                },
+                "required": [
+                  "kind"
+                ]
+              },
+              "then": {
+                "required": [
+                  "path"
+                ]
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "kind": {
+                    "const": "HISTORICAL_REFERENCE"
+                  }
+                },
+                "required": [
+                  "kind"
+                ]
+              },
+              "then": {
+                "anyOf": [
+                  {
+                    "required": [
+                      "path"
+                    ]
+                  },
+                  {
+                    "required": [
+                      "repository",
+                      "commit",
+                      "url"
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "kind": {
+                    "const": "PULL_REQUEST"
+                  }
+                },
+                "required": [
+                  "kind"
+                ]
+              },
+              "then": {
+                "required": [
+                  "pr",
+                  "url"
+                ]
+              }
+            }
+          ]
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "range": {
+      "type": "object",
+      "required": [
+        "start",
+        "end",
+        "allocation_status",
+        "evidence",
+        "required_action"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "start": {
+          "type": "string",
+          "pattern": "^SCR-[0-9]{4}$"
+        },
+        "end": {
+          "type": "string",
+          "pattern": "^SCR-[0-9]{4}$"
+        },
+        "allocation_status": {
+          "enum": [
+            "CONFLICT",
+            "UNRESOLVED"
+          ]
+        },
+        "evidence": {
+          "type": "string",
+          "minLength": 1
+        },
+        "required_action": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
   }
 }
