@@ -116,111 +116,44 @@
           ]
         },
         "source": {
-          "type": "object",
-          "required": [
-            "kind"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "kind": {
-              "enum": [
-                "FILE",
-                "PULL_REQUEST",
-                "HISTORICAL_REFERENCE"
-              ]
-            },
-            "path": {
-              "type": "string"
-            },
-            "pr": {
-              "type": "integer",
-              "minimum": 1
-            },
-            "branch": {
-              "type": "string"
-            },
-            "url": {
-              "type": "string",
-              "format": "uri"
-            },
-            "repository": {
-              "type": "string",
-              "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$"
-            },
-            "commit": {
-              "type": "string",
-              "pattern": "^[0-9a-f]{40}$"
-            }
-          },
-          "allOf": [
-            {
-              "if": {
-                "properties": {
-                  "kind": {
-                    "const": "FILE"
-                  }
-                },
-                "required": [
-                  "kind"
-                ]
-              },
-              "then": {
-                "required": [
-                  "path"
-                ]
-              }
-            },
-            {
-              "if": {
-                "properties": {
-                  "kind": {
-                    "const": "HISTORICAL_REFERENCE"
-                  }
-                },
-                "required": [
-                  "kind"
-                ]
-              },
-              "then": {
-                "anyOf": [
-                  {
-                    "required": [
-                      "path"
-                    ]
-                  },
-                  {
-                    "required": [
-                      "repository",
-                      "commit",
-                      "url"
-                    ]
-                  }
-                ]
-              }
-            },
-            {
-              "if": {
-                "properties": {
-                  "kind": {
-                    "const": "PULL_REQUEST"
-                  }
-                },
-                "required": [
-                  "kind"
-                ]
-              },
-              "then": {
-                "required": [
-                  "pr",
-                  "url"
-                ]
-              }
-            }
-          ]
+          "$ref": "#/$defs/source"
         },
         "notes": {
           "type": "string",
           "minLength": 1
+        },
+        "related_sources": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "relationship",
+              "scope",
+              "source"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "relationship": {
+                "enum": [
+                  "CORROBORATES",
+                  "DISTINCT_SCOPE",
+                  "IMPLEMENTATION_EVIDENCE",
+                  "APPROVAL_CONTEXT",
+                  "NORMATIVE_CONTEXT",
+                  "CHANGE_PROVENANCE",
+                  "CONFLICTING_REFERENCE"
+                ]
+              },
+              "scope": {
+                "type": "string",
+                "minLength": 1
+              },
+              "source": {
+                "$ref": "#/$defs/source"
+              }
+            }
+          }
         }
       }
     },
@@ -258,6 +191,135 @@
           "minLength": 1
         }
       }
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "kind"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "FILE",
+            "PULL_REQUEST",
+            "HISTORICAL_REFERENCE"
+          ]
+        },
+        "path": {
+          "type": "string"
+        },
+        "pr": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "branch": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "repository": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$"
+        },
+        "commit": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "FILE"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "required": [
+              "path"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "HISTORICAL_REFERENCE"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "anyOf": [
+              {
+                "required": [
+                  "path"
+                ]
+              },
+              {
+                "required": [
+                  "repository",
+                  "commit",
+                  "url"
+                ]
+              },
+              {
+                "required": [
+                  "pr",
+                  "url"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "PULL_REQUEST"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "required": [
+              "pr",
+              "url"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "HISTORICAL_REFERENCE"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "not": {
+              "required": [
+                "commit",
+                "pr"
+              ]
+            }
+          }
+        }
+      ]
     }
   }
 }
