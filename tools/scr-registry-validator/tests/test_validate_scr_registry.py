@@ -633,5 +633,6 @@ class ScrRegistryTests(unittest.TestCase):
             errors = self._fixture(root, [entry])
             self.assertTrue(any("authority_evidence" in error for error in errors), errors)
 
+
 if __name__ == "__main__":
     unittest.main()
