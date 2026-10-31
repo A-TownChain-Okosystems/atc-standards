@@ -141,3 +141,55 @@ This addendum supersedes the earlier single-source presentation for SCR-0095, SC
 The validator/schema now support `related_sources[]` records with an explicit relationship, scope description and independently validated source binding. Historical pull-request bindings can identify an external repository as well as a PR number and canonical URL. The legacy single `source` field remains supported for compatibility.
 
 All three entries remain `allocation_status: UNRESOLVED`, `metadata_status: UNRECONCILED`, `lifecycle_status: UNKNOWN`, `decision: UNKNOWN`. This is intentional: the evidence graph is materially richer, but the canonical scope and formal lifecycle are not yet proven. Technical evidence reconciliation is not blocked by the absence of an Owner decision; no Owner authority, normative force, allocation, or closure has been inferred.
+
+
+## Technical reassessment — multi-source evidence and scope boundaries (2026-10-31)
+
+Reviewed PR head: `875ff891bb9ab2eb1095664e3e244d54cbd690f1`.
+
+This reassessment uses the existing `related_sources[]` model. It does not introduce a parallel evidence subsystem and does not make any SCR lifecycle, allocation, normative or supersession decision.
+
+### SCR-0095 — Automated Assurance and Hub repository-file completion
+
+**Automated Assurance:** `atc-standards` commit `3eba30ef3253205de24e617389018b954672ee4e` explicitly attributes ATC-STD-030..043 and GATE-SEC-001 work to SCR-0095. GitHub reports the commit unsigned. It is change-provenance/scope evidence, not cryptographic Owner attestation.
+
+**Hub files:** [.github PR #8](https://github.com/A-TownChain-Okosystems/.github/pull/8) explicitly identifies SCR-0095 and SECURITY.md, CONTRIBUTING.md, CODEOWNERS and STATUS.md. It merged at 2026-09-11 12:27:40Z. Merge commit `caefa8c7315daceecb4ec8d02c47eb4df78e4027` has valid GitHub signature verification. An APPROVED review by `A-TownChain` was submitted at 12:19:17Z against `428c94891e63b1493dac3f588af17571340e27f8`. These events prove the PR review/merge, not the canonical scope or lifecycle of every SCR-0095 workstream.
+
+**Corroboration:** `a-townchain-os-docs/REALITY_STATUS.md` commit `77ed5ed14cbed7375346211c2c9faa1a7299aa11` is signature-verified and sections 39–40 describe the sweep and PR #8 merge. Its author/signer is `ShivaCoreDev`; the narrative attributes the merge to the Owner. A valid signature on this commit must not be misrepresented as a separate Owner-signed SCR lifecycle decision.
+
+**Approval context:** `APPROVAL-DECISION-2026-09-11-001-Legacy-Restaurierung-25.md`, blob `97b4b6efc966406ad06be9cd5ad376ec9fc6387a`, records Alexander's Owner decision to approve and put into force 25 CANDIDATE standards from SCR-0093..0099 waves. It enumerates the ATC-STD-020..043 Assurance family, including Reproducible Builds 041. It does not declare SCR-0095 closed and does not settle the Hub-file scope.
+
+**Separate standards residual:** ATC-STD-041 blob `82193d5f6c9acdfee694bc82bf67ba7a6b155685` has frontmatter `status: approved`, `normative: true`, `effective_date: null`; its body says it is not effective until §9 release, while its changelog still labels v1.0.0 CANDIDATE. This is an internal metadata/effectiveness inconsistency to track separately. Do not silently repair the standard or infer SCR closure.
+
+**Assessment:** at least two distinct work scopes are evidenced. Whether they intentionally formed one umbrella SCR-0095, one reference was misattributed, or the work should historically have been split is not established. Preserve both source relations; keep allocation/lifecycle unresolved.
+
+### SCR-0096 — scanner badge correction and Standards Family ID architecture
+
+The signed `REALITY_STATUS.md` commit above, section 41, explicitly attributes the generated README badge/template correction to SCR-0096 and reports the 25/25 follow-up sweep.
+
+Commits `49beb5c825876c01f8c69247b6e1c236a49cab15` and `ea9050a39570deab79cd8eeac46d419a4abb80ec` explicitly reference SCR-0096 and ATC-STD-002 family/artifact identifier architecture. Both are unsigned; they prove change provenance, not cryptographic Owner attestation.
+
+The SCR-0102 approval record explicitly lists ATC-STD-002 among the 25 approved standards and identifies Alexander as Owner/decision-maker. Current ATC-STD-002 blob `209cf54e4d43a153d5a3d67c261efadf828b5a58` has `status: approved`, `normative: true`. This is bounded evidence for approval of the standard, not proof that the scanner badge correction shares the same SCR-0096 scope or that SCR-0096 is closed.
+
+**Assessment:** preserve the two scopes as distinct typed evidence relations. Do not create a new identifier, silently split the historical identity, or mark the SCR closed.
+
+### SCR-0139 — Automation Authority
+
+The specification `ATC-AI-GOV-AUTH-001.md`, blob `c91c3aeab59425fda6178fbc87f302a241b25025`, has `status: approved`, `normative: false`, owner `Michael (Owner-Spezifikation 07.10.)`. Its body describes an Owner specification and maps it to SCR-0139.
+
+The machine-readable `.github/ai/automation-authority.yaml`, commit `750d920292149d16f327d8e33260d727599d873a`, blob `157704b5079df2b38381a8ea57873782da83446c`, declares `status: ACTIVE`, an issue date of 2026-10-07, `issued_by: Michael Wroblewski (Owner)`, ecosystem scope, authorization dimensions, lifecycle, evidence requirements, protected actions, revocation and decision chain. The commit is unsigned; the Owner attribution is content in the artifact, not a cryptographic signature over it.
+
+Commit `bceec03d7acd5bbaad42da10bbc2c75affd39f2f` explicitly references SCR-0139 naming/generator conformance and is unsigned.
+
+**Assessment:** `status: approved` may describe acceptance of an Owner-authored specification; `normative: false` means it is not a normative standard; configuration `status: ACTIVE` describes operational configuration state. These are separate dimensions and need not conflict. Operational activation alone does not establish normative force or SCR closure. Preserve the current distinction; do not change `normative` or SCR lifecycle based on the word APPROVED or configuration status ACTIVE.
+
+### Cross-case technical recommendations
+
+1. Keep `related_sources[]`; it is the correct existing model for multiple independently scoped source relations.
+2. Preserve a separate relationship and scope for each source's evidentiary role. Do not collapse them into a single primary URL or free-text note.
+3. For high-value evidence, capture immutable source identity (repository, commit SHA, canonical URL, artifact path and blob SHA where available).
+4. Distinguish cryptographic signature validity from the identity and authority of the signer.
+5. Record contradictions inside standards as explicit residuals, not as inferred SCR lifecycle states.
+6. Keep metadata reconciliation, allocation status, SCR lifecycle, decision and normative force independent.
+
+No source history was rewritten. No identifier was allocated or reused. No standard was edited. No SCR lifecycle decision was inferred. P1-A6 remains open, but technical reconciliation is not blocked by the absence of a new Owner decision.
