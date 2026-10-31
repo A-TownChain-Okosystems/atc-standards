@@ -95,8 +95,7 @@ def validate(
             elif "pr" in source or "url" in source:
                 pr_number = source.get("pr")
                 expected_url = (
-                    "https://github.com/A-TownChain-Okosystems/atc-standards/pull/"
-                    f"{pr_number}"
+                    f"https://github.com/A-TownChain-Okosystems/atc-standards/pull/{pr_number}"
                 )
                 if (
                     not isinstance(pr_number, int)
