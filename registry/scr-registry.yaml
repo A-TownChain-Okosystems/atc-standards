@@ -1,0 +1,1652 @@
+registry_version: 1
+repository: A-TownChain-Okosystems/atc-standards
+source_ref: main
+source_commit: af98f5e3766db99f33497c1044b0521dea8c7593
+allocation_policy:
+  unknown_is_blocked: true
+  missing_file_is_not_free: true
+  automatic_number_assignment: false
+  reuse_permitted: false
+entries:
+  - id: SCR-0001
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0001.md"
+      blob_sha: 79eb5ea7bfb473a5a6fa86fd173b037559d72e82
+      identity_sha256: 48ec4fa46b274fcbe71ca7a02322d4fa31d561772fdc6258f0a5f606b76e7cad
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0002
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0002.md"
+      blob_sha: a06bedaa5236a31e94a4dce762e9e08e4d07fc49
+      identity_sha256: 6c12a5c74e01f9ac51944f425b5ae8d21c8db7d10fc67e7886cd9b0e3168bed1
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0003
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0003.md"
+      blob_sha: 238c62b13371ec77df3eefd491c7103119cbd687
+      identity_sha256: 9331cb43c175197f3aa7be622ecaa9b935d216680564fe3b58018470190dc141
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0004
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0004.md"
+      blob_sha: e5bcc7c02d99b03aa6f5dcc0eb4504f903a4180d
+      identity_sha256: 5a001c5d82b62326c7197ffec73ba573227ca58135376929622ba5a548e4980c
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0005
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0005.md"
+      blob_sha: 254872a5bdd6502524a32aeb60976a3ce7e8cd6e
+      identity_sha256: 7cfef373eb25070a4b76cc4107b36375948ea96fcfed41dbd55d0a2c346ab368
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0006
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0006.md"
+      blob_sha: b69511a5dd3055410dba7c1282d286e88ecf9b5e
+      identity_sha256: bf903cd535cf0074ce56b1efcff795b8fc90047b1fc400aa38773e54b798ee45
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0007
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0007.md"
+      blob_sha: f0dbf67e7753cb47c32861fd960630c30900fe0c
+      identity_sha256: 65bfe27b5db8682dd85ff0d52b2f9544b45c30b95472003bb42a61856693a74c
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0008
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0008.md"
+      blob_sha: 34efc27e229466d7f7f39a8f6aaa490af2458eb9
+      identity_sha256: 05c554ab464cd1439ccc60baedd512dfba7ca2aff8f6e8873d10bdfdf46719aa
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0009
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0009.md"
+      blob_sha: 756dbbf9c8230e112a757f5152c6af9fa03c80fa
+      identity_sha256: f7064184c4e06937d09f4c1764076ce2f1c4e48983a7cadf35f53e9d49fbf627
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0010
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0010.md"
+      blob_sha: f89bee56cd9774204e387fd57245017cd89aafce
+      identity_sha256: a465231fec5e80d87740c252e4f286ac9164ed9c97da0c98c4e27b6995d40d9e
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0011
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0011.md"
+      blob_sha: 34410ac9699a1f1601d51462974a2d23506f62a1
+      identity_sha256: d5dee6c3fbae81b276db1fbf2eb115ec1871dccfe817387c1779d83f07a64830
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0012
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0012.md"
+      blob_sha: d4345218cccc28fb160dfbe3f75be2495fc934de
+      identity_sha256: f3ea9e41856e98f63d86861e1d0104e1467a1c32e9d999c9497355035575a578
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0013
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0013.md"
+      blob_sha: c0ecba08cf4f8bd27ac34b44a693ccd5cddadcfd
+      identity_sha256: b47936bc3bfc59a093d7ea467c2f1052ce370df425f106b288b9af134d1018e7
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0014
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0014.md"
+      blob_sha: 42fcfac6676d4f99509f0a3ea857dd79a7a826ab
+      identity_sha256: 0e38dd33d558cfe6f6b7d35aff72f2f908c2b433746082dabb0b6969853bafbf
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0015
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0015.md"
+      blob_sha: f297358b02daca357b92bd9db68fbc1295fec7c9
+      identity_sha256: ea27476dcd447e210a2ea39e208209d1e80896f47bfc9a13096b797f9beb1cef
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0016
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0016.md"
+      blob_sha: 9376a8bad810d0e88c686669e38f8e90c34c066a
+      identity_sha256: 8927ca6667a86ca9263d33c58ab2c89dba18c1ce9ca3c9ae4797894b3accb6f4
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0017
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0017.md"
+      blob_sha: 37c3964f54fec71d7e222c39ad4a9037c5c3bfb0
+      identity_sha256: 028b89c53a73cca5dd58f21bde6820677fd49f11ef6f0762868011038b26c275
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0018
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0018.md"
+      blob_sha: 7a6079665d00116947dfa28782019fd3d72edf1d
+      identity_sha256: 7c30efd7f983207deb84720ceadf373277ce2a9bda297346312ea5bafffd2808
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0019
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0019.md"
+      blob_sha: 335cb82bce5290a25c7e16557a842d7544ae8c11
+      identity_sha256: fd5a9ce19018ef2d26f41edcba426698b2cd850d411121c9394ca938acfb76fe
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0020
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0020.md"
+      blob_sha: ece0fc5cc65d4226b413c4e7b7a294b6233e3575
+      identity_sha256: 6ecb475e7871d2e19371a8d8f216e39530127fc45d6b3c7da5a8cd61c6fbb513
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0021
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0021.md"
+      blob_sha: c22c050b5ea67df2f254468304a13e335411504b
+      identity_sha256: e90eb6b73188537c9008d04bd86b9c74e7243b41260dca5778be5a2dff725411
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0022
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0022.md"
+      blob_sha: 7f0af209b83d513c55527c10e2e210d2fe207cbe
+      identity_sha256: c7c7e7405faabc2dd81e93289974ff3260c50288cad12a21622caa477f90136e
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0023
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0023.md"
+      blob_sha: f1e9bb4b0c1c49af2ab76da8b3f75164867a7474
+      identity_sha256: 5ace65182dda2261ca01b8a650a964cb2facafbf8d1339a44381149773eb6345
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0024
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0024.md"
+      blob_sha: 0d74b763101dd11de4ba0b03bfd56d849e1cc642
+      identity_sha256: b9957e649e3f5a496ca7a2f86caeb2c45679de4863f52c87e71adc39e7cb6164
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0025
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0025.md"
+      blob_sha: e2a5640d6c3cd30dd11388850d6605094dd31567
+      identity_sha256: aabf7e84b2a188a08ebac0b941a5aab4508712c514250a68094c96d0c043c374
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0026
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0026.md"
+      blob_sha: 21118eeed4e5515eb1f5097ac1d8caa53dbb4b73
+      identity_sha256: dc1c5f580e50d527c248e7dd2c02d590d4e6603b33a0bf6872cf75d1abede289
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0027
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0027.md"
+      blob_sha: 8919437282c9d5569ea8e2f8f5865512390de931
+      identity_sha256: 4b61c177fe4db46be2eac13b6cdff0ab061f036476879121f07a1ba8c77695c0
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0028
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0028.md"
+      blob_sha: 43f60364b5f40af9e3abf16214497af23c54fd8a
+      identity_sha256: 0d7f0790ef7444365873699dc0c45bf4af053c51d55990393630e1713a4f478a
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0029
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0029.md"
+      blob_sha: ece4011f6efcd1626b3bebe114bbae470a6449ea
+      identity_sha256: 77e6e769a804d7a6854c23a50d3ad4a78e391e86d61a5b08e7ff1e8a5c40553f
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0030
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0030.md"
+      blob_sha: b37e309daa105fe7f4307619c120286d58fd2cdb
+      identity_sha256: d44908349ee2b87f316bded1a2f7864605038ed953f4423596338dcbcbab4e87
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0031
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0031.md"
+      blob_sha: 289a241f4efa19b8174df65ce6e667aaf22e8bfe
+      identity_sha256: 6fa499bcd9aae455d2d7b9d98632bfdd06b477cb0b8423f8bd12164992be2e93
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0032
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0032.md"
+      blob_sha: f62ae470cba69d7ff32ba47b392c63fe0c6341be
+      identity_sha256: 1da33d667b0a047612e13ec4c68b10635f79023bfc6bfcde9375ae5098980d26
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0033
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0033.md"
+      blob_sha: eac9b2320d7ac2cf17a2d4310a591bc81cc58487
+      identity_sha256: 5d8c15e64cf8d6c1ef3f5fbadbc026d8c0669d4ccfb0a8908683ac549547325e
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0034
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0034.md"
+      blob_sha: 755f0c5cbd7812bf076fcdee196564690da40ac4
+      identity_sha256: 2373497b5674e18444fbb57ddccb296d8e833431cd608c566df5ed59e99d3238
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0035
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0035.md"
+      blob_sha: 8953fe07921b6d2d5f4a6022e51737caec7243ce
+      identity_sha256: ba4460e8fff2c1e6d87dda6c9c1ab12838f86658d5790b9574f88f59d2e97a5e
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0036
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0036.md"
+      blob_sha: 3d5c3278976f06bc8761d334e779cb017916ca68
+      identity_sha256: b71e4a31c8722b6703cb065c8bf34b14747183e350bea9805eccc552b69ed827
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0037
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0037.md"
+      blob_sha: 8bd59a2cf148f5ab1f4fbe104b5af54165c4d020
+      identity_sha256: 6e4d7ddbccf024f29507ce97a2b130d0b9be315d9ffed8627e167660a35810e6
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0038
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0038.md"
+      blob_sha: df69bb56a7f389dc6cb249ec3e1d6f0b89dee3a1
+      identity_sha256: 6a5835e75778a9811bdd666f6c5587a6daf748980947bb9d7638f12c90ee40bc
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0039
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0039.md"
+      blob_sha: 2187e8d6836904d1237d8c1cbbae329acf08b90b
+      identity_sha256: 6b1dcd74397dfd7a90882cba56ae6a252f47af388cf9ca3649b0b543b3ffbe48
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0040
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0040.md"
+      blob_sha: aa5d869e9c7b025a3c29c10bf93c320e00c4403d
+      identity_sha256: 4d0195e45f1c948dd180f8b74f54a1c059f88758ad457891e7220963c7f61a37
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0041
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0041.md"
+      blob_sha: b8cad5e58fb33137cf9666f895d1c0a25dd40768
+      identity_sha256: a5e1d808a3ce1bb1be0c89f84d0f39ea8a968e0f9a51146bac863210a0536d45
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0042
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0042.md"
+      blob_sha: dd4dd9fe4c62ce451a053247ca077d058ecec4a6
+      identity_sha256: 3d9f7bf7f6c2b4991beb5dbbae2bcf189e65571ad9c3be19a48ba001c6cb7b87
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0043
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0043.md"
+      blob_sha: 382e496531a74b778e519a6866a124d9a9d83af7
+      identity_sha256: 91a081f547f1b5ada066de06aa5332700da16a26a0974c11278f62fc3d3d2caf
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0044
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0044.md"
+      blob_sha: 2d90f0a27d5649bf34155da35aad06c77506eee6
+      identity_sha256: fc7dae159c862cb01f40e047a879b55dd01d9783274fb61ea80c20cad374e33d
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0045
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0045.md"
+      blob_sha: 397f758723d053208f476f7491790642758936e7
+      identity_sha256: 63a257710b86975098783542906c636705f4cc868e726fef6c4e761c8d52dd43
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0046
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0046.md"
+      blob_sha: e5b60eb2683a13743f579a23b4f92672611cbbad
+      identity_sha256: 7323bd5938fbda434f16cdc44ce5b87771b98b232bf0328290836197ff4a2152
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0047
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0047.md"
+      blob_sha: bff17f0c231f9d55c566544a0028133491daffba
+      identity_sha256: 3642798ce5496737bb78e9a1b7a5c776c76d8011d7b5a2bf88b8e050bd0b7a18
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0048
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0048.md"
+      blob_sha: 45164e589eca0e32df9ddbdbd5d49db60e24cbd9
+      identity_sha256: 3352b2646eba0d88f35aa9123df6a3ccba58ea0b07ae447ba43e986ed5fd6226
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0049
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0049.md"
+      blob_sha: c80753b40ed1a63229a3990ddc0da8d70ad62e05
+      identity_sha256: 0262c2ab9d1008ba63f9ef44af7ceda31623ba5f288765d089b2ff0dae7d8b18
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0050
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0050.md"
+      blob_sha: cf5337fe1c5b088c9d23f1e8a6defa45da3ef1b7
+      identity_sha256: 7d02173bf408ae156cda555020b83bfa5c87c150d0463f0e63cc7d90fe5d37c2
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0051
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0051.md"
+      blob_sha: cd2c602a04cfdc7683cf53140398a211c1ccacd0
+      identity_sha256: a3a0be3b045a83a9087b022cc811722340b4848cd2500c1b57ed5fb7829f5450
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0052
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0052.md"
+      blob_sha: dd0f05243102e87bed6ca17cd0fbfc52210799eb
+      identity_sha256: a4ccb3d5564d8d0ec8ec6684399ed58365214981e6d66ef73418f060e305401f
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0053
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0053.md"
+      blob_sha: 409aeb9f5ad0f241b06e61532188131d1236d2de
+      identity_sha256: 75c1299ea48977a8434ab20f3dbf47ff0c07b4da8c3ee525f2347ccb55e0d11e
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0054
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0054.md"
+      blob_sha: 478f3ff0da2ab2a5c02a30720390c03e0b6955a4
+      identity_sha256: 03ee0e7133fc6d43eba30dc0ef29c38fee1bb139dcf31c82483acbdf16d984aa
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0055
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0055.md"
+      blob_sha: 6aaee03dc99f2ef62f1e20d978dc640756fa7ef9
+      identity_sha256: 2b22d0c5f3424d94c7f0d7f4adff545838c0af3ec936bbb0a8732a16533e0ee6
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0056
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0056.md"
+      blob_sha: c484d1c7fca53635b63ce058a0f73b603189d6f3
+      identity_sha256: 7c1b5ee2a1315768c03df9ccbc136d2be042679fc3660d7ccaecc8abfb2b8c41
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0057
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0057.md"
+      blob_sha: c5e0ea1944d4fef3f6677f83e117f642d2c5ba68
+      identity_sha256: d03c950c01605e391a9d8088ea0f82b43fa822fff6fed79c203630710e0f7716
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0058
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0058.md"
+      blob_sha: bc79d3adffc5b2a54653068b729f03b77f0f128e
+      identity_sha256: 54da8b605041e7f3e188d3d8b65f2d3c970212a5e4edc39bbe7ca02b3301567f
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0059
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0059.md"
+      blob_sha: 08eb4a2b60bf45ce4a378fba4a524c52cc1eebaf
+      identity_sha256: 25eb228bfca8284b17992a8613c74627964cbb8f6eec7cd84748b070f9a6959c
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0060
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0060.md"
+      blob_sha: 1a01bba2b33c5ed99ff14050e715219124d88453
+      identity_sha256: a55906123f15b9abd00df21aade42abd575697298c4b2084b9c59a568fe1e69b
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0061
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0061.md"
+      blob_sha: 48a83c0394cab23fda18358690b0d99d988e5501
+      identity_sha256: 4b462c6443ac8982a90dd9064969d5a6fc7363424edbc3de106567c653421a92
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0062
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0062.md"
+      blob_sha: 12a21cbde77c3d9ed19ebe942187ac6f8116b921
+      identity_sha256: 806f0b4f2b9ca5849828315756b819c41d412a8a599063de5443daf495454992
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0063
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0063.md"
+      blob_sha: 32c837c5cc8dc7ce9694b14c804e935af83d7297
+      identity_sha256: d2d4617ff92c5347e53441e00c9be47cac56aeebf6b3f111cb1755645a3e2cbb
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0064
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0064.md"
+      blob_sha: 9df5875a7e97eb1105a02720024228847346d2e6
+      identity_sha256: ead40148b5df24b23fac2edc75e3446c67c3854b6c0e88a1216ff377a3132d56
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0065
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0065.md"
+      blob_sha: 1b440015848755b66a3a5730a0d0574b9eef5482
+      identity_sha256: 1df88da6a5cc58bc5ba88f7011d584503baf853e7a2f5e8f261fcdaea2a6531c
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0066
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0066.md"
+      blob_sha: f617e75c21e535df03a29054c7838fd39d4bc73e
+      identity_sha256: 0ababbcb2ea7f68e16a5436c62584646394e64b0d983d71cd5ff6a4b10155d4d
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0067
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0067.md"
+      blob_sha: 80be80571fa566c6b8e423634309f256683b9d37
+      identity_sha256: ac02f416451f01c15f48be096379c54d24472602e9f86d7efc1181843b72653d
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0068
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0068.md"
+      blob_sha: 6998de793d95987101a1bbcea719ee7b26056d69
+      identity_sha256: f4f59c1ae4ee7fa12c8aabf7f47ce0afdee4263a2f1c6a3fd7d90535163aaa9b
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0069
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0069.md"
+      blob_sha: de50918904a3fa24a7ac9f2ae42f6259c402b713
+      identity_sha256: 0a1cb493a27463ca9eace9ff7d66e9110683e6f091cbc2f70f48872032d6f119
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0070
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0070.md"
+      blob_sha: 74cb1d12ad3fe1c5801e4086c786d249e7ba6a7f
+      identity_sha256: 250659f65504cb7b5db6c0141b9146084caf719640aeb38590befa18e03d9892
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0071
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0071.md"
+      blob_sha: 48f56024658c44634076d41fff12794e80bbb7ce
+      identity_sha256: d692084b20d1506e2e4aa4963bdea7b75a22399595e8984973411fea1c393bf6
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0072
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0072.md"
+      blob_sha: ed2c91541ace12a0c65328ded3f1e17a26d089a2
+      identity_sha256: 3c7a10efeac25a6fb2bce185a074853d1200295feebf64ba22cdeae62ba0e8c1
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0074
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0074.md"
+      blob_sha: 7f136310b9525f50e3335a00631db57774153347
+      identity_sha256: 9f5e84ac83d8a3cc004dc3872d9708d8d962c3e481561fb0937daa36a3bf06f6
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0075
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0075.md"
+      blob_sha: c1b20b85cf420c3ab1d555cd787bd95eb2b351d9
+      identity_sha256: 5ea04bf2c0e7840972ca04a8682e54133856e1a1431f6e04d08d0c663b61e1f8
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0076
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0076.md"
+      blob_sha: 3786c058f92451bfc9089da391e72356ff283916
+      identity_sha256: 6c64e821a357cf1eedfa9aadbc3d44b6fc9cf1f259db1d89dc3985cbe4143a54
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0077
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0077.md"
+      blob_sha: 59e871a717af65462664f513d29e81671b727c09
+      identity_sha256: 45cab29f2a3cad43993f4efa6cceab9b85da8d24e3ad4d3b497b6a511d36514a
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0078
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0078.md"
+      blob_sha: aacff3aa1d2d1d43a7ac6ca62dd02db65d01f93f
+      identity_sha256: 9d52d25c29ad52c877cb3749d4af8c19f2eb04d1cab4c25e3bcd3c510ba355ca
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0079
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0079.md"
+      blob_sha: 307bc9843ee7781d280df590fd7574d5fbc6a303
+      identity_sha256: c233ba6acfd36e217fc1fd70ebf81ea5ae54bf3457794e36e5d6b3804db3c5d2
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0080
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0080.md"
+      blob_sha: 04af848cee842e934f701b7822f0c7044465ba17
+      identity_sha256: 03b0d37211072bab7c8d1e40b0da870fa709e10495b43001f2b7960a85e953af
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0081
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0081.md"
+      blob_sha: d22ce3b65f334a707ae463f21410f70a5ce0cf88
+      identity_sha256: 6550e78047a35d9324770f4503a275b1af6a28beede237040483fa084191c841
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0082
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0082.md"
+      blob_sha: 9bec630af28c78d2d39128c9be1b1964b6bf0a95
+      identity_sha256: 9176e54ec90d81b957c4602dbd69fd81faca1352d56cb1a5d3708583e0f52a98
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0083
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0083.md"
+      blob_sha: c73e67a347a9ab11681d2219a52c0b6c8257b8e9
+      identity_sha256: 5c8736d413721b24279ad9ffbe62c3868ce4346bf4ff1296ee76754d4de395f0
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0084
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0084.md"
+      blob_sha: eb7ea6af273bdf6ef07c0b57e6333f5aed650086
+      identity_sha256: 4d3b0b980f3c2286b91eba30b56a86df617778a930fe1d931cc52ec98fcc5bf1
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0086
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0086.md"
+      blob_sha: 897370513e91856cc6c381a1ea236e721c073036
+      identity_sha256: 0762abb960ca6168134fa921fb3f353571ba45aa821606652ba5dc1b9386f04e
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0087
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0087.md"
+      blob_sha: 5927ec1d4e28b64550613aac6ce3cdbb3e4711c2
+      identity_sha256: 9aa0266ed827357d3df939d100f8265602c5c7754deba3d82a53e09e4fcb0905
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0088
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0088.md"
+      blob_sha: c2d60cbde8d0e507eee97e4563753d691de7c418
+      identity_sha256: 700292c74f996221fd5e05bc9fc7537737a185a96bcfda1fcfb61ef0d1a1734a
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0089
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0089.md"
+      blob_sha: db5d044e87f28d5939628323af6672064928a15d
+      identity_sha256: 34913e7b680db316ad584ba434647bb6e502ba215e801af8ea16a3bf93af62bd
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0090
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0090.md"
+      blob_sha: 786c380901370ac107e466ed24bc9fdcb6ea2db6
+      identity_sha256: eabd49c5aaf2a3973fcff4b68e771c04447b67aa380620286c61b5437e0676f4
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0091
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0091.md"
+      blob_sha: 9887ef8680838aa4de5cb58274bb777a2ba863cf
+      identity_sha256: cedb577a4ad664da9540e12bb597d34c8be9c68f54bfb60968d8f19980e73009
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0092
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0092.md"
+      blob_sha: 2b4fc20df17c8978015fb09788c94d78d989bb8c
+      identity_sha256: 35cd91b2fbdc599b17b6f6de98010027957fbaf87ca05fd588fec972964450e5
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0093
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "standards/architecture/ATC-STD-100.md"
+      blob_sha: b3cb0b5d9c26a96f11446c44d13a6e517a6e32ff
+      identity_sha256: 8fc402e5909994cb5cf3f5b3810244720e7e628556798e775b5a95134dc802d0
+    notes: "Language Architecture L0-L8 reference; the canonical SCR file is absent. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0094
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "evidence/README.md"
+      blob_sha: 04042e81c8dae2798f99423f924ea05d196fe6bc
+      identity_sha256: 6d24d2fe895e184f9a3abd2612988a7fba9e9cf4cd7b8ad0b24fc63b9a94bc43
+    notes: "Continuous Assurance reference; related standards also cite this identifier, but lifecycle and decision are not reconciled. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0095
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "standards/enterprise/ATC-STD-041.md"
+      blob_sha: 82193d5f6c9acdfee694bc82bf67ba7a6b155685
+      identity_sha256: e6bccb00df6c95e7f7c55f4f6541bc1bbf23937fb3306f10e8cd54ad797bb35f
+    related_sources:
+      - relationship: SCOPE_REFERENCE
+        scope: "Automated Repository Assurance standards and GATE-SEC-001 work scope; the commit message attributes this work to SCR-0095 but is unsigned."
+        source:
+          kind: HISTORICAL_REFERENCE
+          repository: A-TownChain-Okosystems/atc-standards
+          commit: 3eba30ef3253205de24e617389018b954672ee4e
+          url: "https://github.com/A-TownChain-Okosystems/atc-standards/commit/3eba30ef3253205de24e617389018b954672ee4e"
+          identity_sha256: d9b0e03f030160ac30174864fe205bd0f40adce6491342aa2eb7d2a0219dea2b
+      - relationship: IMPLEMENTATION_EVIDENCE
+        scope: "Hub repository-file completion: GitHub PR #8 is closed and merged; review ID 5178534325 records APPROVED by GitHub account A-TownChain at 2026-09-11T12:19:17Z, and the PR was merged at 2026-09-11T12:27:40Z. This proves the recorded review and merge events, not a broader SCR lifecycle decision."
+        source:
+          kind: HISTORICAL_REFERENCE
+          repository: A-TownChain-Okosystems/.github
+          pr: 8
+          url: "https://github.com/A-TownChain-Okosystems/.github/pull/8"
+          identity_sha256: 7e15713cdef991b1c222d6b62be41b7b9c56121a685812aaf2ac2a1f03614eda
+      - relationship: IMPLEMENTATION_EVIDENCE
+        scope: "Immutable merge result for PR #8: merge commit caefa8c7315daceecb4ec8d02c47eb4df78e4027 has a GitHub-verified signature and adds .github/CODEOWNERS, CONTRIBUTING.md, SECURITY.md and STATUS.md. Signature verification authenticates the merge commit; it does not independently attest SCR-0095 closure."
+        source:
+          kind: HISTORICAL_REFERENCE
+          repository: A-TownChain-Okosystems/.github
+          commit: caefa8c7315daceecb4ec8d02c47eb4df78e4027
+          url: "https://github.com/A-TownChain-Okosystems/.github/commit/caefa8c7315daceecb4ec8d02c47eb4df78e4027"
+          identity_sha256: ce2e12a41c77dd75e92ad7af2e965e943124a88687432427fed701f05642c3f4
+      - relationship: CORROBORATES
+        scope: "Signed historical REALITY_STATUS narrative sections 39–40 describe the file sweep and Owner merge of Hub PR #8; this does not decide SCR lifecycle."
+        source:
+          kind: HISTORICAL_REFERENCE
+          repository: A-TownChain-Okosystems/a-townchain-os-docs
+          commit: 77ed5ed14cbed7375346211c2c9faa1a7299aa11
+          url: "https://github.com/A-TownChain-Okosystems/a-townchain-os-docs/commit/77ed5ed14cbed7375346211c2c9faa1a7299aa11"
+          identity_sha256: b62ec89631e9cbf56089d9aa0bfa4ab333b93f0985b05e0e029870e10f509a7e
+      - relationship: APPROVAL_CONTEXT
+        scope: "The approval record includes ATC-STD-041 among 25 approved standards; it does not establish SCR-0095 lifecycle closure or settle its multiple scopes."
+        source:
+          kind: HISTORICAL_REFERENCE
+          path: "approval/APPROVAL-DECISION-2026-09-11-001-Legacy-Restaurierung-25.md"
+          blob_sha: 97b4b6efc966406ad06be9cd5ad376ec9fc6387a
+          identity_sha256: d75dd6091b359419d8ff2f15babac9d47b28a41b6334af6bbd551feb5a40c831
+    notes: "Automated Assurance is one evidenced scope; ATC-STD-041 labels itself APPROVED but says it is not effective until §9 release. Hub file-completion is a second evidenced scope. Canonical SCR scope and lifecycle remain unresolved."
+  - id: SCR-0096
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "governance/ATC-STD-002.md"
+      blob_sha: 209cf54e4d43a153d5a3d67c261efadf828b5a58
+      identity_sha256: 5a34e85804e8f1e3d9b2334a6b0a32ac6e7f793a5bb6fb426acdcc2eafe0eb92
+    related_sources:
+      - relationship: SCOPE_REFERENCE
+        scope: "Compliance scanner badge/template correction in a-townchain-os-docs REALITY_STATUS §41, explicitly attributed there to SCR-0096."
+        source:
+          kind: HISTORICAL_REFERENCE
+          repository: A-TownChain-Okosystems/a-townchain-os-docs
+          commit: 77ed5ed14cbed7375346211c2c9faa1a7299aa11
+          url: "https://github.com/A-TownChain-Okosystems/a-townchain-os-docs/commit/77ed5ed14cbed7375346211c2c9faa1a7299aa11"
+          identity_sha256: b62ec89631e9cbf56089d9aa0bfa4ab333b93f0985b05e0e029870e10f509a7e
+      - relationship: CHANGE_PROVENANCE
+        scope: "Historical commit introducing the ATC-STD-002 family and artifact identifier architecture; unsigned and therefore not a cryptographic Owner attestation."
+        source:
+          kind: HISTORICAL_REFERENCE
+          repository: A-TownChain-Okosystems/atc-standards
+          commit: 49beb5c825876c01f8c69247b6e1c236a49cab15
+          url: "https://github.com/A-TownChain-Okosystems/atc-standards/commit/49beb5c825876c01f8c69247b6e1c236a49cab15"
+          identity_sha256: 3f09ca2f474326abe12d583d5d0bd4d560528c144b09a023423d189d0ddd85aa
+      - relationship: CHANGE_PROVENANCE
+        scope: "Subsequent ATC-STD-002 registry architecture and Owner-hardening commit; unsigned and not independent proof of Owner attestation."
+        source:
+          kind: HISTORICAL_REFERENCE
+          repository: A-TownChain-Okosystems/atc-standards
+          commit: ea9050a39570deab79cd8eeac46d419a4abb80ec
+          url: "https://github.com/A-TownChain-Okosystems/atc-standards/commit/ea9050a39570deab79cd8eeac46d419a4abb80ec"
+          identity_sha256: 895709361ece0bd4640bf131a33048964ce71bb498e2c979c9d9a04815828da0
+      - relationship: APPROVAL_CONTEXT
+        scope: "The approval record includes ATC-STD-002 among 25 approved standards; it does not resolve whether the scanner badge work and family architecture share one SCR scope."
+        source:
+          kind: HISTORICAL_REFERENCE
+          path: "approval/APPROVAL-DECISION-2026-09-11-001-Legacy-Restaurierung-25.md"
+          blob_sha: 97b4b6efc966406ad06be9cd5ad376ec9fc6387a
+          identity_sha256: d75dd6091b359419d8ff2f15babac9d47b28a41b6334af6bbd551feb5a40c831
+    notes: "Two distinct work scopes are evidenced: scanner badge correction and Standards Family ID architecture. Existing standard approval evidence is bounded to ATC-STD-002; SCR-0096 scope and lifecycle remain unresolved."
+  - id: SCR-0097
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "governance/constitution/ATC-GOV-001.md"
+      blob_sha: 42e656148ea45350c41cfcecf748b9290e61e471
+      identity_sha256: 78063134a337073e6504ba054f6afaa2c566001aa3a885aca2dde68344835e64
+    notes: "Governance Constitution reference; canonical SCR file absent. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0098
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "approval/APPROVAL-DECISION-2026-09-11-000-v1.3.0.md"
+      blob_sha: e5063f241b6b66b06e48e3d816367c8fb12e70f5
+      identity_sha256: f66d97d7ea66df2fb0f21d2595c798e239414e87ce29c67d42d530e42098cf8f
+    notes: "ATC-STD-000 v1.3.0 approval record cites SCR-0098; SCR lifecycle metadata remains unreconciled. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0099
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "audits/file-admission/2026-09-11-atc-standards.md"
+      blob_sha: 3983850e8d934eb53cb63b1c77bc87357c2596a9
+      identity_sha256: dd07d75fd3f2332b812e0fd843c552793d31fb20877d9fe992249d375e0b7db6
+    notes: "File Admission pilot audit reference; canonical SCR file absent. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0100
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "tools/gen_views/gen_metadata.py"
+      blob_sha: 47978813daa5650c27589097606b7cafc9d8cab5
+      identity_sha256: a10406530765a1a52300c53155e01bd17757a3b3a6abcc273f6054fd240584b0
+    notes: "Per-standard metadata generator reference; canonical SCR file absent. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0101
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: ".atc/standards.yaml"
+      blob_sha: d2b851d151801ec697a905a93782ee53ebdc513b
+      identity_sha256: 12f8550c54034a95205395bacc88bb59b60620d979d1afeb5bd7a7fc459b1088
+    notes: "Repository standards-profile binding reference; canonical SCR file absent. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0102
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "approval/APPROVAL-DECISION-2026-09-11-001-Legacy-Restaurierung-25.md"
+      blob_sha: 97b4b6efc966406ad06be9cd5ad376ec9fc6387a
+      identity_sha256: d75dd6091b359419d8ff2f15babac9d47b28a41b6334af6bbd551feb5a40c831
+    notes: "Owner approval record for legacy restoration; individual SCR lifecycle and decision fields remain unreconciled. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0103
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "standards/enterprise/ATC-ORG-BASELINE-001.md"
+      blob_sha: 26299a810fb06b3246d12a9b88452180fe59ac0f
+      identity_sha256: b152d9e01d81ee455263d65c9129211521a7ed5a0b36c65266937d06edb7007e
+    notes: "Organization Engineering Baseline reference; canonical SCR file absent. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0104
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "registry/findings.yaml"
+      blob_sha: abb72e3308fdd6093517c1c34972ff7993b6a126
+      identity_sha256: 21c41f460e31465a3971dab08d45ca9358c99893a670391ea5704b840cf11956
+    notes: "Contract execution MVP reference; findings record describes partial resolution, not SCR closure. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0105
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "registry/findings.yaml"
+      blob_sha: abb72e3308fdd6093517c1c34972ff7993b6a126
+      identity_sha256: 21c41f460e31465a3971dab08d45ca9358c99893a670391ea5704b840cf11956
+    notes: "Security automation/CodeQL and Dependabot rollout reference; grouped findings evidence only. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0106
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "registry/findings.yaml"
+      blob_sha: abb72e3308fdd6093517c1c34972ff7993b6a126
+      identity_sha256: 21c41f460e31465a3971dab08d45ca9358c99893a670391ea5704b840cf11956
+    notes: "Devnet/Testnet infrastructure reference; grouped findings evidence only. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0107
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "registry/findings.yaml"
+      blob_sha: abb72e3308fdd6093517c1c34972ff7993b6a126
+      identity_sha256: 21c41f460e31465a3971dab08d45ca9358c99893a670391ea5704b840cf11956
+    notes: "Commit 3e80498475da8d69b2fad171a7a1c5393f68ead5 explicitly labels the findings-schema normalization as SCR-0107. Commit signature is unsigned; this proves a historical identifier reference, not Owner approval, final allocation, implementation completion or closure."
+  - id: SCR-0108
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "registry/findings.yaml"
+      blob_sha: abb72e3308fdd6093517c1c34972ff7993b6a126
+      identity_sha256: 21c41f460e31465a3971dab08d45ca9358c99893a670391ea5704b840cf11956
+    notes: "Chain-Access-Layer reference; grouped findings evidence only. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0109
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "registry/findings.yaml"
+      blob_sha: abb72e3308fdd6093517c1c34972ff7993b6a126
+      identity_sha256: 21c41f460e31465a3971dab08d45ca9358c99893a670391ea5704b840cf11956
+    notes: "Referenced in grouped Chain-Access integration evidence; individual scope not reconstructed. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0110
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "registry/findings.yaml"
+      blob_sha: abb72e3308fdd6093517c1c34972ff7993b6a126
+      identity_sha256: 21c41f460e31465a3971dab08d45ca9358c99893a670391ea5704b840cf11956
+    notes: "Referenced in grouped Chain-Access integration evidence; individual scope not reconstructed. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0111
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "registry/findings.yaml"
+      blob_sha: abb72e3308fdd6093517c1c34972ff7993b6a126
+      identity_sha256: 21c41f460e31465a3971dab08d45ca9358c99893a670391ea5704b840cf11956
+    notes: "Referenced in grouped Chain-Access integration evidence; individual scope not reconstructed. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0112
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "registry/findings.yaml"
+      blob_sha: abb72e3308fdd6093517c1c34972ff7993b6a126
+      identity_sha256: 21c41f460e31465a3971dab08d45ca9358c99893a670391ea5704b840cf11956
+    notes: "Referenced in grouped Devnet/Testnet evidence; individual scope not reconstructed. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0113
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "registry/findings.yaml"
+      blob_sha: abb72e3308fdd6093517c1c34972ff7993b6a126
+      identity_sha256: 21c41f460e31465a3971dab08d45ca9358c99893a670391ea5704b840cf11956
+    notes: "Referenced in grouped Devnet/Testnet evidence; individual scope not reconstructed. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0114
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "registry/code-quality-matrix.yaml"
+      blob_sha: 88f1f8f97b91b01bc66bdb29d18e24a032058ff7
+      identity_sha256: 0f47aa42db0e8cdab2895a5fb1587f294bb8c47762bb0cb50461142e03484e6d
+    notes: "Genesis Engine determinism reference; canonical SCR file absent. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0115
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "tools/atc-repo-audit/atc_repo_audit.py"
+      blob_sha: 9288daad994f973dfe2e88b601911fb3c396eeea
+      identity_sha256: 863d014006387d6fabc9187e65cba9d651cb1d4142663272e002bc8221173b73
+    notes: "ATC repository audit tool explicitly labels SCR-0115; SCR-0116 independently identifies it as the highest known referenced number. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0116
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0116.md"
+      blob_sha: 0933da40229fe6938da6cb564794232f0828dacc
+      identity_sha256: 1d1d6e0979fcb850180b99e7f8aefad527f84b5f1fe1fb74eb62564b47fea921
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0117
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0117.md"
+      blob_sha: 9a5f6a994c28cd8be698ca4fa439943b80e8a8ad
+      identity_sha256: fbc956437293a6324ea562f9b96c1b8139eb2fc2bf1465b8491231c188ab55e3
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0118
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0118.md"
+      blob_sha: f91929d657f0348a8238a4b0e6748e884809d46d
+      identity_sha256: cb3d9914502560707bcd874b70ff261b2193dfb8a3a81912afed030651b2f937
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0119
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0119.md"
+      blob_sha: 55cf1b25535a85cac586a3264ba1eaeb3e459f88
+      identity_sha256: f7055ecba4ac36be023125d0a9a0400dca70cbad6b806cf909ddc40b70d487c9
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0120
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0120.md"
+      blob_sha: e1b590639f5121139fe5e0b998ad7855173f6eb2
+      identity_sha256: c6005aef70e48af76118628ac85f49ecceb674c38523e906dadc51c1cc39e788
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0121
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0121.md"
+      blob_sha: 339e2c61387e884972ccf7a4a81cbfee16a2c73c
+      identity_sha256: 8fece01d550ab250380e3504c6adaf2b26d195a03a8c386d139a750185de84a5
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0122
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0122.md"
+      blob_sha: 778b49db233187d6d8de31a2e918cf44fde276d1
+      identity_sha256: 67e18cd6f55ae4e7c8cadad6c8575a1c77daf6c4a3b4c9dd8421e90dbb16b1ea
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0123
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0123.md"
+      blob_sha: ea2ced2e6e970122e3e2bf53058e045864350068
+      identity_sha256: 092bcb119299dcd4b70b06219a0e90201bcf85b5ba076a36d7c96d3ce10c03d4
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0124
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0124.md"
+      blob_sha: 72bc19e4ab714c8e90dd4ce3edcdc1ba813b5825
+      identity_sha256: 5425c97562c492e19a1f2908ab5ba3377ab0b5149c4e3047cf79a12a321c2111
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0125
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0125.md"
+      blob_sha: 94918d19697045d45561158c753809c219d3ed5e
+      identity_sha256: 832fb81636f50470be3f19dfbc4f6361333f4519dfffd4455f7d55ea28618a1f
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0126
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0126.md"
+      blob_sha: 0986b4b001b0680d62201b3187c08c6e8097a7fa
+      identity_sha256: 15aacada8d5226bacb86a36d9c0bc011473e8a53eb8702b279de8a755f01b096
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0127
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0127.md"
+      blob_sha: bfa77cfed647b99373729877de3cfb598364564d
+      identity_sha256: 9e27f5de3dcdee1b7be3739ece714fb479a64f3b6cca63f1af413b5067011178
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0128
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0128-globusos-reference-architecture-syscall-abi.yaml"
+      blob_sha: f40e5c16b8f2a90e0a408e126885cfd43f3fd5c9
+      identity_sha256: 20e8938d5dd8334106533648601e73dd5d93c721fc0527126bd255df51be56eb
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0129
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0129.md"
+      blob_sha: 7248d6ddc0c119c4258dccb4e47afa74ed84b69e
+      identity_sha256: 5023ad335ede5c8e6ac6eec454a72d16f0e72ac315615d60335388f4d2042d8d
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0130
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0130.md"
+      blob_sha: 36bced0154f99b1dee3f32aee327b318f2e92274
+      identity_sha256: 38a8328b20d1683d10ff2b2c7c34da97b3c029ad399ba7437068c9c1d000b7fb
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0131
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0131.md"
+      blob_sha: cdf2ffb297357e1d3e14f733ccba82c779154020
+      identity_sha256: c524ea98c9d3c936af5be2a70be9d5771b1fd1c0035f9f0c1d1f66c5afcbd456
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0132
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "docs/SPEC-ATC-GATE-METHODOLOGY-001.md"
+      blob_sha: 2e1d7dbd0ab583f3b774be8ccbdc7b3547768982
+      pr: 92
+      url: "https://github.com/A-TownChain-Okosystems/atc-standards/pull/92"
+      identity_sha256: 0f5d9b58b8117bd4016518cfffccfdf4a93cceca2b4d531d8229733d3e4fc5a7
+    notes: "Gate Methodology Draft 0.1.0 reference; PR #92 merged, but the document remains draft. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0133
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      repository: "A-TownChain-Okosystems/aurora-ai"
+      commit: "15f328faf735d2a4d9abd3b0fec547fa14897335"
+      url: "https://github.com/A-TownChain-Okosystems/aurora-ai/commit/15f328faf735d2a4d9abd3b0fec547fa14897335"
+      identity_sha256: 98d700847cbb1dd0bc25432d6fd358f076db069525e6f662c93c5ee34f0d96e7
+    notes: "Cross-repository dependency/security remediation reference. Additional observed SCR-0133 commits include a-townchain-os-docs 8acd969e0467a3d770595c2946573cff7ca0e6ea, a-townchain-ecosystem ecdba9ec478737d4f7b25e80c8ed7c31d96d7a83, and a-townchain-os-docs 68478c45bf3a2d555f4c6a5d9c06e5c3bbd1e8fe. The primary commit is unsigned/Owner lifecycle not independently established; canonical SCR record absent."
+  - id: SCR-0134
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      repository: "A-TownChain-Okosystems/a-townchain-os-docs"
+      commit: "ae2fea101b5d2ccb6a5fa6fcb00f3b6f52004953"
+      url: "https://github.com/A-TownChain-Okosystems/a-townchain-os-docs/commit/ae2fea101b5d2ccb6a5fa6fcb00f3b6f52004953"
+      identity_sha256: cc9e593e780442dab046893de151d86333869af5944a25ddb9329f02bc83c3af
+    notes: "Exact-SHA File Census across 33 repositories; commit message explicitly cites SCR-0134. Additional observed SCR-0134 reference: atc-zkp commit 9771ffed3ac5b3761c4d81e9c4d63cd4d2070108. Canonical SCR record and Owner lifecycle decision remain unverified."
+  - id: SCR-0135
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "docs/OEP-0007-MERGE-GATE-GOVERNANCE.md"
+      blob_sha: eded6587b4ef12e15e71f2ebc59096cfffdf9caa
+      pr: 93
+      url: "https://github.com/A-TownChain-Okosystems/atc-standards/pull/93"
+      identity_sha256: a7d3a4ac1f167152f30c102b6843526e510cfedef6b588b937a743cce40f468a
+    notes: "OEP-0007 Merge/Gate Governance Draft reference; PR #93 merged, but the document remains draft. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0136
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "docs/ATC-SYSTEM-ROADMAP-001.md"
+      blob_sha: 35f36d0aa31f13e788697d913ca00452ff9bebc9
+      pr: 94
+      url: "https://github.com/A-TownChain-Okosystems/atc-standards/pull/94"
+      identity_sha256: e1edde7d902f78218e9b2cb9b0a5372ce592713e047959c51a3d958398094588
+    notes: "System Milestone Model Draft reference; PR #94 merged, but the document remains draft. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0137
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "docs/ATC-SYSTEM-ROADMAP-001.md"
+      blob_sha: 35f36d0aa31f13e788697d913ca00452ff9bebc9
+      pr: 95
+      url: "https://github.com/A-TownChain-Okosystems/atc-standards/pull/95"
+      identity_sha256: a3ff6b61352e96f0579226d7a5a6065a3a0569a5774e26161a0785456b71da0c
+    notes: "Major reconciliation of the milestone model; PR #95 merged. The roadmap remains a draft and standalone SCR file is absent. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0138
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "standards/aurora-swarm/ATC-AURORA-SWARM-001.md"
+      blob_sha: 1cb180b7360ef9f15301bc9e808e984ea82c12fd
+      identity_sha256: f447135972d3bdd12c2c658bb2da0e4507b3fe9d0b3d25a03d80c1ad0179fd86
+    notes: "Aurora Swarm Network candidate standard reference; not normative. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0139
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "standards/ai-gov/ATC-AI-GOV-AUTH-001.md"
+      blob_sha: c91c3aeab59425fda6178fbc87f302a241b25025
+      identity_sha256: 60d5645720f3a6cda8b9ff8933239d104061ec98058a65503bb438471f41f332
+    related_sources:
+      - relationship: IMPLEMENTATION_EVIDENCE
+        scope: "Machine-readable Automation Authority configuration in the organization .github repository; its content attributes issuance to the Owner, but the commit is provenance rather than a cryptographic signature."
+        source:
+          kind: HISTORICAL_REFERENCE
+          repository: A-TownChain-Okosystems/.github
+          commit: 750d920292149d16f327d8e33260d727599d873a
+          url: "https://github.com/A-TownChain-Okosystems/.github/commit/750d920292149d16f327d8e33260d727599d873a"
+          identity_sha256: 4fd8464c7dba9776e9f8c58c4103f754fb0923353ee4e1c94c3538925b977c56
+      - relationship: CHANGE_PROVENANCE
+        scope: "Historical naming-conformance and generator-chain commit explicitly referencing SCR-0139; unsigned and not proof of lifecycle closure."
+        source:
+          kind: HISTORICAL_REFERENCE
+          repository: A-TownChain-Okosystems/atc-standards
+          commit: bceec03d7acd5bbaad42da10bbc2c75affd39f2f
+          url: "https://github.com/A-TownChain-Okosystems/atc-standards/commit/bceec03d7acd5bbaad42da10bbc2c75affd39f2f"
+          identity_sha256: de66f78abcbdb3b1dfafc05665acaa95f15acfad43eb45a4de9a9c3128a6a335
+    notes: "The source standard says APPROVED while frontmatter normative=false. The machine-readable .github configuration exists, but no signed decision resolving normative force or SCR lifecycle was identified."
+  - id: SCR-0140
+    allocation_status: RESERVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: REVIEW
+    decision: PENDING
+    source:
+      kind: PULL_REQUEST
+      pr: 116
+      branch: "scr/0140-proof-of-system-consensus-freeze"
+      url: "https://github.com/A-TownChain-Okosystems/atc-standards/pull/116"
+      identity_sha256: 05436071a8c5982fce05a9d6ddfe05b70b97cb3d74e82b7220a7e88781eb5eee
+    notes: "Reserved by open Draft PR #116."
+  - id: SCR-0141
+    allocation_status: CONFLICT
+    metadata_status: PROVISIONAL
+    lifecycle_status: UNKNOWN
+    decision: PENDING
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0141.md"
+      blob_sha: 4bf7367375d2f4d2cf27674af4200e9e3b34a6df
+      identity_sha256: e38f88a707b2b228b5a983f928d3c47ae259ec1ced0523440e381433b606468b
+    notes: "Identity explicitly provisional pending Owner validation."
+  - id: SCR-0142
+    allocation_status: RESERVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: REVIEW
+    decision: PENDING
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0142.md"
+      commit: a1eaed2e84c8c8fffeedda7b9c4af8b7595bdd57
+      blob_sha: bc86eb6c1c2035a7c0ada90748bbdfab6c309591
+      identity_sha256: 0d0a6f38fcd9b8616e7a95660c2b89cb7a8ba98fd44066d5295fcd8bcd82aa56
+    notes: "New Draft governance change request; Owner decision and review chain remain pending."
+unresolved_ranges: []
