@@ -157,6 +157,7 @@ Governance-Hardening: Registry-Integritäts-Gate, Discovery→Audit→SCR-Kopplu
 ├── sdk/
 ├── standards/
 ├── templates/
+├── tests/
 └── tools/
 ```
 
