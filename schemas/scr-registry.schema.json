@@ -281,8 +281,29 @@
                   "authority_evidence"
                 ]
               }
+            },
+            {
+              "if": {
+                "properties": {
+                  "signature_status": {
+                    "const": "VERIFIED"
+                  }
+                },
+                "required": [
+                  "signature_status"
+                ]
+              },
+              "then": {
+                "required": [
+                  "signer_identity"
+                ]
+              }
             }
           ]
+        },
+        "identity_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
         }
       },
       "allOf": [
@@ -373,6 +394,30 @@
                 "pr"
               ]
             }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "attestation": {
+                "properties": {
+                  "signature_status": {
+                    "const": "VERIFIED"
+                  }
+                },
+                "required": [
+                  "signature_status"
+                ]
+              }
+            },
+            "required": [
+              "attestation"
+            ]
+          },
+          "then": {
+            "required": [
+              "commit"
+            ]
           }
         }
       ]
