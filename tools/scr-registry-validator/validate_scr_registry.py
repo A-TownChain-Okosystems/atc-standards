@@ -317,6 +317,7 @@ def find_status_contradictions(root: Path) -> list[str]:
             details = metadata_conflicts + [f"body marker: {marker}" for marker in conflicts]
             residuals.append(
                 f"{path.relative_to(root).as_posix()}: status={status}, normative=true, "
+                f"effective_date={metadata.get('effective_date')!r}; "
                 f"structured metadata/body contradiction: {'; '.join(details)}"
             )
     return residuals
