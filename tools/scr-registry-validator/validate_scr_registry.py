@@ -52,9 +52,7 @@ def validate(
     registry_path = registry_path or root / "registry" / "scr-registry.yaml"
     schema_path = schema_path or root / "schemas" / "scr-registry.schema.json"
     try:
-        data = yaml.load(
-            registry_path.read_text(encoding="utf-8"), Loader=UniqueKeySafeLoader
-        )
+        data = yaml.load(registry_path.read_text(encoding="utf-8"), Loader=UniqueKeySafeLoader)
         schema = json.loads(schema_path.read_text(encoding="utf-8"))
     except (OSError, ValueError, yaml.YAMLError) as exc:
         return [f"cannot load registry/schema: {exc}"]
