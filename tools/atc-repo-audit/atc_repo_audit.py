@@ -353,7 +353,7 @@ def audit_repo(repo, level, registry_path=None):
             else:
                 a.add(
                     "V-16",
-                    "WARN" if frac >= 0.5 else "FAIL",
+                    "FAIL",
                     "CI/CD",
                     "Conventional Commits nur %d%% (<80%%)" % (frac * 100),
                 )
