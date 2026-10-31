@@ -46,6 +46,125 @@ class UniqueKeySafeLoader(yaml.SafeLoader):
         return mapping
 
 
+def validate_source(
+    entry_id: str, source: object, label: str, root: Path, id_match: re.Match[str], errors: list[str]
+) -> None:
+    """Validate one primary or related source binding."""
+    if not isinstance(source, dict):
+        errors.append(f"{entry_id}: {label} must be an object")
+        return
+
+    source_kind = source.get("kind")
+    allowed_source_fields = {
+        "FILE": {"kind", "path"},
+        "PULL_REQUEST": {"kind", "pr", "branch", "url"},
+        "HISTORICAL_REFERENCE": {
+            "kind",
+            "path",
+            "pr",
+            "url",
+            "repository",
+            "commit",
+        },
+    }
+    unexpected_source_fields = set(source) - allowed_source_fields.get(source_kind, {"kind"})
+    if unexpected_source_fields:
+        errors.append(
+            f"{entry_id}: {label} fields invalid for {source_kind}: "
+            f"{', '.join(sorted(unexpected_source_fields))}"
+        )
+
+    if source_kind == "PULL_REQUEST":
+        pr_number = source.get("pr")
+        expected_url = (
+            f"https://github.com/A-TownChain-Okosystems/atc-standards/pull/{pr_number}"
+        )
+        if (
+            not isinstance(pr_number, int)
+            or isinstance(pr_number, bool)
+            or source.get("url") != expected_url
+        ):
+            errors.append(f"{entry_id}: {label} pull-request URL does not bind repository and PR number")
+
+    if source_kind == "HISTORICAL_REFERENCE":
+        has_commit_binding = "repository" in source or "commit" in source
+        has_pr_binding = "pr" in source
+        if has_commit_binding and has_pr_binding:
+            errors.append(
+                f"{entry_id}: {label} historical commit and pull-request bindings are mutually exclusive"
+            )
+        elif has_commit_binding:
+            repository = source.get("repository", "")
+            commit = source.get("commit", "")
+            url = source.get("url", "")
+            expected_url = f"https://github.com/{repository}/commit/{commit}"
+            if not all((repository, commit, url)):
+                errors.append(
+                    f"{entry_id}: {label} external historical commit requires repository, commit and URL"
+                )
+            elif not re.fullmatch(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+", repository):
+                errors.append(f"{entry_id}: {label} invalid external source repository")
+            elif not re.fullmatch(r"[0-9a-f]{40}", commit):
+                errors.append(f"{entry_id}: {label} invalid external source commit SHA")
+            elif url != expected_url:
+                errors.append(
+                    f"{entry_id}: {label} external source URL does not bind repository and commit"
+                )
+        elif has_pr_binding:
+            pr_number = source.get("pr")
+            repository = source.get("repository", "A-TownChain-Okosystems/atc-standards")
+            expected_url = f"https://github.com/{repository}/pull/{pr_number}"
+            if (
+                not isinstance(pr_number, int)
+                or isinstance(pr_number, bool)
+                or not isinstance(repository, str)
+                or not re.fullmatch(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+", repository)
+                or source.get("url") != expected_url
+            ):
+                errors.append(
+                    f"{entry_id}: {label} historical pull-request URL does not bind repository and PR number"
+                )
+        elif "url" in source or "repository" in source:
+            errors.append(f"{entry_id}: {label} historical URL/repository requires a commit or PR binding")
+        elif not source.get("path"):
+            errors.append(f"{entry_id}: {label} historical reference requires a path, commit or PR")
+
+    if source_kind == "FILE" or (
+        source_kind == "HISTORICAL_REFERENCE" and source.get("path")
+    ):
+        relative_path = source.get("path", "")
+        if not isinstance(relative_path, str) or not relative_path:
+            errors.append(f"{entry_id}: {label} {source_kind} source requires a path")
+            return
+        candidate = Path(relative_path)
+        if candidate.is_absolute() or ".." in candidate.parts:
+            errors.append(f"{entry_id}: {label} source path escapes repository root")
+            return
+        target = root / candidate
+        try:
+            resolved_target = target.resolve()
+            resolved_target.relative_to(root.resolve())
+        except ValueError:
+            errors.append(f"{entry_id}: {label} source path escapes repository root")
+            return
+        except (OSError, RuntimeError) as exc:
+            errors.append(
+                f"{entry_id}: {label} cannot safely resolve source path {relative_path}: {exc}"
+            )
+            return
+        if not target.is_file():
+            errors.append(f"{entry_id}: {label} referenced source file missing: {relative_path}")
+        elif source_kind == "FILE":
+            file_match = FILE_RE.match(candidate.name)
+            if not file_match:
+                errors.append(f"{entry_id}: source path does not encode SCR ID: {relative_path}")
+            elif file_match.group(1) != id_match.group(1):
+                errors.append(
+                    f"{entry_id}: source filename SCR ID does not match registry entry: "
+                    f"{relative_path}"
+                )
+
+
 def validate(
     root: Path = ROOT, registry_path: Path | None = None, schema_path: Path | None = None
 ) -> list[str]:
@@ -87,114 +206,16 @@ def validate(
             errors.append(f"overlapping SCR allocation for {entry['id']}")
         covered.add(number)
 
-        source = entry.get("source", {})
-        if not isinstance(source, dict):
-            continue
-        source_kind = source.get("kind")
-        allowed_source_fields = {
-            "FILE": {"kind", "path"},
-            "PULL_REQUEST": {"kind", "pr", "branch", "url"},
-            "HISTORICAL_REFERENCE": {
-                "kind",
-                "path",
-                "pr",
-                "url",
-                "repository",
-                "commit",
-            },
-        }
-        unexpected_source_fields = set(source) - allowed_source_fields.get(source_kind, {"kind"})
-        if unexpected_source_fields:
-            errors.append(
-                f"{entry.get('id', 'unknown SCR')}: source fields invalid for "
-                f"{source_kind}: {', '.join(sorted(unexpected_source_fields))}"
-            )
-        if source_kind == "HISTORICAL_REFERENCE" and (
-            ("repository" in source or "commit" in source) and "pr" in source
-        ):
-            errors.append(
-                f"{entry.get('id', 'unknown SCR')}: historical commit and pull-request "
-                "source bindings are mutually exclusive"
-            )
-        if source_kind == "PULL_REQUEST":
-            pr_number = source.get("pr")
-            expected_url = (
-                f"https://github.com/A-TownChain-Okosystems/atc-standards/pull/{pr_number}"
-            )
-            if (
-                not isinstance(pr_number, int)
-                or isinstance(pr_number, bool)
-                or source.get("url") != expected_url
-            ):
-                errors.append(
-                    f"{entry['id']}: pull-request URL does not bind repository and PR number"
-                )
-        if source_kind == "HISTORICAL_REFERENCE":
-            if "repository" in source or "commit" in source:
-                repository = source.get("repository", "")
-                commit = source.get("commit", "")
-                url = source.get("url", "")
-                expected_url = f"https://github.com/{repository}/commit/{commit}"
-                if not all((repository, commit, url)):
-                    errors.append(
-                        f"{entry['id']}: external historical source requires repository, commit and URL"
+        source_bindings = [("source", entry.get("source", {}))]
+        related_sources = entry.get("related_sources", [])
+        if isinstance(related_sources, list):
+            for index, related in enumerate(related_sources):
+                if isinstance(related, dict):
+                    source_bindings.append(
+                        (f"related_sources[{index}].source", related.get("source", {}))
                     )
-                elif not re.fullmatch(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+", repository):
-                    errors.append(f"{entry['id']}: invalid external source repository")
-                elif not re.fullmatch(r"[0-9a-f]{40}", commit):
-                    errors.append(f"{entry['id']}: invalid external source commit SHA")
-                elif url != expected_url:
-                    errors.append(
-                        f"{entry['id']}: external source URL does not bind repository and commit"
-                    )
-            elif "pr" in source or "url" in source:
-                pr_number = source.get("pr")
-                expected_url = (
-                    f"https://github.com/A-TownChain-Okosystems/atc-standards/pull/{pr_number}"
-                )
-                if (
-                    not isinstance(pr_number, int)
-                    or isinstance(pr_number, bool)
-                    or source.get("url") != expected_url
-                ):
-                    errors.append(
-                        f"{entry['id']}: historical pull-request URL does not bind repository and PR number"
-                    )
-
-        if source_kind == "FILE" or (source_kind == "HISTORICAL_REFERENCE" and source.get("path")):
-            relative_path = source.get("path", "")
-            if not isinstance(relative_path, str) or not relative_path:
-                errors.append(f"{entry['id']}: {source_kind} source requires a path")
-                continue
-            candidate = Path(relative_path)
-            if candidate.is_absolute() or ".." in candidate.parts:
-                errors.append(f"{entry['id']}: source path escapes repository root")
-                continue
-            target = root / candidate
-            try:
-                resolved_target = target.resolve()
-                resolved_target.relative_to(root.resolve())
-            except ValueError:
-                errors.append(f"{entry['id']}: source path escapes repository root")
-                continue
-            except (OSError, RuntimeError) as exc:
-                errors.append(
-                    f"{entry['id']}: cannot safely resolve source path {relative_path}: {exc}"
-                )
-                continue
-            if not target.is_file():
-                errors.append(f"{entry['id']}: referenced source file missing: {relative_path}")
-            elif source_kind == "FILE":
-                file_match = FILE_RE.match(candidate.name)
-                if not file_match:
-                    errors.append(
-                        f"{entry['id']}: source path does not encode SCR ID: {relative_path}"
-                    )
-                elif file_match.group(1) != match.group(1):
-                    errors.append(
-                        f"{entry['id']}: source filename SCR ID does not match registry entry: "
-                        f"{relative_path}"
-                    )
+        for label, source in source_bindings:
+            validate_source(entry["id"], source, label, root, match, errors)
 
     raw_ranges = data.get("unresolved_ranges", [])
     ranges = raw_ranges if isinstance(raw_ranges, list) else []
