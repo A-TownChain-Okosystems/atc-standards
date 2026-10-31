@@ -193,6 +193,21 @@ def validate_repository_head(expected_head):
     return actual
 
 
+def validate_live_run_identity(repo, run_id, expected_head, event_head_sha, pr_number, run):
+    """Fail closed unless event, workflow run, repository and PR identities agree."""
+    if event_head_sha != expected_head:
+        raise EvidenceError("pull_request event head SHA does not match exact checkout SHA")
+    if str(run.get("id")) != str(run_id):
+        raise EvidenceError("GitHub workflow run identity does not match this run")
+    if run.get("head_sha") != expected_head:
+        raise EvidenceError("GitHub workflow run head SHA does not match exact checkout SHA")
+    if run.get("repository", {}).get("full_name") != repo:
+        raise EvidenceError("GitHub workflow run repository identity mismatch")
+    run_prs = run.get("pull_requests", [])
+    if len(run_prs) != 1 or run_prs[0].get("number") != pr_number:
+        raise EvidenceError("GitHub workflow run is not bound to the event pull request")
+
+
 def build_live_evidence_graph(repo, expected_head, base_sha, run_id, run, job, successful_steps):
     """Build a run-specific graph; unexecuted E2E/audit/release remain explicitly unproven."""
     if not SHA_RE.fullmatch(base_sha or ""):
@@ -321,9 +336,6 @@ def attest_github_run(expected_head):
     pull_request = event.get("pull_request", {})
     base_sha = pull_request.get("base", {}).get("sha")
     event_head_sha = pull_request.get("head", {}).get("sha")
-    if event_head_sha != checked_out_sha:
-        raise EvidenceError("pull_request event head SHA does not match exact checkout SHA")
-
     headers = {
         "Authorization": f"Bearer {token}",
         "Accept": "application/vnd.github+json",
@@ -335,15 +347,9 @@ def attest_github_run(expected_head):
     )
     run_response.raise_for_status()
     run = run_response.json()
-    if str(run.get("id")) != run_id:
-        raise EvidenceError("GitHub workflow run identity does not match this run")
-    if run.get("head_sha") != checked_out_sha:
-        raise EvidenceError("GitHub workflow run head SHA does not match exact checkout SHA")
-    if run.get("repository", {}).get("full_name") != repo:
-        raise EvidenceError("GitHub workflow run repository identity mismatch")
-    run_prs = run.get("pull_requests", [])
-    if len(run_prs) != 1 or run_prs[0].get("number") != pull_request.get("number"):
-        raise EvidenceError("GitHub workflow run is not bound to the event pull request")
+    validate_live_run_identity(
+        repo, run_id, checked_out_sha, event_head_sha, pull_request.get("number"), run
+    )
 
     jobs_response = requests.get(
         f"{base}/actions/runs/{run_id}/jobs?per_page=100",
