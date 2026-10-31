@@ -1048,6 +1048,43 @@ class ScrRegistryTests(unittest.TestCase):
             self.assertEqual(len(residuals), 1, residuals)
             self.assertIn("effective_date='2026-10-01'", residuals[0])
 
+    def test_trust_store_empty_trusts_no_signers(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            trust = root / "schemas" / "scr-registry-trust.json"
+            trust.parent.mkdir()
+            trust.write_text(
+                '{"schema_version": 1, "trusted_signer_fingerprints": []}',
+                encoding="utf-8",
+            )
+            self.assertEqual(module.load_trusted_signers(root), set())
+
+    def test_trust_store_loads_normalized_fingerprints(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            trust = root / "schemas" / "scr-registry-trust.json"
+            trust.parent.mkdir()
+            fingerprint = "A" * 40
+            trust.write_text(
+                yaml.safe_dump(
+                    {"schema_version": 1, "trusted_signer_fingerprints": [fingerprint]}
+                ),
+                encoding="utf-8",
+            )
+            self.assertEqual(module.load_trusted_signers(root), {fingerprint.casefold()})
+
+    def test_trust_store_rejects_malformed_fingerprints(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            trust = root / "schemas" / "scr-registry-trust.json"
+            trust.parent.mkdir()
+            trust.write_text(
+                '{"schema_version": 1, "trusted_signer_fingerprints": ["not-a-fingerprint"]}',
+                encoding="utf-8",
+            )
+            with self.assertRaises(ValueError):
+                module.load_trusted_signers(root)
+
     def test_structured_approved_normative_null_effective_date_is_reported(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
