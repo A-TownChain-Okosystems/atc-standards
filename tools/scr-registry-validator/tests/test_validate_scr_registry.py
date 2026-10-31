@@ -929,7 +929,6 @@ class ScrRegistryTests(unittest.TestCase):
                 any("commit signature verification failed" in error for error in errors), errors
             )
 
-
     def test_related_source_cannot_duplicate_primary_source_identity(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -1042,9 +1041,9 @@ class ScrRegistryTests(unittest.TestCase):
             standards = root / "standards"
             standards.mkdir()
             (standards / "ATC-STD-042.md").write_text(
-                "---\\nstatus: approved\\nnormative: true\\n"
-                "effective_date: 2026-10-01\\n---\\n"
-                "This standard is not yet effective.\\n",
+                "---\nstatus: approved\nnormative: true\n"
+                "effective_date: \"2026-10-01\"\n---\n"
+                "This standard is not yet effective.\n",
                 encoding="utf-8",
             )
             residuals = module.find_status_contradictions(root)
