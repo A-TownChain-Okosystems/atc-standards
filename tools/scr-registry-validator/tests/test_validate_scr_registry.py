@@ -101,7 +101,7 @@ class ScrRegistryTests(unittest.TestCase):
                 "notes": "fixture",
             }
             errors = self._fixture(root, [entry])
-            self.assertTrue(any("referenced SCR file missing" in error for error in errors))
+            self.assertIn("referenced source file missing", "\n".join(errors))
 
     def test_free_identifier_fails_closed(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -161,9 +161,7 @@ class ScrRegistryTests(unittest.TestCase):
             (root / "schemas").mkdir()
             schema_src = SCRIPT.parents[2] / "schemas" / "scr-registry.schema.json"
             schema_path = root / "schemas" / "scr-registry.schema.json"
-            schema_path.write_text(
-                schema_src.read_text(encoding="utf-8"), encoding="utf-8"
-            )
+            schema_path.write_text(schema_src.read_text(encoding="utf-8"), encoding="utf-8")
             registry_path = root / "registry" / "scr-registry.yaml"
             registry_path.write_text("[]", encoding="utf-8")
             errors = module.validate(root, registry_path, schema_path)
