@@ -58,8 +58,7 @@ def load_trusted_signers(root: Path) -> set[str]:
         raise ValueError("invalid SCR registry trust-store document")
     fingerprints = data.get("trusted_signer_fingerprints")
     if not isinstance(fingerprints, list) or any(
-        not isinstance(item, str)
-        or not re.fullmatch(r"(?:[0-9A-Fa-f]{40}|[0-9A-Fa-f]{64})", item)
+        not isinstance(item, str) or not re.fullmatch(r"(?:[0-9A-Fa-f]{40}|[0-9A-Fa-f]{64})", item)
         for item in fingerprints
     ):
         raise ValueError("trusted_signer_fingerprints must contain 40- or 64-hex fingerprints")
