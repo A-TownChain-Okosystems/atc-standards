@@ -11,7 +11,12 @@ import tempfile
 from pathlib import Path
 
 OWNER = "A-TownChain-Okosystems"
-MANIFEST = Path(__file__).resolve().parents[2] / "evidence" / "scr-reconciliation" / "external-source-bindings.json"
+MANIFEST = (
+    Path(__file__).resolve().parents[2]
+    / "evidence"
+    / "scr-reconciliation"
+    / "external-source-bindings.json"
+)
 REPO_RE = re.compile(r"^A-TownChain-Okosystems/[A-Za-z0-9_.-]+$")
 SHA_RE = re.compile(r"^[0-9a-f]{40}$")
 PATH_RE = re.compile(r"^[A-Za-z0-9._/-]+$")
