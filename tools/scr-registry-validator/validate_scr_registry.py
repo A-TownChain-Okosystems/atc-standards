@@ -47,7 +47,12 @@ class UniqueKeySafeLoader(yaml.SafeLoader):
 
 
 def validate_source(
-    entry_id: str, source: object, label: str, root: Path, id_match: re.Match[str], errors: list[str]
+    entry_id: str,
+    source: object,
+    label: str,
+    root: Path,
+    id_match: re.Match[str],
+    errors: list[str],
 ) -> None:
     """Validate one primary or related source binding."""
     if not isinstance(source, dict):
@@ -136,9 +141,7 @@ def validate_source(
         elif not source.get("path"):
             errors.append(f"{entry_id}: {label} historical reference requires a path, commit or PR")
 
-    if source_kind == "FILE" or (
-        source_kind == "HISTORICAL_REFERENCE" and source.get("path")
-    ):
+    if source_kind == "FILE" or (source_kind == "HISTORICAL_REFERENCE" and source.get("path")):
         relative_path = source.get("path", "")
         if not isinstance(relative_path, str) or not relative_path:
             errors.append(f"{entry_id}: {label} {source_kind} source requires a path")
