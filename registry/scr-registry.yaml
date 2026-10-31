@@ -845,7 +845,7 @@ entries:
       kind: HISTORICAL_REFERENCE
       path: "standards/enterprise/ATC-STD-041.md"
     related_sources:
-      - relationship: DISTINCT_SCOPE
+      - relationship: SCOPE_REFERENCE
         scope: "Automated Repository Assurance standards and GATE-SEC-001 work scope; the commit message attributes this work to SCR-0095 but is unsigned."
         source:
           kind: HISTORICAL_REFERENCE
@@ -881,7 +881,7 @@ entries:
       kind: HISTORICAL_REFERENCE
       path: "governance/ATC-STD-002.md"
     related_sources:
-      - relationship: DISTINCT_SCOPE
+      - relationship: SCOPE_REFERENCE
         scope: "Compliance scanner badge/template correction in a-townchain-os-docs REALITY_STATUS §41, explicitly attributed there to SCR-0096."
         source:
           kind: HISTORICAL_REFERENCE
