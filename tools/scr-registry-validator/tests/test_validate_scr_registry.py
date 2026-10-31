@@ -247,9 +247,9 @@ class ScrRegistryTests(unittest.TestCase):
                     (root / "evidence.md").write_text("# fixture", encoding="utf-8")
                 entry = {
                     "id": "SCR-0001",
-                    "allocation_status": "RESERVED" if kind == "PULL_REQUEST" else (
-                        "ASSIGNED" if kind == "FILE" else "UNRESOLVED"
-                    ),
+                    "allocation_status": "RESERVED"
+                    if kind == "PULL_REQUEST"
+                    else ("ASSIGNED" if kind == "FILE" else "UNRESOLVED"),
                     "metadata_status": "UNRECONCILED",
                     "lifecycle_status": "REVIEW" if kind == "PULL_REQUEST" else "UNKNOWN",
                     "decision": "PENDING" if kind == "PULL_REQUEST" else "UNKNOWN",
