@@ -240,6 +240,56 @@ class ScrRegistryTests(unittest.TestCase):
                 "\\n".join(errors),
             )
 
+    def test_mixed_historical_source_validates_external_binding(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            evidence = root / "evidence.md"
+            evidence.write_text("# fixture", encoding="utf-8")
+            entry = {
+                "id": "SCR-0001",
+                "allocation_status": "UNRESOLVED",
+                "metadata_status": "UNRECONCILED",
+                "lifecycle_status": "UNKNOWN",
+                "decision": "UNKNOWN",
+                "source": {
+                    "kind": "HISTORICAL_REFERENCE",
+                    "path": "evidence.md",
+                    "repository": "A-TownChain-Okosystems/example",
+                    "commit": "a" * 40,
+                    "url": "https://github.com/A-TownChain-Okosystems/example/commit/" + "b" * 40,
+                },
+                "notes": "fixture",
+            }
+            errors = self._fixture(root, [entry])
+            self.assertIn(
+                "external source URL does not bind repository and commit",
+                "\\n".join(errors),
+            )
+
+    def test_partial_external_historical_binding_fails(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            evidence = root / "evidence.md"
+            evidence.write_text("# fixture", encoding="utf-8")
+            entry = {
+                "id": "SCR-0001",
+                "allocation_status": "UNRESOLVED",
+                "metadata_status": "UNRECONCILED",
+                "lifecycle_status": "UNKNOWN",
+                "decision": "UNKNOWN",
+                "source": {
+                    "kind": "HISTORICAL_REFERENCE",
+                    "path": "evidence.md",
+                    "repository": "A-TownChain-Okosystems/example",
+                },
+                "notes": "fixture",
+            }
+            errors = self._fixture(root, [entry])
+            self.assertIn(
+                "external historical source requires repository, commit and URL",
+                "\\n".join(errors),
+            )
+
     def test_external_reference_url_must_bind_commit(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
