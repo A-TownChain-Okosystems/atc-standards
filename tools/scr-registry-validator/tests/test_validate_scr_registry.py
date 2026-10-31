@@ -1048,8 +1048,6 @@ class ScrRegistryTests(unittest.TestCase):
             self.assertEqual(len(residuals), 1, residuals)
             self.assertIn("effective_date='2026-10-01'", residuals[0])
 
-
-
     def test_structured_approved_normative_null_effective_date_is_reported(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -1079,6 +1077,7 @@ class ScrRegistryTests(unittest.TestCase):
                 encoding="utf-8",
             )
             self.assertEqual(module.find_status_contradictions(root), [])
+
 
 if __name__ == "__main__":
     unittest.main()
