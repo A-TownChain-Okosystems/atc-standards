@@ -853,12 +853,19 @@ entries:
           commit: 3eba30ef3253205de24e617389018b954672ee4e
           url: "https://github.com/A-TownChain-Okosystems/atc-standards/commit/3eba30ef3253205de24e617389018b954672ee4e"
       - relationship: IMPLEMENTATION_EVIDENCE
-        scope: "Hub repository-file completion: SECURITY.md, CONTRIBUTING.md, CODEOWNERS and STATUS.md were added by merged PR #8."
+        scope: "Hub repository-file completion: GitHub PR #8 is closed and merged; review ID 5178534325 records APPROVED by GitHub account A-TownChain at 2026-09-11T12:19:17Z, and the PR was merged at 2026-09-11T12:27:40Z. This proves the recorded review and merge events, not a broader SCR lifecycle decision."
         source:
           kind: HISTORICAL_REFERENCE
           repository: A-TownChain-Okosystems/.github
           pr: 8
           url: "https://github.com/A-TownChain-Okosystems/.github/pull/8"
+      - relationship: IMPLEMENTATION_EVIDENCE
+        scope: "Immutable merge result for PR #8: merge commit caefa8c7315daceecb4ec8d02c47eb4df78e4027 has a GitHub-verified signature and adds .github/CODEOWNERS, CONTRIBUTING.md, SECURITY.md and STATUS.md. Signature verification authenticates the merge commit; it does not independently attest SCR-0095 closure."
+        source:
+          kind: HISTORICAL_REFERENCE
+          repository: A-TownChain-Okosystems/.github
+          commit: caefa8c7315daceecb4ec8d02c47eb4df78e4027
+          url: "https://github.com/A-TownChain-Okosystems/.github/commit/caefa8c7315daceecb4ec8d02c47eb4df78e4027"
       - relationship: CORROBORATES
         scope: "Signed historical REALITY_STATUS narrative sections 39–40 describe the file sweep and Owner merge of Hub PR #8; this does not decide SCR lifecycle."
         source:
