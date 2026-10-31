@@ -60,10 +60,7 @@ def validate(
             entry.get("allocation_status") == "ASSIGNED"
             and entry.get("metadata_status") == "RECONCILED"
         ):
-            if (
-                entry.get("lifecycle_status") == "UNKNOWN"
-                or entry.get("decision") == "UNKNOWN"
-            ):
+            if entry.get("lifecycle_status") == "UNKNOWN" or entry.get("decision") == "UNKNOWN":
                 errors.append(
                     f"{entry['id']}: reconciled metadata cannot contain UNKNOWN lifecycle/decision"
                 )
