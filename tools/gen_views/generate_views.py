@@ -71,6 +71,10 @@ def main():
         and os.path.isdir(os.path.join(ROOT, x))
         and x not in ("node_modules", "target", "venv", "__pycache__")
     )
+    # Ensure the repository test tree is represented in the generated README.
+    if os.path.isdir(os.path.join(ROOT, "tests")) and "tests" not in repo_dirs:
+        repo_dirs.append("tests")
+        repo_dirs.sort()
     repo_structure = "\n".join(
         ("├── " if i < len(repo_dirs) - 1 else "└── ") + x + "/"
         for i, x in enumerate(repo_dirs)
