@@ -87,7 +87,7 @@ def validate_source(
             errors.append(f"{entry_id}: {label} pull-request URL does not bind repository and PR number")
 
     if source_kind == "HISTORICAL_REFERENCE":
-        has_commit_binding = "repository" in source or "commit" in source
+        has_commit_binding = "commit" in source
         has_pr_binding = "pr" in source
         if has_commit_binding and has_pr_binding:
             errors.append(
