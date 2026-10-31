@@ -1048,5 +1048,35 @@ class ScrRegistryTests(unittest.TestCase):
 
 
 
+    def test_structured_approved_normative_null_effective_date_is_reported(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            standards = root / "standards" / "repository"
+            standards.mkdir(parents=True)
+            standard = standards / "ATC-STD-TEST-001.md"
+            standard.write_text(
+                "---\nstandard:\n  id: ATC-STD-TEST-001\n"
+                "status: approved\nnormative: true\neffective_date: null\n"
+                "---\n\nNo body marker is required for this structured contradiction.\n",
+                encoding="utf-8",
+            )
+            residuals = module.find_status_contradictions(root)
+            self.assertEqual(len(residuals), 1, residuals)
+            self.assertIn("effective_date is null", residuals[0])
+
+    def test_effective_approved_normative_metadata_without_body_conflict_is_clean(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            standards = root / "standards" / "repository"
+            standards.mkdir(parents=True)
+            standard = standards / "ATC-STD-TEST-002.md"
+            standard.write_text(
+                "---\nstandard:\n  id: ATC-STD-TEST-002\n"
+                "status: approved\nnormative: true\neffective_date: '2026-10-01'\n"
+                "---\n\nThe standard is effective.\n",
+                encoding="utf-8",
+            )
+            self.assertEqual(module.find_status_contradictions(root), [])
+
 if __name__ == "__main__":
     unittest.main()
