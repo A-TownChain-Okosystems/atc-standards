@@ -193,3 +193,35 @@ Commit `bceec03d7acd5bbaad42da10bbc2c75affd39f2f` explicitly references SCR-0139
 6. Keep metadata reconciliation, allocation status, SCR lifecycle, decision and normative force independent.
 
 No source history was rewritten. No identifier was allocated or reused. No standard was edited. No SCR lifecycle decision was inferred. P1-A6 remains open, but technical reconciliation is not blocked by the absence of a new Owner decision.
+
+
+## Direct source verification addendum — 2026-10-31
+
+The following checks were performed against GitHub PR/review/commit metadata and the exact source documents. They refine, but do not rewrite, the historical findings above.
+
+### SCR-0095 — Hub PR #8 and ATC-STD-041
+
+- PR `A-TownChain-Okosystems/.github#8` is `closed` with `merged=true`.
+- Review ID `5178534325` has state `APPROVED`, submitted by GitHub account `A-TownChain` at `2026-09-11T12:19:17Z`.
+- Merge timestamp: `2026-09-11T12:27:40Z`; merge commit: `caefa8c7315daceecb4ec8d02c47eb4df78e4027`.
+- The merge commit signature is GitHub-verified (`verified=true`, reason `valid`). Its tree adds `.github/CODEOWNERS`, `CONTRIBUTING.md`, `SECURITY.md`, and `STATUS.md`.
+- This directly verifies the PR review event and merged implementation. It does not by itself prove the complete SCR-0095 lifecycle or the closure of the separate Automated Assurance work scope.
+- The signed `REALITY_STATUS.md` commit `77ed5ed14cbed7375346211c2c9faa1a7299aa11` is a later snapshot (2026-10-23) whose file header explicitly marks the document as a historical archive, not current status. Sections 39–41 remain valid historical narrative evidence, but must not be presented as current operational state.
+- ATC-STD-041 exact frontmatter: `status: approved`, `normative: true`, `effective_date: null`. Its body says it is not effective until §9 release. The approval record lists ATC-STD-041 among 25 standards, but its introduction commit `ddb955e03e864680b559fe6eece7e2b14a33c7e8` is unsigned. The approval-content assertion and the standard's own effectiveness language remain a conflict; no activation is inferred.
+
+### SCR-0096 — separate scope evidence
+
+- Signed historical archive snapshot section 41 explicitly attributes the scanner badge/template correction to SCR-0096.
+- Commits `49beb5c825876c01f8c69247b6e1c236a49cab15` and `ea9050a39570deab79cd8eeac46d419a4abb80ec` explicitly attribute ATC-STD-002 family/identifier architecture work to SCR-0096; both signatures are reported as unsigned.
+- The approval record includes ATC-STD-002 in its bounded list of 25 standards, but does not settle whether the scanner correction and family architecture were intended as one umbrella scope.
+
+### SCR-0139 — status dimensions
+
+- The standard's current frontmatter and body consistently label the specification approved while explicitly setting `normative: false`.
+- The machine-readable configuration was added in `.github` commit `750d920292149d16f327d8e33260d727599d873a`; GitHub reports that commit unsigned.
+- The naming/generator change `bceec03d7acd5bbaad42da10bbc2c75affd39f2f` is also unsigned.
+- The evidence supports a technically coherent interpretation—approved as a specification document, not normative as an enforceable standard. It does not prove SCR-0139 closure.
+
+### Decision and work policy
+
+Technical evidence reconciliation, source relationship corrections, validator improvements, tests, and non-normative engineering recommendations may proceed without waiting for a new Owner decision. Formal allocation, lifecycle closure/rejection, normative promotion, supersession, or claims of Owner authority remain unchanged unless supported by attributable evidence and the applicable authorization.
