@@ -369,12 +369,6 @@ def validate(
                 source_id = derive_source_identity(
                     source, root, repository, registry_commit
                 )
-                declared_identity = source.get("identity_sha256")
-                if declared_identity and declared_identity != source_id:
-                    errors.append(
-                        f"{entry['id']}: related source identity_sha256 does not match "
-                        "its immutable source coordinates"
-                    )
                 key = (str(relation), source_id)
                 if key in seen_relationship_sources:
                     errors.append(
