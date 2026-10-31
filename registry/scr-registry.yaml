@@ -1282,4 +1282,4 @@ entries:
       kind: FILE
       path: "change-requests/SCR-0142.md"
     notes: "New Draft governance change request; Owner decision and review chain remain pending."
-unresolved_ranges:
+unresolved_ranges: []
