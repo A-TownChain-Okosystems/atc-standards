@@ -1,0 +1,1354 @@
+registry_version: 1
+repository: A-TownChain-Okosystems/atc-standards
+source_ref: main
+source_commit: af98f5e3766db99f33497c1044b0521dea8c7593
+allocation_policy:
+  unknown_is_blocked: true
+  missing_file_is_not_free: true
+  automatic_number_assignment: false
+  reuse_permitted: false
+entries:
+  - id: SCR-0001
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0001.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0002
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0002.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0003
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0003.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0004
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0004.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0005
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0005.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0006
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0006.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0007
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0007.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0008
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0008.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0009
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0009.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0010
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0010.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0011
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0011.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0012
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0012.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0013
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0013.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0014
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0014.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0015
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0015.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0016
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0016.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0017
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0017.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0018
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0018.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0019
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0019.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0020
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0020.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0021
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0021.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0022
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0022.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0023
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0023.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0024
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0024.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0025
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0025.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0026
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0026.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0027
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0027.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0028
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0028.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0029
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0029.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0030
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0030.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0031
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0031.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0032
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0032.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0033
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0033.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0034
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0034.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0035
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0035.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0036
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0036.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0037
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0037.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0038
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0038.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0039
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0039.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0040
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0040.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0041
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0041.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0042
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0042.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0043
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0043.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0044
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0044.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0045
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0045.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0046
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0046.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0047
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0047.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0048
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0048.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0049
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0049.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0050
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0050.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0051
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0051.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0052
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0052.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0053
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0053.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0054
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0054.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0055
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0055.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0056
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0056.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0057
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0057.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0058
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0058.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0059
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0059.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0060
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0060.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0061
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0061.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0062
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0062.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0063
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0063.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0064
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0064.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0065
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0065.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0066
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0066.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0067
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0067.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0068
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0068.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0069
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0069.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0070
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0070.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0071
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0071.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0072
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0072.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0074
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0074.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0075
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0075.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0076
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0076.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0077
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0077.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0078
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0078.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0079
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0079.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0080
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0080.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0081
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0081.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0082
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0082.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0083
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0083.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0084
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0084.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0086
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0086.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0087
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0087.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0088
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0088.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0089
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0089.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0090
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0090.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0091
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0091.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0092
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0092.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0093
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "standards/architecture/ATC-STD-100.md"
+    notes: "Language Architecture L0-L8 reference; the canonical SCR file is absent. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0094
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "evidence/README.md"
+    notes: "Continuous Assurance reference; related standards also cite this identifier, but lifecycle and decision are not reconciled. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0095
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "standards/enterprise/ATC-STD-041.md"
+    related_sources:
+      - relationship: SCOPE_REFERENCE
+        scope: "Automated Repository Assurance standards and GATE-SEC-001 work scope; the commit message attributes this work to SCR-0095 but is unsigned."
+        source:
+          kind: HISTORICAL_REFERENCE
+          repository: A-TownChain-Okosystems/atc-standards
+          commit: 3eba30ef3253205de24e617389018b954672ee4e
+          url: "https://github.com/A-TownChain-Okosystems/atc-standards/commit/3eba30ef3253205de24e617389018b954672ee4e"
+      - relationship: IMPLEMENTATION_EVIDENCE
+        scope: "Hub repository-file completion: SECURITY.md, CONTRIBUTING.md, CODEOWNERS and STATUS.md were added by merged PR #8."
+        source:
+          kind: HISTORICAL_REFERENCE
+          repository: A-TownChain-Okosystems/.github
+          pr: 8
+          url: "https://github.com/A-TownChain-Okosystems/.github/pull/8"
+      - relationship: CORROBORATES
+        scope: "Signed historical REALITY_STATUS narrative sections 39–40 describe the file sweep and Owner merge of Hub PR #8; this does not decide SCR lifecycle."
+        source:
+          kind: HISTORICAL_REFERENCE
+          repository: A-TownChain-Okosystems/a-townchain-os-docs
+          commit: 77ed5ed14cbed7375346211c2c9faa1a7299aa11
+          url: "https://github.com/A-TownChain-Okosystems/a-townchain-os-docs/commit/77ed5ed14cbed7375346211c2c9faa1a7299aa11"
+      - relationship: APPROVAL_CONTEXT
+        scope: "The approval record includes ATC-STD-041 among 25 approved standards; it does not establish SCR-0095 lifecycle closure or settle its multiple scopes."
+        source:
+          kind: HISTORICAL_REFERENCE
+          path: "approval/APPROVAL-DECISION-2026-09-11-001-Legacy-Restaurierung-25.md"
+    notes: "Automated Assurance is one evidenced scope; ATC-STD-041 labels itself APPROVED but says it is not effective until §9 release. Hub file-completion is a second evidenced scope. Canonical SCR scope and lifecycle remain unresolved."
+  - id: SCR-0096
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "governance/ATC-STD-002.md"
+    related_sources:
+      - relationship: SCOPE_REFERENCE
+        scope: "Compliance scanner badge/template correction in a-townchain-os-docs REALITY_STATUS §41, explicitly attributed there to SCR-0096."
+        source:
+          kind: HISTORICAL_REFERENCE
+          repository: A-TownChain-Okosystems/a-townchain-os-docs
+          commit: 77ed5ed14cbed7375346211c2c9faa1a7299aa11
+          url: "https://github.com/A-TownChain-Okosystems/a-townchain-os-docs/commit/77ed5ed14cbed7375346211c2c9faa1a7299aa11"
+      - relationship: CHANGE_PROVENANCE
+        scope: "Historical commit introducing the ATC-STD-002 family and artifact identifier architecture; unsigned and therefore not a cryptographic Owner attestation."
+        source:
+          kind: HISTORICAL_REFERENCE
+          repository: A-TownChain-Okosystems/atc-standards
+          commit: 49beb5c825876c01f8c69247b6e1c236a49cab15
+          url: "https://github.com/A-TownChain-Okosystems/atc-standards/commit/49beb5c825876c01f8c69247b6e1c236a49cab15"
+      - relationship: CHANGE_PROVENANCE
+        scope: "Subsequent ATC-STD-002 registry architecture and Owner-hardening commit; unsigned and not independent proof of Owner attestation."
+        source:
+          kind: HISTORICAL_REFERENCE
+          repository: A-TownChain-Okosystems/atc-standards
+          commit: ea9050a39570deab79cd8eeac46d419a4abb80ec
+          url: "https://github.com/A-TownChain-Okosystems/atc-standards/commit/ea9050a39570deab79cd8eeac46d419a4abb80ec"
+      - relationship: APPROVAL_CONTEXT
+        scope: "The approval record includes ATC-STD-002 among 25 approved standards; it does not resolve whether the scanner badge work and family architecture share one SCR scope."
+        source:
+          kind: HISTORICAL_REFERENCE
+          path: "approval/APPROVAL-DECISION-2026-09-11-001-Legacy-Restaurierung-25.md"
+    notes: "Two distinct work scopes are evidenced: scanner badge correction and Standards Family ID architecture. Existing standard approval evidence is bounded to ATC-STD-002; SCR-0096 scope and lifecycle remain unresolved."
+  - id: SCR-0097
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "governance/constitution/ATC-GOV-001.md"
+    notes: "Governance Constitution reference; canonical SCR file absent. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0098
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "approval/APPROVAL-DECISION-2026-09-11-000-v1.3.0.md"
+    notes: "ATC-STD-000 v1.3.0 approval record cites SCR-0098; SCR lifecycle metadata remains unreconciled. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0099
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "audits/file-admission/2026-09-11-atc-standards.md"
+    notes: "File Admission pilot audit reference; canonical SCR file absent. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0100
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "tools/gen_views/gen_metadata.py"
+    notes: "Per-standard metadata generator reference; canonical SCR file absent. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0101
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: ".atc/standards.yaml"
+    notes: "Repository standards-profile binding reference; canonical SCR file absent. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0102
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "approval/APPROVAL-DECISION-2026-09-11-001-Legacy-Restaurierung-25.md"
+    notes: "Owner approval record for legacy restoration; individual SCR lifecycle and decision fields remain unreconciled. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0103
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "standards/enterprise/ATC-ORG-BASELINE-001.md"
+    notes: "Organization Engineering Baseline reference; canonical SCR file absent. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0104
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "registry/findings.yaml"
+    notes: "Contract execution MVP reference; findings record describes partial resolution, not SCR closure. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0105
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "registry/findings.yaml"
+    notes: "Security automation/CodeQL and Dependabot rollout reference; grouped findings evidence only. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0106
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "registry/findings.yaml"
+    notes: "Devnet/Testnet infrastructure reference; grouped findings evidence only. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0107
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "registry/findings.yaml"
+    notes: "Commit 3e80498475da8d69b2fad171a7a1c5393f68ead5 explicitly labels the findings-schema normalization as SCR-0107. Commit signature is unsigned; this proves a historical identifier reference, not Owner approval, final allocation, implementation completion or closure."
+  - id: SCR-0108
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "registry/findings.yaml"
+    notes: "Chain-Access-Layer reference; grouped findings evidence only. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0109
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "registry/findings.yaml"
+    notes: "Referenced in grouped Chain-Access integration evidence; individual scope not reconstructed. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0110
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "registry/findings.yaml"
+    notes: "Referenced in grouped Chain-Access integration evidence; individual scope not reconstructed. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0111
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "registry/findings.yaml"
+    notes: "Referenced in grouped Chain-Access integration evidence; individual scope not reconstructed. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0112
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "registry/findings.yaml"
+    notes: "Referenced in grouped Devnet/Testnet evidence; individual scope not reconstructed. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0113
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "registry/findings.yaml"
+    notes: "Referenced in grouped Devnet/Testnet evidence; individual scope not reconstructed. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0114
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "registry/code-quality-matrix.yaml"
+    notes: "Genesis Engine determinism reference; canonical SCR file absent. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0115
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "tools/atc-repo-audit/atc_repo_audit.py"
+    notes: "ATC repository audit tool explicitly labels SCR-0115; SCR-0116 independently identifies it as the highest known referenced number. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0116
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0116.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0117
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0117.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0118
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0118.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0119
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0119.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0120
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0120.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0121
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0121.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0122
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0122.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0123
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0123.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0124
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0124.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0125
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0125.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0126
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0126.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0127
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0127.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0128
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0128-globusos-reference-architecture-syscall-abi.yaml"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0129
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0129.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0130
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0130.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0131
+    allocation_status: ASSIGNED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0131.md"
+    notes: "File presence establishes an observed identifier only; Owner decision and lifecycle remain unreconciled."
+  - id: SCR-0132
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "docs/SPEC-ATC-GATE-METHODOLOGY-001.md"
+      pr: 92
+      url: "https://github.com/A-TownChain-Okosystems/atc-standards/pull/92"
+    notes: "Gate Methodology Draft 0.1.0 reference; PR #92 merged, but the document remains draft. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0133
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      repository: "A-TownChain-Okosystems/aurora-ai"
+      commit: "15f328faf735d2a4d9abd3b0fec547fa14897335"
+      url: "https://github.com/A-TownChain-Okosystems/aurora-ai/commit/15f328faf735d2a4d9abd3b0fec547fa14897335"
+    notes: "Cross-repository dependency/security remediation reference. Additional observed SCR-0133 commits include a-townchain-os-docs 8acd969e0467a3d770595c2946573cff7ca0e6ea, a-townchain-ecosystem ecdba9ec478737d4f7b25e80c8ed7c31d96d7a83, and a-townchain-os-docs 68478c45bf3a2d555f4c6a5d9c06e5c3bbd1e8fe. The primary commit is unsigned/Owner lifecycle not independently established; canonical SCR record absent."
+  - id: SCR-0134
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      repository: "A-TownChain-Okosystems/a-townchain-os-docs"
+      commit: "ae2fea101b5d2ccb6a5fa6fcb00f3b6f52004953"
+      url: "https://github.com/A-TownChain-Okosystems/a-townchain-os-docs/commit/ae2fea101b5d2ccb6a5fa6fcb00f3b6f52004953"
+    notes: "Exact-SHA File Census across 33 repositories; commit message explicitly cites SCR-0134. Additional observed SCR-0134 reference: atc-zkp commit 9771ffed3ac5b3761c4d81e9c4d63cd4d2070108. Canonical SCR record and Owner lifecycle decision remain unverified."
+  - id: SCR-0135
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "docs/OEP-0007-MERGE-GATE-GOVERNANCE.md"
+      pr: 93
+      url: "https://github.com/A-TownChain-Okosystems/atc-standards/pull/93"
+    notes: "OEP-0007 Merge/Gate Governance Draft reference; PR #93 merged, but the document remains draft. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0136
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "docs/ATC-SYSTEM-ROADMAP-001.md"
+      pr: 94
+      url: "https://github.com/A-TownChain-Okosystems/atc-standards/pull/94"
+    notes: "System Milestone Model Draft reference; PR #94 merged, but the document remains draft. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0137
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "docs/ATC-SYSTEM-ROADMAP-001.md"
+      pr: 95
+      url: "https://github.com/A-TownChain-Okosystems/atc-standards/pull/95"
+    notes: "Major reconciliation of the milestone model; PR #95 merged. The roadmap remains a draft and standalone SCR file is absent. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0138
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "standards/aurora-swarm/ATC-AURORA-SWARM-001.md"
+    notes: "Aurora Swarm Network candidate standard reference; not normative. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+  - id: SCR-0139
+    allocation_status: UNRESOLVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: UNKNOWN
+    decision: UNKNOWN
+    source:
+      kind: HISTORICAL_REFERENCE
+      path: "standards/ai-gov/ATC-AI-GOV-AUTH-001.md"
+    related_sources:
+      - relationship: IMPLEMENTATION_EVIDENCE
+        scope: "Machine-readable Automation Authority configuration in the organization .github repository; its content attributes issuance to the Owner, but the commit is provenance rather than a cryptographic signature."
+        source:
+          kind: HISTORICAL_REFERENCE
+          repository: A-TownChain-Okosystems/.github
+          commit: 750d920292149d16f327d8e33260d727599d873a
+          url: "https://github.com/A-TownChain-Okosystems/.github/commit/750d920292149d16f327d8e33260d727599d873a"
+      - relationship: CHANGE_PROVENANCE
+        scope: "Historical naming-conformance and generator-chain commit explicitly referencing SCR-0139; unsigned and not proof of lifecycle closure."
+        source:
+          kind: HISTORICAL_REFERENCE
+          repository: A-TownChain-Okosystems/atc-standards
+          commit: bceec03d7acd5bbaad42da10bbc2c75affd39f2f
+          url: "https://github.com/A-TownChain-Okosystems/atc-standards/commit/bceec03d7acd5bbaad42da10bbc2c75affd39f2f"
+    notes: "The source standard says APPROVED while frontmatter normative=false. The machine-readable .github configuration exists, but no signed decision resolving normative force or SCR lifecycle was identified."
+  - id: SCR-0140
+    allocation_status: RESERVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: REVIEW
+    decision: PENDING
+    source:
+      kind: PULL_REQUEST
+      pr: 116
+      branch: "scr/0140-proof-of-system-consensus-freeze"
+      url: "https://github.com/A-TownChain-Okosystems/atc-standards/pull/116"
+    notes: "Reserved by open Draft PR #116."
+  - id: SCR-0141
+    allocation_status: CONFLICT
+    metadata_status: PROVISIONAL
+    lifecycle_status: UNKNOWN
+    decision: PENDING
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0141.md"
+    notes: "Identity explicitly provisional pending Owner validation."
+  - id: SCR-0142
+    allocation_status: RESERVED
+    metadata_status: UNRECONCILED
+    lifecycle_status: REVIEW
+    decision: PENDING
+    source:
+      kind: FILE
+      path: "change-requests/SCR-0142.md"
+    notes: "New Draft governance change request; Owner decision and review chain remain pending."
+unresolved_ranges: []
