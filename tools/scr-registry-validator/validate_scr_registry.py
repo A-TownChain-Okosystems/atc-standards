@@ -172,9 +172,16 @@ def validate(
                 continue
             target = root / candidate
             try:
-                target.resolve().relative_to(root.resolve())
+                resolved_target = target.resolve()
+                resolved_target.relative_to(root.resolve())
             except ValueError:
                 errors.append(f"{entry['id']}: source path escapes repository root")
+                continue
+            except (OSError, RuntimeError) as exc:
+                errors.append(
+                    f"{entry['id']}: cannot safely resolve source path "
+                    f"{relative_path}: {exc}"
+                )
                 continue
             if not target.is_file():
                 errors.append(f"{entry['id']}: referenced source file missing: {relative_path}")
