@@ -85,6 +85,30 @@ class ScrRegistryTests(unittest.TestCase):
             errors = self._fixture(root, [entry], [blocked])
             self.assertTrue(any("overlaps explicit entry" in error for error in errors))
 
+    def test_file_source_filename_must_match_registry_identity(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            requests = root / "change-requests"
+            requests.mkdir()
+            (requests / "SCR-0002.md").write_text("# fixture", encoding="utf-8")
+            entry = {
+                "id": "SCR-0001",
+                "allocation_status": "ASSIGNED",
+                "metadata_status": "UNRECONCILED",
+                "lifecycle_status": "UNKNOWN",
+                "decision": "UNKNOWN",
+                "source": {
+                    "kind": "FILE",
+                    "path": "change-requests/SCR-0002.md",
+                },
+                "notes": "fixture",
+            }
+            errors = self._fixture(root, [entry])
+            self.assertIn(
+                "source filename SCR ID does not match registry entry",
+                "\\n".join(errors),
+            )
+
     def test_missing_referenced_file_fails(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
