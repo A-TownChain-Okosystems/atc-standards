@@ -61,6 +61,15 @@ def validate(
         if not isinstance(source, dict):
             continue
         source_kind = source.get("kind")
+        if source_kind == "PULL_REQUEST":
+            pr_number = source.get("pr")
+            expected_url = (
+                f"https://github.com/A-TownChain-Okosystems/atc-standards/pull/{pr_number}"
+            )
+            if not isinstance(pr_number, int) or isinstance(pr_number, bool) or source.get("url") != expected_url:
+                errors.append(
+                    f"{entry['id']}: pull-request URL does not bind repository and PR number"
+                )
         if source_kind == "FILE" or (source_kind == "HISTORICAL_REFERENCE" and source.get("path")):
             relative_path = source.get("path", "")
             if not isinstance(relative_path, str) or not relative_path:
