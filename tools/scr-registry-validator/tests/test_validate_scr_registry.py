@@ -118,5 +118,57 @@ class ScrRegistryTests(unittest.TestCase):
             errors = self._fixture(root, [entry])
             self.assertTrue(any("FREE is forbidden" in error for error in errors))
 
+    def test_historical_source_file_must_exist(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            entry = {
+                "id": "SCR-0001",
+                "allocation_status": "UNRESOLVED",
+                "metadata_status": "UNRECONCILED",
+                "lifecycle_status": "UNKNOWN",
+                "decision": "UNKNOWN",
+                "source": {
+                    "kind": "HISTORICAL_REFERENCE",
+                    "path": "missing-evidence.md",
+                },
+                "notes": "fixture",
+            }
+            errors = self._fixture(root, [entry])
+            self.assertIn("referenced source file missing", "\n".join(errors))
+
+    def test_source_path_traversal_fails(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            entry = {
+                "id": "SCR-0001",
+                "allocation_status": "UNRESOLVED",
+                "metadata_status": "UNRECONCILED",
+                "lifecycle_status": "UNKNOWN",
+                "decision": "UNKNOWN",
+                "source": {
+                    "kind": "HISTORICAL_REFERENCE",
+                    "path": "../outside.md",
+                },
+                "notes": "fixture",
+            }
+            errors = self._fixture(root, [entry])
+            self.assertIn("source path escapes repository root", "\n".join(errors))
+
+    def test_non_object_registry_fails_without_crashing(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "registry").mkdir()
+            (root / "schemas").mkdir()
+            schema_src = SCRIPT.parents[2] / "schemas" / "scr-registry.schema.json"
+            schema_path = root / "schemas" / "scr-registry.schema.json"
+            schema_path.write_text(
+                schema_src.read_text(encoding="utf-8"), encoding="utf-8"
+            )
+            registry_path = root / "registry" / "scr-registry.yaml"
+            registry_path.write_text("[]", encoding="utf-8")
+            errors = module.validate(root, registry_path, schema_path)
+            self.assertEqual(errors, ["registry root must be an object"])
+
+
 if __name__ == "__main__":
     unittest.main()
