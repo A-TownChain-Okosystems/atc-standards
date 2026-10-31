@@ -811,9 +811,9 @@ class ScrRegistryTests(unittest.TestCase):
             standards = root / "standards"
             standards.mkdir()
             (standards / "ATC-STD-041.md").write_text(
-                'effective_date: "2026-10-01"\n---\n'
+                "---\nstatus: approved\nnormative: true\n"
+                "effective_date: null\n---\n"
                 "This standard is not effective until the §9 release gate is satisfied.\n",
-                encoding="utf-8",
             )
             residuals = module.find_status_contradictions(root)
             self.assertEqual(len(residuals), 1, residuals)
@@ -969,8 +969,6 @@ class ScrRegistryTests(unittest.TestCase):
             folder = root / "evidence"
             folder.mkdir()
             (folder / "implementation.md").write_text("implementation evidence", encoding="utf-8")
-            entry = {
-                "id": "SCR-0001",
                 "allocation_status": "UNRESOLVED",
                 "metadata_status": "UNRECONCILED",
                 "lifecycle_status": "UNKNOWN",
@@ -1040,13 +1038,14 @@ class ScrRegistryTests(unittest.TestCase):
             standards.mkdir()
             (standards / "ATC-STD-042.md").write_text(
                 "---\nstatus: approved\nnormative: true\n"
-                "effective_date: \"2026-10-01\"\n---\n"
+                'effective_date: "2026-10-01"\n---\n'
                 "This standard is not yet effective.\n",
                 encoding="utf-8",
             )
             residuals = module.find_status_contradictions(root)
             self.assertEqual(len(residuals), 1, residuals)
             self.assertIn("effective_date='2026-10-01'", residuals[0])
+
 
 
 if __name__ == "__main__":
