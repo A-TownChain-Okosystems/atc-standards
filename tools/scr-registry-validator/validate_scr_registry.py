@@ -179,8 +179,7 @@ def validate(
                 continue
             except (OSError, RuntimeError) as exc:
                 errors.append(
-                    f"{entry['id']}: cannot safely resolve source path "
-                    f"{relative_path}: {exc}"
+                    f"{entry['id']}: cannot safely resolve source path {relative_path}: {exc}"
                 )
                 continue
             if not target.is_file():
