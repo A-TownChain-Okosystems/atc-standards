@@ -205,6 +205,31 @@ class ScrRegistryTests(unittest.TestCase):
                 "\\n".join(errors),
             )
 
+    def test_symlink_loop_source_path_fails_without_crashing(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            requests = root / "change-requests"
+            requests.mkdir()
+            loop = requests / "SCR-0001.md"
+            loop.symlink_to(loop)
+            entry = {
+                "id": "SCR-0001",
+                "allocation_status": "UNRESOLVED",
+                "metadata_status": "UNRECONCILED",
+                "lifecycle_status": "UNKNOWN",
+                "decision": "UNKNOWN",
+                "source": {
+                    "kind": "HISTORICAL_REFERENCE",
+                    "path": "change-requests/SCR-0001.md",
+                },
+                "notes": "fixture",
+            }
+            errors = self._fixture(root, [entry])
+            self.assertTrue(
+                any("cannot safely resolve source path" in error for error in errors),
+                errors,
+            )
+
     def test_source_kind_rejects_unrelated_or_conflicting_fields(self):
         cases = [
             (
