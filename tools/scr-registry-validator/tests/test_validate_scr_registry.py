@@ -634,5 +634,79 @@ class ScrRegistryTests(unittest.TestCase):
             self.assertTrue(any("authority_evidence" in error for error in errors), errors)
 
 
+
+    def test_status_contradiction_detector_parses_frontmatter_newlines(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            standards = root / "standards"
+            standards.mkdir()
+            (standards / "ATC-STD-041.md").write_text(
+                "---\nstatus: approved\nnormative: true\neffective_date: null\n---\n"
+                "This standard is not effective until the §9 release gate is satisfied.\n",
+                encoding="utf-8",
+            )
+            residuals = module.find_status_contradictions(root)
+            self.assertEqual(len(residuals), 1, residuals)
+            self.assertIn("ATC-STD-041.md", residuals[0])
+
+    def test_source_identity_is_deterministic_and_uses_registry_commit(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            folder = root / "change-requests"
+            folder.mkdir()
+            (folder / "SCR-0001.md").write_text("# SCR-0001", encoding="utf-8")
+            source = {"kind": "FILE", "path": "change-requests/SCR-0001.md"}
+            first = module.derive_source_identity(
+                source, root, "A-TownChain-Okosystems/atc-standards", "a" * 40
+            )
+            second = module.derive_source_identity(
+                source, root, "A-TownChain-Okosystems/atc-standards", "a" * 40
+            )
+            other_commit = module.derive_source_identity(
+                source, root, "A-TownChain-Okosystems/atc-standards", "b" * 40
+            )
+            self.assertEqual(first, second)
+            self.assertNotEqual(first, other_commit)
+
+    def test_source_identity_does_not_read_path_outside_repository(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp) / "repo"
+            root.mkdir()
+            outside = Path(tmp) / "outside-secret.txt"
+            outside.write_text("must not be read", encoding="utf-8")
+            source = {"kind": "HISTORICAL_REFERENCE", "path": "../outside-secret.txt"}
+            identity = module.derive_source_identity(
+                source, root, "A-TownChain-Okosystems/atc-standards"
+            )
+            self.assertRegex(identity, r"^[0-9a-f]{64}$")
+
+    def test_verified_attestation_requires_commit_and_signer(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            folder = root / "change-requests"
+            folder.mkdir()
+            (folder / "SCR-0001.md").write_text("# SCR-0001", encoding="utf-8")
+            entry = {
+                "id": "SCR-0001",
+                "allocation_status": "ASSIGNED",
+                "metadata_status": "RECONCILED",
+                "lifecycle_status": "UNKNOWN",
+                "decision": "UNKNOWN",
+                "source": {
+                    "kind": "FILE",
+                    "path": "change-requests/SCR-0001.md",
+                    "attestation": {
+                        "signature_status": "VERIFIED",
+                        "signer_identity": "AA:BB",
+                        "authority_status": "NOT_ESTABLISHED",
+                    },
+                },
+                "notes": "A verified signature must bind an actual commit.",
+            }
+            errors = self._fixture(root, [entry])
+            self.assertTrue(any("requires a commit SHA" in error for error in errors), errors)
+
+
+
 if __name__ == "__main__":
     unittest.main()
