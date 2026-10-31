@@ -1068,7 +1068,7 @@ entries:
         source:
           kind: HISTORICAL_REFERENCE
           path: "approval/APPROVAL-DECISION-2026-09-11-001-Legacy-Restaurierung-25.md"
-      blob_sha: 97b4b6efc966406ad06be9cd5ad376ec9fc6387a
+          blob_sha: 97b4b6efc966406ad06be9cd5ad376ec9fc6387a
           identity_sha256: d75dd6091b359419d8ff2f15babac9d47b28a41b6334af6bbd551feb5a40c831
     notes: "Automated Assurance is one evidenced scope; ATC-STD-041 labels itself APPROVED but says it is not effective until §9 release. Hub file-completion is a second evidenced scope. Canonical SCR scope and lifecycle remain unresolved."
   - id: SCR-0096
@@ -1111,7 +1111,7 @@ entries:
         source:
           kind: HISTORICAL_REFERENCE
           path: "approval/APPROVAL-DECISION-2026-09-11-001-Legacy-Restaurierung-25.md"
-      blob_sha: 97b4b6efc966406ad06be9cd5ad376ec9fc6387a
+          blob_sha: 97b4b6efc966406ad06be9cd5ad376ec9fc6387a
           identity_sha256: d75dd6091b359419d8ff2f15babac9d47b28a41b6334af6bbd551feb5a40c831
     notes: "Two distinct work scopes are evidenced: scanner badge correction and Standards Family ID architecture. Existing standard approval evidence is bounded to ATC-STD-002; SCR-0096 scope and lifecycle remain unresolved."
   - id: SCR-0097

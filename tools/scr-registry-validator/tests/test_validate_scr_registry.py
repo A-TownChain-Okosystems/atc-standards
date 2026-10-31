@@ -675,9 +675,7 @@ class ScrRegistryTests(unittest.TestCase):
                 text=True,
             ).stdout
             key_fingerprint = next(
-                line.split(":")[9]
-                for line in key_listing.splitlines()
-                if line.startswith("fpr:")
+                line.split(":")[9] for line in key_listing.splitlines() if line.startswith("fpr:")
             )
             (root / "registry").mkdir()
             (root / "schemas").mkdir()
