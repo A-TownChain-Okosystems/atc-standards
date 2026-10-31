@@ -1,6 +1,7 @@
 import importlib.util
 import tempfile
 import unittest
+from unittest.mock import patch
 from pathlib import Path
 
 import yaml
@@ -91,7 +92,14 @@ class ScrRegistryTests(unittest.TestCase):
                 ],
                 "notes": "Primary and related evidence are separate bindings.",
             }
-            self.assertEqual(self._fixture(root, [entry]), [])
+            with patch(
+                "scr_validator.subprocess.run",
+                side_effect=[
+                    type("Result", (), {"returncode": 0, "stdout": "", "stderr": ""})(),
+                    type("Result", (), {"returncode": 0, "stdout": "AA:BB", "stderr": ""})(),
+                ],
+            ):
+                self.assertEqual(self._fixture(root, [entry]), [])
 
     def test_related_external_pull_request_url_must_bind_repository_and_number(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -599,8 +607,10 @@ class ScrRegistryTests(unittest.TestCase):
                 "source": {
                     "kind": "FILE",
                     "path": "change-requests/SCR-0001.md",
+                    "commit": "a" * 40,
                     "attestation": {
                         "signature_status": "VERIFIED",
+                        "signer_identity": "AA:BB",
                         "authority_status": "NOT_ESTABLISHED",
                     },
                 },
@@ -729,7 +739,9 @@ class ScrRegistryTests(unittest.TestCase):
                 "notes": "Declared identity must match immutable coordinates.",
             }
             errors = self._fixture(root, [entry])
-            self.assertTrue(any("identity_sha256 does not match" in error for error in errors), errors)
+            self.assertTrue(
+                any("identity_sha256 does not match" in error for error in errors), errors
+            )
 
     def test_verified_attestation_runs_git_signature_verification(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -756,7 +768,9 @@ class ScrRegistryTests(unittest.TestCase):
                 "notes": "A VERIFIED claim must pass git verify-commit.",
             }
             errors = self._fixture(root, [entry])
-            self.assertTrue(any("commit signature verification failed" in error for error in errors), errors)
+            self.assertTrue(
+                any("commit signature verification failed" in error for error in errors), errors
+            )
 
 
 
