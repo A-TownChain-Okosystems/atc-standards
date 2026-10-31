@@ -87,6 +87,43 @@ class ExternalSourceVerificationTests(unittest.TestCase):
         fetches = [call for call in calls if len(call) > 1 and call[1] == "fetch"]
         self.assertEqual(len(fetches), 1)
 
+    def test_unadvertised_commit_fetch_falls_back_to_remote_history(self):
+        expected_blob = "b" * 40
+        tree_sha = "c" * 40
+        commit_sha = "a" * 40
+        calls = []
+
+        def fake_run(command, **kwargs):
+            calls.append(command)
+            args = command[1:]
+            if args[:1] == ["fetch"] and args[-1] == commit_sha:
+                return subprocess.CompletedProcess(
+                    command, 128, "", "server rejected direct SHA request"
+                )
+            stdout = ""
+            if args[:2] == ["rev-parse", "--verify"]:
+                stdout = tree_sha if args[2].endswith("^{tree}") else expected_blob
+            elif args[:2] == ["cat-file", "-t"]:
+                stdout = "blob"
+            return subprocess.CompletedProcess(command, 0, stdout, "")
+
+        data = {
+            "schema_version": 1,
+            "repository": "A-TownChain-Okosystems/atc-standards",
+            "sources": [
+                {
+                    "scr_id": "SCR-0133",
+                    "repository": "A-TownChain-Okosystems/aurora-ai",
+                    "commit": commit_sha,
+                    "path": "src/file.rs",
+                    "blob_sha": expected_blob,
+                }
+            ],
+        }
+        report = MODULE.verify_manifest(data, runner=fake_run)
+        self.assertEqual(report["verified_count"], 1)
+        self.assertTrue(any(call[-1] == "HEAD" for call in calls))
+
     def test_blob_mismatch_fails_closed(self):
         calls = []
 
