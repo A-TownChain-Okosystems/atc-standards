@@ -1,8 +1,8 @@
 import importlib.util
 import tempfile
 import unittest
-from unittest.mock import patch
 from pathlib import Path
+from unittest.mock import patch
 
 import yaml
 
@@ -92,14 +92,7 @@ class ScrRegistryTests(unittest.TestCase):
                 ],
                 "notes": "Primary and related evidence are separate bindings.",
             }
-            with patch(
-                "scr_validator.subprocess.run",
-                side_effect=[
-                    type("Result", (), {"returncode": 0, "stdout": "", "stderr": ""})(),
-                    type("Result", (), {"returncode": 0, "stdout": "AA:BB", "stderr": ""})(),
-                ],
-            ):
-                self.assertEqual(self._fixture(root, [entry]), [])
+            self.assertEqual(self._fixture(root, [entry]), [])
 
     def test_related_external_pull_request_url_must_bind_repository_and_number(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -616,7 +609,15 @@ class ScrRegistryTests(unittest.TestCase):
                 },
                 "notes": "A valid signature is not an authority decision.",
             }
-            self.assertEqual(self._fixture(root, [entry]), [])
+            with patch.object(
+                module.subprocess,
+                "run",
+                side_effect=[
+                    type("Result", (), {"returncode": 0, "stdout": "", "stderr": ""})(),
+                    type("Result", (), {"returncode": 0, "stdout": "AA:BB", "stderr": ""})(),
+                ],
+            ):
+                self.assertEqual(self._fixture(root, [entry]), [])
 
     def test_established_authority_requires_authority_evidence(self):
         with tempfile.TemporaryDirectory() as tmp:
