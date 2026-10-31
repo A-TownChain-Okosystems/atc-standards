@@ -59,13 +59,9 @@ class ScrRegistryTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             (root / "change-requests").mkdir()
-            (root / "change-requests" / "SCR-9999.md").write_text(
-                "# fixture", encoding="utf-8"
-            )
+            (root / "change-requests" / "SCR-9999.md").write_text("# fixture", encoding="utf-8")
             errors = self._fixture(root, [])
-            self.assertTrue(
-                any("unregistered observed SCR-9999" in error for error in errors)
-            )
+            self.assertTrue(any("unregistered observed SCR-9999" in error for error in errors))
 
     def test_entry_range_overlap_fails(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -87,9 +83,7 @@ class ScrRegistryTests(unittest.TestCase):
                 "required_action": "reconcile",
             }
             errors = self._fixture(root, [entry], [blocked])
-            self.assertTrue(
-                any("overlaps explicit entry" in error for error in errors)
-            )
+            self.assertTrue(any("overlaps explicit entry" in error for error in errors))
 
 
 if __name__ == "__main__":
