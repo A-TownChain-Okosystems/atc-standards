@@ -81,15 +81,15 @@ def validate_source(
 
     if source_kind == "PULL_REQUEST":
         pr_number = source.get("pr")
-        expected_url = (
-            f"https://github.com/A-TownChain-Okosystems/atc-standards/pull/{pr_number}"
-        )
+        expected_url = f"https://github.com/A-TownChain-Okosystems/atc-standards/pull/{pr_number}"
         if (
             not isinstance(pr_number, int)
             or isinstance(pr_number, bool)
             or source.get("url") != expected_url
         ):
-            errors.append(f"{entry_id}: {label} pull-request URL does not bind repository and PR number")
+            errors.append(
+                f"{entry_id}: {label} pull-request URL does not bind repository and PR number"
+            )
 
     if source_kind == "HISTORICAL_REFERENCE":
         has_commit_binding = "commit" in source
