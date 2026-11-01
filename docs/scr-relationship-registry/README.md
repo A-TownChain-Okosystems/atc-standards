@@ -3,7 +3,7 @@
 **Module:** SCR Relationship Registry  
 **Module ID:** `scr-relationship-registry`  
 **Contract version:** `1.0.0-draft.1`  
-**Status:** NON-NORMATIVE DESIGN / NOT IMPLEMENTED  
+**Status:** NON-NORMATIVE DESIGN / PARTIALLY IMPLEMENTED  
 **Parent work:** PR #120 — SCR-0142  
 **Decision:** Independent, versioned module
 
@@ -38,7 +38,7 @@ The existing `related_sources[]` field remains a source-evidence association att
 
 ## 3. Proposed repository layout
 
-The following layout is a proposal for the first implementation; it is not yet present or wired into CI:
+The following layout is present for the initial v1 schema, manifest, empty registry snapshot, validator and regression suite. Dedicated CI wiring remains a separate gate:
 
 ```text
 registry/
@@ -227,7 +227,7 @@ Until these are resolved, E-03 remains **RESIDUAL**. The module contract is a de
 - `registry/scr-relationships/v1/semantics.yaml`: non-normative candidate vocabulary. `approved_relation_types` and `acyclic_relation_types` are intentionally empty. Candidate definitions do not create normative semantics.
 - `registry/scr-relationships/v1/relationships.yaml`: empty initial registry snapshot. No historical `related_sources[]` values were converted into graph edges.
 - `tools/scr-relationship-validator/validate_scr_relationships.py`: read-only validator with structural and normative modes; duplicate YAML key rejection; endpoint resolution against ASSIGNED SCR entries; evidence identity resolution against existing SCR source bindings; duplicate ID/edge and self-edge checks; relation-specific cycle checks only for explicitly approved acyclic types.
-- `tools/scr-relationship-validator/tests/test_validate_scr_relationships.py`: positive and negative regression cases for the initial contract.
+- `tools/scr-relationship-validator/tests/test_validate_scr_relationships.py`: 16 positive and negative regression cases for the initial contract; committed but not yet executed by a dedicated CI step.
 
 ### Governance behavior
 
@@ -237,7 +237,7 @@ The schema's `governance_status` field is record metadata only. It does not repr
 
 ### Current limitations and remaining gates
 
-- The validator and tests have been committed but have not yet been executed in GitHub Actions on the resulting exact head.
+- The validator and tests have been committed. Ruff lint and format checks pass on the current exact PR head. The new relationship validator/test suite has not yet been executed by GitHub Actions; the existing SCR Registry Gate currently executes only the original SCR identity-registry suite.
 - The relationship validator is not yet integrated into the existing SCR Registry Gate; that is a separate CI integration phase.
 - No populated relationship edge is asserted.
 - Relation direction, inverse rules, cardinality, self-edge exceptions, cycle policy and authority thresholds remain governance decisions.
