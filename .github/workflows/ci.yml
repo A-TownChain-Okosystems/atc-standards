@@ -20,7 +20,10 @@ jobs:
       
       - name: Install dependencies
         run: pip install pyyaml
-      
+
+      - name: V-16 threshold regression tests
+        run: python3 -m unittest discover -s tools/atc-repo-audit/tests -v
+
       - name: ATC Repository Audit (self-compliance, Level R3)
         run: python3 tools/atc-repo-audit/atc_repo_audit.py . --level R3
       
