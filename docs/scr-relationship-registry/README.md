@@ -196,13 +196,13 @@ The implementation must preserve all of the following:
 | Phase | Deliverable | Exit criteria |
 |---|---|---|
 | A — Contract | This design, reviewed against current registry and validator | Boundaries and versioning model accepted |
-| B — Governance semantics | Approved relation vocabulary and per-type rules | Attributable decision and evidence recorded |
-| C — Schema | Versioned v1 schema and minimal fixtures | Positive/negative schema tests pass |
+| B — Governance semantics | Candidate vocabulary and explicit approval manifest | Candidates remain non-normative; approved list is empty until attributable decision |
+| C — Schema | Versioned v1 JSON Schema, empty registry snapshot and regression fixtures | Structural schema and regression tests pass in exact-head CI |
 | D — Validator | Standalone read-only validator | Endpoint, evidence, duplicate, and approved graph rules tested |
 | E — CI/evidence | Dedicated workflow and reproducible artifacts | Exact-head evidence complete |
 | F — Integration | Optional read-only integration into registry consistency gates | No lifecycle coupling; no regression in existing SCR gate |
 
-Phase A is the only phase represented by this document. No implementation, schema, CI integration, or governance approval is claimed.
+Phase A is represented by the original contract. Phases B and C now have an initial technical implementation: the v1 schema, a non-normative candidate manifest, an empty v1 relationship snapshot, a read-only validator, and positive/negative regression tests. Phase D is partially represented by the validator implementation but remains subject to exact-head test execution and review. No relation type has been governance-approved; no CI integration, normative approval, or lifecycle transition is claimed.
 
 ## 11. Open decisions — explicit blockers
 
@@ -217,3 +217,28 @@ The following decisions remain open and must not be filled by implementation gue
 - version compatibility and deprecation window for future schema versions.
 
 Until these are resolved, E-03 remains **RESIDUAL**. The module contract is a design artifact, not a verified relationship registry.
+
+
+## 12. Phase B/C implementation addendum — 2026-11-01
+
+### Added technical assets
+
+- `schemas/scr-relationships/v1/relationships.schema.json`: independent JSON Schema Draft 2020-12; strict object fields; version pinned to 1; SCR endpoint syntax; relationship record and evidence-reference structure.
+- `registry/scr-relationships/v1/semantics.yaml`: non-normative candidate vocabulary. `approved_relation_types` and `acyclic_relation_types` are intentionally empty. Candidate definitions do not create normative semantics.
+- `registry/scr-relationships/v1/relationships.yaml`: empty initial registry snapshot. No historical `related_sources[]` values were converted into graph edges.
+- `tools/scr-relationship-validator/validate_scr_relationships.py`: read-only validator with structural and normative modes; duplicate YAML key rejection; endpoint resolution against ASSIGNED SCR entries; evidence identity resolution against existing SCR source bindings; duplicate ID/edge and self-edge checks; relation-specific cycle checks only for explicitly approved acyclic types.
+- `tools/scr-relationship-validator/tests/test_validate_scr_relationships.py`: positive and negative regression cases for the initial contract.
+
+### Governance behavior
+
+The semantics manifest is deliberately marked `NON_NORMATIVE`. The candidate tokens are `DEPENDS_ON`, `SUPERSEDES`, `SPLIT_FROM`, `MERGED_INTO`, and `RELATED_TO`. None is approved. Structural mode permits known candidates as proposals; normative mode blocks every candidate until an attributable governance decision is recorded and the approved list is updated through a separately reviewed change. Unknown tokens always fail closed.
+
+The schema's `governance_status` field is record metadata only. It does not represent Owner identity, Owner authority, SCR lifecycle, or approval evidence. The validator does not mutate the SCR identity registry.
+
+### Current limitations and remaining gates
+
+- The validator and tests have been committed but have not yet been executed in GitHub Actions on the resulting exact head.
+- The relationship validator is not yet integrated into the existing SCR Registry Gate; that is a separate CI integration phase.
+- No populated relationship edge is asserted.
+- Relation direction, inverse rules, cardinality, self-edge exceptions, cycle policy and authority thresholds remain governance decisions.
+- E-03 remains RESIDUAL until governance decisions, complete validator verification, CI evidence and integration gates are satisfied.
