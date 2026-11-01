@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/A-TownChain-Okosystems/atc-standards/blob/main/schemas/scr-relationships/v1/relationships.schema.json",
+  "title": "ATC SCR Relationship Registry v1",
+  "description": "Structural schema only. Relation semantics and normative approval are controlled by the separately versioned semantics manifest and governance evidence.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "relationship_registry_version",
+    "repository",
+    "scr_registry_ref",
+    "scr_registry_commit",
+    "relationships"
+  ],
+  "properties": {
+    "relationship_registry_version": {
+      "const": 1
+    },
+    "repository": {
+      "const": "A-TownChain-Okosystems/atc-standards"
+    },
+    "scr_registry_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scr_registry_commit": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "relationships": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/relationship"
+      }
+    }
+  },
+  "$defs": {
+    "relationship": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "relationship_id",
+        "from_scr",
+        "to_scr",
+        "relation_type",
+        "governance_status",
+        "scope",
+        "evidence_refs"
+      ],
+      "properties": {
+        "relationship_id": {
+          "type": "string",
+          "pattern": "^SCR-REL-[0-9]{4,}$"
+        },
+        "from_scr": {
+          "type": "string",
+          "pattern": "^SCR-[0-9]{4}$"
+        },
+        "to_scr": {
+          "type": "string",
+          "pattern": "^SCR-[0-9]{4}$"
+        },
+        "relation_type": {
+          "type": "string",
+          "pattern": "^[A-Z][A-Z0-9_]{1,63}$"
+        },
+        "governance_status": {
+          "enum": [
+            "PROPOSED",
+            "APPROVED"
+          ]
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000
+        },
+        "evidence_refs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/evidence_ref"
+          }
+        },
+        "notes": {
+          "type": "string",
+          "maxLength": 4000
+        }
+      }
+    },
+    "evidence_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "identity_sha256",
+        "scope"
+      ],
+      "properties": {
+        "identity_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1000
+        }
+      }
+    }
+  }
+}
