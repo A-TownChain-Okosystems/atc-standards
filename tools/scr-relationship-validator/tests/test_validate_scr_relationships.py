@@ -137,6 +137,12 @@ class RelationshipRegistryTests(unittest.TestCase):
         self.write_relationships([self.edge(relation_type="OWNER_APPROVED")])
         self.assertTrue(any("unknown relation_type" in error for error in self.validate()))
 
+    def test_unhashable_relation_token_fails_without_crashing(self):
+        self.write_relationships([self.edge(relation_type=["NOT", "A", "TOKEN"])])
+        errors = self.validate()
+        self.assertTrue(errors)
+        self.assertTrue(any("unknown relation_type" in error for error in errors))
+
     def test_missing_evidence_reference_fails_schema(self):
         self.write_relationships([self.edge(evidence_refs=[])])
         self.assertTrue(any("non-empty" in error for error in self.validate()))
