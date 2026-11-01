@@ -119,7 +119,7 @@ class RelationshipRegistryTests(unittest.TestCase):
 
     def test_missing_evidence_reference_fails_schema(self):
         self.write_relationships([self.edge(evidence_refs=[])])
-        self.assertTrue(any("too short" in e for e in self.validate()))
+        self.assertTrue(any("non-empty" in e for e in self.validate()))
 
     def test_unresolved_evidence_reference_fails_closed(self):
         self.write_relationships([self.edge(evidence_refs=[
@@ -143,11 +143,13 @@ class RelationshipRegistryTests(unittest.TestCase):
 
     def test_acyclic_check_is_only_applied_to_explicitly_approved_type(self):
         semantics = yaml.safe_load(self.semantics_path.read_text())
+        semantics["status"] = "GOVERNANCE_APPROVED"
+        semantics["governance_decision"] = "TEST-DECISION-REF"
         semantics["approved_relation_types"] = ["DEPENDS_ON"]
         semantics["acyclic_relation_types"] = ["DEPENDS_ON"]
         self.semantics_path.write_text(yaml.safe_dump(semantics), encoding="utf-8")
         self.write_relationships([
-            self.edge(relation_id="SCR-REL-0001", relation_type="DEPENDS_ON"),
+            self.edge(relationship_id="SCR-REL-0001", relation_type="DEPENDS_ON"),
             self.edge(relationship_id="SCR-REL-0002", from_scr="SCR-0002",
                       to_scr="SCR-0001", relation_type="DEPENDS_ON"),
         ])
@@ -158,7 +160,7 @@ class RelationshipRegistryTests(unittest.TestCase):
         semantics = yaml.safe_load(self.semantics_path.read_text())
         semantics["acyclic_relation_types"] = ["DEPENDS_ON"]
         self.semantics_path.write_text(yaml.safe_dump(semantics), encoding="utf-8")
-        self.assertTrue(any("acyclic relation types" in e for e in self.validate()))
+        self.assertTrue(any("NON_NORMATIVE semantics manifest" in e for e in self.validate()))
 
     def test_duplicate_yaml_keys_fail_closed(self):
         self.relationship_path.write_text(
