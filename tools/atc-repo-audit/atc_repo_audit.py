@@ -322,7 +322,7 @@ def audit_repo(repo, level, registry_path=None):
 
     # V-16 Conventional Commits (F-048/SCR-0039: Shallow-Clone-Guard —
     # flache Historie <= 2 Commits ist fuer die 20-Commit-Bewertung unzureichend
-    # und darf kein MUST-FAIL erzeugen, nur WARN mit Reparaturhinweis.)
+    # und muss fail-closed als MUST-FAIL behandelt werden.)
     if lvl_ge("R2", level):
         # Exclude merge commits before applying the 20-commit sample window.
         # Filtering after `-20` would leave only 19 commits on PR merge refs.
