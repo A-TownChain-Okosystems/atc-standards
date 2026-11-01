@@ -136,9 +136,7 @@ def validate(
         or not isinstance(governance_decision.get("evidence_refs"), list)
         or not governance_decision["evidence_refs"]
     ):
-        return [
-            "GOVERNANCE_APPROVED semantics require decision_id and non-empty evidence_refs"
-        ]
+        return ["GOVERNANCE_APPROVED semantics require decision_id and non-empty evidence_refs"]
 
     errors = [
         f"schema: {error.message} at {list(error.absolute_path)}"
