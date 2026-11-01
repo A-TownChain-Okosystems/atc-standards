@@ -1569,12 +1569,35 @@ entries:
     decision: UNKNOWN
     source:
       kind: HISTORICAL_REFERENCE
-      path: "docs/ATC-SYSTEM-ROADMAP-001.md"
-      blob_sha: 35f36d0aa31f13e788697d913ca00452ff9bebc9
-      pr: 95
-      url: "https://github.com/A-TownChain-Okosystems/atc-standards/pull/95"
-      identity_sha256: a3ff6b61352e96f0579226d7a5a6065a3a0569a5774e26161a0785456b71da0c
-    notes: "Major reconciliation of the milestone model; PR #95 merged. The roadmap remains a draft and standalone SCR file is absent. This records a source reference only; it does not prove final allocation, Owner approval, implementation or closure."
+      repository: A-TownChain-Okosystems/atc-standards
+      commit: bb4deb85f5252c8e55204b2b1b526f8c56cdaec3
+      path: "registry/milestones.yaml"
+      blob_sha: ae78ba407a9d91bca648c592a3b1ac6d6fec3d6b
+      url: "https://github.com/A-TownChain-Okosystems/atc-standards/commit/bb4deb85f5252c8e55204b2b1b526f8c56cdaec3"
+      identity_sha256: 4054d2060652a3181748c2daf1be6640893c90e0a308785676f7d8dc4225fca0
+    related_sources:
+      - relationship: IMPLEMENTATION_EVIDENCE
+        scope: "Exact schema changed by PR #95, pinned to the same immutable merge commit; this binds the milestone data contract, not Owner approval or SCR lifecycle closure."
+        source:
+          kind: HISTORICAL_REFERENCE
+          repository: A-TownChain-Okosystems/atc-standards
+          commit: bb4deb85f5252c8e55204b2b1b526f8c56cdaec3
+          path: "schemas/milestone.schema.json"
+          blob_sha: acb144c5c90706963dc64edbe517ee4ef1635345
+          url: "https://github.com/A-TownChain-Okosystems/atc-standards/commit/bb4deb85f5252c8e55204b2b1b526f8c56cdaec3"
+          identity_sha256: d8ea0913f78d535668afe72da31f79d4bf8a41eb72ebb8e986b8473438a251ab
+      - relationship: SCOPE_REFERENCE
+        scope: "The roadmap document is the earlier PR #94 scope reference, not a file changed by PR #95. It remains a draft and is kept separate from the PR #95 milestone-registry implementation evidence."
+        source:
+          kind: HISTORICAL_REFERENCE
+          repository: A-TownChain-Okosystems/atc-standards
+          commit: d0575313d0eb071d42593f9a1db1e8ac634777a8
+          path: "docs/ATC-SYSTEM-ROADMAP-001.md"
+          blob_sha: 35f36d0aa31f13e788697d913ca00452ff9bebc9
+          url: "https://github.com/A-TownChain-Okosystems/atc-standards/commit/d0575313d0eb071d42593f9a1db1e8ac634777a8"
+          identity_sha256: 1f02ad174cd44ae0ed3a5049c6dce028644339ac9f0df08a6da35c5060fc2f7f
+    notes: "PR #95 changes registry/milestones.yaml and schemas/milestone.schema.json; its merge commit is now bound to both exact Git blobs. The roadmap document belongs to the earlier PR #94 and remains draft. PR #95 body records an Owner-GO claim, but no attributable signed Owner decision or SCR lifecycle closure is inferred."
+
   - id: SCR-0138
     allocation_status: UNRESOLVED
     metadata_status: UNRECONCILED
