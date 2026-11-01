@@ -8,8 +8,8 @@
   "required": [
     "relationship_registry_version",
     "repository",
-    "source_ref",
-    "source_commit",
+    "scr_registry_ref",
+    "scr_registry_commit",
     "relationships"
   ],
   "properties": {
