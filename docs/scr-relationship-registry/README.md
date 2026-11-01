@@ -66,8 +66,8 @@ The initial document is proposed to contain:
 
 - `relationship_registry_version`: integer schema version; exactly `1` for this format;
 - `repository`: canonical repository identifier;
-- `source_ref`: the ref against which the relationship document is evaluated;
-- `source_commit`: exact 40-character commit SHA for the relationship snapshot;
+- `scr_registry_ref`: the ref of the exact SCR identity registry snapshot used for endpoint and evidence resolution;
+- `scr_registry_commit`: exact 40-character commit SHA of the SCR identity registry snapshot used for validation;
 - `relationships`: explicit relationship records.
 
 Each relationship record is proposed to contain:
