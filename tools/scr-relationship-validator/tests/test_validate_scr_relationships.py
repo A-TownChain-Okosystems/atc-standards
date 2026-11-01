@@ -165,7 +165,12 @@ class RelationshipRegistryTests(unittest.TestCase):
     def test_acyclic_check_is_relation_specific(self):
         semantics = yaml.safe_load(self.semantics_path.read_text(encoding="utf-8"))
         semantics["status"] = "GOVERNANCE_APPROVED"
-        semantics["governance_decision"] = "TEST-DECISION-REF"
+        semantics["governance_decision"] = {
+            "decision_id": "TEST-DECISION-REF",
+            "evidence_refs": [
+                {"identity_sha256": "a" * 64, "scope": "test decision evidence"}
+            ],
+        }
         semantics["approved_relation_types"] = ["DEPENDS_ON"]
         semantics["acyclic_relation_types"] = ["DEPENDS_ON"]
         self.semantics_path.write_text(yaml.safe_dump(semantics), encoding="utf-8")
@@ -184,6 +189,22 @@ class RelationshipRegistryTests(unittest.TestCase):
         self.write_relationships(edges)
         errors = self.validate()
         self.assertTrue(any("cycle detected" in error for error in errors), errors)
+
+    def test_governance_approval_requires_resolvable_decision_evidence(self):
+        semantics = yaml.safe_load(self.semantics_path.read_text(encoding="utf-8"))
+        semantics["status"] = "GOVERNANCE_APPROVED"
+        semantics["governance_decision"] = {
+            "decision_id": "TEST-DECISION-REF",
+            "evidence_refs": [
+                {"identity_sha256": "f" * 64, "scope": "unresolved decision evidence"}
+            ],
+        }
+        self.semantics_path.write_text(yaml.safe_dump(semantics), encoding="utf-8")
+        errors = self.validate()
+        self.assertTrue(
+            any("governance_decision.evidence_refs[0]" in error for error in errors),
+            errors,
+        )
 
     def test_non_normative_manifest_cannot_declare_acyclic_types(self):
         semantics = yaml.safe_load(self.semantics_path.read_text(encoding="utf-8"))
