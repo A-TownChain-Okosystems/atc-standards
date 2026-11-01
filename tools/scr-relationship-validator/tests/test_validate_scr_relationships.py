@@ -87,9 +87,7 @@ class RelationshipRegistryTests(unittest.TestCase):
             "relation_type": "RELATED_TO",
             "governance_status": "PROPOSED",
             "scope": "Non-normative test edge",
-            "evidence_refs": [
-                {"identity_sha256": "a" * 64, "scope": "source record"}
-            ],
+            "evidence_refs": [{"identity_sha256": "a" * 64, "scope": "source record"}],
         }
         item.update(overrides)
         return item
@@ -146,9 +144,7 @@ class RelationshipRegistryTests(unittest.TestCase):
     def test_unresolved_evidence_reference_fails_closed(self):
         refs = [{"identity_sha256": "f" * 64, "scope": "not in SCR registry"}]
         self.write_relationships([self.edge(evidence_refs=refs)])
-        self.assertTrue(
-            any("unresolved evidence identity" in error for error in self.validate())
-        )
+        self.assertTrue(any("unresolved evidence identity" in error for error in self.validate()))
 
     def test_unsupported_schema_version_fails(self):
         self.write_relationships([], version=2)
@@ -164,9 +160,7 @@ class RelationshipRegistryTests(unittest.TestCase):
         first = self.edge()
         second = self.edge(relationship_id="SCR-REL-0002")
         self.write_relationships([first, second])
-        self.assertTrue(
-            any("duplicate relationship edge" in error for error in self.validate())
-        )
+        self.assertTrue(any("duplicate relationship edge" in error for error in self.validate()))
 
     def test_acyclic_check_is_relation_specific(self):
         semantics = yaml.safe_load(self.semantics_path.read_text(encoding="utf-8"))
