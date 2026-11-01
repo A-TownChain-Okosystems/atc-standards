@@ -30,13 +30,17 @@ class UniqueKeySafeLoader(yaml.SafeLoader):
                 duplicate = key in result
             except TypeError as exc:
                 raise yaml.constructor.ConstructorError(
-                    "while constructing a mapping", node.start_mark,
-                    "found an unhashable mapping key", key_node.start_mark,
+                    "while constructing a mapping",
+                    node.start_mark,
+                    "found an unhashable mapping key",
+                    key_node.start_mark,
                 ) from exc
             if duplicate:
                 raise yaml.constructor.ConstructorError(
-                    "while constructing a mapping", node.start_mark,
-                    f"found duplicate key {key!r}", key_node.start_mark,
+                    "while constructing a mapping",
+                    node.start_mark,
+                    f"found duplicate key {key!r}",
+                    key_node.start_mark,
                 )
             result[key] = self.construct_object(value_node, deep=deep)
         return result
@@ -90,7 +94,9 @@ def validate(
     """Validate structure, endpoint/evidence resolution, and approved graph rules."""
     if mode not in {"structural", "normative"}:
         return ["mode must be structural or normative"]
-    relationship_path = relationship_path or root / "registry/scr-relationships/v1/relationships.yaml"
+    relationship_path = (
+        relationship_path or root / "registry/scr-relationships/v1/relationships.yaml"
+    )
     schema_path = schema_path or root / "schemas/scr-relationships/v1/relationships.schema.json"
     registry_path = registry_path or root / "registry/scr-registry.yaml"
     semantics_path = semantics_path or root / "registry/scr-relationships/v1/semantics.yaml"
@@ -122,8 +128,12 @@ def validate(
         or semantics.get("acyclic_relation_types") != []
     ):
         return ["NON_NORMATIVE semantics manifest must have empty approved and acyclic lists"]
-    if semantics.get("status") == "GOVERNANCE_APPROVED" and not semantics.get("governance_decision"):
-        return ["GOVERNANCE_APPROVED semantics require an attributable governance_decision reference"]
+    if semantics.get("status") == "GOVERNANCE_APPROVED" and not semantics.get(
+        "governance_decision"
+    ):
+        return [
+            "GOVERNANCE_APPROVED semantics require an attributable governance_decision reference"
+        ]
 
     errors = [
         f"schema: {error.message} at {list(error.absolute_path)}"
@@ -201,7 +211,9 @@ def validate(
         elif mode == "normative" and (
             token not in approved or item.get("governance_status") != "APPROVED"
         ):
-            errors.append(f"{label}: relation_type {token} is not governance-approved for normative use")
+            errors.append(
+                f"{label}: relation_type {token} is not governance-approved for normative use"
+            )
 
         refs = item.get("evidence_refs")
         if isinstance(refs, list):
@@ -209,12 +221,21 @@ def validate(
                 if not isinstance(ref, dict):
                     continue
                 digest = ref.get("identity_sha256")
-                if isinstance(digest, str) and SHA256_RE.fullmatch(digest) and digest not in evidence_ids:
+                if (
+                    isinstance(digest, str)
+                    and SHA256_RE.fullmatch(digest)
+                    and digest not in evidence_ids
+                ):
                     errors.append(
                         f"{label}.evidence_refs[{ref_index}]: unresolved evidence identity {digest}"
                     )
 
-        if isinstance(token, str) and token in graphs and isinstance(source, str) and isinstance(target, str):
+        if (
+            isinstance(token, str)
+            and token in graphs
+            and isinstance(source, str)
+            and isinstance(target, str)
+        ):
             graph = graphs[token]
             if _reachable(graph, target, source):
                 errors.append(f"{label}: cycle detected for approved acyclic relation_type {token}")
