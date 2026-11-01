@@ -227,17 +227,17 @@ Until these are resolved, E-03 remains **RESIDUAL**. The module contract is a de
 - `registry/scr-relationships/v1/semantics.yaml`: non-normative candidate vocabulary. `approved_relation_types` and `acyclic_relation_types` are intentionally empty. Candidate definitions do not create normative semantics.
 - `registry/scr-relationships/v1/relationships.yaml`: empty initial registry snapshot. No historical `related_sources[]` values were converted into graph edges.
 - `tools/scr-relationship-validator/validate_scr_relationships.py`: read-only validator with structural and normative modes; duplicate YAML key rejection; endpoint resolution against ASSIGNED SCR entries; evidence identity resolution against existing SCR source bindings; duplicate ID/edge and self-edge checks; relation-specific cycle checks only for explicitly approved acyclic types.
-- `tools/scr-relationship-validator/tests/test_validate_scr_relationships.py`: 16 positive and negative regression cases for the initial contract; committed but not yet executed by a dedicated CI step.
+- `tools/scr-relationship-validator/tests/test_validate_scr_relationships.py`: 17 positive and negative regression cases for the initial contract; committed but not yet executed by a dedicated CI step.
 
 ### Governance behavior
 
 The semantics manifest is deliberately marked `NON_NORMATIVE`. The candidate tokens are `DEPENDS_ON`, `SUPERSEDES`, `SPLIT_FROM`, `MERGED_INTO`, and `RELATED_TO`. None is approved. Structural mode permits known candidates as proposals; normative mode blocks every candidate until an attributable governance decision is recorded and the approved list is updated through a separately reviewed change. Unknown tokens always fail closed.
 
-The schema's `governance_status` field is record metadata only. It does not represent Owner identity, Owner authority, SCR lifecycle, or approval evidence. The validator does not mutate the SCR identity registry.
+The schema's `governance_status` field is record metadata only. It does not represent Owner identity, Owner authority, or SCR lifecycle. A future `GOVERNANCE_APPROVED` semantics manifest must carry a decision ID and evidence references that resolve to immutable source identities. This is traceability, not cryptographic signer or Owner-authority verification; that remains a separate governance control. The validator does not mutate the SCR identity registry.
 
 ### Current limitations and remaining gates
 
-- The validator and tests have been committed. Ruff lint and format checks pass on the current exact PR head. The new relationship validator/test suite has not yet been executed by GitHub Actions; the existing SCR Registry Gate currently executes only the original SCR identity-registry suite.
+- The validator and tests have been committed. Ruff lint and format checks passed on an earlier exact PR head; the latest governance-evidence hardening commit is awaiting a fresh CI result. The new relationship validator/test suite has not yet been executed by GitHub Actions; the existing SCR Registry Gate currently executes only the original SCR identity-registry suite.
 - The relationship validator is not yet integrated into the existing SCR Registry Gate; that is a separate CI integration phase.
 - No populated relationship edge is asserted.
 - Relation direction, inverse rules, cardinality, self-edge exceptions, cycle policy and authority thresholds remain governance decisions.
