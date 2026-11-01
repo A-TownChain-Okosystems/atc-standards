@@ -18,9 +18,7 @@ class RelationshipRegistryTests(unittest.TestCase):
         (self.root / "registry/scr-relationships/v1").mkdir(parents=True)
         (self.root / "schemas/scr-relationships/v1").mkdir(parents=True)
         self.schema_path = self.root / "schemas/scr-relationships/v1/relationships.schema.json"
-        schema_source = (
-            SCRIPT.parents[2] / "schemas/scr-relationships/v1/relationships.schema.json"
-        )
+        schema_source = SCRIPT.parents[2] / "schemas/scr-relationships/v1/relationships.schema.json"
         self.schema_path.write_text(schema_source.read_text(encoding="utf-8"), encoding="utf-8")
         self.registry_path = self.root / "registry/scr-registry.yaml"
         self.semantics_path = self.root / "registry/scr-relationships/v1/semantics.yaml"
