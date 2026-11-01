@@ -19,11 +19,11 @@
     "repository": {
       "const": "A-TownChain-Okosystems/atc-standards"
     },
-    "source_ref": {
+    "scr_registry_ref": {
       "type": "string",
       "minLength": 1
     },
-    "source_commit": {
+    "scr_registry_commit": {
       "type": "string",
       "pattern": "^[0-9a-f]{40}$"
     },
