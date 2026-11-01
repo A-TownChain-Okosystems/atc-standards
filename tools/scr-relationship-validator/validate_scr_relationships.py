@@ -26,7 +26,14 @@ class UniqueKeySafeLoader(yaml.SafeLoader):
         result = {}
         for key_node, value_node in node.value:
             key = self.construct_object(key_node, deep=deep)
-            if key in result:
+            try:
+                duplicate = key in result
+            except TypeError as exc:
+                raise yaml.constructor.ConstructorError(
+                    "while constructing a mapping", node.start_mark,
+                    "found an unhashable mapping key", key_node.start_mark,
+                ) from exc
+            if duplicate:
                 raise yaml.constructor.ConstructorError(
                     "while constructing a mapping", node.start_mark,
                     f"found duplicate key {key!r}", key_node.start_mark,
@@ -100,6 +107,8 @@ def validate(
         return ["relationship registry root must be an object"]
     if not isinstance(registry, dict) or registry.get("registry_version") != 1:
         return ["SCR identity registry is missing or has an unsupported registry_version"]
+    if not isinstance(registry.get("entries"), list):
+        return ["SCR identity registry entries must be an array"]
     if data.get("scr_registry_commit") != registry.get("source_commit"):
         return ["scr_registry_commit does not match the loaded SCR identity registry snapshot"]
     if data.get("scr_registry_ref") != registry.get("source_ref"):
@@ -130,12 +139,18 @@ def validate(
         or any(not isinstance(item, str) for item in approved + acyclic)
     ):
         return errors + ["semantics manifest candidate/approved/acyclic lists are invalid"]
-    candidate_tokens = {
-        item.get("token") for item in candidates
-        if isinstance(item, dict) and item.get("status") == "PROPOSED"
-    }
-    if len(candidate_tokens) != len(candidates):
-        errors.append("semantics manifest contains malformed or duplicate candidate entries")
+    candidate_tokens = set()
+    for item in candidates:
+        if (
+            not isinstance(item, dict)
+            or not isinstance(item.get("token"), str)
+            or not re.fullmatch(r"[A-Z][A-Z0-9_]{1,63}", item["token"])
+            or item.get("status") != "PROPOSED"
+            or item["token"] in candidate_tokens
+        ):
+            errors.append("semantics manifest contains malformed or duplicate candidate entries")
+            continue
+        candidate_tokens.add(item["token"])
     if len(set(approved)) != len(approved) or not set(approved).issubset(candidate_tokens):
         errors.append("approved relation types must be unique declared candidate tokens")
     if len(set(acyclic)) != len(acyclic) or not set(acyclic).issubset(set(approved)):
@@ -181,7 +196,7 @@ def validate(
             errors.append(f"{label}: duplicate relationship edge {edge}")
         seen_edges.add(edge)
 
-        if token not in candidate_tokens:
+        if not isinstance(token, str) or token not in candidate_tokens:
             errors.append(f"{label}: unknown relation_type {token!r}")
         elif mode == "normative" and (
             token not in approved or item.get("governance_status") != "APPROVED"
@@ -199,7 +214,7 @@ def validate(
                         f"{label}.evidence_refs[{ref_index}]: unresolved evidence identity {digest}"
                     )
 
-        if token in graphs and isinstance(source, str) and isinstance(target, str):
+        if isinstance(token, str) and token in graphs and isinstance(source, str) and isinstance(target, str):
             graph = graphs[token]
             if _reachable(graph, target, source):
                 errors.append(f"{label}: cycle detected for approved acyclic relation_type {token}")
