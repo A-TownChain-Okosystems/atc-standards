@@ -11,7 +11,7 @@ from pathlib import Path
 import yaml
 from jsonschema import Draft202012Validator
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[2]
 SCR_ID_RE = re.compile(r"^SCR-[0-9]{4}$")
 SHA256_RE = re.compile(r"^[0-9a-f]{64}$")
 
