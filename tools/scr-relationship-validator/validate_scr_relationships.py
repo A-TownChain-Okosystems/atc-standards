@@ -217,10 +217,11 @@ def validate(
             errors.append(f"{label}: unresolved or non-assigned to_scr endpoint {target}")
         if isinstance(source, str) and isinstance(target, str) and source == target:
             errors.append(f"{label}: self-edge is rejected by the v1 technical safeguard")
-        edge = (source, target, token)
-        if edge in seen_edges:
-            errors.append(f"{label}: duplicate relationship edge {edge}")
-        seen_edges.add(edge)
+        if all(isinstance(value, str) for value in (source, target, token)):
+            edge = (source, target, token)
+            if edge in seen_edges:
+                errors.append(f"{label}: duplicate relationship edge {edge}")
+            seen_edges.add(edge)
 
         if not isinstance(token, str) or token not in candidate_tokens:
             errors.append(f"{label}: unknown relation_type {token!r}")
