@@ -167,9 +167,7 @@ class RelationshipRegistryTests(unittest.TestCase):
         semantics["status"] = "GOVERNANCE_APPROVED"
         semantics["governance_decision"] = {
             "decision_id": "TEST-DECISION-REF",
-            "evidence_refs": [
-                {"identity_sha256": "a" * 64, "scope": "test decision evidence"}
-            ],
+            "evidence_refs": [{"identity_sha256": "a" * 64, "scope": "test decision evidence"}],
         }
         semantics["approved_relation_types"] = ["DEPENDS_ON"]
         semantics["acyclic_relation_types"] = ["DEPENDS_ON"]
