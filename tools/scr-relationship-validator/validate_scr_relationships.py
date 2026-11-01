@@ -128,11 +128,16 @@ def validate(
         or semantics.get("acyclic_relation_types") != []
     ):
         return ["NON_NORMATIVE semantics manifest must have empty approved and acyclic lists"]
-    if semantics.get("status") == "GOVERNANCE_APPROVED" and not semantics.get(
-        "governance_decision"
+    governance_decision = semantics.get("governance_decision")
+    if semantics.get("status") == "GOVERNANCE_APPROVED" and (
+        not isinstance(governance_decision, dict)
+        or not isinstance(governance_decision.get("decision_id"), str)
+        or not governance_decision["decision_id"].strip()
+        or not isinstance(governance_decision.get("evidence_refs"), list)
+        or not governance_decision["evidence_refs"]
     ):
         return [
-            "GOVERNANCE_APPROVED semantics require an attributable governance_decision reference"
+            "GOVERNANCE_APPROVED semantics require decision_id and non-empty evidence_refs"
         ]
 
     errors = [
@@ -176,6 +181,19 @@ def validate(
         and SCR_ID_RE.fullmatch(entry["id"])
     }
     evidence_ids = _source_identities(registry)
+    if semantics.get("status") == "GOVERNANCE_APPROVED":
+        for index, evidence_ref in enumerate(governance_decision["evidence_refs"]):
+            digest = evidence_ref.get("identity_sha256") if isinstance(evidence_ref, dict) else None
+            if (
+                not isinstance(digest, str)
+                or not SHA256_RE.fullmatch(digest)
+                or digest not in evidence_ids
+                or not isinstance(evidence_ref.get("scope"), str)
+                or not evidence_ref["scope"].strip()
+            ):
+                errors.append(
+                    f"governance_decision.evidence_refs[{index}] does not resolve to an SCR source identity"
+                )
     relationships = data.get("relationships", [])
     if not isinstance(relationships, list):
         return errors + ["relationships must be an array"]
