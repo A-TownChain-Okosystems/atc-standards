@@ -102,8 +102,15 @@ def validate(
         return ["SCR identity registry is missing or has an unsupported registry_version"]
     if not isinstance(semantics, dict) or semantics.get("semantics_manifest_version") != 1:
         return ["semantics manifest is missing or has an unsupported version"]
-    if semantics.get("status") != "NON_NORMATIVE":
-        return ["semantics manifest status must remain NON_NORMATIVE until governance approval"]
+    if semantics.get("status") not in {"NON_NORMATIVE", "GOVERNANCE_APPROVED"}:
+        return ["semantics manifest status is unsupported"]
+    if semantics.get("status") == "NON_NORMATIVE" and (
+        semantics.get("approved_relation_types") != []
+        or semantics.get("acyclic_relation_types") != []
+    ):
+        return ["NON_NORMATIVE semantics manifest must have empty approved and acyclic lists"]
+    if semantics.get("status") == "GOVERNANCE_APPROVED" and not semantics.get("governance_decision"):
+        return ["GOVERNANCE_APPROVED semantics require an attributable governance_decision reference"]
 
     errors = [
         f"schema: {error.message} at {list(error.absolute_path)}"
