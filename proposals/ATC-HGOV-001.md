@@ -61,7 +61,7 @@ must be checked against the canonical requirement registry before approval.
 
 ## 4. Governance authority model
 
-### REQ-HGOV-001 — Separation of development and consensus authority
+### REQ-608-001 — Separation of development and consensus authority
 **Proposed level:** MUST  
 **Rationale:** Development coordination must not confer unilateral control over the live network.  
 **Applicability:** Development organization, node software, validators, release engineering.  
@@ -75,7 +75,7 @@ perform any prohibited state or consensus action.
 run/job/step links, logs and SHA-256 artifact manifest.  
 **Residual risk:** Undiscovered privileged paths and social coordination pressure.
 
-### REQ-HGOV-002 — Public authority and responsibility register
+### REQ-608-002 — Public authority and responsibility register
 **Proposed level:** MUST  
 **Requirement:** Governance roles, decision scope, appointment/removal process, conflict-of-interest
 rules and authority limitations MUST be publicly documented. A role MUST NOT imply powers beyond
@@ -86,7 +86,7 @@ boundary.
 **Evidence:** Registry snapshot, schema, validator output, exact commit and artifact hashes.  
 **Residual risk:** Off-chain influence may exceed formally declared authority.
 
-### REQ-HGOV-003 — No unilateral emergency sovereignty
+### REQ-608-003 — No unilateral emergency sovereignty
 **Proposed level:** MUST NOT  
 **Requirement:** No single person, organization, multisignature group, administrator or validator
 MUST be able to unilaterally confiscate user funds, mint ATC outside issuance rules, rewrite finalized
@@ -99,7 +99,7 @@ keys.
 
 ## 5. Validator independence and network operation
 
-### REQ-HGOV-004 — Independent validator operation
+### REQ-608-004 — Independent validator operation
 **Proposed level:** MUST  
 **Requirement:** The protocol MUST permit validators to be operated by independent legal or natural
 persons using independently controlled infrastructure and keys. No single development entity may
@@ -111,7 +111,7 @@ and exit using public documentation without privileged organizational access.
 operator independence attestations.  
 **Residual risk:** Nominally separate operators may share beneficial ownership or infrastructure.
 
-### REQ-HGOV-005 — Validator key separation
+### REQ-608-005 — Validator key separation
 **Proposed level:** MUST  
 **Requirement:** Validator consensus keys MUST be distinct from development, release-signing,
 treasury, wallet and emergency-coordination keys. Consensus keys MUST NOT be held in a shared
@@ -121,7 +121,7 @@ administrative trust domain with release credentials.
 **Evidence:** Redacted key architecture, policy configuration, negative tests and CI artifacts.  
 **Residual risk:** Operational compromise of an individual validator remains possible.
 
-### REQ-HGOV-006 — Stake and operator concentration transparency
+### REQ-608-006 — Stake and operator concentration transparency
 **Proposed level:** MUST  
 **Requirement:** The network MUST expose enough verifiable data to calculate stake concentration,
 validator voting/consensus weight, active-operator count, operator concentration and relevant
@@ -133,7 +133,7 @@ network telemetry.
 **Evidence:** Snapshot block hash, calculation code/version, raw input hashes and report artifact.  
 **Residual risk:** Common ownership and infrastructure dependencies may be hidden or misreported.
 
-### REQ-HGOV-007 — Decentralization thresholds require explicit approval
+### REQ-608-007 — Decentralization thresholds require explicit approval
 **Proposed level:** MUST  
 **Requirement:** Numerical limits for maximum stake share, minimum independent operators, geographic
 or hosting diversity, and concentration alarms MUST be specified in a separately approved
@@ -145,7 +145,7 @@ failure action.
 **Evidence:** Approved profile version, test vectors, monitoring output and signed review record.  
 **Residual risk:** Thresholds can become stale as the network grows.
 
-### REQ-HGOV-008 — Validator entry, exit and sanctions
+### REQ-608-008 — Validator entry, exit and sanctions
 **Proposed level:** MUST  
 **Requirement:** Validator admission, key rotation, voluntary exit, downtime handling, slashing and
 appeals MUST be deterministic, documented and enforced by protocol rules. No off-chain authority
@@ -157,7 +157,7 @@ may apply discretionary slashing or confiscation.
 
 ## 6. Consensus and protocol upgrades
 
-### REQ-HGOV-009 — Consensus authority
+### REQ-608-009 — Consensus authority
 **Proposed level:** MUST  
 **Requirement:** Canonical block acceptance MUST be determined by the published consensus protocol
 and its validator rules. A development organization release, announcement or signature MUST NOT
@@ -167,7 +167,7 @@ alone constitute consensus approval or force nodes to accept a new chain history
 **Evidence:** Multi-node traces, negative vectors, exact source bindings and CI artifacts.  
 **Residual risk:** Social coordination can still influence which software participants choose to run.
 
-### REQ-HGOV-010 — Public upgrade proposal
+### REQ-608-010 — Public upgrade proposal
 **Proposed level:** MUST  
 **Requirement:** Every consensus-affecting upgrade MUST have a public proposal containing motivation,
 specification diff, affected components, compatibility analysis, threat model, state-migration plan,
@@ -177,7 +177,7 @@ activation method, rollback/failure behavior and test evidence before signaling 
 **Evidence:** Immutable proposal revision, review records, testnet evidence and release manifest.  
 **Residual risk:** Public review may not identify every latent protocol defect.
 
-### REQ-HGOV-011 — Independent review and testnet proof
+### REQ-608-011 — Independent review and testnet proof
 **Proposed level:** MUST  
 **Requirement:** Consensus, cryptography, monetary policy, validator-set, state migration and
 authorization changes MUST receive the applicable independent technical and security reviews and
@@ -188,7 +188,7 @@ cross-implementation tests where applicable.
 **Evidence:** Reviewer decisions, testnet block range, client versions, logs and SHA-256 artifacts.  
 **Residual risk:** Testnet may not reproduce all mainnet conditions.
 
-### REQ-HGOV-012 — No unilateral upgrade activation
+### REQ-608-012 — No unilateral upgrade activation
 **Proposed level:** MUST NOT  
 **Requirement:** The development organization MUST NOT unilaterally activate a consensus-breaking
 upgrade on mainnet. Activation MUST follow the approved proposal, signaling, coordination and
@@ -199,7 +199,7 @@ protocol-defined activation procedure.
 **Residual risk:** A coordinated supermajority or ecosystem-wide client adoption can still create a
 de facto upgrade.
 
-### REQ-HGOV-013 — Existing upgrade-standard compatibility
+### REQ-608-013 — Existing upgrade-standard compatibility
 **Proposed level:** MUST  
 **Requirement:** This proposal does not supersede or silently reinterpret ATC-STD-NET-006. Its
 existing upgrade sequence and the stated 80% active-staking-power signaling threshold remain
@@ -213,7 +213,7 @@ clarification before deployment.
 
 ## 7. Monetary policy, issuance and ATC supply
 
-### REQ-HGOV-014 — Maximum supply invariant
+### REQ-608-014 — Maximum supply invariant
 **Proposed level:** MUST  
 **Requirement:** The protocol MUST enforce a maximum aggregate ATC supply of 360,000,000 ATC
 (360,000,000 × 10^18 base units if the established 18-decimal denomination remains authoritative).
@@ -227,7 +227,7 @@ hashes.
 **Residual risk:** Existing issuance semantics and historical allocations must be reconciled with
 the canonical implementation.
 
-### REQ-HGOV-015 — Deterministic issuance schedule
+### REQ-608-015 — Deterministic issuance schedule
 **Proposed level:** MUST  
 **Requirement:** Block rewards, AI-compute mining rewards, validator rewards, halvings, genesis
 allocations, burns and any other supply-changing events MUST be completely specified as deterministic
@@ -239,7 +239,7 @@ same chain history.
 **Residual risk:** The current relationship between AI-compute rewards and PoS validator rewards
 requires a complete supply-budget reconciliation.
 
-### REQ-HGOV-016 — Monetary parameter changes
+### REQ-608-016 — Monetary parameter changes
 **Proposed level:** MUST  
 **Requirement:** Monetary parameters MUST NOT be changed by a routine software release or private
 administrative configuration. Any proposed change MUST undergo explicit public governance, economic
@@ -253,7 +253,7 @@ against all future forks.
 
 ## 8. Staking, fees and reward accounting
 
-### REQ-HGOV-017 — Protocol-defined staking
+### REQ-608-017 — Protocol-defined staking
 **Proposed level:** MUST  
 **Requirement:** Staking eligibility, delegation, validator selection, reward accrual, unbonding,
 slashing, withdrawal and reward claiming MUST be deterministic and publicly specified. Wallet
@@ -264,7 +264,7 @@ display balances MUST distinguish liquid, bonded, unbonding and claimable amount
 **Residual risk:** The intended relationship between liquid ATC and automatically participating
 staking balances remains an open economic design decision.
 
-### REQ-HGOV-018 — No undisclosed encumbrance of self-custodied funds
+### REQ-608-018 — No undisclosed encumbrance of self-custodied funds
 **Proposed level:** MUST NOT  
 **Requirement:** A wallet MUST NOT represent funds as freely spendable while protocol rules
 simultaneously make those same units unavailable, slashable or subject to an undisclosed lock.
@@ -276,7 +276,7 @@ accurately represented.
 **Evidence:** Wallet test vectors, protocol state traces and UI/API conformance reports.  
 **Residual risk:** Users may misunderstand complex staking or reward mechanics.
 
-### REQ-HGOV-019 — Fee determinism and transparency
+### REQ-608-019 — Fee determinism and transparency
 **Proposed level:** MUST  
 **Requirement:** Fee calculation, fee caps/floors, congestion adjustment, rounding, fee destination,
 burning and reward allocation MUST be deterministic, documented and reproducible by independent
@@ -286,7 +286,7 @@ clients. No administrator may selectively alter an individual user's protocol fe
 **Evidence:** Vectors, simulation report, source commit and CI artifacts.  
 **Residual risk:** Poorly calibrated fee parameters may impair access or network sustainability.
 
-### REQ-HGOV-020 — Same-block accounting semantics
+### REQ-608-020 — Same-block accounting semantics
 **Proposed level:** MUST  
 **Requirement:** The protocol MUST specify whether transaction fees and staking/validator rewards
 are accounted for in the transaction block, a subsequent block, or a separately defined epoch.
@@ -300,7 +300,7 @@ existing transaction and consensus specifications.
 
 ## 9. Security, emergency response and recovery
 
-### REQ-HGOV-021 — No unilateral pause or rollback
+### REQ-608-021 — No unilateral pause or rollback
 **Proposed level:** MUST NOT  
 **Requirement:** No organization-controlled emergency key or operator endpoint may unilaterally
 pause the canonical network, reverse finalized transactions, rewrite balances or select an
@@ -311,7 +311,7 @@ alternative chain history.
 **Residual risk:** Protocol-level safety halts or loss of liveness may still occur under defined
 consensus failure conditions.
 
-### REQ-HGOV-022 — Emergency response transparency
+### REQ-608-022 — Emergency response transparency
 **Proposed level:** MUST  
 **Requirement:** Emergency coordination MUST publish the incident scope, affected versions,
 evidence, proposed mitigation, authority basis, risks and expiry/review condition. Emergency
@@ -322,7 +322,7 @@ independently reviewable.
 **Evidence:** Incident timeline, signed records, release diff, approvals and postmortem.  
 **Residual risk:** Disclosure timing may be constrained by active exploitation.
 
-### REQ-HGOV-023 — Recovery without trusted state substitution
+### REQ-608-023 — Recovery without trusted state substitution
 **Proposed level:** MUST  
 **Requirement:** Recovery MUST use verifiable canonical chain data and deterministic replay under
 the applicable network recovery standard. An operator-provided snapshot MUST NOT be trusted solely
@@ -334,7 +334,7 @@ because it was published by the development organization.
 
 ## 10. Decentralization, disclosure and evidence
 
-### REQ-HGOV-024 — Decentralization reporting
+### REQ-608-024 — Decentralization reporting
 **Proposed level:** MUST  
 **Requirement:** Mainnet governance reporting MUST distinguish protocol decentralization, validator
 operator independence, stake distribution, client diversity, infrastructure diversity and
@@ -344,7 +344,7 @@ organizational influence. A single composite score MUST NOT conceal a critical c
 **Evidence:** Data snapshot, report code/version, calculations and artifact hashes.  
 **Residual risk:** Off-chain ownership and influence data may be incomplete.
 
-### REQ-HGOV-025 — Open protocol and reproducible releases
+### REQ-608-025 — Open protocol and reproducible releases
 **Proposed level:** MUST  
 **Requirement:** Protocol specifications, upgrade proposals and release source must be publicly
 reviewable, subject to applicable security disclosure windows. Production releases MUST be
@@ -354,7 +354,7 @@ reproducible or have a documented, independently reviewed exception.
 **Evidence:** Build logs, provenance attestations, artifact SHA-256 and release manifest.  
 **Residual risk:** Build environment compromise and dependency supply-chain risks.
 
-### REQ-HGOV-026 — Evidence completeness and status discipline
+### REQ-608-026 — Evidence completeness and status discipline
 **Proposed level:** MUST  
 **Requirement:** Every governance requirement MUST map to its implementation owner, test or review
 method, evidence source and status. Evidence MUST identify exact repository, commit, path, symbol
@@ -415,16 +415,16 @@ requirements and validation contracts; implementation remains in its owning sour
 
 | Gate | Proposed check | Failure result |
 |---|---|---|
-| HGOV-G01 | Metadata, ID and requirement uniqueness | BLOCKED |
-| HGOV-G02 | Cross-standard compatibility matrix | BLOCKED |
-| HGOV-G03 | Authority and privilege boundary tests | BLOCKED |
-| HGOV-G04 | Validator independence and concentration report | BLOCKED |
-| HGOV-G05 | Consensus and upgrade conformance | BLOCKED |
-| HGOV-G06 | Monetary supply and issuance invariants | BLOCKED |
-| HGOV-G07 | Staking, fee and reward accounting | BLOCKED |
-| HGOV-G08 | Emergency and recovery security tests | BLOCKED |
-| HGOV-G09 | Exact-source evidence completeness | BLOCKED |
-| HGOV-G10 | Required Owner and specialist approvals | BLOCKED |
+| GATE-608-001 | Metadata, ID and requirement uniqueness | BLOCKED |
+| GATE-608-002 | Cross-standard compatibility matrix | BLOCKED |
+| GATE-608-003 | Authority and privilege boundary tests | BLOCKED |
+| GATE-608-004 | Validator independence and concentration report | BLOCKED |
+| GATE-608-005 | Consensus and upgrade conformance | BLOCKED |
+| GATE-608-006 | Monetary supply and issuance invariants | BLOCKED |
+| GATE-608-007 | Staking, fee and reward accounting | BLOCKED |
+| GATE-608-008 | Emergency and recovery security tests | BLOCKED |
+| GATE-608-009 | Exact-source evidence completeness | BLOCKED |
+| GATE-608-010 | Required Owner and specialist approvals | BLOCKED |
 
 A green CI result alone MUST NOT imply normative approval, implementation completeness, or mainnet
 readiness.
