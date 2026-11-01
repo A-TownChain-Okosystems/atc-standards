@@ -100,6 +100,10 @@ def validate(
         return ["relationship registry root must be an object"]
     if not isinstance(registry, dict) or registry.get("registry_version") != 1:
         return ["SCR identity registry is missing or has an unsupported registry_version"]
+    if data.get("scr_registry_commit") != registry.get("source_commit"):
+        return ["scr_registry_commit does not match the loaded SCR identity registry snapshot"]
+    if data.get("scr_registry_ref") != registry.get("source_ref"):
+        return ["scr_registry_ref does not match the loaded SCR identity registry snapshot"]
     if not isinstance(semantics, dict) or semantics.get("semantics_manifest_version") != 1:
         return ["semantics manifest is missing or has an unsupported version"]
     if semantics.get("status") not in {"NON_NORMATIVE", "GOVERNANCE_APPROVED"}:
@@ -119,7 +123,12 @@ def validate(
     candidates = semantics.get("candidate_relation_types")
     approved = semantics.get("approved_relation_types")
     acyclic = semantics.get("acyclic_relation_types")
-    if not isinstance(candidates, list) or not isinstance(approved, list) or not isinstance(acyclic, list):
+    if (
+        not isinstance(candidates, list)
+        or not isinstance(approved, list)
+        or not isinstance(acyclic, list)
+        or any(not isinstance(item, str) for item in approved + acyclic)
+    ):
         return errors + ["semantics manifest candidate/approved/acyclic lists are invalid"]
     candidate_tokens = {
         item.get("token") for item in candidates
