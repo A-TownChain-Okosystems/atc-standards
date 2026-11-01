@@ -58,8 +58,8 @@ class RelationshipRegistryTests(unittest.TestCase):
         self.relationship_path.write_text(yaml.safe_dump({
             "relationship_registry_version": version,
             "repository": "A-TownChain-Okosystems/atc-standards",
-            "source_ref": "test",
-            "source_commit": "d" * 40,
+            "scr_registry_ref": "test",
+            "scr_registry_commit": "d" * 40,
             "relationships": relationships,
         }, sort_keys=False), encoding="utf-8")
 
