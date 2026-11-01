@@ -28,6 +28,8 @@ class RelationshipRegistryTests(unittest.TestCase):
         self.relationship_path = self.root / "registry/scr-relationships/v1/relationships.yaml"
         self.registry_path.write_text(yaml.safe_dump({
             "registry_version": 1,
+            "source_ref": "test",
+            "source_commit": "d" * 40,
             "entries": [
                 {"id": "SCR-0001", "allocation_status": "ASSIGNED",
                  "source": {"identity_sha256": "a" * 64}},
