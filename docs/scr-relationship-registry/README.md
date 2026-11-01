@@ -227,7 +227,7 @@ Until these are resolved, E-03 remains **RESIDUAL**. The module contract is a de
 - `registry/scr-relationships/v1/semantics.yaml`: non-normative candidate vocabulary. `approved_relation_types` and `acyclic_relation_types` are intentionally empty. Candidate definitions do not create normative semantics.
 - `registry/scr-relationships/v1/relationships.yaml`: empty initial registry snapshot. No historical `related_sources[]` values were converted into graph edges.
 - `tools/scr-relationship-validator/validate_scr_relationships.py`: read-only validator with structural and normative modes; duplicate YAML key rejection; endpoint resolution against ASSIGNED SCR entries; evidence identity resolution against existing SCR source bindings; duplicate ID/edge and self-edge checks; relation-specific cycle checks only for explicitly approved acyclic types.
-- `tools/scr-relationship-validator/tests/test_validate_scr_relationships.py`: 17 positive and negative regression cases for the initial contract; committed but not yet executed by a dedicated CI step.
+- `tools/scr-relationship-validator/tests/test_validate_scr_relationships.py`: 18 positive and negative regression cases for the initial contract; committed but not yet executed by a dedicated CI step.
 
 ### Governance behavior
 
@@ -237,7 +237,7 @@ The schema's `governance_status` field is record metadata only. It does not repr
 
 ### Current limitations and remaining gates
 
-- The validator and tests have been committed. Ruff lint and format checks passed on an earlier exact PR head; the latest governance-evidence hardening commit is awaiting a fresh CI result. The new relationship validator/test suite has not yet been executed by GitHub Actions; the existing SCR Registry Gate currently executes only the original SCR identity-registry suite.
+- The validator and tests have been committed. Ruff lint and format passed on code head `c2d6f2ab504fff942373fade2d7c766e39f239fa` (Run `41327325133`, Job `124909894165`). The existing SCR Registry Gate passed on the same code head (Run `41327324664`, Job `124909892943`); it did not execute the new relationship validator/tests. The relationship suite remains pending dedicated CI integration. The new relationship validator/test suite has not yet been executed by GitHub Actions; the existing SCR Registry Gate currently executes only the original SCR identity-registry suite.
 - The relationship validator is not yet integrated into the existing SCR Registry Gate; that is a separate CI integration phase.
 - No populated relationship edge is asserted.
 - Relation direction, inverse rules, cardinality, self-edge exceptions, cycle policy and authority thresholds remain governance decisions.
