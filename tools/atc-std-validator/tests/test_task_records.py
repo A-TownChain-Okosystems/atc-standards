@@ -40,8 +40,7 @@ class TaskRecordValidatorTests(unittest.TestCase):
 
     def test_valid_record_passes(self):
         with tempfile.TemporaryDirectory() as tmp:
-            path = self.write(Path(tmp),
-                "ATC-TASK-0161.yaml", VALID)
+            path = self.write(Path(tmp), "ATC-TASK-0161.yaml", VALID)
             self.assertEqual(validate_record(path), [])
 
     def test_noncanonical_id_fails(self):
@@ -77,7 +76,8 @@ class TaskRecordValidatorTests(unittest.TestCase):
     def test_history_must_end_in_current_status(self):
         with tempfile.TemporaryDirectory() as tmp:
             path = self.write(
-                Path(tmp), "ATC-TASK-0161.yaml",
+                Path(tmp),
+                "ATC-TASK-0161.yaml",
                 VALID.replace("status: IN_PROGRESS, timestamp:", "status: CREATED, timestamp:"),
             )
             self.assertTrue(any("last history status" in e for e in validate_record(path)))
