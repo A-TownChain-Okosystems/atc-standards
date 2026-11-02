@@ -135,7 +135,9 @@ def validate_record(path: Path) -> list[str]:
         for field in ("milestone", "standard"):
             value = reference.get(field)
             if value is not None and (not isinstance(value, str) or not value.strip()):
-                errors.append("%s: task_reference.%s must be a non-empty string or null" % (path, field))
+                errors.append(
+                    "%s: task_reference.%s must be a non-empty string or null" % (path, field)
+                )
 
     review = task.get("human_review")
     if isinstance(review, dict):
@@ -153,7 +155,9 @@ def validate_record(path: Path) -> list[str]:
     else:
         for index, finding_id in enumerate(findings):
             if not isinstance(finding_id, str) or not FINDING_ID_RE.fullmatch(finding_id):
-                errors.append("%s: findings[%d] must be a Finding ID matching F-NNN" % (path, index))
+                errors.append(
+                    "%s: findings[%d] must be a Finding ID matching F-NNN" % (path, index)
+                )
 
     actions = task.get("actions")
     if not isinstance(actions, list):
@@ -185,9 +189,14 @@ def validate_record(path: Path) -> list[str]:
         else:
             for index, dependency in enumerate(dependencies):
                 if not isinstance(dependency, str) or not ACTION_ID_RE.fullmatch(dependency):
-                    errors.append("%s: next_action.depends_on[%d] must match ACT-NNN" % (path, index))
+                    errors.append(
+                        "%s: next_action.depends_on[%d] must match ACT-NNN" % (path, index)
+                    )
                 elif isinstance(actions, list) and dependency not in action_ids:
-                    errors.append("%s: next_action dependency %r is not present in actions" % (path, dependency))
+                    errors.append(
+                        "%s: next_action dependency %r is not present in actions"
+                        % (path, dependency)
+                    )
 
     history = task.get("history")
     if not isinstance(history, list) or not history:
@@ -205,13 +214,19 @@ def validate_record(path: Path) -> list[str]:
                 history_valid = False
             timestamp = item.get("timestamp")
             if not isinstance(timestamp, str) or not timestamp.strip():
-                errors.append("%s: history[%d].timestamp must be a non-empty ISO-8601 timestamp" % (path, index))
+                errors.append(
+                    "%s: history[%d].timestamp must be a non-empty ISO-8601 timestamp"
+                    % (path, index)
+                )
                 history_valid = False
             else:
                 try:
                     dt.datetime.fromisoformat(timestamp.replace("Z", "+00:00"))
                 except ValueError:
-                    errors.append("%s: history[%d].timestamp must be a valid ISO-8601 timestamp" % (path, index))
+                    errors.append(
+                        "%s: history[%d].timestamp must be a valid ISO-8601 timestamp"
+                        % (path, index)
+                    )
                     history_valid = False
         if history_valid:
             statuses = [item["status"] for item in history]
@@ -224,7 +239,9 @@ def validate_record(path: Path) -> list[str]:
                         % (path, index, previous, current)
                     )
             if isinstance(status, str) and status in ALLOWED_STATUS and statuses[-1] != status:
-                errors.append("%s: last history status does not match task.status" % path)
+                errors.append(
+                    "%s: last history status does not match task.status" % path
+                )
 
 
     return errors
