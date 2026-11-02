@@ -95,10 +95,9 @@ jobs:
           import subprocess, re
           diff = subprocess.run(["git", "diff", "-U0", "--", "README.md", "AGENT_MANIFEST.md", "STATUS.md", "registry/registry.lock"], capture_output=True, text=True).stdout
           ts = re.compile(r"\d{4}-\d{2}-\d{2} \d{2}:\d{2}(?::\d{2})? UTC\+?2?")
-          state_id = re.compile(r"ATC-STATE-\d{8}-")
           sha = re.compile(r"[0-9a-f]{40}")
           lines = [l for l in diff.splitlines() if l.startswith(("+", "-")) and not l.startswith(("+++", "---"))]
-          norm = lambda s: sha.sub("SHA", state_id.sub("ATC-STATE-DATE-", ts.sub("TS", s)))
+          norm = lambda s: sha.sub("SHA", ts.sub("TS", s))
           plus = sorted(norm(l[1:]) for l in lines if l.startswith("+"))
           minus = sorted(norm(l[1:]) for l in lines if l.startswith("-"))
           if plus != minus:
