@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
 """Unit tests for validate_task_records.py."""
-import sys
+import importlib.util
 import tempfile
 import unittest
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from validate_task_records import validate_directory, validate_record
+MODULE_PATH = Path(__file__).resolve().parents[1] / "validate_task_records.py"
+MODULE_SPEC = importlib.util.spec_from_file_location("validate_task_records", MODULE_PATH)
+MODULE = importlib.util.module_from_spec(MODULE_SPEC)
+MODULE_SPEC.loader.exec_module(MODULE)
+validate_directory = MODULE.validate_directory
+validate_record = MODULE.validate_record
 
 
 VALID = """task:
