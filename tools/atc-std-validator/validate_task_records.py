@@ -239,9 +239,7 @@ def validate_record(path: Path) -> list[str]:
                         % (path, index, previous, current)
                     )
             if isinstance(status, str) and status in ALLOWED_STATUS and statuses[-1] != status:
-                errors.append(
-                    "%s: last history status does not match task.status" % path
-                )
+                errors.append("%s: last history status does not match task.status" % path)
 
     return errors
 
