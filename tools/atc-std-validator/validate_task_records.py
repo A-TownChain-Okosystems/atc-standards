@@ -159,8 +159,7 @@ def validate_record(path: Path) -> list[str]:
             errors.append("%s: next_action.id %r is not present in actions" % (path, next_id))
         dependencies = next_action.get("depends_on", [])
         if not isinstance(dependencies, list) or any(
-            not isinstance(item, str) or not ACTION_ID_RE.fullmatch(item)
-            for item in dependencies
+            not isinstance(item, str) or not ACTION_ID_RE.fullmatch(item) for item in dependencies
         ):
             errors.append("%s: next_action.depends_on must be a list of Action IDs" % path)
 
