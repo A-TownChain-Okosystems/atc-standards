@@ -1,0 +1,27 @@
+# Task Record — ATC-STD-AI-DEV-004 §1
+# Task-ID fortlaufend nach letztem dokumentierten Repo-Task ATC-TASK-0160 (AUD-013).
+task:
+  id: ATC-TASK-0161
+  title: "Implement strict Task Record validation in the standards CI"
+  created: "2026-11-02T01:00:00Z"
+  agent: {id: ATC-AI-ARCH-001, version: "1.1.0"}
+  task_reference: {issue: "#122", milestone: null, standard: "ATC-STD-AI-DEV-004"}
+  status: READY_FOR_REVIEW
+  findings: [F-122-01]
+  actions: [ACT-001, ACT-002, ACT-003, ACT-004]
+  assumptions: []
+  evidence:
+    - "AUD-013.yaml records ATC-TASK-0160 as the latest task in this repository."
+    - "Organization-wide search returned no ATC-TASK-0161 match at task creation time."
+  next_action: {id: ACT-004, priority: P1, depends_on: [ACT-001, ACT-002, ACT-003]}
+  human_review: {required: true, requested: true}
+  history:
+    - status: CREATED
+      timestamp: "2026-11-02T01:00:00Z"
+      note: "Task record created on a dedicated branch from main."
+    - status: IN_PROGRESS
+      timestamp: "2026-11-02T01:00:00Z"
+      note: "Validator implementation started; normative standard remains unchanged."
+    - status: READY_FOR_REVIEW
+      timestamp: "2026-11-02T01:17:00Z"
+      note: "E-6 Task Record Validation and E-7 unit tests passed in GitHub Actions; waiting for full CI completion and human review."
