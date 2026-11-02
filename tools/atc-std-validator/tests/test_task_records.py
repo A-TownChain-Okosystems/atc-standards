@@ -110,7 +110,6 @@ class TaskRecordValidatorTests(unittest.TestCase):
             )
             self.assertTrue(any("last history status" in e for e in validate_record(path)))
 
-
     def test_finding_ids_must_match_normative_format(self):
         with tempfile.TemporaryDirectory() as tmp:
             path = self.write(Path(tmp), "ATC-TASK-0161.yaml", VALID.replace("F-122-01", "F-12"))
