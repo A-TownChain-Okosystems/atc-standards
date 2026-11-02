@@ -118,39 +118,72 @@ class TaskRecordValidatorTests(unittest.TestCase):
 
     def test_next_action_dependency_must_exist_in_actions(self):
         with tempfile.TemporaryDirectory() as tmp:
-            path = self.write(Path(tmp), "ATC-TASK-0161.yaml", VALID.replace("depends_on: []", "depends_on: [ACT-099]"))
-            self.assertTrue(any("dependency" in e and "not present in actions" in e for e in validate_record(path)))
+            path = self.write(
+                Path(tmp),
+                "ATC-TASK-0161.yaml",
+                VALID.replace("depends_on: []", "depends_on: [ACT-099]"),
+            )
+            self.assertTrue(
+                any(
+                    "dependency" in e and "not present in actions" in e
+                    for e in validate_record(path)
+                )
+            )
 
     def test_next_action_id_must_exist_in_actions(self):
         with tempfile.TemporaryDirectory() as tmp:
-            path = self.write(Path(tmp), "ATC-TASK-0161.yaml", VALID.replace("id: ACT-001", "id: ACT-099"))
-            self.assertTrue(any("next_action.id" in e and "not present in actions" in e for e in validate_record(path)))
+            path = self.write(
+                Path(tmp), "ATC-TASK-0161.yaml", VALID.replace("id: ACT-001", "id: ACT-099")
+            )
+            self.assertTrue(
+                any(
+                    "next_action.id" in e and "not present in actions" in e
+                    for e in validate_record(path)
+                )
+            )
 
     def test_history_timestamp_is_required_and_valid(self):
         with tempfile.TemporaryDirectory() as tmp:
-            path = self.write(Path(tmp), "ATC-TASK-0161.yaml", VALID.replace('timestamp: "2026-11-02T01:00:00Z"', 'timestamp: "not-a-time"', 1))
+            path = self.write(
+                Path(tmp),
+                "ATC-TASK-0161.yaml",
+                VALID.replace('timestamp: "2026-11-02T01:00:00Z"', 'timestamp: "not-a-time"', 1),
+            )
             self.assertTrue(any("valid ISO-8601 timestamp" in e for e in validate_record(path)))
 
     def test_history_rejects_skipped_lifecycle_state(self):
         with tempfile.TemporaryDirectory() as tmp:
-            invalid = VALID.replace('    - {status: ASSIGNED, timestamp: "2026-11-02T01:00:30Z", note: "assigned"}\n', "")
+            invalid = VALID.replace(
+                '    - {status: ASSIGNED, timestamp: "2026-11-02T01:00:30Z", note: "assigned"}\n',
+                "",
+            )
             path = self.write(Path(tmp), "ATC-TASK-0161.yaml", invalid)
             self.assertTrue(any("invalid history transition" in e for e in validate_record(path)))
 
     def test_history_note_is_not_required(self):
         with tempfile.TemporaryDirectory() as tmp:
-            path = self.write(Path(tmp), "ATC-TASK-0161.yaml", VALID.replace(', note: "created"', ""))
+            path = self.write(
+                Path(tmp), "ATC-TASK-0161.yaml", VALID.replace(', note: "created"', "")
+            )
             self.assertEqual(validate_record(path), [])
 
     def test_task_reference_nullable_fields_accept_null(self):
         with tempfile.TemporaryDirectory() as tmp:
-            path = self.write(Path(tmp), "ATC-TASK-0161.yaml", VALID.replace('standard: "ATC-STD-AI-DEV-004"', "standard: null"))
+            path = self.write(
+                Path(tmp),
+                "ATC-TASK-0161.yaml",
+                VALID.replace('standard: "ATC-STD-AI-DEV-004"', "standard: null"),
+            )
             self.assertEqual(validate_record(path), [])
 
     def test_task_reference_rejects_empty_issue(self):
         with tempfile.TemporaryDirectory() as tmp:
-            path = self.write(Path(tmp), "ATC-TASK-0161.yaml", VALID.replace('issue: "#122"', 'issue: ""'))
-            self.assertTrue(any("issue must be a non-empty string" in e for e in validate_record(path)))
+            path = self.write(
+                Path(tmp), "ATC-TASK-0161.yaml", VALID.replace('issue: "#122"', 'issue: ""')
+            )
+            self.assertTrue(
+                any("issue must be a non-empty string" in e for e in validate_record(path))
+            )
 
     def test_missing_task_directory_fails_closed(self):
         with tempfile.TemporaryDirectory() as tmp:
