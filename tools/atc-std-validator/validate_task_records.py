@@ -5,6 +5,7 @@ The validator proves syntax, record/path identity, required fields, lifecycle
 state, and uniqueness inside this checkout. It does NOT claim organization-wide
 uniqueness: that requires an authoritative shared allocator/ledger.
 """
+
 from __future__ import annotations
 
 import argparse
@@ -12,18 +13,30 @@ import datetime as dt
 import re
 import sys
 from pathlib import Path
-from typing import Any
-
 import yaml
 
 TASK_ID_RE = re.compile(r"^ATC-TASK-[0-9]{4,}$")
 ALLOWED_STATUS = {
-    "CREATED", "ASSIGNED", "IN_PROGRESS", "BLOCKED",
-    "READY_FOR_REVIEW", "CHANGES_REQUESTED", "COMPLETED", "CANCELLED",
+    "CREATED",
+    "ASSIGNED",
+    "IN_PROGRESS",
+    "BLOCKED",
+    "READY_FOR_REVIEW",
+    "CHANGES_REQUESTED",
+    "COMPLETED",
+    "CANCELLED",
 }
 REQUIRED_FIELDS = {
-    "id", "title", "created", "agent", "task_reference", "status",
-    "findings", "actions", "next_action", "human_review",
+    "id",
+    "title",
+    "created",
+    "agent",
+    "task_reference",
+    "status",
+    "findings",
+    "actions",
+    "next_action",
+    "human_review",
 }
 
 
@@ -45,9 +58,7 @@ def _construct_mapping(loader: StrictTaskLoader, node: yaml.MappingNode, deep: b
     return mapping
 
 
-StrictTaskLoader.add_constructor(
-    yaml.resolver.BaseResolver.DEFAULT_MAPPING_TAG, _construct_mapping
-)
+StrictTaskLoader.add_constructor(yaml.resolver.BaseResolver.DEFAULT_MAPPING_TAG, _construct_mapping)
 
 
 def validate_record(path: Path) -> list[str]:
@@ -132,8 +143,9 @@ def validate_record(path: Path) -> list[str]:
     history = task.get("history")
     if not isinstance(history, list) or not history:
         errors.append("%s: history must be a non-empty list" % path)
-    elif any(not isinstance(item, dict) or item.get("status") not in ALLOWED_STATUS
-             for item in history):
+    elif any(
+        not isinstance(item, dict) or item.get("status") not in ALLOWED_STATUS for item in history
+    ):
         errors.append("%s: history contains an invalid status entry" % path)
     elif status in ALLOWED_STATUS and history[-1].get("status") != status:
         errors.append("%s: last history status does not match task.status" % path)
@@ -188,7 +200,9 @@ def main() -> int:
         return 1
     count = len(list(args.task_dir.glob("*.yaml")))
     print("TASK-RECORD RESULT: PASS (%d record(s); repository-local uniqueness only)" % count)
-    print("TASK-RECORD LIMITATION: organization-wide uniqueness is not proven without a shared allocator/ledger")
+    print(
+        "TASK-RECORD LIMITATION: organization-wide uniqueness is not proven without a shared allocator/ledger"
+    )
     return 0
 
 
