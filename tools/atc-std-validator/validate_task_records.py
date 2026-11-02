@@ -243,7 +243,6 @@ def validate_record(path: Path) -> list[str]:
                     "%s: last history status does not match task.status" % path
                 )
 
-
     return errors
 
 
