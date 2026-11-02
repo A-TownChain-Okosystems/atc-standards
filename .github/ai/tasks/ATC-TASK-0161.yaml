@@ -19,8 +19,11 @@ task:
     - status: CREATED
       timestamp: "2026-11-02T01:00:00Z"
       note: "Task record created on a dedicated branch from main."
+    - status: ASSIGNED
+      timestamp: "2026-11-02T01:00:30Z"
+      note: "Task assigned for implementation."
     - status: IN_PROGRESS
-      timestamp: "2026-11-02T01:00:00Z"
+      timestamp: "2026-11-02T01:01:00Z"
       note: "Validator implementation started; normative standard remains unchanged."
     - status: READY_FOR_REVIEW
       timestamp: "2026-11-02T01:17:00Z"
