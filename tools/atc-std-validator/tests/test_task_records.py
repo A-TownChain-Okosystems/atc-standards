@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Unit tests for validate_task_records.py."""
+
 import importlib.util
 import tempfile
 import unittest
@@ -39,13 +40,15 @@ class TaskRecordValidatorTests(unittest.TestCase):
 
     def test_valid_record_passes(self):
         with tempfile.TemporaryDirectory() as tmp:
-            path = self.write(Path(tmp), "ATC-TASK-0161.yaml", VALID)
+            path = self.write(Path(tmp),
+                "ATC-TASK-0161.yaml", VALID)
             self.assertEqual(validate_record(path), [])
 
     def test_noncanonical_id_fails(self):
         with tempfile.TemporaryDirectory() as tmp:
             path = self.write(
-                Path(tmp), "TASK-20261102-001.yaml",
+                Path(tmp),
+                "TASK-20261102-001.yaml",
                 VALID.replace("ATC-TASK-0161", "TASK-20261102-001"),
             )
             self.assertTrue(any("ATC-TASK-NNNN" in e for e in validate_record(path)))
