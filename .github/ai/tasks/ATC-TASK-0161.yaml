@@ -8,19 +8,7 @@ task:
   task_reference: {issue: "#122", milestone: null, standard: "ATC-STD-AI-DEV-004"}
   status: READY_FOR_REVIEW
   findings: [F-122-01]
-  actions:
-    - id: ACT-001
-      description: "Add strict parser and validator for repository Task Records."
-      status: COMPLETED
-    - id: ACT-002
-      description: "Add positive, negative, duplicate, and malformed-record tests."
-      status: COMPLETED
-    - id: ACT-003
-      description: "Integrate Task Record validation into validate_all.py and CI."
-      status: COMPLETED
-    - id: ACT-004
-      description: "Complete full CI review and obtain human approval before merge."
-      status: IN_PROGRESS
+  actions: [ACT-001, ACT-002, ACT-003, ACT-004]
   assumptions: []
   evidence:
     - "AUD-013.yaml records ATC-TASK-0160 as the latest task in this repository."
