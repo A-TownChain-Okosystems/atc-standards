@@ -60,7 +60,8 @@ class TaskRecordValidatorTests(unittest.TestCase):
     def test_duplicate_yaml_key_fails_closed(self):
         with tempfile.TemporaryDirectory() as tmp:
             path = self.write(
-                Path(tmp), "ATC-TASK-0161.yaml",
+                Path(tmp),
+                "ATC-TASK-0161.yaml",
                 VALID.replace("  status: IN_PROGRESS", "  status: CREATED\n  status: IN_PROGRESS"),
             )
             self.assertTrue(any("duplicate YAML key" in e for e in validate_record(path)))
