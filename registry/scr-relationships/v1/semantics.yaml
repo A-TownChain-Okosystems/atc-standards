@@ -1,0 +1,22 @@
+semantics_manifest_version: 1
+module: scr-relationship-registry
+status: NON_NORMATIVE
+governance_decision: null
+approved_relation_types: []
+acyclic_relation_types: []
+candidate_relation_types:
+  - token: DEPENDS_ON
+    proposed_interpretation: "A proposed dependency relation; direction and cycle policy require governance approval."
+    status: PROPOSED
+  - token: SUPERSEDES
+    proposed_interpretation: "A proposed supersession relation; direction and lifecycle implications require governance approval."
+    status: PROPOSED
+  - token: SPLIT_FROM
+    proposed_interpretation: "A proposed lineage relation for a split; cardinality and inverse rules require governance approval."
+    status: PROPOSED
+  - token: MERGED_INTO
+    proposed_interpretation: "A proposed lineage relation for consolidation; cardinality and inverse rules require governance approval."
+    status: PROPOSED
+  - token: RELATED_TO
+    proposed_interpretation: "A proposed general association; symmetry and cycle policy require governance approval."
+    status: PROPOSED

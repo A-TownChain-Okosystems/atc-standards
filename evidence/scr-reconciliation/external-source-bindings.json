@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "repository": "A-TownChain-Okosystems/atc-standards",
+  "description": "Pinned external historical source paths and Git blob object IDs for SCR-0133, SCR-0134 and SCR-0139. Verification is performed by verify_external_sources.py.",
+  "sources": [
+    {
+      "scr_id": "SCR-0133",
+      "repository": "A-TownChain-Okosystems/aurora-ai",
+      "commit": "15f328faf735d2a4d9abd3b0fec547fa14897335",
+      "path": "modules/atc-aistudio/package-lock.json",
+      "blob_sha": "1d1ac89ad09a59b970289b800a16449ff53426db"
+    },
+    {
+      "scr_id": "SCR-0133",
+      "repository": "A-TownChain-Okosystems/aurora-ai",
+      "commit": "15f328faf735d2a4d9abd3b0fec547fa14897335",
+      "path": "modules/atc-aistudio/package.json",
+      "blob_sha": "926885560c104f997637980fc416b5ae568c4a93"
+    },
+    {
+      "scr_id": "SCR-0133",
+      "repository": "A-TownChain-Okosystems/a-townchain-os-docs",
+      "commit": "8acd969e0467a3d770595c2946573cff7ca0e6ea",
+      "path": "docs/wiki/kai-os/code/backend/requirements.txt",
+      "blob_sha": "5e689580fbb69a53fe7a814f2032b1f0042ebbde"
+    },
+    {
+      "scr_id": "SCR-0133",
+      "repository": "A-TownChain-Okosystems/a-townchain-ecosystem",
+      "commit": "ecdba9ec478737d4f7b25e80c8ed7c31d96d7a83",
+      "path": "components/indexer/modules/atc-analytics/package.json",
+      "blob_sha": "41e71937dd967368ac728958373a588d0874ecb7"
+    },
+    {
+      "scr_id": "SCR-0133",
+      "repository": "A-TownChain-Okosystems/a-townchain-os-docs",
+      "commit": "68478c45bf3a2d555f4c6a5d9c06e5c3bbd1e8fe",
+      "path": "aistudio/package-lock.json",
+      "blob_sha": "a495456df5cb3f648e8c7e40ae875b330abbc3fc"
+    },
+    {
+      "scr_id": "SCR-0133",
+      "repository": "A-TownChain-Okosystems/a-townchain-os-docs",
+      "commit": "68478c45bf3a2d555f4c6a5d9c06e5c3bbd1e8fe",
+      "path": "aistudio/package.json",
+      "blob_sha": "ba5ee9012d04d02764d869cfbb18ca2a535f7b62"
+    },
+    {
+      "scr_id": "SCR-0133",
+      "repository": "A-TownChain-Okosystems/a-townchain-os-docs",
+      "commit": "68478c45bf3a2d555f4c6a5d9c06e5c3bbd1e8fe",
+      "path": "docs/wiki/kai-os/code/backend/requirements.txt",
+      "blob_sha": "72e305008ae9eb7a680691da0fc16f2a8a7cead8"
+    },
+    {
+      "scr_id": "SCR-0134",
+      "repository": "A-TownChain-Okosystems/a-townchain-os-docs",
+      "commit": "ae2fea101b5d2ccb6a5fa6fcb00f3b6f52004953",
+      "path": "docs/audits/FILE-CENSUS-2026-10-09.md",
+      "blob_sha": "dc40fcc88734a2f7b3ec957f25d8a44e4de2c4bf"
+    },
+    {
+      "scr_id": "SCR-0134",
+      "repository": "A-TownChain-Okosystems/atc-zkp",
+      "commit": "9771ffed3ac5b3761c4d81e9c4d63cd4d2070108",
+      "path": "crates/zkp-circuits/src/lib.rs",
+      "blob_sha": "a0217bb0b1d7b48bafa9ec66313ddb154e889a13"
+    },
+    {
+      "scr_id": "SCR-0134",
+      "repository": "A-TownChain-Okosystems/atc-zkp",
+      "commit": "9771ffed3ac5b3761c4d81e9c4d63cd4d2070108",
+      "path": "crates/zkp-core/src/lib.rs",
+      "blob_sha": "72d4f03360ba082bbd86deb5a0d81b4c71c712c6"
+    },
+    {
+      "scr_id": "SCR-0134",
+      "repository": "A-TownChain-Okosystems/atc-zkp",
+      "commit": "9771ffed3ac5b3761c4d81e9c4d63cd4d2070108",
+      "path": "crates/zkp-crypto/src/lib.rs",
+      "blob_sha": "995143b8d904a054d2690512feedc78182d6db85"
+    },
+    {
+      "scr_id": "SCR-0134",
+      "repository": "A-TownChain-Okosystems/atc-zkp",
+      "commit": "9771ffed3ac5b3761c4d81e9c4d63cd4d2070108",
+      "path": "crates/zkp-prover/src/lib.rs",
+      "blob_sha": "6e7f9ceef4697a631c048648e8219419be37fc77"
+    },
+    {
+      "scr_id": "SCR-0134",
+      "repository": "A-TownChain-Okosystems/atc-zkp",
+      "commit": "9771ffed3ac5b3761c4d81e9c4d63cd4d2070108",
+      "path": "crates/zkp-verifier/src/lib.rs",
+      "blob_sha": "52415c9fffc2787169b5b379f029ae74b864f252"
+    },
+    {
+      "scr_id": "SCR-0134",
+      "repository": "A-TownChain-Okosystems/atc-zkp",
+      "commit": "9771ffed3ac5b3761c4d81e9c4d63cd4d2070108",
+      "path": "crates/zkp-vm/src/lib.rs",
+      "blob_sha": "7bafe3cc3c061ae79b07d32537811d5752f137b4"
+    },
+    {
+      "scr_id": "SCR-0139",
+      "repository": "A-TownChain-Okosystems/.github",
+      "commit": "750d920292149d16f327d8e33260d727599d873a",
+      "path": "ai/automation-authority.yaml",
+      "blob_sha": "157704b5079df2b38381a8ea57873782da83446c"
+    }
+  ]
+}
