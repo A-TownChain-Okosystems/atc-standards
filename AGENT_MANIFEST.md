@@ -1,5 +1,5 @@
 # AGENT_MANIFEST.md
-> **Registry-Stand (GENERIERT aus `registry/standards.yaml`):** 505 Standards — 505 APPROVED · 0 CANDIDATE · 75 Familien · Stand 2026-09-23 11:26 UTC+2 · SHA-256 `0c43cf79dc5f…`
+> **Registry-Stand (GENERIERT aus `registry/standards.yaml`):** 533 Standards — 506 APPROVED · 27 CANDIDATE · 76 Familien · Stand 2026-10-09 00:17 UTC+2 · SHA-256 `ca5c3b445fc4…`
 
 > **Generated-state declaration:** This manifest is a governance pointer, not a second standards registry. The authoritative standards SSOT is `registry/standards.yaml`; implementation status is authoritative in `registry/standard-implementation.yaml`.
 >
