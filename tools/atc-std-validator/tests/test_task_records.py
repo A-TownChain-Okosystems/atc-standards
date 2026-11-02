@@ -22,8 +22,7 @@ VALID = """task:
   task_reference: {issue: "#122", milestone: null, standard: "ATC-STD-AI-DEV-004"}
   status: IN_PROGRESS
   findings: [F-122-01]
-  actions:
-    - {id: ACT-001, description: "Implement validator"}
+  actions: [ACT-001, ACT-002]
   next_action: {id: ACT-001, priority: P1, depends_on: []}
   human_review: {required: true, requested: false}
   history:
@@ -38,7 +37,7 @@ class TaskRecordValidatorTests(unittest.TestCase):
         path.write_text(content, encoding="utf-8")
         return path
 
-    def test_valid_record_passes(self):
+    def test_normative_action_id_list_passes(self):
         with tempfile.TemporaryDirectory() as tmp:
             path = self.write(Path(tmp), "ATC-TASK-0161.yaml", VALID)
             self.assertEqual(validate_record(path), [])
@@ -66,7 +65,34 @@ class TaskRecordValidatorTests(unittest.TestCase):
             )
             self.assertTrue(any("duplicate YAML key" in e for e in validate_record(path)))
 
-    def test_duplicate_ids_in_directory_fail(self):
+    def test_duplicate_action_ids_fail(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = self.write(
+                Path(tmp),
+                "ATC-TASK-0161.yaml",
+                VALID.replace("actions: [ACT-001, ACT-002]", "actions: [ACT-001, ACT-001]"),
+            )
+            self.assertTrue(any("duplicate action IDs" in e for e in validate_record(path)))
+
+    def test_action_object_shape_is_rejected(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = self.write(
+                Path(tmp),
+                "ATC-TASK-0161.yaml",
+                VALID.replace("actions: [ACT-001, ACT-002]", "actions: [{id: ACT-001}]"),
+            )
+            self.assertTrue(any("Action ID matching ACT-NNN" in e for e in validate_record(path)))
+
+    def test_unhashable_status_fails_closed(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = self.write(
+                Path(tmp),
+                "ATC-TASK-0161.yaml",
+                VALID.replace("status: IN_PROGRESS", "status: [IN_PROGRESS]"),
+            )
+            self.assertTrue(any("unsupported task status" in e for e in validate_record(path)))
+
+    def test_filename_mismatch_directory_duplicate_detection(self):
         with tempfile.TemporaryDirectory() as tmp:
             directory = Path(tmp)
             self.write(directory, "ATC-TASK-0161.yaml", VALID)
