@@ -331,10 +331,12 @@ def advisory_matches(n, ad):
     return False, "none"
 
 
+# Kein exponentielles Backtracking: die Versions-Atome schliessen das Komma aus,
+# der Separator ist eindeutig (CodeQL py/redos).
 _EXPECTED_BASE_UNPINNED_RE = re.compile(
     r"^.+requirements(?:-[^/]+)?\.txt:\d+: "
     r"unpinned/unsupported requirement: "
-    r"[A-Za-z0-9_.-]+(?:[<>=!~]=?[^;\s]+(?:,[<>=!~]=?[^;\s]+)*)?$"
+    r"[A-Za-z0-9_.-]+(?:[<>=!~]=?[^;,\s]+(?:,[<>=!~]=?[^;,\s]+)*)?$"
 )
 
 
