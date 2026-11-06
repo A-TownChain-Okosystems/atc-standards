@@ -32,6 +32,10 @@ jobs:
       - name: Determinism-Checker Regressionstests (SCR-0131, W2-MECH-01)
         run: |
           python3 tools/tests/test_determinism_check.py
+      - name: CI-Dependency-Governance (ATC-STD-CI-001)
+        run: |
+          python3 tools/atc-std-validator/tests/test_ci_dependency_governance.py
+
       - name: Evidence-Bindung (SCR-0086 idempotentes test_run-Update je Lauf + hartes Push-Gate)
         if: success()
         env:
