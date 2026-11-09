@@ -13,9 +13,9 @@ identity_authority:
       status: CURRENT
       source: "Current owner authority; authoritative governance identity"
     reviewer:
-      name: "Alexander Wroblewski"
+      name: "Michael Wroblewski"
       status: CURRENT
-      source: "Current review authority; authoritative governance review role"
+      source: "Current reviewer authority; same GitHub account A-TownChain as owner"
     approver:
       name: "Michael Wroblewski"
       status: CURRENT
