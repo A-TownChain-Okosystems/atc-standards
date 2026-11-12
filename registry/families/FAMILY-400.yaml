@@ -11,6 +11,28 @@ wiring:
   fam: FAM-77
   range: "ATC-STD-400..499"
   new_allocation_range: "ATC-STD-411..419"
+allocation_window:
+  normative_basis: "ATC-STD-002 §2 (Vergabe/Pruefung), §3 (Grandfathering), §3 Regel 7 (keine Umnummerierung)"
+  pre_reserved:
+    - id: ATC-STD-410
+      status: reserved
+      reason: >-
+        Erste Security-ID der Familie, am 12.11.2026 vor der Familienverkabelung
+        reserviert (Owner-Entscheidung). Sie liegt deshalb vor dem neuen
+        Vergabefenster und bleibt zulaessig; ATC-STD-002 §3 Regel 7 schliesst eine
+        Umnummerierung aus. Eine solche Reservierung ist keine Ausnahme nach §3,
+        sondern Bestand der Familie.
+  new_allocation:
+    range: "ATC-STD-411..419"
+    rule: >-
+      Neue Security-Standards ausschliesslich hier, nach den regulaeren Vergabe-
+      und Pruefregeln (ATC-STD-002 §2). Die Behandlung grandfatherter Ausnahmen ist
+      kein Praezedenzfall fuer andere Kategorien; eine Ausnahme entsteht nur durch
+      Beschluss und mit Eintrag in registry/allocation/family-exceptions.yaml.
+  closed_ranges:
+    note: >-
+      420-499 sind historisch belegt (FAM-25 bis FAM-28) und nach §3 grandfathert;
+      dort werden keine neuen Security-IDs vergeben, solange diese Slots belegt sind.
 grandfathered_exceptions:
   list_ref: registry/allocation/family-exceptions.yaml
   count: 51
