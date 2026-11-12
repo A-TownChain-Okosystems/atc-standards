@@ -4,7 +4,7 @@ categories:
   100:   {name: architecture,   range: "ATC-STD-100–199",    description: "Architektur-Standards"}
   200:   {name: repository,     range: "ATC-STD-200–299",    description: "Repository & Git"}
   300:   {name: development,    range: "ATC-STD-300–399",    description: "Development / Coding"}
-  400:   {name: security,       range: "ATC-STD-400–499",    description: "Security"}
+  400:   {name: security,       range: "ATC-STD-400–499",    fam: FAM-77, description: "Security (Familien-Range 400-499 mit grandfatherten Ausnahmen, s. registry/allocation/family-exceptions.yaml)"}
   500:   {name: protocol,       range: "ATC-STD-500–599",    description: "Protocol"}
   600:   {name: blockchain,     range: "ATC-STD-600–699",    description: "Blockchain"}
   700:   {name: ai,             range: "ATC-STD-700–799",    description: "AI"}
