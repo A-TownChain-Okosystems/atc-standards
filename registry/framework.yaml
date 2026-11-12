@@ -4211,3 +4211,23 @@ framework:
       status: BELEGT
       refs:
       - ATC-AURORA-SWARM-001
+
+  - id: FAM-77
+    name: "SECURITY (Familie 400)"
+    range: ATC-STD-400..499
+    note: 'Owner-Entscheidung 12.11.2026 (Option B): ATC-STD-002 §1 bleibt unveraendert — 400-499 ist die SECURITY-Familie. Die historisch anders belegten Nummernkreise (FAM-24, FAM-25, FAM-26, FAM-27, FAM-28) sind nach §3 grandfatherte Ausnahmen; die Bestandsliste steht vollstaendig und einzeln in registry/allocation/family-exceptions.yaml. Neue Security-Standards nur in ATC-STD-411..419. Keine Umnummerierung, keine Kategorieaenderung.'
+    family_refs:
+    - ATC-STD-000
+    - ATC-STD-002
+    grandfathering:
+      normative_ref: "ATC-STD-002 §3"
+      exceptions_ref: registry/allocation/family-exceptions.yaml
+      exceptions_count: 51
+      historical_fams:
+      - FAM-24
+      - FAM-25
+      - FAM-26
+      - FAM-27
+      - FAM-28
+    new_allocation_range: ATC-STD-411..419
+    slots: []
