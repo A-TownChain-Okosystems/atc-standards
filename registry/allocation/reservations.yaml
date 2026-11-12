@@ -23,9 +23,9 @@ reservations:
     source: registry/framework.yaml
 standard_reservations:
   # Reservierte Standard-IDs ohne Standarddatei (ATC-STD-002 §2 Regel 9).
-  # Familien-Verkabelung ist offen: im Framework existiert kein FAM-Range, der
-  # eine Security-Familie im 4xx-Bereich abbildet (Befund ALLOC-12, siehe
-  # a-townchain docs/audits/GOVERNANCE-FINDING-FAMILY-400-2026-11-12.md).
+  # Sie stehen bewusst NICHT in registry/standards.yaml: dort stehen Standards mit
+  # Dokument (S-18a), und ATC-STD-000 kennt keinen Lifecycle-Stand `reserved`.
+  # Familien-Verkabelung: FAM-77 (SECURITY, 400-499) — Option B, Owner 12.11.2026.
   - id: ATC-STD-410
     title: "Zero Trust Code Admission & Execution Control"
     family_normative: 400     # ATC-STD-002 §1 + registry/families/FAMILY-400.yaml
@@ -35,7 +35,8 @@ standard_reservations:
     normative: false
     predecessor: ATC-SEC-EXEC-001
     content_location: "a-townchain standards/atc/candidates/ATC-STD-410-CANDIDATE.md"
-    family_wiring: OPEN
+    family_wiring: FAM-77     # geschlossen 12.11.2026 (Option B)
+    allocation_window: "ATC-STD-410..419 (410 vorbelegt, 411-419 frei)"
     source: "Owner-Entscheidung 12.11.2026"
 
 candidate_family_reservations: []  # Familien-Reservierung nur via SCR (z.B. 'Software Build, Integration & Release' — aktuell BLOCKED, siehe conflicts.yaml P1-A5)
