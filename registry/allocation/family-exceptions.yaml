@@ -1,0 +1,342 @@
+# Grandfathering der Familie 400 (SECURITY) — Bestandsliste
+#
+# Owner-Entscheidung 12.11.2026: **Option B**. ATC-STD-002 §1 bleibt unveraendert:
+# 400-499 ist die SECURITY-Familie. Die historisch anders belegten Nummernkreise
+# werden nach ATC-STD-002 §3 ausdruecklich als grandfatherte Ausnahmen gefuehrt,
+# einzeln und vollstaendig. Es gibt keine pauschale Ausnahme.
+#
+# Regeln
+#  1. Keine Ausnahme ohne Bestandsliste: jede Ausnahme steht hier einzeln.
+#  2. Ausnahmen sind Bestandsschutz, kein Praezedenzfall. Neue Standards in
+#     400-499 sind SECURITY; neue Allokationen sind in ATC-STD-411..419 frei.
+#  3. Die Kategorie einer Ausnahme bleibt unveraendert (applications,
+#     development, infrastructure). Das Grandfathering betrifft nur die
+#     Familienzuordnung, nie die ID und nie die Kategorie.
+#  4. Keine bestehende ID wird umnummeriert (ATC-STD-002 §3, Regel 7).
+#  5. Aenderungen brauchen einen Beschluss, keine stille Pflege; der Pruefer
+#     ALLOC-13 vergleicht diese Liste mit der Registry.
+#
+# Geprueft durch: tools/allocation-validator/atc_allocation_validator.py (ALLOC-13)
+
+family: 400
+family_name: "SECURITY"
+range: "ATC-STD-400-499"
+normative_ref: "ATC-STD-002 §1 (Familie), §3 (Grandfathering)"
+owner_decision: "Owner-Entscheidung 12.11.2026: Option B"
+fams_historical:
+  - {id: FAM-24, name: "NFT / Marketplace", range: "ATC-STD-400..409"}
+  - {id: FAM-25, name: "GameFi / Shivamon", range: "ATC-STD-420..434"}
+  - {id: FAM-26, name: "API Standards", range: "ATC-STD-440..450"}
+  - {id: FAM-27, name: "Datenstandards", range: "ATC-STD-460..469"}
+  - {id: FAM-28, name: "Observability", range: "ATC-STD-480..488"}
+new_allocation:
+  range: "ATC-STD-411..419"
+  rule: "Neue Security-Standards nur hier, nach ATC-STD-002 §2 (Vergabe- und Pruefregeln)"
+  note: "Die Ausnahmebehandlung ist kein Praezedenzfall fuer andere Kategorien."
+exceptions:
+  - id: ATC-STD-400
+    category: applications
+    historical_family: FAM-24
+    historical_family_name: "NFT / Marketplace"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-401
+    category: applications
+    historical_family: FAM-24
+    historical_family_name: "NFT / Marketplace"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-402
+    category: applications
+    historical_family: FAM-24
+    historical_family_name: "NFT / Marketplace"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-403
+    category: applications
+    historical_family: FAM-24
+    historical_family_name: "NFT / Marketplace"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-404
+    category: applications
+    historical_family: FAM-24
+    historical_family_name: "NFT / Marketplace"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-405
+    category: applications
+    historical_family: FAM-24
+    historical_family_name: "NFT / Marketplace"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-406
+    category: applications
+    historical_family: FAM-24
+    historical_family_name: "NFT / Marketplace"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-407
+    category: applications
+    historical_family: FAM-24
+    historical_family_name: "NFT / Marketplace"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-408
+    category: applications
+    historical_family: FAM-24
+    historical_family_name: "NFT / Marketplace"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-409
+    category: applications
+    historical_family: FAM-24
+    historical_family_name: "NFT / Marketplace"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-420
+    category: applications
+    historical_family: FAM-25
+    historical_family_name: "GameFi / Shivamon"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-421
+    category: applications
+    historical_family: FAM-25
+    historical_family_name: "GameFi / Shivamon"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-422
+    category: applications
+    historical_family: FAM-25
+    historical_family_name: "GameFi / Shivamon"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-423
+    category: applications
+    historical_family: FAM-25
+    historical_family_name: "GameFi / Shivamon"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-424
+    category: applications
+    historical_family: FAM-25
+    historical_family_name: "GameFi / Shivamon"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-425
+    category: applications
+    historical_family: FAM-25
+    historical_family_name: "GameFi / Shivamon"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-426
+    category: applications
+    historical_family: FAM-25
+    historical_family_name: "GameFi / Shivamon"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-427
+    category: applications
+    historical_family: FAM-25
+    historical_family_name: "GameFi / Shivamon"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-428
+    category: applications
+    historical_family: FAM-25
+    historical_family_name: "GameFi / Shivamon"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-429
+    category: applications
+    historical_family: FAM-25
+    historical_family_name: "GameFi / Shivamon"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-430
+    category: applications
+    historical_family: FAM-25
+    historical_family_name: "GameFi / Shivamon"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-431
+    category: applications
+    historical_family: FAM-25
+    historical_family_name: "GameFi / Shivamon"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-432
+    category: applications
+    historical_family: FAM-25
+    historical_family_name: "GameFi / Shivamon"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-433
+    category: applications
+    historical_family: FAM-25
+    historical_family_name: "GameFi / Shivamon"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-434
+    category: applications
+    historical_family: FAM-25
+    historical_family_name: "GameFi / Shivamon"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-440
+    category: development
+    historical_family: FAM-26
+    historical_family_name: "API Standards"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-441
+    category: development
+    historical_family: FAM-26
+    historical_family_name: "API Standards"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-442
+    category: development
+    historical_family: FAM-26
+    historical_family_name: "API Standards"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-443
+    category: development
+    historical_family: FAM-26
+    historical_family_name: "API Standards"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-444
+    category: development
+    historical_family: FAM-26
+    historical_family_name: "API Standards"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-445
+    category: development
+    historical_family: FAM-26
+    historical_family_name: "API Standards"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-447
+    category: development
+    historical_family: FAM-26
+    historical_family_name: "API Standards"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-448
+    category: development
+    historical_family: FAM-26
+    historical_family_name: "API Standards"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-449
+    category: development
+    historical_family: FAM-26
+    historical_family_name: "API Standards"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-450
+    category: development
+    historical_family: FAM-26
+    historical_family_name: "API Standards"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-460
+    category: development
+    historical_family: FAM-27
+    historical_family_name: "Datenstandards"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-461
+    category: development
+    historical_family: FAM-27
+    historical_family_name: "Datenstandards"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-462
+    category: development
+    historical_family: FAM-27
+    historical_family_name: "Datenstandards"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-463
+    category: development
+    historical_family: FAM-27
+    historical_family_name: "Datenstandards"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-466
+    category: development
+    historical_family: FAM-27
+    historical_family_name: "Datenstandards"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-467
+    category: development
+    historical_family: FAM-27
+    historical_family_name: "Datenstandards"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-468
+    category: development
+    historical_family: FAM-27
+    historical_family_name: "Datenstandards"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-469
+    category: development
+    historical_family: FAM-27
+    historical_family_name: "Datenstandards"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-480
+    category: infrastructure
+    historical_family: FAM-28
+    historical_family_name: "Observability"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-481
+    category: infrastructure
+    historical_family: FAM-28
+    historical_family_name: "Observability"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-482
+    category: infrastructure
+    historical_family: FAM-28
+    historical_family_name: "Observability"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-483
+    category: infrastructure
+    historical_family: FAM-28
+    historical_family_name: "Observability"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-484
+    category: infrastructure
+    historical_family: FAM-28
+    historical_family_name: "Observability"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-485
+    category: infrastructure
+    historical_family: FAM-28
+    historical_family_name: "Observability"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-486
+    category: infrastructure
+    historical_family: FAM-28
+    historical_family_name: "Observability"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
+  - id: ATC-STD-488
+    category: infrastructure
+    historical_family: FAM-28
+    historical_family_name: "Observability"
+    basis: "ATC-STD-002 §3 (Bestandsschutz)"
+    status: GRANDFATHERED
