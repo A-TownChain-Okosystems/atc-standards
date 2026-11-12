@@ -8,7 +8,7 @@
 ```yaml
 state:
   id: ATC-STATE-20261112-58a05535
-  generated_at: "2026-11-12 15:27 UTC+2"
+  generated_at: "2026-11-12 15:42 UTC+2"
   registry_version: "1.1.0"
   registry_sha256: "58a05535289053fc97d21256386e8f4ac8ef5441353558b76514f2cf418ce84e"
   standards_total: 534
@@ -16,7 +16,7 @@ state:
   standards_candidate: 27
   standards_other: 1
   standard_files: registry-derived
-  families: 76
+  families: 77
 ```
 
 **Diese Zahlen sind die EINZIG maschinenverbindliche Auskunft** (ATC-STD-003 §2 Ein-Zahl-Regel).
@@ -39,14 +39,14 @@ ATC Standards is the canonical normative governance layer of the A-TownChain eco
 - **Registry:** SSOT für alle 534 Standards mit Versionierung, Dependencies (DAG) und Findings
 - **Verfassung:** ATC-STD-000 v1.3.0, APPROVED
 - **Validator-Suite:** atc-std-validator, atc-repo-audit, atc-readme-validator
-- **Governance Framework:** 76 Familien
+- **Governance Framework:** 77 Familien
 - **Governance-Determinismus:** ATC-STD-003 (SSOT-Matrix, State-ID, Ein-Zahl-Regel)
 
 **Organisationsbestand:** registry-derived Repository-Einträge im Repository-Registry-SSOT. Governance-Status und Ausnahmen werden ausschließlich aus `registry/repositories.yaml` bzw. den daraus generierten Compliance-Views abgeleitet.
 
 ## Scope
 
-Governance-Root der A-TownChain-Organisation: Registry, Standards, Schemata, Validatoren, Audits und Change-Requests. In Scope: normative Standards (registry-derived Dateien, 76 Familien) und ihre Metadaten/Validierung. Out of Scope: Implementierung der Standards in den Repository-Einträgen der Organisation und deren CI-Gates.
+Governance-Root der A-TownChain-Organisation: Registry, Standards, Schemata, Validatoren, Audits und Change-Requests. In Scope: normative Standards (registry-derived Dateien, 77 Familien) und ihre Metadaten/Validierung. Out of Scope: Implementierung der Standards in den Repository-Einträgen der Organisation und deren CI-Gates.
 
 ## Features
 
@@ -60,7 +60,7 @@ Governance-Root der A-TownChain-Organisation: Registry, Standards, Schemata, Val
 
 ### Core Components
 - `registry/` — SSOT
-- `standards/` — registry-derived Standard-Dateien in 76 Familien
+- `standards/` — registry-derived Standard-Dateien in 77 Familien
 - `profiles/` — registry-derived verbindliche Standards-Profile je Repository
 - `schemas/` — JSON/YAML-Schemata
 - `tools/` — Validators, Auditors, Generators
