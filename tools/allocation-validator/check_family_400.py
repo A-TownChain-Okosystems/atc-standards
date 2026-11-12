@@ -10,9 +10,11 @@ gruener Einzeltest fuer ATC-STD-410 waere kein Nachweis.
              eindeutig und deckungsgleich mit der Registry: genau die 4xx-
              Standards mit Kategorie != security, je mit derselben Kategorie,
              keine Doppelung, keine Ausnahme fuer einen Security-Standard.
-  ALLOC-14   Security-Standards im 4xx liegen ausschliesslich im freien
-             Allokationsbereich ATC-STD-411..419; die Ausnahmebehandlung wird
-             nicht auf andere Kategorien ausgedehnt.
+  ALLOC-14   Security-IDs liegen ausschliesslich im Allokationsfenster, das
+             FAMILY-400.yaml **normativ** festlegt: vorbelegte Reservierung plus
+             neues Vergabefenster. Der Pruefer bringt kein eigenes Fenster mit;
+             fehlt die normative Angabe, ist das Gate FAIL (fail-closed).
+             Die Ausnahmebehandlung wird nicht auf andere Kategorien ausgedehnt.
   ALLOC-15   Die normative Definition, das Familienregister und die
              Kategorien-Verkabelung zeigen dieselbe Zuordnung.
 
@@ -31,6 +33,7 @@ REGISTRY = os.path.join(ROOT, "registry", "standards.yaml")
 FRAMEWORK = os.path.join(ROOT, "registry", "framework.yaml")
 CATEGORIES = os.path.join(ROOT, "registry", "categories.yaml")
 FAMILY = os.path.join(ROOT, "registry", "families", "FAMILY-400.yaml")
+RESERVATIONS = os.path.join(ROOT, "registry", "allocation", "reservations.yaml")
 EXCEPTIONS = os.path.join(ROOT, "registry", "allocation", "family-exceptions.yaml")
 
 ID = re.compile(r"ATC-STD-4\d\d")
@@ -43,13 +46,38 @@ def main() -> int:
     cats = yaml.safe_load(open(CATEGORIES, encoding="utf-8")) or {}
     fam_def = yaml.safe_load(open(FAMILY, encoding="utf-8")) or {}
     exc_doc = yaml.safe_load(open(EXCEPTIONS, encoding="utf-8")) or {}
+    resv = yaml.safe_load(open(RESERVATIONS, encoding="utf-8")) or {}
 
     std = {s["id"]: s for s in reg.get("standards", []) if ID.fullmatch(s.get("id", ""))}
     security = {i: s for i, s in std.items() if s.get("category") == "security"}
     other = {i: s for i, s in std.items() if s.get("category") != "security"}
+
+    # Reservierte Security-IDs stehen bewusst nicht in der Registry (kein Dokument,
+    # ATC-STD-000 kennt keinen Lifecycle-Stand `reserved`), sondern im
+    # Reservierungsregister. Sie zaehlen zum Bestand der Familie.
+    window = ((fam_def.get("allocation_window") or {}).get("new_allocation") or {}).get("range", "")
+    pre_reserved = [
+        str(x.get("id")) for x in ((fam_def.get("allocation_window") or {}).get("pre_reserved") or [])
+    ]
+    resv_ids = {
+        str(x.get("id"))
+        for x in (resv.get("standard_reservations") or [])
+        if ID.fullmatch(str(x.get("id", ""))) and x.get("category") == "security"
+    }
+    if not pre_reserved:
+        fails.append("ALLOC-14 FAMILY-400.yaml nennt keine vorbelegte Reservierung (normative Angabe fehlt)")
+    for pid in pre_reserved:
+        if pid not in resv_ids:
+            fails.append(f"ALLOC-14 {pid} ist in FAMILY-400 vorbelegt, fehlt aber in reservations.yaml")
+        if pid in std:
+            fails.append(f"ALLOC-14 {pid} ist Reservierung, steht aber zusaetzlich in standards.yaml")
+    for rid in sorted(resv_ids - set(pre_reserved)):
+        fails.append(f"ALLOC-14 {rid} ist security-reserviert, aber nicht in FAMILY-400 vorbelegt")
+    total = len(std) + len(pre_reserved)
     print(
-        f"Familie 400 Bestand: {len(std)} Standards "
-        f"({len(security)} security, {len(other)} grandfatherte Ausnahmen)"
+        f"Familie 400 Bestand: {total} Slots = {len(std)} Standards "
+        f"({len(security)} security, {len(other)} grandfatherte Ausnahmen) + "
+        f"{len(pre_reserved)} Reservierung(en)"
     )
 
     # ALLOC-12f — Familien-Range deckt den gesamten 4xx-Bestand
@@ -97,20 +125,28 @@ def main() -> int:
     if not missing and not extra:
         print(f"ALLOC-13 Bestandsliste: {len(ids)} Ausnahmen, vollstaendig und deckungsgleich")
 
-    # ALLOC-14 — neue Security-Standards nur in 411..419.
-    # ATC-STD-410 ist die bereits reservierte erste Security-ID (Owner-Entscheidung
-    # 12.11.2026). Sie bleibt zulaessig; umnummeriert wird nicht. Der Bereich
-    # 411-419 ist der freie Raum fuer alles Neue.
-    allowed = range(410, 420)
-    for sid in sorted(security):
+    # ALLOC-14 — Allokationsfenster kommt aus FAMILY-400.yaml (normativ), nicht
+    # aus diesem Pruefer. Vorbelegte Reservierung + neues Vergabefenster.
+    allowed = set()
+    m = re.fullmatch(r"ATC-STD-(4\d\d)\.\.(?:ATC-STD-)?(4\d\d)", window or "")
+    if not m:
+        fails.append(f"ALLOC-14 FAMILY-400.yaml new_allocation.range fehlt oder ist unlesbar ('{window}')")
+    else:
+        allowed = set(range(int(m.group(1)), int(m.group(2)) + 1))
+    allowed |= {int(p.split("-")[-1]) for p in pre_reserved if ID.fullmatch(p)}
+    for sid in sorted(set(security) | resv_ids):
         n = int(sid.split("-")[-1])
         if n not in allowed:
-            fails.append(f"ALLOC-14 {sid} liegt ausserhalb des freien Security-Bereichs 411-419")
+            fails.append(
+                f"ALLOC-14 {sid} liegt ausserhalb des normativen Allokationsfensters "
+                f"({window} plus vorbelegte Reservierung)"
+            )
     for e in listed:
         if e.get("category") == "security":
             fails.append(f"ALLOC-14 {e.get('id')} ist Security und darf keine Ausnahme sein")
     print(
-        f"ALLOC-14 Allokationsfenster: {len(security)} security-Standard(s) in 410-419 (410 reserviert, 411-419 frei), "
+        f"ALLOC-14 Allokationsfenster (normativ): {len(security)} security-Standard(s) + "
+        f"{len(pre_reserved)} Reservierung in {window or '?'}, "
         f"{len(other)} Ausnahmen unveraendert"
     )
 
@@ -138,7 +174,8 @@ def main() -> int:
         print(f"\nGate Familie 400: FAIL ({len(fails)} Befunde)")
         return 1
     print(
-        f"\nGate Familie 400: PASS — {len(std)}/52 Standards gedeckt, "
+        f"\nGate Familie 400: PASS — {total} Slots gedeckt ({len(std)} Standards + "
+        f"{len(pre_reserved)} Reservierung), "
         f"{len(other)} grandfatherte Ausnahmen einzeln registriert, "
         f"Security-Allokation nur 411-419"
     )
