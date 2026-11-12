@@ -7,5 +7,14 @@ subfamily_rule: "Die Hunderterstelle bestimmt die Standards-Familie; die letzten
 reserved: true
 reservation_rules_ref: "ATC-STD-002 §2 (Regeln 1-10)"
 grandfathering_ref: "ATC-STD-002 §3"
+wiring:
+  fam: FAM-77
+  range: "ATC-STD-400..499"
+  new_allocation_range: "ATC-STD-411..419"
+grandfathered_exceptions:
+  list_ref: registry/allocation/family-exceptions.yaml
+  count: 51
+  historical_fams: [FAM-24, FAM-25, FAM-26, FAM-27, FAM-28]
+  decision: "Owner-Entscheidung 12.11.2026, Option B"
 created: "2026-09-11"
 mandate: "Owner-Entwurf 11.09. (SCR-0096 Families-ID, Härtung 02:17)"
