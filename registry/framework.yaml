@@ -4230,4 +4230,7 @@ framework:
       - FAM-27
       - FAM-28
     new_allocation_range: ATC-STD-411..419
+    pre_reserved_ids:
+    - ATC-STD-410
+    pre_reserved_ref: registry/allocation/reservations.yaml
     slots: []
