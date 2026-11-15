@@ -23,6 +23,8 @@ DOMAIN_MAP = {
     "os": "SW",
     "infrastructure": "SW",
     "applications": "SW",
+    "compute": "SW",
+    "crypto": "TRUST",
     # benannte Familien
     "bug": "GOV",
     "zkp": "TRUST",
@@ -74,6 +76,8 @@ DOMAINS = {
 }
 # Familien-Codes (global eindeutig, TAX-CHECK-003)
 FAMILY_CODES = {
+    "compute": "COMP",
+    "crypto": "CRYPTO",
     "bug": "BUG",
     "v2s": "V2S",
     "zkp": "ZKP",

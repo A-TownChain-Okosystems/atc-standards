@@ -4423,3 +4423,83 @@ standards:
       status: reference
       evidence: "Legacy-Serie (atc/): durch ATC-STD-000ff superseded; historische Referenz konserviert"
     independence: L1
+
+  # Compute-Schicht, registriert 15.11.2026 (SCR-0142). Status bewusst specification_only:
+  # die Spezifikationen sind SPEC-DRAFT, es gibt keinen Implementierungsnachweis.
+  - standard: ATC-COMP-500
+    version: "0.1.0"
+    applicability: CONDITIONAL
+    implementation:
+      status: specification_only
+      evidence: "SPEC-DRAFT in atc-compute@89d833edf3; scheduler.rs ist FIFO-Slot-Scheduler, kein Job-/Verifikations-/Settlement-Code (Implementierungsmatrix ATC-COMP-500..509)"
+    independence: L1
+  - standard: ATC-COMP-501
+    version: "0.1.0"
+    applicability: CONDITIONAL
+    implementation:
+      status: specification_only
+      evidence: "SPEC-DRAFT in atc-compute@89d833edf3; scheduler.rs ist FIFO-Slot-Scheduler, kein Job-/Verifikations-/Settlement-Code (Implementierungsmatrix ATC-COMP-500..509)"
+    independence: L1
+  - standard: ATC-COMP-502
+    version: "0.1.0"
+    applicability: CONDITIONAL
+    implementation:
+      status: specification_only
+      evidence: "SPEC-DRAFT in atc-compute@89d833edf3; scheduler.rs ist FIFO-Slot-Scheduler, kein Job-/Verifikations-/Settlement-Code (Implementierungsmatrix ATC-COMP-500..509)"
+    independence: L1
+  - standard: ATC-COMP-503
+    version: "0.1.0"
+    applicability: CONDITIONAL
+    implementation:
+      status: specification_only
+      evidence: "SPEC-DRAFT in atc-compute@89d833edf3; scheduler.rs ist FIFO-Slot-Scheduler, kein Job-/Verifikations-/Settlement-Code (Implementierungsmatrix ATC-COMP-500..509)"
+    independence: L1
+  - standard: ATC-COMP-504
+    version: "0.1.0"
+    applicability: CONDITIONAL
+    implementation:
+      status: specification_only
+      evidence: "SPEC-DRAFT in atc-compute@89d833edf3; scheduler.rs ist FIFO-Slot-Scheduler, kein Job-/Verifikations-/Settlement-Code (Implementierungsmatrix ATC-COMP-500..509)"
+    independence: L1
+  - standard: ATC-COMP-505
+    version: "0.1.0"
+    applicability: CONDITIONAL
+    implementation:
+      status: specification_only
+      evidence: "SPEC-DRAFT in atc-compute@89d833edf3; scheduler.rs ist FIFO-Slot-Scheduler, kein Job-/Verifikations-/Settlement-Code (Implementierungsmatrix ATC-COMP-500..509)"
+    independence: L1
+  - standard: ATC-COMP-506
+    version: "0.1.0"
+    applicability: CONDITIONAL
+    implementation:
+      status: specification_only
+      evidence: "SPEC-DRAFT in atc-compute@89d833edf3; scheduler.rs ist FIFO-Slot-Scheduler, kein Job-/Verifikations-/Settlement-Code (Implementierungsmatrix ATC-COMP-500..509)"
+    independence: L1
+  - standard: ATC-COMP-507
+    version: "0.1.0"
+    applicability: CONDITIONAL
+    implementation:
+      status: specification_only
+      evidence: "SPEC-DRAFT in atc-compute@89d833edf3; scheduler.rs ist FIFO-Slot-Scheduler, kein Job-/Verifikations-/Settlement-Code (Implementierungsmatrix ATC-COMP-500..509)"
+    independence: L1
+  - standard: ATC-COMP-508
+    version: "0.1.0"
+    applicability: CONDITIONAL
+    implementation:
+      status: specification_only
+      evidence: "SPEC-DRAFT in atc-compute@89d833edf3; scheduler.rs ist FIFO-Slot-Scheduler, kein Job-/Verifikations-/Settlement-Code (Implementierungsmatrix ATC-COMP-500..509)"
+    independence: L1
+  - standard: ATC-COMP-509
+    version: "0.1.0"
+    applicability: CONDITIONAL
+    implementation:
+      status: specification_only
+      evidence: "SPEC-DRAFT in atc-compute@89d833edf3; scheduler.rs ist FIFO-Slot-Scheduler, kein Job-/Verifikations-/Settlement-Code (Implementierungsmatrix ATC-COMP-500..509)"
+    independence: L1
+  - standard: ATC-CRYPTO-001
+    version: "0.1.0"
+    applicability: MANDATORY
+    implementation:
+      status: specification_only
+      evidence: "SPEC-DRAFT in a-townchain@2c91820710; Primitive teilweise in Gebrauch (sha2 in components/node, siehe AUDIT-O1-C), das ist keine Spezifikationskonformitaet"
+    independence: L1

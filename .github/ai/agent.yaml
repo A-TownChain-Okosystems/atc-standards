@@ -538,6 +538,17 @@ required_standards:
 - ATC-STD-MAINT-023
 - ATC-STD-MAINT-024
 - ATC-STD-ENG-001
+- ATC-COMP-500
+- ATC-COMP-501
+- ATC-COMP-502
+- ATC-COMP-503
+- ATC-COMP-504
+- ATC-COMP-505
+- ATC-COMP-506
+- ATC-COMP-507
+- ATC-COMP-508
+- ATC-COMP-509
+- ATC-CRYPTO-001
 workflow:
   require_tests: true
   require_audit: true

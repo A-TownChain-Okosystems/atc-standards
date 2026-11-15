@@ -1,0 +1,14 @@
+# GENERIERT aus registry/standards.yaml (Allokations-SSOT) — nicht manuell pflegen
+# ATC-STD-002 §3/§6: family_id != standard_id
+category: compute
+family: LEGACY-SERIES
+family_id: LEGACY
+file: standards/compute/ATC-COMP-504.md
+mandate: SCR-0071 Erzeugung; SCR-0142 Registrierung; Quelle atc-compute@89d833edf338085d6141b0c703ebf92a0db83a5e,
+  Quellstatus SPEC-DRAFT 0.1.0-DRAFT
+registry_version: 1
+standard_id: ATC-COMP-504
+status: draft
+title: Resource Metering Specification (Messgroessen, Accounting-Record je Job, Integer-Abrechnung
+  mit geprueften Operationen)
+version: 0.1.0

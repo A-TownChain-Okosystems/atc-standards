@@ -1,0 +1,14 @@
+# GENERIERT aus registry/standards.yaml (Allokations-SSOT) — nicht manuell pflegen
+# ATC-STD-002 §3/§6: family_id != standard_id
+category: crypto
+family: LEGACY-SERIES
+family_id: LEGACY
+file: standards/crypto/ATC-CRYPTO-001.md
+mandate: SCR-0071 Erzeugung; SCR-0142 Registrierung; Quelle a-townchain@2c918207101a2473c084bceb4c65c57cc59b7930,
+  Quellstatus SPEC-DRAFT 0.1.0-DRAFT
+registry_version: 1
+standard_id: ATC-CRYPTO-001
+status: draft
+title: Cryptographic Specification (kanonische Primitive, Domain-Separation-Registry,
+  Malleability-Regeln und PQC-Migrationspfad der Chain)
+version: 0.1.0

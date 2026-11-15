@@ -3,7 +3,7 @@
 taxonomy:
   standard: ATC-STD-TAXONOMY-001
   version: 1.0.0
-  generated: '2026-10-07'
+  generated: '2026-11-15'
   hierarchy:
   - DOMAIN
   - FAMILY
@@ -511,6 +511,20 @@ taxonomy:
         status: ACTIVE
         lifecycle: ACTIVE
       fam: FAM-52
+    - id: COMP
+      name: compute
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-COMP-001-999
+      source: named-family
+      description: 'Compute-Schicht: Auftraege, Ausfuehrung, Nachweis, Verifikation und Abrechnung verteilter Rechenleistung (Owner-Entscheidung 15.11.2026, SCR-0142)'
+      standards_count: 10
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
+      fam: FAM-77
   - id: CHAIN
     name: Blockchain, Smart Contracts & Protokolle
     status: ACTIVE
@@ -721,3 +735,17 @@ taxonomy:
         status: ACTIVE
         lifecycle: ACTIVE
       fam: FAM-54
+    - id: CRYPTO
+      name: crypto
+      status: ACTIVE
+      lifecycle: ACTIVE
+      id_range: ATC-CRYPTO-001-999
+      source: named-family
+      description: 'Kryptografie-Familie: kanonische Primitive, Domain-Separation, Malleability, PQC-Migration (Owner-Entscheidung 15.11.2026, SCR-0142)'
+      standards_count: 1
+      categories:
+      - id: GENERAL
+        name: Allgemein (Bestand, keine Unterteilung)
+        status: ACTIVE
+        lifecycle: ACTIVE
+      fam: FAM-78

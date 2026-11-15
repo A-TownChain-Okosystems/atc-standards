@@ -4211,3 +4211,17 @@ framework:
       status: BELEGT
       refs:
       - ATC-AURORA-SWARM-001
+  - id: FAM-77
+    name: "Compute Standards (COMP)"
+    range: "ATC-COMP-001..999"
+    note: 'Formale Familien-Allokation fuer die Compute-Schicht: Owner-Entscheidung 15.11.2026 (SCR-0142). Die bestehenden SPEC-DRAFT-IDs ATC-COMP-500..509 bleiben unveraendert; keine Neunummerierung, keine Aufwertung.'
+    family_refs:
+    - ATC-STD-000
+    - ATC-STD-002
+  - id: FAM-78
+    name: "Cryptography Standards (CRYPTO)"
+    range: "ATC-CRYPTO-001..999"
+    note: 'Formale Familien-Allokation fuer die Kryptografie-Familie: Owner-Entscheidung 15.11.2026 (SCR-0142). ATC-CRYPTO-001 wird registriert, nicht aufgewertet.'
+    family_refs:
+    - ATC-STD-000
+    - ATC-STD-002
