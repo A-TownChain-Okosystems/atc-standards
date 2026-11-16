@@ -60,6 +60,7 @@ STDLIB_OK |= {
     "csv",
     "logging",
     "base64",
+    "tomllib",
 }  # compatibility aliases not represented as top-level stdlib names
 local_mods = {p.stem for p in (ROOT / "tools").rglob("*.py")}
 for py in (ROOT / "tools").rglob("*.py"):
