@@ -2,13 +2,13 @@
 standard:
   id: ATC-ARCH-001
   title: "KAI-OS System Architecture Standard"
-  version: "1.0.0"
+  version: "1.0.1"
   status: approved
   category: architecture
   authority: "A-TownChain Ecosystems"
   owner: "Michael Wroblewski (Owner-Direktive) / Standards Governance"
   created: "2026-09-12"
-  updated: "2026-09-12"
+  updated: "2026-11-16"
   normative: true
   applies_to: "Gesamtes A-TownChain-Ökosystem, alle Repositories, alle Agenten"
   mandate: "Owner-Direktive 12.09.2026 (KAI-OS-Begriffsklärung)"
@@ -19,6 +19,37 @@ standard:
 
 > **Status:** APPROVED — Owner-Direktive 12.09.2026. **Scope:** Begriffs- und
 > Architekturdefinition des gesamten Ökosystems. **Governance:** ATC-STD-000.
+
+## 0. Begriffe — KAI und KAI-OS (Vereinheitlichung 16.11.2026, SCR-0144)
+
+Owner-Vorgabe 16.11.2026: **KAI ist die Gesamtarchitektur.** Diese Festlegung ist
+bereits Inhalt dieses Standards; hier wird zusätzlich die Schreibweise verbindlich
+vereinheitlicht.
+
+| Begriff | Bedeutung | Verwendung |
+| --- | --- | --- |
+| **KAI** | Gesamtarchitektur, Kurzform. Kryptografisches AI Operating System (Cryptographic AI Operating System). Überbau über sieben eigenständige Technologiebereiche. | führender Begriff in neuen Dokumenten |
+| **KAI-OS** | Langform und historische Schreibweise desselben Überbaus (Normen, Badges, Dateinamen seit 12.09.2026). | Alias, keine eigene Entität |
+| **GlobusOS** | das Betriebssystem innerhalb von KAI | nie Synonym für KAI |
+| **ShivaCore** | Microkernel und TCB innerhalb von GlobusOS | keine eigene Ebene über dem Betriebssystem |
+
+Verbindliche Regeln:
+
+1. **REQ-ARCH-KAI-01:** KAI und KAI-OS bezeichnen dieselbe Architektur. Kein Dokument
+   darf einen Bedeutungsunterschied zwischen beiden Schreibweisen konstruieren.
+2. **REQ-ARCH-KAI-02:** KAI ist niemals ein Repository, ein Produkt oder ein
+   Betriebssystem. Es gibt genau ein Betriebssystem (GlobusOS), einen Kernel
+   (ShivaCore), eine VM (ATC-VM), eine Blockchain (A-TownChain), eine AI-Plattform
+   (Aurora AI) und eine Sprache (ATCLang).
+3. **REQ-ARCH-KAI-03:** Neue normative Dokumente verwenden **KAI** in Überschrift und
+   Fließtext und nennen **KAI-OS** einmal als Langform. Bestehende Dokumente bleiben
+   gültig und müssen nicht umgeschrieben werden.
+4. **REQ-ARCH-KAI-04 (Rename-Verbot):** IDs (`ATC-…`), Repository-Namen, Dateinamen,
+   Badges und bestehende Zitate werden nicht umbenannt. Die Vereinheitlichung ist eine
+   Begriffsregel, keine Umbenennungsaktion.
+5. **REQ-ARCH-KAI-05:** Keine Komponente übernimmt Aufgaben einer anderen und baut
+   keine zweite Implementierungsautorität auf (Owner-Vorgabe 16.11.2026).
+
 
 ## 1. Normative Definition
 

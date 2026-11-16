@@ -7,10 +7,10 @@
 
 ```yaml
 state:
-  id: ATC-STATE-20261009-ca5c3b44
-  generated_at: "2026-10-09 00:17 UTC+2"
+  id: ATC-STATE-20261116-6ba45e55
+  generated_at: "2026-11-16 17:36 UTC+2"
   registry_version: "1.1.0"
-  registry_sha256: "ca5c3b445fc45382417d7b3013a8229fc736aadcc6f2a3c8420736bdd316610b"
+  registry_sha256: "6ba45e55e3935eceef0b0ff1347630c14c8e6408886d3e9dca25eee3bd407835"
   standards_total: 533
   standards_approved: 506
   standards_candidate: 27
