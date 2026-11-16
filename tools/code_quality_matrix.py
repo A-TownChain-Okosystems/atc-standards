@@ -26,6 +26,8 @@ TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", "")
 H = {"Authorization": f"token {TOKEN}", "Accept": "application/vnd.github.v3+json"}
 BASE = os.path.join(os.path.dirname(__file__), "..")
 EXCLUDED = {"demo-repository"}
+# Mindestanteil, ab dem eine deklarierte Sprache als vorhanden gilt.
+MIN_LANGUAGE_SHARE = 5.0
 
 
 def api(url, retries=3):
@@ -51,7 +53,14 @@ def repo_ist(name):
         else []
     )
     info = api(f"https://api.github.com/repos/{ORG}/{name}")
-    return {"language": (info or {}).get("language") or "?", "workflows": wfs}
+    langs = api(f"https://api.github.com/repos/{ORG}/{name}/languages") or {}
+    total = sum(langs.values()) or 1
+    shares = {k: 100.0 * v / total for k, v in langs.items()}
+    return {
+        "language": (info or {}).get("language") or "?",
+        "shares": shares,
+        "workflows": wfs,
+    }
 
 
 def wf_covers(wfs, gate):
@@ -86,27 +95,33 @@ def main():
         ist = repo_ist(name)
         if not ist["workflows"]:
             print(f"  WARN: {name} — Tree-Fetch fehlgeschlagen (Fail Closed → FINDING)")
-        lang_ok = (
-            ist["language"]
-            in [ln.capitalize() if ln == "atclang" else ln.capitalize() for ln in m["language"]]
-            or ist["language"].lower() in m["language"]
-        )
+        # Ein Repository ist sprachkonform, wenn eine der deklarierten Sprachen
+        # tatsaechlich praesent ist. Die GitHub-Hauptsprache (Byte-Mehrheit) ist
+        # dafuer kein geeignetes Kriterium: UI-Byte-Anteile verdraengen die
+        # kanonische Kernsprache (Beispiel a-townchain: TypeScript 39,8 %,
+        # Rust 30,4 %, Python 28,3 % bei deklariert [rust, python]).
+        declared = [ln.lower() for ln in m["language"]]
+        shares = {k.lower(): v for k, v in (ist.get("shares") or {}).items()}
+        lang_ok = any(shares.get(d, 0.0) >= MIN_LANGUAGE_SHARE for d in declared)
+        lang_seen = ", ".join(
+            f"{k} {shares[k]:.1f}%" for k in sorted(shares, key=lambda x: -shares[x])[:3]
+        ) or ist["language"]
         gates_missing = [g for g in m["ci_gates"] if not wf_covers(ist["workflows"], g)]
         verdict = "PASS" if (lang_ok and not gates_missing) else "FINDING"
         if verdict == "FINDING":
             fails += 1
             print(
-                f"FINDING: {name} — language={'PASS' if lang_ok else 'MISMATCH'}; "
+                f"FINDING: {name} — language={'PASS' if lang_ok else 'MISMATCH'} ({lang_seen}); "
                 f"missing_gates={', '.join(gates_missing) or '—'}"
             )
-        rows.append((name, m["layer"], m["determinism"], ist["language"], "✅" if lang_ok else "❌",
+        rows.append((name, m["layer"], m["determinism"], f"{ist['language']} ({lang_seen})", "✅" if lang_ok else "❌",
                      ", ".join(m["ci_gates"]), ", ".join(gates_missing) or "—", verdict))
 
     d = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
     lines = [
         f"# ATC Code Quality Matrix — Ist-Erhebung ({d})", "",
         f"Standard: ATC-STD-ENG-001 (REQ-ENG-011) · SSOT: registry/code-quality-matrix.yaml · Exit: {'0' if not fails else '1'}", "",
-        "| Repository | Layer | Det.-Klasse | Ist-Sprache | Lang | CI-Gates (Soll) | Fehlt | Verdict |",
+        "| Repository | Layer | Det.-Klasse | Ist-Sprache (Anteile) | Lang | CI-Gates (Soll) | Fehlt | Verdict |",
         "|---|---|---|---|---|---|---|---|",
     ]
     for r in rows:
