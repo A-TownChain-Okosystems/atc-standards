@@ -186,13 +186,40 @@ Abweichungen als Finding.
 
 ## Implementierungsstatus
 
-**Status: SPECIFIED** — Normativ spezifiziert, Wartet auf §9-Freigabe;
-Implementierungs-Evidence entsteht über Technology Profile Audits je Repository
-(S. ATC-STD-REPO-AUDIT-003): aktuelle R1-Skelette sind Soll-Zustand; bekannte
-Policy-Drifts (atclang nur Python, a-townchain ohne Rust-Chain-Code) sind
-als Findings zu führen und über SCR zu beheben. Kein Status ohne Evidence
-(ATC-STD-000 §14). SSOT für Implementierungsstand: registry/standard-
-implementation.yaml.
+Dieser Standard hat **zwei getrennte Status**, die nicht vermischt werden duerfen
+(Korrektur 16.11.2026, SCR-0143):
+
+| Dimension | Wert | Beleg |
+| --- | --- | --- |
+| Normstatus | **APPROVED** (v2.0.0), §9-Freigabe 11.09.2026 ueber SCR-0102 | Kopf dieses Dokuments, `registry/standards.yaml` |
+| Implementierungsstatus | **implemented** | `registry/standard-implementation.yaml`, Eintrag ATC-STD-100 |
+
+Die frueher hier stehende Formulierung „SPECIFIED, wartet auf §9-Freigabe" war
+ein Dokumentationsfehler: sie widersprach dem APPROVED-Status im Kopf. Die
+Freigabe ist erfolgt; offen ist die Durchsetzung, nicht die Genehmigung.
+
+### Durchsetzung (Stand 16.11.2026)
+
+Die frueheren Driftbeispiele („atclang nur Python, a-townchain ohne
+Rust-Chain-Code") sind **ueberholt** und werden hiermit ersetzt:
+
+- `atclang` fuehrt die Rust-Toolchain (`crates/atc-core`), `atc-vm` die
+  Rust-Ausfuehrung (32 Tests).
+- `a-townchain` fuehrt mit `components/node` Rust-Chain-Code.
+
+Der tatsaechliche Drift liegt heute umgekehrt: **parallel weitergefuehrte
+Python-Implementierungen** neben bestehenden Rust-Autoritaeten.
+
+| Befund | Fundstelle | Status |
+| --- | --- | --- |
+| Python-Konsens/Chain/Netz (Block A, 47 Dateien) | `a-townchain/modules/atc-blockchain`, `modules/atcnet` | als nicht-kanonisch gekennzeichnet (`NON_CANONICAL.md`), kein Aufrufpfad belegt |
+| Python-ATCLang inklusive VM (Block B, 53 Dateien) | `a-townchain-os-docs/atclang` | als Referenz gekennzeichnet, keine VM-Autoritaet |
+| Python-Wallet | `atc-wallet/modules/atc-wallet` | mit E2 archiviert, keine Aktion |
+| 23 Python/Rust-Namenspaare | org-weit | als Findings gefuehrt, siehe SCR-0143 |
+
+Kein Status ohne Evidence (ATC-STD-000 §14). SSOT fuer den
+Implementierungsstand bleibt `registry/standard-implementation.yaml`.
+
 
 ## Changelog
 
