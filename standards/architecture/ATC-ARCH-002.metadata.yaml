@@ -2,14 +2,14 @@
 authority: A-TownChain Ecosystems
 category: architecture
 conformance:
-  required: false
+  required: true
 dependencies: []
 id: ATC-ARCH-002
 implementation:
   status: specification_only
-normative: false
+normative: true
 owner: ShivaCoreDev
 source_file: standards/architecture/ATC-ARCH-002.md
-status: draft
+status: approved
 title: KAI-OS Desktop Layer Architecture Standard
-version: 0.1.3
+version: 1.0.0
