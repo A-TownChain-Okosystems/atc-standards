@@ -50,10 +50,11 @@ Regel 3 reduziert.
 
 ## 4. Merge (getrennt gefuehrt)
 
-- **Status:** ausstehend. Der Merge-Commit ist zum Zeitpunkt dieses Dokuments
-  nicht bekannt und wird hier nicht vorweggenommen.
-- **Nachweisort:** PR im Repository `atc-standards`; nach dem Merge ist der
-  Merge-Commit in SCR-0143 §7.3 einzutragen.
+- **Status:** eingezogen am 17.11.2026.
+- **Merge-Commit:** `4ae9707c13bc7dace09c5035e418cd74e49542d6` (`main`, Repository `atc-standards`), PR #133.
+- **Freigabe:** Owner, 17.11.2026 („Alle genehmigt"); Merge-Entscheidung damit
+  erteilt und ausgeführt.
+- **Nachweisort:** SCR-0143 § 7.3.
 
 ## 5. Verifikation (getrennt gefuehrt)
 
