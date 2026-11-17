@@ -1,7 +1,7 @@
 # 📋 File Register — atc-standards
 
 > **Zweck:** Vollständige Liste aller versionierten Dateien (SCR-0082, Matrix-Dim-12).
-> **Generiert:** 2026-11-17 00:42 UTC | Methode: `git ls-files` (deterministisch, ohne Netzabruf)
+> **Generiert:** 2026-11-17 07:35 UTC | Methode: `git ls-files` (deterministisch, ohne Netzabruf)
 > **Reproduktion:** `git ls-files | sort` im Repository-Wurzelverzeichnis
 > **Standards:** ATC-STD-201 · Evidence: `.atc/evidence/evidence.yaml`
 > **Hinweis:** Snapshot zum Generierungszeitpunkt. Neue Dateien sind erst nach
@@ -13,17 +13,18 @@
 
 | Metrik | Wert |
 |--------|------|
-| **Total Dateien** | 2163 |
+| **Total Dateien** | 2165 |
 | **.yaml** | 1188 |
-| **.md** | 883 |
+| **.md** | 885 |
 | **.py** | 42 |
 | **.yml** | 16 |
 | **.json** | 15 |
 | **.atc** | 5 |
-| **(keine)** | 4 |
-| **.template** | 3 |
+| **(keine)** | 3 |
 | **.txt** | 3 |
+| **.template** | 3 |
 | **.toml** | 2 |
+| **.gitignore** | 1 |
 | **.lock** | 1 |
 | **.rs** | 1 |
 
@@ -330,6 +331,7 @@
 - `change-requests/SCR-0131.md`
 - `change-requests/SCR-0141.md`
 - `change-requests/SCR-0142.md`
+- `change-requests/SCR-0143.md`
 - `contracts/README.md`
 - `contracts/bridge/README.md`
 - `contracts/defi/README.md`
@@ -369,6 +371,7 @@
 - `docs/compliance/ORG-COMPLIANCE-SCAN-2026-09-10.json`
 - `docs/compliance/ORG-COMPLIANCE-SCAN-2026-09-10.md`
 - `docs/governance/F-059-CURRENT-STATE.md`
+- `docs/patches/DEPENDENCY_REVIEW_UNITTEST_DISCOVER.md`
 - `docs/patches/F-049_GATE_WIRING_2026-09-09.md`
 - `docs/patches/OWNER_WORKFLOW_PATCH_2026-09-08.md`
 - `docs/patches/SCR-0051_naming-governance.md`
