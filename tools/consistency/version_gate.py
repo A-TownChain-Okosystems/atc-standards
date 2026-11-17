@@ -106,7 +106,17 @@ def main():
     for repo in repos:
         try:
             if args.github:
-                readme = fetch_readme_github(args.org, repo, token)
+                own = os.environ.get("GITHUB_REPOSITORY", "").split("/")[-1]
+                local = os.path.join(os.getcwd(), "README.md")
+                if repo == own and os.path.isfile(local):
+                    # Im PR-Kontext das eigene README aus dem Arbeitsbaum lesen.
+                    # Sonst prueft das Gate den Stand von main und verlangt, dass eine
+                    # Aenderung bereits gemergt ist, bevor sie gemergt werden darf.
+                    print(f"  INFO  {repo}: eigenes README aus dem Arbeitsbaum (PR-Kontext)")
+                    with open(local, encoding="utf-8") as fh:
+                        readme = fh.read()
+                else:
+                    readme = fetch_readme_github(args.org, repo, token)
             else:
                 with open(os.path.join(args.local, repo, "README.md"), encoding="utf-8") as f:
                     readme = f.read()
