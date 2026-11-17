@@ -17,7 +17,7 @@ standard:
   review_date: "2027-01-31"
   dependencies: [ATC-ARCH-001, ATC-STD-000, ATC-STD-DESC-001]
   requirements: [REQ-ARCH-201, REQ-ARCH-232]
-  changelog: "0.1.0 (2026-11-17): Erster Entwurf nach Owner-Auftrag; DRAFT, nicht normativ. 0.1.1 (2026-11-17): DEC-1 als Begriffsordnung und DEC-2 als Anwendungsdomaene aufgenommen. 0.1.2 (2026-11-17): DEC-3 und DEC-4 als Entscheidungsvorlagen vorgelegt. 0.1.3 (2026-11-17): DEC-3 Option B (KOM-1 bis KOM-4, par 4.5.1) und DEC-4 Option C (UVK-1 bis UVK-4, par 4.6.1) eingezogen. 1.0.0 (2026-11-17): Owner-Freigabe nach ATC-STD-000 par 18; Technical, Security und Architecture Review PASS ohne kritische Findings (par 15 bis par 17); normativ. ACTIVE nicht erklaert: COM-ARCH-201 bis 210 sind nicht durchgaengig belegt."
+  changelog: "0.1.0 (2026-11-17): Erster Entwurf nach Owner-Auftrag; DRAFT, nicht normativ. 0.1.1 (2026-11-17): DEC-1 als Begriffsordnung und DEC-2 als Anwendungsdomaene aufgenommen. 0.1.2 (2026-11-17): DEC-3 und DEC-4 als Entscheidungsvorlagen vorgelegt. 0.1.3 (2026-11-17): DEC-3 Option B (KOM-1 bis KOM-4, par 4.5.1) und DEC-4 Option C (UVK-1 bis UVK-4, par 4.6.1) eingezogen. 1.0.0 (2026-11-17): Owner-Freigabe nach ATC-STD-000 par 18; Technical, Security und Architecture Review PASS ohne kritische Findings (par 15 bis par 17); normativ. ACTIVE nicht erklaert: COM-ARCH-201 bis 210 sind nicht durchgaengig belegt. Review-Befunde T-3, S-1 und A-1 in derselben Fassung behoben."
 ---
 
 # ATC-ARCH-002 — KAI-OS Desktop Layer Architecture Standard (v1.0.0, APPROVED)
@@ -287,6 +287,13 @@ ein fehlender Chain-Kontakt ist kein Freibrief und kein Abbruchgrund.
 signiertes Trust-Store-Update, das denselben Pruefpfad nutzt. Es entsteht keine
 zweite Identitaets- oder Rechteinstanz neben ShivaCore.
 
+**UVK-5** — Der Trust-Store MUSS ein Hoechstalter tragen und bei dessen
+Ueberschreitung fail-closed wirken: Ist der juengste Nachweis aelter als der
+Betriebsparameter `trust_store_max_age` (Standardwert 30 Tage), DARF keine
+Installation und kein Update authentifiziert werden. Ein fehlendes Netz ist kein
+Grund, die Grenze zu ueberschreiten. Die Grenze ist in den Negativtests zu
+COM-ARCH-206 und COM-ARCH-207 zu belegen.
+
 ### 4.7 Bedienbarkeit und Assistenz
 
 **REQ-ARCH-227** — Ein Anwender MUSS ohne Fachkenntnis über Blockchain, Kernel
@@ -334,6 +341,11 @@ vollständigen Conformance-Nachweis nach § 8.
    der Owner; die nicht gewählte wird stillgelegt, nicht geduldet.
 
 ## 7. Schnittstellen, Abhängigkeiten und Zuordnung
+
+Die Stufen **D0 bis D7 in der folgenden Tabelle sind eine Binnengliederung der
+Desktop-Schicht** und keine zweite Layer-Achse neben L0 bis L12 aus ATC-ARCH-001.
+Wo die Tabelle eine Stufe einem Repository zuordnet, gilt dessen Layer-Zuordnung
+aus ATC-ARCH-001 unverändert.
 
 | Schicht | Komponente | Verantwortliches Repository | Status |
 |---|---|---|---|
@@ -427,7 +439,8 @@ dazu benutzt werden, ATC-ARCH-001 zu überschreiben.
 **INFORMATIVE**
 - KAI-CORE-RUNTIME-001 — Core Runtime Track
 - SCR-0129 — Standalone First, Ecosystem Second (PROPOSED)
-- SCR-0142 — Antrag zu diesem Standard (PROPOSED)
+- SCR-0142 — Antrag zu diesem Standard (ACCEPTED, 17.11.2026)
+- SCR-0143 — Freigabereferenz § 9 oder § 18 im Standardbestand (PROPOSED)
 
 ## 13. Changelog
 
@@ -440,7 +453,7 @@ dazu benutzt werden, ATC-ARCH-001 zu überschreiben.
 
 | 0.1.2 | 2026-11-17 | DEC-3 (Kompatibilitaetsumfang) und DEC-4 (Update-Vertrauenskette) als Entscheidungsvorlagen vorgelegt. |
 | 0.1.3 | 2026-11-17 | DEC-3 Option B als KOM-1 bis KOM-4 (§ 4.5.1), DEC-4 Option C als UVK-1 bis UVK-4 (§ 4.6.1); § 14.2 ohne offene Fragen. |
-| 1.0.0 | 2026-11-17 | Owner-Freigabe nach § 18, Reviews § 15 bis § 17 PASS, normativ. ACTIVE offen bis COM-ARCH-201 bis 210 belegt sind. |
+| 1.0.0 | 2026-11-17 | Owner-Freigabe nach § 18, Reviews § 15 bis § 17 PASS, normativ. Review-Befunde geschlossen: T-3 (§ 12), S-1 (UVK-5), A-1 (§ 7). ACTIVE offen bis COM-ARCH-201 bis 210 belegt sind. |
 
 ## 14. Offene Entscheidungen
 
@@ -476,7 +489,7 @@ Owner-Approval. Bis dahin bleibt dieser Standard `draft` und nicht referenzierba
 
 **Befunde.** T-1 (in dieser Fassung behoben): das Frontmatter-Changelog endete bei
 0.1.1, obwohl 0.1.2 und 0.1.3 eingezogen waren. T-2 (behoben): die Überschrift
-nannte v0.1.1 bei Frontmatter 0.1.3. T-3 (offen, nicht kritisch): § 12 führt
+nannte v0.1.1 bei Frontmatter 0.1.3. T-3 (in dieser Fassung behoben): § 12 führt
 SCR-0142 und SCR-0143 noch nicht als Referenz; Nachführung mit der nächsten
 Änderung.
 
@@ -491,9 +504,10 @@ SCR-0142 und SCR-0143 noch nicht als Referenz; Nachführung mit der nächsten
 | Update-Vertrauenskette | UVK-1 bis UVK-4: DID als Herausgeber, lokale Signatur offline, authentisch nur bei gemeinsamem Zutreffen, Widerruf über signiertes Trust-Store-Update, keine zweite Identitätsinstanz |
 | Kompatibilitätsschicht | REQ-ARCH-221: abschaltbar, blockiert den Systemstart nicht, erweitert keine Kernelrechte |
 
-**Befunde.** S-1 (offen, nicht kritisch): die Vertrauenskette regelt den Widerruf,
-aber nicht das Höchstalter des Trust-Store. Empfohlen wird eine Fail-Closed-Grenze
-als Betriebsparameter, geprüft in den Negativtests zu COM-ARCH-206 und 207.
+**Befunde.** S-1 (in dieser Fassung behoben): die Vertrauenskette regelte den
+Widerruf, aber nicht das Höchstalter des Trust-Store. Als **UVK-5** (§ 4.6.1)
+normiert: Fail-Closed oberhalb von `trust_store_max_age` (Standardwert 30 Tage),
+Nachweis in den Negativtests zu COM-ARCH-206 und 207.
 S-2 (dokumentiert): Signaturprüfung ist normativ gefordert und nicht implementiert;
 COM-ARCH-206 bleibt offen und ist damit ein ACTIVE-Hindernis, kein
 Freigabehindernis, weil ohne gültigen Trust-Store nichts authentifiziert wird.
@@ -509,10 +523,10 @@ Freigabehindernis, weil ohne gültigen Trust-Store nichts authentifiziert wird.
 | Sprachgrenze nach AD-008 | Desktop-Komponenten führen keine Konsens-, VM- oder Kernel-Semantik; ATCLang bleibt on-chain, Rust die native Infrastruktur |
 | Entscheidungen | DEC-3 und DEC-4 eingezogen, § 14.2 ohne offene Fragen; Genesis Engine als Anwendungsdomäne (§ 7.1) ohne Unterordnung |
 
-**Befunde.** A-1 (dokumentiert): die Stufen D0 bis D7 sind eine Binnengliederung
-der Desktop-Schicht und keine zweite Layer-Achse neben L0 bis L12 aus
-ATC-ARCH-001; § 2.1 stellt das klar, § 7 sollte die Zeile bei der nächsten
-Änderung aufnehmen. A-2: jede Stufe ist genau einem verantwortlichen Repository
+**Befunde.** A-1 (in dieser Fassung behoben): § 7 benennt die Stufen D0 bis D7
+jetzt ausdrücklich als Binnengliederung der Desktop-Schicht und keine zweite
+Layer-Achse neben L0 bis L12 aus ATC-ARCH-001; die Layer-Zuordnung der
+zugeordneten Repositories bleibt unverändert. A-2: jede Stufe ist genau einem verantwortlichen Repository
 zugeordnet (§ 7), damit ist COM-ARCH-201 prüfbar.
 
 **Ergebnis: PASS**, keine kritischen Findings.

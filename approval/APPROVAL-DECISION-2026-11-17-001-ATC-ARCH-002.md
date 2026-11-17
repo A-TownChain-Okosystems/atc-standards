@@ -50,13 +50,16 @@ Die Freigabe macht die Architektur verbindlich; sie behauptet keine
 Implementierung. Ein Statuswechsel auf ACTIVE bleibt an die zehn Nachweise
 gebunden.
 
-## 6. Offene, nicht kritische Punkte
+## 6. Nicht kritische Punkte aus den Reviews (in dieser Fassung geschlossen)
 
-| ID | Punkt | Wirkung |
+| ID | Punkt | Erledigt durch |
 |---|---|---|
-| T-3 | § 12 führt SCR-0142/0143 nicht als Referenz | Nachführung bei nächster Änderung |
-| S-1 | Höchstalter des Trust-Store nicht normiert | Fail-Closed-Grenze als Betriebsparameter, Prüfung in COM-ARCH-206/207 |
-| A-1 | D0–D7 nicht ausdrücklich als Binnengliederung benannt | Klarstellungszeile in § 7 bei nächster Änderung |
+| T-3 | § 12 führte SCR-0142/0143 nicht als Referenz | § 12 nachgeführt, SCR-0142 als ACCEPTED |
+| S-1 | Höchstalter des Trust-Store war nicht normiert | **UVK-5** in § 4.6.1: Fail-Closed oberhalb `trust_store_max_age`, Standard 30 Tage |
+| A-1 | D0–D7 waren nicht ausdrücklich als Binnengliederung benannt | Klarstellung im Vorspann von § 7 |
+
+Mit diesen drei Punkten sind alle Befunde aus § 15 bis § 17 geschlossen; es bleiben keine
+offenen Findings, auch keine nicht kritischen.
 
 ## 7. Nachweise
 
