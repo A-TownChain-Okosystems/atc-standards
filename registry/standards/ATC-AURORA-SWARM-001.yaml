@@ -1,0 +1,17 @@
+# GENERIERT aus registry/standards.yaml (Allokations-SSOT) — nicht manuell pflegen
+# ATC-STD-002 §3/§6: family_id != standard_id
+category: aurora-swarm
+family: LEGACY-SERIES
+family_id: LEGACY
+file: standards/aurora-swarm/ATC-AURORA-SWARM-001.md
+mandate: 'Owner-Entwurf 07.10.2026 (SCR-0138): 47 REQ-ASW, Schichtmodell L0-L4 + Control
+  Plane, Neuron/Synapse/Routing/Koalition/Konsens/Evidence Score/Verified Memory/Reputation/Selbstheilung/TEE/3
+  ABIs/hierarchische Schwärme/Authority-Plane GlobusOS-ShivaCore; Reifeklasse RESEARCH
+  (Zielarchitektur, nichts IMPLEMENTED); Status CANDIDATE, §9-Freigabe offen, Gates
+  ASW-G0..G3'
+registry_version: 1
+standard_id: ATC-AURORA-SWARM-001
+status: candidate
+title: 'Aurora Swarm Network (ASN) — Neuronales KI-Schwarmnetzwerk: Neuron-Modell,
+  Synapse-Protokoll, Schwarm-Kognition, Evidence-getriebene Verifikation und Authority-Integration'
+version: 0.1.0

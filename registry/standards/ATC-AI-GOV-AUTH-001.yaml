@@ -1,0 +1,17 @@
+# GENERIERT aus registry/standards.yaml (Allokations-SSOT) — nicht manuell pflegen
+# ATC-STD-002 §3/§6: family_id != standard_id
+category: ai-gov
+family: LEGACY-SERIES
+family_id: LEGACY
+file: standards/ai-gov/ATC-AI-GOV-AUTH-001.md
+mandate: 'Owner-Spezifikation 07.10. 22:28 (Volltext: technische Autorisierungs- und
+  Automatisierungsordnung statt Vollmacht) — maschinenlesbare SSOT ai/automation-authority.yaml
+  im .github-Hub; EXISTING-FIRST, Evidence-First, GREEN CI != VERIFIED, geschützte
+  Aktionen, Widerruf; SCR-0139'
+registry_version: 1
+standard_id: ATC-AI-GOV-AUTH-001
+status: approved
+title: ATC Automation Authority — Autorisierung der Engineering-Automatisierung als
+  technische Ordnung (Identity, Least-Privilege-Scopes, Lifecycle REGISTERED→VERIFIED,
+  Evidence-Pflicht, geschützte Aktionen, Audit-Kette, Widerruf)
+version: 1.0.0

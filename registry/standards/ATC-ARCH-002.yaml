@@ -1,0 +1,15 @@
+# GENERIERT aus registry/standards.yaml (Allokations-SSOT) — nicht manuell pflegen
+# ATC-STD-002 §3/§6: family_id != standard_id
+category: architecture
+family: LEGACY-SERIES
+family_id: LEGACY
+file: standards/architecture/ATC-ARCH-002.md
+mandate: Owner-Auftrag 17.11.2026 — Desktop-Schicht als Profil von GlobusOS; DEC-1
+  bis DEC-4 entschieden 17.11.2026 (DEC-3 Option B, DEC-4 Option C); Owner-Freigabe
+  nach ATC-STD-000 par 18 am 17.11.2026, Reviews par 15 bis par 17 PASS (SCR-0142
+  ACCEPTED); ACTIVE offen bis COM-ARCH-201 bis 210 belegt sind
+registry_version: 1
+standard_id: ATC-ARCH-002
+status: approved
+title: KAI-OS Desktop Layer Architecture Standard
+version: 1.0.0

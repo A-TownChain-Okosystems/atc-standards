@@ -286,7 +286,7 @@ standards:
     independence: L1
 
   - standard: ATC-ARCH-002
-    version: "0.1.3"
+    version: "1.0.0"
     applicability: MANDATORY
     implementation:
       status: implemented
