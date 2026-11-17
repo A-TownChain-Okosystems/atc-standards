@@ -2,30 +2,32 @@
 standard:
   id: ATC-ARCH-002
   title: "KAI-OS Desktop Layer Architecture Standard"
-  version: "0.1.3"
-  status: draft
+  version: "1.0.0"
+  status: approved
   category: architecture
   authority: "A-TownChain Ecosystems"
   owner: "Michael Wroblewski (Owner-Auftrag) / Standards Governance"
   created: "2026-11-17"
   updated: "2026-11-17"
-  normative: false
+  normative: true
   applies_to: "Desktop-Schicht des KAI-OS-Stacks; alle Repositories, die Desktop-, Sitzungs-, Anwendungs- oder Paketdienste beitragen"
   mandate: "Owner-Auftrag 17.11.2026 (Desktop-Zielbild, Windows-vergleichbare Bedienung bei eigener Architektur)"
   related: [ATC-ARCH-001, ATC-STD-000, ATC-STD-DESC-001, AD-008, KAI-CORE-RUNTIME-001]
-  effective_date: null
+  effective_date: "2026-11-17"
   review_date: "2027-01-31"
   dependencies: [ATC-ARCH-001, ATC-STD-000, ATC-STD-DESC-001]
   requirements: [REQ-ARCH-201, REQ-ARCH-232]
-  changelog: "0.1.0 (2026-11-17): Erster Entwurf nach Owner-Auftrag; DRAFT, nicht normativ. 0.1.1 (2026-11-17): DEC-1 als Begriffsordnung und DEC-2 als Anwendungsdomaene aufgenommen; weiterhin DRAFT."
+  changelog: "0.1.0 (2026-11-17): Erster Entwurf nach Owner-Auftrag; DRAFT, nicht normativ. 0.1.1 (2026-11-17): DEC-1 als Begriffsordnung und DEC-2 als Anwendungsdomaene aufgenommen. 0.1.2 (2026-11-17): DEC-3 und DEC-4 als Entscheidungsvorlagen vorgelegt. 0.1.3 (2026-11-17): DEC-3 Option B (KOM-1 bis KOM-4, par 4.5.1) und DEC-4 Option C (UVK-1 bis UVK-4, par 4.6.1) eingezogen. 1.0.0 (2026-11-17): Owner-Freigabe nach ATC-STD-000 par 18; Technical, Security und Architecture Review PASS ohne kritische Findings (par 15 bis par 17); normativ. ACTIVE nicht erklaert: COM-ARCH-201 bis 210 sind nicht durchgaengig belegt. Review-Befunde T-3, S-1 und A-1 in derselben Fassung behoben."
 ---
 
-# ATC-ARCH-002 — KAI-OS Desktop Layer Architecture Standard (v0.1.1, DRAFT)
+# ATC-ARCH-002 — KAI-OS Desktop Layer Architecture Standard (v1.0.0, APPROVED)
 
-> **Status:** DRAFT. Nicht normativ, nicht referenzierbar, nicht in der Registry
-> als `approved` geführt. Verbindlichkeit entsteht ausschließlich durch
-> Owner-Genehmigung nach ATC-STD-000 §18 (Approval), Review-Kette nach §14
-> (Technical §15, Security §16, Architecture §17). Siehe SCR-0142 §9.
+> **Status:** APPROVED (normativ), Version 1.0.0, wirksam 17.11.2026.
+> Owner-Freigabe nach ATC-STD-000 §18 am 17.11.2026 („Genehmigt“); Prüfkette
+> §15 Technical, §16 Security, §17 Architecture je PASS ohne kritische Findings.
+> Nachweis: `approval/APPROVAL-DECISION-2026-11-17-001-ATC-ARCH-002.md`.
+> **Nicht erklärt ist ACTIVE:** die zehn COM-ARCH-Kriterien aus § 8 sind nicht
+> durchgängig mit gebundenem Commit belegt; die Implementierungsstufe bleibt offen.
 > **Governance:** ATC-STD-000. **Struktur:** ATC-STD-DESC-001 §5.
 
 ## 1. Zweck
@@ -285,6 +287,13 @@ ein fehlender Chain-Kontakt ist kein Freibrief und kein Abbruchgrund.
 signiertes Trust-Store-Update, das denselben Pruefpfad nutzt. Es entsteht keine
 zweite Identitaets- oder Rechteinstanz neben ShivaCore.
 
+**UVK-5** — Der Trust-Store MUSS ein Hoechstalter tragen und bei dessen
+Ueberschreitung fail-closed wirken: Ist der juengste Nachweis aelter als der
+Betriebsparameter `trust_store_max_age` (Standardwert 30 Tage), DARF keine
+Installation und kein Update authentifiziert werden. Ein fehlendes Netz ist kein
+Grund, die Grenze zu ueberschreiten. Die Grenze ist in den Negativtests zu
+COM-ARCH-206 und COM-ARCH-207 zu belegen.
+
 ### 4.7 Bedienbarkeit und Assistenz
 
 **REQ-ARCH-227** — Ein Anwender MUSS ohne Fachkenntnis über Blockchain, Kernel
@@ -332,6 +341,11 @@ vollständigen Conformance-Nachweis nach § 8.
    der Owner; die nicht gewählte wird stillgelegt, nicht geduldet.
 
 ## 7. Schnittstellen, Abhängigkeiten und Zuordnung
+
+Die Stufen **D0 bis D7 in der folgenden Tabelle sind eine Binnengliederung der
+Desktop-Schicht** und keine zweite Layer-Achse neben L0 bis L12 aus ATC-ARCH-001.
+Wo die Tabelle eine Stufe einem Repository zuordnet, gilt dessen Layer-Zuordnung
+aus ATC-ARCH-001 unverändert.
 
 | Schicht | Komponente | Verantwortliches Repository | Status |
 |---|---|---|---|
@@ -425,7 +439,8 @@ dazu benutzt werden, ATC-ARCH-001 zu überschreiben.
 **INFORMATIVE**
 - KAI-CORE-RUNTIME-001 — Core Runtime Track
 - SCR-0129 — Standalone First, Ecosystem Second (PROPOSED)
-- SCR-0142 — Antrag zu diesem Standard (PROPOSED)
+- SCR-0142 — Antrag zu diesem Standard (ACCEPTED, 17.11.2026)
+- SCR-0143 — Freigabereferenz § 9 oder § 18 im Standardbestand (PROPOSED)
 
 ## 13. Changelog
 
@@ -435,6 +450,10 @@ dazu benutzt werden, ATC-ARCH-001 zu überschreiben.
 | 0.1.3 | 2026-11-17 | DEC-3 (Option B) und DEC-4 (Option C) nach Owner-Entscheid normativ eingezogen: § 4.5.1 (KOM-1 bis KOM-4) und § 4.6.1 (UVK-1 bis UVK-4), § 7 Zeilen D5 und D6, § 14.1. § 14.2 hat keine offenen Fragen mehr; offen ist allein das Freigabeverfahren nach ATC-STD-000 § 18. |
 | 0.1.2 | 2026-11-17 | Freigabereferenz korrigiert: Approval ist ATC-STD-000 §18, nicht §9 (§9 ist Standard Structure). Verweise auf die Entscheidungsvorlagen fuer DEC-3 und DEC-4 in SCR-0142 §8. Inhalt der Anforderungen unveraendert. |
 | 0.1.1 | 2026-11-17 | DEC-1 (Begriffsordnung, § 3.1) und DEC-2 (Anwendungsdomaene, § 7.1) nach Owner-Entscheidung aufgenommen. DRAFT bleibt bestehen; keine neue Standard-ID, keine Umbenennung, keine Aenderung der Architekturhierarchie. |
+
+| 0.1.2 | 2026-11-17 | DEC-3 (Kompatibilitaetsumfang) und DEC-4 (Update-Vertrauenskette) als Entscheidungsvorlagen vorgelegt. |
+| 0.1.3 | 2026-11-17 | DEC-3 Option B als KOM-1 bis KOM-4 (§ 4.5.1), DEC-4 Option C als UVK-1 bis UVK-4 (§ 4.6.1); § 14.2 ohne offene Fragen. |
+| 1.0.0 | 2026-11-17 | Owner-Freigabe nach § 18, Reviews § 15 bis § 17 PASS, normativ. Review-Befunde geschlossen: T-3 (§ 12), S-1 (UVK-5), A-1 (§ 7). ACTIVE offen bis COM-ARCH-201 bis 210 belegt sind. |
 
 ## 14. Offene Entscheidungen
 
@@ -456,3 +475,73 @@ abgeschlossen ist.
 Keine offenen Fachfragen. Was fehlt, ist das Freigabeverfahren nach
 ATC-STD-000 § 18: Technical Review, Security Review, Architecture Review und
 Owner-Approval. Bis dahin bleibt dieser Standard `draft` und nicht referenzierbar.
+
+## 15. Technical Review (geführt am 17.11.2026, ATC-STD-000 §15)
+
+**Gegenstand:** diese Fassung (Datei, Registry-Eintrag, Begleitdokument).
+
+| Prüfpunkt | Befund |
+|---|---|
+| Anforderungsbestand | REQ-ARCH-201 bis 232 vollständig, keine Doppel-ID, keine Kollision mit anderen Standards |
+| Prüfkriterien | COM-ARCH-201 bis 210 vorhanden, je Anforderungsblock zugeordnet |
+| Struktur | ATC-STD-DESC-001 § 5 vollständig abgebildet (Metadaten, Zweck, Geltungsbereich, Begriffe, Anforderungen, Rollen, Prozesse, Schnittstellen, Compliance, Ausnahmen, Versionierung, Änderungsmanagement, Referenzen, Changelog, offene Entscheidungen) |
+| Referenzen | ATC-ARCH-001, ATC-STD-000, ATC-STD-DESC-001, AD-008, KAI-CORE-RUNTIME-001, SCR-0142 auflösbar |
+
+**Befunde.** T-1 (in dieser Fassung behoben): das Frontmatter-Changelog endete bei
+0.1.1, obwohl 0.1.2 und 0.1.3 eingezogen waren. T-2 (behoben): die Überschrift
+nannte v0.1.1 bei Frontmatter 0.1.3. T-3 (in dieser Fassung behoben): § 12 führt
+SCR-0142 und SCR-0143 noch nicht als Referenz; Nachführung mit der nächsten
+Änderung.
+
+**Ergebnis: PASS**, keine kritischen Findings.
+
+## 16. Security Review (geführt am 17.11.2026, ATC-STD-000 §16)
+
+| Prüfpunkt | Beurteilung |
+|---|---|
+| Alleinige Rechteinstanz | REQ-ARCH-215 und 218, COM-ARCH-204; Ausnahmen nach § 9 unzulässig, damit keine Hintertür |
+| Sandbox und Portale | KOM-1 bis KOM-4 verbieten procfs-, sysfs- und devfs-Emulation, systemd-Kompatibilität und Container-Netzwerk; der Bus begründet keine Zusatzrechte |
+| Update-Vertrauenskette | UVK-1 bis UVK-4: DID als Herausgeber, lokale Signatur offline, authentisch nur bei gemeinsamem Zutreffen, Widerruf über signiertes Trust-Store-Update, keine zweite Identitätsinstanz |
+| Kompatibilitätsschicht | REQ-ARCH-221: abschaltbar, blockiert den Systemstart nicht, erweitert keine Kernelrechte |
+
+**Befunde.** S-1 (in dieser Fassung behoben): die Vertrauenskette regelte den
+Widerruf, aber nicht das Höchstalter des Trust-Store. Als **UVK-5** (§ 4.6.1)
+normiert: Fail-Closed oberhalb von `trust_store_max_age` (Standardwert 30 Tage),
+Nachweis in den Negativtests zu COM-ARCH-206 und 207.
+S-2 (dokumentiert): Signaturprüfung ist normativ gefordert und nicht implementiert;
+COM-ARCH-206 bleibt offen und ist damit ein ACTIVE-Hindernis, kein
+Freigabehindernis, weil ohne gültigen Trust-Store nichts authentifiziert wird.
+
+**Ergebnis: PASS**, keine kritischen Findings.
+
+## 17. Architecture Review (geführt am 17.11.2026, ATC-STD-000 §17)
+
+| Prüfpunkt | Beurteilung |
+|---|---|
+| Rollen nach ATC-ARCH-001 | KAI-OS bleibt Architekturbegriff, GlobusOS das Betriebssystem, ShivaCore der Kernel, ATC-VM die Ausführungsgrenze, A-TownChain die Blockchain; getragen von § 2.1 und DEC-1 (§ 3.1) |
+| Keine Doppelimplementierung | § 2.1 dritter Punkt, REQ-ARCH-201, COM-ARCH-205 |
+| Sprachgrenze nach AD-008 | Desktop-Komponenten führen keine Konsens-, VM- oder Kernel-Semantik; ATCLang bleibt on-chain, Rust die native Infrastruktur |
+| Entscheidungen | DEC-3 und DEC-4 eingezogen, § 14.2 ohne offene Fragen; Genesis Engine als Anwendungsdomäne (§ 7.1) ohne Unterordnung |
+
+**Befunde.** A-1 (in dieser Fassung behoben): § 7 benennt die Stufen D0 bis D7
+jetzt ausdrücklich als Binnengliederung der Desktop-Schicht und keine zweite
+Layer-Achse neben L0 bis L12 aus ATC-ARCH-001; die Layer-Zuordnung der
+zugeordneten Repositories bleibt unverändert. A-2: jede Stufe ist genau einem verantwortlichen Repository
+zugeordnet (§ 7), damit ist COM-ARCH-201 prüfbar.
+
+**Ergebnis: PASS**, keine kritischen Findings.
+
+## 18. Freigabe (Owner, 17.11.2026, ATC-STD-000 §18)
+
+Wortlaut der Freigabe: „Genehmigt“. Wirkung: `status: approved`,
+`normative: true`, Version 1.0.0, `effective_date: 2026-11-17`. Die drei Reviews
+§ 15 bis § 17 sind PASS ohne kritische Findings; die Bedingung aus ATC-STD-000
+§ 18 ist damit erfüllt.
+
+**Grenze der Freigabe.** ACTIVE ist nicht erklärt. Die zehn Kriterien aus § 8
+sind nicht durchgängig mit gebundenem Commit und reproduzierbarem Nachweis
+belegt; der Nachweisstand ist in der Desktop-Gap-Analyse geführt. Erst wenn alle
+zehn belegt sind, ist ein Wechsel auf ACTIVE zulässig.
+
+**Einfrieren.** Mit dem Merge dieser Fassung gilt sie nach ATC-STD-000 § 30 als
+eingefroren; Änderungen laufen über SCR nach § 11.

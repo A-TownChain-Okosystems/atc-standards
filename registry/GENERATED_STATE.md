@@ -4,9 +4,9 @@
 >
 > Source: `registry/standards.yaml`
 >
-> ATC-REGISTRY-BLOB-SHA256: 018ba34f57a8b9ccbe69c6e6db549319a47c4f31
+> ATC-REGISTRY-BLOB-SHA256: c6aa01e96b5c9779cdc49b325cd28bd41f166901
 >
-> Registry standard state currently anchored at **ATC-STD-000 v1.3.0 / APPROVED**.
+> Registry standard state currently anchored at **ATC-STD-000 v1.3.1 / APPROVED**.
 >
 > CI gate: `tools/consistency/registry_view_gate.py`
 
