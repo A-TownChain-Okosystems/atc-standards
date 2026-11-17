@@ -1,5 +1,5 @@
 # AGENT_MANIFEST.md
-> **Registry-Stand (GENERIERT aus `registry/standards.yaml`):** 534 Standards — 506 APPROVED · 27 CANDIDATE · 76 Familien · Stand 2026-11-17 09:35 UTC+2 · SHA-256 `3850d5bcb98f…`
+> **Registry-Stand (GENERIERT aus `registry/standards.yaml`):** 534 Standards — 506 APPROVED · 27 CANDIDATE · 76 Familien · Stand 2026-11-17 10:20 UTC+2 · SHA-256 `279e08fb8085…`
 
 > **Generated-state declaration:** This manifest is a governance pointer, not a second standards registry. The authoritative standards SSOT is `registry/standards.yaml`; implementation status is authoritative in `registry/standard-implementation.yaml`.
 >
@@ -45,7 +45,7 @@ The responsible agent MUST comply with all standards applicable to the repositor
 - `REFERENCE`: informative unless another normative rule makes it applicable.
 - `NOT_APPLICABLE`: requires an explicit recorded justification.
 
-`ATC-STD-000 v1.3.0` is the governance authority and the registry is the source of truth. A copied list of standard IDs in this file MUST NOT override the registry.
+`ATC-STD-000 v1.3.1` is the governance authority and the registry is the source of truth. A copied list of standard IDs in this file MUST NOT override the registry.
 
 ## 2. Required machine-readable bindings
 

@@ -377,7 +377,7 @@ class TestConsistencyTools:
         fixture.write_text(
             "repositories:\n  - name: a-townchain-os\n  - name: atc-vm\n", encoding="utf-8"
         )
-        assert m.repo_list(str(fixture)) == ["a-townchain-os", "atc-vm"]
+        assert m.repo_names(str(fixture)) == ["a-townchain-os", "atc-vm"]
 
     def test_cross_registry_main_smoke(self):
         proc = subprocess.run(
