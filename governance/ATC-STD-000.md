@@ -8,7 +8,7 @@ standard:
   authority: A-TownChain Ecosystems
   owner: ShivaCoreDev
   created: "2026-09-07"
-  updated: "2026-09-07"
+  updated: "2026-11-17"
   normative: true
   supersedes: []
   superseded_by: null
@@ -610,12 +610,15 @@ die Verfassung ist vollstaendig durch die eigene Kette gelaufen.
 
 ## Changelog
 
-- 1.3.1 (17.11.2026, APPROVED): Klarstellung in §9 — die Genehmigung eines
-  Standards regelt §18, die Pruefkette §14 bis §17; historische Verweise auf
-  §9 als Freigabegrundlage meinen diese Stelle und bleiben nach §30
-  unangetastet. Reine Klarstellung, keine neue Anforderung und keine
-  Abschwaechung bestehender Regeln. Ausloeser: Befund in SCR-0142 §10
-  (133 Stellen in 118 Dateien), umgesetzt als SCR-0143 Option A.
+- 1.3.1 (17.11.2026): Klarstellung in §9 — die Genehmigung eines Standards
+  regelt §18, die Pruefkette §14 bis §17; historische Verweise auf §9 als
+  Freigabegrundlage meinen diese Stelle und bleiben nach §30 unangetastet.
+  Reine Klarstellung, keine neue Anforderung und keine Abschwaechung
+  bestehender Regeln. Ausloeser: Befund in SCR-0142 §10 (133 Stellen in
+  118 Dateien), umgesetzt als SCR-0143 Option A. Freigabe: Owner-Entscheid
+  17.11.2026 unter Erlass nach §14.1 Regel 3; Entscheid, Merge und
+  Verifikation sind in SCR-0143 §7 getrennt dokumentiert
+  (APPROVAL-DECISION-2026-11-17-000-v1.3.1.md).
 
 - 1.2.0 (07.09.2026, APPROVED): §37 ID-Allokationsprozess (REQ-STD-002,
   Registry-First, keine Lückennachbesetzung) + §38 Security Considerations
