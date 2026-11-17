@@ -2,7 +2,7 @@
 standard:
   id: ATC-ARCH-002
   title: "KAI-OS Desktop Layer Architecture Standard"
-  version: "0.1.1"
+  version: "0.1.2"
   status: draft
   category: architecture
   authority: "A-TownChain Ecosystems"
@@ -24,7 +24,8 @@ standard:
 
 > **Status:** DRAFT. Nicht normativ, nicht referenzierbar, nicht in der Registry
 > als `approved` geführt. Verbindlichkeit entsteht ausschließlich durch
-> Owner-Genehmigung nach ATC-STD-000 §9 (siehe SCR-0142).
+> Owner-Genehmigung nach ATC-STD-000 §18 (Approval), Review-Kette nach §14
+> (Technical §15, Security §16, Architecture §17). Siehe SCR-0142 §9.
 > **Governance:** ATC-STD-000. **Struktur:** ATC-STD-DESC-001 §5.
 
 ## 1. Zweck
@@ -363,7 +364,7 @@ Ausnahmen von REQ-ARCH-201, 215 und 218 sind nicht möglich.
 ## 10. Versionierung
 
 SemVer. 0.x gilt als Entwurf und ist nicht referenzierbar. 1.0.0 setzt
-Owner-Genehmigung nach ATC-STD-000 §9 und vollständige COM-Evidenz für den
+Owner-Genehmigung nach ATC-STD-000 §18 und vollständige COM-Evidenz für den
 Freigabeumfang voraus.
 
 ## 11. Änderungsmanagement
@@ -390,6 +391,7 @@ dazu benutzt werden, ATC-ARCH-001 zu überschreiben.
 | Version | Datum | Änderung |
 |---|---|---|
 | 0.1.0 | 2026-11-17 | Erster Entwurf nach Owner-Auftrag. DRAFT, nicht normativ. |
+| 0.1.2 | 2026-11-17 | Freigabereferenz korrigiert: Approval ist ATC-STD-000 §18, nicht §9 (§9 ist Standard Structure). Verweise auf die Entscheidungsvorlagen fuer DEC-3 und DEC-4 in SCR-0142 §8. Inhalt der Anforderungen unveraendert. |
 | 0.1.1 | 2026-11-17 | DEC-1 (Begriffsordnung, § 3.1) und DEC-2 (Anwendungsdomaene, § 7.1) nach Owner-Entscheidung aufgenommen. DRAFT bleibt bestehen; keine neue Standard-ID, keine Umbenennung, keine Aenderung der Architekturhierarchie. |
 
 ## 14. Offene Entscheidungen
@@ -409,5 +411,5 @@ abgeschlossen ist.
 
 | ID | Frage | Empfehlung | Blockiert |
 |---|---|---|---|
-| DEC-3 | Umfang der Linux-Kompatibilitätsschicht | Eng begrenzt, abschaltbar, kein Rechte-Mapping über Portale hinaus | D6 |
-| DEC-4 | Update-Kanal und Vertrauenskette (eigene Signatur, DID-basiert, beides) | Beides, mit Offline-Verifikation | D5 |
+| DEC-3 | Umfang der Linux-Kompatibilitätsschicht | Eng begrenzt, abschaltbar, kein Rechte-Mapping über Portale hinaus. Entscheidungsvorlage: SCR-0142 §8.1 | D6 |
+| DEC-4 | Update-Kanal und Vertrauenskette (eigene Signatur, DID-basiert, beides) | Beides, mit Offline-Verifikation. Entscheidungsvorlage: SCR-0142 §8.2 | D5 |
