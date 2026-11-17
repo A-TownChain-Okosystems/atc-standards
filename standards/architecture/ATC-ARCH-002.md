@@ -2,7 +2,7 @@
 standard:
   id: ATC-ARCH-002
   title: "KAI-OS Desktop Layer Architecture Standard"
-  version: "0.1.0"
+  version: "0.1.1"
   status: draft
   category: architecture
   authority: "A-TownChain Ecosystems"
@@ -17,10 +17,10 @@ standard:
   review_date: "2027-01-31"
   dependencies: [ATC-ARCH-001, ATC-STD-000, ATC-STD-DESC-001]
   requirements: [REQ-ARCH-201, REQ-ARCH-232]
-  changelog: "0.1.0 (2026-11-17): Erster Entwurf nach Owner-Auftrag; DRAFT, nicht normativ."
+  changelog: "0.1.0 (2026-11-17): Erster Entwurf nach Owner-Auftrag; DRAFT, nicht normativ. 0.1.1 (2026-11-17): DEC-1 als Begriffsordnung und DEC-2 als Anwendungsdomaene aufgenommen; weiterhin DRAFT."
 ---
 
-# ATC-ARCH-002 — KAI-OS Desktop Layer Architecture Standard (v0.1.0, DRAFT)
+# ATC-ARCH-002 — KAI-OS Desktop Layer Architecture Standard (v0.1.1, DRAFT)
 
 > **Status:** DRAFT. Nicht normativ, nicht referenzierbar, nicht in der Registry
 > als `approved` geführt. Verbindlichkeit entsteht ausschließlich durch
@@ -87,6 +87,44 @@ der **Architekturbegriff**, GlobusOS ist **das Betriebssystem**, ShivaCore ist
 | Portal | vermittelter Zugriff auf Datei, Bildschirm, Zwischenablage, Mikrofon, Standort, Kamera |
 | Authority-SSOT | alleinige Quelle für Rechteentscheidungen: ShivaCore |
 | Conformance-Nachweis | prüfbarer Beleg, dass eine Komponente die COM-Kriterien erfüllt |
+
+
+### 3.1 Verbindliche Begriffsordnung (DEC-1, entschieden am 17.11.2026)
+
+Die folgende Zuordnung ist verbindlich. Sie bildet die Regelung aus
+ATC-ARCH-001 ab und aendert sie nicht.
+
+| Begriff | Rolle in der Architektur | Regel |
+|---|---|---|
+| KAI | fuehrende Bezeichnung der Gesamtarchitektur | BEG-1 |
+| KAI-OS | gueltiger Alias derselben Gesamtarchitektur | BEG-2 |
+| GlobusOS | das einzige Betriebssystem innerhalb der Architektur | BEG-3 |
+| ShivaCore | der einzige Kernel | BEG-4 |
+| ATC-VM | die virtuelle Maschine | BEG-5 |
+| A-TownChain | die Blockchain | BEG-6 |
+
+**BEG-1** — KAI MUSS als fuehrende Bezeichnung der Gesamtarchitektur verwendet
+werden.
+
+**BEG-2** — KAI-OS ist ein gueltiger Alias derselben Gesamtarchitektur. KAI-OS
+DARF NICHT als eigenstaendiges Betriebssystem neben GlobusOS definiert werden;
+eine solche Definition widerspricht ATC-ARCH-001.
+
+**BEG-3** — GlobusOS ist das einzige Betriebssystem innerhalb der Architektur.
+Ein zweites Betriebssystem DARF NICHT entstehen, auch nicht unter dem Namen
+KAI-OS.
+
+**BEG-4** — ShivaCore ist der einzige Kernel. Ein zweiter Kernel DARF NICHT
+entstehen.
+
+**BEG-5** — ATC-VM ist die virtuelle Maschine der Architektur. Eine zweite
+VM-Implementierung DARF NICHT entstehen.
+
+**BEG-6** — A-TownChain ist die Blockchain der Architektur.
+
+Die Begriffsordnung gilt fuer alle Standards, Dokumente und Repository-Texte.
+Sie entfaltet keine normative Wirkung, solange dieser Standard den Status DRAFT
+hat.
 
 ## 4. Normative Anforderungen
 
@@ -275,7 +313,30 @@ vollständigen Conformance-Nachweis nach § 8.
 Der Browser ist gemäß REQ-ARCH-222 eine gewöhnliche Sandbox-Anwendung. Ein
 Produktname für ihn ist frei, begründet aber keine Sonderrechte.
 
-## 8. Compliance und Prüfungen
+
+### 7.1 Anwendungsdomaene Genesis Engine (DEC-2, entschieden am 17.11.2026)
+
+Genesis Engine ist eine **Anwendungsdomaene** und eine eigenstaendige
+KAI-Technologiedomaene. Verbindlich gilt:
+
+**ZUO-1** — Genesis Engine ist keine Unterkomponente von GlobusOS. Die
+Klassifikation als Anwendungsdomaene DARF keine hierarchische Unterordnung
+innerhalb von GlobusOS erzeugen.
+
+**ZUO-2** — Genesis Engine ist kein Bestandteil von Aurora AI.
+
+**ZUO-3** — Genesis Engine ist keine Unterfunktion von ATC-VM oder
+A-TownChain.
+
+**ZUO-4** — Die Anwendungsdomaene umfasst KI-gestuetzte Spieleentwicklung,
+Softwareprogrammierung und Entwicklungswerkzeuge.
+
+Begruendung: Genesis Engine stellt Entwicklungs- und Anwendungsfunktionen
+bereit, keine Betriebssystem-Systemdomaene wie Kernel, Speicherverwaltung oder
+Treibersystem. Eine Systemdomaene waere eine siebte Kernkomponente und
+widerspraeche ATC-ARCH-001.
+
+## 8. Compliance und Pruefungen
 
 | ID | Prüfkriterium | Methode |
 |---|---|---|
@@ -329,12 +390,24 @@ dazu benutzt werden, ATC-ARCH-001 zu überschreiben.
 | Version | Datum | Änderung |
 |---|---|---|
 | 0.1.0 | 2026-11-17 | Erster Entwurf nach Owner-Auftrag. DRAFT, nicht normativ. |
+| 0.1.1 | 2026-11-17 | DEC-1 (Begriffsordnung, § 3.1) und DEC-2 (Anwendungsdomaene, § 7.1) nach Owner-Entscheidung aufgenommen. DRAFT bleibt bestehen; keine neue Standard-ID, keine Umbenennung, keine Aenderung der Architekturhierarchie. |
 
 ## 14. Offene Entscheidungen
 
+### 14.1 Entschieden am 17.11.2026 (Owner)
+
+| ID | Entscheidung | Verbindliche Fassung |
+|---|---|---|
+| DEC-1 | **Begriffstabelle** | KAI fuehrend, KAI-OS Alias derselben Gesamtarchitektur, GlobusOS einziges Betriebssystem, ShivaCore einziger Kernel, ATC-VM die VM, A-TownChain die Blockchain; normative Fassung in § 3.1. Status bleibt DRAFT bis zum regulaeren Freigabeverfahren. |
+| DEC-2 | **Anwendungsdomaene** | Genesis Engine ist eigenstaendige KAI-Technologiedomaene, keine Unterkomponente von GlobusOS, kein Bestandteil von Aurora AI, keine Unterfunktion von ATC-VM oder A-TownChain; Umfang: KI-gestuetzte Spieleentwicklung, Softwareprogrammierung, Entwicklungswerkzeuge; normative Fassung in § 7.1. |
+
+Beide Entscheidungen sind in den Entwurf uebernommen. Der Standard bleibt
+`draft` und `normative: false`, bis das Freigabeverfahren nach ATC-STD-000
+abgeschlossen ist.
+
+### 14.2 Offen
+
 | ID | Frage | Empfehlung | Blockiert |
 |---|---|---|---|
-| DEC-1 | Produktname des ausgelieferten Desktops („KAI-OS Desktop Edition" vs. „GlobusOS Desktop") | Profilname unter GlobusOS, KAI-OS bleibt Architekturbegriff | Außenkommunikation, nicht die Technik |
-| DEC-2 | Rolle von genesis-engine im Zielbild: Anwendungsdomäne oder Systemdomäne | Anwendungsdomäne. Eine Systemdomäne wäre eine siebte Kernkomponente und widerspräche ATC-ARCH-001 | § 7, Zuordnung |
 | DEC-3 | Umfang der Linux-Kompatibilitätsschicht | Eng begrenzt, abschaltbar, kein Rechte-Mapping über Portale hinaus | D6 |
 | DEC-4 | Update-Kanal und Vertrauenskette (eigene Signatur, DID-basiert, beides) | Beides, mit Offline-Verifikation | D5 |

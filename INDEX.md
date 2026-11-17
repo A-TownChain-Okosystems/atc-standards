@@ -152,8 +152,10 @@ Kernregister: **standards.yaml** (Bestand, 534 Standards) · **versions.yaml**
 | FAM-76 | Aurora Swarm Network (AURORA-SWARM) | 1 | 1 | 0 |
 
 Statusverteilung der 534 Registry-Standards: {'approved': 506, 'draft': 1, 'candidate': 27}.
-Alle 534 sind APPROVED und normativ (§30-eingefroren); Details je Standard
-in registry/standards.yaml und registry/versions.yaml.
+Nicht alle Eintraege sind freigegeben: 506 sind `approved`, 27 `candidate` und
+einer `draft` (ATC-ARCH-002, Desktop-Schicht, nicht normativ). Normativ sind 518
+der 534 Eintraege, 16 nicht. Details je Standard in registry/standards.yaml und
+registry/versions.yaml.
 
 ## 4. Master-Registry-Tabelle (534 Standards)
 
