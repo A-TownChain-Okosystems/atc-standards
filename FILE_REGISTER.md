@@ -1,7 +1,7 @@
 # 📋 File Register — atc-standards
 
 > **Zweck:** Vollständige Liste aller versionierten Dateien (SCR-0082, Matrix-Dim-12).
-> **Generiert:** 2026-11-17 00:28 UTC | Methode: `git ls-files` (deterministisch, ohne Netzabruf)
+> **Generiert:** 2026-11-17 00:42 UTC | Methode: `git ls-files` (deterministisch, ohne Netzabruf)
 > **Reproduktion:** `git ls-files | sort` im Repository-Wurzelverzeichnis
 > **Standards:** ATC-STD-201 · Evidence: `.atc/evidence/evidence.yaml`
 > **Hinweis:** Snapshot zum Generierungszeitpunkt. Neue Dateien sind erst nach
@@ -13,9 +13,9 @@
 
 | Metrik | Wert |
 |--------|------|
-| **Total Dateien** | 2160 |
-| **.yaml** | 1187 |
-| **.md** | 881 |
+| **Total Dateien** | 2163 |
+| **.yaml** | 1188 |
+| **.md** | 883 |
 | **.py** | 42 |
 | **.yml** | 16 |
 | **.json** | 15 |
@@ -329,6 +329,7 @@
 - `change-requests/SCR-0130.md`
 - `change-requests/SCR-0131.md`
 - `change-requests/SCR-0141.md`
+- `change-requests/SCR-0142.md`
 - `contracts/README.md`
 - `contracts/bridge/README.md`
 - `contracts/defi/README.md`
@@ -1240,6 +1241,8 @@
 - `standards/applications/ATC-STD-587.metadata.yaml`
 - `standards/architecture/ATC-ARCH-001.md`
 - `standards/architecture/ATC-ARCH-001.metadata.yaml`
+- `standards/architecture/ATC-ARCH-002.md`
+- `standards/architecture/ATC-ARCH-002.metadata.yaml`
 - `standards/architecture/ATC-STD-100.md`
 - `standards/architecture/ATC-STD-100.metadata.yaml`
 - `standards/audit/ATC-STD-640.md`
