@@ -54,7 +54,7 @@ def repo_list(path):
     """
     with open(path, encoding="utf-8") as f:
         data = yaml.safe_load(f)
-    active, skipped = [], []
+    active, skipped = [], []  # skipped: (name, status, migrated_to)
     for entry in data.get("repositories", []):
         name = entry.get("name")
         if not name:
@@ -65,6 +65,11 @@ def repo_list(path):
             continue
         active.append(name)
     return active, skipped
+
+
+def repo_names(path):
+    """Nur die aktiven Consumer-Namen (stabile Signatur fuer Aufrufer/Tests)."""
+    return repo_list(path)[0]
 
 
 def fetch_readme_github(org, repo, token=None):
