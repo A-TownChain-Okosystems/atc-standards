@@ -40,6 +40,7 @@ def constitution_version(default: str = "1.3.0") -> str:
                 return str(std.get("version", default))
     return default
 
+
 RULES = {
     "repository": (
         "MANDATORY",
