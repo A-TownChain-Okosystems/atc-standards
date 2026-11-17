@@ -8,7 +8,7 @@
 ```yaml
 state:
   id: ATC-STATE-20261117-e464f6ef
-  generated_at: "2026-11-17 13:07 UTC+2"
+  generated_at: "2026-11-17 13:27 UTC+2"
   registry_version: "1.1.0"
   registry_sha256: "e464f6efacdc3c7ce101e3e2d1d215d268b4b6e893bdd6dff0ff78cf19e81939"
   standards_total: 534
