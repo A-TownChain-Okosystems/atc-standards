@@ -152,10 +152,12 @@ Kernregister: **standards.yaml** (Bestand, 534 Standards) · **versions.yaml**
 | FAM-76 | Aurora Swarm Network (AURORA-SWARM) | 1 | 1 | 0 |
 
 Statusverteilung der 534 Registry-Standards: {'approved': 506, 'draft': 1, 'candidate': 27}.
-Nicht alle Eintraege sind freigegeben: 506 sind `approved`, 27 `candidate` und
-einer `draft` (ATC-ARCH-002, Desktop-Schicht, nicht normativ). Normativ sind 518
-der 534 Eintraege, 16 nicht. Details je Standard in registry/standards.yaml und
-registry/versions.yaml.
+Nicht alle Einträge sind freigegeben: 506 `approved`,
+27 `candidate`, 1 `draft`
+(ATC-ARCH-002, nicht normativ).
+Normativ sind 518 der 534
+Einträge, 16 nicht. Details je
+Standard in registry/standards.yaml und registry/versions.yaml.
 
 ## 4. Master-Registry-Tabelle (534 Standards)
 
@@ -202,7 +204,7 @@ Sortiert nach ID; Version = aktuelle Registry-Version; Status = Registry-Status.
 | ATC-AI-GOV-MANIFEST-001 | ATC Agent Governance — Agent Identity & Scope (Manifest, Registry, Capabilities, Status-Modell) | ai-gov | 1.0.0 | approved | standards/ai-gov/ATC-AI-GOV-MANIFEST-001.md |
 | ATC-AI-GOV-POLICY-001 | ATC Agent Governance — Maschinenlesbare Policies (ATC-POL-001..010, MUST/SHOULD/MAY, Verdikt-Modell) | ai-gov | 1.0.0 | approved | standards/ai-gov/ATC-AI-GOV-POLICY-001.md |
 | ATC-ARCH-001 | KAI-OS System Architecture Standard | architecture | 1.0.0 | approved | standards/architecture/ATC-ARCH-001.md |
-| ATC-ARCH-002 | KAI-OS Desktop Layer Architecture Standard | architecture | 0.1.0 | draft | standards/architecture/ATC-ARCH-002.md |
+| ATC-ARCH-002 | KAI-OS Desktop Layer Architecture Standard | architecture | 0.1.1 | draft | standards/architecture/ATC-ARCH-002.md |
 | ATC-AURORA-SWARM-001 | Aurora Swarm Network (ASN) — Neuronales KI-Schwarmnetzwerk: Neuron-Modell, Synapse-Protokoll, Schwarm-Kognition, Evidence-getriebene Verifikation und Authority-Integration | aurora-swarm | 0.1.0 | candidate | standards/aurora-swarm/ATC-AURORA-SWARM-001.md |
 | ATC-ENT-001 | Enterprise Governance Standard (P0) | enterprise | 1.1.0 | approved | standards/enterprise/ATC-ENT-001.md |
 | ATC-ENT-002 | Rollen & Verantwortlichkeiten Standard (P0) | enterprise | 1.1.0 | approved | standards/enterprise/ATC-ENT-002.md |
