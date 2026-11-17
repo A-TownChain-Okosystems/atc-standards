@@ -3,7 +3,7 @@
 taxonomy:
   standard: ATC-STD-TAXONOMY-001
   version: 1.0.0
-  generated: '2026-10-07'
+  generated: '2026-11-17'
   hierarchy:
   - DOMAIN
   - FAMILY
@@ -382,7 +382,7 @@ taxonomy:
       id_range: ATC-STD-100–199
       source: numeric-§7
       description: Architektur-Standards
-      standards_count: 2
+      standards_count: 3
       categories:
       - id: GENERAL
         name: Allgemein (Bestand, keine Unterteilung)
