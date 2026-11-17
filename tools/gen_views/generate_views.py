@@ -54,7 +54,37 @@ def git_sha():
         return "unknown"
 
 
+def write_generated_state():
+    """Ankerdatei deterministisch schreiben (BLK-P2-10-Klasse: kein Handwert).
+
+    Der Anker ist der Git-Blob von registry/standards.yaml. hash-object liefert
+    denselben Wert wie rev-parse HEAD:registry/standards.yaml nach dem Commit.
+    """
+    import re as _re
+
+    blob = subprocess.check_output(
+        ["git", "hash-object", "registry/standards.yaml"], cwd=ROOT, text=True
+    ).strip()
+    reg = open(os.path.join(ROOT, "registry", "standards.yaml"), encoding="utf-8").read()
+    m = _re.search(r'- \{id: ATC-STD-000,.*?version: "?([\d.]+)"?, status: (\w+)', reg)
+    ver, status = (m.group(1), m.group(2)) if m else ("unknown", "unknown")
+    text = (
+        "# Registry Generated State\n\n"
+        "> **GENERATED — DO NOT EDIT MANUALLY**\n>\n"
+        "> Source: `registry/standards.yaml`\n>\n"
+        f"> ATC-REGISTRY-BLOB-SHA256: {blob}\n>\n"
+        f"> Registry standard state currently anchored at **ATC-STD-000 v{ver} / {status.upper()}**.\n>\n"
+        "> CI gate: `tools/consistency/registry_view_gate.py`\n\n"
+        "This file is a machine-verifiable generated-state anchor. Human-readable counts,\n"
+        "status summaries and other projections must be generated from the registry and\n"
+        "must not become independent sources of truth.\n"
+    )
+    with open(os.path.join(ROOT, "registry", "GENERATED_STATE.md"), "w", encoding="utf-8") as fh:
+        fh.write(text)
+
+
 def main():
+    write_generated_state()
     total, approved, candidate, other = counts()
     fam_count = sum(
         1
