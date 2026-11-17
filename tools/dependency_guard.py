@@ -225,15 +225,15 @@ def validate_advisory_payload(payload):
                     or not isinstance(r.get("events"), list)
                     or not r.get("events")
                 ):
-                    errors.append(
-                        f"advisory[{i}].affected[{j}].ranges[{k}] invalid type/events"
-                    )
+                    errors.append(f"advisory[{i}].affected[{j}].ranges[{k}] invalid type/events")
                     continue
                 for m, ev in enumerate(r["events"]):
                     if not isinstance(ev, dict) or not any(
                         t in ev for t in ("introduced", "fixed", "last_affected")
                     ):
-                        errors.append(f"advisory[{i}].affected[{j}].ranges[{k}].events[{m}] invalid event")
+                        errors.append(
+                            f"advisory[{i}].affected[{j}].ranges[{k}].events[{m}] invalid event"
+                        )
     return errors
 
 

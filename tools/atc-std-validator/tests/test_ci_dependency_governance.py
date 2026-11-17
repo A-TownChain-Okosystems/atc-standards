@@ -16,6 +16,7 @@ import sys
 HERE = pathlib.Path(__file__).resolve().parent
 ROOT = HERE.parents[2]  # tools/atc-std-validator/tests -> ROOT
 
+
 def main() -> int:
     """Fuehrt die Pruefungen aus: 0 bei Erfolg, 1 bei Befund."""
     fails = []
@@ -106,6 +107,7 @@ def main() -> int:
         print("  [FAIL] " + f)
     print("RESULT: %s" % ("PASS" if not fails else "%d FAIL(s)" % len(fails)))
     return 0 if not fails else 1
+
 
 if __name__ == "__main__":
     sys.exit(main())
