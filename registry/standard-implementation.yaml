@@ -18,7 +18,7 @@ coverage_kpi:
 
 standards:
   - standard: ATC-STD-000
-    version: "1.3.0"
+    version: "1.3.1"
     applicability: MANDATORY
     implementation:
       status: enforced
@@ -286,7 +286,7 @@ standards:
     independence: L1
 
   - standard: ATC-ARCH-002
-    version: "0.1.1"
+    version: "0.1.3"
     applicability: MANDATORY
     implementation:
       status: implemented
@@ -1453,7 +1453,7 @@ standards:
     applicability: MANDATORY
     implementation:
       status: enforced
-      evidence: "ATC-STD-000 v1.3.0 CANDIDATE; Registry revision is canonical; §9-Approval-Process approval/"
+      evidence: "ATC-STD-000 v1.3.1 (Registry ist kanonisch); Approval nach Paragraf 18, Paket in approval/"
     independence: L1
 
   - standard: ATC-STD-REGISTRY-001
@@ -1461,7 +1461,7 @@ standards:
     applicability: MANDATORY
     implementation:
       status: enforced
-      evidence: "ATC-STD-000 v1.3.0 CANDIDATE; Registry revision is canonical; §9-Approval-Process approval/"
+      evidence: "ATC-STD-000 v1.3.1 (Registry ist kanonisch); Approval nach Paragraf 18, Paket in approval/"
     independence: L1
 
   - standard: ATC-STD-CHANGE-001
@@ -1469,7 +1469,7 @@ standards:
     applicability: MANDATORY
     implementation:
       status: enforced
-      evidence: "ATC-STD-000 v1.3.0 CANDIDATE; Registry revision is canonical; §9-Approval-Process approval/"
+      evidence: "ATC-STD-000 v1.3.1 (Registry ist kanonisch); Approval nach Paragraf 18, Paket in approval/"
     independence: L1
 
   - standard: ATC-STD-TAXONOMY-001

@@ -39,10 +39,32 @@ def load_registry(path):
     return {s["id"]: str(s.get("version", "")) for s in data.get("standards", [])}
 
 
+DECOMMISSIONED = {"archived", "frozen", "retired", "decommissioned"}
+
+
 def repo_list(path):
+    """Aktive Consumer-Repos; stillgelegte Repos werden mit Grund getrennt gefuehrt.
+
+    Die Repository-Registry ist SSOT und markiert je Repo `status` sowie den
+    kanonischen Ort (`migrated_to`). Ein archiviertes oder eingefrorenes Repo ist
+    kein Consumer mehr: sein kanonischer Stand liegt im Monorepo
+    (a-townchain/components/<name>). Es weiter auf die jeweils neue Verfassung zu
+    ziehen ist weder moeglich (archiviert) noch sinnvoll (eingefroren) und
+    erzeugte eine dauerhaft rote Pruefung ohne Aussage.
+    """
     with open(path, encoding="utf-8") as f:
         data = yaml.safe_load(f)
-    return [r["name"] for r in data.get("repositories", []) if r.get("name")]
+    active, skipped = [], []
+    for entry in data.get("repositories", []):
+        name = entry.get("name")
+        if not name:
+            continue
+        status = str(entry.get("status", "active")).lower()
+        if status in DECOMMISSIONED:
+            skipped.append((name, status, entry.get("migrated_to") or "-"))
+            continue
+        active.append(name)
+    return active, skipped
 
 
 def fetch_readme_github(org, repo, token=None):
@@ -68,10 +90,11 @@ def main():
     args = ap.parse_args()
 
     reg = load_registry(args.registry)
-    repos = repo_list(args.repos)
+    repos, skipped = repo_list(args.repos)
     if args.only:
         wanted = {r.strip() for r in args.only.split(",")}
         repos = [r for r in repos if r in wanted]
+        skipped = [s for s in skipped if s[0] in wanted]
     token = os.environ.get("GITHUB_TOKEN")
 
     fails, warns, checked = [], [], 0
@@ -100,8 +123,11 @@ def main():
 
     print(
         f"Standard-Version-Gate: {checked} Deklarationen geprueft, "
-        f"{len(fails)} FAIL, {len(warns)} WARN"
+        f"{len(fails)} FAIL, {len(warns)} WARN, {len(skipped)} Repos ausserhalb "
+        f"der Propagationspflicht"
     )
+    for name, status, migrated in skipped:
+        print(f"  SKIP  {name}: status={status}, kanonisch in {migrated}")
     for w in warns:
         print(f"  WARN  {w}")
     for f_ in fails:
