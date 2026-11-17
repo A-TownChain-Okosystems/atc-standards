@@ -110,11 +110,11 @@ Kernregister: **standards.yaml** (Bestand, {len(std)} Standards) · **versions.y
 {fam_rows}
 
 Statusverteilung der {len(std)} Registry-Standards: {dict(sc)}.
-Nicht alle Einträge sind freigegeben: {sc.get('approved', 0)} `approved`,
-{sc.get('candidate', 0)} `candidate`, {sc.get('draft', 0)} `draft`
-({', '.join(x['id'] for x in std if x.get('status') == 'draft')}, nicht normativ).
-Normativ sind {sum(1 for x in std if x.get('normative') is True)} der {len(std)}
-Einträge, {sum(1 for x in std if x.get('normative') is not True)} nicht. Details je
+Nicht alle Einträge sind freigegeben: {sc.get("approved", 0)} `approved`,
+{sc.get("candidate", 0)} `candidate`, {sc.get("draft", 0)} `draft`
+({", ".join(x["id"] for x in std if x.get("status") == "draft")}, nicht normativ).
+Normativ sind {sum(1 for x in std if x.get("normative") is True)} der {len(std)}
+Einträge, {sum(1 for x in std if x.get("normative") is not True)} nicht. Details je
 Standard in registry/standards.yaml und registry/versions.yaml.
 
 ## 4. Master-Registry-Tabelle ({len(std)} Standards)
