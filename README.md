@@ -7,10 +7,10 @@
 
 ```yaml
 state:
-  id: ATC-STATE-20261117-3850d5bc
-  generated_at: "2026-11-17 09:35 UTC+2"
+  id: ATC-STATE-20261117-279e08fb
+  generated_at: "2026-11-17 10:15 UTC+2"
   registry_version: "1.1.0"
-  registry_sha256: "3850d5bcb98f0732fd8821b8b70c948aa3d1279ec56308d18e73de5e8aa52d3d"
+  registry_sha256: "279e08fb808588f56e69a3aae6f7d5462c8dda4dcd9611dfa30ebb752671551d"
   standards_total: 534
   standards_approved: 506
   standards_candidate: 27
@@ -37,7 +37,7 @@ Historische Zahlenstände: ausschließlich `STATUS.md` / `CHANGELOG.md` / `audit
 ATC Standards is the canonical normative governance layer of the A-TownChain ecosystem. It maintains:
 
 - **Registry:** SSOT für alle 534 Standards mit Versionierung, Dependencies (DAG) und Findings
-- **Verfassung:** ATC-STD-000 v1.3.0, APPROVED
+- **Verfassung:** ATC-STD-000 v1.3.1, APPROVED
 - **Validator-Suite:** atc-std-validator, atc-repo-audit, atc-readme-validator
 - **Governance Framework:** 76 Familien
 - **Governance-Determinismus:** ATC-STD-003 (SSOT-Matrix, State-ID, Ein-Zahl-Regel)
@@ -95,7 +95,7 @@ python3 -m pip install pyyaml
 
 ## Governance
 
-This repository is governed according to ATC-STD-000 v1.3.0 (APPROVED):
+This repository is governed according to ATC-STD-000 v1.3.1 (APPROVED):
 
 - Changes to APPROVED Standards: via SCR only
 - New Standards: Registry-First
@@ -108,7 +108,7 @@ See `CONTRIBUTING.md` and `governance/ATC-STD-000.md` for details.
 
 | Standard | Version | Status |
 |---|---|---|
-| ATC-STD-000 | 1.3.0 | ✅ APPROVED (Verfassung; par.9-freigegeben 11.09.2026 — Bootstrap-EXEMPT beendet, R11 waecht weiter) |
+| ATC-STD-000 | 1.3.1 | ✅ APPROVED (Verfassung; par.9-freigegeben 11.09.2026 — Bootstrap-EXEMPT beendet, R11 waecht weiter) |
 | ATC-STD-003 | 1.0.0 | ✅ APPROVED (Governance Determinism & SSOT Matrix) |
 | ATC-STD-201 | 1.0.1 | ✅ APPROVED |
 | ATC-STD-202 | 1.2.0 | ✅ APPROVED |
