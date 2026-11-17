@@ -21,9 +21,30 @@ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 REG = os.path.join(ROOT, "registry", "standards.yaml")
 
 
+def _read(path):
+    """Liest eine Datei und schliesst sie (SIM115)."""
+    with open(path, encoding="utf-8") as fh:
+        return fh.read()
+
+
+def _read_bin(path):
+    with open(path, "rb") as fh:
+        return fh.read()
+
+
+def _readlines(path):
+    with open(path, encoding="utf-8") as fh:
+        return fh.readlines()
+
+
+def _write(path, text):
+    with open(path, "w", encoding="utf-8") as fh:
+        fh.write(text)
+
+
 def counts():
     total = approved = candidate = other = 0
-    for line in open(REG, encoding="utf-8"):
+    for line in _readlines(REG):
         if line.strip().startswith("- {id: ATC"):
             total += 1
             m = re.search(r"status: (\w+)", line)
@@ -40,7 +61,7 @@ def counts():
 def std_index():
     """Registry-Lookup (SCR-0091): id -> {version, status} — KEINE hartcodierten Versionen/Statusse."""
     idx = {}
-    for line in open(REG, encoding="utf-8"):
+    for line in _readlines(REG):
         m = re.search(r'- \{id: (ATC-[A-Z0-9-]+),.*?version: "?([\d.]+)"?, status: (\w+)', line)
         if m:
             idx[m.group(1)] = {"version": m.group(2), "status": m.group(3)}
@@ -65,7 +86,7 @@ def write_generated_state():
     blob = subprocess.check_output(
         ["git", "hash-object", "registry/standards.yaml"], cwd=ROOT, text=True
     ).strip()
-    reg = open(os.path.join(ROOT, "registry", "standards.yaml"), encoding="utf-8").read()
+    reg = _read(os.path.join(ROOT, "registry", "standards.yaml"))
     m = _re.search(r'- \{id: ATC-STD-000,.*?version: "?([\d.]+)"?, status: (\w+)', reg)
     ver, status = (m.group(1), m.group(2)) if m else ("unknown", "unknown")
     text = (
@@ -88,7 +109,7 @@ def main():
     total, approved, candidate, other = counts()
     fam_count = sum(
         1
-        for ln in open(os.path.join(ROOT, "registry", "framework.yaml"), encoding="utf-8")
+        for ln in _readlines(os.path.join(ROOT, "registry", "framework.yaml"))
         if re.match(r"\s*- id: FAM-\d+", ln)
     )
     std_files = sum(
@@ -104,7 +125,7 @@ def main():
     repo_structure = "\n".join(
         ("├── " if i < len(repo_dirs) - 1 else "└── ") + x + "/" for i, x in enumerate(repo_dirs)
     )
-    sha = hashlib.sha256(open(REG, "rb").read()).hexdigest()
+    sha = hashlib.sha256(_read_bin(REG)).hexdigest()
     now = datetime.now(timezone(timedelta(hours=2))).strftime("%Y-%m-%d %H:%M UTC+2")
 
     sidx = std_index()
@@ -116,24 +137,20 @@ def main():
         f"  standards_total: {total}\n  standards_approved: {approved}\n  standards_candidate: {candidate}\n"
         f'  families: {fam_count}\n  generated_at: "{now}"\n'
     )
-    open(os.path.join(ROOT, "registry", "registry.lock"), "w").write(lock)
+    _write(os.path.join(ROOT, "registry", "registry.lock"), lock)
 
     stamp = "<!-- GENERATED-BY generate_views.py — NICHT MANUELL BEARBEITEN -->"
 
     # ---------- 1. README (SCR-0090/ATC-STD-003: VOLLREGENERATION aus Template) ----------
     p = os.path.join(ROOT, "README.md")
-    tpl = open(
-        os.path.join(ROOT, "tools", "gen_views", "README.template.md"), encoding="utf-8"
-    ).read()
+    tpl = _read(os.path.join(ROOT, "tools", "gen_views", "README.template.md"))
     state_id = f"ATC-STATE-{now[:10].replace('-', '')}-{sha[:8]}"
     date_compact = now[:10].replace("-", "")
     kpi = {"enforced": 0, "implemented": 0, "specification_only": 0}
     try:
         import yaml as _y
 
-        _impl = _y.safe_load(
-            open(os.path.join(ROOT, "registry", "standard-implementation.yaml"), encoding="utf-8")
-        )
+        _impl = _y.safe_load(_read(os.path.join(ROOT, "registry", "standard-implementation.yaml")))
         for _s in _impl.get("standards", []):
             _st = _s.get("implementation", {}).get("status", "specification_only")
             kpi[_st] = kpi.get(_st, 0) + 1
@@ -142,12 +159,7 @@ def main():
     try:
         import yaml as _yc
 
-        _cs = (
-            _yc.safe_load(
-                open(os.path.join(ROOT, "registry", "compliance_state.yaml"), encoding="utf-8")
-            )
-            or {}
-        )
+        _cs = _yc.safe_load(_read(os.path.join(ROOT, "registry", "compliance_state.yaml"))) or {}
     except Exception:
         _cs = {}
     _tot = sum(kpi.values())
@@ -183,10 +195,7 @@ def main():
     try:
         import yaml as _y2
 
-        _repo = (
-            _y2.safe_load(open(os.path.join(ROOT, ".atc", "repository.yaml"), encoding="utf-8"))
-            or {}
-        )
+        _repo = _y2.safe_load(_read(os.path.join(ROOT, ".atc", "repository.yaml"))) or {}
         repover = (
             (_repo.get("project", {}) or {}).get("version")
             or _repo.get("standard_version")
@@ -226,12 +235,12 @@ def main():
         "@@REPOSTRUCT@@": repo_structure,
     }.items():
         tpl = tpl.replace(tok, val)
-    open(p, "w", encoding="utf-8").write(tpl)
+    _write(p, tpl)
     print("  README vollregeneriert (State-ID:", state_id + ")")
 
     # ---------- 2. AGENT_MANIFEST (SCR-0091: keine hartcodierten Verfassungs-Versionen) ----------
     p = os.path.join(ROOT, "AGENT_MANIFEST.md")
-    c = open(p, encoding="utf-8").read()
+    c = _read(p)
     _v0 = sidx.get("ATC-STD-000", {})
     _v0s = (_v0.get("status") or "UNBEKANNT").upper()
     c = re.sub(
@@ -248,11 +257,11 @@ def main():
     else:
         m = re.search(r"(^# .*\n)", c, re.M)
         c = c.replace(m.group(1), m.group(1) + line + "\n", 1)
-    open(p, "w", encoding="utf-8").write(c)
+    _write(p, c)
 
     # ---------- 3. STATUS.md ----------
     p = os.path.join(ROOT, "STATUS.md")
-    c = open(p, encoding="utf-8").read()
+    c = _read(p)
     banner = (
         f"{stamp}\n"
         f"> **GENERIERTER SNAPSHOT ({now}):** {total} Standards ({approved} APPROVED, {candidate} CANDIDATE), "
@@ -272,22 +281,22 @@ def main():
     else:
         m = re.search(r"(^# STATUS[^\n]*\n)", c, re.M)
         c = c.replace(m.group(1), m.group(1) + "\n" + banner, 1)
-    open(p, "w", encoding="utf-8").write(c)
+    _write(p, c)
 
     # ---------- 4. .github/ai/agent.yaml (SCR-0053): required_standards SSOT-Sync ----------
     p = os.path.join(ROOT, ".github", "ai", "agent.yaml")
     if os.path.exists(p):
-        man = open(p, encoding="utf-8").read()
+        man = _read(p)
         ids = re.findall(
             r"id:\s*(ATC-[A-Z0-9-]+)",
-            open(os.path.join(ROOT, "registry", "standards.yaml"), encoding="utf-8").read(),
+            _read(os.path.join(ROOT, "registry", "standards.yaml")),
         )
         m2 = re.search(r"(required_standards:\n)((?:- .+\n)+)", man)
         if m2:
             new_block = m2.group(1) + "".join(f"- {i}\n" for i in ids)
             if man[m2.start() : m2.end()] != new_block:
                 man = man[: m2.start()] + new_block + man[m2.end() :]
-                open(p, "w", encoding="utf-8").write(man)
+                _write(p, man)
                 print(
                     f"✓ agent.yaml required_standards regeneriert: {len(ids)} Standards (SSOT-Sync)"
                 )
