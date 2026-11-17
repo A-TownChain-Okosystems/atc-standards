@@ -26,6 +26,21 @@ OVERRIDES = {
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
+
+def constitution_version(default: str = "1.3.0") -> str:
+    """Version von ATC-STD-000 aus der Registry lesen (keine Handzahl)."""
+    import yaml
+
+    path = os.path.join(ROOT, "registry", "standards.yaml")
+    if os.path.isfile(path):
+        with open(path, encoding="utf-8") as handle:
+            data = yaml.safe_load(handle) or {}
+        for std in data.get("standards", []):
+            if std.get("id") == "ATC-STD-000":
+                return str(std.get("version", default))
+    return default
+
+
 RULES = {
     "repository": (
         "MANDATORY",
@@ -54,7 +69,7 @@ RULES = {
     "governance-core": (
         "MANDATORY",
         "enforced",
-        "ATC-STD-000 v1.3.0 CANDIDATE; Registry revision is canonical; §9-Approval-Process approval/",
+        f"ATC-STD-000 v{constitution_version()} (Registry ist kanonisch); Approval nach Paragraf 18, Paket in approval/",
         "",
     ),
     "md": (

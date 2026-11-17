@@ -2,13 +2,13 @@
 standard:
   id: ATC-STD-000
   title: "Standards Governance & Specification Standard"
-  version: "1.3.0"
+  version: "1.3.1"
   status: approved
   category: governance
   authority: A-TownChain Ecosystems
   owner: ShivaCoreDev
   created: "2026-09-07"
-  updated: "2026-09-07"
+  updated: "2026-11-17"
   normative: true
   supersedes: []
   superseded_by: null
@@ -17,7 +17,7 @@ standard:
   license: "Copyright (c) 2026 Michael Wroblewski"
 ---
 
-# ATC-STD-000 — Standards Governance & Specification Standard (v1.3.0, APPROVED)
+# ATC-STD-000 — Standards Governance & Specification Standard (v1.3.1, APPROVED)
 
 > ATC-STD-000 ist der Meta-Standard fuer alle ATC Standards: Er definiert das
 > uebergeordnete Governance- und Spezifikationsmodell des gesamten
@@ -289,6 +289,13 @@ Ein normativer ATC Standard sollte mindestens folgende Struktur besitzen:
 12. Versioning · 13. References · 14. Changelog
 
 Zusaetzliche Abschnitte sind zulaessig.
+
+**Klarstellung zur Freigabe (SCR-0143, v1.3.1).** §9 regelt die Struktur eines
+Standards, nicht seine Genehmigung. Die Genehmigung regelt §18, die Kette davor
+§14 bis §17. Historische Verweise auf „ATC-STD-000 §9" als Freigabegrundlage in
+Bestandsdokumenten meinen diese Stelle; sie werden nach §30 nicht nachtraeglich
+umgeschrieben. Diese Klarstellung fuegt keine Anforderung hinzu und schwaacht
+keine bestehende Regel ab.
 
 ## 10. Requirements
 
@@ -602,6 +609,16 @@ die Verfassung ist vollstaendig durch die eigene Kette gelaufen.
   gültige Verfassungsfassung; Änderungen nur noch via SCR (§30).
 
 ## Changelog
+
+- 1.3.1 (17.11.2026): Klarstellung in §9 — die Genehmigung eines Standards
+  regelt §18, die Pruefkette §14 bis §17; historische Verweise auf §9 als
+  Freigabegrundlage meinen diese Stelle und bleiben nach §30 unangetastet.
+  Reine Klarstellung, keine neue Anforderung und keine Abschwaechung
+  bestehender Regeln. Ausloeser: Befund in SCR-0142 §10 (133 Stellen in
+  118 Dateien), umgesetzt als SCR-0143 Option A. Freigabe: Owner-Entscheid
+  17.11.2026 unter Erlass nach §14.1 Regel 3; Entscheid, Merge und
+  Verifikation sind in SCR-0143 §7 getrennt dokumentiert
+  (APPROVAL-DECISION-2026-11-17-000-v1.3.1.md).
 
 - 1.2.0 (07.09.2026, APPROVED): §37 ID-Allokationsprozess (REQ-STD-002,
   Registry-First, keine Lückennachbesetzung) + §38 Security Considerations
