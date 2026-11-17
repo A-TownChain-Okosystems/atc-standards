@@ -2,7 +2,7 @@
 standard:
   id: ATC-ARCH-002
   title: "KAI-OS Desktop Layer Architecture Standard"
-  version: "0.1.2"
+  version: "0.1.3"
   status: draft
   category: architecture
   authority: "A-TownChain Ecosystems"
@@ -228,6 +228,27 @@ abschaltbar und darf den Systemstart nicht blockieren.
 **REQ-ARCH-222** — Der Browser ist eine Sandbox-Anwendung wie jede andere. Er
 DARF keine Sonderrechte auf Dateisystem oder Prozessraum erhalten.
 
+#### 4.5.1 Umfang der Kompatibilitaetsschicht (DEC-3, entschieden am 17.11.2026)
+
+Option B der Entscheidungsvorlage (SCR-0142 § 8.1) ist verbindlich:
+
+**KOM-1** — Die Schicht fuehrt Linux-ELF-Programme in einer Sandbox aus und
+vermittelt Systemzugriffe ausschliesslich ueber deklarierte Portale
+(Dateiauswahl, Zwischenablage, Benachrichtigungen, Statusanzeige).
+
+**KOM-2** — Zulaessig ist zusaetzlich ein vom Portal-Dienst vermittelter
+Nachrichtenbus fuer genau diese Schnittstellen. Der Bus ist capability-vermittelt;
+er begruendet keine Rechte, die nicht auch ohne ihn ueber ein Portal erreichbar
+waeren.
+
+**KOM-3** — Nicht zulaessig sind kernelnahe Nachbildungen (procfs-, sysfs- oder
+devfs-Emulation), systemd-Kompatibilitaet, Container-Netzwerk und jede weitere
+Schnittstelle, die eine zweite Prozess- oder Rechtewelt aufspannt. Ein solcher
+Bedarf ist eine Aenderung dieses Standards, kein Konfigurationspunkt.
+
+**KOM-4** — Die Schicht bleibt nach REQ-ARCH-221 abschaltbar; ohne sie bleibt das
+System vollstaendig benutzbar, und kein Systemstart haengt von ihr ab.
+
 ### 4.6 Pakete, Updates, Wiederherstellung
 
 **REQ-ARCH-223** — Installation, Aktualisierung und Rücknahme MÜSSEN über einen
@@ -243,6 +264,26 @@ Werksprofil MUSS getrennt von Nutzdaten wiederherstellbar sein.
 
 **REQ-ARCH-226** — Ausgelieferte Desktop-Binaries MÜSSEN reproduzierbar baubar
 sein, mit nachweisbarer Übereinstimmung zwischen Quelle, Build und Auslieferung.
+
+#### 4.6.1 Update-Vertrauenskette (DEC-4, entschieden am 17.11.2026)
+
+Option C der Entscheidungsvorlage (SCR-0142 § 8.2) ist verbindlich:
+
+**UVK-1** — Der Herausgeber eines Pakets wird durch eine DID in A-TownChain
+benannt. Die DID stellt Identitaet und Widerruf fest; sie ersetzt keine
+Signaturpruefung.
+
+**UVK-2** — Jedes ausgelieferte Paket traegt zusaetzlich eine lokale Signatur, die
+offline gegen einen mitgelieferten Trust-Store pruefbar ist. Ein Paket gilt nur
+als authentisch, wenn DID-Bezug und lokale Signatur gemeinsam zutreffen.
+
+**UVK-3** — Nach REQ-ARCH-225 MUSS die Verifikation ohne Netzverbindung
+durchfuehrbar sein. Ist die Chain nicht erreichbar, entscheidet der Trust-Store;
+ein fehlender Chain-Kontakt ist kein Freibrief und kein Abbruchgrund.
+
+**UVK-4** — Widerruf MUSS ohne Netz wirksam werden koennen, naemlich durch ein
+signiertes Trust-Store-Update, das denselben Pruefpfad nutzt. Es entsteht keine
+zweite Identitaets- oder Rechteinstanz neben ShivaCore.
 
 ### 4.7 Bedienbarkeit und Assistenz
 
@@ -304,9 +345,9 @@ vollständigen Conformance-Nachweis nach § 8.
 | D3 | Verschlüsselte Bereiche | atc-shivacore, globus-os | geplant |
 | D4 | Runtime und Sandbox | globus-os | teilweise vorhanden (service_space) |
 | D4 | Rechtevermittlung | atc-shivacore | vorhanden (Authority-SSOT) |
-| D5 | Paketdienst, Signaturen, Rollback | globus-os, atcpkg | geplant |
+| D5 | Paketdienst, Signaturen, Rollback (Vertrauenskette nach DEC-4, § 4.6.1) | globus-os, atcpkg | geplant |
 | D5 | Marktplatz-Oberfläche | atc-marketplace | geplant |
-| D6 | Linux-Kompatibilität | noch offen (DEC-3) | nicht entschieden |
+| D6 | Linux-Kompatibilität (Umfang nach DEC-3, § 4.5.1) | globus-os | entschieden, nicht implementiert |
 | D6 | Browser (Web) | globus-os | geplant |
 | D7 | Lokale KI-Oberfläche | aurora-ai | teilweise vorhanden |
 | alle | Normative Vorgaben | atc-standards | vorhanden |
@@ -391,6 +432,7 @@ dazu benutzt werden, ATC-ARCH-001 zu überschreiben.
 | Version | Datum | Änderung |
 |---|---|---|
 | 0.1.0 | 2026-11-17 | Erster Entwurf nach Owner-Auftrag. DRAFT, nicht normativ. |
+| 0.1.3 | 2026-11-17 | DEC-3 (Option B) und DEC-4 (Option C) nach Owner-Entscheid normativ eingezogen: § 4.5.1 (KOM-1 bis KOM-4) und § 4.6.1 (UVK-1 bis UVK-4), § 7 Zeilen D5 und D6, § 14.1. § 14.2 hat keine offenen Fragen mehr; offen ist allein das Freigabeverfahren nach ATC-STD-000 § 18. |
 | 0.1.2 | 2026-11-17 | Freigabereferenz korrigiert: Approval ist ATC-STD-000 §18, nicht §9 (§9 ist Standard Structure). Verweise auf die Entscheidungsvorlagen fuer DEC-3 und DEC-4 in SCR-0142 §8. Inhalt der Anforderungen unveraendert. |
 | 0.1.1 | 2026-11-17 | DEC-1 (Begriffsordnung, § 3.1) und DEC-2 (Anwendungsdomaene, § 7.1) nach Owner-Entscheidung aufgenommen. DRAFT bleibt bestehen; keine neue Standard-ID, keine Umbenennung, keine Aenderung der Architekturhierarchie. |
 
@@ -401,6 +443,8 @@ dazu benutzt werden, ATC-ARCH-001 zu überschreiben.
 | ID | Entscheidung | Verbindliche Fassung |
 |---|---|---|
 | DEC-1 | **Begriffstabelle** | KAI fuehrend, KAI-OS Alias derselben Gesamtarchitektur, GlobusOS einziges Betriebssystem, ShivaCore einziger Kernel, ATC-VM die VM, A-TownChain die Blockchain; normative Fassung in § 3.1. Status bleibt DRAFT bis zum regulaeren Freigabeverfahren. |
+| DEC-3 | **Umfang der Linux-Kompatibilitaetsschicht** | Option B: Binaerkompatibilitaet plus portalvermittelter Nachrichtenbus; keine kernelnahen Nachbildungen, abschaltbar. Normative Fassung in § 4.5.1 (KOM-1 bis KOM-4). |
+| DEC-4 | **Update-Kanal und Vertrauenskette** | Option C: DID benennt den Herausgeber, lokale Signatur prueft offline gegen den Trust-Store; Widerruf offline ueber signiertes Trust-Store-Update. Normative Fassung in § 4.6.1 (UVK-1 bis UVK-4). |
 | DEC-2 | **Anwendungsdomaene** | Genesis Engine ist eigenstaendige KAI-Technologiedomaene, keine Unterkomponente von GlobusOS, kein Bestandteil von Aurora AI, keine Unterfunktion von ATC-VM oder A-TownChain; Umfang: KI-gestuetzte Spieleentwicklung, Softwareprogrammierung, Entwicklungswerkzeuge; normative Fassung in § 7.1. |
 
 Beide Entscheidungen sind in den Entwurf uebernommen. Der Standard bleibt
@@ -409,7 +453,6 @@ abgeschlossen ist.
 
 ### 14.2 Offen
 
-| ID | Frage | Empfehlung | Blockiert |
-|---|---|---|---|
-| DEC-3 | Umfang der Linux-Kompatibilitätsschicht | Eng begrenzt, abschaltbar, kein Rechte-Mapping über Portale hinaus. Entscheidungsvorlage: SCR-0142 §8.1 | D6 |
-| DEC-4 | Update-Kanal und Vertrauenskette (eigene Signatur, DID-basiert, beides) | Beides, mit Offline-Verifikation. Entscheidungsvorlage: SCR-0142 §8.2 | D5 |
+Keine offenen Fachfragen. Was fehlt, ist das Freigabeverfahren nach
+ATC-STD-000 § 18: Technical Review, Security Review, Architecture Review und
+Owner-Approval. Bis dahin bleibt dieser Standard `draft` und nicht referenzierbar.
