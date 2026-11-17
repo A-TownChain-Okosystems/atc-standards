@@ -8,10 +8,10 @@
 # ============================================================================
 version: "1.2.0"
 generated_from: registry/standards.yaml
-updated: "2026-10-07"
+updated: "2026-11-17"
 coverage_kpi:
-  registry_total: 533
-  matrix_entries: 533
+  registry_total: 534
+  matrix_entries: 534
   matrix_coverage: "100%"
   enforced_target: "je Wartungszyklus steigend (REQ-IMP-007)"
   hinweis: "Wertigkeit der 21 SCR-0045-Detail-Eintraege bleibt; Familien-Evidence konsolidiert"
@@ -279,6 +279,14 @@ standards:
 
   - standard: ATC-ARCH-001
     version: "1.0.0"
+    applicability: MANDATORY
+    implementation:
+      status: implemented
+      evidence: "Architektur-Layer AD-026; REPOSITORY_MAP; Rollen AD-046/SCR-0005"
+    independence: L1
+
+  - standard: ATC-ARCH-002
+    version: "0.1.0"
     applicability: MANDATORY
     implementation:
       status: implemented
