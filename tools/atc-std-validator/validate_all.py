@@ -741,6 +741,16 @@ def main():
             "CI-Dependency-Governance (ATC-STD-CI-001, Regressionstest Issue #1)",
             [sys.executable, os.path.join(HERE, "tests", "test_ci_dependency_governance.py")],
         ),
+        (
+            "E-6",
+            "AI Task Record Validation (ATC-STD-AI-DEV-004)",
+            [sys.executable, os.path.join(HERE, "validate_task_records.py")],
+        ),
+        (
+            "E-7",
+            "AI Task Record Validator Tests",
+            [sys.executable, os.path.join(HERE, "tests", "test_task_records.py")],
+        ),
     ]
     for sid, name, cmd in stages:
         try:
