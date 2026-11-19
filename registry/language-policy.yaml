@@ -1,0 +1,108 @@
+# ATC Language Policy Registry
+# Machine-readable enforcement companion for ATC-STD-100@2.1.0-candidate.
+schema_version: "1"
+standard: "ATC-STD-100"
+standard_version: "2.1.0"
+status: candidate
+rust_first: true
+
+rules:
+  - id: LANG-RUST-001
+    rule: rust_default
+    applies_to: [system, security, consensus, runtime, execution, networking, storage, sdk_core, production_ai, indexer_core, game_engine_core]
+    required_language: Rust
+  - id: LANG-BOUNDARY-001
+    rule: external_boundary_only
+    languages: [C, C++, Assembly]
+    requires: technical_justification
+    must_be_isolated: true
+  - id: LANG-PYTHON-001
+    rule: non_tcb_only
+    language: Python
+    forbidden_in: [kernel, consensus, execution, security_tcb, production_runtime]
+  - id: LANG-TS-001
+    rule: ui_boundary
+    language: TypeScript
+    allowed_for: [browser_ui, web_ui, developer_portal, application_ui]
+    forbidden_for: [kernel, consensus, execution_tcb, protocol_truth, sdk_core]
+  - id: LANG-WASM-001
+    rule: target_not_source_language
+    language: WASM
+    must_not_define: protocol_semantics
+
+repositories:
+  atclang:
+    primary: Rust
+    target_language: ATCLang
+    secondary: [ATCLang]
+  a-townchain:
+    primary: Rust
+    secondary: [Python]
+    secondary_scope: [tests, tooling, audits]
+  atc-node:
+    primary: Rust
+  atc-vm:
+    primary: Rust
+    secondary: [Python]
+    secondary_scope: [reference, conformance]
+  atc-shivacore:
+    primary: Rust
+    boundary: [Assembly, C]
+  atc-zkp:
+    primary: Rust
+    secondary: [Python]
+    secondary_scope: [research]
+  atc-algorithm:
+    primary: Rust
+    secondary: [Python]
+    secondary_scope: [benchmark, research]
+  atc-storage:
+    primary: Rust
+    secondary: [SQL]
+    secondary_scope: [query]
+  atc-compute:
+    primary: Rust
+    secondary: [Python]
+    secondary_scope: [workloads, research]
+  atc-oracle:
+    primary: Rust
+  atc-interop:
+    primary: Rust
+  atc-wallet:
+    primary: Rust
+    secondary: [TypeScript, WASM]
+    secondary_scope: [ui, browser_binding]
+  atc-sdk:
+    primary: Rust
+    secondary: [TypeScript, Python]
+    secondary_scope: [bindings, sdk_surface, research]
+  atc-indexer:
+    primary: Rust
+    secondary: [SQL, Python]
+    secondary_scope: [query, analytics]
+  atc-explorer:
+    primary: Rust
+    secondary: [TypeScript]
+    secondary_scope: [backend_adapter, frontend]
+  atc-marketplace:
+    primary: Rust
+    secondary: [TypeScript, ATCLang]
+    secondary_scope: [ui, on_chain_logic]
+  atc-launchpad:
+    primary: Rust
+    secondary: [TypeScript, ATCLang]
+    secondary_scope: [ui, on_chain_logic]
+  atc-contracts:
+    primary: ATCLang
+  aurora-ai:
+    primary: Rust
+    secondary: [Python, TypeScript]
+    secondary_scope: [model_research, ui]
+  globus-os:
+    primary: Rust
+    secondary: [TypeScript]
+    secondary_scope: [ui]
+  genesis-engine:
+    primary: Rust
+    secondary: [C++, ATCLang, TypeScript]
+    secondary_scope: [external_engine_boundary, game_logic, tools_ui]
