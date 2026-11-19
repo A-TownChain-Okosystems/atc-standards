@@ -1,0 +1,22 @@
+replication:
+  id: MEMORY-001-REPLICATION
+  version: 1.0.0
+  identity:
+    record_id: "stable logical identifier"
+    content_hash: "SHA-256 of canonical content value"
+    record_hash: "SHA-256 of canonical Memory Record bytes"
+  ordering:
+    primary: updated_at
+    tie_breakers: [record_hash, record_id]
+    direction: ascending
+    rule: "The tuple (updated_at, record_hash, record_id) defines a total deterministic order for one record_id."
+  stale_update:
+    condition: "incoming ordering tuple is less than stored tuple"
+    action: reject
+    error_code: MEMORY-CONFLICT-001
+  equal_version:
+    condition: "incoming ordering tuple equals stored tuple"
+    action: accept_if_bytes_identical_else_reject
+    mismatch_error: MEMORY-CONFLICT-001
+  convergence:
+    rule: "Compliant nodes select the same maximal ordering tuple for a record_id."

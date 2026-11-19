@@ -1,0 +1,38 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://atc.ecosystem/schemas/memory-001/memory-record.schema.json",
+  "title":"MEMORY-001 Canonical Memory Record",
+  "type":"object",
+  "additionalProperties":false,
+  "required":["schema_version","record_id","namespace","subject","created_at","updated_at","content_type","content","provenance","authorization"],
+  "properties":{
+    "schema_version":{"const":"MEMORY-001/1.0.0"},
+    "record_id":{"type":"string","pattern":"^mem_[a-z0-9][a-z0-9_-]{15,127}$"},
+    "namespace":{"type":"string","minLength":1,"maxLength":255,"pattern":"^[a-zA-Z0-9._/-]+$"},
+    "subject":{"type":"string","minLength":1,"maxLength":255},
+    "created_at":{"type":"string","format":"date-time"},
+    "updated_at":{"type":"string","format":"date-time"},
+    "content_type":{"type":"string","enum":["text","json","binary-ref","event","fact","preference","episodic","semantic"]},
+    "content":{"type":["string","object","array","null"]},
+    "provenance":{
+      "type":"object","additionalProperties":false,"required":["source_node_id","source_type"],
+      "properties":{
+        "source_node_id":{"$ref":"node-identity.schema.json#/$defs/nodeId"},
+        "source_type":{"type":"string","enum":["user","agent","device","service","import","system"]},
+        "source_record_id":{"type":["string","null"],"maxLength":128},
+        "content_hash":{"type":"string","pattern":"^sha256:[0-9a-f]{64}$"}
+      }
+    },
+    "authorization":{
+      "type":"object","additionalProperties":false,"required":["policy_id","issuer_node_id","subject_node_id","capability","issued_at","expires_at"],
+      "properties":{
+        "policy_id":{"type":"string","minLength":1,"maxLength":128},
+        "issuer_node_id":{"$ref":"node-identity.schema.json#/$defs/nodeId"},
+        "subject_node_id":{"$ref":"node-identity.schema.json#/$defs/nodeId"},
+        "capability":{"type":"string","enum":["memory.read","memory.write","memory.replicate","memory.delete"]},
+        "issued_at":{"type":"string","format":"date-time"},
+        "expires_at":{"type":["string","null"],"format":"date-time"}
+      }
+    }
+  }
+}

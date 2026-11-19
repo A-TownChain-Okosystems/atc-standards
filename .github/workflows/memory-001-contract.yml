@@ -1,0 +1,21 @@
+name: MEMORY-001 Contract Gate
+
+on:
+  pull_request:
+    paths:
+      - "schemas/memory-001/**"
+      - "test-vectors/memory-001/**"
+      - "tools/**"
+      - "requirements-memory-001.txt"
+
+jobs:
+  contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -r requirements-memory-001.txt
+      - run: python tools/validate_memory_001.py
+      - run: python tools/memory_001_reference.py

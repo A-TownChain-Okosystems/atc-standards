@@ -1,0 +1,29 @@
+memory_001:
+  version: 1.1.0
+  invariants:
+    - id: MEM-INV-001
+      rule: "schema_version equals MEMORY-001/1.0.0"
+    - id: MEM-INV-002
+      rule: "record_id remains a stable logical identifier within its namespace"
+    - id: MEM-INV-003
+      rule: "updated_at is greater than or equal to created_at"
+    - id: MEM-INV-004
+      rule: "record_hash equals SHA-256 of canonical Memory Record bytes"
+    - id: MEM-INV-005
+      rule: "signature verifies over ATC-MEMORY-001, zero byte, and canonical bytes"
+    - id: MEM-INV-006
+      rule: "an unauthorized capability is rejected before persistence"
+    - id: MEM-INV-007
+      rule: "unknown schema or protocol versions are rejected without compatibility rule"
+    - id: MEM-INV-008
+      rule: "replication order is the tuple updated_at, record_hash, record_id"
+    - id: MEM-INV-009
+      rule: "a lower incoming ordering tuple is rejected with MEMORY-CONFLICT-001"
+    - id: MEM-INV-010
+      rule: "equal ordering tuples require byte-identical canonical records"
+    - id: MEM-INV-011
+      rule: "replay of message_id, nonce, and sender within 300 seconds is rejected"
+    - id: MEM-INV-012
+      rule: "equivalent JSON object key order produces identical RFC8785 canonical bytes"
+    - id: MEM-INV-013
+      rule: "compliant nodes select the same maximal replication ordering tuple"
