@@ -2,15 +2,15 @@
 standard:
   id: ATC-STD-600
   title: "Chain Identity & Network Identification"
-  version: "1.3.0"
-  status: approved
-  lifecycle: frozen
+  version: "1.4.0"
+  status: proposed
+  lifecycle: governed-revision
   role: "Root Specification"
   category: blockchain
   authority: A-TownChain-Okosystems
   owner: "Standards Governance"
   created: "2026-09-14"
-  updated: "2026-09-21"
+  updated: "2026-10-02"
   normative: true
   classification: PUBLIC
   language: de-DE
@@ -31,9 +31,9 @@ standard:
 
 # ATC-STD-600 — Chain Identity & Network Identification
 
-> **Version:** 1.3.0  
-> **Status:** APPROVED  
-> **Lifecycle:** APPROVED  
+> **Version:** 1.4.0  
+> **Status:** PROPOSED  
+> **Lifecycle:** GOVERNED REVISION  
 > **Role:** Root Specification  
 > **Scope:** A-TownChain Core  
 > **Implementation:** SPECIFICATION_ONLY
@@ -182,7 +182,7 @@ The authenticated byte representation is exactly:
     + tx_type           (u8)
     + sender_did        (u32 length + UTF-8 bytes)
     + recipient_did     (presence byte + optional u32 length + UTF-8 bytes)
-    + amount            (u64, big-endian)
+    + amount            (u128, 16-byte big-endian)
     + gas_price         (u64, big-endian)
     + gas_limit         (u64, big-endian)
     + nonce              (u64, big-endian)
@@ -200,11 +200,13 @@ Implementations MUST produce byte-identical signing input. Rust L1 kernel, Rust 
 
 ### 5.2 Signature algorithm
 
-The canonical L1 signature is Ed25519 over the exact V2 signing bytes.
+The canonical L1 transaction/account signature is ECDSA over secp256k1 using RFC6979 deterministic nonce generation, SHA-256, canonical low-S normalization, and a compressed 33-byte SEC1 public key.
 
-    signature = Ed25519_Sign(private_key, signing_bytes_v2)
+    signature = ECDSA_secp256k1_Sign_RFC6979_SHA256(private_key, signing_bytes_v2)
 
-Verification MUST operate on those same bytes. Hashing or field re-encoding before Ed25519 verification is not permitted unless explicitly defined by a future governed protocol revision.
+Verification MUST operate on those same bytes. Hashing or field re-encoding before verification is not permitted unless explicitly defined by a future governed protocol revision.
+
+Ed25519 remains a separate identity/P2P/DID security domain and MUST NOT be substituted for L1 transaction/account authentication.
 
 ### 5.3 Canonical transaction identity
 
@@ -336,7 +338,7 @@ A valid signature MUST NOT bypass identity, domain, runtime, or conformance vali
 
 ### 9.2 Transaction domain
 
-- **REQ-STD-600-006:** Transactions MUST use defined canonical encoding.
+- **REQ-STD-600-006:** Transactions MUST use defined canonical encoding.\n- **REQ-STD-600-006a:** `amount` MUST be encoded as unsigned u128 in exactly 16 big-endian bytes.\n- **REQ-STD-600-006b:** Transaction/account signatures MUST use secp256k1 ECDSA with RFC6979, SHA-256, canonical low-S normalization, and compressed 33-byte public keys. Identity Ed25519 keys are a separate security domain and MUST NOT be substituted for transaction/account signatures.
 - **REQ-STD-600-007:** The transaction validation context MUST include `chain_id`, `network_id`, `protocol_version`, and an explicit transaction domain separator. These context fields are validated before signing-byte construction; `network_id` and `protocol_version` MUST NOT be inserted into the canonical V2 signing bytes unless a governed protocol revision explicitly defines that change.
 - **REQ-STD-600-008:** Transaction domain validation MUST occur before state execution.
 - **REQ-STD-600-009:** Non-canonical encoding variants MUST NOT be accepted as equivalent authenticated transactions.
@@ -420,7 +422,7 @@ Genesis / Network Configuration
 
 The meanings of `chain_id`, `network_id`, and `genesis_id` are normative. A semantic change to any of these fields, to transaction-domain semantics, replay protection, or runtime compatibility MUST proceed through the ATC-STD lifecycle and MUST NOT be introduced as an implementation-only change.
 
-ATC-STD-600 v1.3.0 is the current canonical baseline for L1 transaction-domain semantics. Deployment-specific values MAY evolve through governed Genesis/network configuration without changing the semantics of this standard.
+ATC-STD-600 v1.4.0 is the proposed canonical baseline for L1 transaction-domain semantics. Deployment-specific values MAY evolve through governed Genesis/network configuration without changing the semantics of this standard.
 
 ## 14. Reference Deployment Model
 
@@ -507,7 +509,7 @@ No further semantic changes are authorized within v1.0.0. Corrections that alter
 
 ## 18. Changelog
 
-- **1.3.0 — 2026-09-21:** Retires the legacy transaction domain and defines ATC-TX-DOMAIN-V2 canonical L1 signing bytes with numeric chain_id 658467.
+- **1.4.0 — 2026-10-01:** Governed revision correcting the TX-V2 amount width to u128/16-byte BE and defining transaction/account authentication as secp256k1 ECDSA with RFC6979, SHA-256, low-S, and compressed public keys.
 - **1.0.0 — 2026-09-14:** Root specification frozen. Establishes Chain Identity, Network Identity, Genesis Identity, transaction-domain separation, runtime compatibility, canonical encoding requirements, fail-closed execution, conformance gates, and the ATC-STD-600 family model.
 
 ## References
