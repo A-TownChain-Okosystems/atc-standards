@@ -1,0 +1,690 @@
+{
+  "contract_id": "ATC-POS-CONFORMANCE-001",
+  "contract_version": "1.0.0-proposed",
+  "status": "PROPOSED_NOT_NORMATIVE",
+  "chain_id": 658467,
+  "execution_semantics": "CONTRACT_VALIDATION_ONLY_UNTIL_FIXTURES_AND_PROTOCOL_PARAMETERS_ARE_FROZEN",
+  "case_count": 19,
+  "cases": [
+    {
+      "case_id": "POS-V-001",
+      "kind": "positive",
+      "title": "valid proposal",
+      "contract_status": "BLOCKED",
+      "blocked_by_parameters": [
+        "PARAM-03",
+        "PARAM-07"
+      ],
+      "input": {
+        "contract_id": "ATC-POS-CONFORMANCE-001",
+        "chain_id": 658467,
+        "protocol_version": "UNFROZEN",
+        "epoch": "FIXTURE:epoch_0",
+        "height": "FIXTURE:height_1",
+        "round": "FIXTURE:round_0",
+        "validator_set_hash": "FIXTURE:validator_set_hash_0",
+        "parent_block_id": "FIXTURE:parent_A",
+        "scenario": {
+          "proposal": "FIXTURE:valid_proposal_A",
+          "proposer": "FIXTURE:eligible_leader_A",
+          "signature": "FIXTURE:valid_proposal_signature_A",
+          "parent": "FIXTURE:parent_A",
+          "body": "FIXTURE:valid_body_A"
+        }
+      },
+      "expected": {
+        "decision": "ACCEPT",
+        "error_code": "E_PROPOSAL_INVALID",
+        "decision_is_normative": false,
+        "error_code_is_normative": false
+      },
+      "fixture_status": "PLACEHOLDERS_UNRESOLVED",
+      "notes": "Contract-only expected behavior. Not executable protocol evidence; resolve all fixture references and freeze applicable parameters before protocol execution."
+    },
+    {
+      "case_id": "POS-V-002",
+      "kind": "positive",
+      "title": "valid vote scope",
+      "contract_status": "BLOCKED",
+      "blocked_by_parameters": [
+        "PARAM-03",
+        "PARAM-07",
+        "PARAM-08"
+      ],
+      "input": {
+        "contract_id": "ATC-POS-CONFORMANCE-001",
+        "chain_id": 658467,
+        "protocol_version": "UNFROZEN",
+        "epoch": "FIXTURE:epoch_0",
+        "height": "FIXTURE:height_1",
+        "round": "FIXTURE:round_0",
+        "validator_set_hash": "FIXTURE:validator_set_hash_0",
+        "parent_block_id": "FIXTURE:parent_A",
+        "scenario": {
+          "vote": "FIXTURE:valid_vote_A",
+          "vote_type": "PREVOTE",
+          "signer": "FIXTURE:validator_A",
+          "signature": "FIXTURE:valid_vote_signature_A",
+          "binds": [
+            "chain_id",
+            "protocol_version",
+            "epoch",
+            "height",
+            "round",
+            "block_id",
+            "validator_set_hash"
+          ]
+        }
+      },
+      "expected": {
+        "decision": "ACCEPT",
+        "error_code": "E_VOTE_SCOPE_INVALID",
+        "decision_is_normative": false,
+        "error_code_is_normative": false
+      },
+      "fixture_status": "PLACEHOLDERS_UNRESOLVED",
+      "notes": "Contract-only expected behavior. Not executable protocol evidence; resolve all fixture references and freeze applicable parameters before protocol execution."
+    },
+    {
+      "case_id": "POS-V-003",
+      "kind": "positive",
+      "title": "approved quorum finalizes",
+      "contract_status": "BLOCKED",
+      "blocked_by_parameters": [
+        "PARAM-01",
+        "PARAM-05",
+        "PARAM-06"
+      ],
+      "input": {
+        "contract_id": "ATC-POS-CONFORMANCE-001",
+        "chain_id": 658467,
+        "protocol_version": "UNFROZEN",
+        "epoch": "FIXTURE:epoch_0",
+        "height": "FIXTURE:height_1",
+        "round": "FIXTURE:round_0",
+        "validator_set_hash": "FIXTURE:validator_set_hash_0",
+        "parent_block_id": "FIXTURE:parent_A",
+        "scenario": {
+          "votes": "FIXTURE:quorum_exactly_at_approved_threshold",
+          "target_block": "FIXTURE:block_A",
+          "validator_set": "FIXTURE:validator_set_0"
+        }
+      },
+      "expected": {
+        "decision": "FINALIZE",
+        "error_code": "E_QUORUM_INSUFFICIENT",
+        "decision_is_normative": false,
+        "error_code_is_normative": false
+      },
+      "fixture_status": "PLACEHOLDERS_UNRESOLVED",
+      "notes": "Contract-only expected behavior. Not executable protocol evidence; resolve all fixture references and freeze applicable parameters before protocol execution."
+    },
+    {
+      "case_id": "POS-V-004",
+      "kind": "positive",
+      "title": "deterministic fork choice",
+      "contract_status": "BLOCKED",
+      "blocked_by_parameters": [
+        "PARAM-03",
+        "PARAM-10"
+      ],
+      "input": {
+        "contract_id": "ATC-POS-CONFORMANCE-001",
+        "chain_id": 658467,
+        "protocol_version": "UNFROZEN",
+        "epoch": "FIXTURE:epoch_0",
+        "height": "FIXTURE:height_1",
+        "round": "FIXTURE:round_0",
+        "validator_set_hash": "FIXTURE:validator_set_hash_0",
+        "parent_block_id": "FIXTURE:parent_A",
+        "scenario": {
+          "valid_candidates": [
+            "FIXTURE:block_A",
+            "FIXTURE:block_B"
+          ],
+          "delivery_orders": [
+            "FIXTURE:order_AB",
+            "FIXTURE:order_BA"
+          ],
+          "compare": [
+            "selected_block_id",
+            "state_hash"
+          ]
+        }
+      },
+      "expected": {
+        "decision": "ACCEPT",
+        "error_code": "E_FORK_CHOICE_NONDETERMINISTIC",
+        "decision_is_normative": false,
+        "error_code_is_normative": false
+      },
+      "fixture_status": "PLACEHOLDERS_UNRESOLVED",
+      "notes": "Contract-only expected behavior. Not executable protocol evidence; resolve all fixture references and freeze applicable parameters before protocol execution."
+    },
+    {
+      "case_id": "POS-V-005",
+      "kind": "positive",
+      "title": "validator snapshot transition",
+      "contract_status": "BLOCKED",
+      "blocked_by_parameters": [
+        "PARAM-01",
+        "PARAM-02",
+        "PARAM-06"
+      ],
+      "input": {
+        "contract_id": "ATC-POS-CONFORMANCE-001",
+        "chain_id": 658467,
+        "protocol_version": "UNFROZEN",
+        "epoch": "FIXTURE:epoch_0",
+        "height": "FIXTURE:height_1",
+        "round": "FIXTURE:round_0",
+        "validator_set_hash": "FIXTURE:validator_set_hash_0",
+        "parent_block_id": "FIXTURE:parent_A",
+        "scenario": {
+          "state_before": "FIXTURE:state_epoch_0",
+          "stake_changes": "FIXTURE:stake_delta_epoch_1",
+          "activation_boundary": "FIXTURE:approved_epoch_boundary"
+        }
+      },
+      "expected": {
+        "decision": "ACCEPT",
+        "error_code": "E_VALIDATOR_SNAPSHOT_MISMATCH",
+        "decision_is_normative": false,
+        "error_code_is_normative": false
+      },
+      "fixture_status": "PLACEHOLDERS_UNRESOLVED",
+      "notes": "Contract-only expected behavior. Not executable protocol evidence; resolve all fixture references and freeze applicable parameters before protocol execution."
+    },
+    {
+      "case_id": "POS-V-006",
+      "kind": "positive",
+      "title": "valid round change",
+      "contract_status": "BLOCKED",
+      "blocked_by_parameters": [
+        "PARAM-05",
+        "PARAM-07",
+        "PARAM-08"
+      ],
+      "input": {
+        "contract_id": "ATC-POS-CONFORMANCE-001",
+        "chain_id": 658467,
+        "protocol_version": "UNFROZEN",
+        "epoch": "FIXTURE:epoch_0",
+        "height": "FIXTURE:height_1",
+        "round": "FIXTURE:round_0",
+        "validator_set_hash": "FIXTURE:validator_set_hash_0",
+        "parent_block_id": "FIXTURE:parent_A",
+        "scenario": {
+          "round_change": "FIXTURE:valid_round_change_A",
+          "highest_qc": "FIXTURE:valid_qc_A",
+          "signers": "FIXTURE:round_change_quorum_signers"
+        }
+      },
+      "expected": {
+        "decision": "ACCEPT",
+        "error_code": "E_ROUND_CHANGE_INVALID",
+        "decision_is_normative": false,
+        "error_code_is_normative": false
+      },
+      "fixture_status": "PLACEHOLDERS_UNRESOLVED",
+      "notes": "Contract-only expected behavior. Not executable protocol evidence; resolve all fixture references and freeze applicable parameters before protocol execution."
+    },
+    {
+      "case_id": "POS-V-007",
+      "kind": "positive",
+      "title": "recovery without finality regression",
+      "contract_status": "BLOCKED",
+      "blocked_by_parameters": [
+        "PARAM-08",
+        "PARAM-11"
+      ],
+      "input": {
+        "contract_id": "ATC-POS-CONFORMANCE-001",
+        "chain_id": 658467,
+        "protocol_version": "UNFROZEN",
+        "epoch": "FIXTURE:epoch_0",
+        "height": "FIXTURE:height_1",
+        "round": "FIXTURE:round_0",
+        "validator_set_hash": "FIXTURE:validator_set_hash_0",
+        "parent_block_id": "FIXTURE:parent_A",
+        "scenario": {
+          "pre_partition_finality": "FIXTURE:finalized_block_A",
+          "partition_messages": "FIXTURE:partition_messages_valid",
+          "rejoin_messages": "FIXTURE:rejoin_messages_valid",
+          "certificate": "FIXTURE:valid_finality_certificate_A"
+        }
+      },
+      "expected": {
+        "decision": "ACCEPT",
+        "error_code": "E_FINALITY_REGRESSION",
+        "decision_is_normative": false,
+        "error_code_is_normative": false
+      },
+      "fixture_status": "PLACEHOLDERS_UNRESOLVED",
+      "notes": "Contract-only expected behavior. Not executable protocol evidence; resolve all fixture references and freeze applicable parameters before protocol execution."
+    },
+    {
+      "case_id": "POS-N-001",
+      "kind": "negative",
+      "title": "wrong domain or replay",
+      "contract_status": "BLOCKED",
+      "blocked_by_parameters": [
+        "PARAM-03",
+        "PARAM-07"
+      ],
+      "input": {
+        "contract_id": "ATC-POS-CONFORMANCE-001",
+        "chain_id": 658467,
+        "protocol_version": "UNFROZEN",
+        "epoch": "FIXTURE:epoch_0",
+        "height": "FIXTURE:height_1",
+        "round": "FIXTURE:round_0",
+        "validator_set_hash": "FIXTURE:validator_set_hash_0",
+        "parent_block_id": "FIXTURE:parent_A",
+        "scenario": {
+          "message": "FIXTURE:valid_vote_A",
+          "mutation": {
+            "field": "epoch",
+            "value": "FIXTURE:previous_epoch"
+          }
+        }
+      },
+      "expected": {
+        "decision": "REJECT",
+        "error_code": "E_DOMAIN_MISMATCH",
+        "decision_is_normative": false,
+        "error_code_is_normative": false
+      },
+      "fixture_status": "PLACEHOLDERS_UNRESOLVED",
+      "notes": "Contract-only expected behavior. Not executable protocol evidence; resolve all fixture references and freeze applicable parameters before protocol execution."
+    },
+    {
+      "case_id": "POS-N-002",
+      "kind": "negative",
+      "title": "equivocation",
+      "contract_status": "BLOCKED",
+      "blocked_by_parameters": [
+        "PARAM-08",
+        "PARAM-09"
+      ],
+      "input": {
+        "contract_id": "ATC-POS-CONFORMANCE-001",
+        "chain_id": 658467,
+        "protocol_version": "UNFROZEN",
+        "epoch": "FIXTURE:epoch_0",
+        "height": "FIXTURE:height_1",
+        "round": "FIXTURE:round_0",
+        "validator_set_hash": "FIXTURE:validator_set_hash_0",
+        "parent_block_id": "FIXTURE:parent_A",
+        "scenario": {
+          "vote_A": "FIXTURE:valid_vote_block_A",
+          "vote_B": "FIXTURE:valid_vote_block_B",
+          "same_signer": "FIXTURE:validator_A",
+          "same_scope": true,
+          "blocks_conflict": true
+        }
+      },
+      "expected": {
+        "decision": "REJECT",
+        "error_code": "E_EQUIVOCATION",
+        "decision_is_normative": false,
+        "error_code_is_normative": false
+      },
+      "fixture_status": "PLACEHOLDERS_UNRESOLVED",
+      "notes": "Contract-only expected behavior. Not executable protocol evidence; resolve all fixture references and freeze applicable parameters before protocol execution."
+    },
+    {
+      "case_id": "POS-N-003",
+      "kind": "negative",
+      "title": "quorum below threshold",
+      "contract_status": "BLOCKED",
+      "blocked_by_parameters": [
+        "PARAM-01",
+        "PARAM-05",
+        "PARAM-06"
+      ],
+      "input": {
+        "contract_id": "ATC-POS-CONFORMANCE-001",
+        "chain_id": 658467,
+        "protocol_version": "UNFROZEN",
+        "epoch": "FIXTURE:epoch_0",
+        "height": "FIXTURE:height_1",
+        "round": "FIXTURE:round_0",
+        "validator_set_hash": "FIXTURE:validator_set_hash_0",
+        "parent_block_id": "FIXTURE:parent_A",
+        "scenario": {
+          "votes": "FIXTURE:quorum_one_unit_below_approved_threshold",
+          "target_block": "FIXTURE:block_A"
+        }
+      },
+      "expected": {
+        "decision": "NOT_FINALIZED",
+        "error_code": "E_QUORUM_INSUFFICIENT",
+        "decision_is_normative": false,
+        "error_code_is_normative": false
+      },
+      "fixture_status": "PLACEHOLDERS_UNRESOLVED",
+      "notes": "Contract-only expected behavior. Not executable protocol evidence; resolve all fixture references and freeze applicable parameters before protocol execution."
+    },
+    {
+      "case_id": "POS-N-004",
+      "kind": "negative",
+      "title": "duplicate signer or noncanonical vote set",
+      "contract_status": "BLOCKED",
+      "blocked_by_parameters": [
+        "PARAM-08"
+      ],
+      "input": {
+        "contract_id": "ATC-POS-CONFORMANCE-001",
+        "chain_id": 658467,
+        "protocol_version": "UNFROZEN",
+        "epoch": "FIXTURE:epoch_0",
+        "height": "FIXTURE:height_1",
+        "round": "FIXTURE:round_0",
+        "validator_set_hash": "FIXTURE:validator_set_hash_0",
+        "parent_block_id": "FIXTURE:parent_A",
+        "scenario": {
+          "votes": [
+            "FIXTURE:vote_validator_A",
+            "FIXTURE:vote_validator_A_duplicate"
+          ],
+          "encoding": "FIXTURE:noncanonical_vote_order"
+        }
+      },
+      "expected": {
+        "decision": "REJECT",
+        "error_code": "E_DUPLICATE_OR_NONCANONICAL_VOTE",
+        "decision_is_normative": false,
+        "error_code_is_normative": false
+      },
+      "fixture_status": "PLACEHOLDERS_UNRESOLVED",
+      "notes": "Contract-only expected behavior. Not executable protocol evidence; resolve all fixture references and freeze applicable parameters before protocol execution."
+    },
+    {
+      "case_id": "POS-N-005",
+      "kind": "negative",
+      "title": "invalid parent or noncanonical bytes",
+      "contract_status": "BLOCKED",
+      "blocked_by_parameters": [
+        "PARAM-07"
+      ],
+      "input": {
+        "contract_id": "ATC-POS-CONFORMANCE-001",
+        "chain_id": 658467,
+        "protocol_version": "UNFROZEN",
+        "epoch": "FIXTURE:epoch_0",
+        "height": "FIXTURE:height_1",
+        "round": "FIXTURE:round_0",
+        "validator_set_hash": "FIXTURE:validator_set_hash_0",
+        "parent_block_id": "FIXTURE:parent_A",
+        "scenario": {
+          "proposal": "FIXTURE:proposal_A",
+          "parent": "FIXTURE:unknown_parent",
+          "encoding": "FIXTURE:noncanonical_proposal_bytes"
+        }
+      },
+      "expected": {
+        "decision": "REJECT",
+        "error_code": "E_PARENT_OR_ENCODING_INVALID",
+        "decision_is_normative": false,
+        "error_code_is_normative": false
+      },
+      "fixture_status": "PLACEHOLDERS_UNRESOLVED",
+      "notes": "Contract-only expected behavior. Not executable protocol evidence; resolve all fixture references and freeze applicable parameters before protocol execution."
+    },
+    {
+      "case_id": "POS-N-006",
+      "kind": "negative",
+      "title": "conflicting finality certificates",
+      "contract_status": "BLOCKED",
+      "blocked_by_parameters": [
+        "PARAM-08",
+        "PARAM-11"
+      ],
+      "input": {
+        "contract_id": "ATC-POS-CONFORMANCE-001",
+        "chain_id": 658467,
+        "protocol_version": "UNFROZEN",
+        "epoch": "FIXTURE:epoch_0",
+        "height": "FIXTURE:height_1",
+        "round": "FIXTURE:round_0",
+        "validator_set_hash": "FIXTURE:validator_set_hash_0",
+        "parent_block_id": "FIXTURE:parent_A",
+        "scenario": {
+          "certificate_A": "FIXTURE:valid_certificate_block_A",
+          "certificate_B": "FIXTURE:valid_certificate_conflicting_block_B",
+          "same_height": true,
+          "same_domain": true,
+          "required_invariants": [
+            "no_rollback",
+            "no_silent_overwrite",
+            "incident_evidence"
+          ]
+        }
+      },
+      "expected": {
+        "decision": "SECURITY_STOP",
+        "error_code": "E_CONFLICTING_FINALITY_CERTIFICATES",
+        "decision_is_normative": false,
+        "error_code_is_normative": false
+      },
+      "fixture_status": "PLACEHOLDERS_UNRESOLVED",
+      "notes": "Contract-only expected behavior. Not executable protocol evidence; resolve all fixture references and freeze applicable parameters before protocol execution."
+    },
+    {
+      "case_id": "POS-N-007",
+      "kind": "negative",
+      "title": "stake arithmetic overflow",
+      "contract_status": "BLOCKED",
+      "blocked_by_parameters": [
+        "PARAM-01",
+        "PARAM-06"
+      ],
+      "input": {
+        "contract_id": "ATC-POS-CONFORMANCE-001",
+        "chain_id": 658467,
+        "protocol_version": "UNFROZEN",
+        "epoch": "FIXTURE:epoch_0",
+        "height": "FIXTURE:height_1",
+        "round": "FIXTURE:round_0",
+        "validator_set_hash": "FIXTURE:validator_set_hash_0",
+        "parent_block_id": "FIXTURE:parent_A",
+        "scenario": {
+          "weights": [
+            "FIXTURE:weight_max",
+            "FIXTURE:weight_one"
+          ],
+          "operation": "SUM_EFFECTIVE_VOTING_STAKE",
+          "wraparound_allowed": false
+        }
+      },
+      "expected": {
+        "decision": "REJECT",
+        "error_code": "E_STAKE_ARITHMETIC_OVERFLOW",
+        "decision_is_normative": false,
+        "error_code_is_normative": false
+      },
+      "fixture_status": "PLACEHOLDERS_UNRESOLVED",
+      "notes": "Contract-only expected behavior. Not executable protocol evidence; resolve all fixture references and freeze applicable parameters before protocol execution."
+    },
+    {
+      "case_id": "POS-N-008",
+      "kind": "negative",
+      "title": "invalid signature or unauthorized leader",
+      "contract_status": "BLOCKED",
+      "blocked_by_parameters": [
+        "PARAM-03",
+        "PARAM-07"
+      ],
+      "input": {
+        "contract_id": "ATC-POS-CONFORMANCE-001",
+        "chain_id": 658467,
+        "protocol_version": "UNFROZEN",
+        "epoch": "FIXTURE:epoch_0",
+        "height": "FIXTURE:height_1",
+        "round": "FIXTURE:round_0",
+        "validator_set_hash": "FIXTURE:validator_set_hash_0",
+        "parent_block_id": "FIXTURE:parent_A",
+        "scenario": {
+          "proposal": "FIXTURE:proposal_A",
+          "signature": "FIXTURE:invalid_signature_A",
+          "proposer": "FIXTURE:not_eligible_validator"
+        }
+      },
+      "expected": {
+        "decision": "REJECT",
+        "error_code": "E_SIGNATURE_OR_LEADER_INVALID",
+        "decision_is_normative": false,
+        "error_code_is_normative": false
+      },
+      "fixture_status": "PLACEHOLDERS_UNRESOLVED",
+      "notes": "Contract-only expected behavior. Not executable protocol evidence; resolve all fixture references and freeze applicable parameters before protocol execution."
+    },
+    {
+      "case_id": "POS-N-009",
+      "kind": "negative",
+      "title": "partition without quorum",
+      "contract_status": "BLOCKED",
+      "blocked_by_parameters": [
+        "PARAM-05",
+        "PARAM-11"
+      ],
+      "input": {
+        "contract_id": "ATC-POS-CONFORMANCE-001",
+        "chain_id": 658467,
+        "protocol_version": "UNFROZEN",
+        "epoch": "FIXTURE:epoch_0",
+        "height": "FIXTURE:height_1",
+        "round": "FIXTURE:round_0",
+        "validator_set_hash": "FIXTURE:validator_set_hash_0",
+        "parent_block_id": "FIXTURE:parent_A",
+        "scenario": {
+          "partition_A": "FIXTURE:validators_A_below_quorum",
+          "partition_B": "FIXTURE:validators_B_below_quorum",
+          "cross_partition_messages": false,
+          "assertions": [
+            "neither_partition_finalizes",
+            "recovery_only_after_rejoin_and_approved_rules"
+          ]
+        }
+      },
+      "expected": {
+        "decision": "NOT_FINALIZED",
+        "error_code": "E_QUORUM_INSUFFICIENT",
+        "decision_is_normative": false,
+        "error_code_is_normative": false
+      },
+      "fixture_status": "PLACEHOLDERS_UNRESOLVED",
+      "notes": "Contract-only expected behavior. Not executable protocol evidence; resolve all fixture references and freeze applicable parameters before protocol execution."
+    },
+    {
+      "case_id": "POS-N-010",
+      "kind": "negative",
+      "title": "arrival order cannot affect fork choice",
+      "contract_status": "BLOCKED",
+      "blocked_by_parameters": [
+        "PARAM-10"
+      ],
+      "input": {
+        "contract_id": "ATC-POS-CONFORMANCE-001",
+        "chain_id": 658467,
+        "protocol_version": "UNFROZEN",
+        "epoch": "FIXTURE:epoch_0",
+        "height": "FIXTURE:height_1",
+        "round": "FIXTURE:round_0",
+        "validator_set_hash": "FIXTURE:validator_set_hash_0",
+        "parent_block_id": "FIXTURE:parent_A",
+        "scenario": {
+          "candidate_set": "FIXTURE:same_valid_candidate_set",
+          "delivery_orders": [
+            "FIXTURE:order_AB",
+            "FIXTURE:order_BA"
+          ],
+          "compare": [
+            "selected_block_id",
+            "state_hash"
+          ]
+        }
+      },
+      "expected": {
+        "decision": "ACCEPT",
+        "error_code": "E_FORK_CHOICE_NONDETERMINISTIC",
+        "decision_is_normative": false,
+        "error_code_is_normative": false
+      },
+      "fixture_status": "PLACEHOLDERS_UNRESOLVED",
+      "notes": "Contract-only expected behavior. Not executable protocol evidence; resolve all fixture references and freeze applicable parameters before protocol execution."
+    },
+    {
+      "case_id": "POS-N-011",
+      "kind": "negative",
+      "title": "work or PoH proof alone cannot finalize",
+      "contract_status": "BLOCKED",
+      "blocked_by_parameters": [
+        "PARAM-04",
+        "PARAM-05",
+        "PARAM-08"
+      ],
+      "input": {
+        "contract_id": "ATC-POS-CONFORMANCE-001",
+        "chain_id": 658467,
+        "protocol_version": "UNFROZEN",
+        "epoch": "FIXTURE:epoch_0",
+        "height": "FIXTURE:height_1",
+        "round": "FIXTURE:round_0",
+        "validator_set_hash": "FIXTURE:validator_set_hash_0",
+        "parent_block_id": "FIXTURE:parent_A",
+        "scenario": {
+          "work_proof": "FIXTURE:valid_work_proof_A",
+          "poh_proof": "FIXTURE:valid_poh_proof_A",
+          "validator_votes": [],
+          "requested_action": "FINALIZE"
+        }
+      },
+      "expected": {
+        "decision": "REJECT",
+        "error_code": "E_FINALITY_REQUIRES_VALIDATOR_QUORUM",
+        "decision_is_normative": false,
+        "error_code_is_normative": false
+      },
+      "fixture_status": "PLACEHOLDERS_UNRESOLVED",
+      "notes": "Contract-only expected behavior. Not executable protocol evidence; resolve all fixture references and freeze applicable parameters before protocol execution."
+    },
+    {
+      "case_id": "POS-N-012",
+      "kind": "negative",
+      "title": "finality regression attempt",
+      "contract_status": "BLOCKED",
+      "blocked_by_parameters": [
+        "PARAM-08",
+        "PARAM-11"
+      ],
+      "input": {
+        "contract_id": "ATC-POS-CONFORMANCE-001",
+        "chain_id": 658467,
+        "protocol_version": "UNFROZEN",
+        "epoch": "FIXTURE:epoch_0",
+        "height": "FIXTURE:height_1",
+        "round": "FIXTURE:round_0",
+        "validator_set_hash": "FIXTURE:validator_set_hash_0",
+        "parent_block_id": "FIXTURE:parent_A",
+        "scenario": {
+          "existing_finalized": "FIXTURE:block_A",
+          "new_certificate": "FIXTURE:certificate_block_B_same_height",
+          "same_domain": true,
+          "assertions": [
+            "never_overwrite_finalized_block"
+          ]
+        }
+      },
+      "expected": {
+        "decision": "SECURITY_STOP",
+        "error_code": "E_FINALITY_REGRESSION",
+        "decision_is_normative": false,
+        "error_code_is_normative": false
+      },
+      "fixture_status": "PLACEHOLDERS_UNRESOLVED",
+      "notes": "Contract-only expected behavior. Not executable protocol evidence; resolve all fixture references and freeze applicable parameters before protocol execution."
+    }
+  ]
+}
