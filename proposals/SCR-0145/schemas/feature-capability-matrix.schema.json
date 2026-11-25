@@ -1,1 +1,106 @@
-{"$schema":"https://json-schema.org/draft/2020-12/schema","$id":"urn:atc:kai-os:scr-0145:feature-capability-matrix:0.1.0","title":"KAI-OS Feature Capability Matrix","description":"DRAFT; non-normative pending SCR-0145 approval.","type":"object","additionalProperties":false,"required":["schema_version","product_version","targets","features"],"properties":{"schema_version":{"const":"0.1.0"},"product_version":{"type":"string"},"targets":{"type":"array","minItems":6,"uniqueItems":true,"items":{"enum":["native-x86_64","native-aarch64","linux-x86_64","linux-aarch64","windows-x86_64","windows-aarch64"]}},"features":{"type":"array","items":{"type":"object","additionalProperties":false,"required":["feature_id","description","capabilities"],"properties":{"feature_id":{"type":"string","pattern":"^[A-Z0-9][A-Z0-9._-]+$"},"description":{"type":"string"},"capabilities":{"type":"object","additionalProperties":false,"required":["native-x86_64","native-aarch64","linux-x86_64","linux-aarch64","windows-x86_64","windows-aarch64"],"properties":{"native-x86_64":{"$ref":"#/$defs/capability"},"native-aarch64":{"$ref":"#/$defs/capability"},"linux-x86_64":{"$ref":"#/$defs/capability"},"linux-aarch64":{"$ref":"#/$defs/capability"},"windows-x86_64":{"$ref":"#/$defs/capability"},"windows-aarch64":{"$ref":"#/$defs/capability"}}}}}},"$defs":{"capability":{"type":"object","additionalProperties":false,"required":["status","evidence"],"properties":{"status":{"enum":["NATIVE","ADAPTED","LIMITED","UNAVAILABLE","NOT_TESTED","EXCLUDED"]},"limitations":{"type":"string"},"implementation_ref":{"type":"string"},"evidence":{"type":"array","items":{"type":"string","format":"uri"}}}}}}
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:atc:kai-os:scr-0145:feature-capability-matrix:0.1.1",
+  "title": "KAI-OS Feature Capability Matrix",
+  "description": "DRAFT; non-normative pending SCR-0145 approval.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "product_version",
+    "targets",
+    "features"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.1.1"
+    },
+    "product_version": {
+      "type": "string"
+    },
+    "targets": {
+      "type": "array",
+      "minItems": 6,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "native-x86_64",
+          "native-aarch64",
+          "linux-x86_64",
+          "linux-aarch64",
+          "windows-x86_64",
+          "windows-aarch64"
+        ]
+      }
+    },
+    "features": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "feature_id",
+          "description",
+          "capabilities"
+        ],
+        "properties": {
+          "feature_id": {
+            "type": "string",
+            "pattern": "^[A-Z0-9][A-Z0-9._-]+$"
+          },
+          "description": {
+            "type": "string"
+          },
+          "capabilities": {
+            "type": "array",
+            "minItems": 6,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "target",
+                "status",
+                "evidence"
+              ],
+              "properties": {
+                "target": {
+                  "enum": [
+                    "native-x86_64",
+                    "native-aarch64",
+                    "linux-x86_64",
+                    "linux-aarch64",
+                    "windows-x86_64",
+                    "windows-aarch64"
+                  ]
+                },
+                "status": {
+                  "enum": [
+                    "NATIVE",
+                    "ADAPTED",
+                    "LIMITED",
+                    "UNAVAILABLE",
+                    "NOT_TESTED",
+                    "EXCLUDED"
+                  ]
+                },
+                "limitations": {
+                  "type": "string"
+                },
+                "implementation_ref": {
+                  "type": "string"
+                },
+                "evidence": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uri"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
