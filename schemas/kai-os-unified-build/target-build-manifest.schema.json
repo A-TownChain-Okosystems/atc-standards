@@ -140,7 +140,10 @@
         "filename",
         "size_bytes",
         "sha256",
-        "media_type"
+        "media_type",
+        "signature_ref",
+        "signature_verified",
+        "sbom_sha256"
       ],
       "properties": {
         "filename": {
