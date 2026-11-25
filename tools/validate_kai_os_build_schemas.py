@@ -135,6 +135,16 @@ def main() -> int:
     observed = [item["target"] for item in capabilities]
     if len(observed) != 6 or set(observed) != TARGETS:
         raise AssertionError("each feature must define exactly one capability per target")
+    duplicate_matrix = {
+        **matrix_instance,
+        "features": [{
+            **matrix_instance["features"][0],
+            "capabilities": [capabilities[1], *capabilities[1:]],
+        }],
+    }
+    duplicate_errors = list(Draft202012Validator(matrix_schema).iter_errors(duplicate_matrix))
+    if not duplicate_errors:
+        raise AssertionError("duplicate/missing capability target was accepted")
     print("PASS feature capability matrix: exactly six distinct targets")
     print("RESULT: SCR-0145 draft schema checks PASS")
     return 0
