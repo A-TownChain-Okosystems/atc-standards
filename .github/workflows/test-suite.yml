@@ -18,7 +18,7 @@ jobs:
           python-version: "3.11"
       - name: Registry-Check (SCR-0080)
         run: |
-          pip install pyyaml -q
+          pip install pyyaml jsonschema -q
           python3 tools/repo_registry_check.py
       - name: Registry-Konsistenz (Validator-Teil, SCR-0082)
         run: |
@@ -32,6 +32,9 @@ jobs:
       - name: Determinism-Checker Regressionstests (SCR-0131, W2-MECH-01)
         run: |
           python3 tools/tests/test_determinism_check.py
+      - name: KAI-OS Unified Build Schema Validation (SCR-0145)
+        run: |
+          python3 tools/validate_kai_os_build_schemas.py
       - name: Evidence-Bindung (SCR-0086 idempotentes test_run-Update je Lauf + hartes Push-Gate)
         if: success()
         env:
