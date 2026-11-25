@@ -5,12 +5,14 @@ on:
     paths:
       - "change-requests/SCR-0145.md"
       - "schemas/kai-os-unified-build/**"
+      - "tools/validate_kai_os_build_schemas.py"
       - ".github/workflows/kai-os-build-schemas.yml"
   push:
     branches: [main]
     paths:
       - "change-requests/SCR-0145.md"
       - "schemas/kai-os-unified-build/**"
+      - "tools/validate_kai_os_build_schemas.py"
       - ".github/workflows/kai-os-build-schemas.yml"
   workflow_dispatch:
 
@@ -28,45 +30,5 @@ jobs:
           python-version: "3.11"
       - name: Install JSON Schema validator
         run: python -m pip install --disable-pip-version-check jsonschema
-      - name: Validate Draft 2020-12 schemas and target contract
-        run: |
-          python - <<'PY'
-          import json
-          from pathlib import Path
-          from jsonschema import Draft202012Validator
-
-          root = Path("schemas/kai-os-unified-build")
-          files = sorted(root.glob("*.schema.json"))
-          expected = {
-              "native-x86_64", "native-aarch64",
-              "linux-x86_64", "linux-aarch64",
-              "windows-x86_64", "windows-aarch64",
-          }
-          assert len(files) == 3, f"Expected 3 schemas, found {len(files)}"
-          schemas = {}
-          for path in files:
-              schema = json.loads(path.read_text(encoding="utf-8"))
-              Draft202012Validator.check_schema(schema)
-              schemas[path.name] = schema
-              print(f"PASS JSON + Draft 2020-12: {path}")
-
-          source = schemas["unified-source-set.schema.json"]
-          target = schemas["target-build-manifest.schema.json"]
-          matrix = schemas["feature-capability-matrix.schema.json"]
-
-          target_ids = set(target["properties"]["build_target"]["enum"])
-          assert target_ids == expected, f"Target manifest IDs mismatch: {target_ids}"
-          matrix_ids = set(matrix["properties"]["targets"]["items"]["enum"])
-          assert matrix_ids == expected, f"Capability matrix IDs mismatch: {matrix_ids}"
-          capability_ids = set(matrix["properties"]["features"]["items"]["properties"]["capabilities"]["items"]["properties"]["target"]["enum"])
-          assert capability_ids == expected, f"Per-feature capability IDs mismatch: {capability_ids}"
-
-          assert "commit_sha" in source["properties"]["repositories"]["items"]["required"]
-          assert "source_set_sha256" in source["required"]
-          assert "source_set_sha256" in target["required"]
-          assert "artifact" in target["required"] and "provenance" in target["required"]
-
-          print("PASS six-target registry: exactly Native/Linux/Windows × x86_64/aarch64")
-          print("PASS source-set commit and digest contract")
-          print("PASS per-target artifact and provenance contract")
-          PY
+      - name: Validate schemas and six-target contract
+        run: python tools/validate_kai_os_build_schemas.py
