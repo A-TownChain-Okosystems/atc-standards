@@ -97,7 +97,80 @@
                     "format": "uri"
                   }
                 }
-              }
+              },
+              "allOf": [
+                {
+                  "if": {
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "NATIVE",
+                          "ADAPTED"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "status"
+                    ]
+                  },
+                  "then": {
+                    "required": [
+                      "implementation_ref",
+                      "evidence"
+                    ],
+                    "properties": {
+                      "evidence": {
+                        "type": "array",
+                        "minItems": 1
+                      }
+                    }
+                  }
+                },
+                {
+                  "if": {
+                    "properties": {
+                      "status": {
+                        "const": "LIMITED"
+                      }
+                    },
+                    "required": [
+                      "status"
+                    ]
+                  },
+                  "then": {
+                    "required": [
+                      "limitations",
+                      "evidence"
+                    ],
+                    "properties": {
+                      "evidence": {
+                        "type": "array",
+                        "minItems": 1
+                      }
+                    }
+                  }
+                },
+                {
+                  "if": {
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "UNAVAILABLE",
+                          "EXCLUDED"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "status"
+                    ]
+                  },
+                  "then": {
+                    "required": [
+                      "limitations"
+                    ]
+                  }
+                }
+              ]
             },
             "maxItems": 6,
             "allOf": [
