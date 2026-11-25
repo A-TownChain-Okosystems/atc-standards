@@ -1,0 +1,233 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:atc:kai-os:scr-0145:target-build-manifest:0.1.0",
+  "title": "KAI-OS Per-Target Build Manifest",
+  "description": "DRAFT; non-normative pending SCR-0145 approval.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "product",
+    "product_version",
+    "release_id",
+    "source_set_id",
+    "source_set_sha256",
+    "build_id",
+    "build_target",
+    "architecture",
+    "toolchain",
+    "dependency_lock_sha256",
+    "tests",
+    "artifact",
+    "provenance"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.1.0"
+    },
+    "product": {
+      "const": "KAI-OS"
+    },
+    "product_version": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(?:-[0-9A-Za-z.-]+)?(?:\\+[0-9A-Za-z.-]+)?$"
+    },
+    "release_id": {
+      "type": "string"
+    },
+    "source_set_id": {
+      "type": "string"
+    },
+    "source_set_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "build_id": {
+      "type": "string"
+    },
+    "build_target": {
+      "enum": [
+        "native-x86_64",
+        "native-aarch64",
+        "linux-x86_64",
+        "linux-aarch64",
+        "windows-x86_64",
+        "windows-aarch64"
+      ]
+    },
+    "architecture": {
+      "enum": [
+        "x86_64",
+        "aarch64"
+      ]
+    },
+    "toolchain": {
+      "type": "object",
+      "required": [
+        "builder_id",
+        "compiler",
+        "linker",
+        "runner_os"
+      ],
+      "properties": {
+        "builder_id": {
+          "type": "string"
+        },
+        "compiler": {
+          "type": "string"
+        },
+        "linker": {
+          "type": "string"
+        },
+        "sdk": {
+          "type": "string"
+        },
+        "runner_os": {
+          "type": "string"
+        }
+      }
+    },
+    "dependency_lock_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "tests": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "test_level",
+          "status",
+          "source_commit",
+          "evidence_uri"
+        ],
+        "properties": {
+          "test_level": {
+            "enum": [
+              "unit",
+              "integration",
+              "runtime",
+              "security",
+              "compatibility",
+              "hardware",
+              "update",
+              "rollback"
+            ]
+          },
+          "status": {
+            "enum": [
+              "PASS",
+              "FAIL",
+              "BLOCKED",
+              "NOT_TESTED",
+              "EXCLUDED"
+            ]
+          },
+          "source_commit": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{40,64}$"
+          },
+          "evidence_uri": {
+            "type": "string",
+            "format": "uri"
+          }
+        }
+      }
+    },
+    "artifact": {
+      "type": "object",
+      "required": [
+        "filename",
+        "size_bytes",
+        "sha256",
+        "media_type"
+      ],
+      "properties": {
+        "filename": {
+          "type": "string"
+        },
+        "size_bytes": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "media_type": {
+          "type": "string"
+        },
+        "signature_ref": {
+          "type": "string"
+        },
+        "signature_verified": {
+          "type": "boolean"
+        },
+        "sbom_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "attestation_ref",
+        "attestation_sha256",
+        "verified"
+      ],
+      "properties": {
+        "attestation_ref": {
+          "type": "string"
+        },
+        "attestation_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "verified": {
+          "type": "boolean"
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "build_target": {
+            "pattern": "aarch64$"
+          }
+        },
+        "required": [
+          "build_target"
+        ]
+      },
+      "then": {
+        "properties": {
+          "architecture": {
+            "const": "aarch64"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "build_target": {
+            "pattern": "x86_64$"
+          }
+        },
+        "required": [
+          "build_target"
+        ]
+      },
+      "then": {
+        "properties": {
+          "architecture": {
+            "const": "x86_64"
+          }
+        }
+      }
+    }
+  ]
+}
