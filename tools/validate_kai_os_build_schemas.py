@@ -102,6 +102,9 @@ def main() -> int:
                 "size_bytes": 1,
                 "sha256": SHA,
                 "media_type": "application/octet-stream",
+                "signature_ref": "fixture-signature",
+                "signature_verified": True,
+                "sbom_sha256": SHA,
             },
             "provenance": {
                 "attestation_ref": "fixture-attestation",
