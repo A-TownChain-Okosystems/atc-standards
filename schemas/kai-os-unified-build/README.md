@@ -42,7 +42,7 @@ python -m pip install jsonschema
 python tools/validate_kai_os_build_schemas.py
 ```
 
-The CI workflow `.github/workflows/kai-os-build-schemas.yml` runs the same validator. Passing schema validation proves only schema conformance; it does not prove any build target, runtime, installer, hardware profile or product feature is implemented or verified.
+The existing canonical workflow `.github/workflows/test-suite.yml` runs the same validator as part of ATC Test Suite (Tools-Smoke); no parallel schema-only workflow is introduced. Passing schema validation proves only schema conformance; it does not prove any build target, runtime, installer, hardware profile or product feature is implemented or verified.
 
 ## Governance
 
