@@ -31,7 +31,7 @@ The canonical architecture labels are `x86_64` and `aarch64`. The human-readable
 
 `NATIVE`, `ADAPTED`, `LIMITED`, `UNAVAILABLE`, `NOT_TESTED`, `EXCLUDED`.
 
-Each feature must have exactly one capability entry per target. The capability schema requires exactly one entry for each of the six target IDs; the validator also tests duplicate/missing target rejection and checks that target architecture matches the target ID. `NOT_TESTED` is never equivalent to supported.
+Each feature must have exactly one capability entry per target. The capability schema requires exactly one entry for each of the six target IDs. NATIVE/ADAPTED require an implementation reference and evidence; LIMITED requires limitations and evidence; UNAVAILABLE/EXCLUDED require a rationale. The validator tests duplicate/missing target rejection, unsupported capability claims and target/architecture mismatch. `NOT_TESTED` is never equivalent to supported.
 
 ## Validation
 
