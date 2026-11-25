@@ -5,6 +5,7 @@ This is proposal validation, not a normative release verifier.
 """
 from __future__ import annotations
 
+import copy
 import json
 import re
 from pathlib import Path
@@ -148,7 +149,18 @@ def main() -> int:
     duplicate_errors = list(Draft202012Validator(matrix_schema).iter_errors(duplicate_matrix))
     if not duplicate_errors:
         raise AssertionError("duplicate/missing capability target was accepted")
-    print("PASS feature capability matrix: exactly six distinct targets")
+
+    supported_matrix = copy.deepcopy(matrix_instance)
+    supported_capability = supported_matrix["features"][0]["capabilities"][0]
+    supported_capability["status"] = "NATIVE"
+    supported_capability["implementation_ref"] = "src/native/feature.rs"
+    supported_capability["evidence"] = ["https://example.invalid/native-evidence"]
+    Draft202012Validator(matrix_schema).validate(supported_matrix)
+    supported_capability.pop("implementation_ref")
+    unsupported_claim_errors = list(Draft202012Validator(matrix_schema).iter_errors(supported_matrix))
+    if not unsupported_claim_errors:
+        raise AssertionError("NATIVE capability without implementation/evidence was accepted")
+    print("PASS feature capability matrix: six targets and evidence-bound support claims")
     print("RESULT: SCR-0145 draft schema checks PASS")
     return 0
 
